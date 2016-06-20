@@ -34,7 +34,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
       .state('tab', {
         url: '/tab',
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'tabs.html'
       })
 
       // Each tab has its own nav history stack:
@@ -43,7 +43,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/login',
         views: {
           'tab-login': {
-            templateUrl: 'templates/tab-login.html',
+            templateUrl: 'js/login/tab-login.html',
             controller: 'LoginCtrl'
           }
         }
@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/register',
         views: {
           'tab-register': {
-            templateUrl: 'templates/tab-register.html',
+            templateUrl: 'js/register/tab-register.html',
             controller: 'RegisterCtrl'
           }
         }
@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/users',
         views: {
           'tab-users': {
-            templateUrl: 'templates/tab-users.html',
+            templateUrl: 'js/users/tab-users.html',
             controller: 'UsersCtrl'
           }
         }
@@ -72,7 +72,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/user/:userID',
         views: {
           'tab-users': {
-            templateUrl: 'templates/tab-user-detail.html',
+            templateUrl: 'js/userDetail/tab-user-detail.html',
             controller: 'UserDetailCtrl'
           }
         }
@@ -81,7 +81,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/chat',
         views: {
           'tab-chat': {
-            templateUrl: 'templates/tab-chat.html',
+            templateUrl: 'js/chat/tab-chat.html',
             controller: 'ChatCtrl'
           }
         }
@@ -90,7 +90,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/map',
         views: {
           'tab-map': {
-            templateUrl: 'templates/tab-map.html',
+            templateUrl: 'js/map/tab-map.html',
             controller: 'MapCtrl'
           }
         }
