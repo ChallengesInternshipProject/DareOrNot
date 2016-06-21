@@ -2,17 +2,41 @@ var express = require('express');
 var router = express.Router();
 var io = require('socket.io')(1337);
 var Message = require('../models/message');
-
+var UserList = require('../models/userList');
 
 io.on('connection', function (socket) {
-    console.log('a user connected');
+    var addedUser = false;
+    // console.log(socket.id + ' connected');
+    io.emit('clientConnect', {id: socket.username});
+
+
+    // setInterval(function () {
+    //     io.emit('room1', new Date);
+    // }, 1000);
 
     socket.on('message', function (msg) {
-        io.emit('message', msg);
-        console.log(msg);
+        io.emit('message', {
+            id: socket.username,
+            // testID: socket.id,
+            msg: msg.msg
+        });
+        console.log(socket.username);
     });
 
-    socket.on('say to someone', function(id, msg){
+    socket.on('add user', function (username) {
+        if (addedUser) return;
+        socket.username = username;
+        addedUser = true;
+
+        var newUser = new UserList({
+            user: socket.username,
+            socketID: socket.id
+        });
+        newUser.save();
+        io.emit('new user', 'has connected');
+    });
+
+    socket.on('say to someone', function (id, msg) {
         socket.broadcast.to(id).emit('my message', msg);
     });
 
@@ -21,7 +45,12 @@ io.on('connection', function (socket) {
         console.log('clearing all messages');
     });
     socket.on('disconnect', function () {
-        console.log('user disconnected');
+        console.log(socket.username + ' disconnected');
+        UserList.find({user: socket.username}).remove().exec();
+        io.emit('dc user', {
+            user: socket.username,
+            id: socket.id
+        });
     });
 });
 
@@ -34,7 +63,17 @@ router.get('/', function (req, res, next) {
 
 router.get('/clients', function (req, res, next) {
     //TODO add list of connected clients
-    res.send('Clients');
+    UserList.find({}, function (err, users) {
+        res.send(users);
+    });
+});
+router.get('/client/:user', function (req, res, next) {
+    //TODO add list of connected clients
+    var client = req.params.user;
+
+    UserList.findOne({user: client}, function (err, user) {
+        res.json(user);
+    });
 });
 
 router.get('/submit', function (req, res, next) {
@@ -46,9 +85,9 @@ router.get('/submit', function (req, res, next) {
     });
 
     message.save(function (err) {
-        if(err){
+        if (err) {
             return res.send(err);
-        }else{
+        } else {
             return res.send('saved');
         }
     });

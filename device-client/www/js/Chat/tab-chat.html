@@ -1,23 +1,44 @@
 <ion-view view-title="Public Chat Test" name="login-view">
 
   <ion-content class="padding">
+
+    <div class="row">
+      <div class="col">
+        <div class="button-bar bar-light">
+          <a class="button" ng-click="switchRoom(1)">Room1</a>
+          <a class="button" ng-click="switchRoom(2)">Room2</a>
+          <a class="button" ng-click="switchRoom(3)">Room3</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-90">
+        <ion-list>
+          <ion-item ng-repeat="msg in messages track by $index">
+            <strong>{{msg.id}}</strong>
+            <div ng-class="{'strike': theItem, left : right}">
+              {{msg.message}}
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="col">
+        <!--users online here-->
+        <ion-list>
+          <ion-item>
+            <h2>Users Online :</h2>
+          </ion-item>
+          <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.user}}">
+            {{user.user}}
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
     <ion-refresher
       pulling-text="Pull to clear !"
       on-refresh="clearAllMessages()">
     </ion-refresher>
-    <div class="button-bar bar-light">
-      <a class="button">Room1</a>
-      <a class="button">Room2</a>
-      <a class="button">Room3</a>
-    </div>
-    <ion-list>
-      <ion-item ng-repeat="msg in messages track by $index">
-        <strong>{{msg.id}}</strong>
-        <div ng-class="{'strike': theItem, left : right}">
-          {{msg.message}}
-        </div>
-      </ion-item>
-    </ion-list>
+
 
   </ion-content>
 

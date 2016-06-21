@@ -1,5 +1,6 @@
 angular.module('starter.services')
   .service('ChatService', function ($q, $http, $log, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+
     return {
       getMessages: function () {
         var deffered = $q.defer();
@@ -19,6 +20,9 @@ angular.module('starter.services')
       clearMessages: function (socket) {
         //Send the clear socket to the server then clear the messages from the controller.
         socket.emit('clear', 'clear the messages');
+      },
+      switchRoom: function (roomID, socket) {
+        $log.info('Switched to room ' + roomID)
       }
     }
   });

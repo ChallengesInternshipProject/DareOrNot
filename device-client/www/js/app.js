@@ -86,6 +86,15 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
           }
         }
       })
+      .state('tab.chat-details', {
+        url: '/chat/:userID',
+        views: {
+          'tab-chat': {
+            templateUrl: 'js/chatDetail/tab-chat-detail.html',
+            controller: 'ChatDetailCtrl'
+          }
+        }
+      })
       .state('tab.map', {
         url: '/map',
         views: {

@@ -1,16 +1,27 @@
 angular.module('starter.controllers')
 
-  .controller('ChatCtrl', function ($scope, $http, $localStorage, $timeout, $ionicScrollDelegate, ChatService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .controller('ChatCtrl', function ($scope, $http, $log, $localStorage, $timeout, $ionicScrollDelegate, ChatService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+    //TODO make the socket global variable ?
     var socket = io(SERVER_ADDRESS + SOCKET_CHAT_PORT); // TIP: io() with no args does auto-discovery
 
+    //TODO improve logic
+    socket.emit('add user', $localStorage.user);
+
+    // socket.on('new user',function (user) {
+    //   $scope.onlineUsers.push(user)
+    // });
+
+    //Get the messages on first view load
     ChatService.getMessages().then(function (result) {
       $scope.messages = result;
     });
-
+    
     // console.log($localStorage.user);
     $scope.message = '';
+    $scope.onlineUsers = [];
 
-    $scope.emit = function(msg){
+    $scope.emit = function (msg) {
+      delete $scope.message;
       ChatService.emitMessage($localStorage.user, msg, socket);
     };
 
@@ -18,6 +29,21 @@ angular.module('starter.controllers')
       ChatService.clearMessages(socket);
     };
 
+    $scope.switchRoom = function (roomID) {
+      if (roomID === 1) {
+        $log.info('Joined room 1')
+
+      } else if (roomID === 2) {
+        $log.info('Joined room 2')
+
+      }
+
+      // ChatService.switchRoom(roomID, socket);
+    };
+
+    socket.on('room1', function (msg) {
+      $log.info(msg);
+    });
 
     //START TODO to move to the service or not to move to the service ? :O
     socket.on('clear', function () {
@@ -33,18 +59,40 @@ angular.module('starter.controllers')
       });
     });
 
+    socket.on('clientConnect', function (msg) {
+      $log.info(msg.id + ' CONNECTED !');
+    });
+
+
     socket.on('message', function (msg) {
       $scope.messages.push({
         id: msg.id,
         message: msg.msg
       });
+
       $ionicScrollDelegate.resize();
       $ionicScrollDelegate.scrollBottom();
-      delete $scope.message;
+
       console.log(msg);
       //Call $scope.$apply to update the message to the other clients
       $scope.$apply();
       console.log($scope.messages);
     });
-    // END TODO
+
+    socket.on('new user', function (user) {
+      $log.info(user)
+      $http.get('http://localhost:3000/chat/clients')
+        .success(function (users) {
+          $scope.onlineUsers = users
+          // $scope.$apply();
+        });
+    });
+    socket.on('dc user', function (user) {
+      $http.get('http://localhost:3000/chat/clients')
+        .success(function (users) {
+          $scope.onlineUsers = users
+          // $scope.$apply();
+        });
+    });
+
   });
