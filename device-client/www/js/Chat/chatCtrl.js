@@ -1,27 +1,27 @@
 angular.module('starter.controllers')
 
-  .controller('ChatCtrl', function ($scope, $http, $localStorage, $timeout, $ionicScrollDelegate, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .controller('ChatCtrl', function ($scope, $http, $localStorage, $timeout, $ionicScrollDelegate, ChatService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
     var socket = io(SERVER_ADDRESS + SOCKET_CHAT_PORT); // TIP: io() with no args does auto-discovery
-    $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat').success(function (result) {
+
+    ChatService.getMessages().then(function (result) {
       $scope.messages = result;
     });
-    console.log($localStorage.user);
+
+    // console.log($localStorage.user);
     $scope.message = '';
 
-    $scope.emit = function (msg) {
-      $http.get(SERVER_ADDRESS + SERVER_PORT+ '/chat/submit?id=' + $localStorage.user + '&message=' + msg + '&reciever=test1&sender=test2')
-      socket.emit('message', {
-        id: $localStorage.user,
-        msg: msg
-      });
+    $scope.emit = function(msg){
+      ChatService.emitMessage($localStorage.user, msg, socket);
     };
 
     $scope.clearAllMessages = function () {
-      socket.emit('clear', 'clear the messages');
+      ChatService.clearMessages(socket);
     };
 
+
+    //START TODO to move to the service or not to move to the service ? :O
     socket.on('clear', function () {
-      $http.get(SERVER_ADDRESS + SERVER_PORT+'/chat/clear');
+      $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat/clear');
       $scope.messages = [];
       $scope.$apply();
       $scope.$broadcast('scroll.refreshComplete');
@@ -46,4 +46,5 @@ angular.module('starter.controllers')
       $scope.$apply();
       console.log($scope.messages);
     });
+    // END TODO
   });
