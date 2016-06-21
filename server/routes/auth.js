@@ -17,6 +17,7 @@ router.get('/login', function (req, res, next) {
     User.findOne({
         email: email
     }, function (err, user) {
+        console.info(bcrypt.compareSync(password, user.password));
         if (err) {
             return res.json({
                 success: false,
@@ -39,21 +40,24 @@ router.get('/login', function (req, res, next) {
 });
 
 router.get('/register', function (req, res, next) {
-    var userData = {
-        email: req.param('email'),
-        password: bcrypt.hashSync(req.param('password1'))
-        // firstName: req.param('firstName'),
-        // lastName: req.param('lastName'),
-        // phone: req.param('phone'),
-        // town: req.param('town'),
-        // country: req.param('country'),
-        // dateOfBirth: req.param('dateOfBirth')
-};
+
+    var email = req.param('email');
+    var password = req.param('password');
+//     var userData = {
+//         email: req.param('email'),
+//         password: bcrypt.hashSync(req.param('password1'))
+//         // firstName: req.param('firstName'),
+//         // lastName: req.param('lastName'),
+//         // phone: req.param('phone'),
+//         // town: req.param('town'),
+//         // country: req.param('country'),
+//         // dateOfBirth: req.param('dateOfBirth')
+// };
 
 
     var newUser = new User({
-        email: userData.email,
-        password: userData.password
+        email: email,
+        password: bcrypt.hashSync(password)
         // firstName: userData.firstName,
         // lastName: userData.lastName,
         // phone: userData.phone,
@@ -61,7 +65,7 @@ router.get('/register', function (req, res, next) {
         // country: userData.country,
         // dateOfBirth: userData.dateOfBirth
     });
-    User.find({email: userData.email}, function (err, user) {
+    User.find({email: email}, function (err, user) {
         if (user.length) {
             return res.send('user already exists !');
         } else {
