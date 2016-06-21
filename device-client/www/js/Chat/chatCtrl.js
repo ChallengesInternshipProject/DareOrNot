@@ -41,7 +41,7 @@ angular.module('starter.controllers')
       $ionicScrollDelegate.resize();
       $ionicScrollDelegate.scrollBottom();
       delete $scope.message;
-      console.log(msg)
+      console.log(msg);
       //Call $scope.$apply to update the message to the other clients
       $scope.$apply();
       console.log($scope.messages);

@@ -11,6 +11,12 @@ io.on('connection', function (socket) {
         io.emit('message', msg);
         console.log(msg);
     });
+
+    socket.on('private message', function (fron, msg) {
+        // io.emit('message', msg);
+        console.log('I received a private message by ', from, ' saying ', msg);
+    });
+
     socket.on('clear', function () {
         io.emit('clear', 'the clear response');
         console.log('clearing all messages');

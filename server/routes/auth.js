@@ -41,25 +41,25 @@ router.get('/login', function (req, res, next) {
 router.get('/register', function (req, res, next) {
     var userData = {
         email: req.param('email'),
-        password: bcrypt.hashSync(req.param('password1')),
-        firstName: req.param('firstName'),
-        lastName: req.param('lastName'),
-        phone: req.param('phone'),
-        town: req.param('town'),
-        country: req.param('country'),
-        dateOfBirth: req.param('dateOfBirth')
-    };
+        password: bcrypt.hashSync(req.param('password1'))
+        // firstName: req.param('firstName'),
+        // lastName: req.param('lastName'),
+        // phone: req.param('phone'),
+        // town: req.param('town'),
+        // country: req.param('country'),
+        // dateOfBirth: req.param('dateOfBirth')
+};
 
 
     var newUser = new User({
         email: userData.email,
-        password: userData.password,
-        firstName: userData.firstName,
-        lastName: userData.lastName,
-        phone: userData.phone,
-        town: userData.phone,
-        country: userData.country,
-        dateOfBirth: userData.dateOfBirth
+        password: userData.password
+        // firstName: userData.firstName,
+        // lastName: userData.lastName,
+        // phone: userData.phone,
+        // town: userData.phone,
+        // country: userData.country,
+        // dateOfBirth: userData.dateOfBirth
     });
     User.find({email: userData.email}, function (err, user) {
         if (user.length) {
