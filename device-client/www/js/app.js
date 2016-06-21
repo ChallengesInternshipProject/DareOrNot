@@ -94,6 +94,15 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
             controller: 'MapCtrl'
           }
         }
+      })
+      .state('tab.new-dare', {
+        url: '/new-dare',
+        views: {
+          'tab-new-dare': {
+            templateUrl: 'js/newDare/tab-new-dare.html',
+            controller: 'NewDareCtrl'
+          }
+        }
       });
 
     // if none of the above states are matched, use this as the fallback
