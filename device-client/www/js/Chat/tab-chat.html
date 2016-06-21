@@ -5,7 +5,11 @@
       pulling-text="Pull to clear !"
       on-refresh="clearAllMessages()">
     </ion-refresher>
-
+    <div class="button-bar bar-light">
+      <a class="button">Room1</a>
+      <a class="button">Room2</a>
+      <a class="button">Room3</a>
+    </div>
     <ion-list>
       <ion-item ng-repeat="msg in messages track by $index">
         <strong>{{msg.id}}</strong>
@@ -16,6 +20,7 @@
     </ion-list>
 
   </ion-content>
+
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
     <label class="item-input-wrapper">
       <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"

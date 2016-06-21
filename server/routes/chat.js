@@ -12,9 +12,8 @@ io.on('connection', function (socket) {
         console.log(msg);
     });
 
-    socket.on('private message', function (fron, msg) {
-        // io.emit('message', msg);
-        console.log('I received a private message by ', from, ' saying ', msg);
+    socket.on('say to someone', function(id, msg){
+        socket.broadcast.to(id).emit('my message', msg);
     });
 
     socket.on('clear', function () {
