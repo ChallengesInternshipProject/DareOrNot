@@ -19,7 +19,7 @@ angular.module('starter.controllers')
     // console.log($localStorage.user);
     $scope.message = '';
     $scope.onlineUsers = [];
-
+    $scope.me = $localStorage.user;
 
     //TODO FIX the RECIEVER !
     $scope.emit = function (msg) {
@@ -55,11 +55,11 @@ angular.module('starter.controllers')
       $scope.$broadcast('scroll.refreshComplete');
       console.log('someone sent clear request');
     });
-    socket.on('connect', function () { // TIP: you can avoid listening on `connect` and listen on events directly too!
-      socket.emit('ferret', 'tobi', function (data) {
-        console.log(data); // data will be 'woot'
-      });
-    });
+    // socket.on('connect', function () { // TIP: you can avoid listening on `connect` and listen on events directly too!
+    //   socket.emit('ferret', 'tobi', function (data) {
+    //     console.log(data); // data will be 'woot'
+    //   });
+    // });
 
     socket.on('clientConnect', function (msg) {
       $log.info(msg.id + ' CONNECTED !');
@@ -82,17 +82,18 @@ angular.module('starter.controllers')
     });
 
     socket.on('new user', function (user) {
-      $log.info(user)
+      $log.info(user);
       $http.get('http://localhost:3000/chat/clients')
         .success(function (users) {
-          $scope.onlineUsers = users
+          $scope.onlineUsers = users;
           // $scope.$apply();
         });
     });
+
     socket.on('dc user', function (user) {
       $http.get('http://localhost:3000/chat/clients')
         .success(function (users) {
-          $scope.onlineUsers = users
+          $scope.onlineUsers = users;
           // $scope.$apply();
         });
     });

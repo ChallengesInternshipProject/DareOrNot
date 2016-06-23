@@ -27,6 +27,9 @@
         <!--users online here-->
         <ion-list>
           <ion-item>
+            <h2>Hello : <strong>{{me}}</strong></h2>
+          </ion-item>
+          <ion-item>
             <h2>Users Online :</h2>
           </ion-item>
           <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.user}}">

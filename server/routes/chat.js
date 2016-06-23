@@ -122,13 +122,16 @@ router.get('/messages/:from/:to', function (req, res, next) {
     var to = req.param('to');
 
 
-    Message.find({})
-        .where('sender')
-        .in([from, to])
-        .exec(function (err, data) {
-            res.send(data);
-        });
+    // Message.find({})
+    //     .where('sender')
+    //     .in([from, to])
+    //     .exec(function (err, data) {
+    //         res.send(data);
+    //     });
 
+    Message.find({$or: [{sender: from, reciever: to}, {sender: to, reciever: from}]},function (err,result) {
+        res.send(result);
+    });
 
     // Message.find({
     //     sender: {$all: [from, to]}
