@@ -7,12 +7,36 @@ var UserList = require('../models/userList');
 io.on('connection', function (socket) {
     var addedUser = false;
     // console.log(socket.id + ' connected');
-    io.emit('clientConnect', {id: socket.username});
+    io.emit('clientConnect', {id: socket.id});
 
 
     // setInterval(function () {
     //     io.emit('room1', new Date);
     // }, 1000);
+
+    // socket.on('switch room', function (room) {
+    //     console.log(room);
+    //     socket.join(room);
+    //     console.log(socket.id + " joined " + room)
+    //     io.sockets.in(room).emit('private message', 'welcome !');
+    //
+    // });
+    socket.on('private message', function (room) {
+        console.log(room);
+        socket.join(room);
+        console.log(socket.id + " joined " + room)
+
+        io.sockets.in(room).emit('private message', 'pm from ' + socket.id);
+    });
+
+
+    socket.on('leave room', function (room) {
+
+        socket.leave(room);
+        console.log(socket.id + " left " + room)
+
+    });
+
 
     socket.on('message', function (msg) {
         io.emit('message', {
@@ -91,6 +115,26 @@ router.get('/submit', function (req, res, next) {
             return res.send('saved');
         }
     });
+});
+
+router.get('/messages/:from/:to', function (req, res, next) {
+    var from = req.param('from');
+    var to = req.param('to');
+
+
+    Message.find({})
+        .where('sender')
+        .in([from, to])
+        .exec(function (err, data) {
+            res.send(data);
+        });
+
+
+    // Message.find({
+    //     sender: {$all: [from, to]}
+    // }, function (err, messages) {
+    //     res.json(messages);
+    // });
 });
 
 router.get('/clear', function (req, res, next) {

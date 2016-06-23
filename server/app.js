@@ -24,6 +24,7 @@ require('./passport-init');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var chat = require('./routes/chat');
+var challenges = require('./routes/challenges');
 
 //Login and Registration
 var auth = require('./routes/auth');
@@ -57,6 +58,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/auth', auth);
 app.use('/chat', chat);
+app.use('/challenges', challenges);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

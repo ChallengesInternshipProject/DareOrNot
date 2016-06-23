@@ -2,20 +2,21 @@
 
   <ion-content class="padding">
 
-    <div class="row">
-      <div class="col">
-        <div class="button-bar bar-light">
-          <a class="button" ng-click="switchRoom(1)">Room1</a>
-          <a class="button" ng-click="switchRoom(2)">Room2</a>
-          <a class="button" ng-click="switchRoom(3)">Room3</a>
-        </div>
-      </div>
-    </div>
+    <!--<div class="row">-->
+      <!--<div class="col">-->
+        <!--<div class="button-bar bar-light">-->
+          <!--<a class="button" ng-click="switchRoom(1)">Room1</a>-->
+          <!--<a class="button" ng-click="switchRoom(2)">Room2</a>-->
+          <!--<a class="button" ng-click="switchRoom(3)">Room3</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="row">
       <div class="col-90">
         <ion-list>
           <ion-item ng-repeat="msg in messages track by $index">
-            <strong>{{msg.id}}</strong>
+            from : <strong>{{msg.sender}}</strong>
+            to : <strong>{{msg.reciever}}</strong>
             <div ng-class="{'strike': theItem, left : right}">
               {{msg.message}}
             </div>
@@ -47,6 +48,7 @@
       <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"
              ng-model="message" on-focus="inputUp()" on-blur="inputDown()"/>
     </label>
+
     <button ng-model="deleted" class="button button-clear" ng-click="emit(message)">
       Send
     </button>

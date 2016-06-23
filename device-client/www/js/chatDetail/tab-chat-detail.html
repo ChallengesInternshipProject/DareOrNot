@@ -2,5 +2,29 @@
   <ion-content>
 
     <h2>{{user.socketID}}</h2>
+
+    <button ng-click="emit()">Test message</button>
+    <ion-list>
+      <ion-item ng-repeat="msg in messages track by $index">
+        <strong>{{msg}}</strong>
+        <div ng-class="{'strike': theItem, left : right}">
+          {{msg}}
+        </div>
+      </ion-item>
+    </ion-list>
+
+
+
   </ion-content>
+  <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"
+             ng-model="message" on-focus="inputUp()" on-blur="inputDown()"/>
+    </label>
+
+    <button ng-model="deleted" class="button button-clear" ng-click="emit(message)">
+      Send
+    </button>
+
+  </ion-footer-bar>
 </ion-view>

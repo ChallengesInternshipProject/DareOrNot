@@ -4,9 +4,11 @@
       .item-content {
         background-color: skyblue !important;
       }
-      .ng-valid-parse{
+
+      .ng-valid-parse {
         background-color: black !important;
       }
+
       .center {
         margin-left: auto;
         margin-right: auto;
@@ -14,61 +16,74 @@
       }
     </style>
     <div class="list">
-      <label class="item item-input">
-        <input type="text" placeholder="Dare Name">
-      </label>
-      <label padding="true" class="item item-input">
-        <textarea placeholder="Dare Description" rows="8" cols="10"></textarea>
-      </label>
-      <h3>Choose Category</h3>
 
-      <div class="row">
-        <div class="col">
-          <ion-radio ng-model="choice" ng-value="'A'" icon="ion-ios-chatbubble">Choose A</ion-radio>
-        </div>
-        <div class="col">
-          <ion-radio ng-model="choice" ng-value="'B'" icon="ion-ios-chatbubble">Choose B</ion-radio>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <ion-radio ng-model="choice" ng-value="'C'" icon="ion-ios-chatbubble">Choose C</ion-radio>
-        </div>
-        <div class="col">
-          <ion-radio ng-model="choice" ng-value="'D'" icon="ion-ios-chatbubble">Choose D</ion-radio>
-        </div>
-      </div>
-      <h3>Duration</h3>
       <label class="item item-input">
-        <span class="input-label">From</span>
-        <input type="date">
+        <input type="text" placeholder="Dare Name" ng-model="data.name" >
       </label>
+
+      <label padding="true" class="item item-input">
+        <textarea placeholder="Dare Description" rows="8" cols="10" ></textarea>
+      </label>
+
+      <h3>Location</h3>
       <label class="item item-input">
-        <span class="input-label">To</span>
-        <input type="date">
+        <input type="text" placeholder="Lat" >
       </label>
-      <h3>Payment:</h3>
-      <label class="item item-input">
-        <span class="input-label">From</span>
-        <input type="number" min="0" max="50">
+      <label class=" item item-input">
+        <input type="text" placeholder="Lng" >
       </label>
-      <label class="item item-input">
-        <span class="input-label">To</span>
-        <input type="number" min="0" max="50">
-      </label>
-      <h3>Image</h3>
-      <div class="list">
-        <img class="center" src="../../img/adam.jpg" width="25%">
-      </div>
-      <div class="row responsive-sm">
-        <button class="button button-positive col privacy">
-          Private
-        </button>
-        <button class="button button-positive col privacy">
-          Public
-        </button>
-      </div>
-    </div>
+      <leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>
+
+      <button class="button button-block button-balanced" ng-click="submitDare()">Create</button>
+      <!--<h3>Choose Category</h3>-->
+
+      <!--<div class="row">-->
+      <!--<div class="col">-->
+      <!--<ion-radio ng-model="choice" ng-value="'A'" icon="ion-ios-chatbubble">Choose A</ion-radio>-->
+      <!--</div>-->
+      <!--<div class="col">-->
+      <!--<ion-radio ng-model="choice" ng-value="'B'" icon="ion-ios-chatbubble">Choose B</ion-radio>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<div class="row">-->
+      <!--<div class="col">-->
+      <!--<ion-radio ng-model="choice" ng-value="'C'" icon="ion-ios-chatbubble">Choose C</ion-radio>-->
+      <!--</div>-->
+      <!--<div class="col">-->
+      <!--<ion-radio ng-model="choice" ng-value="'D'" icon="ion-ios-chatbubble">Choose D</ion-radio>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<h3>Duration</h3>-->
+      <!--<label class="item item-input">-->
+      <!--<span class="input-label">From</span>-->
+      <!--<input type="date">-->
+      <!--</label>-->
+      <!--<label class="item item-input">-->
+      <!--<span class="input-label">To</span>-->
+      <!--<input type="date">-->
+      <!--</label>-->
+      <!--<h3>Payment:</h3>-->
+      <!--<label class="item item-input">-->
+      <!--<span class="input-label">From</span>-->
+      <!--<input type="number" min="0" max="50">-->
+      <!--</label>-->
+      <!--<label class="item item-input">-->
+      <!--<span class="input-label">To</span>-->
+      <!--<input type="number" min="0" max="50">-->
+      <!--</label>-->
+      <!--<h3>Image</h3>-->
+      <!--<div class="list">-->
+      <!--<img class="center" src="../../img/adam.jpg" width="25%">-->
+      <!--</div>-->
+      <!--<div class="row responsive-sm">-->
+      <!--<button class="button button-positive col privacy">-->
+      <!--Private-->
+      <!--</button>-->
+      <!--<button class="button button-positive col privacy">-->
+      <!--Public-->
+      <!--</button>-->
+      <!--</div>-->
+      <!--</div>-->
 
   </ion-content>
 </ion-view>

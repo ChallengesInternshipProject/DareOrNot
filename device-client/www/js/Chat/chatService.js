@@ -10,10 +10,11 @@ angular.module('starter.services')
         });
         return deffered.promise;
       },
-      emitMessage: function (user, msg, socket) {
-        $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat/submit?id=' + user + '&message=' + msg + '&reciever=test1&sender=test2')
+      emitMessage: function (sender, reciever, msg, socket) {
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat/submit?message=' + msg + '&reciever=' + reciever + '&sender=' + sender)
         socket.emit('message', {
-          id: user,
+          sender: sender,
+          reciever: reciever,
           msg: msg
         });
       },

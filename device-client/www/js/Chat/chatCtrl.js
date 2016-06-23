@@ -15,14 +15,16 @@ angular.module('starter.controllers')
     ChatService.getMessages().then(function (result) {
       $scope.messages = result;
     });
-    
+
     // console.log($localStorage.user);
     $scope.message = '';
     $scope.onlineUsers = [];
 
+
+    //TODO FIX the RECIEVER !
     $scope.emit = function (msg) {
       delete $scope.message;
-      ChatService.emitMessage($localStorage.user, msg, socket);
+      ChatService.emitMessage($localStorage.user, 'test', msg, socket);
     };
 
     $scope.clearAllMessages = function () {
