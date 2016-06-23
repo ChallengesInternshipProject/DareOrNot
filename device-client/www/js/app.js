@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.controllers', 'starter.services', 'starter.constants', 'leaflet-directive'])
+angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.controllers', 'starter.services', 'starter.constants', 'leaflet-directive','ui.rCalendar'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -119,6 +119,15 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
           'tab-timeline': {
             templateUrl: 'templates/tab-timeline.html',
             controller: 'TimelineCtrl'
+          }
+        }
+      })
+      .state('tab.calendar',{
+        url:'/calendar',
+        views:{
+          'tab-calendar':{
+            templateUrl:'templates/tab-calendar.html',
+            controller:'CalendarCtrl'
           }
         }
       });
