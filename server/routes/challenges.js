@@ -9,17 +9,24 @@ router.get('/', function (req, res, next) {
     });
 });
 
-router.get('/create', function (req, res, next) {
+router.get('/clear', function (req, res, next) {
+    Challenge.remove(function (err) {
+        res.send('cleared');
+    })
+});
 
-    var name = req.param('name');
+router.post('/create', function (req, res, next) {
+
+    var title = req.param('name');
     var description = req.param('description');
+    
     var location = {
         lat: req.param('lat'),
         lng: req.param('lng')
     };
 
     var currentChallenge = new Challenge({
-        name: name,
+        title: title,
         description: description,
         location: location
     });

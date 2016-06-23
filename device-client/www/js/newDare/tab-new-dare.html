@@ -1,36 +1,36 @@
 <ion-view view-title="Create New Dare" name="new-dare-view">
   <ion-content padding="true">
-    <style>
-      .item-content {
-        background-color: skyblue !important;
-      }
+    <!--<style>-->
+      <!--.item-content {-->
+        <!--background-color: skyblue !important;-->
+      <!--}-->
 
-      .ng-valid-parse {
-        background-color: black !important;
-      }
+      <!--.ng-valid-parse {-->
+        <!--background-color: black !important;-->
+      <!--}-->
 
-      .center {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
-    </style>
+      <!--.center {-->
+        <!--margin-left: auto;-->
+        <!--margin-right: auto;-->
+        <!--display: block;-->
+      <!--}-->
+    <!--</style>-->
     <div class="list">
 
       <label class="item item-input">
-        <input type="text" placeholder="Dare Name" ng-model="data.name" >
+        <input type="text" placeholder="Dare Name" ng-model="data.name">
       </label>
 
       <label padding="true" class="item item-input">
-        <textarea placeholder="Dare Description" rows="8" cols="10" ></textarea>
+        <textarea placeholder="Dare Description" rows="8" cols="10" ng-model="data.description"></textarea>
       </label>
 
       <h3>Location</h3>
       <label class="item item-input">
-        <input type="text" placeholder="Lat" >
+        <input type="text" placeholder="Lat" ng-model="markers[0].lat">
       </label>
       <label class=" item item-input">
-        <input type="text" placeholder="Lng" >
+        <input type="text" placeholder="Lng" ng-model="markers[0].lng">
       </label>
       <leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>
 

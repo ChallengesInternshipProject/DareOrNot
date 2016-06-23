@@ -104,6 +104,15 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
           }
         }
       })
+      .state('tab.dare-list', {
+        url: '/dare-list',
+        views: {
+          'tab-dare-list': {
+            templateUrl: 'js/dareList/tab-dare-list.html',
+            controller: 'DareListCtrl'
+          }
+        }
+      })
       .state('tab.new-dare', {
         url: '/new-dare',
         views: {
