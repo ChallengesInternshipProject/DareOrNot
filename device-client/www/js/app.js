@@ -112,6 +112,15 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
             controller: 'NewDareCtrl'
           }
         }
+      })
+      .state('tab.timeline', {
+        url: '/timeline',
+        views: {
+          'tab-timeline': {
+            templateUrl: 'templates/tab-timeline.html',
+            controller: 'TimelineCtrl'
+          }
+        }
       });
 
     // if none of the above states are matched, use this as the fallback
