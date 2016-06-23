@@ -20,7 +20,6 @@ function createTestChalllege(userID){
 	var newChallenge = new Challenge({
 		_creator : userID,
 		description : "Feed a stray cat",
-    		
 	})
 	//console.log('New CHallenge')
 	newChallenge.save();
@@ -31,7 +30,7 @@ router.get('/:userID', function(req, res, next) {
 	// 	createTestChalllege(req.params.userID);
 	// }
 
-
+	
 	//TODO add pagination 
 	 Challenge
 	 .find({
@@ -43,7 +42,7 @@ router.get('/:userID', function(req, res, next) {
 		function (err, post) {
 			if (err) return next(err);
 			post = CalculateTimes(post);
-			 res.json(post);
+			res.json(post);
 		}
 	);
 });

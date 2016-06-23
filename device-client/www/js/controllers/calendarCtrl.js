@@ -1,27 +1,38 @@
+
 angular.module('starter.controllers')
+	.factory('moment', function ($window) {
+	        return $window.moment;
+	})
+  	.controller('CalendarCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage) {
 
-  .controller('CalendarCtrl', function ($scope, $http, $log, $state, $stateParams) {
-   	console.log( new Date(Date.UTC(2016,5,24)))
-   	$scope.calendarEvents =[
-   		{
-	   		"title":"First event",
-	   		"startTime": new Date(Date.UTC(2016,5,24)),
-	   		"endTime": new Date(Date.UTC(2016,5, 26))
-	   	},
-	   	{
-	   		"title":"Second event",
-	   		"startTime": new Date(Date.UTC(2016,5,25)),
-	   		"endTime": new Date(Date.UTC(2016,5, 27))
-	   	},
-	   	{
-	   		"title":"Third event",
-	   		"startTime": new Date(Date.UTC(2016,5,24)),
-	   		"endTime": new Date(Date.UTC(2016,5, 26))
-	   	}
-   	];
+		$scope.doRefresh = function () {
+			// GetTimeline();
+		};
+		
+		$scope.nextMonth = function() {
+			$ionicSlideBoxDelegate.next();
+		}
 
-   	
-   	
-   	console.log($scope.calendarEvents)
-   	
+		$scope.previousMonth = function(){
+			$ionicSlideBoxDelegate.previous();
+		}
+
+		$scope.SERVER_ADDRESS = SERVER_ADDRESS+':3000/';
+
+		// GetTimeline();
+		
+		function GetCalendar(year,month) {
+			if (year == undefined) year = new moment().format('YYYY');
+			if (month == undefined) month = new moment().format('M');
+			
+			$ionicLoading.show({
+				template: 'Loading...'
+			});
+			
+			$http.get(SERVER_ADDRESS + ':3000/calendar/'+$localStorage.id).success(function (result) {
+				$ionicLoading.hide();
+				$scope.challenges = result ;
+				$scope.$broadcast('scroll.refreshComplete');
+			});
+		};
   });
