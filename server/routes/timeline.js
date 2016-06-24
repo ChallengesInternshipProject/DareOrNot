@@ -16,18 +16,21 @@ function CalculateTimes(challenges){
 	return result
 }
 
-function createTestChalllege(userID){
+function createTestChalllege(userID,date){
 	var newChallenge = new Challenge({
 		_creator : userID,
 		description : "Feed a stray cat",
+		startDate : new moment().add(date+2,'d').format(),
+		endDate : new moment().add(date+4,'d').format(),
+		title: "New Dare :" + new moment().add(date+2,'d').format(),
 	})
-	//console.log('New CHallenge')
+	console.log('New CHallenge')
 	newChallenge.save();
 }
 
 router.get('/:userID', function(req, res, next) {
-	// for(var i = 0; i < 10000; i++) {
-	// 	createTestChalllege(req.params.userID);
+	// for(var i = 0; i < 100; i++) {
+	// 	createTestChalllege(req.params.userID,i);
 	// }
 
 	
