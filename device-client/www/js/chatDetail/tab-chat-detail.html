@@ -1,9 +1,6 @@
 <ion-view view-title="Chat Detail">
   <ion-content>
-
     <h2>{{user.socketID}}</h2>
-
-    <button ng-click="emit()">Test message</button>
     <ion-list>
       <ion-item ng-repeat="msg in messages track by $index">
         <strong>{{msg.sender}}</strong>
@@ -12,8 +9,6 @@
         </div>
       </ion-item>
     </ion-list>
-
-
 
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">

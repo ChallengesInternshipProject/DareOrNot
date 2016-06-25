@@ -12,41 +12,18 @@ angular.module('starter.controllers')
     $http.get('http://localhost:3000/chat/messages/' + from + '/' + to)
       .success(function (response) {
         $scope.messages = response;
-        // $scope.$apply();
       });
+
+    socket.on('message', function () {
+      $http.get('http://localhost:3000/chat/messages/' + from + '/' + to)
+        .success(function (response) {
+          $scope.messages = response;
+        });
+    });
 
     $scope.emit = function (msg) {
       delete $scope.message;
       ChatService.emitMessage(from, to, msg, socket);
     };
 
-
-    // $log.info($localStorage.user);
-
-
-    // $http.get('http://localhost:3000/chat/client/' + $stateParams.userID)
-    //   .success(function (user) {
-    //   $scope.user = user;
-    //   // socket.to($scope.user.socketID).emit('wtf');
-    //   //
-    //   // socket.on($scope.user.socketID, function (msg) {
-    //   //   $log.info(msg);
-    //   // });
-    //
-    //     // socket.emit('switch room', $scope.user.socketID);
-    //
-    //     socket.on('private message', function (msg) {
-    //     $log.info(msg);
-    //     $scope.messages.push(msg);
-    //     $scope.$apply();
-    //   });
-    //
-    //   // $log.info($scope.user.socketID);
-    //
-    //   $scope.emit = function (msg) {
-    //     // $log.info($scope.user.socketID + ' sent msg');
-    //     socket.emit('private message', $localStorage.user.user);
-    //     // socket.emit('private message', $localStorage.user);
-    //   };
-    // });
   });

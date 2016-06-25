@@ -7,10 +7,6 @@ angular.module('starter.controllers')
     //TODO improve logic
     socket.emit('add user', $localStorage.user);
 
-    // socket.on('new user',function (user) {
-    //   $scope.onlineUsers.push(user)
-    // });
-
     //Get the messages on first view load
     ChatService.getMessages().then(function (result) {
       $scope.messages = result;
@@ -24,28 +20,12 @@ angular.module('starter.controllers')
     //TODO FIX the RECIEVER !
     $scope.emit = function (msg) {
       delete $scope.message;
-      ChatService.emitMessage($localStorage.user, 'test', msg, socket);
+      ChatService.emitMessage($localStorage.user, 'global', msg, socket);
     };
 
     $scope.clearAllMessages = function () {
       ChatService.clearMessages(socket);
     };
-
-    $scope.switchRoom = function (roomID) {
-      if (roomID === 1) {
-        $log.info('Joined room 1')
-
-      } else if (roomID === 2) {
-        $log.info('Joined room 2')
-
-      }
-
-      // ChatService.switchRoom(roomID, socket);
-    };
-
-    socket.on('room1', function (msg) {
-      $log.info(msg);
-    });
 
     //START TODO to move to the service or not to move to the service ? :O
     socket.on('clear', function () {
@@ -55,38 +35,38 @@ angular.module('starter.controllers')
       $scope.$broadcast('scroll.refreshComplete');
       console.log('someone sent clear request');
     });
-    // socket.on('connect', function () { // TIP: you can avoid listening on `connect` and listen on events directly too!
-    //   socket.emit('ferret', 'tobi', function (data) {
-    //     console.log(data); // data will be 'woot'
-    //   });
-    // });
 
     socket.on('clientConnect', function (msg) {
-      $log.info(msg.id + ' CONNECTED !');
+      $log.info(msg + ' CONNECTED !');
     });
 
 
     socket.on('message', function (msg) {
+      $log.info(msg);
       $scope.messages.push({
-        id: msg.id,
+        sender: msg.sender,
+        reciever: msg.sender,
         message: msg.msg
       });
-
       $ionicScrollDelegate.resize();
       $ionicScrollDelegate.scrollBottom();
-
-      console.log(msg);
       //Call $scope.$apply to update the message to the other clients
       $scope.$apply();
-      console.log($scope.messages);
+
     });
 
     socket.on('new user', function (user) {
       $log.info(user);
       $http.get('http://localhost:3000/chat/clients')
         .success(function (users) {
-          $scope.onlineUsers = users;
-          // $scope.$apply();
+          $scope.onlineUsers = [];
+          users.forEach(function (user) {
+
+            //You can't chat with yourself so just don't show in the online users array
+            if ($localStorage.user != user.user) {
+              $scope.onlineUsers.push(user);
+            }
+          });
         });
     });
 

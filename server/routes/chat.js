@@ -39,11 +39,8 @@ io.on('connection', function (socket) {
 
 
     socket.on('message', function (msg) {
-        io.emit('message', {
-            id: socket.username,
-            // testID: socket.id,
-            msg: msg.msg
-        });
+        console.log(msg);
+        io.emit('message',msg);
         console.log(socket.username);
     });
 
