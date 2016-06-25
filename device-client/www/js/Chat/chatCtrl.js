@@ -10,6 +10,7 @@ angular.module('starter.controllers')
     //Get the messages on first view load
     ChatService.getMessages().then(function (result) {
       $scope.messages = result;
+      $log.info(result);
     });
 
     // console.log($localStorage.user);
@@ -46,7 +47,8 @@ angular.module('starter.controllers')
       $scope.messages.push({
         sender: msg.sender,
         reciever: msg.sender,
-        message: msg.msg
+        message: msg.msg,
+        time: msg.time
       });
       $ionicScrollDelegate.resize();
       $ionicScrollDelegate.scrollBottom();
