@@ -122,6 +122,15 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
           }
         }
       })
+      .state('tab.gMaps', {
+        url: '/gMaps',
+        views: {
+          'tab-gMaps': {
+            templateUrl: 'js/googleMap/tab-gMaps.html',
+            controller: 'GoogleMapCtrl'
+          }
+        }
+      })
       .state('tab.dare-list', {
         url: '/dare-list',
         views: {

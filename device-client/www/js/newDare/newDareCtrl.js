@@ -22,6 +22,13 @@ angular.module('starter.controllers')
         lng: 23.354051
       }
     ];
+    $scope.choice = [
+      {
+        lat: 42.662888,
+        lng: 23.354051
+      }
+    ];
+
     $scope.submitDare = function () {
       $http({
         method: 'POST',
@@ -30,7 +37,8 @@ angular.module('starter.controllers')
           name: $scope.data.name,
           description: $scope.data.description,
           lat: $scope.data.location.lat,
-          lng: $scope.data.location.lng
+          lng: $scope.data.location.lng,
+          choice: $scope.data.choice
         }
       }).then(function (response) {
         $log.info(response);
