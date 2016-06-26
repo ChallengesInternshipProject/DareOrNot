@@ -58,3 +58,4 @@ angular.module('starter.controllers')
     $log.info($scope.markers);
   });
 
+
