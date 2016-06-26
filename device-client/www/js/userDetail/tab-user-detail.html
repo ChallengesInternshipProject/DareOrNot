@@ -1,8 +1,12 @@
 <ion-view view-title="User Details" name="user-detail-view">
   <ion-content>
-    <h1>{{user.email}}</h1>
-    <p>{{user.firstName}}</p>
-    <p>{{user.lastName}}</p>
+    <!--{{user}}-->
+    <h1>Email : {{user.email}}</h1>
+    <p>First Name : {{user.firstName}}</p>
+    <p>Last Name : {{user.lastName}}</p>
+    <p>Date Of Birth : {{user.dateOfBirth | date: 'medium'}}</p>
+    <p>Phone : {{user.phone}}</p>
+    <p>Friends : {{user.friends}} -- TODO add the friends</p>
     <h2>Location</h2>
     <leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletUserMap"></leaflet>
   </ion-content>

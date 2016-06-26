@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var userSchema = new Schema({
     id: Number,
     email: String,
-    // password must be encrypted with bcrypt
+    // password is encrypted with bcrypt
     password: String,
     firstName: String,
     lastName: String,

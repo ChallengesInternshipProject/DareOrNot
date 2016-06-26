@@ -10,18 +10,19 @@
       <label class="item item-input">
         <input type="password" placeholder="Password Again" ng-model="data.password2" required>
       </label>
-      <!--<label class="item item-input">-->
-        <!--<input type="text" placeholder="First Name" ng-model="data.firstName">-->
-      <!--</label>-->
-      <!--<label class="item item-input">-->
-        <!--<input type="text" placeholder="Last Name" ng-model="data.lastName">-->
-      <!--</label>-->
-      <!--<label class="item item-input">-->
-        <!--<input type="text" placeholder="Phone" ng-model="data.phone">-->
-      <!--</label>-->
-      <!--<label class="item item-input">-->
-        <!--<input type="text" placeholder="Town" ng-model="data.town">-->
-      <!--</label>-->
+      <label class="item item-input">
+        <input type="text" placeholder="First Name" ng-model="data.firstName">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Last Name" ng-model="data.lastName">
+      </label>
+      <label class="item item-input">
+        <button ng-model="data.dateOfBirth" ng-click="openDatePicker()">Birth Date </button>
+        <span>{{data.dateOfBirth | date : 'medium'}}</span>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Phone" ng-model="data.phone">
+      </label>
       <!--<label class="item item-input">-->
         <!--<input type="text" placeholder="Country" ng-model="data.country">-->
       <!--</label>-->
