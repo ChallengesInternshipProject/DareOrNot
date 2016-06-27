@@ -17,7 +17,7 @@ router.get('/login', function (req, res, next) {
     User.findOne({
         email: email
     }, function (err, user) {
-        console.info(bcrypt.compareSync(password, user.password));
+        // console.info(bcrypt.compareSync(password, user.password));
         if (err) {
             return res.json({
                 success: false,
