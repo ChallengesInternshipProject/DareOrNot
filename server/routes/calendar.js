@@ -1,18 +1,15 @@
 "use strict";
 var express = require('express');
 var router = express.Router();
-var moment = require('moment');
 var Challenge = require('../models/challenges');
+var moment = require('moment');
+moment.locale('bg')
+
 class Calendar{
 	constructor(userID,year,month,context){
-		console.log(arguments)
-		// for(argument of arguments){
-		// 	console.log(arguments);
-		// }
-		//this.getCalendarDays(year,month);
-		
+		this.getCalendarDays(year,month);
 		// if(context != undefined){
-		// 	this[action+context].apply(this,arguments);
+		// 	this[context].apply(this,arguments);
 		// }
 	}
 
@@ -22,8 +19,14 @@ class Calendar{
 		//M is array and we have to subtract 1
 		month -=1;
 
-		this.result = [];
+		this.days = [];
 		var currentDate = new moment({d:1,M:month,y:year});
+		this.currentMonth = currentDate.format('MMMM').toUpperCase()
+		this.month = currentDate.format('M')
+		this.nextMonth = new moment(currentDate.format()).add(1,'M').format('M')
+		this.prevMonth = new moment(currentDate.format()).subtract(1,'M').format('M')
+		this.year = year;
+
 		var days = currentDate.daysInMonth();
 
 		//add emtpy days
@@ -38,83 +41,106 @@ class Calendar{
 		//calculate the last day
 		this.toDate = new moment(currentDate.format()).add(days,'d');
 		//Add days so the days can end on sunday
-		days +=  Math.abs(Number(this.toDate.format('E'))-7);
+		days +=  Math.abs(Number(this.toDate.format('E'))-8);
 		//Calculate the end date
 		this.toDate = new moment(this.startDate).add(days,'d').format()
-		
+		this.daysNumber = days;
+
 		for(var i = 0; i< days; i++){
-			var currentDay = {
-				date:currentDate,
+			let currentDay = {
+				date:currentDate.format(),
 				day:currentDate.format('D'),
-				events:[],
+				hasEvents:false,
 				isFromCurrentMonth:	 month+1 ==  currentDate.format('M') ? true : false,
 			}
-			this.result[currentDate.format('D/M/YYYY')]=currentDay;
+			this.days[currentDate.format('D/M/YYYY')]=currentDay;
+			console.log(currentDate.format())
 			currentDate.add(1,'d');
 		}
-	
-	}
-
-	parseEvents(){
-		//console.log(this)
-		var result = {
-			startDate:this.startDate,
-			toDate:this.toDate,
-			days:[]
-		}
-		//console.log(this.result);
-		for(var day in this.result){
-			result.days.push(JSON.stringify(this.result[day]))
-		}
-	
-		return result
-	}
-	
-	setEvents(events){
-		post.forEach(function(event,index){
-			obj.result[moment(event.startDate).format('D/M/YYYY')].events.push(event)
-		})
-	}
-	getCalendar(userID){
-		var getEvents = function(obj,userID,fromDate,toDate,category,except){
-			 Challenge
-			 .find({
-				_creator:req.params.userID,
-				title : {$ne:null},
-				startDate:{$gte:moment(obj.startDate).format()},
-				endDate:{$lte:moment(obj.toDate).format()}
-			 })
-			 .populate('_creator')
-			 .exec(
-				function (err,post) {
-					
-					post.forEach(function(event,index){
-						obj.result[moment(event.startDate).format('D/M/YYYY')].events.push(event)
-					})
-					res.json(obj.parseEvents())			
-					//res.json('SOME STRING');
-				}
-			);
-		}
-		//call the function
-
-
 		
 	}
 
-	
+	//Strigify the class
+	parseEvents(){
+		
+		this.jsonResult = {
+			startDate:this.startDate,
+			toDate:this.toDate,
+			prevMonth : this.prevMonth,
+			nextMonth : this.nextMonth,
+			currentMonth :this.currentMonth,
+			weeks : Math.ceil(this.daysNumber/7),
+			daysNumber : this.daysNumber,
+			year :this.year,
+			month:this.month,
+			days:[]
+		}
+		for(var day in this.days){
+			this.jsonResult.days.push(this.days[day])
+		}
+		
+	}
 }
 //End of class definition
 
+
+//Create Calendar
 router.get('/:userID/:year/:month',function(req,res,next){
 	var eventCalendar = new Calendar(
 		req.params.userID,
 		req.params.year,
-		req.params.month,
-		'getCalendar'
+		req.params.month
 	);
-	res.json('sdmasddasdasd');
+	Challenge
+	.find({
+		_creator:req.params.userID,
+		title : {$ne:null},
+		startDate:{$gte:moment(eventCalendar.startDate).format()},
+		endDate:{$lte:moment(eventCalendar.toDate).format()}
+	})
+	.populate('_creator')
+	.exec(
+		function (err,post) {
+			post.forEach(function(event,index){
+				eventCalendar.days[moment(event.startDate).format('D/M/YYYY')].hasEvents=true;
+			})
+			eventCalendar.parseEvents()
+			res.json(eventCalendar.jsonResult);
+		}
+	);
+
 });
-
-
+//Get Events for month
+router.get("/events/:userID/:year/:month/:day",function(req,res,next){
+	// var eventCalendar = new Calendar(
+	// 	req.params.userID,
+	// 	req.params.year,
+	// 	req.params.month
+	// );
+	let currentDate = new moment({
+		y:req.params.year,
+		M:req.params.month-1,
+		d:req.params.day
+	});
+	
+	let from= currentDate.format();
+	let to = currentDate.add(1,'d').format();
+	console.log(from)
+	console.log(to)
+	Challenge
+	.find({
+		title : {$ne:null},
+		startDate:{
+				$gt:from,
+				$lt:to
+		}
+			
+	})
+	.populate('_creator')
+	.exec(
+		function (err,post) {
+			res.json(post);
+		}
+	);
+})
 module.exports = router;

@@ -16,7 +16,7 @@ function CalculateTimes(challenges){
 	return result
 }
 
-function createTestChalllege(userID,date){
+function createTestChallenge(userID,date){
 	var newChallenge = new Challenge({
 		_creator : userID,
 		description : "Feed a stray cat",
@@ -30,7 +30,7 @@ function createTestChalllege(userID,date){
 
 router.get('/:userID', function(req, res, next) {
 	// for(var i = 0; i < 100; i++) {
-	// 	createTestChalllege(req.params.userID,i);
+	// 	createTestChallenge(req.params.userID,i);
 	// }
 
 	

@@ -5,7 +5,13 @@
 			on-refresh="doRefresh()">
 		</ion-refresher>
 		
+		<!-- CALENDAR -->
+		<div ng-include src = "'templates/table-calendar.html'"></div>
 		
-		
+		<!-- TIMELINE -->
+		<div class="list card" ng-repeat="challenge in challenges">
+			<!-- include the timeline card -->
+			<div class="item item-image" ng-include src="'templates/div-timelineCard.html'"></div>
+		</div>
 	</ion-content>
 </ion-view>
