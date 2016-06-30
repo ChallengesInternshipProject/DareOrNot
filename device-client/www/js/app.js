@@ -24,6 +24,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
   })
   .config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider) {
 
+
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
     // Set up the various states which the app can be in.
@@ -45,7 +46,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
       disableWeekdays: [6]
     };
     ionicDatePickerProvider.configDatePicker(datePickerObj);
-    
+
     $stateProvider
 
     // setup an abstract state for the tabs directive
@@ -99,7 +100,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/chat',
         views: {
           'tab-chat': {
-            templateUrl: 'js/chat/tab-chat.html',
+            templateUrl: 'js/Chat/tab-chat.html',
             controller: 'ChatCtrl'
           }
         }

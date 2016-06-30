@@ -24,8 +24,9 @@ angular.module('starter.controllers')
     //     {id: '5767f4099ea6ed40069db11b'}
     //   ]
     // };
-    $http.get('http://localhost:3000/users/user/john')
+    $http.get('http://localhost:3000/users/user/'+ $stateParams.userID)
       .success(function (user) {
+        $log.info(user);
         $scope.user = user;
       });
     // $scope.mapCenter = {

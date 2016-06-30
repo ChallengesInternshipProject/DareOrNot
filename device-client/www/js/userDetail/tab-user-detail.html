@@ -1,13 +1,13 @@
 <ion-view view-title="User Details" name="user-detail-view">
   <ion-content>
     <!--{{user}}-->
+    <img ng-src="{{user.picture}}" alt="">
     <h1>Email : {{user.email}}</h1>
-    <p>First Name : {{user.firstName}}</p>
-    <p>Last Name : {{user.lastName}}</p>
-    <p>Date Of Birth : {{user.dateOfBirth | date: 'medium'}}</p>
-    <p>Phone : {{user.phone}}</p>
-    <p>Friends : {{user.friends}} -- TODO add the friends</p>
-    <h2>Location</h2>
-    <leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletUserMap"></leaflet>
+    <p>Name : {{user.name}}</p>
+    <!--<p>Date Of Birth : {{user.dateOfBirth | date: 'medium'}}</p>-->
+    <!--<p>Phone : {{user.phone}}</p>-->
+    <!--<p>Friends : {{user.friends}} &#45;&#45; TODO add the friends</p>-->
+    <!--<h2>Location</h2>-->
+    <!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletUserMap"></leaflet>-->
   </ion-content>
 </ion-view>

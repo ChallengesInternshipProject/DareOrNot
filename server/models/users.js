@@ -6,21 +6,21 @@ var userSchema = new Schema({
     email: String,
     // password is encrypted with bcrypt
     password: String,
-    firstName: String,
-    lastName: String,
-    country: String,
-    town: String,
-    //The location can be a String
-    location: {
-        lat: Number,
-        lon: Number
-    },
-    phone: Number,
-    dateOfBirth: Date,
-    registrationDate: Date,
-    lastLogin: Date,
-    // the friends are a Array with user ID's
-    friends: Array
+    name: String,
+    picture: String
+    // country: String,
+    // town: String,
+    // //The location can be a String
+    // location: {
+    //     lat: Number,
+    //     lon: Number
+    // },
+    // phone: Number,
+    // dateOfBirth: Date,
+    // registrationDate: Date,
+    // lastLogin: Date,
+    // // the friends are a Array with user ID's
+    // friends: Array
 
     //TODO limits maximum and minimum lenght of strings
 });
