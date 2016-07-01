@@ -46,10 +46,10 @@ router.get('/register', function (req, res, next) {
     //
     var userData = new User({
         email: req.param('email'),
-        password: req.param('password'),
+        // password: req.param('password'),
 
         // !!!!!!!!!!TODO Fix the password encryption !!!!!!
-        // password: bcrypt.hashSync(req.param('password')),
+        password: bcrypt.hashSync(req.param('password')),
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         name: req.param('name'),

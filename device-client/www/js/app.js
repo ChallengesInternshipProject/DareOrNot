@@ -8,6 +8,13 @@
 angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.controllers', 'starter.services', 'starter.constants', 'leaflet-directive'])
 
   .run(function ($ionicPlatform) {
+
+    //Fix post request issues
+    // $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
+    // $httpBackend.whenPOST(/templates\/\w+.*/).passThrough();
+    // $httpBackend.whenGET(/.*/).passThrough();
+    // $httpBackend.whenPOST(/.*/).passThrough();
+
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -62,7 +69,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/login',
         views: {
           'tab-login': {
-            templateUrl: 'js/login/tab-login.html',
+            templateUrl: 'templates/tab-login.html',
             controller: 'LoginCtrl'
           }
         }
@@ -72,7 +79,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/register',
         views: {
           'tab-register': {
-            templateUrl: 'js/register/tab-register.html',
+            templateUrl: 'templates/tab-register.html',
             controller: 'RegisterCtrl'
           }
         }
@@ -82,7 +89,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/users',
         views: {
           'tab-users': {
-            templateUrl: 'js/users/tab-users.html',
+            templateUrl: 'templates/tab-users.html',
             controller: 'UsersCtrl'
           }
         }
@@ -91,7 +98,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/user/:userID',
         views: {
           'tab-users': {
-            templateUrl: 'js/userDetail/tab-user-detail.html',
+            templateUrl: 'templates/tab-user-detail.html',
             controller: 'UserDetailCtrl'
           }
         }
@@ -100,7 +107,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/chat',
         views: {
           'tab-chat': {
-            templateUrl: 'js/Chat/tab-chat.html',
+            templateUrl: 'templates/tab-chat.html',
             controller: 'ChatCtrl'
           }
         }
@@ -109,7 +116,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/chat/:userID',
         views: {
           'tab-chat': {
-            templateUrl: 'js/chatDetail/tab-chat-detail.html',
+            templateUrl: 'templates/tab-chat-detail.html',
             controller: 'ChatDetailCtrl'
           }
         }
@@ -118,7 +125,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/map',
         views: {
           'tab-map': {
-            templateUrl: 'js/map/tab-map.html',
+            templateUrl: 'templates/tab-map.html',
             controller: 'MapCtrl'
           }
         }
@@ -127,7 +134,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/gMaps',
         views: {
           'tab-gMaps': {
-            templateUrl: 'js/googleMap/tab-gMaps.html',
+            templateUrl: 'templates/tab-gMaps.html',
             controller: 'GoogleMapCtrl'
           }
         }
@@ -136,7 +143,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/dare-list',
         views: {
           'tab-dare-list': {
-            templateUrl: 'js/dareList/tab-dare-list.html',
+            templateUrl: 'templates/tab-dare-list.html',
             controller: 'DareListCtrl'
           }
         }
@@ -145,7 +152,7 @@ angular.module('starter', ['ionic', 'ngStorage', 'ionic-datepicker', 'starter.co
         url: '/new-dare',
         views: {
           'tab-new-dare': {
-            templateUrl: 'js/newDare/tab-new-dare.html',
+            templateUrl: 'templates/tab-new-dare.html',
             controller: 'NewDareCtrl'
           }
         }
