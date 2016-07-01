@@ -1,5 +1,5 @@
 angular.module('starter.services')
-  .service('LoginService', function ($q, $http, $ionicLoading, $ionicPopup, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .service('LoginService', function ($q, $http, $log, $ionicLoading, $ionicPopup, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
 
       var setUser = function (user_data) {
         $http({
