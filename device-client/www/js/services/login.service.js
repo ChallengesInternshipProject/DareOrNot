@@ -1,11 +1,23 @@
 angular.module('starter.services')
-  .service('LoginService', function ($q, $http, $log, $ionicLoading, $ionicPopup, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .service('LoginService', function ( $q, $http, $log, $ionicLoading, $ionicPopup, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
 
+
+
+      // Save the user after the Facebook login/registration in the database with a ionicPopup for the password with a local login.
       var setUser = function (user_data) {
+
+
+
         $http({
           method: 'GET',
           url: SERVER_ADDRESS + SERVER_PORT + '/auth/register',
-          params: user_data
+          params: {
+            email: user_data.email,
+            name: user_data.name,
+            id: user_data.id,
+            picture: user_data.picture,
+            password: user_data.password
+          }
         }).then(function (response) {
           console.log(response.data);
           var successPopup = $ionicPopup.alert({
