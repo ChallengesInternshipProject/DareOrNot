@@ -4,6 +4,7 @@ angular.module('starter.services')
 
       //Register the user in the local DB
       function registerUser(user_data) {
+        $log.info(user_data.password);
         $http({
           method: 'GET',
           url: SERVER_ADDRESS + SERVER_PORT + '/auth/register',
@@ -14,6 +15,7 @@ angular.module('starter.services')
             picture: user_data.picture,
             password: user_data.password
           }
+
         }).then(function (response) {
           console.log(response.data);
           //On success show a popup

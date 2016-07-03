@@ -1,7 +1,7 @@
 angular.module('starter.services')
   .service('LoginService', function ($q, $http, $log, $ionicLoading, $ionicPopup, RegisterService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+      var isAuthenticated = false;
 
-    
       // Save the user after the Facebook login/registration in the database with a ionicPopup for the password with a local login.
       var setUser = function (user_data) {
         RegisterService.registerUser(user_data);
