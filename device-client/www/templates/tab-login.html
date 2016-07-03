@@ -8,7 +8,7 @@
     <button class="button" ng-click="toggleLeft()">Side menu</button>
     <div class="list list-inset">
       <label class="item item-input">
-        <input type="text" placeholder="Username" ng-model="data.username">
+        <input type="text" placeholder="Username" ng-model="data.email">
       </label>
       <label class="item item-input">
         <input type="password" placeholder="Password" ng-model="data.password">
@@ -16,6 +16,7 @@
 
     </div>
     <button class="button button-block button-calm" ng-click="login()">Login</button>
-    <button class="button button-block" ng-click="facebookSignIn()">Facebook login</button>
+    <button class="button button-block" ng-click="facebookSignIn()">Register with Facebook</button>
+    <button class="button button-block" ng-click="googlePlusSignIn()">Register with Google+</button>
   </ion-content>
 </ion-view>
