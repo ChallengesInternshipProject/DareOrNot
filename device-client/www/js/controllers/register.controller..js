@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('RegisterCtrl', function ($scope, $http, $ionicLoading, $ionicPopup, ionicDatePicker, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .controller('RegisterCtrl', function ($scope, $http, $ionicLoading, $ionicPopup, ionicDatePicker, RegisterService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
       $scope.data = {
         email: '',
         password1: '',
@@ -51,27 +51,35 @@ angular.module('starter.controllers')
           })
         }
         else {
-          $http({
-            method: 'GET',
-            url: SERVER_ADDRESS + SERVER_PORT + '/auth/register',
-            params: {
-              email: $scope.data.email,
-              password: $scope.data.password1,
-              firstName: $scope.data.firstName,
-              lastName: $scope.data.lastName,
-              phone: $scope.data.phone,
-              dateOfBirth: $scope.data.dateOfBirth
-
-            }
-          }).then(function (response) {
-            console.log(response.data);
-            var successPopup = $ionicPopup.alert({
-              title: 'Success',
-              template: response.data
-            });
-          }, function (err) {
-            console.log(err);
-          })
+          RegisterService.registerUser({
+            email: $scope.data.email,
+            password: $scope.data.password1,
+            firstName: $scope.data.firstName,
+            lastName: $scope.data.lastName,
+            phone: $scope.data.phone,
+            dateOfBirth: $scope.data.dateOfBirth
+          });
+          // $http({
+          //   method: 'GET',
+          //   url: SERVER_ADDRESS + SERVER_PORT + '/auth/register',
+          //   params: {
+          //     email: $scope.data.email,
+          //     password: $scope.data.password1,
+          //     firstName: $scope.data.firstName,
+          //     lastName: $scope.data.lastName,
+          //     phone: $scope.data.phone,
+          //     dateOfBirth: $scope.data.dateOfBirth
+          //
+          //   }
+          // }).then(function (response) {
+          //   console.log(response.data);
+          //   var successPopup = $ionicPopup.alert({
+          //     title: 'Success',
+          //     template: response.data
+          //   });
+          // }, function (err) {
+          //   console.log(err);
+          // })
         }
         //TODO check if user exists
 

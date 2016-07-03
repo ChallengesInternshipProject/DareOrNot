@@ -90,7 +90,7 @@ angular.module('starter')
           // the user's ID, a valid access token, a signed request, and the time the access token
           // and signed request each expire
           console.log('getLoginStatus', success.status);
-
+          
           // Check if we have our user saved
           var user = LoginService.getUser('facebook');
 
