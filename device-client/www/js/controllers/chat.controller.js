@@ -16,6 +16,21 @@ angular.module('starter.controllers')
     // console.log($localStorage.user);
     $scope.message = '';
     $scope.onlineUsers = [];
+
+    //TODO REMOVE This functionality !!!
+    //TODO device not making get request
+    $http.get('http://localhost:3000/users')
+      .success(function (users) {
+        $log.info(users);
+        $log.info('!!!!!!!!!!!1');
+        users.forEach(function (user) {
+          if(user !== $localStorage.user){
+            $scope.onlineUsers.push(user);
+          }
+        })
+      });
+
+    //     .success(function (users) {
     $scope.me = $localStorage.user;
 
     //TODO FIX the RECIEVER !
@@ -57,27 +72,30 @@ angular.module('starter.controllers')
 
     });
 
-    socket.on('new user', function (user) {
-      $log.info(user);
-      $http.get('http://localhost:3000/chat/clients')
-        .success(function (users) {
-          $scope.onlineUsers = [];
-          users.forEach(function (user) {
-
-            //You can't chat with yourself so just don't show in the online users array
-            if ($localStorage.user != user.user) {
-              $scope.onlineUsers.push(user);
-            }
-          });
-        });
-    });
-
-    socket.on('dc user', function (user) {
-      $http.get('http://localhost:3000/chat/clients')
-        .success(function (users) {
-          $scope.onlineUsers = users;
-          // $scope.$apply();
-        });
-    });
+    // socket.on('new user', function (user) {
+    //   $log.info(user);
+    //   $http.get('http://localhost:3000/users')
+    //     .success(function (users) {
+    //       $log.info(users);
+    //       $scope.onlineUsers = [];
+    //       users.forEach(function (user) {
+    //
+    //         //You can't chat with yourself so just don't show in the online users array
+    //         if ($localStorage.user != user.user) {
+    //           $scope.onlineUsers.push(user);
+    //         }
+    //       });
+    //       // $scope.$apply();
+    //       // $log.info($scope.onlineUsers);
+    //     });
+    // });
+    //
+    // socket.on('dc user', function (user) {
+    //   $http.get('http://localhost:3000/chat/clients')
+    //     .success(function (users) {
+    //       $scope.onlineUsers = users;
+    //       // $scope.$apply();
+    //     });
+    // })
 
   });

@@ -1,17 +1,14 @@
 <ion-view view-title="Public Chat Log" name="login-view">
 
   <ion-content class="padding">
-
-
-
     <div class="row">
-      <div class="col-90">
+      <div class="col-60">
         <ion-list>
           <ion-item>
             <h2>Hello : <strong>{{me}}</strong> Current messages in chat : </h2>
           </ion-item>
           <ion-item ng-repeat="msg in messages track by $index">
-            from : <strong>{{msg.sender}}</strong>
+            from : <strong>{{msg.sender}}</strong> </br>
             to : <strong>{{msg.reciever}}</strong>
             <div ng-class="{'strike': theItem, left : right}">
               {{msg.message}}
@@ -26,8 +23,8 @@
           <ion-item>
             <h2>Users :</h2>
           </ion-item>
-          <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.user}}">
-            {{user.user}}
+          <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.email}}">
+            {{user.email}}
           </ion-item>
         </ion-list>
       </div>
