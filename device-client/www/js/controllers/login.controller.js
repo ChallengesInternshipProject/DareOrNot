@@ -4,7 +4,6 @@ angular.module('starter.controllers')
 
     //Object for the facebook register/login popup
     $scope.data = {
-      email: '',
       password: ''
     };
 
@@ -50,12 +49,11 @@ angular.module('starter.controllers')
     // $log.info(LoginService.getUser());
 
 
-    $scope.data = {};
     $scope.$storage = $localStorage.$default({
       user: null
     });
     $scope.login = function () {
-      LoginService.loginUser($scope.data.username, $scope.data.password)
+      LoginService.loginUser($scope.data.email, $scope.data.password)
         .success(function (data) {
           var alertPopup = $ionicPopup.alert({
             title: 'Login Successful!',

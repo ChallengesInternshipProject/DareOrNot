@@ -1,10 +1,9 @@
 angular.module('starter')
   .service('FacebookService', function ($rootScope, $log, $q, $http, $state, $ionicPopup, $ionicLoading, LoginService) {
-
-
     $rootScope.data = {
       password: ''
     };
+
     var fbLoginSuccess = function (response) {
       if (!response.authResponse) {
         fbLoginError("Cannot find the authResponse");
@@ -83,14 +82,13 @@ angular.module('starter')
 
       // For the purpose of this example I will store user data on local storage
 
-
       facebookConnectPlugin.getLoginStatus(function (success) {
         if (success.status === 'connected') {
           // The user is logged in and has authenticated your app, and response.authResponse supplies
           // the user's ID, a valid access token, a signed request, and the time the access token
           // and signed request each expire
           console.log('getLoginStatus', success.status);
-          
+
           // Check if we have our user saved
           var user = LoginService.getUser('facebook');
 

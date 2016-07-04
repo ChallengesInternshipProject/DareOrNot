@@ -15,7 +15,6 @@ angular.module('starter.services')
             picture: user_data.picture,
             password: user_data.password
           }
-
         }).then(function (response) {
           console.log(response.data);
           //On success show a popup

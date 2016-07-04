@@ -1,9 +1,15 @@
 <ion-view view-title="Public Chat Log" name="login-view">
 
   <ion-content class="padding">
+
+
+
     <div class="row">
       <div class="col-90">
         <ion-list>
+          <ion-item>
+            <h2>Hello : <strong>{{me}}</strong> Current messages in chat : </h2>
+          </ion-item>
           <ion-item ng-repeat="msg in messages track by $index">
             from : <strong>{{msg.sender}}</strong>
             to : <strong>{{msg.reciever}}</strong>
@@ -16,11 +22,9 @@
       <div class="col">
         <!--users online here-->
         <ion-list>
+
           <ion-item>
-            <h2>Hello : <strong>{{me}}</strong></h2>
-          </ion-item>
-          <ion-item>
-            <h2>Users Online :</h2>
+            <h2>Users :</h2>
           </ion-item>
           <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.user}}">
             {{user.user}}
