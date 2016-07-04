@@ -3,11 +3,12 @@ var moment = require('moment');
 var Schema = mongoose.Schema;
 var challengeSchema = new Schema({
     //The id can be a number or a string
-    id: String,
+    // id: String,
     title: String,
     description: String,
     location: {
         lat: Number,
+<<<<<<< HEAD
         lon: Number
     },
     //The price can be Zer0
@@ -32,6 +33,27 @@ var challengeSchema = new Schema({
     pictures:{type:Array, default:['images/feedCat.jpg','images/feedCat2.jpg']},//TODO - create files upload 
     comments:{type:Number,default:100}, //TODO use differente collection
     city:{type:String,default:'Sofia'},
+=======
+        lng: Number
+    }
+    // //The price can be Zer0
+    // price: {
+    //     min: Number,
+    //     max: Number
+    // },
+    // dateCreated: Date,
+    // startDate: Date,
+    // //The end date must be after the start date :O
+    // endDate: Date,
+    // isPublic: Boolean,
+    // invitedUsers: Array,
+    // watchingUsers: Array,
+    // //users who accepted the challenge
+    // acceptedUsers: Array,
+    // //Comments about the challenge.
+    // comments: Array
+
+>>>>>>> master
     //TODO limits maximum and minimum lenght of strings
 });
 

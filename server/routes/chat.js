@@ -7,20 +7,23 @@ var UserList = require('../models/userList');
 io.on('connection', function (socket) {
     var addedUser = false;
     // console.log(socket.id + ' connected');
-    io.emit('clientConnect', {id: socket.username});
+    io.emit('clientConnect', {id: socket.id});
+    
+    socket.on('private message', function (room) {
+        socket.join(room);
+        io.sockets.in(room).emit('private message', 'pm from ' + socket.id);
+    });
 
+    socket.on('leave room', function (room) {
 
-    // setInterval(function () {
-    //     io.emit('room1', new Date);
-    // }, 1000);
+        socket.leave(room);
+        console.log(socket.id + " left " + room)
+
+    });
 
     socket.on('message', function (msg) {
-        io.emit('message', {
-            id: socket.username,
-            // testID: socket.id,
-            msg: msg.msg
-        });
-        console.log(socket.username);
+        console.log(msg);
+        io.emit('message',msg);
     });
 
     socket.on('add user', function (username) {
@@ -81,7 +84,8 @@ router.get('/submit', function (req, res, next) {
         id: req.param('id'),
         message: req.param('message'),
         sender: req.param('sender'),
-        reciever: req.param('reciever')
+        reciever: req.param('reciever'),
+        time: Date.now()
     });
 
     message.save(function (err) {
@@ -91,6 +95,16 @@ router.get('/submit', function (req, res, next) {
             return res.send('saved');
         }
     });
+});
+
+router.get('/messages/:from/:to', function (req, res, next) {
+    var from = req.param('from');
+    var to = req.param('to');
+
+    Message.find({$or: [{sender: from, reciever: to}, {sender: to, reciever: from}]},function (err,result) {
+        res.send(result);
+    });
+
 });
 
 router.get('/clear', function (req, res, next) {

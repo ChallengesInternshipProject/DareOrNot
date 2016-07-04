@@ -27,13 +27,12 @@ router.get('/', function (req, res, next) {
 router.get('/user/:user', function (req, res, next) {
 
     // return res.send(req.params)
-    User.find({email: req.params.user}, function (err, user) {
+    User.findOne({email: req.params.user}, function (err, user) {
         if (err) {
             return res.send(err);
         }
         return res.json(user);
     });
 });
-
 
 module.exports = router;

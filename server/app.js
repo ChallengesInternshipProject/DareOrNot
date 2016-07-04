@@ -26,10 +26,15 @@ require('./passport-init');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var chat = require('./routes/chat');
+<<<<<<< HEAD
 //Timeline 
 var timeline = require('./routes/timeline');
 //Calendar
 var calendar = require('./routes/calendar');
+=======
+var challenges = require('./routes/challenges');
+
+>>>>>>> master
 //Login and Registration
 var auth = require('./routes/auth');
 
@@ -62,8 +67,12 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/auth', auth);
 app.use('/chat', chat);
+<<<<<<< HEAD
 app.use('/timeline',timeline);
 app.use('/calendar',calendar);
+=======
+app.use('/challenges', challenges);
+>>>>>>> master
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -11,8 +11,7 @@ var messageSchema = new Schema({
     },
     sender: String,
     reciever: String,
-    time: Date,
-    room: String
+    time: Date
 });
 
 var Message = mongoose.model('Message', messageSchema);
