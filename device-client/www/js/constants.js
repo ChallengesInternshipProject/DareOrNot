@@ -3,7 +3,8 @@
  */
 
 angular.module('starter.constants', [])
-  .constant('SERVER_ADDRESS', 'http://192.168.0.104')
+  .constant('SERVER_ADDRESS', 'http://localhost')
   .constant('SOCKET_CHAT_PORT', ':1337')
   .constant('SERVER_PORT', ':3000');
+
 
