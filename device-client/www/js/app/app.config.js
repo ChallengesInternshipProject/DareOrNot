@@ -123,7 +123,25 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
           controller: 'NewDareCtrl'
         }
       }
-    });
+    })
+     .state('tab.timeline', {
+        url: '/timeline',
+        views: {
+          'tab-timeline': {
+            templateUrl: 'templates/tab-timeline.html',
+            controller: 'TimelineCtrl'
+          }
+        }
+      })
+      .state('tab.calendar',{
+        url:'/calendar',
+        views:{
+          'tab-calendar':{
+            templateUrl:'templates/tab-calendar.html',
+            controller:'CalendarCtrl'
+          }
+        }
+      });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/login');

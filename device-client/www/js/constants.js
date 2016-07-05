@@ -7,3 +7,4 @@ angular.module('starter.constants', [])
   .constant('SOCKET_CHAT_PORT', ':1337')
   .constant('SERVER_PORT', ':3000');
 
+
