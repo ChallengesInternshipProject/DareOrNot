@@ -124,26 +124,35 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
         }
       }
     })
-     .state('tab.timeline', {
-        url: '/timeline',
-        views: {
-          'tab-timeline': {
-            templateUrl: 'templates/tab-timeline.html',
-            controller: 'TimelineCtrl'
-          }
+    .state('tab.timeline', {
+      url: '/timeline',
+      views: {
+        'tab-timeline': {
+          templateUrl: 'templates/tab-timeline.html',
+          controller: 'TimelineCtrl'
         }
-      })
-      .state('tab.calendar',{
-        url:'/calendar',
-        views:{
-          'tab-calendar':{
-            templateUrl:'templates/tab-calendar.html',
-            controller:'CalendarCtrl'
-          }
+      }
+    })
+    .state('tab.calendar', {
+      url: '/calendar',
+      views: {
+        'tab-calendar': {
+          templateUrl: 'templates/tab-calendar.html',
+          controller: 'CalendarCtrl'
         }
-      });
+      }
+    })
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html',
+          controller: 'HomeCtrl'
+        }
+      }
+    });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/login');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });

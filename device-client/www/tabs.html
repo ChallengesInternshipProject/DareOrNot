@@ -5,10 +5,17 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
+
+  <!-- Home Tab -->
+  <ion-tab title="Home" icon-off="ion-android-home" icon-on="ion-android-home" href="#/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
   <!-- Login Tab -->
   <ion-tab title="Login" icon-off="ion-log-in" icon-on="ion-log-in" href="#/tab/login">
     <ion-nav-view name="tab-login"></ion-nav-view>
   </ion-tab>
+
 
   <!-- Register Tab -->
   <ion-tab title="Register" icon-off="ion-ios-personadd-outline" icon-on="ion-ios-personadd" href="#/tab/register">
@@ -53,5 +60,5 @@ navigation history that also transitions its views in and out.
   <ion-tab title="Calendar" icon-off="ion-ios-calendar-outline" icon-on="ion-ios-calendar" href="#/tab/calendar">
     <ion-nav-view name="tab-calendar"></ion-nav-view>
   </ion-tab>
-  
+
 </ion-tabs>

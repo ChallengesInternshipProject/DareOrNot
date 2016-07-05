@@ -1,8 +1,12 @@
 angular.module('starter.controllers')
-  .controller('RegisterCtrl', function ($scope, $http, $ionicLoading, $ionicPopup, ionicDatePicker, RegisterService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .controller('RegisterCtrl', function ($scope, $http, $log, $ionicLoading, $ionicPopup, ionicDatePicker, StatusFactory, RegisterService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
 
-    //Data for the local registration
-    $scope.data = {
+      $scope.isLogged = StatusFactory.isLogged;
+      $log.info(StatusFactory.isLogged);
+
+
+      //Data for the local registration
+      $scope.data = {
         email: '',
         password1: '',
         password2: '',
@@ -55,5 +59,4 @@ angular.module('starter.controllers')
         }
       };
     }
-  )
-;
+  );
