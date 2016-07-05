@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-  .controller('MapCtrl', function ($scope, $log, $http) {
+  .controller('MapCtrl', function ($scope, $log, $http, StatusFactory) {
     $scope.mapCenter = {
       lat: 42.662888,
       lng: 23.354051,
@@ -35,26 +35,6 @@ angular.module('starter.controllers')
       // ];
       $log.info($scope.markers);
     });
-
-
-    // $scope.markers = [
-    //   {
-    //     lat: 42.662888,
-    //     lng: 23.354051
-    //   },
-    //   {
-    //     lat: 42.663988,
-    //     lng: 23.354051
-    //   },
-    //   {
-    //     lat: 42.666888,
-    //     lng: 23.352051
-    //   },
-    //   {
-    //     lat: 42.662388,
-    //     lng: 23.354011
-    //   }
-    // ];
     $log.info($scope.markers);
   });
 
