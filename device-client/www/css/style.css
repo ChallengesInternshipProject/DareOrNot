@@ -3,11 +3,18 @@
   width: 100vw;
   height: 100vh;
 }
-.leafletUserMap{
+
+.leafletUserMap {
   width: 50vw;
   height: 50vh;
 }
-.leafletDareMap{
+
+.leafletDareMap {
   width: 100vw;
   height: 50vh;
 }
+
+/*ion-slide-box {*/
+  /*height: 100vh !important;*/
+
+/*}*/
