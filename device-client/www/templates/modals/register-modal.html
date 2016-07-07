@@ -3,37 +3,38 @@
   <!--&lt;!&ndash;<h1 class="title">Login or register to proceed</h1>&ndash;&gt;-->
   <!--</ion-header-bar>-->
   <ion-content>
-    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" ng-init="disableSwipe()">
 
       <!--First slide-->
 
       <ion-slide>
         <img src="http://placehold.it/350x100" alt="">
 
-          <div class="list">
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Име</span>
-              <input type="text" placeholder="Име" ng-model="registerInfo.name">
-            </label>
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Email</span>
-              <input type="text" placeholder="Email" ng-model="registerInfo.email">
-            </label>
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Парола</span>
-              <input type="text" placeholder="Парола" ng-model="registerInfo.password">
-            </label>
-            <label class="item item-input item-floating-label">
-              <span class="input-label">Телефон</span>
-              <input type="text" placeholder="Телефон" ng-model="registerInfo.phone">
-            </label>
-          </div>
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Име</span>
+            <input type="text" placeholder="Име" ng-model="registerInfo.name">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="Email" ng-model="registerInfo.email">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Парола</span>
+            <input type="password" placeholder="Парола" ng-model="registerInfo.password">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Телефон</span>
+            <input type="text" placeholder="Телефон" ng-model="registerInfo.phone">
+          </label>
+        </div>
 
-          <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
-          <!--adding some br's maybe it will be better with CSS ?-->
 
-          Вече имате акаунт ? <a href="">Влезте</a>
-          <br><br>
+        <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
+        <!--adding some br's maybe it will be better with CSS ?-->
+
+        Вече имате акаунт ? <a href="">Влезте</a>
+        <br><br>
 
       </ion-slide>
 
@@ -41,31 +42,33 @@
 
       <ion-slide>
 
-          <div class="box blue">
-            <img src="http://placehold.it/350x100" alt="">
-            <div class="list">
-              <label class="item item-input item-floating-label">
-                <span class="input-label">Адрес</span>
-                <input type="text" placeholder="Адрес" ng-model="registerInfo.address">
-              </label>
-              <label class="item item-input item-floating-label">
-                <span class="input-label">Рожденна дата</span>
-                <input type="text" placeholder="Рожденна дата" ng-model="registerInfo.dateOfBirth">
-              </label>
-              <label class="item item-input item-floating-label">
-                <span class="input-label">Пол</span>
-                <input type="text" placeholder="Пол" ng-model="registerInfo.gender">
-              </label>
-              <label class="item item-input item-floating-label">
-                <span class="input-label">Интереси</span>
-                <input type="text" placeholder="Интереси" ng-model="registerInfo.interests">
-              </label>
-            </div>
-            <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
-            <!--adding some br's maybe it will be better with CSS ?-->
-            Вече имате акаунт ? <a href="">Влезте</a>
-            <br><br>
+        <div class="box blue">
+          <img src="http://placehold.it/350x100" alt="">
+          <div class="list">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Адрес</span>
+              <input type="text" placeholder="Адрес" ng-model="registerInfo.address">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Рожденна дата</span>
+              <input type="text" placeholder="Рожденна дата" ng-model="registerInfo.dateOfBirth">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Пол</span>
+              <input type="text" placeholder="Пол" ng-model="registerInfo.gender">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Интереси</span>
+              <input type="text" placeholder="Интереси" ng-model="registerInfo.interests">
+            </label>
           </div>
+
+          <button class="button button-block" ng-click="previousSlide()">Back</button>
+          <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
+          <!--adding some br's maybe it will be better with CSS ?-->
+          Вече имате акаунт ? <a href="">Влезте</a>
+          <br><br>
+        </div>
 
       </ion-slide>
 
@@ -76,6 +79,7 @@
         <img src="http://placehold.it/350x100" alt=""><br>
         Добави снимка
         <input type="file">
+        <button class="button button-block" ng-click="previousSlide()">Back</button>
         <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
         Вече имате акаунт ? <a href="">Влезте</a>
 
@@ -92,6 +96,7 @@
         <span>Twitter</span>
         <span>Google+</span>
         <br>
+        <button class="button button-block" ng-click="previousSlide()">Back</button>
         <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
         Вече имате акаунт ? <a href="">Влезте</a>
 
@@ -107,6 +112,7 @@
         <div>{{registerInfo.gender}}</div>
         <div>{{registerInfo.interests}}</div>
 
+        <button class="button button-block" ng-click="previousSlide()">Back</button>
         <button class="button button-block" ng-click="nextSlide()">РЕГИСТРИРАЙ МЕ</button>
         Вече имате акаунт ? <a href="">Влезте</a>
 
