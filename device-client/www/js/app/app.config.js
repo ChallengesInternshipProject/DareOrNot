@@ -6,12 +6,22 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 
   //Check if the user is authenticated
-  function isAuthenticated($q, AuthFactory) {
+  function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
+
+    var data = {};
     if (AuthFactory.isAuthenticated()) {
+      $log.info('not logged :(');
       return $q.when();
     } else {
+      // console.log('false')
       $timeout(function () {
-        $state.go('tab.home');
+        // modal.loginModal.show();
+
+        console.log('not logged');
+        // $state.go('tab.home');
+
+        //Refresh the state because $state.go is not working !!! IMPORTANT
+        $state.go($state.current, {}, {reload: true});
       }, 0);
       return $q.reject();
     }

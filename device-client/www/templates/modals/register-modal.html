@@ -33,7 +33,7 @@
         <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
         <!--adding some br's maybe it will be better with CSS ?-->
 
-        Вече имате акаунт ? <a href="">Влезте</a>
+        Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
         <br><br>
 
       </ion-slide>
@@ -51,7 +51,8 @@
             </label>
             <label class="item item-input item-floating-label">
               <span class="input-label">Рожденна дата</span>
-              <input type="text" placeholder="Рожденна дата" ng-click="openDatePicker()" ng-model="registerInfo.dateOfBirth">
+              <input type="text" placeholder="Рожденна дата" ng-click="openDatePicker()"
+                     ng-model="registerInfo.dateOfBirth">
             </label>
             <label class="item item-input item-floating-label">
               <span class="input-label">Пол</span>
@@ -66,7 +67,7 @@
           <button class="button button-block" ng-click="previousSlide()">Back</button>
           <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
           <!--adding some br's maybe it will be better with CSS ?-->
-          Вече имате акаунт ? <a href="">Влезте</a>
+          Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
           <br><br>
         </div>
 
@@ -81,7 +82,7 @@
         <input type="file">
         <button class="button button-block" ng-click="previousSlide()">Back</button>
         <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
-        Вече имате акаунт ? <a href="">Влезте</a>
+        Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
 
       </ion-slide>
 
@@ -98,7 +99,7 @@
         <br>
         <button class="button button-block" ng-click="previousSlide()">Back</button>
         <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
-        Вече имате акаунт ? <a href="">Влезте</a>
+        Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
 
       </ion-slide>
 
@@ -116,7 +117,6 @@
 
         <button class="button button-block" ng-click="previousSlide()">Back</button>
         <button class="button button-block" ng-click="register()">РЕГИСТРИРАЙ МЕ</button>
-        Вече имате акаунт ? <a href="">Влезте</a>
 
       </ion-slide>
 

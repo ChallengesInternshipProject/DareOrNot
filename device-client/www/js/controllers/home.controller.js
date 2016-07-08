@@ -1,6 +1,6 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $state, $stateParams, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService) {
+  .controller('HomeCtrl', function ($scope, $state, $stateParams, $timeout, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService) {
 
     $scope.isLogged = false;
 
@@ -57,6 +57,8 @@ angular.module('starter')
         .success(function (result) {
           // $log.info(result);
           $scope.isLogged = true;
+          $scope.loginModal.hide();
+          $state.go('tab.users');
         });
     };
 
@@ -65,7 +67,7 @@ angular.module('starter')
       RegisterService.registerUser($scope.registerInfo);
     };
 
-    //Improve validation with watch
+    //TODO Improve validation with watch
     $scope.slideHasChanged = function (index) {
       switch (index) {
         //Case 1 : Name Email Password and Phone number
@@ -96,7 +98,8 @@ angular.module('starter')
     //Init the register modal
     $ionicModal.fromTemplateUrl('templates/modals/register-modal.html', {
       scope: $scope,
-      animation: 'slide-in-up'
+      animation: 'slide-in-up',
+      hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.registerModal = modal;
     });
@@ -104,7 +107,8 @@ angular.module('starter')
     // Init the login modal
     $ionicModal.fromTemplateUrl('templates/modals/login-modal.html', {
       scope: $scope,
-      animation: 'slide-in-up'
+      animation: 'slide-in-up',
+      hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.loginModal = modal;
     });
@@ -122,11 +126,14 @@ angular.module('starter')
     };
 
     $scope.callRegisterModal = function () {
+      $scope.loginModal.hide();
       $scope.registerModal.show();
     };
 
     $scope.callLoginModal = function () {
+      $scope.registerModal.hide();
       $scope.loginModal.show();
+
     };
 
 

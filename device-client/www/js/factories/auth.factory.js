@@ -1,5 +1,5 @@
 angular.module('starter')
-  .factory('AuthFactory', function ($timeout, LoginService) {
+  .factory('AuthFactory', function ($timeout, $ionicModal, LoginService) {
 
     var currentUser = null;
 
@@ -20,6 +20,8 @@ angular.module('starter')
     var getCurrent = function () {
       return isAuthenticated() ? currentUser : null;
     };
+
+
 
     return {
       loginUser: loginUser,
