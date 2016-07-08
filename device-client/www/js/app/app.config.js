@@ -3,7 +3,23 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
+
+
+  //Check if the user is authenticated
+  function isAuthenticated($q, AuthFactory) {
+    if (AuthFactory.isAuthenticated()) {
+      return $q.when();
+    } else {
+      $timeout(function () {
+        $state.go('tab.home');
+      }, 0);
+      return $q.reject();
+    }
+  }
+
   var datePickerObj = {
+
+
     inputDate: new Date(),
     setLabel: 'Set',
     todayLabel: 'Today',
@@ -57,7 +73,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-users': {
           templateUrl: 'templates/tab-users.html',
-          controller: 'UsersCtrl'
+          controller: 'UsersCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -66,7 +85,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-users': {
           templateUrl: 'templates/tab-user-detail.html',
-          controller: 'UserDetailCtrl'
+          controller: 'UserDetailCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -75,7 +97,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-chat': {
           templateUrl: 'templates/tab-chat.html',
-          controller: 'ChatCtrl'
+          controller: 'ChatCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -84,7 +109,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-chat': {
           templateUrl: 'templates/tab-chat-detail.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'ChatDetailCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -93,7 +121,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-map': {
           templateUrl: 'templates/tab-map.html',
-          controller: 'MapCtrl'
+          controller: 'MapCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -102,7 +133,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-gMaps': {
           templateUrl: 'templates/tab-gMaps.html',
-          controller: 'GoogleMapCtrl'
+          controller: 'GoogleMapCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -111,7 +145,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-dare-list': {
           templateUrl: 'templates/tab-dare-list.html',
-          controller: 'DareListCtrl'
+          controller: 'DareListCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -120,7 +157,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-new-dare': {
           templateUrl: 'templates/tab-new-dare.html',
-          controller: 'NewDareCtrl'
+          controller: 'NewDareCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -129,7 +169,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-timeline': {
           templateUrl: 'templates/tab-timeline.html',
-          controller: 'TimelineCtrl'
+          controller: 'TimelineCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })
@@ -138,7 +181,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       views: {
         'tab-calendar': {
           templateUrl: 'templates/tab-calendar.html',
-          controller: 'CalendarCtrl'
+          controller: 'CalendarCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
         }
       }
     })

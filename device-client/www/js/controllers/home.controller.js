@@ -1,6 +1,6 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $state, $stateParams, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, RegisterService) {
+  .controller('HomeCtrl', function ($scope, $state, $stateParams, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService) {
 
     $scope.isLogged = false;
 
@@ -26,7 +26,6 @@ angular.module('starter')
 
     $scope.connectWithFacebook = function () {
 
-      
 
     };
 
@@ -54,7 +53,7 @@ angular.module('starter')
     };
 
     $scope.login = function () {
-      LoginService.loginUser($scope.loginInfo.email, $scope.loginInfo.password)
+      AuthFactory.loginUser($scope.loginInfo.email, $scope.loginInfo.password)
         .success(function (result) {
           // $log.info(result);
           $scope.isLogged = true;
