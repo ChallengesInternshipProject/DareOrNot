@@ -2,12 +2,20 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    id: Number,
+    // id: Number,
     email: String,
     // password is encrypted with bcrypt
     password: String,
     name: String,
-    picture: String
+    picture: String,
+    phone: String,
+    address: String,
+    dateOfBirth: Date,
+    gender: String,
+    interests: Array,
+    socialNetworks: Array
+
+
     // country: String,
     // town: String,
     // //The location can be a String

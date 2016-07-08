@@ -4,7 +4,6 @@ angular.module('starter.controllers')
       $scope.isLogged = StatusFactory.isLogged;
       $log.info(StatusFactory.isLogged);
 
-
       //Data for the local registration
       $scope.data = {
         email: '',
@@ -37,6 +36,7 @@ angular.module('starter.controllers')
       $scope.openDatePicker = function () {
         ionicDatePicker.openDatePicker(ipObj1);
       };
+
       $scope.register = function () {
         console.log($scope.data);
 

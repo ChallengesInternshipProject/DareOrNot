@@ -51,7 +51,7 @@
             </label>
             <label class="item item-input item-floating-label">
               <span class="input-label">Рожденна дата</span>
-              <input type="text" placeholder="Рожденна дата" ng-model="registerInfo.dateOfBirth">
+              <input type="text" placeholder="Рожденна дата" ng-click="openDatePicker()" ng-model="registerInfo.dateOfBirth">
             </label>
             <label class="item item-input item-floating-label">
               <span class="input-label">Пол</span>
@@ -107,13 +107,15 @@
         <img src="http://placehold.it/350x100" alt=""><br>
         <div>{{registerInfo.name}}</div>
         <div>{{registerInfo.email}}</div>
+        <div>{{registerInfo.password}}</div>
+        <div>{{registerInfo.dateOfBirth}}</div>
         <div>{{registerInfo.phone}}</div>
         <div>{{registerInfo.address}}</div>
         <div>{{registerInfo.gender}}</div>
         <div>{{registerInfo.interests}}</div>
 
         <button class="button button-block" ng-click="previousSlide()">Back</button>
-        <button class="button button-block" ng-click="nextSlide()">РЕГИСТРИРАЙ МЕ</button>
+        <button class="button button-block" ng-click="register()">РЕГИСТРИРАЙ МЕ</button>
         Вече имате акаунт ? <a href="">Влезте</a>
 
       </ion-slide>

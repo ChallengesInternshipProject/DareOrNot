@@ -1,9 +1,9 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $state, $stateParams, $log, $ionicModal, $ionicSlideBoxDelegate, StatusFactory, LoginService) {
+  .controller('HomeCtrl', function ($scope, $state, $stateParams, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, RegisterService) {
 
     $scope.isLogged = false;
-    
+
     $scope.$watch('isLogged', function () {
       $log.info('isLogged is now ' + $scope.isLogged);
     });
@@ -24,9 +24,33 @@ angular.module('starter')
       picture: ''
     };
 
+    $scope.connectWithFacebook = function () {
+
+      
+
+    };
+
     $scope.loginInfo = {
       email: 'krasimirvelichkov@gmail.com',
       password: '123'
+    };
+    //Date picker
+    var ipObj1 = {
+      callback: function (val) {  //Mandatory
+        $scope.data.dateOfBirth = val;
+        console.log('Return value from the datepicker popup is : ' + val, new Date(val));
+      },
+      from: new Date(1900, 1, 1), //Optional
+      to: new Date(), //Optional
+      inputDate: new Date(),      //Optional
+      mondayFirst: true,          //Optional
+      disableWeekdays: [0],       //Optional
+      closeOnSelect: false,       //Optional
+      templateType: 'modal'       //Optional
+    };
+
+    $scope.openDatePicker = function () {
+      ionicDatePicker.openDatePicker(ipObj1);
     };
 
     $scope.login = function () {
@@ -37,6 +61,10 @@ angular.module('starter')
         });
     };
 
+    $scope.register = function () {
+      $log.info($scope.registerInfo);
+      RegisterService.registerUser($scope.registerInfo);
+    };
 
     //Improve validation with watch
     $scope.slideHasChanged = function (index) {

@@ -8,13 +8,7 @@ angular.module('starter.services')
         $http({
           method: 'GET',
           url: SERVER_ADDRESS + SERVER_PORT + '/auth/register',
-          params: {
-            email: user_data.email,
-            name: user_data.name,
-            id: user_data.id,
-            picture: user_data.picture,
-            password: user_data.password
-          }
+          params: user_data
         }).then(function (response) {
           console.log(response.data);
           //On success show a popup

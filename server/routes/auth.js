@@ -54,9 +54,11 @@ router.get('/register', function (req, res, next) {
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         name: req.param('name'),
-        picture: req.param('picture')
-        // phone: req.param('phone')
-        // dateOfBirth: req.param('dateOfBirth')
+        picture: req.param('picture'),
+        phone: req.param('phone'),
+        dateOfBrith: req.param('dateOfBrith'),
+        gender: req.param('gender'),
+        interests: req.param('interests')
     });
 
 
