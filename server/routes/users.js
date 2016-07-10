@@ -24,13 +24,17 @@ router.get('/', function (req, res, next) {
         res.json(user);
     });
 });
-router.get('/user/:user', function (req, res, next) {
+router.get('/:user', function (req, res, next) {
 
     // return res.send(req.params)
     User.findOne({email: req.params.user}, function (err, user) {
         if (err) {
             return res.send(err);
         }
+
+        //remove the pass hash from the response
+        user.password = null;
+
         return res.json(user);
     });
 });

@@ -11,6 +11,7 @@ angular.module('starter.controllers')
     $scope.data = {
       password: ''
     };
+    
 
 
     $scope.toggleLeft = function () {

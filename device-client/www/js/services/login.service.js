@@ -6,6 +6,8 @@ angular.module('starter.services')
       var setUser = function (user_data) {
         RegisterService.registerUser(user_data);
         $ionicLoading.hide();
+
+        //set the user to the local storage TODO use ngStorage
         window.localStorage.starter_facebook_user = JSON.stringify(user_data);
       };
 

@@ -1,6 +1,6 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $state, $stateParams, $timeout, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService) {
+  .controller('HomeCtrl', function ($scope, $state, $stateParams, $timeout, $log, $ionicModal, $localStorage, $sessionStorage, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService, FacebookService) {
 
     $scope.isLogged = false;
 
@@ -8,25 +8,30 @@ angular.module('starter')
       $log.info('isLogged is now ' + $scope.isLogged);
     });
 
+    //Set the local storage
+    $scope.$storage = $localStorage.$default({
+      user: null
+    });
+
+
     //Modal for login/register options
     //I think that it is better than tabs
     $scope.registerInfo = {
-      name: '',
-      email: '',
-      password: '',
-      phone: '',
-      address: '',
-      dateOfBirth: '',
-      gender: '',
-      interests: '',
+      name: 'John Cena',
+      email: 'johncena@amerika.com',
+      password: '123',
+      phone: '3592414124',
+      address: 'Sofia, John Cena 33',
+      dateOfBirth: Date.now(),
+      gender: 'Male',
+      interests: 'JavaScript, Ionic, AngularJS, MongoDB, ExpressJS',
 
       //TODO implement picture logic
-      picture: ''
+      picture: 'picture link'
     };
 
-    $scope.connectWithFacebook = function () {
-
-
+    $scope.loginWithFacebook = function () {
+      return FacebookService.facebookSignIn();
     };
 
     $scope.loginInfo = {
@@ -36,7 +41,7 @@ angular.module('starter')
     //Date picker
     var ipObj1 = {
       callback: function (val) {  //Mandatory
-        $scope.data.dateOfBirth = val;
+        $scope.registerInfo.dateOfBirth = val;
         console.log('Return value from the datepicker popup is : ' + val, new Date(val));
       },
       from: new Date(1900, 1, 1), //Optional

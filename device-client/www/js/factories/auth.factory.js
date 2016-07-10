@@ -1,5 +1,5 @@
 angular.module('starter')
-  .factory('AuthFactory', function ($timeout, $ionicModal, LoginService) {
+  .factory('AuthFactory', function ($log, $timeout, $ionicModal, LoginService, FacebookService) {
 
     var currentUser = null;
 
@@ -12,6 +12,9 @@ angular.module('starter')
           $log.info(error);
         });
     };
+    var loginWithFacebook = function () {
+      FacebookService.facebookSignIn();
+    };
 
     var isAuthenticated = function () {
       return currentUser ? true : false;
@@ -21,12 +24,9 @@ angular.module('starter')
       return isAuthenticated() ? currentUser : null;
     };
 
-
-
     return {
       loginUser: loginUser,
       isAuthenticated: isAuthenticated,
       getCurrent: getCurrent
     }
-
   });
