@@ -3,7 +3,7 @@ angular.module('starter.controllers')
 	.factory('moment', function ($window) {
 	        return $window.moment;
 	})
-  	.controller('CalendarCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage,$ionicSlideBoxDelegate) {
+  	.controller('CalendarCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage,$ionicSlideBoxDelegate, StorageFactory) {
   		$scope.weekDays = ['Пон','Вт','Срд','Чтв','Пт','Съб','Нед']
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS+':3000/';
   		GetCalendar();
@@ -18,7 +18,7 @@ angular.module('starter.controllers')
 		$scope.doRefresh = function () {
 			GetCalendar();
 		};
-		
+
 		$scope.changeDate=function(year,month){
 			GetCalendar(year,month)
 			$scope.challenges = [];
@@ -34,12 +34,12 @@ angular.module('starter.controllers')
 		function GetCalendar(year,month) {
 			if (year == undefined) year = new moment().format('YYYY');
 			if (month == undefined) month = new moment().format('M');
-			
+
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			
-			$http.get(SERVER_ADDRESS + ':3000/calendar/'+$localStorage.id+'/'+year+'/'+month).success(function (result) {
+
+			$http.get(SERVER_ADDRESS + ':3000/calendar/'+StorageFactory.get('id')+'/'+year+'/'+month).success(function (result) {
 				$ionicLoading.hide();
 				$scope.calendar = result ;
 				$scope.weeks=[];
@@ -59,7 +59,7 @@ angular.module('starter.controllers')
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			
+
 			$http.get(SERVER_ADDRESS + ':3000/calendar/events/'+$localStorage.id+'/'+year+'/'+month+'/'+day).success(function (result) {
 				$ionicLoading.hide();
 				$scope.challenges=result;

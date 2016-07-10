@@ -36,10 +36,7 @@ router.get('/:userID', function(req, res, next) {
 	
 	//TODO add pagination 
 	 Challenge
-	 .find({
-		_creator:req.params.userID,
-		title : {$ne:null}
-	 })
+	 .find()
 	 .populate('_creator')
 	 .exec(
 		function (err, post) {

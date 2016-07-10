@@ -9,6 +9,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
   function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
 
     var data = {};
+  
     if (AuthFactory.isAuthenticated()) {
       $log.info('not logged :(');
       return $q.when();

@@ -28,7 +28,10 @@ router.post('/create', function (req, res, next) {
     var currentChallenge = new Challenge({
         title: title,
         description: description,
-        location: location
+        location: location,
+        _creator : req.param('_creator'),
+        
+
     });
 
     // res.send('ok ?')

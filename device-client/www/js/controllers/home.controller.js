@@ -1,6 +1,19 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $state, $stateParams, $timeout, $log, $ionicModal, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService) {
+  .controller('HomeCtrl', function (
+    $scope,
+    $state,
+    $stateParams,
+    $timeout,
+    $log,
+    $ionicModal,
+    $ionicSlideBoxDelegate,
+    ionicDatePicker,
+    StatusFactory,
+    LoginService,
+    AuthFactory,
+    RegisterService,
+    StorageFactory) {
 
     $scope.isLogged = false;
 
@@ -30,8 +43,8 @@ angular.module('starter')
     };
 
     $scope.loginInfo = {
-      email: 'krasimirvelichkov@gmail.com',
-      password: '123'
+      email: 'ex3m4@mail.bg',
+      password: 'test'
     };
     //Date picker
     var ipObj1 = {
@@ -55,9 +68,13 @@ angular.module('starter')
     $scope.login = function () {
       AuthFactory.loginUser($scope.loginInfo.email, $scope.loginInfo.password)
         .success(function (result) {
-          // $log.info(result);
           $scope.isLogged = true;
           $scope.loginModal.hide();
+
+          for(field in result){
+            StorageFactory.add(field,result[field])
+          }
+          //console.log();
           $state.go('tab.users');
         });
     };

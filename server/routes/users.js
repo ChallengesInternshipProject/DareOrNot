@@ -20,8 +20,22 @@ var bcrypt = require('bcrypt-nodejs');
 //END OF TESTING PURPOSES
 
 router.get('/', function (req, res, next) {
-    User.find(function (err, user) {
-        res.json(user);
+
+    User.find(function (err, users) {
+        var resultUsers=[];
+        users.forEach(function(user, index){
+            User.getFriends(user._id,function(friends){
+                var resultUser= user;
+                resultUser.friends = [];
+                resultUsers.push(resultUser);
+                console.log(resultUsers);
+            })
+            if(index == users.length - 1) {
+                res.json(resultUsers)
+            }
+        });
+
+
     });
 });
 router.get('/user/:user', function (req, res, next) {

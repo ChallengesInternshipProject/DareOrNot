@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-
+var friends = require('mongoose-friends')
 var userSchema = new Schema({
     // id: Number,
     email: String,
@@ -32,6 +32,8 @@ var userSchema = new Schema({
 
     //TODO limits maximum and minimum lenght of strings
 });
+
+userSchema.plugin(friends());
 
 var User = mongoose.model('User', userSchema);
 
