@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var router = express.Router();
 var User = require('../models/users');
 var bcrypt = require('bcrypt-nodejs');
+//var $q = require('q');
 
 //FOR TESTING PURPOSES !!!
 // User.remove({},function(err){
@@ -24,6 +25,7 @@ router.get('/', function (req, res, next) {
     User.find(function (err, users) {
         var resultUsers=[];
         users.forEach(function(user, index){
+           
             User.getFriends(user._id,function(friends){
                 var resultUser= user;
                 resultUser.friends = [];
@@ -39,7 +41,6 @@ router.get('/', function (req, res, next) {
     });
 });
 router.get('/user/:user', function (req, res, next) {
-
     // return res.send(req.params)
     User.findOne({email: req.params.user}, function (err, user) {
         if (err) {
@@ -49,4 +50,14 @@ router.get('/user/:user', function (req, res, next) {
     });
 });
 
+router.get('/friends/:user', function(req, res, next){
+
+    //var friendStatus = require("mongoose-friends").Status;
+    User.getFriends(req.param('user'), function(err,friends){
+        if(err){
+            return res.json(err);
+        }
+        return res.json(friends)
+    });
+})
 module.exports = router;

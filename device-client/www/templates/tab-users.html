@@ -12,5 +12,16 @@
         <p>Sample text here</p>
       </ion-item>
     </ion-list>
+    
+    <ion-list>
+      <ion-item class="item-avatar" ng-repeat="friend in friends" ng-href="#/tab/user/{{friend.email}}">
+        {{friend}}
+        <img ng-src="{{friend.picture}}" alt="">
+        <h2> Email :{{friend.friend.email}}</h2>
+
+        <p>Sample text here</p>
+      </ion-item>
+    </ion-list>
+
   </ion-content>
 </ion-view>
