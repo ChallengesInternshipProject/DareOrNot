@@ -4,7 +4,10 @@ angular.module('starter')
 
     $scope.isLogged = false;
 
+
     $scope.$watch('isLogged', function () {
+      // $log.info('test : ', $localStorage.test)
+      // $log.info('$localStorage isLogged ', $localStorage.isLogged);
       $log.info('isLogged is now ' + $scope.isLogged);
     });
 
@@ -12,7 +15,6 @@ angular.module('starter')
     $scope.$storage = $localStorage.$default({
       user: null
     });
-
 
     //Modal for login/register options
     //I think that it is better than tabs
@@ -61,6 +63,8 @@ angular.module('starter')
       AuthFactory.loginUser($scope.loginInfo.email, $scope.loginInfo.password)
         .success(function (result) {
           // $log.info(result);
+          // $localStorage.isLogged = true;
+          $localStorage.user = result;
           $scope.isLogged = true;
           $scope.loginModal.hide();
           $state.go('tab.users');

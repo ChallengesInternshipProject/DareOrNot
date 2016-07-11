@@ -1,7 +1,7 @@
 angular.module('starter')
-  .factory('AuthFactory', function ($log, $timeout, $ionicModal, LoginService, FacebookService) {
+  .factory('AuthFactory', function ($log, $timeout, $localStorage, $ionicModal, LoginService, FacebookService) {
 
-    var currentUser = null;
+    var currentUser = $localStorage.user;
 
     var loginUser = function (username, password) {
       return LoginService.loginUser(username, password)
