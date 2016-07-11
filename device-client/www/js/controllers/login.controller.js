@@ -11,7 +11,7 @@ angular.module('starter.controllers')
     $scope.data = {
       password: ''
     };
-    
+
 
 
     $scope.toggleLeft = function () {
@@ -26,6 +26,7 @@ angular.module('starter.controllers')
     $scope.$storage = $localStorage.$default({
       user: null
     });
+    
     $scope.login = function () {
       LoginService.loginUser($scope.data.email, $scope.data.password)
         .success(function (data) {
@@ -34,8 +35,8 @@ angular.module('starter.controllers')
             template: "Hello " + data.email
           });
           //Set the login status
-          StatusFactory.isLogged = true;
-
+          // StatusFactory.isLogged = true;
+          $localStorage.isLogged = true;
           $scope.$storage.user = data.email;
           $log.info($scope.$storage.user);
           // $state.go('tab.chats');

@@ -3,6 +3,19 @@ angular.module('starter.services')
       var isAuthenticated = false;
 
       // Save the user after the Facebook login/registration in the database with a ionicPopup for the password with a local login.
+      var checkUserExists = function (email) {
+        var deffered = $q.defer();
+
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/users/' + email)
+          .then(function (result) {
+            deffered.resolve(result);
+          }, function (error) {
+            deffered.reject(error);
+          });
+
+        return deffered.promise;
+      };
+
       var setUser = function (user_data) {
         RegisterService.registerUser(user_data);
         $ionicLoading.hide();
@@ -49,7 +62,8 @@ angular.module('starter.services')
       return {
         getUser: getUser,
         setUser: setUser,
-        loginUser: loginUser
+        loginUser: loginUser,
+        checkUserExists: checkUserExists
       }
     }
   );

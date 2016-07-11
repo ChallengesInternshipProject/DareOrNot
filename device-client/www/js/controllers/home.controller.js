@@ -4,7 +4,13 @@ angular.module('starter')
 
     $scope.isLogged = false;
 
+    $scope.test = function () {
 
+      LoginService.checkUserExists('krasimirvelichkov@gmail.com')
+        .then(function (result) {
+          $log.info(result)
+        });
+    };
     $scope.$watch('isLogged', function () {
       // $log.info('test : ', $localStorage.test)
       // $log.info('$localStorage isLogged ', $localStorage.isLogged);
@@ -13,14 +19,15 @@ angular.module('starter')
 
     //Set the local storage
     $scope.$storage = $localStorage.$default({
-      user: null
+      user: null,
+      isLogged: false
     });
 
     //Modal for login/register options
     //I think that it is better than tabs
     $scope.registerInfo = {
       name: 'John Cena',
-      email: 'johncena@amerika.com',
+      email: 'test@test.com',
       password: '123',
       phone: '3592414124',
       address: 'Sofia, John Cena 33',
@@ -32,14 +39,13 @@ angular.module('starter')
       picture: 'picture link'
     };
 
-    $scope.loginWithFacebook = function () {
-      return FacebookService.facebookSignIn();
-    };
+
 
     $scope.loginInfo = {
-      email: 'krasimirvelichkov@gmail.com',
+      email: 'test@test.com',
       password: '123'
     };
+
     //Date picker
     var ipObj1 = {
       callback: function (val) {  //Mandatory
@@ -59,13 +65,19 @@ angular.module('starter')
       ionicDatePicker.openDatePicker(ipObj1);
     };
 
+    $scope.loginWithFacebook = function () {
+      FacebookService.facebookSignIn();
+      $scope.loginModal.hide();
+      $scope.registerModal.hide();
+    };
+
     $scope.login = function () {
       AuthFactory.loginUser($scope.loginInfo.email, $scope.loginInfo.password)
         .success(function (result) {
           // $log.info(result);
           // $localStorage.isLogged = true;
           $localStorage.user = result;
-          $scope.isLogged = true;
+          $localStorage.isLogged = true;
           $scope.loginModal.hide();
           $state.go('tab.users');
         });

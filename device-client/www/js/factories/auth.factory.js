@@ -17,7 +17,7 @@ angular.module('starter')
     };
 
     var isAuthenticated = function () {
-      return currentUser ? true : false;
+      return (currentUser && $localStorage.isLogged) ? true : false;
     };
 
     var getCurrent = function () {

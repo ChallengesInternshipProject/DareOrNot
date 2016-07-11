@@ -1,5 +1,5 @@
 angular.module('starter')
-  .service('FacebookService', function ($rootScope, $localStorage, $log, $q, $http, $state, $localStorage, $ionicPopup, $ionicLoading, LoginService) {
+  .service('FacebookService', function ($rootScope, $log, $q, $http, $state, $localStorage, $ionicPopup, $ionicLoading, LoginService, RegisterService) {
       $rootScope.data = {
         password: ''
       };
@@ -19,46 +19,29 @@ angular.module('starter')
         getFacebookProfileInfo(authResponse)
           .then(function (profileInfo) {
 
-            $log.info(profileInfo);
-            alert('already registered !');
-            $localStorage.isLogged = true;
-            $localStorage.user = profileInfo;
 
-            // // A popup for the local login after the email is set from the FB login
-            // var myPopup = $ionicPopup.show({
-            //   template: '<input type="password" ng-model="data.password">',
-            //   title: 'Set your password for the app',
-            //   subTitle: 'Just a simple password !',
-            //   scope: $rootScope,
-            //   buttons: [
-            //     {text: 'Cancel'},
-            //     {
-            //       text: '<b>Save</b>',
-            //       type: 'button-positive',
-            //       onTap: function (e) {
-            //         if (!$rootScope.data.password) {
-            //           //don't allow the user to close unless he enters wifi password
-            //           $log.info($rootScope.data.password);
-            //           e.preventDefault();
-            //         } else {
-            //           $log.info('exists 2 ?')
-            //           //Register the user to the local db with the set password from the popup
-            //           $log.info($rootScope.data.password);
-            //           $log.info(profileInfo);
-            //
-            //           LoginService.setUser({
-            //             authResponse: authResponse,
-            //             userID: profileInfo.id,
-            //             name: profileInfo.name,
-            //             email: profileInfo.email,
-            //             picture: "http://graph.facebook.com/" + authResponse.userID + "/picture?type=large",
-            //             password: $rootScope.data.password
-            //           });
-            //         }
-            //       }
-            //     }
-            //   ]
-            // });
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            //Check if the user exists
+            LoginService.checkUserExists(profileInfo.email)
+              .then(function (result) {
+                $log.info(result);
+                $log.info('exists ^');
+                // $log.info('something went really bad');
+                if (result.email) {
+                  $localStorage.user = result;
+                  $state.go('tab.users');
+                } else {
+
+                  RegisterService.registerUser(profileInfo);
+                  $localStorage.isLogged = true;
+                  $localStorage.user = profileInfo;
+
+                  //Register the user
+                  // RegisterService.registerUser(profileInfo);
+                }
+              });
+
 
           }, function (fail) {
             // Fail get profile info
@@ -109,37 +92,18 @@ angular.module('starter')
             if (!user.userID) {
               getFacebookProfileInfo(success.authResponse)
                 .then(function (profileInfo) {
-                  // For the purpose of this example I will store user data on local storage
-                  var myPopup = $ionicPopup.show({
-                    template: '<input type="password" ng-model="data.password">',
-                    title: 'Set your password',
-                    subTitle: 'Just a simple password !',
-                    scope: $rootScope,
-                    buttons: [
-                      {text: 'Cancel'},
-                      {
-                        text: '<b>Save</b>',
-                        type: 'button-positive',
-                        onTap: function (e) {
-                          if (!$rootScope.data.password) {
-                            //don't allow the user to close unless he enters wifi password
-                            e.preventDefault();
-                          } else {
-                            $log.info('exists 1 ?')
-                            //Register the user to the local db with the set password from the popup
-                            LoginService.setUser({
-                              authResponse: success.authResponse,
-                              userID: profileInfo.id,
-                              name: profileInfo.name,
-                              email: profileInfo.email,
-                              picture: "http://graph.facebook.com/" + success.authResponse.userID + "/picture?type=large",
-                              password: $rootScope.data.password
-                            });
-                          }
-                        }
-                      }
-                    ]
-                  });
+
+                  LoginService.checkUserExists(profileInfo.email)
+                    .then(function (result) {
+                      $localStorage.isLogged = true;
+                      $localStorage.user = profileInfo;
+                      $state.go('tab.users');
+                      
+                    });
+
+                  // $localStorage.user = profileInfo;
+                  //got profile info !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
                 }, function (fail) {
                   // Fail get profile info
                   $ionicLoading.hide();
