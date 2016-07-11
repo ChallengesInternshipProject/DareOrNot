@@ -126,18 +126,18 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
         }
       }
     })
-    .state('tab.map', {
-      url: '/map',
-      views: {
-        'tab-map': {
-          templateUrl: 'templates/tab-map.html',
-          controller: 'MapCtrl',
-          resolve: {
-            isAuthenticated: isAuthenticated
-          }
-        }
-      }
-    })
+    // .state('tab.map', {
+    //   url: '/map',
+    //   views: {
+    //     'tab-map': {
+    //       templateUrl: 'templates/tab-map.html',
+    //       controller: 'MapCtrl',
+    //       resolve: {
+    //         isAuthenticated: isAuthenticated
+    //       }
+    //     }
+    //   }
+    // })
     .state('tab.gMaps', {
       url: '/gMaps',
       views: {
@@ -147,6 +147,18 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
           resolve: {
             isAuthenticated: isAuthenticated
           }
+        }
+      }
+    })
+    .state('tab.contacts', {
+      url: '/contacts',
+      views: {
+        'tab-contacts': {
+          templateUrl: 'templates/tab-contacts.html',
+          controller: 'ContactsCtrl'
+          // resolve: {
+          //   isAuthenticated: isAuthenticated
+          // }
         }
       }
     })
