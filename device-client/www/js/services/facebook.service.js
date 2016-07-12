@@ -19,7 +19,6 @@ angular.module('starter')
         getFacebookProfileInfo(authResponse)
           .then(function (profileInfo) {
 
-
             //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             //Check if the user exists
@@ -28,20 +27,26 @@ angular.module('starter')
                 $log.info(result);
                 $log.info('exists ^');
                 // $log.info('something went really bad');
-                if (result.email) {
-                  $localStorage.user = result;
-                  $state.go('tab.users');
-                } else {
+
+                if (result.data === null) {
+                  $log.info('no result.email !??!?!?');
 
                   RegisterService.registerUser(profileInfo);
                   $localStorage.isLogged = true;
                   $localStorage.user = profileInfo;
 
+                }
+                else if (result.data.email) {
+                  $log.info('Result.email exists');
+                  $localStorage.isLogged = true;
+                  $localStorage.user = result;
+                  $state.go('tab.users');
+                } else {
+
                   //Register the user
                   // RegisterService.registerUser(profileInfo);
                 }
               });
-
 
           }, function (fail) {
             // Fail get profile info
@@ -98,7 +103,7 @@ angular.module('starter')
                       $localStorage.isLogged = true;
                       $localStorage.user = profileInfo;
                       $state.go('tab.users');
-                      
+
                     });
 
                   // $localStorage.user = profileInfo;
