@@ -1,50 +1,81 @@
-angular.module('starter.controllers')
+angular.module('starter.controllers', ['ionic', 'ngCordova'])
 
-/*
- For more functionality use google maps api documentation here:
- https://developers.google.com/maps/documentation/javascript/examples/
- */
+  .controller('GoogleMapCtrl', function ($scope, $state, $cordovaGeolocation, $ionicPopup) {
+    var options = {timeout: 10000, enableHighAccuracy: true};
 
-  .controller('GoogleMapCtrl', function ($scope, $state) {
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 14
-      });
-      var infoWindow = new google.maps.InfoWindow({map: map});
+    $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
 
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+      // Get Current Location from device
+      var currLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Here am I! :)');
-          map.setCenter(pos);
-        }, function () {
-          handleLocationError(true, infoWindow, map.getCenter());
+
+      //Initial map options
+      var mapOptions = {
+        center: currLocation,
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      //Initialize the map itself.
+      $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+      //OnTap button set center of map to your location.
+      $scope.centerOnMe = function (currentLocation) {
+        //Create marker with curr location
+        var marker = new google.maps.Marker({
+          map: $scope.map,
+          animation: google.maps.Animation.DROP,
+          position: currLocation
         });
-      } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
 
-      google.maps.event.addListener(map, 'click', function (event) {
-        marker = new google.maps.Marker({
-          position: event.latLng,
-          map: map
+        $scope.map.setZoom(15);
+        // Info Message on marker click
+        var infoWindow = new google.maps.InfoWindow({
+          content: "Here I am!"
+        });
+
+        $scope.map.setCenter(currLocation);
+        // Show info message on marker click
+        google.maps.event.addListener(marker, 'click', function () {
+          infoWindow.open($scope.map, marker);
+        });
+      };
+
+      // Test array with location objects
+      var myLatLngArray = [{lat: -25.363, lng: 131.044}, {lat: -45.363, lng: 12.044}, {lat: -29.363, lng: 111.044}];
+
+      //Foreach location set marker
+      myLatLngArray.forEach(function (location, count) {
+        var marker = new google.maps.Marker({
+          position: location,
+          map: $scope.map
+        });
+        console.log(location);
+        count++;
+        var infoWindow = new google.maps.InfoWindow({
+          content: "Location number: " + count
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+          infoWindow.open($scope.map, marker);
         });
       });
-    }
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    }
+      // //On tap create marker
+      // google.maps.event.addListener($scope.map, 'click', function(event) {
+      //   placeMarker(event.latLng);
+      // });
+      //
+      // function placeMarker(location) {
+      //   var marker = new google.maps.Marker({
+      //     position: location,
+      //     map: $scope.map
+      //   });
+      // }
 
-    initMap();
+    }, function (error) {
+      $ionicPopup.alert({
+        title: 'Location error'
+      });
+    });
   });

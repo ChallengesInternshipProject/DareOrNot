@@ -144,9 +144,9 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
         'tab-gMaps': {
           templateUrl: 'templates/tab-gMaps.html',
           controller: 'GoogleMapCtrl',
-          resolve: {
-            isAuthenticated: isAuthenticated
-          }
+          // resolve: {
+          //   isAuthenticated: isAuthenticated
+          // }
         }
       }
     })
