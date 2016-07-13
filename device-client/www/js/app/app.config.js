@@ -10,7 +10,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
     var data = {};
     if (AuthFactory.isAuthenticated()) {
-      $log.info('not logged :(');
+      $log.info('You are 100% logged no scam !');
       return $q.when();
     } else {
       // console.log('false')
