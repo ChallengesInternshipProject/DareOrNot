@@ -40,7 +40,6 @@ angular.module('starter')
     };
 
 
-
     $scope.loginInfo = {
       email: 'test@test.com',
       password: '123'
@@ -134,6 +133,14 @@ angular.module('starter')
       $scope.loginModal = modal;
     });
 
+    $ionicModal.fromTemplateUrl('templates/modals/forgot-password-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up',
+      hardwareBackButtonClose: false
+    }).then(function (modal) {
+      $scope.forgottenPasswordModal = modal;
+    });
+
     $scope.disableSwipe = function () {
       $ionicSlideBoxDelegate.enableSlide(false);
     };
@@ -154,9 +161,13 @@ angular.module('starter')
     $scope.callLoginModal = function () {
       $scope.registerModal.hide();
       $scope.loginModal.show();
-
     };
 
+    $scope.callForgottenPasswordModal = function () {
+      $scope.forgottenPasswordModal.show();
+      $scope.loginModal.hide();
+      $scope.registerModal.hide();
+    };
 
     $scope.goToLogin = function () {
       $state.go('tab.login');
