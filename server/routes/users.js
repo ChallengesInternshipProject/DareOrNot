@@ -24,12 +24,16 @@ router.get('/', function (req, res, next) {
         res.json(user);
     });
 });
+
 router.get('/:user', function (req, res, next) {
 
     // return res.send(req.params)
     User.findOne({email: req.params.user}, function (err, user) {
         if (err) {
             return res.send(err);
+        }
+        if(!user){
+            return res.send('User not found !');
         }
 
         //remove the pass hash from the response
