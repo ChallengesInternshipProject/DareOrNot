@@ -1,0 +1,25 @@
+<ion-view view-title="Chat Detail">
+  <ion-content>
+    <h2>{{user.socketID}}</h2>
+    <ion-list>
+      <ion-item ng-repeat="msg in messages track by $index">
+        <strong>{{msg.sender}}</strong> {{msg.time| date:'HH:mm:ss'}}
+        <div ng-class="{'strike': theItem, left : right}">
+          {{msg.message}}
+        </div>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+  <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"
+             ng-model="message" on-focus="inputUp()" on-blur="inputDown()"/>
+    </label>
+
+    <button ng-model="deleted" class="button button-clear" ng-click="emit(message)">
+      Send
+    </button>
+
+  </ion-footer-bar>
+</ion-view>

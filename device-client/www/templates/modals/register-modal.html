@@ -1,0 +1,128 @@
+<ion-modal-view>
+  <!--<ion-header-bar>-->
+  <!--&lt;!&ndash;<h1 class="title">Login or register to proceed</h1>&ndash;&gt;-->
+  <!--</ion-header-bar>-->
+  <ion-content>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)" ng-init="disableSwipe()">
+
+      <!--First slide-->
+
+      <ion-slide>
+        <img src="http://placehold.it/350x100" alt="">
+
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Име</span>
+            <input type="text" placeholder="Име" ng-model="registerInfo.name">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Email</span>
+            <input type="text" placeholder="Email" ng-model="registerInfo.email">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Парола</span>
+            <input type="password" placeholder="Парола" ng-model="registerInfo.password">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Телефон</span>
+            <input type="text" placeholder="Телефон" ng-model="registerInfo.phone">
+          </label>
+        </div>
+
+
+        <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
+        <!--adding some br's maybe it will be better with CSS ?-->
+
+        Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
+        <br><br>
+
+      </ion-slide>
+
+      <!--Second slide-->
+
+      <ion-slide>
+
+        <div class="box blue">
+          <img src="http://placehold.it/350x100" alt="">
+          <div class="list">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Адрес</span>
+              <input type="text" placeholder="Адрес" ng-model="registerInfo.address">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Рожденна дата</span>
+              <input type="text" placeholder="Рожденна дата" ng-click="openDatePicker()"
+                     ng-model="registerInfo.dateOfBirth ">
+              <!--| date : 'd-MMM-yyyy'-->
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Пол</span>
+              <input type="text" placeholder="Пол" ng-model="registerInfo.gender">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Интереси</span>
+              <input type="text" placeholder="Интереси" ng-model="registerInfo.interests">
+            </label>
+          </div>
+
+          <button class="button button-block" ng-click="previousSlide()">Back</button>
+          <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
+          <!--adding some br's maybe it will be better with CSS ?-->
+          Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
+          <br><br>
+        </div>
+
+      </ion-slide>
+
+      <!--Third slide-->
+
+      <ion-slide>
+
+        <img src="http://placehold.it/350x100" alt=""><br>
+        Добави снимка
+        <input type="file">
+        <button class="button button-block" ng-click="previousSlide()">Back</button>
+        <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
+        Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
+
+      </ion-slide>
+
+      <!--Forth slide-->
+
+      <ion-slide>
+
+        <img src="http://placehold.it/350x100" alt=""><br>
+        Добави социална мрежа
+        <br>
+        <span>Facebook</span>
+        <span>Twitter</span>
+        <span>Google+</span>
+        <br>
+        <button class="button button-block" ng-click="previousSlide()">Back</button>
+        <button class="button button-block" ng-click="nextSlide()"><i class="ion-android-arrow-forward"></i></button>
+        Вече имате акаунт ? <a ng-href="" ng-click="callLoginModal()">Влезте</a>
+
+      </ion-slide>
+
+      <ion-slide>
+
+        <img src="http://placehold.it/350x100" alt=""><br>
+        <div>{{registerInfo.name}}</div>
+        <div>{{registerInfo.email}}</div>
+        <div>{{registerInfo.password}}</div>
+        <div>{{registerInfo.dateOfBirth}}</div>
+        <div>{{registerInfo.phone}}</div>
+        <div>{{registerInfo.address}}</div>
+        <div>{{registerInfo.gender}}</div>
+        <div>{{registerInfo.interests}}</div>
+
+        <button class="button button-block" ng-click="previousSlide()">Back</button>
+        <button class="button button-block" ng-click="register()">РЕГИСТРИРАЙ МЕ</button>
+
+      </ion-slide>
+
+    </ion-slide-box>
+
+  </ion-content>
+
+</ion-modal-view>

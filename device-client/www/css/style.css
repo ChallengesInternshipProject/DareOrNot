@@ -1,0 +1,24 @@
+/* Empty. Add your own CSS if you like */
+.leafletMap {
+  width: 100vw;
+  height: 100vh;
+}
+
+.leafletUserMap {
+  width: 50vw;
+  height: 50vh;
+}
+
+.leafletDareMap {
+  width: 100vw;
+  height: 50vh;
+}
+
+.scroll {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
