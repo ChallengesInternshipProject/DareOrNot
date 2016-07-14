@@ -3,8 +3,7 @@
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
-(function (window) {
-  'use strict';
+(function(window) {'use strict';
 
 /**
  * @description
@@ -516,18 +515,18 @@ noop.$inject = [];
  * functional style.
  *
    ```js
- function transformer(transformationFn, value) {
+   function transformer(transformationFn, value) {
      return (transformationFn || angular.identity)(value);
    };
 
- // E.g.
- function getResult(fn, input) {
+   // E.g.
+   function getResult(fn, input) {
      return (fn || angular.identity)(input);
    };
 
- getResult(function(n) { return n * 2; }, 21);   // returns 42
- getResult(null, 21);                            // returns 21
- getResult(undefined, 21);                       // returns 21
+   getResult(function(n) { return n * 2; }, 21);   // returns 42
+   getResult(null, 21);                            // returns 21
+   getResult(undefined, 21);                       // returns 21
    ```
  *
  * @param {*} value to be returned.
@@ -776,8 +775,8 @@ var escapeForRegexp = function(s) {
  */
 function isElement(node) {
   return !!(node &&
-  (node.nodeName  // We are a direct element.
-  || (node.prop && node.attr && node.find)));  // We have an on and find method part of jQuery API.
+    (node.nodeName  // We are a direct element.
+    || (node.prop && node.attr && node.find)));  // We have an on and find method part of jQuery API.
 }
 
 /**
@@ -1035,30 +1034,30 @@ function copy(source, destination) {
  * @returns {boolean} True if arguments are equal.
  *
  * @example
- <example module="equalsExample" name="equalsExample">
- <file name="index.html">
- <div ng-controller="ExampleController">
- <form novalidate>
- <h3>User 1</h3>
- Name: <input type="text" ng-model="user1.name">
- Age: <input type="number" ng-model="user1.age">
+   <example module="equalsExample" name="equalsExample">
+     <file name="index.html">
+      <div ng-controller="ExampleController">
+        <form novalidate>
+          <h3>User 1</h3>
+          Name: <input type="text" ng-model="user1.name">
+          Age: <input type="number" ng-model="user1.age">
 
- <h3>User 2</h3>
- Name: <input type="text" ng-model="user2.name">
- Age: <input type="number" ng-model="user2.age">
+          <h3>User 2</h3>
+          Name: <input type="text" ng-model="user2.name">
+          Age: <input type="number" ng-model="user2.age">
 
- <div>
- <br/>
- <input type="button" value="Compare" ng-click="compare()">
- </div>
- User 1: <pre>{{user1 | json}}</pre>
- User 2: <pre>{{user2 | json}}</pre>
- Equal: <pre>{{result}}</pre>
- </form>
- </div>
- </file>
- <file name="script.js">
- angular.module('equalsExample', []).controller('ExampleController', ['$scope', function($scope) {
+          <div>
+            <br/>
+            <input type="button" value="Compare" ng-click="compare()">
+          </div>
+          User 1: <pre>{{user1 | json}}</pre>
+          User 2: <pre>{{user2 | json}}</pre>
+          Equal: <pre>{{result}}</pre>
+        </form>
+      </div>
+    </file>
+    <file name="script.js">
+        angular.module('equalsExample', []).controller('ExampleController', ['$scope', function($scope) {
           $scope.user1 = {};
           $scope.user2 = {};
           $scope.result;
@@ -1066,8 +1065,8 @@ function copy(source, destination) {
             $scope.result = angular.equals($scope.user1, $scope.user2);
           };
         }]);
- </file>
- </example>
+    </file>
+  </example>
  */
 function equals(o1, o2) {
   if (o1 === o2) return true;
@@ -1115,7 +1114,7 @@ var csp = function() {
 
 
     var ngCspElement = (window.document.querySelector('[ng-csp]') ||
-    window.document.querySelector('[data-ng-csp]'));
+                    window.document.querySelector('[data-ng-csp]'));
 
     if (ngCspElement) {
       var ngCspAttribute = ngCspElement.getAttribute('ng-csp') ||
@@ -1255,7 +1254,7 @@ function toJsonReplacer(key, value) {
     val = undefined;
   } else if (isWindow(value)) {
     val = '$WINDOW';
-  } else if (value && window.document === value) {
+  } else if (value &&  window.document === value) {
     val = '$DOCUMENT';
   } else if (isScope(value)) {
     val = '$SCOPE';
@@ -1732,7 +1731,7 @@ function bootstrap(element, modules, config) {
       // Encode angle brackets to prevent input from being sanitized to empty string #8683.
       throw ngMinErr(
           'btstrpd',
-        "App already bootstrapped with this element '{0}'",
+          "App already bootstrapped with this element '{0}'",
           tag.replace(/</,'&lt;').replace(/>/,'&gt;'));
     }
 
@@ -2179,9 +2178,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#decorator
            * @module ng
-            * @param {string} name The name of the service to decorate.
-            * @param {Function} decorFn This function will be invoked when the service needs to be
-            *                           instantiated and should return the decorated service instance.
+           * @param {string} name The name of the service to decorate.
+           * @param {Function} decorFn This function will be invoked when the service needs to be
+           *                           instantiated and should return the decorated service instance.
            * @description
            * See {@link auto.$provide#decorator $provide.decorator()}.
            */
@@ -2344,34 +2343,34 @@ function setupModuleLoader(window) {
 
 }
 
-  /* global shallowCopy: true */
+/* global shallowCopy: true */
 
-  /**
-   * Creates a shallow copy of an object, an array or a primitive.
-   *
-   * Assumes that there are no proto properties for objects.
-   */
-  function shallowCopy(src, dst) {
-    if (isArray(src)) {
-      dst = dst || [];
+/**
+ * Creates a shallow copy of an object, an array or a primitive.
+ *
+ * Assumes that there are no proto properties for objects.
+ */
+function shallowCopy(src, dst) {
+  if (isArray(src)) {
+    dst = dst || [];
 
-      for (var i = 0, ii = src.length; i < ii; i++) {
-        dst[i] = src[i];
-      }
-    } else if (isObject(src)) {
-      dst = dst || {};
+    for (var i = 0, ii = src.length; i < ii; i++) {
+      dst[i] = src[i];
+    }
+  } else if (isObject(src)) {
+    dst = dst || {};
 
-      for (var key in src) {
-        if (!(key.charAt(0) === '$' && key.charAt(1) === '$')) {
-          dst[key] = src[key];
-        }
+    for (var key in src) {
+      if (!(key.charAt(0) === '$' && key.charAt(1) === '$')) {
+        dst[key] = src[key];
       }
     }
-
-    return dst || src;
   }
 
-  /* global toDebugString: true */
+  return dst || src;
+}
+
+/* global toDebugString: true */
 
 function serializeObject(obj) {
   var seen = [];
@@ -2928,7 +2927,7 @@ function jqLiteWrapNode(node, wrapper) {
 
 
 // IE9-11 has no method "contains" in SVG element and in Node.prototype. Bug #10259.
-  var jqLiteContains = window.Node.prototype.contains || function (arg) {
+var jqLiteContains = window.Node.prototype.contains || function(arg) {
   // jshint bitwise: false
   return !!(this.compareDocumentPosition(arg) & 16);
   // jshint bitwise: true
@@ -3904,13 +3903,13 @@ var FN_ARG = /^\s*(_?)(\S+?)\1\s*$/;
 var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
 var $injectorMinErr = minErr('$injector');
 
-  function stringifyFn(fn) {
-    // Support: Chrome 50-51 only
-    // Creating a new string by adding `' '` at the end, to hack around some bug in Chrome v50/51
-    // (See https://github.com/angular/angular.js/issues/14487.)
-    // TODO (gkalpak): Remove workaround when Chrome v52 is released
-    return Function.prototype.toString.call(fn) + ' ';
-  }
+function stringifyFn(fn) {
+  // Support: Chrome 50-51 only
+  // Creating a new string by adding `' '` at the end, to hack around some bug in Chrome v50/51
+  // (See https://github.com/angular/angular.js/issues/14487.)
+  // TODO (gkalpak): Remove workaround when Chrome v52 is released
+  return Function.prototype.toString.call(fn) + ' ';
+}
 
 function extractArgs(fn) {
   var fnText = stringifyFn(fn).replace(STRIP_COMMENTS, ''),
@@ -7517,10 +7516,8 @@ function $TemplateCacheProvider() {
 
 var $compileMinErr = minErr('$compile');
 
-  function UNINITIALIZED_VALUE() {
-  }
-
-  var _UNINITIALIZED_VALUE = new UNINITIALIZED_VALUE();
+function UNINITIALIZED_VALUE() {}
+var _UNINITIALIZED_VALUE = new UNINITIALIZED_VALUE();
 
 /**
  * @ngdoc provider
@@ -7631,7 +7628,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
     var require = directive.require || (directive.controller && directive.name);
 
     if (!isArray(require) && isObject(require)) {
-      forEach(require, function (value, key) {
+      forEach(require, function(value, key) {
         var match = value.match(REQUIRE_PREFIX_REGEXP);
         var name = value.substring(match[0].length);
         if (!name) require[key] = match[0] + key;
@@ -7782,8 +7779,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * See also {@link ng.$compileProvider#directive $compileProvider.directive()}.
    */
   this.component = function registerComponent(name, options) {
-    var controller = options.controller || function () {
-      };
+    var controller = options.controller || function() {};
 
     function factory($injector) {
       function makeInjectable(fn) {
@@ -7810,7 +7806,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
       };
 
       // Copy annotations (starting with $) over to the DDO
-      forEach(options, function (val, key) {
+      forEach(options, function(val, key) {
         if (key.charAt(0) === '$') ddo[key] = val;
       });
 
@@ -7965,7 +7961,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
              $controller,   $rootScope,   $sce,   $animate,   $$sanitizeUri) {
 
     var SIMPLE_ATTR_NAME = /^\w/;
-      var specialAttrHolder = window.document.createElement('div');
+    var specialAttrHolder = window.document.createElement('div');
 
 
 
@@ -9023,7 +9019,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
           /* jshint -W021 */
           nodeLinkFn = compileTemplateUrl(directives.splice(i, directives.length - i), $compileNode,
-            /* jshint +W021 */
+          /* jshint +W021 */
               templateAttrs, jqCollection, hasTranscludeDirective && childTranscludeFn, preLinkFns, postLinkFns, {
                 controllerDirectives: controllerDirectives,
                 newScopeDirective: (newScopeDirective !== directive) && newScopeDirective,
@@ -9088,7 +9084,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
       function nodeLinkFn(childLinkFn, scope, linkNode, $rootElement, boundTranscludeFn) {
         var i, ii, linkFn, isolateScope, controllerScope, elementControllers, transcludeFn, $element,
-          attrs, scopeBindingInfo;
+            attrs, scopeBindingInfo;
 
         if (compileNode === linkNode) {
           attrs = templateAttrs;
@@ -9982,14 +9978,11 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
   }];
 }
 
-  function SimpleChange(previous, current) {
-    this.previousValue = previous;
-    this.currentValue = current;
-  }
-
-  SimpleChange.prototype.isFirstChange = function () {
-    return this.previousValue === _UNINITIALIZED_VALUE;
-  };
+function SimpleChange(previous, current) {
+  this.previousValue = previous;
+  this.currentValue = current;
+}
+SimpleChange.prototype.isFirstChange = function() { return this.previousValue === _UNINITIALIZED_VALUE; };
 
 
 var PREFIX_REGEXP = /^((?:x|data)[\:\-_])/i;
@@ -11647,9 +11640,9 @@ function $HttpProvider() {
         }
 
         $httpBackend(config.method, url, reqData, done, reqHeaders, config.timeout,
-          config.withCredentials, config.responseType,
-          createApplyHandlers(config.eventHandlers),
-          createApplyHandlers(config.uploadEventHandlers));
+            config.withCredentials, config.responseType,
+            createApplyHandlers(config.eventHandlers),
+            createApplyHandlers(config.uploadEventHandlers));
       }
 
       return promise;
@@ -11657,8 +11650,8 @@ function $HttpProvider() {
       function createApplyHandlers(eventHandlers) {
         if (eventHandlers) {
           var applyHandlers = {};
-          forEach(eventHandlers, function (eventHandler, key) {
-            applyHandlers[key] = function (event) {
+          forEach(eventHandlers, function(eventHandler, key) {
+            applyHandlers[key] = function(event) {
               if (useApplyAsync) {
                 $rootScope.$applyAsync(callEventHandler);
               } else if ($rootScope.$$phase) {
@@ -11796,7 +11789,7 @@ function $HttpBackendProvider() {
 
 function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDocument) {
   // TODO(vojta): fix the signature
-  return function (method, url, post, callback, headers, timeout, withCredentials, responseType, eventHandlers, uploadEventHandlers) {
+  return function(method, url, post, callback, headers, timeout, withCredentials, responseType, eventHandlers, uploadEventHandlers) {
     $browser.$$incOutstandingRequestCount();
     url = url || $browser.url();
 
@@ -11856,11 +11849,11 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
       xhr.onerror = requestError;
       xhr.onabort = requestError;
 
-      forEach(eventHandlers, function (value, key) {
-        xhr.addEventListener(key, value);
+      forEach(eventHandlers, function(value, key) {
+          xhr.addEventListener(key, value);
       });
 
-      forEach(uploadEventHandlers, function (value, key) {
+      forEach(uploadEventHandlers, function(value, key) {
         xhr.upload.addEventListener(key, value);
       });
 
@@ -12611,9 +12604,9 @@ function parseAppUrl(relativeUrl, locationObj) {
   }
 }
 
-  function startsWith(haystack, needle) {
-    return haystack.lastIndexOf(needle, 0) === 0;
-  }
+function startsWith(haystack, needle) {
+  return haystack.lastIndexOf(needle, 0) === 0;
+}
 
 /**
  *
@@ -12895,7 +12888,7 @@ var locationPrototype = {
    * Ensure absolute url is initialized.
    * @private
    */
-  $$absUrl: '',
+  $$absUrl:'',
 
   /**
    * Are we in html5 mode?
@@ -13919,36 +13912,36 @@ Lexer.prototype = {
             ch === '\n' || ch === '\v' || ch === '\u00A0');
   },
 
-  isIdentifierStart: function (ch) {
+  isIdentifierStart: function(ch) {
     return this.options.isIdentifierStart ?
-      this.options.isIdentifierStart(ch, this.codePointAt(ch)) :
-      this.isValidIdentifierStart(ch);
+        this.options.isIdentifierStart(ch, this.codePointAt(ch)) :
+        this.isValidIdentifierStart(ch);
   },
 
-  isValidIdentifierStart: function (ch) {
+  isValidIdentifierStart: function(ch) {
     return ('a' <= ch && ch <= 'z' ||
             'A' <= ch && ch <= 'Z' ||
             '_' === ch || ch === '$');
   },
 
-  isIdentifierContinue: function (ch) {
+  isIdentifierContinue: function(ch) {
     return this.options.isIdentifierContinue ?
-      this.options.isIdentifierContinue(ch, this.codePointAt(ch)) :
-      this.isValidIdentifierContinue(ch);
+        this.options.isIdentifierContinue(ch, this.codePointAt(ch)) :
+        this.isValidIdentifierContinue(ch);
   },
 
-  isValidIdentifierContinue: function (ch, cp) {
+  isValidIdentifierContinue: function(ch, cp) {
     return this.isValidIdentifierStart(ch, cp) || this.isNumber(ch);
   },
 
-  codePointAt: function (ch) {
+  codePointAt: function(ch) {
     if (ch.length === 1) return ch.charCodeAt(0);
     /*jshint bitwise: false*/
     return (ch.charCodeAt(0) << 10) + ch.charCodeAt(1) - 0x35FDC00;
     /*jshint bitwise: true*/
   },
 
-  peekMultichar: function () {
+  peekMultichar: function() {
     var ch = this.text.charAt(this.index);
     var peek = this.peek();
     if (!peek) {
@@ -14884,26 +14877,26 @@ ASTCompiler.prototype = {
       if (computed) {
         intoId = intoId || this.nextId();
         this.assign(intoId, '{}');
-        forEach(ast.properties, function (property) {
+        forEach(ast.properties, function(property) {
           if (property.computed) {
             left = self.nextId();
             self.recurse(property.key, left);
           } else {
             left = property.key.type === AST.Identifier ?
-              property.key.name :
-              ('' + property.key.value);
+                       property.key.name :
+                       ('' + property.key.value);
           }
           right = self.nextId();
           self.recurse(property.value, right);
           self.assign(self.member(intoId, left, property.computed), right);
         });
       } else {
-        forEach(ast.properties, function (property) {
-          self.recurse(property.value, ast.constant ? undefined : self.nextId(), undefined, function (expr) {
+        forEach(ast.properties, function(property) {
+          self.recurse(property.value, ast.constant ? undefined : self.nextId(), undefined, function(expr) {
             args.push(self.escape(
                 property.key.type === AST.Identifier ? property.key.name :
                   ('' + property.key.value)) +
-              ':' + expr);
+                ':' + expr);
           });
         });
         expression = '{' + args.join(',') + '}';
@@ -14990,7 +14983,7 @@ ASTCompiler.prototype = {
     if (SAFE_IDENTIFIER.test(right)) {
       return left + '.' + right;
     } else {
-      return left + '["' + right.replace(UNSAFE_CHARACTERS, this.stringEscapeFn) + '"]';
+      return left  + '["' + right.replace(UNSAFE_CHARACTERS, this.stringEscapeFn) + '"]';
     }
   },
 
@@ -15236,18 +15229,16 @@ ASTInterpreter.prototype = {
       args = [];
       forEach(ast.properties, function(property) {
         if (property.computed) {
-          args.push({
-            key: self.recurse(property.key),
-            computed: true,
-            value: self.recurse(property.value)
+          args.push({key: self.recurse(property.key),
+                     computed: true,
+                     value: self.recurse(property.value)
           });
         } else {
-          args.push({
-            key: property.key.type === AST.Identifier ?
-              property.key.name :
-              ('' + property.key.value),
-            computed: false,
-            value: self.recurse(property.value)
+          args.push({key: property.key.type === AST.Identifier ?
+                          property.key.name :
+                          ('' + property.key.value),
+                     computed: false,
+                     value: self.recurse(property.value)
           });
         }
       });
@@ -15585,30 +15576,30 @@ function $ParseProvider() {
     literals[literalName] = literalValue;
   };
 
-  /**
-   * @ngdoc method
-   * @name $parseProvider#setIdentifierFns
-   * @description
-   *
-   * Allows defining the set of characters that are allowed in Angular expressions. The function
-   * `identifierStart` will get called to know if a given character is a valid character to be the
-   * first character for an identifier. The function `identifierContinue` will get called to know if
-   * a given character is a valid character to be a follow-up identifier character. The functions
-   * `identifierStart` and `identifierContinue` will receive as arguments the single character to be
-   * identifier and the character code point. These arguments will be `string` and `numeric`. Keep in
-   * mind that the `string` parameter can be two characters long depending on the character
-   * representation. It is expected for the function to return `true` or `false`, whether that
-   * character is allowed or not.
-   *
-   * Since this function will be called extensivelly, keep the implementation of these functions fast,
-   * as the performance of these functions have a direct impact on the expressions parsing speed.
-   *
-   * @param {function=} identifierStart The function that will decide whether the given character is
-   *   a valid identifier start character.
-   * @param {function=} identifierContinue The function that will decide whether the given character is
-   *   a valid identifier continue character.
-   */
-  this.setIdentifierFns = function (identifierStart, identifierContinue) {
+ /**
+  * @ngdoc method
+  * @name $parseProvider#setIdentifierFns
+  * @description
+  *
+  * Allows defining the set of characters that are allowed in Angular expressions. The function
+  * `identifierStart` will get called to know if a given character is a valid character to be the
+  * first character for an identifier. The function `identifierContinue` will get called to know if
+  * a given character is a valid character to be a follow-up identifier character. The functions
+  * `identifierStart` and `identifierContinue` will receive as arguments the single character to be
+  * identifier and the character code point. These arguments will be `string` and `numeric`. Keep in
+  * mind that the `string` parameter can be two characters long depending on the character
+  * representation. It is expected for the function to return `true` or `false`, whether that
+  * character is allowed or not.
+  *
+  * Since this function will be called extensivelly, keep the implementation of these functions fast,
+  * as the performance of these functions have a direct impact on the expressions parsing speed.
+  *
+  * @param {function=} identifierStart The function that will decide whether the given character is
+  *   a valid identifier start character.
+  * @param {function=} identifierContinue The function that will decide whether the given character is
+  *   a valid identifier continue character.
+  */
+  this.setIdentifierFns = function(identifierStart, identifierContinue) {
     identStart = identifierStart;
     identContinue = identifierContinue;
     return this;
@@ -15619,9 +15610,9 @@ function $ParseProvider() {
     var $parseOptions = {
           csp: noUnsafeEval,
           expensiveChecks: false,
-        literals: copy(literals),
-        isIdentifierStart: isFunction(identStart) && identStart,
-        isIdentifierContinue: isFunction(identContinue) && identContinue
+          literals: copy(literals),
+          isIdentifierStart: isFunction(identStart) && identStart,
+          isIdentifierContinue: isFunction(identContinue) && identContinue
         },
         $parseOptionsExpensive = {
           csp: noUnsafeEval,
@@ -17803,7 +17794,7 @@ function $RootScopeProvider() {
     var postDigestQueue = $rootScope.$$postDigestQueue = [];
     var applyAsyncQueue = $rootScope.$$applyAsyncQueue = [];
 
-        var postDigestQueuePosition = 0;
+    var postDigestQueuePosition = 0;
 
     return $rootScope;
 
@@ -19431,7 +19422,7 @@ function $TimeoutProvider() {
 // doesn't know about mocked locations and resolves URLs to the real document - which is
 // exactly the behavior needed here.  There is little value is mocking these out for this
 // service.
-  var urlParsingNode = window.document.createElement("a");
+var urlParsingNode = window.document.createElement("a");
 var originUrl = urlResolve(window.location.href);
 
 
@@ -20875,11 +20866,11 @@ function limitToFilter() {
   };
 }
 
-  function sliceFn(input, begin, end) {
-    if (isString(input)) return input.slice(begin, end);
+function sliceFn(input, begin, end) {
+  if (isString(input)) return input.slice(begin, end);
 
-    return slice.call(input, begin, end);
-  }
+  return slice.call(input, begin, end);
+}
 
 /**
  * @ngdoc filter
@@ -21005,10 +20996,10 @@ function limitToFilter() {
  * age in descending order (expression is set to `'-age'`). The `comparator` is not set, which means
  * it defaults to the built-in comparator.
  *
- <example name="orderBy-static" module="orderByExample1">
+   <example name="orderBy-static" module="orderByExample1">
      <file name="index.html">
        <div ng-controller="ExampleController">
- <table class="friends">
+         <table class="friends">
            <tr>
              <th>Name</th>
              <th>Phone Number</th>
@@ -21023,7 +21014,7 @@ function limitToFilter() {
        </div>
      </file>
      <file name="script.js">
- angular.module('orderByExample1', [])
+       angular.module('orderByExample1', [])
          .controller('ExampleController', ['$scope', function($scope) {
            $scope.friends = [
              {name: 'John',   phone: '555-1212',  age: 10},
@@ -21034,34 +21025,34 @@ function limitToFilter() {
            ];
          }]);
      </file>
- <file name="style.css">
- .friends {
+     <file name="style.css">
+       .friends {
          border-collapse: collapse;
        }
 
- .friends th {
+       .friends th {
          border-bottom: 1px solid;
        }
- .friends td, .friends th {
+       .friends td, .friends th {
          border-left: 1px solid;
          padding: 5px 10px;
        }
- .friends td:first-child, .friends th:first-child {
+       .friends td:first-child, .friends th:first-child {
          border-left: none;
        }
- </file>
- <file name="protractor.js" type="protractor">
- // Element locators
- var names = element.all(by.repeater('friends').column('friend.name'));
+     </file>
+     <file name="protractor.js" type="protractor">
+       // Element locators
+       var names = element.all(by.repeater('friends').column('friend.name'));
 
- it('should sort friends by age in reverse order', function() {
+       it('should sort friends by age in reverse order', function() {
          expect(names.get(0).getText()).toBe('Adam');
          expect(names.get(1).getText()).toBe('Julie');
          expect(names.get(2).getText()).toBe('Mike');
          expect(names.get(3).getText()).toBe('Mary');
          expect(names.get(4).getText()).toBe('John');
        });
- </file>
+     </file>
    </example>
  * <hr />
  *
@@ -21071,29 +21062,29 @@ function limitToFilter() {
  * All parameters can be changed dynamically. The next example shows how you can make the columns of
  * a table sortable, by binding the `expression` and `reverse` parameters to scope properties.
  *
- <example name="orderBy-dynamic" module="orderByExample2">
+   <example name="orderBy-dynamic" module="orderByExample2">
      <file name="index.html">
        <div ng-controller="ExampleController">
- <pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre>
+         <pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre>
          <hr/>
- <button ng-click="propertyName = null; reverse = false">Set to unsorted</button>
- <hr/>
- <table class="friends">
+         <button ng-click="propertyName = null; reverse = false">Set to unsorted</button>
+         <hr/>
+         <table class="friends">
            <tr>
- <th>
- <button ng-click="sortBy('name')">Name</button>
- <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
- </th>
- <th>
- <button ng-click="sortBy('phone')">Phone Number</button>
- <span class="sortorder" ng-show="propertyName === 'phone'" ng-class="{reverse: reverse}"></span>
- </th>
- <th>
- <button ng-click="sortBy('age')">Age</button>
- <span class="sortorder" ng-show="propertyName === 'age'" ng-class="{reverse: reverse}"></span>
- </th>
+             <th>
+               <button ng-click="sortBy('name')">Name</button>
+               <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+             </th>
+             <th>
+               <button ng-click="sortBy('phone')">Phone Number</button>
+               <span class="sortorder" ng-show="propertyName === 'phone'" ng-class="{reverse: reverse}"></span>
+             </th>
+             <th>
+               <button ng-click="sortBy('age')">Age</button>
+               <span class="sortorder" ng-show="propertyName === 'age'" ng-class="{reverse: reverse}"></span>
+             </th>
            </tr>
- <tr ng-repeat="friend in friends | orderBy:propertyName:reverse">
+           <tr ng-repeat="friend in friends | orderBy:propertyName:reverse">
              <td>{{friend.name}}</td>
              <td>{{friend.phone}}</td>
              <td>{{friend.age}}</td>
@@ -21102,7 +21093,7 @@ function limitToFilter() {
        </div>
      </file>
      <file name="script.js">
- angular.module('orderByExample2', [])
+       angular.module('orderByExample2', [])
          .controller('ExampleController', ['$scope', function($scope) {
            var friends = [
              {name: 'John',   phone: '555-1212',  age: 10},
@@ -21121,20 +21112,20 @@ function limitToFilter() {
              $scope.propertyName = propertyName;
            };
          }]);
- </file>
+     </file>
      <file name="style.css">
- .friends {
+       .friends {
          border-collapse: collapse;
        }
 
- .friends th {
+       .friends th {
          border-bottom: 1px solid;
        }
- .friends td, .friends th {
+       .friends td, .friends th {
          border-left: 1px solid;
          padding: 5px 10px;
        }
- .friends td:first-child, .friends th:first-child {
+       .friends td:first-child, .friends th:first-child {
          border-left: none;
        }
 
@@ -21145,16 +21136,16 @@ function limitToFilter() {
          content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
        }
      </file>
- <file name="protractor.js" type="protractor">
- // Element locators
- var unsortButton = element(by.partialButtonText('unsorted'));
- var nameHeader = element(by.partialButtonText('Name'));
- var phoneHeader = element(by.partialButtonText('Phone'));
- var ageHeader = element(by.partialButtonText('Age'));
- var firstName = element(by.repeater('friends').column('friend.name').row(0));
- var lastName = element(by.repeater('friends').column('friend.name').row(4));
+     <file name="protractor.js" type="protractor">
+       // Element locators
+       var unsortButton = element(by.partialButtonText('unsorted'));
+       var nameHeader = element(by.partialButtonText('Name'));
+       var phoneHeader = element(by.partialButtonText('Phone'));
+       var ageHeader = element(by.partialButtonText('Age'));
+       var firstName = element(by.repeater('friends').column('friend.name').row(0));
+       var lastName = element(by.repeater('friends').column('friend.name').row(4));
 
- it('should sort friends by some property, when clicking on the column header', function() {
+       it('should sort friends by some property, when clicking on the column header', function() {
          expect(firstName.getText()).toBe('Adam');
          expect(lastName.getText()).toBe('John');
 
@@ -21171,7 +21162,7 @@ function limitToFilter() {
          expect(lastName.getText()).toBe('Adam');
        });
 
- it('should sort friends in reverse order, when clicking on the same column', function() {
+       it('should sort friends in reverse order, when clicking on the same column', function() {
          expect(firstName.getText()).toBe('Adam');
          expect(lastName.getText()).toBe('John');
 
@@ -21184,7 +21175,7 @@ function limitToFilter() {
          expect(lastName.getText()).toBe('John');
        });
 
- it('should restore the original order, when clicking "Set to unsorted"', function() {
+       it('should restore the original order, when clicking "Set to unsorted"', function() {
          expect(firstName.getText()).toBe('Adam');
          expect(lastName.getText()).toBe('John');
 
@@ -21192,7 +21183,7 @@ function limitToFilter() {
          expect(firstName.getText()).toBe('John');
          expect(lastName.getText()).toBe('Julie');
        });
- </file>
+     </file>
    </example>
  * <hr />
  *
@@ -21203,39 +21194,39 @@ function limitToFilter() {
  * calling it with the desired parameters. (Alternatively, you could inject the `$filter` factory
  * and retrieve the `orderBy` filter with `$filter('orderBy')`.)
  *
- <example name="orderBy-call-manually" module="orderByExample3">
- <file name="index.html">
- <div ng-controller="ExampleController">
- <pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre>
- <hr/>
- <button ng-click="sortBy(null)">Set to unsorted</button>
- <hr/>
- <table class="friends">
- <tr>
- <th>
- <button ng-click="sortBy('name')">Name</button>
- <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
- </th>
- <th>
- <button ng-click="sortBy('phone')">Phone Number</button>
- <span class="sortorder" ng-show="propertyName === 'phone'" ng-class="{reverse: reverse}"></span>
- </th>
- <th>
- <button ng-click="sortBy('age')">Age</button>
- <span class="sortorder" ng-show="propertyName === 'age'" ng-class="{reverse: reverse}"></span>
- </th>
- </tr>
- <tr ng-repeat="friend in friends">
- <td>{{friend.name}}</td>
- <td>{{friend.phone}}</td>
- <td>{{friend.age}}</td>
- </tr>
- </table>
- </div>
- </file>
- <file name="script.js">
- angular.module('orderByExample3', [])
- .controller('ExampleController', ['$scope', 'orderByFilter', function($scope, orderBy) {
+   <example name="orderBy-call-manually" module="orderByExample3">
+     <file name="index.html">
+       <div ng-controller="ExampleController">
+         <pre>Sort by = {{propertyName}}; reverse = {{reverse}}</pre>
+         <hr/>
+         <button ng-click="sortBy(null)">Set to unsorted</button>
+         <hr/>
+         <table class="friends">
+           <tr>
+             <th>
+               <button ng-click="sortBy('name')">Name</button>
+               <span class="sortorder" ng-show="propertyName === 'name'" ng-class="{reverse: reverse}"></span>
+             </th>
+             <th>
+               <button ng-click="sortBy('phone')">Phone Number</button>
+               <span class="sortorder" ng-show="propertyName === 'phone'" ng-class="{reverse: reverse}"></span>
+             </th>
+             <th>
+               <button ng-click="sortBy('age')">Age</button>
+               <span class="sortorder" ng-show="propertyName === 'age'" ng-class="{reverse: reverse}"></span>
+             </th>
+           </tr>
+           <tr ng-repeat="friend in friends">
+             <td>{{friend.name}}</td>
+             <td>{{friend.phone}}</td>
+             <td>{{friend.age}}</td>
+           </tr>
+         </table>
+       </div>
+     </file>
+     <file name="script.js">
+       angular.module('orderByExample3', [])
+         .controller('ExampleController', ['$scope', 'orderByFilter', function($scope, orderBy) {
            var friends = [
              {name: 'John',   phone: '555-1212',  age: 10},
              {name: 'Mary',   phone: '555-9876',  age: 19},
@@ -21255,20 +21246,20 @@ function limitToFilter() {
              $scope.friends = orderBy(friends, $scope.propertyName, $scope.reverse);
            };
          }]);
- </file>
- <file name="style.css">
- .friends {
+     </file>
+     <file name="style.css">
+       .friends {
          border-collapse: collapse;
        }
 
- .friends th {
+       .friends th {
          border-bottom: 1px solid;
        }
- .friends td, .friends th {
+       .friends td, .friends th {
          border-left: 1px solid;
          padding: 5px 10px;
        }
- .friends td:first-child, .friends th:first-child {
+       .friends td:first-child, .friends th:first-child {
          border-left: none;
        }
 
@@ -21278,17 +21269,17 @@ function limitToFilter() {
        .sortorder.reverse:after {
          content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
        }
- </file>
- <file name="protractor.js" type="protractor">
- // Element locators
- var unsortButton = element(by.partialButtonText('unsorted'));
- var nameHeader = element(by.partialButtonText('Name'));
- var phoneHeader = element(by.partialButtonText('Phone'));
- var ageHeader = element(by.partialButtonText('Age'));
- var firstName = element(by.repeater('friends').column('friend.name').row(0));
- var lastName = element(by.repeater('friends').column('friend.name').row(4));
+     </file>
+     <file name="protractor.js" type="protractor">
+       // Element locators
+       var unsortButton = element(by.partialButtonText('unsorted'));
+       var nameHeader = element(by.partialButtonText('Name'));
+       var phoneHeader = element(by.partialButtonText('Phone'));
+       var ageHeader = element(by.partialButtonText('Age'));
+       var firstName = element(by.repeater('friends').column('friend.name').row(0));
+       var lastName = element(by.repeater('friends').column('friend.name').row(4));
 
- it('should sort friends by some property, when clicking on the column header', function() {
+       it('should sort friends by some property, when clicking on the column header', function() {
          expect(firstName.getText()).toBe('Adam');
          expect(lastName.getText()).toBe('John');
 
@@ -21305,7 +21296,7 @@ function limitToFilter() {
          expect(lastName.getText()).toBe('Adam');
        });
 
- it('should sort friends in reverse order, when clicking on the same column', function() {
+       it('should sort friends in reverse order, when clicking on the same column', function() {
          expect(firstName.getText()).toBe('Adam');
          expect(lastName.getText()).toBe('John');
 
@@ -21318,7 +21309,7 @@ function limitToFilter() {
          expect(lastName.getText()).toBe('John');
        });
 
- it('should restore the original order, when clicking "Set to unsorted"', function() {
+       it('should restore the original order, when clicking "Set to unsorted"', function() {
          expect(firstName.getText()).toBe('Adam');
          expect(lastName.getText()).toBe('John');
 
@@ -21326,8 +21317,8 @@ function limitToFilter() {
          expect(firstName.getText()).toBe('John');
          expect(lastName.getText()).toBe('Julie');
        });
- </file>
- </example>
+     </file>
+   </example>
  * <hr />
  *
  * @example
@@ -21338,40 +21329,40 @@ function limitToFilter() {
  * way. (When specifying a custom comparator, you also need to pass a value for the `reverse`
  * argument - passing `false` retains the default sorting order, i.e. ascending.)
  *
- <example name="orderBy-custom-comparator" module="orderByExample4">
- <file name="index.html">
- <div ng-controller="ExampleController">
- <div class="friends-container custom-comparator">
- <h3>Locale-sensitive Comparator</h3>
- <table class="friends">
- <tr>
- <th>Name</th>
- <th>Favorite Letter</th>
- </tr>
- <tr ng-repeat="friend in friends | orderBy:'favoriteLetter':false:localeSensitiveComparator">
- <td>{{friend.name}}</td>
- <td>{{friend.favoriteLetter}}</td>
- </tr>
- </table>
- </div>
- <div class="friends-container default-comparator">
- <h3>Default Comparator</h3>
- <table class="friends">
- <tr>
- <th>Name</th>
- <th>Favorite Letter</th>
- </tr>
- <tr ng-repeat="friend in friends | orderBy:'favoriteLetter'">
- <td>{{friend.name}}</td>
- <td>{{friend.favoriteLetter}}</td>
- </tr>
- </table>
- </div>
- </div>
- </file>
- <file name="script.js">
- angular.module('orderByExample4', [])
- .controller('ExampleController', ['$scope', function($scope) {
+   <example name="orderBy-custom-comparator" module="orderByExample4">
+     <file name="index.html">
+       <div ng-controller="ExampleController">
+         <div class="friends-container custom-comparator">
+           <h3>Locale-sensitive Comparator</h3>
+           <table class="friends">
+             <tr>
+               <th>Name</th>
+               <th>Favorite Letter</th>
+             </tr>
+             <tr ng-repeat="friend in friends | orderBy:'favoriteLetter':false:localeSensitiveComparator">
+               <td>{{friend.name}}</td>
+               <td>{{friend.favoriteLetter}}</td>
+             </tr>
+           </table>
+         </div>
+         <div class="friends-container default-comparator">
+           <h3>Default Comparator</h3>
+           <table class="friends">
+             <tr>
+               <th>Name</th>
+               <th>Favorite Letter</th>
+             </tr>
+             <tr ng-repeat="friend in friends | orderBy:'favoriteLetter'">
+               <td>{{friend.name}}</td>
+               <td>{{friend.favoriteLetter}}</td>
+             </tr>
+           </table>
+         </div>
+       </div>
+     </file>
+     <file name="script.js">
+       angular.module('orderByExample4', [])
+         .controller('ExampleController', ['$scope', function($scope) {
            $scope.friends = [
              {name: 'John',   favoriteLetter: 'Ä'},
              {name: 'Mary',   favoriteLetter: 'Ü'},
@@ -21390,47 +21381,47 @@ function limitToFilter() {
              return v1.value.localeCompare(v2.value);
            };
          }]);
- </file>
- <file name="style.css">
- .friends-container {
+     </file>
+     <file name="style.css">
+       .friends-container {
          display: inline-block;
          margin: 0 30px;
        }
 
- .friends {
+       .friends {
          border-collapse: collapse;
        }
 
- .friends th {
+       .friends th {
          border-bottom: 1px solid;
        }
- .friends td, .friends th {
+       .friends td, .friends th {
          border-left: 1px solid;
          padding: 5px 10px;
        }
- .friends td:first-child, .friends th:first-child {
+       .friends td:first-child, .friends th:first-child {
          border-left: none;
        }
- </file>
- <file name="protractor.js" type="protractor">
- // Element locators
- var container = element(by.css('.custom-comparator'));
- var names = container.all(by.repeater('friends').column('friend.name'));
+     </file>
+     <file name="protractor.js" type="protractor">
+       // Element locators
+       var container = element(by.css('.custom-comparator'));
+       var names = container.all(by.repeater('friends').column('friend.name'));
 
- it('should sort friends by favorite letter (in correct alphabetical order)', function() {
+       it('should sort friends by favorite letter (in correct alphabetical order)', function() {
          expect(names.get(0).getText()).toBe('John');
          expect(names.get(1).getText()).toBe('Adam');
          expect(names.get(2).getText()).toBe('Mike');
          expect(names.get(3).getText()).toBe('Mary');
          expect(names.get(4).getText()).toBe('Julie');
        });
- </file>
- </example>
+     </file>
+   </example>
  *
  */
 orderByFilter.$inject = ['$parse'];
 function orderByFilter($parse) {
-  return function (array, sortPredicate, reverseOrder, compareFn) {
+  return function(array, sortPredicate, reverseOrder, compareFn) {
 
     if (array == null) return array;
     if (!isArrayLike(array)) {
@@ -21482,7 +21473,7 @@ function orderByFilter($parse) {
   };
 
   function processPredicates(sortPredicates) {
-    return sortPredicates.map(function (predicate) {
+    return sortPredicates.map(function(predicate) {
       var descending = 1, get = identity;
 
       if (isFunction(predicate)) {
@@ -22612,9 +22603,9 @@ var ISO_DATE_REGEXP = /^\d{4,}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+(?:[+-
 //   9. Fragment
 //                 1111111111111111 222   333333    44444        555555555555555555555555    666     77777777     8888888     999
 var URL_REGEXP = /^[a-z][a-z\d.+-]*:\/*(?:[^:@]+(?::[^@]+)?@)?(?:[^\s:/?#]+|\[[a-f\d:]+\])(?::\d+)?(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i;
-  /* jshint maxlen:220 */
-  var EMAIL_REGEXP = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
-  /* jshint maxlen:200 */
+/* jshint maxlen:220 */
+var EMAIL_REGEXP = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+\/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
+/* jshint maxlen:200 */
 var NUMBER_REGEXP = /^\s*(\-|\+)?(\d+|(\d*(\.\d*)))([eE][+-]?\d+)?\s*$/;
 var DATE_REGEXP = /^(\d{4,})-(\d{2})-(\d{2})$/;
 var DATETIMELOCAL_REGEXP = /^(\d{4,})-(\d\d)-(\d\d)T(\d\d):(\d\d)(?::(\d\d)(\.\d{1,3})?)?$/;
@@ -22690,11 +22681,11 @@ var inputType = {
              <span class="error" ng-show="myForm.input.$error.pattern">
                Single word only!</span>
            </div>
-   <code>text = {{example.text}}</code><br/>
-   <code>myForm.input.$valid = {{myForm.input.$valid}}</code><br/>
-   <code>myForm.input.$error = {{myForm.input.$error}}</code><br/>
-   <code>myForm.$valid = {{myForm.$valid}}</code><br/>
-   <code>myForm.$error.required = {{!!myForm.$error.required}}</code><br/>
+           <code>text = {{example.text}}</code><br/>
+           <code>myForm.input.$valid = {{myForm.input.$valid}}</code><br/>
+           <code>myForm.input.$error = {{myForm.input.$error}}</code><br/>
+           <code>myForm.$valid = {{myForm.$valid}}</code><br/>
+           <code>myForm.$error.required = {{!!myForm.$error.required}}</code><br/>
           </form>
         </file>
         <file name="protractor.js" type="protractor">
@@ -24740,7 +24731,7 @@ function classDirective(name, selector) {
         function ngClassWatchAction(newVal) {
           // jshint bitwise: false
           if (selector === true || (scope.$index & 1) === selector) {
-            // jshint bitwise: true
+          // jshint bitwise: true
             var newClasses = arrayClasses(newVal || []);
             if (!oldVal) {
               addClasses(newClasses);
@@ -24750,9 +24741,7 @@ function classDirective(name, selector) {
             }
           }
           if (isArray(newVal)) {
-            oldVal = newVal.map(function (v) {
-              return shallowCopy(v);
-            });
+            oldVal = newVal.map(function(v) { return shallowCopy(v); });
           } else {
             oldVal = shallowCopy(newVal);
           }
@@ -28385,7 +28374,7 @@ var NG_OPTIONS_REGEXP = /^\s*([\s\S]+?)(?:\s+as\s+([\s\S]+?))?(?:\s+group\s+by\s
 // jshint maxlen: 100
 
 
-  var ngOptionsDirective = ['$compile', '$document', '$parse', function ($compile, $document, $parse) {
+var ngOptionsDirective = ['$compile', '$document', '$parse', function($compile, $document, $parse) {
 
   function parseOptionsExpression(optionsExp, selectElement, scope) {
 
@@ -28546,7 +28535,7 @@ var NG_OPTIONS_REGEXP = /^\s*([\s\S]+?)(?:\s+as\s+([\s\S]+?))?(?:\s+group\s+by\s
 
   // we can't just jqLite('<option>') since jqLite is not smart enough
   // to create it in <select> and IE barfs otherwise.
-    var optionTemplate = window.document.createElement('option'),
+  var optionTemplate = window.document.createElement('option'),
       optGroupTemplate = window.document.createElement('optgroup');
 
     function ngOptionsPostLink(scope, selectElement, attr, ctrls) {
@@ -30511,7 +30500,7 @@ var SelectController =
   //
   // We can't just jqLite('<option>') since jqLite is not smart enough
   // to create it in <select> and IE barfs otherwise.
-          self.unknownOption = jqLite(window.document.createElement('option'));
+  self.unknownOption = jqLite(window.document.createElement('option'));
   self.renderUnknownOption = function(val) {
     var unknownVal = '? ' + hashKey(val) + ' ?';
     self.unknownOption.val(unknownVal);
@@ -31475,7 +31464,7 @@ $provide.value("$locale", {
 });
 }]);
 
-  jqLite(window.document).ready(function () {
+  jqLite(window.document).ready(function() {
     angularInit(window.document, bootstrap);
   });
 
