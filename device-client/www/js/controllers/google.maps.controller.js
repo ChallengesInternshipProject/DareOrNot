@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic', 'ngCordova'])
+angular.module('starter.controllers')
 
   .controller('GoogleMapCtrl', function ($scope, $state, $cordovaGeolocation, $ionicPopup) {
     var options = {timeout: 10000, enableHighAccuracy: true};

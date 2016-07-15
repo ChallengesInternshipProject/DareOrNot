@@ -1,23 +1,38 @@
+
 <ion-modal-view>
   <ion-content class="padding">
-    <div class="list">
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Email</span>
-        <input type="text" placeholder="Email" ng-model="loginInfo.email">
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Password</span>
-        <input type="password" placeholder="Password" ng-model="loginInfo.password">
-      </label>
+  <div class="log">
+      <section class="list">
+	    <aside class="header">
+     	</aside>
+     
+     <aside class="tem">   
+		<label class="item item-input item-floating-label">
+	      <span class="input-label"><i class="ion-android-mail"></i><h7> Email</h7></span>
+	      <input type="text" ng-model="loginInfo.email">
+        </label></br>
+	    <label class="item item-input item-floating-label">
+	      <span class="input-label"><i class="ion-ios-locked-outline"></i><h7> Password</h7></span>
+	      <input type="password" ng-model="loginInfo.password">
+        </label>
+      </aside>
+    </section>
+    
+    <button class="button button-block button-calm" ng-click="login()">ВХОД</button>
+    <a class="forget" ng-href="" ng-click="callForgetModal()" > Забравена парола ?</a></br>
+ 	<div class="container"><h1 style="color: rgb(255, 255, 255); padding: 10px;">ИЛИ</h1></div>
+<article>  
+    <button class="fa ion-social-facebook button button-block " ng-click="loginWithFacebook()" style="background-color: rgb(47, 123, 189);">
 
-    </div>
-    <button class="button button-block button-calm" ng-click="login()">Вход</button>
-    <a href="" ng-click="callForgottenPasswordModal()">Забравена парола ?</a>
-    <br>
-    Нямате акаунт ? <a ng-href="" ng-click="callRegisterModal()">Регистрирайте се</a>
+	</button>
+	<button class="fa ion-social-twitter button button-block " ng-click="loginWithtwitter()" style="background-color: rgb(0, 191, 243);">
 
-    <button class="button button-block button-calm" ng-click="loginWithFacebook()">Facebook</button>
-
-    <button class="button button-block" ng-click="test()">Test</button>
+	</button>
+	 <button class="fa ion-social-googleplus button button-block " ng-click="loginWithGoogle()" style="background-color: rgb(217, 3, 74);">
+	 </button></article>
+    <div class="regis">
+       <a class="reg" ng-href="" ng-click="callRegisterModal()" > Нямате акаунт ? <span>Регистрирайте се</span></a>
+       </div>
+       </div>
   </ion-content>
 </ion-modal-view>
