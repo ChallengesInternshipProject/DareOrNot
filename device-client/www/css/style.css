@@ -23,140 +23,17 @@
   height: 100%;
 }
 
-
-.padding{
-  position: relative;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 47px;
+form{
+  width: 100vw;
+}
+.button-form-submit{
+  display: none;
+  float:right;
+  width:4vw;
 }
 
-.log{
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  width:100%;
-  height:auto;
-  background-color:#012438;
-  background-image: url(../img/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  background-size: 1242px 2208px;
-}
+.input-form-submit{
+  float:left;
+  width:100vw;
 
-.header {
-  margin-top: 5%;
-  position:relative;
-  width:100%;
-  height:409px;
-  background-image: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: center;
 }
-section, article, {    display: table;
-  content: " ";
-  margin: 10%;
-}
-.tem{
-  width: 50%;
-  position:relative;
-  left: 25%;
-}
-
-label.item {
-  color: rgb(120, 103, 30);
-  border-bottom: 1px solid #808080;
-  border-top: 0;
-  width: 80%;
-  border-left: 0;
-  border-right: 0;}
-label.item-floating-label{display:inline-flex;}
-
-input{
-  padding:8px;
-  display:block;
-  border:none;
-  width:100%;
-  background-color: transparent;
-}
-
-
-span.input-label{color: rgb(120, 103, 30); width:30%;}
-.ion-android-mail, .ion-ios-locked-outline{font-size:32px;}
-i{color:#04a4c3;}
-h7{font-size:40px;}
-
-
-
-button.button.button-calm{
-  background-color: rgb(1, 36, 56);
-  color: rgb(120, 103, 30);
-  width: 45%;
-  padding: 1%;
-  border: none;
-  margin: 3%;
-  font-size: 79px;
-  position: relative;
-  left: 24%;
-}
-.forget{
-  display:block;
-  color:#fff;
-  margin: 3%;
-  position: relative;
-}
-
-h1 {
-  display: inline-block;
-  color: #fff;
-  padding: 10px;
-  position: relative;
-}
-
-h1:before,
-h1:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  width: 500%;
-}
-h1:before {
-  right: 100%;
-}
-h1:after {
-  left: 100%;
-}
-.container {
-  overflow: hidden;
-  text-align: center;
-}
-button.button.fa {
-  width: 10%;
-  height: 200px;
-  display: inline-block;
-  font-size: 150%;
-  text-rendering: auto;
-  border-radius: 50%;
-  border: 0px;
-  color: white;
-  margin-bottom: 3%;
-  margin-top: 3%;
-  position: relative;
-}
-.regis {
-  margin: 5%;
-  height: 101px
-}
-a.reg {color:#fff; margin: 5%;}
-
-/*ion-slide-box {*/
-/*height: 100vh !important;*/
-
-/*}*/

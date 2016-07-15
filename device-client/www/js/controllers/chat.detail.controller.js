@@ -5,10 +5,12 @@ angular.module('starter.controllers')
     $scope.messages = [];
     $scope.message = '';
 
-    var from = $localStorage.user;
+    $scope.user = $stateParams.userID;
+    var from = $localStorage.user.email;
     var to = $stateParams.userID;
 
-    $log.info(from + " " + to)
+    $log.info(from + " " + to);
+    
     $http.get('http://localhost:3000/chat/messages/' + from + '/' + to)
       .success(function (response) {
         $scope.messages = response;

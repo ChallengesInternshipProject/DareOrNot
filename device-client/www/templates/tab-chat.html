@@ -1,33 +1,16 @@
 <ion-view view-title="Public Chat Log" name="login-view">
   <ion-content class="padding">
-    <div class="row">
-      <div class="col-60">
-        <ion-list>
-          <ion-item>
-            <h2>Hello : <strong>{{me}}</strong> Current messages in chat : </h2>
-          </ion-item>
-          <ion-item ng-repeat="msg in messages track by $index">
-            from : <strong>{{msg.sender}}</strong> </br>
-            to : <strong>{{msg.reciever}}</strong>
-            <div ng-class="{'strike': theItem, left : right}">
-              {{msg.message}}
-            </div>
-          </ion-item>
-        </ion-list>
-      </div>
-      <div class="col">
-        <!--users online here-->
-        <ion-list>
+    <!--users online here-->
+    <ion-list>
 
-          <ion-item>
-            <h2>Users :</h2>
-          </ion-item>
-          <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.email}}">
-            {{user.email}}
-          </ion-item>
-        </ion-list>
-      </div>
-    </div>
+      <ion-item>
+        <h2>Users :</h2>
+      </ion-item>
+      <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.email}}">
+        {{user.email}}
+      </ion-item>
+    </ion-list>
+
     <ion-refresher
       pulling-text="Pull to clear !"
       on-refresh="clearAllMessages()">

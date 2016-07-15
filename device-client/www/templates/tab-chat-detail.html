@@ -1,4 +1,4 @@
-<ion-view view-title="Chat Detail">
+<ion-view view-title="Chatting with {{user}}">
   <ion-content>
     <h2>{{user.socketID}}</h2>
     <ion-list>
@@ -12,14 +12,16 @@
 
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
-    <label class="item-input-wrapper">
-      <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"
-             ng-model="message" on-focus="inputUp()" on-blur="inputDown()"/>
-    </label>
+    <form>
+      <label class="item-input-wrapper input-form-submit">
+        <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"
+               ng-model="message" on-focus="inputUp()" on-blur="inputDown()" ng-submit="emit(message)"/>
+      </label>
 
-    <button ng-model="deleted" class="button button-clear" ng-click="emit(message)">
-      Send
-    </button>
-
+      <!--don't delete the button it is hidden on purpose-->
+      <button ng-model="deleted" class="button button-clear button-form-submit" ng-click="emit(message)">
+        Send
+      </button>
+    </form>
   </ion-footer-bar>
 </ion-view>
