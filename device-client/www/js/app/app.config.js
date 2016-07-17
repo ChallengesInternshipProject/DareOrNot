@@ -209,17 +209,26 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
           }
         }
       }
-    })
-   	.state('tab.friends.all', {
+    })  
+    .state('tab.friends', { 
+      url: '/friends', 
+      views: { 
+          'tab-friends': { 
+          templateUrl: 'templates/tab-friends.html', 
+          abstract: true 
+        } 
+      } 
+    }) 
+   .state('tab.friends.all', {
 		url: '/all',
 		views: {
 			'tab-friends-all': {
 				templateUrl: 'templates/tab-friends-all.html',
 				controller:'UsersCtrl',
 				resolve : {
-					friendsPromise : ['UserService','StorageFactory', function(UserService,StorageFactory){
+					friendsPromise : ['UserService','$localStorage', function(UserService,$localStorage){
 						console.log("resolve")
-						return UserService.getFriends(StorageFactory.get('id'),'Accepted','').then(function(data){return data})
+						return UserService.getFriends($localStorage.user.id,'Accepted','').then(function(data){return data})
 					}]
 				}
 			}
@@ -232,8 +241,8 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				templateUrl: 'templates/tab-friends-active.html',
 				controller:'UsersCtrl',
 				resolve : {
-					friendsPromise : ['UserService','StorageFactory', function(UserService,StorageFactory){
-						return UserService.getFriends(StorageFactory.get('id'),'Accepted','').then(function(data){return data})
+					friendsPromise : ['UserService','$localStorage', function(UserService,$localStorage){
+						return UserService.getFriends($localStorage.user.id,'Accepted','').then(function(data){return data})
 					}]
 				}
 			}

@@ -1,10 +1,10 @@
 angular.module('starter.controllers')
-	.controller('UsersCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT, UserService, StorageFactory) {
+	.controller('UsersCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT, UserService,$localStorage) {
 
 		$scope.doRefresh = function () {
 			GetUsers();
 			//$scope.searchString = "";
-			//$scope.friends = UserService.getFriends(StorageFactory.get('id'),'Accepted',$scope.searchString).then(function(data){return data});
+			//$scope.friends = UserService.getFriends($localStorage.user.id,'Accepted',$scope.searchString).then(function(data){return data});
 		};
 
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS+SERVER_PORT;
@@ -26,7 +26,7 @@ angular.module('starter.controllers')
 		$scope.friends = UserService.friends
 			
 		$scope.searchFriends = function(){
-				$scope.friends = UserService.getFriends(StorageFactory.get('id'),'Accepted',$scope.searchString).then(function(data){return data});
+				$scope.friends = UserService.getFriends($localStorage.user.id,'Accepted',$scope.searchString).then(function(data){return data});
 		}
 		
 	});

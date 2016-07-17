@@ -11,7 +11,7 @@
 				ng-repeat="user in users" 
 				ng-href="#/tab/user/{{user.email}}"
 			>
-				<img src="{{user.picture}}" alt="">
+				<img ng-src="{{user.picture}}" alt="">
 				<h2>{{user.email}}</h2>
 				<p>Sample text here</p>
 			</ion-item>

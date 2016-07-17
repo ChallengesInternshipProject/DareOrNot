@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-	.controller('TimelineCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage, $ionicSlideBoxDelegate,StorageFactory) {
+	.controller('TimelineCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage, $ionicSlideBoxDelegate) {
 
 		$scope.doRefresh = function () {
 			GetTimeline();
@@ -17,7 +17,7 @@ angular.module('starter.controllers')
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			$http.get(SERVER_ADDRESS + ':3000/timeline/'+StorageFactory.get('id')).success(function (result) {
+			$http.get(SERVER_ADDRESS + ':3000/timeline/'+$localStorage.user.id).success(function (result) {
 				$ionicLoading.hide();
 				$scope.challenges = result ;
 				$scope.$broadcast('scroll.refreshComplete');

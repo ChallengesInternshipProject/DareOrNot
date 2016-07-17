@@ -1,7 +1,7 @@
 /* Created by evgeni-tsn on 20-Jun-2016. */
 
 angular.module('starter.controllers')
-  .controller('NewDareCtrl', function ($scope, $http, $log, $ionicLoading, SERVER_ADDRESS, StorageFactory) {
+  .controller('NewDareCtrl', function ($scope, $http, $log, $ionicLoading, SERVER_ADDRESS, $localStorage) {
     $scope.data = {
       name: '',
       description: '!?',
@@ -39,7 +39,7 @@ angular.module('starter.controllers')
           lat: $scope.data.location.lat,
           lng: $scope.data.location.lng,
           choice: $scope.data.choice,
-          _creator: StorageFactory.get('id')
+          _creator: $localStorage.user.id
         }
       }).then(function (response) {
         $log.info(response);
