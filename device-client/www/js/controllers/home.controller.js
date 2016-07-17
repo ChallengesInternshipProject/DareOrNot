@@ -1,8 +1,9 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $state, $stateParams, $timeout, $log, $ionicModal, $localStorage, $sessionStorage, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService, FacebookService) {
+  .controller('HomeCtrl', function ($scope, $rootScope, $state, $stateParams, $timeout, $log, $ionicModal, $localStorage, $sessionStorage, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService, FacebookService) {
 
     $scope.isLogged = false;
+
 
     $scope.test = function () {
 

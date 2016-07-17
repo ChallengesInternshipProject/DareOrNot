@@ -19,12 +19,12 @@ angular.module('starter.controllers')
 
     //TODO REMOVE This functionality !!!
     //TODO device not making get request
-    $http.get('http://localhost:3000/users')
+    $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
       .success(function (users) {
         $log.info(users);
         $log.info('!!!!!!!!!!!1');
         users.forEach(function (user) {
-          if(user !== $localStorage.user){
+          if (user !== $localStorage.user) {
             $scope.onlineUsers.push(user);
           }
         })
@@ -74,12 +74,12 @@ angular.module('starter.controllers')
 
     socket.on('new user', function (user) {
       $scope.onlineUsers = [];
-      $http.get('http://localhost:3000/users')
+      $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
         .success(function (users) {
           $log.info(users);
           $log.info('!!!!!!!!!!!1');
           users.forEach(function (user) {
-            if(user.email !== $localStorage.user.email){
+            if (user.email !== $localStorage.user.email) {
               $scope.onlineUsers.push(user);
             }
           })

@@ -1,12 +1,13 @@
 angular.module('starter.controllers')
 
-  .controller('LoginCtrl', function ($scope, $http, $ionicModal, $ionicLoading, $q, $ionicPopup, $state, $localStorage, $sessionStorage, $log, $ionicSideMenuDelegate, FacebookService, LoginService, StatusFactory) {
+  .controller('LoginCtrl', function ($scope, $http, $ionicModal, $ionicLoading, $q, $ionicPopup, $state, $localStorage, $sessionStorage, $log, $ionicSideMenuDelegate, $interval, $cordovaNetwork, FacebookService, LoginService, StatusFactory) {
     // $scope.modal.show();
     //Object for the facebook register/login popup
+
     $scope.data = {
       password: ''
     };
-    
+
     $scope.toggleLeft = function () {
       $log.info('called');
       $ionicSideMenuDelegate.toggleLeft();

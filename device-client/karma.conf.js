@@ -18,11 +18,10 @@ module.exports = function(config) {
       'www/lib/angular/angular.js',
       'www/lib/angular-resource/angular-resource.js',
       'www/lib/angular-mocks/angular-mocks.js',
-      'tests/src/**/*.js',
+      'www/js/**/*.js',
       'tests/spec/**/*.js'
     ],
-
-
+    
     // list of files to exclude
     exclude: [
     ],
