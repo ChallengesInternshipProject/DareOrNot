@@ -3,7 +3,7 @@ angular.module('starter.services')
     return {
       getUser: function (email) {
         var deferred = $q.defer();
-        $http.get('http://localhost:3000/users/user/' + email)
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/users/user/' + email)
           .success(function (result) {
             console.log(result)
             deferred.resolve(result);
