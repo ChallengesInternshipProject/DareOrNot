@@ -3,7 +3,7 @@ angular.module('starter.controllers')
 	.factory('moment', function ($window) {
 	        return $window.moment;
 	})
-  	.controller('CalendarCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage,$ionicSlideBoxDelegate, StorageFactory) {
+  	.controller('CalendarCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage,$ionicSlideBoxDelegate) {
   		$scope.weekDays = ['Пон','Вт','Срд','Чтв','Пт','Съб','Нед']
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS+':3000/';
   		GetCalendar();
@@ -39,7 +39,7 @@ angular.module('starter.controllers')
 				template: 'Loading...'
 			});
 
-			$http.get(SERVER_ADDRESS + ':3000/calendar/'+StorageFactory.get('id')+'/'+year+'/'+month).success(function (result) {
+			$http.get(SERVER_ADDRESS + ':3000/calendar/'+$localStorage.user.id+'/'+year+'/'+month).success(function (result) {
 				$ionicLoading.hide();
 				$scope.calendar = result ;
 				$scope.weeks=[];

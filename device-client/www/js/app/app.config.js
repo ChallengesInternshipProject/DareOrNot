@@ -210,16 +210,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
         }
       }
     })
-    .state('tab.home', {
-      url: '/home',
-      views: {
-        'tab-home': {
-          templateUrl: 'templates/tab-home.html',
-          controller: 'HomeCtrl'
-        }
-      }
-    });
-	.state('tab.friends.all', {
+   	.state('tab.friends.all', {
 		url: '/all',
 		views: {
 			'tab-friends-all': {
@@ -241,7 +232,6 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				templateUrl: 'templates/tab-friends-active.html',
 				controller:'UsersCtrl',
 				resolve : {
-						console.log("resolve")
 					friendsPromise : ['UserService','StorageFactory', function(UserService,StorageFactory){
 						return UserService.getFriends(StorageFactory.get('id'),'Accepted','').then(function(data){return data})
 					}]
@@ -249,6 +239,16 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			}
 		}
 	})
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html',
+          controller: 'HomeCtrl'
+        }
+      }
+    });
+
 
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/tab/home');

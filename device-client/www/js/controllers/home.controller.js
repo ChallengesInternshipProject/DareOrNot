@@ -79,9 +79,6 @@ angular.module('starter')
           $localStorage.isLogged = true;
           $scope.loginModal.hide();
 
-          for(field in result){
-            StorageFactory.add(field,result[field])
-          }
           //console.log();
           $state.go('tab.users');
         });
