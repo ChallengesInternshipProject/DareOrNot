@@ -25,14 +25,22 @@ router.get('/', function (req, res, next) {
 	});
 });
 
-router.get('/user/:user', function (req, res, next) {
-	// return res.send(req.params)
-	User.findOne({email: req.params.user}, function (err, user) {
-		if (err) {
-			return res.send(err);
-		}
-		return res.json(user);
-	});
+router.get('/:user', function (req, res, next) {
+
+    // return res.send(req.params)
+    User.findOne({email: req.params.user}, function (err, user) {
+        if (err) {
+            return res.send(err);
+        }
+        if(!user){
+            return res.send('User not found !');
+        }
+
+        //remove the pass hash from the response
+        user.password = null;
+
+        return res.json(user);
+    });
 });
 //TODO HIDE USER PASSWORDS
 router.get('/friends/:user/:status', function(req, res, next){

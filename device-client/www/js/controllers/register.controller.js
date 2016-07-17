@@ -21,7 +21,9 @@ angular.module('starter.controllers')
       //Date picker
       var ipObj1 = {
         callback: function (val) {  //Mandatory
-          $scope.data.dateOfBirth = val;
+          $scope.registerInfo.dateOfBirth = val;
+          $log.info(val);
+          // console.log('wtf ?!?!')
           console.log('Return value from the datepicker popup is : ' + val, new Date(val));
         },
         from: new Date(1900, 1, 1), //Optional

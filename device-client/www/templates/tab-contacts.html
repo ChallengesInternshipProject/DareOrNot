@@ -1,0 +1,30 @@
+<ion-view view-title="Contacts View" name="contacts-view">
+  <ion-content class="padding" ng-controller="ContactsCtrl">
+    <ion-list>
+      <p>{{companyLocation}}</p>
+      <p>{{companyPhone}}</p>
+      <p>{{contactFormTitle}}</p>
+    </ion-list>
+    <form name="contactForm" class="contact" novalidate form-manager>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input ng-model="contact.name" name="fieldName" type="text" placeholder="Enter your name" required ng-minlength="2"
+                 ng-maxlength="70">
+        </label>
+        <label class="item item-input">
+          <input ng-model="contact.email" name="fieldEmail" type="email" placeholder="Enter email" required
+                 ng-maxlength="50">
+        </label>
+        <label class="item item-input">
+          <input ng-model="contact.phone" name="fieldPhone" type="text" placeholder="Enter your phone" required
+                 ng-minlength="5" ng-maxlength="15">
+        </label>
+        <label class="item item-input">
+          <textarea ng-model="contact.message" name="fieldMessage" placeholder="Message" rows="5" required ng-minlength="5"
+                    ng-maxlength="250"></textarea>
+        </label>
+        <button ng-click="submit()" class="button button-block button-positive"> Submit </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

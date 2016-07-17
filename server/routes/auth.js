@@ -84,6 +84,43 @@ router.post('/register', function (req, res, next) {
         }
     })
 });
+
+router.post('/changepassword', function (req, res, next) {
+    var data = req.query;
+    User.findOne({email: data.email}, function (err, user) {
+        var comparePasswords = bcrypt.compareSync(data.password, user.password);
+
+        if (comparePasswords) {
+            user.password = bcrypt.hashSync(data.newpassword);
+            user.save(function (err) {
+                if (err) {
+                    return res.send(err)
+                }
+                return res.send('Password changed !');
+            })
+        } else {
+            return res.send('Passwords do not match !')
+        }
+
+    });
+});
+
+router.post('/resetpassword', function (req, res, next) {
+    var data = req.query;
+
+    User.findOne({email: data.email}, function (err, user) {
+        //TODO user exists
+
+        //TODO send email to the user with a link for the password reset page
+
+        //TODO validate the password
+
+        //TODO reset the password
+
+        //TODO Redirect or auto login
+    });
+});
+
 // router.get('/login', function(req, res, next) {
 //   res.send({
 //     id:req.user._id,

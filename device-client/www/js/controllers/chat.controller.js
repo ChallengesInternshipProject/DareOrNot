@@ -72,6 +72,20 @@ angular.module('starter.controllers')
 
     });
 
+    socket.on('new user', function (user) {
+      $scope.onlineUsers = [];
+      $http.get('http://localhost:3000/users')
+        .success(function (users) {
+          $log.info(users);
+          $log.info('!!!!!!!!!!!1');
+          users.forEach(function (user) {
+            if(user.email !== $localStorage.user.email){
+              $scope.onlineUsers.push(user);
+            }
+          })
+        });
+    });
+
     // socket.on('new user', function (user) {
     //   $log.info(user);
     //   $http.get('http://localhost:3000/users')

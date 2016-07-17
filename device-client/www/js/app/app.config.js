@@ -8,15 +8,14 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 	//Check if the user is authenticated
 	function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
 
-		var data = {};
-	
-		if (AuthFactory.isAuthenticated()) {
-			$log.info('not logged :(');
-			return $q.when();
-		} else {
-			// console.log('false')
-			$timeout(function () {
-				// modal.loginModal.show();
+    var data = {};
+    if (AuthFactory.isAuthenticated()) {
+      $log.info('You are 100% logged no scam !');
+      return $q.when();
+    } else {
+      // console.log('false')
+      $timeout(function () {
+        // modal.loginModal.show();
 
 				console.log('not logged');
 				// $state.go('tab.home');
@@ -79,135 +78,147 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 		}
 	})
 
-	.state('tab.users', {
-		url: '/users',
-		views: {
-			'tab-users': {
-				templateUrl: 'templates/tab-users.html',
-				controller: 'UsersCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.user-details', {
-		url: '/user/:userID',
-		views: {
-			'tab-users': {
-				templateUrl: 'templates/tab-user-detail.html',
-				controller: 'UserDetailCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.chat', {
-		url: '/chat',
-		views: {
-			'tab-chat': {
-				templateUrl: 'templates/tab-chat.html',
-				controller: 'ChatCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.chat-details', {
-		url: '/chat/:userID',
-		views: {
-			'tab-chat': {
-				templateUrl: 'templates/tab-chat-detail.html',
-				controller: 'ChatDetailCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.map', {
-		url: '/map',
-		views: {
-			'tab-map': {
-				templateUrl: 'templates/tab-map.html',
-				controller: 'MapCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.gMaps', {
-		url: '/gMaps',
-		views: {
-			'tab-gMaps': {
-				templateUrl: 'templates/tab-gMaps.html',
-				controller: 'GoogleMapCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.dare-list', {
-		url: '/dare-list',
-		views: {
-			'tab-dare-list': {
-				templateUrl: 'templates/tab-dare-list.html',
-				controller: 'DareListCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.new-dare', {
-		url: '/new-dare',
-		views: {
-			'tab-new-dare': {
-				templateUrl: 'templates/tab-new-dare.html',
-				controller: 'NewDareCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.timeline', {
-		url: '/timeline',
-		views: {
-			'tab-timeline': {
-				templateUrl: 'templates/tab-timeline.html',
-				controller: 'TimelineCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.calendar', {
-		url: '/calendar',
-		views: {
-			'tab-calendar': {
-				templateUrl: 'templates/tab-calendar.html',
-				controller: 'CalendarCtrl',
-				resolve: {
-					isAuthenticated: isAuthenticated
-				}
-			}
-		}
-	})
-	.state('tab.friends', {
-		url: '/friends',
-		views: {
-			'tab-friends': {
-				templateUrl: 'templates/tab-friends.html',
-			 	abstract: true
-			}
-		}
-	})
+    .state('tab.users', {
+      url: '/users',
+      views: {
+        'tab-users': {
+          templateUrl: 'templates/tab-users.html',
+          controller: 'UsersCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.user-details', {
+      url: '/user/:userID',
+      views: {
+        'tab-users': {
+          templateUrl: 'templates/tab-user-detail.html',
+          controller: 'UserDetailCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.chat', {
+      url: '/chat',
+      views: {
+        'tab-chat': {
+          templateUrl: 'templates/tab-chat.html',
+          controller: 'ChatCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.chat-details', {
+      url: '/chat/:userID',
+      views: {
+        'tab-chat': {
+          templateUrl: 'templates/tab-chat-detail.html',
+          controller: 'ChatDetailCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    // .state('tab.map', {
+    //   url: '/map',
+    //   views: {
+    //     'tab-map': {
+    //       templateUrl: 'templates/tab-map.html',
+    //       controller: 'MapCtrl',
+    //       resolve: {
+    //         isAuthenticated: isAuthenticated
+    //       }
+    //     }
+    //   }
+    // })
+    .state('tab.gMaps', {
+      url: '/gMaps',
+      views: {
+        'tab-gMaps': {
+          templateUrl: 'templates/tab-gMaps.html',
+          controller: 'GoogleMapCtrl',
+          // resolve: {
+          //   isAuthenticated: isAuthenticated
+          // }
+        }
+      }
+    })
+    .state('tab.contacts', {
+      url: '/contacts',
+      views: {
+        'tab-contacts': {
+          templateUrl: 'templates/tab-contacts.html',
+          controller: 'ContactsCtrl'
+          // resolve: {
+          //   isAuthenticated: isAuthenticated
+          // }
+        }
+      }
+    })
+    .state('tab.dare-list', {
+      url: '/dare-list',
+      views: {
+        'tab-dare-list': {
+          templateUrl: 'templates/tab-dare-list.html',
+          controller: 'DareListCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.new-dare', {
+      url: '/new-dare',
+      views: {
+        'tab-new-dare': {
+          templateUrl: 'templates/tab-new-dare.html',
+          controller: 'NewDareCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.timeline', {
+      url: '/timeline',
+      views: {
+        'tab-timeline': {
+          templateUrl: 'templates/tab-timeline.html',
+          controller: 'TimelineCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.calendar', {
+      url: '/calendar',
+      views: {
+        'tab-calendar': {
+          templateUrl: 'templates/tab-calendar.html',
+          controller: 'CalendarCtrl',
+          resolve: {
+            isAuthenticated: isAuthenticated
+          }
+        }
+      }
+    })
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html',
+          controller: 'HomeCtrl'
+        }
+      }
+    });
 	.state('tab.friends.all', {
 		url: '/all',
 		views: {
@@ -230,23 +241,14 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				templateUrl: 'templates/tab-friends-active.html',
 				controller:'UsersCtrl',
 				resolve : {
-					friendsPromise : ['UserService','StorageFactory', function(UserService,StorageFactory){
 						console.log("resolve")
+					friendsPromise : ['UserService','StorageFactory', function(UserService,StorageFactory){
 						return UserService.getFriends(StorageFactory.get('id'),'Accepted','').then(function(data){return data})
 					}]
 				}
 			}
 		}
 	})
-	.state('tab.home', {
-		url: '/home',
-		views: {
-			'tab-home': {
-				templateUrl: 'templates/tab-home.html',
-				controller: 'HomeCtrl'
-			}
-		}
-	});
 
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/tab/home');

@@ -1,0 +1,23 @@
+<ion-modal-view>
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="Email" ng-model="loginInfo.email">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" ng-model="loginInfo.password">
+      </label>
+
+    </div>
+    <button class="button button-block button-calm" ng-click="login()">Вход</button>
+    <a href="" ng-click="callForgottenPasswordModal()">Забравена парола ?</a>
+    <br>
+    Нямате акаунт ? <a ng-href="" ng-click="callRegisterModal()">Регистрирайте се</a>
+
+    <button class="button button-block button-calm" ng-click="loginWithFacebook()">Facebook</button>
+
+    <button class="button button-block" ng-click="test()">Test</button>
+  </ion-content>
+</ion-modal-view>

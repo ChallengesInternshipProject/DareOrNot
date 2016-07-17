@@ -1,55 +1,54 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function (
-    $scope,
-    $state,
-    $stateParams,
-    $timeout,
-    $log,
-    $ionicModal,
-    $ionicSlideBoxDelegate,
-    ionicDatePicker,
-    StatusFactory,
-    LoginService,
-    AuthFactory,
-    RegisterService,
-    StorageFactory) {
+  .controller('HomeCtrl', function ($scope, $state, $stateParams, $timeout, $log, $ionicModal, $localStorage, $sessionStorage, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService, FacebookService) {
 
     $scope.isLogged = false;
 
+    $scope.test = function () {
+
+      LoginService.checkUserExists('krasimirvelichkov@gmail.com')
+        .then(function (result) {
+          $log.info(result)
+        });
+    };
     $scope.$watch('isLogged', function () {
+      // $log.info('test : ', $localStorage.test)
+      // $log.info('$localStorage isLogged ', $localStorage.isLogged);
       $log.info('isLogged is now ' + $scope.isLogged);
+    });
+
+    //Set the local storage
+    $scope.$storage = $localStorage.$default({
+      user: null,
+      isLogged: false
     });
 
     //Modal for login/register options
     //I think that it is better than tabs
     $scope.registerInfo = {
-      name: '',
-      email: '',
-      password: '',
-      phone: '',
-      address: '',
-      dateOfBirth: '',
-      gender: '',
-      interests: '',
+      name: 'John Cena',
+      email: 'test@test.com',
+      password: '123',
+      phone: '3592414124',
+      address: 'Sofia, John Cena 33',
+      dateOfBirth: Date.now(),
+      gender: 'Male',
+      interests: 'JavaScript, Ionic, AngularJS, MongoDB, ExpressJS',
 
       //TODO implement picture logic
-      picture: ''
+      picture: 'picture link'
     };
 
-    $scope.connectWithFacebook = function () {
-
-
-    };
 
     $scope.loginInfo = {
       email: 'ex3m4@mail.bg',
       password: 'test'
     };
+
     //Date picker
     var ipObj1 = {
       callback: function (val) {  //Mandatory
-        $scope.data.dateOfBirth = val;
+        $scope.registerInfo.dateOfBirth = val;
         console.log('Return value from the datepicker popup is : ' + val, new Date(val));
       },
       from: new Date(1900, 1, 1), //Optional
@@ -65,10 +64,19 @@ angular.module('starter')
       ionicDatePicker.openDatePicker(ipObj1);
     };
 
+    $scope.loginWithFacebook = function () {
+      FacebookService.facebookSignIn();
+      $scope.loginModal.hide();
+      $scope.registerModal.hide();
+    };
+
     $scope.login = function () {
       AuthFactory.loginUser($scope.loginInfo.email, $scope.loginInfo.password)
         .success(function (result) {
-          $scope.isLogged = true;
+          // $log.info(result);
+          // $localStorage.isLogged = true;
+          $localStorage.user = result;
+          $localStorage.isLogged = true;
           $scope.loginModal.hide();
 
           for(field in result){
@@ -130,6 +138,14 @@ angular.module('starter')
       $scope.loginModal = modal;
     });
 
+    $ionicModal.fromTemplateUrl('templates/modals/forgot-password-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up',
+      hardwareBackButtonClose: false
+    }).then(function (modal) {
+      $scope.forgottenPasswordModal = modal;
+    });
+
     $scope.disableSwipe = function () {
       $ionicSlideBoxDelegate.enableSlide(false);
     };
@@ -150,9 +166,13 @@ angular.module('starter')
     $scope.callLoginModal = function () {
       $scope.registerModal.hide();
       $scope.loginModal.show();
-
     };
 
+    $scope.callForgottenPasswordModal = function () {
+      $scope.forgottenPasswordModal.show();
+      $scope.loginModal.hide();
+      $scope.registerModal.hide();
+    };
 
     $scope.goToLogin = function () {
       $state.go('tab.login');
