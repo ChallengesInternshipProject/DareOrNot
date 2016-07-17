@@ -1,12 +1,12 @@
 angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider) {
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
+	// Ionic uses AngularUI Router which uses the concept of states
+	// Learn more here: https://github.com/angular-ui/ui-router
+	// Set up the various states which the app can be in.
+	// Each state's controller can be found in controllers.js
 
 
-  //Check if the user is authenticated
-  function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
+	//Check if the user is authenticated
+	function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
 
     var data = {};
     if (AuthFactory.isAuthenticated()) {
@@ -17,66 +17,66 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       $timeout(function () {
         // modal.loginModal.show();
 
-        console.log('not logged');
-        // $state.go('tab.home');
+				console.log('not logged');
+				// $state.go('tab.home');
 
-        //Refresh the state because $state.go is not working !!! IMPORTANT
-        $state.go($state.current, {}, {reload: true});
-      }, 0);
-      return $q.reject();
-    }
-  }
+				//Refresh the state because $state.go is not working !!! IMPORTANT
+				$state.go($state.current, {}, {reload: true});
+			}, 0);
+			return $q.reject();
+		}
+	}
 
-  var datePickerObj = {
+	var datePickerObj = {
 
 
-    inputDate: new Date(),
-    setLabel: 'Set',
-    todayLabel: 'Today',
-    closeLabel: 'Close',
-    mondayFirst: false,
-    weeksList: ["S", "M", "T", "W", "T", "F", "S"],
-    monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
-    templateType: 'popup',
-    from: new Date(2012, 8, 1),
-    to: new Date(2018, 8, 1),
-    showTodayButton: true,
-    dateFormat: 'dd MMMM yyyy',
-    closeOnSelect: false,
-    disableWeekdays: [6]
-  };
-  ionicDatePickerProvider.configDatePicker(datePickerObj);
+		inputDate: new Date(),
+		setLabel: 'Set',
+		todayLabel: 'Today',
+		closeLabel: 'Close',
+		mondayFirst: false,
+		weeksList: ["S", "M", "T", "W", "T", "F", "S"],
+		monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		templateType: 'popup',
+		from: new Date(2012, 8, 1),
+		to: new Date(2018, 8, 1),
+		showTodayButton: true,
+		dateFormat: 'dd MMMM yyyy',
+		closeOnSelect: false,
+		disableWeekdays: [6]
+	};
+	ionicDatePickerProvider.configDatePicker(datePickerObj);
 
-  $stateProvider
+	$stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: '/tab',
-      abstract: true,
-      templateUrl: 'tabs.html'
-    })
+	// setup an abstract state for the tabs directive
+	.state('tab', {
+		url: '/tab',
+		abstract: true,
+		templateUrl: 'tabs.html'
+	})
 
-    // Each tab has its own nav history stack:
+	// Each tab has its own nav history stack:
 
-    .state('tab.login', {
-      url: '/login',
-      views: {
-        'tab-login': {
-          templateUrl: 'templates/tab-login.html',
-          controller: 'LoginCtrl'
-        }
-      }
-    })
+	.state('tab.login', {
+		url: '/login',
+		views: {
+			'tab-login': {
+				templateUrl: 'templates/tab-login.html',
+				controller: 'LoginCtrl'
+			}
+		}
+	})
 
-    .state('tab.register', {
-      url: '/register',
-      views: {
-        'tab-register': {
-          templateUrl: 'templates/tab-register.html',
-          controller: 'RegisterCtrl'
-        }
-      }
-    })
+	.state('tab.register', {
+		url: '/register',
+		views: {
+			'tab-register': {
+				templateUrl: 'templates/tab-register.html',
+				controller: 'RegisterCtrl'
+			}
+		}
+	})
 
     .state('tab.users', {
       url: '/users',
@@ -209,7 +209,45 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
           }
         }
       }
-    })
+    })  
+    .state('tab.friends', { 
+      url: '/friends', 
+      views: { 
+          'tab-friends': { 
+          templateUrl: 'templates/tab-friends.html', 
+          abstract: true 
+        } 
+      } 
+    }) 
+   .state('tab.friends.all', {
+		url: '/all',
+		views: {
+			'tab-friends-all': {
+				templateUrl: 'templates/tab-friends-all.html',
+				controller:'UsersCtrl',
+				resolve : {
+					friendsPromise : ['UserService','$localStorage', function(UserService,$localStorage){
+						console.log("resolve")
+						return UserService.getFriends($localStorage.user.id,'Accepted','').then(function(data){return data})
+					}]
+				}
+			}
+		}
+	})
+	.state('tab.friends.active', {
+		url: '/active',
+		views: {
+			'tab-friends-active': {
+				templateUrl: 'templates/tab-friends-active.html',
+				controller:'UsersCtrl',
+				resolve : {
+					friendsPromise : ['UserService','$localStorage', function(UserService,$localStorage){
+						return UserService.getFriends($localStorage.user.id,'Accepted','').then(function(data){return data})
+					}]
+				}
+			}
+		}
+	})
     .state('tab.home', {
       url: '/home',
       views: {
@@ -220,7 +258,8 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       }
     });
 
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/home');
+
+	// if none of the above states are matched, use this as the fallback
+	$urlRouterProvider.otherwise('/tab/home');
 
 });

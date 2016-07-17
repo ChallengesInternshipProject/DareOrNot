@@ -125,8 +125,7 @@ router.get("/events/:userID/:year/:month/:day",function(req,res,next){
 	
 	let from= currentDate.format();
 	let to = currentDate.add(1,'d').format();
-	console.log(from)
-	console.log(to)
+
 	Challenge
 	.find({
 		title : {$ne:null},
@@ -134,7 +133,7 @@ router.get("/events/:userID/:year/:month/:day",function(req,res,next){
 				$gt:from,
 				$lt:to
 		}
-			
+
 	})
 	.populate('_creator')
 	.exec(
