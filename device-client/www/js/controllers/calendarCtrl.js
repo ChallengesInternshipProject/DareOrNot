@@ -47,7 +47,7 @@ angular.module('starter.controllers')
 					$scope.weeks.push(i)
 				}
 
-				$scope.$broadcast('scroll.refreshComplete');
+				//$scope.$broadcast('scroll.refreshComplete');
 			});
 		};
 

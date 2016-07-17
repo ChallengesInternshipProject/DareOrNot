@@ -33,17 +33,22 @@ router.get('/:userID', function(req, res, next) {
 	// 	createTestChallenge(req.params.userID,i);
 	// }
 
-	
-	//TODO add pagination 
-	 Challenge
-	 .find()
-	 .populate('_creator')
-	 .exec(
-		function (err, post) {
-			if (err) return next(err);
-			post = CalculateTimes(post);
-			res.json(post);
+	//TODO add pagination and hide the user password from the json !!! possible exploit
+	Challenge
+	.find({
+		startDate :{
+			$lt : new moment().format()
+		},
+		endDate : {
+			$gt : new moment().format()
 		}
-	);
+	})
+	.populate('_creator')
+	.exec(function (err, post) {
+		if (err) return next(err);
+		post = CalculateTimes(post);
+		res.json(post)
+	});
+	
 });
 module.exports = router;

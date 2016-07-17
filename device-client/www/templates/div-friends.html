@@ -1,0 +1,20 @@
+<div class="col">
+	<a  class="item-avatar"  ng-class = "{online : friend.friend.isOnline==true}" ng-href="#/tab/user/{{friend.email}}">
+		<img  ng-src='{{SERVER_ADDRESS}}/{{friend.friend.avatar}}' alt="">
+	</a>	
+</div>
+<div class="col">
+	<h4>{{friend.friend.email}}</h4>
+	<h6>{{friend.friend.town}}, {{friend.friend.country}}</h6>
+</div>
+<div class="col">
+	<!-- TODO clarify the link to the dare -->
+	<a   class="button button-calm  button-small" href="#/tab/new-dare" >
+		Отправи 
+		<br>Предизвикателсто
+	</a>
+</div>
+<div class="col">
+	<!-- TODO clarify the link to the chat -->
+	<a href="#/tab/chat /" class="button button-icon icon ion-ios-chatbubble-outline"></a>
+</div>

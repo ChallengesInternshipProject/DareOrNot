@@ -19,45 +19,36 @@ var bcrypt = require('bcrypt-nodejs');
 // var hash = bcrypt.hashSync("wtf");
 // console.log(hash);
 //END OF TESTING PURPOSES
-
 router.get('/', function (req, res, next) {
-
-    User.find(function (err, users) {
-        var resultUsers=[];
-        users.forEach(function(user, index){
-           
-            User.getFriends(user._id,function(friends){
-                var resultUser= user;
-                resultUser.friends = [];
-                resultUsers.push(resultUser);
-                console.log(resultUsers);
-            })
-            if(index == users.length - 1) {
-                res.json(resultUsers)
-            }
-        });
-
-
-    });
+	User.find(function (err, users) {
+		res.json(users)
+	});
 });
+
 router.get('/user/:user', function (req, res, next) {
-    // return res.send(req.params)
-    User.findOne({email: req.params.user}, function (err, user) {
-        if (err) {
-            return res.send(err);
-        }
-        return res.json(user);
-    });
+	// return res.send(req.params)
+	User.findOne({email: req.params.user}, function (err, user) {
+		if (err) {
+			return res.send(err);
+		}
+		return res.json(user);
+	});
 });
+//TODO HIDE USER PASSWORDS
+router.get('/friends/:user/:status', function(req, res, next){
+	var Status = require("mongoose-friends").Status;
+	
+	searchParams = {
+		"friends.status": Status[req.params.status],
+	};
+	for(var key in req.query){
+		searchParams[key]= new RegExp("^.*"+req.query[key]+".*$",'i');
+	}
 
-router.get('/friends/:user', function(req, res, next){
+	User.getFriends(req.params.user,  searchParams, function(err,friends){
+		return res.json(friends);
+	})
+	
 
-    //var friendStatus = require("mongoose-friends").Status;
-    User.getFriends(req.param('user'), function(err,friends){
-        if(err){
-            return res.json(err);
-        }
-        return res.json(friends)
-    });
 })
 module.exports = router;
