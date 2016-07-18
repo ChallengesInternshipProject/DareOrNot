@@ -1,7 +1,7 @@
 /* Created by evgeni-tsn on 20-Jun-2016. */
 
 angular.module('starter.controllers')
-  .controller('NewDareCtrl', function ($scope, $http, $log, $ionicLoading, SERVER_ADDRESS, $localStorage) {
+  .controller('NewDareCtrl', function ($scope, $http, $log, $ionicLoading, $ionicModal, SERVER_ADDRESS, SERVER_PORT, $localStorage, UserService) {
     $scope.data = {
       name: '',
       description: '!?',
@@ -9,19 +9,22 @@ angular.module('starter.controllers')
         lat: 42.662888,
         lng: 23.354051
       }
-    }
+    };
+
     $scope.mapCenter = {
       lat: 42.662888,
       lng: 23.354051,
       zoom: 17
       //42.6628592,23.3540996
     };
+
     $scope.markers = [
       {
         lat: 42.662888,
         lng: 23.354051
       }
     ];
+    
     $scope.choice = [
       {
         lat: 42.662888,
@@ -45,8 +48,20 @@ angular.module('starter.controllers')
         $log.info(response);
       })
     };
-    $scope.$on('leafletDirectiveMap.click', function (event, args) {
-      console.log(args.leafletEvent.latlng);
-      $scope.markers = [args.leafletEvent.latlng];
+
+    $ionicModal.fromTemplateUrl('templates/modals/friends-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function (modal) {
+      $scope.friendsModal = modal;
     });
+
+    $scope.callFriendsModal = function () {
+      UserService.getAllUsers()
+        .then(function (result) {
+          $scope.friends = result;
+        });
+      $scope.friendsModal.show();
+    }
+
   });

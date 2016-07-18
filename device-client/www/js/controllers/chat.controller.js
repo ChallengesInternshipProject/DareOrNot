@@ -19,17 +19,19 @@ angular.module('starter.controllers')
 
     //TODO REMOVE This functionality !!!
     //TODO device not making get request
-    $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
-      .success(function (users) {
-        $log.info(users);
-        $log.info('!!!!!!!!!!!1');
-        users.forEach(function (user) {
-          if (user !== $localStorage.user) {
-            $scope.onlineUsers.push(user);
-          }
-        })
-      });
-
+    function getOnlineUsers() {
+      $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
+        .success(function (users) {
+          users.forEach(function (user) {
+            if (user.email !== $localStorage.user.email) {
+              // $log.info(user._id);
+              $scope.onlineUsers.push(user);
+            }
+          })
+        });
+    }
+    getOnlineUsers();
+    
     //     .success(function (users) {
     $scope.me = $localStorage.user;
 
@@ -56,7 +58,6 @@ angular.module('starter.controllers')
       $log.info(msg + ' CONNECTED !');
     });
 
-
     socket.on('message', function (msg) {
       $log.info(msg);
       $scope.messages.push({
@@ -74,16 +75,7 @@ angular.module('starter.controllers')
 
     socket.on('new user', function (user) {
       $scope.onlineUsers = [];
-      $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
-        .success(function (users) {
-          $log.info(users);
-          $log.info('!!!!!!!!!!!1');
-          users.forEach(function (user) {
-            if (user.email !== $localStorage.user.email) {
-              $scope.onlineUsers.push(user);
-            }
-          })
-        });
+      getOnlineUsers();
     });
 
     // socket.on('new user', function (user) {
