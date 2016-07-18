@@ -42,8 +42,8 @@ angular.module('starter')
 
 
     $scope.loginInfo = {
-      email: 'test@test.com',
-      password: '123'
+      email: 'ex3m4@mail.bg',
+      password: 'test'
     };
 
     //Date picker
@@ -79,6 +79,8 @@ angular.module('starter')
           $localStorage.user = result;
           $localStorage.isLogged = true;
           $scope.loginModal.hide();
+
+          //console.log();
           $state.go('tab.users');
         });
     };

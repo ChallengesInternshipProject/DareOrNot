@@ -18,7 +18,7 @@ angular.module('starter.controllers')
 		$scope.doRefresh = function () {
 			GetCalendar();
 		};
-		
+
 		$scope.changeDate=function(year,month){
 			GetCalendar(year,month)
 			$scope.challenges = [];
@@ -34,12 +34,12 @@ angular.module('starter.controllers')
 		function GetCalendar(year,month) {
 			if (year == undefined) year = new moment().format('YYYY');
 			if (month == undefined) month = new moment().format('M');
-			
+
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			
-			$http.get(SERVER_ADDRESS + ':3000/calendar/'+$localStorage.id+'/'+year+'/'+month).success(function (result) {
+
+			$http.get(SERVER_ADDRESS + ':3000/calendar/'+$localStorage.user.id+'/'+year+'/'+month).success(function (result) {
 				$ionicLoading.hide();
 				$scope.calendar = result ;
 				$scope.weeks=[];
@@ -47,7 +47,7 @@ angular.module('starter.controllers')
 					$scope.weeks.push(i)
 				}
 
-				$scope.$broadcast('scroll.refreshComplete');
+				//$scope.$broadcast('scroll.refreshComplete');
 			});
 		};
 
@@ -59,7 +59,7 @@ angular.module('starter.controllers')
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			
+
 			$http.get(SERVER_ADDRESS + ':3000/calendar/events/'+$localStorage.id+'/'+year+'/'+month+'/'+day).success(function (result) {
 				$ionicLoading.hide();
 				$scope.challenges=result;

@@ -39,8 +39,10 @@ router.get('/login', function (req, res, next) {
 
     // res.json(req.param('test'));
 });
-
-router.get('/register', function (req, res, next) {
+router.get('/register', function(req, res, next){
+    res.render('register');
+})
+router.post('/register', function (req, res, next) {
 
     // var email = req.param('email');
     // var password = req.param('password');

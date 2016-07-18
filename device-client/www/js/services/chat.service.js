@@ -23,7 +23,7 @@ angular.module('starter.services')
         socket.emit('clear', 'clear the messages');
       },
       switchRoom: function (roomID, socket) {
-        $log.info('Switched to room ' + roomID)
+        $log.info('Switched to room ' + roomID);
       }
     }
   });

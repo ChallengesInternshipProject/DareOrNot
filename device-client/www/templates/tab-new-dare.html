@@ -1,20 +1,22 @@
 <ion-view view-title="Create New Dare" name="new-dare-view">
   <ion-content padding="true">
-    <style>
-      .item-content {
-        background-color: skyblue !important;
-      }
 
-      .ng-valid-parse {
-        background-color: black !important;
-      }
+    <!--Commenting the css because it bugs the other pages-->
+    <!--<style>-->
+      <!--.item-content {-->
+        <!--background-color: skyblue !important;-->
+      <!--}-->
 
-      .center {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
-    </style>
+      <!--.ng-valid-parse {-->
+        <!--background-color: black !important;-->
+      <!--}-->
+
+      <!--.center {-->
+        <!--margin-left: auto;-->
+        <!--margin-right: auto;-->
+        <!--display: block;-->
+      <!--}-->
+    <!--</style>-->
     <div class="list">
 
       <label class="item item-input">
@@ -32,7 +34,7 @@
       <label class=" item item-input">
         <input type="text" placeholder="Lng" ng-model="markers[0].lng">
       </label>
-      <leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>
+      <!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>-->
 
       <h3>Choose Category</h3>
 
@@ -72,7 +74,7 @@
       </label>
       <h3>Image</h3>
       <div class="list">
-        <img class="center" src="../img/adam.jpg" width="25%">
+        <!--<img class="center" src="../img/adam.jpg" width="25%">-->
       </div>
       <div class="row responsive-sm">
         <button class="button button-positive col privacy">
@@ -94,6 +96,8 @@
           TW
         </button>
       </div>
+      <button class="button button-block" ng-click="callFriendsModal()">Invite</button>
+
       <button class="button button-block button-balanced" ng-click="submitDare()">Create</button>
     </div>
   </ion-content>

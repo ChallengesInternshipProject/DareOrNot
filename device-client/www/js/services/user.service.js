@@ -13,6 +13,33 @@ angular.module('starter.services')
           });
 
         return deferred.promise;
+      },
+      getAllUsers: function () {
+        var deferred = $q.defer();
+
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
+          .success(function (result) {
+            deferred.resolve(result);
+          });
+
+        return deferred.promise;
+      },
+      getFriends: function (userID, status, searchString) {
+
+        var urlPath = 'http://localhost:3000/users/friends/' + userID + '/' + status;
+        var config = {
+          method: "GET",
+          url: urlPath,
+          params: {
+            email: searchString,
+          }
+        };
+        return $http(config)
+          .success(function (data) {
+            console.log(data)
+            angular.copy(data, user.friends);
+            console.log(user)
+          })
       }
     }
   });
