@@ -19,6 +19,22 @@
     <!--</style>-->
     <div class="list">
 
+      <!--Friends Slider-->
+      <ion-slide-box on-slide-changed="slideHasChanged($index)">
+        <ion-slide>
+          <div class="box blue"><h1>BLUE</h1></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box yellow"><h1>YELLOW</h1></div>
+        </ion-slide>
+        <ion-slide>
+          <div class="box pink"><h1>PINK</h1></div>
+        </ion-slide>
+      </ion-slide-box>
+
+      <!--add friends button-->
+      <button class="button button-block" ng-click="callFriendsModal()">Invite Friends</button>
+
       <label class="item item-input">
         <input type="text" placeholder="Dare Name" ng-model="data.name">
       </label>
@@ -96,7 +112,9 @@
           TW
         </button>
       </div>
-      <button class="button button-block" ng-click="callFriendsModal()">Invite</button>
+
+
+
 
       <button class="button button-block button-balanced" ng-click="submitDare()">Create</button>
     </div>

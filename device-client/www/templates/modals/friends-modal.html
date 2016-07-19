@@ -1,8 +1,21 @@
 <ion-modal-view>
   <ion-content>
-    <h1>Invite friend</h1>
-    <ion-checkbox ng-repeat="friend in friends" ng-model="friend.isChecked">{{friend.email}} Checked : {{friend.isChecked}}
-    </ion-checkbox>
+    <h1>Invite friends</h1>
+
+
+    <ion-list>
+      <label class="item item-input">
+        <input ng-model="searchFriends" type="text" placeholder="Search">
+
+      </label>
+
+      <ion-checkbox ng-repeat="friend in friends | filter:searchFriends"
+                    ng-model="friend.isChecked"
+                    ng-checked="friend.isChecked">
+        {{friend.email}}
+
+      </ion-checkbox>
+    </ion-list>
 
   </ion-content>
 </ion-modal-view>

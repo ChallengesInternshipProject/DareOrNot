@@ -11,6 +11,14 @@ angular.module('starter.controllers')
       }
     };
 
+    //Friends
+    UserService.getAllUsers()
+      .then(function (result) {
+        $scope.friends = result;
+      });
+    //Array with friends by ID's
+    $scope.friendsForInvite = [];
+
     $scope.mapCenter = {
       lat: 42.662888,
       lng: 23.354051,
@@ -24,7 +32,7 @@ angular.module('starter.controllers')
         lng: 23.354051
       }
     ];
-    
+
     $scope.choice = [
       {
         lat: 42.662888,
@@ -33,22 +41,33 @@ angular.module('starter.controllers')
     ];
 
     $scope.submitDare = function () {
+
+      // $scope.friendsForInvite = [];
+      //Set the selected friends into the friends array for the post request
+      angular.forEach($scope.friends, function (value, key) {
+        if (value.isChecked) {
+          $scope.friendsForInvite.push({id: value._id, email: value.email});
+        }
+      });
+
       $http({
         method: 'POST',
         url: 'http://localhost:3000/challenges/create',
         data: {
           name: $scope.data.name,
           description: $scope.data.description,
-          lat: $scope.data.location.lat,
-          lng: $scope.data.location.lng,
+          location: $scope.data.location,
           choice: $scope.data.choice,
+          friends: $scope.friendsForInvite,
           _creator: $localStorage.user.id
         }
       }).then(function (response) {
         $log.info(response);
       })
+
     };
 
+    //Load the Add Friends modal
     $ionicModal.fromTemplateUrl('templates/modals/friends-modal.html', {
       scope: $scope,
       animation: 'slide-in-up'
@@ -57,11 +76,8 @@ angular.module('starter.controllers')
     });
 
     $scope.callFriendsModal = function () {
-      UserService.getAllUsers()
-        .then(function (result) {
-          $scope.friends = result;
-        });
       $scope.friendsModal.show();
-    }
+    };
+
 
   });

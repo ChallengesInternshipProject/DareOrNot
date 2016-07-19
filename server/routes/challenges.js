@@ -19,7 +19,8 @@ router.post('/create', function (req, res, next) {
 
     var title = req.param('name');
     var description = req.param('description');
-    
+    var friends = req.param('friends');
+
     var location = {
         lat: req.param('lat'),
         lng: req.param('lng')
@@ -29,8 +30,8 @@ router.post('/create', function (req, res, next) {
         title: title,
         description: description,
         location: location,
-        _creator : req.param('_creator'),
-        
+        _creator: req.param('_creator'),
+        invitedUsers: friends
 
     });
 
@@ -40,5 +41,13 @@ router.post('/create', function (req, res, next) {
     });
 
 });
+
+// router.post('/invite/:from/:to', function (req, res, next) {
+//
+//     var from = req.param('from');
+//     var to = req.param('to');
+//
+//
+// });
 
 module.exports = router;
