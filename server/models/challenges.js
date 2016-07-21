@@ -8,7 +8,7 @@ var challengeSchema = new Schema({
     description: String,
     location: {
         lat: Number,
-        lon: Number
+        lng: Number
     },
     //The price can be Zer0
     price: {
