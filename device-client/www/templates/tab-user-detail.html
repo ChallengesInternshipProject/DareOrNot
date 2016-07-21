@@ -1,9 +1,14 @@
 <ion-view view-title="User Details" name="user-detail-view">
   <ion-content>
     <!--{{user}}-->
-    <img ng-src="{{user.picture}}" alt="">
+
+    <!--TODO Set the user picture link-->
+    <!--<img ng-src="{{user.picture}}" alt="User Picture">-->
     <h1>Email : {{user.email}}</h1>
     <p>Name : {{user.name}}</p>
+    <i class="ion-ios-location-outline"></i>{{user.town}}
+    <!--{{user}}-->
+    <button class="button" ng-click="callDareModal(user._id)">Предизвикай {{user.name}}</button>
     <!--<p>Date Of Birth : {{user.dateOfBirth | date: 'medium'}}</p>-->
     <!--<p>Phone : {{user.phone}}</p>-->
     <!--<p>Friends : {{user.friends}} &#45;&#45; TODO add the friends</p>-->

@@ -62,6 +62,7 @@ angular.module('starter.controllers')
           _creator: $localStorage.user.id
         }
       }).then(function (response) {
+        $log.info($scope.data);
         $log.info(response);
       })
 
