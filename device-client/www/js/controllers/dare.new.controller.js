@@ -2,12 +2,14 @@
 
 angular.module('starter.controllers')
   .controller('NewDareCtrl', function ($scope, $http, $log, $ionicLoading, $ionicModal, SERVER_ADDRESS, SERVER_PORT, $localStorage, UserService) {
+
+
     $scope.data = {
       name: '',
       description: '!?',
       location: {
-        lat: 42.662888,
-        lng: 23.354051
+        lat: '',
+        lng: ''
       }
     };
 
@@ -19,26 +21,7 @@ angular.module('starter.controllers')
     //Array with friends by ID's
     $scope.friendsForInvite = [];
 
-    $scope.mapCenter = {
-      lat: 42.662888,
-      lng: 23.354051,
-      zoom: 17
-      //42.6628592,23.3540996
-    };
-
-    $scope.markers = [
-      {
-        lat: 42.662888,
-        lng: 23.354051
-      }
-    ];
-
-    $scope.choice = [
-      {
-        lat: 42.662888,
-        lng: 23.354051
-      }
-    ];
+    $scope.choice = [];
 
     $scope.submitDare = function () {
 
@@ -49,14 +32,18 @@ angular.module('starter.controllers')
           $scope.friendsForInvite.push({id: value._id, email: value.email});
         }
       });
-
+      console.log($scope.data.location.lat);
+      console.log($scope.data.location.lng);
       $http({
         method: 'POST',
         url: 'http://localhost:3000/challenges/create',
         data: {
           name: $scope.data.name,
           description: $scope.data.description,
-          location: $scope.data.location,
+          location: {
+            lat: Number($scope.data.location.lat),
+            lng: Number($scope.data.location.lng)
+          },
           choice: $scope.data.choice,
           friends: $scope.friendsForInvite,
           _creator: $localStorage.user.id
