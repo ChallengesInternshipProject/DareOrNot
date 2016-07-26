@@ -261,6 +261,15 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
         }
       }
     })
+    .state('tab.walkthrough', {
+      url: '/walkthrough',
+      views: {
+        'tab-walkthrough': {
+          templateUrl: 'templates/tab-walkthrough.html',
+          controller: 'CardsCtrl'
+        }
+      }
+    })
     .state('tab.categories', {
       url: '/categories',
       views: {

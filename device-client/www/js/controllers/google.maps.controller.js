@@ -47,6 +47,8 @@ angular.module('starter.controllers')
           content: "Here I am!"
         });
 
+        infoWindow.open($scope.map, marker);
+
         $scope.map.setCenter(currLocation);
         // Show info message on marker click
         google.maps.event.addListener(marker, 'click', function () {
