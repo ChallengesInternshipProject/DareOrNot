@@ -1,0 +1,373 @@
+<ion-content view-title="Categories" name="categories-view">
+  <nav id="menu-items">
+    <span class="close-side-bar" onClick="closeLeftSideBar()">X</span>
+    <ul>
+      <li><a href="#">НАЧАЛО</a></li>
+      <li><a href="#">КАТЕГОРИИ</a></li>
+      <li><a id="challenge" onClick="toggleChallenges()">ПРЕДИЗВИКАТЕЛСТВА</a>
+        <ul class="challenge-submenu">
+          <li><a href="#">Най-нови</a></li>
+          <li><a href="#">Най-добре платени</a></li>
+          <li><a href="#">Най-коментирани</a>
+          <li><a href="#">Най-споделяни</a></li>
+          <li><a href="#">Най-разглеждани</a></li>
+          <li><a href="#">Най-харесвани</a>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div class="wrapper">
+    <header>
+      <span onClick="openLeftSideBar()" class="hamburger"></span>
+      <img class="dare-logo"  src="../ionic/img/DareLogo.png">
+      <nav id="menu">
+        <input type="checkbox" hidden id="menu-toggle"/>
+        <label id="open" for="menu-toggle"></label>
+        <div>
+          <ul>
+            <li><a href="#">НАЧАЛО</a></li>
+            <li><a href="#">КАТЕГОРИИ</a></li>
+            <li><a href="#">ПРЕДИЗВИКАТЕЛСТВА</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="useruser">
+        <div class="img_user">
+        </div>
+        <p style="float:right;color:#fff;padding-top:25px;padding-left:7px; font-size:22px;">Милена Милева</p>
+      </div>
+      <div class="like">
+        <div class="person">
+        </div>
+        <p>57</p>
+        <div class="comment">
+        </div>
+        <p>34</p>
+        <div class="heart">
+        </div>
+        <p>234</p>
+      </div>
+      <form>
+        <input type="text" placeholder="Placeholder text" value="НОВО ПРЕДИЗВИКАТЕЛСТВО">
+      </form>
+      <div class="check">
+        <div class="search">
+          <img src="img/Calendar.png">
+        </div>
+        <div class="search">
+          <img src="img/CheckIn.png">
+        </div>
+        <div class="search">
+          <img src="img/MagniFire.png">
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <nav>
+        <ul class="navbar">
+          <li class="icon" onclick="myFunction()">
+            <a class="active" href="#">
+           	<span class="fa-stack fa-2x">
+              <i class="fa fa-bars fa-stack-1x "></i>
+            </span>
+            </a>
+          </li>
+          <li class="fa fa-user" >
+            <a href="#home"> </a>
+          </li>
+          <li class="fa fa-activities" >
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-fav" >
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-speech">
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-notification" >
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-friends">
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-love">
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-event" >
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-categories">
+            <a href="#">	</a>
+          </li>
+          <li class="fa fa-stat">
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-history" >
+            <a href="#">	</a>
+          </li>
+          <li class="fa fa-settings" >
+            <a href="#"> </a>
+          </li>
+          <li class="fa fa-out">
+            <a href="#">	</a>
+          </li>
+        </ul>
+      </nav>
+      <aside class="side-bar">
+        <div  class="block">
+          <div class="fun">
+            <p>
+              Забавни предизвикателства
+            </p>
+          </div>
+          <div class="likeBlock">
+            <div>
+              <div class="person">
+              </div>
+              <p>57</p>
+            </div>
+            <div>
+              <div class="comment">
+              </div>
+              <p>34</p>
+            </div>
+            <div>
+              <div class="heart">
+              </div>
+              <p>234</p>
+            </div>
+          </div>
+        </div>
+        <div class="provocation">
+          <div>
+            <p>Бизнес предизвикателства<span>3456</span></p>
+          </div>
+          <hr>
+          <div>
+            <p>Предизвикателства с награда<span>278</span></p>
+          </div>
+          <hr>
+          <div>
+            <p>Благотворителни предизвикателства<span>139</span></p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="slider-container">
+        <nav class="CentralNav">
+          <ul>
+            <li><a href="#">НАЙ-НОВИ</a></li>
+            <li><a href="#">НАЙ-ДОБРЕ ПЛАТЕНИ</a></li>
+            <li><a href="#">НАЙ-КОМЕНТИРАНИ</a></li>
+            <li><a href="#">НАЙ-СПОДЕЛЯНИ</a></li>
+            <li><a href="#">НАЙ-РАЗГЛЕЖДАНИ</a></li>
+            <li><a href="#">НАЙ-СПОДЕЛЯНИ</a></li>
+          </ul>
+        </nav>
+        <div  class="demo">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+          <h2>Нахрани улична котка</h2>
+          <img class="mySlides" src="https://placeimg.com/400/200/any"style="display: none;"/>
+          <img class="mySlides" src="https://placeimg.com/400/200/nature"style="display: none;"/>
+          <div class="user">
+            <div class="user-pic"><img class="img-circle" src="img/photo.jpg"/></div>
+            <div class="user-name">Милена Милчева</div>
+          </div>
+          <div class="info">
+            <div class="timetime">
+              <div class="timecheck">
+                <img src="img/location-icon.png">
+              </div>
+              <div class="time">
+                <p>София</p>
+              </div>
+              <div class="timeclock">
+                <img src="img/time.png">
+              </div>
+              <div class="time">
+                <p>Преди 4 часа и 30 минути</p>
+              </div>
+            </div>
+            <div class="likeLike">
+              <div class="person">
+              </div>
+              <p>57</p>
+              <div class="comment">
+              </div>
+              <p>34</p>
+              <div class="heart">
+              </div>
+              <p>234</p>
+            </div>
+            <div class="clock">
+              <H6>
+                <p>Оставащо време</p>
+                23:40Ч.
+              </H6>
+            </div>
+          </div>
+          <div class="arrow">
+            <a class=" fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+            </a>
+            <a class=" fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+            </a>
+          </div>
+        </div>
+
+        <div  class="demo">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+          <h2>Нахрани улична котка</h2>
+          <img class="mySlides" src="https://placeimg.com/400/200/any"style="display: none;"/>
+          <img class="mySlides" src="https://placeimg.com/400/200/nature"style="display: none;"/>
+          <div class="user">
+            <div class="user-pic"><img class="img-circle" src="img/photo.jpg"/></div>
+            <div class="user-name">Милена Милчева</div>
+          </div>
+          <div class="info">
+            <div class="timetime">
+              <div class="timecheck">
+                <img src="img/location-icon.png">
+              </div>
+              <div class="time">
+                <p>София</p>
+              </div>
+              <div class="timeclock">
+                <img src="img/time.png">
+              </div>
+              <div class="time">
+                <p>Преди 4 часа и 30 минути</p>
+              </div>
+            </div>
+            <div class="likeLike">
+              <div class="person">
+              </div>
+              <p>57</p>
+              <div class="comment">
+              </div>
+              <p>34</p>
+              <div class="heart">
+              </div>
+              <p>234</p>
+            </div>
+            <div class="clock">
+              <H6>
+                <p>Оставащо време</p>
+                23:40Ч.
+              </H6>
+            </div>
+          </div>
+          <div class="arrow">
+            <a class=" fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+            </a>
+            <a class=" fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+            </a>
+          </div>
+        </div>
+        <div  class="demo">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+          <h2>Нахрани улична котка</h2>
+          <img class="mySlides" src="https://placeimg.com/400/200/any"style="display: none;"/>
+          <img class="mySlides" src="https://placeimg.com/400/200/nature"style="display: none;"/>
+          <div class="user">
+            <div class="user-pic"><img class="img-circle" src="img/photo.jpg"/></div>
+            <div class="user-name">Милена Милчева</div>
+          </div>
+          <div class="info">
+            <div class="timetime">
+              <div class="timecheck">
+                <img src="img/location-icon.png">
+              </div>
+              <div class="time">
+                <p>София</p>
+              </div>
+              <div class="timeclock">
+                <img src="img/time.png">
+              </div>
+              <div class="time">
+                <p>Преди 4 часа и 30 минути</p>
+              </div>
+            </div>
+            <div class="likeLike">
+              <div class="person">
+              </div>
+              <p>57</p>
+              <div class="comment">
+              </div>
+              <p>34</p>
+              <div class="heart">
+              </div>
+              <p>234</p>
+            </div>
+            <div class="clock">
+              <H6>
+                <p>Оставащо време</p>
+                23:40Ч.
+              </H6>
+            </div>
+          </div>
+          <div class="arrow">
+            <a class=" fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+            </a>
+            <a class=" fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="right">
+
+      </section>
+    </main>
+    <footer>
+      <div class="socialtwo">
+        <div class="likeLike">
+          <div class="separate">
+            <div class="person">
+            </div>
+            <p>57</p>
+          </div>
+          <div class="separate">
+            <div class="comment">
+            </div>
+            <p>34</p>
+          </div>
+          <div class="separate">
+            <div class="heart">
+            </div>
+            <p>234</p>
+          </div>
+        </div>
+        <div class="responsive-logo">
+          <img src="../ionic/img/dare_logo_footer.png">
+        </div>
+      </div>
+      <nav class="social-footer">
+        <ul style="width: 100%; padding: 0%;">
+          <li><a href="#">За нас</a></li>
+          <li><a href="#">Новини</a></li>
+          <li><a href="#">Общи условия</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Как работи</a></li>
+          <li><a href="#">Контакти</a></li>
+          <li><i> © 2015 <span> Dare Or Not?</span> All rights reserved</i></li>
+          <li><a href="#"><img id="big" src="img/android.png"/></a></li>
+          <li><a href="#"><img id="big" src="img/ios.png"></a></li>
+          <li><a href="#"><img src="img/pp-logo.png"></a></li>
+          <li><a href="#"><img src="img/visa.png"/></a></li>
+          <li><a href="#"><img src="img/mastercard.png"/></a></li>
+          <li><a href="#"><img src="img/easypay.png"/></a></li>
+          <li class=" fa-fb"><a class="social-buttons" href="https://www.facebook.com/" target="_blank"></a></li>
+          <li class=" fa-tw"><a class="social-buttons" href="https://www.twitter.com/" target="_blank"></a></li>
+          <li class="fa-g"><a class="social-buttons" href="https://www.google.com/" target="_blank"></a></li>
+          <li class=" fa-wi"><a class="social-buttons" href="https://www.google.com/" target="_blank"></a></li>
+        </ul>
+      </nav>
+
+    </footer>
+  </div>
+</ion-content>
