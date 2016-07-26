@@ -1,9 +1,11 @@
-angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider) {
+angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider, $ionicConfigProvider) {
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
 
+
+  $ionicConfigProvider.tabs.position('top'); //bottom
 
   //Check if the user is authenticated
   function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
@@ -276,6 +278,15 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
         'tab-categories': {
           templateUrl: 'templates/tab-categories.html',
           controller: 'CategoriesCtrl'
+        }
+      }
+    })
+    .state('tab.landing', {
+      url: '/landing',
+      views: {
+        'tab-landing': {
+          templateUrl: 'templates/tab-landing.html'
+          // controller: 'CategoriesCtrl'
         }
       }
     });
