@@ -1,11 +1,11 @@
 angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider, $ionicConfigProvider) {
-
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
 
   $ionicConfigProvider.tabs.position('top'); //bottom
+
   //Check if the user is authenticated
   function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
 
@@ -51,13 +51,26 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
   $stateProvider
 
   // setup an abstract state for the tabs directive
+    .state('app', {
+      url: '/app',
+      abstract: true,
+      templateUrl: 'templates/side-menu/side-menu.html',
+      controller: 'SideMenuCtrl'
+    })
+    .state('app.home', {
+      url: '/home',
+      templateUrl: 'templates/tab-home.html',
+      controller: 'HomeCtrl'
+    })
     .state('tab', {
       url: '/tab',
       abstract: true,
       templateUrl: 'tabs.html'
       // templateUrl: 'templates/menus/side-menu-test.html',
+
+
+      // Each tab has its own nav history stack:
     })
-    // Each tab has its own nav history stack:
     .state('tab.login', {
       url: '/login',
       views: {

@@ -1,5 +1,21 @@
-<ion-view view-title="Home View" name="home-view">
+<ion-view>
+  <ion-nav-bar>
+    <ion-nav-buttons side="left">
+      <!-- Toggle left side menu -->
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-ios-calendar-outline"></button>
+      <button class="button button-icon icon ion-ios-location-outline"></button>
+      <button class="button button-icon icon ion-ios-search"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+
+
   <ion-content class="padding">
+    <!--<div ng-include="'templates/menus/side-menu-test.html'"></div>-->
     <button class="button" ng-click="callLoginModal()">Login</button>
     <button class="button" ng-click="callRegisterModal()">Register</button>
   </ion-content>
