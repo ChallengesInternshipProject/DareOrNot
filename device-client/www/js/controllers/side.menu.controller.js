@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('SideMenuCtrl', function ($scope, $http, $log, $ionicModal) {
+  .controller('SideMenuCtrl', function ($scope, $http, $log, $ionicModal, $state) {
     $log.info('SideMenuCtrl called !');
 
 
@@ -54,7 +54,7 @@ angular.module('starter.controllers')
     };
 
     // END OF TODO
-    
+
     $scope.callMyFavorites = function () {
       $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-favorites.html', {
         scope: $scope,
@@ -65,6 +65,18 @@ angular.module('starter.controllers')
       });
     };
 
+    $scope.callSettings = function () {
+      $log.info('called ?')
+      $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-settings.html', {
+        scope: $scope,
+        animation: 'slide-in-left'
+      }).then(function (modal) {
+        $scope.sideMenuSettingsModal = modal;
+        modal.show();
+      });
+    };
 
-
+    $scope.goTo = function (location) {
+      $state.go('app.search');
+    };
   });

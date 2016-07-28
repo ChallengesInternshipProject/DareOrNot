@@ -57,11 +57,19 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       templateUrl: 'templates/side-menu/side-menu.html',
       controller: 'SideMenuCtrl'
     })
+    
     .state('app.home', {
       url: '/home',
       templateUrl: 'templates/tab-home.html',
       controller: 'HomeCtrl'
     })
+
+    .state('app.search', {
+      url: '/search',
+      templateUrl: 'templates/tab-search.html'
+      // controller: 'HomeCtrl'
+    })
+
     .state('tab', {
       url: '/tab',
       abstract: true,

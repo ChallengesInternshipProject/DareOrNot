@@ -1,20 +1,32 @@
 <ion-side-menus>
 
-
   <ion-side-menu-content>
+    <ion-nav-bar>
+      <ion-nav-buttons side="left">
+        <!-- Toggle left side menu -->
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-ios-calendar-outline"></a>
+        <a class="button button-icon icon ion-ios-location-outline"></a>
+        <a ng-click="goTo(search)" class="button button-icon icon ion-ios-search"></a>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
     <ion-nav-view></ion-nav-view>
   </ion-side-menu-content>
 
-  <!-- Right menu -->
+  <!-- Left menu -->
   <ion-side-menu side="left">
 
-    <div><i class="ion-android-person" ng-click="callPorofile()">Профил</i></div>
-    <div><i class="ion-calendar">Събития</i></div>
-    <div><i class="ion-android-apps">Категории</i></div>
-    <div><i class="ion-stats-bars">Статистика</i></div>
-    <div><i class="ion-ios-clock-outline">История</i></div>
-    <div><i class="ion-android-settings"></i>Настройки</div>
-    <div><i class="ion-android-exit">Изход</i></div>
+    <div ng-click="callPorofile()"><i class="ion-android-person">Профил</i></div>
+    <div ng-click=""><i class="ion-calendar">Събития</i></div>
+    <div ng-click=""><i class="ion-android-apps">Категории</i></div>
+    <div ng-click=""><i class="ion-stats-bars">Статистика</i></div>
+    <div ng-click=""><i class="ion-ios-clock-outline">История</i></div>
+    <div ng-click="callSettings()"><i class="ion-android-settings"></i>Настройки</div>
+    <div ng-click=""><i class="ion-android-exit">Изход</i></div>
 
 
   </ion-side-menu>
