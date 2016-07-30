@@ -57,7 +57,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
       templateUrl: 'templates/side-menu/side-menu.html',
       controller: 'SideMenuCtrl'
     })
-    
+
     .state('app.home', {
       url: '/home',
       templateUrl: 'templates/tab-home.html',
@@ -67,6 +67,20 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
     .state('app.search', {
       url: '/search',
       templateUrl: 'templates/tab-search.html'
+      // controller: 'HomeCtrl'
+    })
+
+    .state('app.map', {
+      url: '/map',
+      templateUrl: 'templates/tab-gMaps.html',
+      controller: 'GoogleMapCtrl'
+      // controller: 'HomeCtrl'
+    })
+
+    .state('app.calendar', {
+      url: '/calendar',
+      templateUrl: 'templates/tab-calendar.html',
+      controller: 'CalendarCtrl',
       // controller: 'HomeCtrl'
     })
 

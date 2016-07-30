@@ -76,6 +76,26 @@ angular.module('starter.controllers')
       });
     };
 
+    $scope.loadMap = function () {
+      $ionicModal.fromTemplateUrl('templates/menu/menu-map.html', {
+        scope: $scope,
+        animation: 'slide-in-left'
+      }).then(function (modal) {
+        $scope.mapModal = modal;
+        modal.show();
+      });
+    };
+
+    $scope.loadCalendar = function () {
+      $ionicModal.fromTemplateUrl('templates/menu/menu-calendar.html', {
+        scope: $scope,
+        animation: 'slide-in-left'
+      }).then(function (modal) {
+        $scope.calendarModal = modal;
+        modal.show();
+      });
+    };
+
     $scope.goTo = function (location) {
       $state.go('app.search');
     };
