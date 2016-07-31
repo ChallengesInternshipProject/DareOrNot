@@ -27,8 +27,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var chat = require('./routes/chat');
 
-//Timeline 
-var timeline = require('./routes/timeline');
+
 //Calendar
 var calendar = require('./routes/calendar');
 
@@ -66,7 +65,6 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/auth', auth);
 app.use('/chat', chat);
-app.use('/timeline',timeline);
 app.use('/calendar',calendar);
 app.use('/challenges', challenges);
 
