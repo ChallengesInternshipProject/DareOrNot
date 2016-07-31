@@ -262,7 +262,6 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
           controller: 'UsersCtrl',
           resolve: {
             friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-              console.log("resolve")
               return UserService.getFriends($localStorage.user.id, 'Accepted', '').then(function (data) {
                 return data
               })
@@ -323,13 +322,17 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
           // controller: 'CategoriesCtrl'
         }
       }
+    })
+    .state('tab.activity', {
+      url: '/activity',
+      views: {
+        'tab-activity': {
+          templateUrl: 'templates/tab-activity.html',
+          controller: 'ActivityCtrl'
+        }
+      }
     });
-  // .state('menu', {
-  //   url: '/menu',
-  //   abstract: true,
-  //   templateUrl: 'templates/menus/side-menu-test.html',
-  //   controller: 'HomeCtrl'
-  // });
+
 
 
   // if none of the above states are matched, use this as the fallback
