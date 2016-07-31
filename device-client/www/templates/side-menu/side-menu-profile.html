@@ -1,21 +1,22 @@
-<ion-modal-view>
-
-  <ion-content>
-    <i class="ion-arrow-left-a" ng-click="sideMenuModal.hide()"></i>
-
-    <a class="item item-avatar">
-      <img src="profilePicture.jpg">
-      <h2>User Name Here</h2>
-      <p>email@email.com</p>
-    </a>
-
-
-    <div ng-click="callActivity()"><i class="ion-android-person"></i>Активност</div>
-    <div ng-click="callMyDares()"><i class="ion-android-person"></i>Моите предизвикателства</div>
-    <div ng-click="callMyMessages()"><i class="ion-android-person"></i>Съобщения</div>
-    <div ng-click="callMyNotifications()"><i class="ion-android-person"></i>Известия</div>
-    <div ng-click="callMyFriends()"><i class="ion-android-person"></i>Приятели</div>
-    <div ng-click="callMyFavorites()"><i class="ion-android-person"></i>Любими</div>
-
-  </ion-content>
-</ion-modal-view>
+<ion-view view-title="Profile">
+	<ion-content >
+	<div class="bar bar-header">
+		<img src="profilePicture.jpg">
+		<h2>User Name Here</h2>
+		<p>email@email.com</p>
+	</div>
+	<div class="content has-header">
+		<div class="list">
+			<div  class = "item item-icon-left" ng-click="callActivity()"><i class="ion-android-person"></i>Активност</div>
+			<div  class = "item item-icon-left" ng-click="callMyDares()"><i class="ion-android-person"></i>Моите предизвикателства</div>
+			<div  class = "item item-icon-left" ng-click="callMyMessages()"><i class="ion-android-person"></i>Съобщения</div>
+			<div  class = "item item-icon-left" ng-click="callMyNotifications()"><i class="ion-android-person"></i>Известия</div>
+			<a  class = "item item-icon-left" href="#/app/friends">
+				<i class="ion-android-person"></i>
+				Приятели
+			</a>
+			<div  class = "item item-icon-left" ng-click="callMyFavorites()"><i class="ion-android-person"></i>Любими</div>
+		</div>
+	</div>
+	</ion-content>
+</ion-view>
