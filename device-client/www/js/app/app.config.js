@@ -144,6 +144,11 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			templateUrl: 'templates/tab-statistics.html',
 			controller: 'StatisticsCtrl'
 		})
+		.state('app.contacts', {
+			url: '/contacts',
+			templateUrl: 'templates/tab-contacts.html',
+			controller: 'ContactsCtrl'
+		})
 
 
 
@@ -253,18 +258,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				}
 			}
 		})
-		.state('tab.contacts', {
-			url: '/contacts',
-			views: {
-				'tab-contacts': {
-					templateUrl: 'templates/tab-contacts.html',
-					controller: 'ContactsCtrl'
-					// resolve: {
-					//   isAuthenticated: isAuthenticated
-					// }
-				}
-			}
-		})
+		
 		.state('tab.dare-list', {
 			url: '/dare-list',
 			views: {
