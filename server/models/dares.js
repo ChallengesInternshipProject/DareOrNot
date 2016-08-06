@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var moment = require('moment');
 var Schema = mongoose.Schema;
-var challengeSchema = new Schema({
+var dareSchema = new Schema({
     //The id can be a number or a string
     // id: String,
     title: String,
@@ -36,6 +36,6 @@ var challengeSchema = new Schema({
     //TODO limits maximum and minimum lenght of strings
 });
 
-var Challenge = mongoose.model('Challenge', challengeSchema);
+var Dare = mongoose.model('Dare', dareSchema);
 
-module.exports = Challenge;
+module.exports = Dare;

@@ -157,6 +157,14 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			templateUrl: 'templates/tab-contacts.html',
 			controller: 'ContactsCtrl'
 		})
+		.state('app.newdare',{
+			url : '/newdare',
+			templateUrl: 'templates/tab-new-dare.html',
+			controller: 'DareCtrl',
+			resolve: {
+				isAuthenticated: isAuthenticated
+				}
+		})
 
 
 
@@ -279,18 +287,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				}
 			}
 		})
-		.state('tab.new-dare', {
-			url: '/new-dare',
-			views: {
-				'tab-new-dare': {
-					templateUrl: 'templates/tab-new-dare.html',
-					controller: 'NewDareCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
-				}
-			}
-		})
+		
 		
 		.state('tab.calendar', {
 			url: '/calendar',
@@ -338,6 +335,6 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/home');
+	$urlRouterProvider.otherwise('/app/timeline');
 
 });

@@ -1,7 +1,7 @@
 "use strict";
 var express = require('express');
 var router = express.Router();
-var Challenge = require('../models/challenges');
+var Challenge = require('../models/dares');
 var moment = require('moment');
 moment.locale('bg')
 

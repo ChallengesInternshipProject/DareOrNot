@@ -4,7 +4,10 @@
 			pulling-text="Pull to refresh..."
 			on-refresh="doRefresh()">
 		</ion-refresher>
-		
+		<a href = "#/app/newdare">
+			<i class="ion-plus-round"></i>
+			 Ново предизвикателсво 
+		</a>
 		<div class="list card" ng-repeat="challenge in challenges">
 			<!-- include the timeline card -->
 			<div class="item item-image" ng-include src="'templates/div-timelineCard.html'"></div>

@@ -16,8 +16,6 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log('Connected to DB');
-   
-
 });
 
 var passport = require('passport');
@@ -32,7 +30,7 @@ var chat = require('./routes/chat');
 //Calendar
 var calendar = require('./routes/calendar');
 
-var challenges = require('./routes/challenges');
+var dares = require('./routes/dares');
 
 //Login and Registration
 var auth = require('./routes/auth');
@@ -67,7 +65,7 @@ app.use('/users', users);
 app.use('/auth', auth);
 app.use('/chat', chat);
 app.use('/calendar',calendar);
-app.use('/challenges', challenges);
+app.use('/dares', dares);
 
 
 // catch 404 and forward to error handler
