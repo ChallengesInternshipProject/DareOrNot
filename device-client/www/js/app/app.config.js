@@ -64,11 +64,15 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 		.state('app.home', {
 			url: '/home',
-		
-						templateUrl: 'templates/tab-home.html',
-						controller: 'HomeCtrl'
-	
-
+			templateUrl: 'templates/tab-home.html',
+			controller: 'HomeCtrl',
+			resolve: {
+					UserResolver: ['UserService', function (UserService) {
+						return UserService.getAllUsers().then(function (data) {
+							return data
+						})
+					}]
+				}
 		})
 		.state('app.profile',{
 			url: '/profile',
