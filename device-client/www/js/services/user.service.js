@@ -1,7 +1,9 @@
 angular.module('starter.services')
   .service('UserService', function ($q, $http, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
-    return {
-      getUser: function (email) {
+    var user =  {
+      friends : []
+    }
+    user.getUser= function (email) {
         var deferred = $q.defer();
         $http.get(SERVER_ADDRESS + SERVER_PORT + '/users/user/' + email)
           .success(function (result) {
@@ -14,7 +16,7 @@ angular.module('starter.services')
 
         return deferred.promise;
       },
-      getAllUsers: function () {
+      user.getAllUsers= function () {
         var deferred = $q.defer();
 
         $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
@@ -24,7 +26,7 @@ angular.module('starter.services')
 
         return deferred.promise;
       },
-      getFriends: function (userID, status, searchString) {
+      user.getFriends= function (userID, status, searchString) {
 
         var urlPath = 'http://localhost:3000/users/friends/' + userID + '/' + status;
         var config = {
@@ -36,10 +38,14 @@ angular.module('starter.services')
         };
         return $http(config)
           .success(function (data) {
-            console.log(data)
-            angular.copy(data, user.friends);
-            console.log(user)
+              angular.copy(data, user.friends);
           })
       }
-    }
+
+      user.getNonFriends = function(userID,searchString){
+        
+      }
+      //End of methods
+      return user;
+
   });

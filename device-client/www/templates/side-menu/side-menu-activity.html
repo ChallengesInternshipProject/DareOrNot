@@ -1,64 +1,47 @@
-<ion-modal-view>
+<ion-modal-view view-title="Активности">
 
-  <ion-content>
-    <i class="ion-arrow-left-a" ng-click="sideMenuActivityModal.hide()"></i>
-    <h1>Activity</h1>
+	<ion-content>
+		<div class="bar bar-header" style='font-size:2em'>
+			<a href=""  ng-click="sideMenuActivityModal.hide()"
+				<i class="ion-ios-close-outline"></i>
+			</a>
+			<span>
+				<h3>Активност</h3>
+			</span>
+		</div>
+		<div class="content has-header padding">
+			<ion-list class="has-header">
+				<ion-item ng-repeat="activity in activities" class="">
+						<div class="row">
+							<a href="#" class="item item-avatar">
+								<img ng-src="{{activity.user.avatar}}" >
+							</a>
+							<div class="col">
+								<div class="row">
+									{{activity.user.name}}
+								</div>
+								<div class="row">
+									{{activity.message}}
+								</div>
+							</div>    
+							<div class="col">
+								{{activity.lastUpdated}}
+							</div>        
+						</div>
+						<div class="row" ng-if="activity.pictures" >
+							<a  ng-repeat="picture in activity.pictures" class="item item-thumbnail-left" href="#">
+									<img ng-src="{{picture}}">
+							</a>
+						</div>
+						<div class="row" ng-if="activity.text">
+									<div class="item item-text-wrap">
+								{{activity.text}}
+							</div>
+						</div>
+					
 
-    <ion-list>
-      <ion-item class="item item-avatar">
-
-        <img src="profilePicture.jpg">
-        <h2>Петър Георгиев</h2>
-        <p>Наблюдава 5 ваши предизвикателства</p>
-        <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
-        <img src="profilePicture.jpg">
-        <img src="profilePicture.jpg">
-        <img src="profilePicture.jpg">
-        <img src="profilePicture.jpg">
-
-      </ion-item>
-
-      <ion-item class="item item-avatar">
-
-        <img src="profilePicture.jpg">
-        <h2>Мария Минчева</h2>
-        <p>Ви последва</p>
-        <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
-      </ion-item>
-
-      <ion-item class="item item-avatar">
-
-        <img src="profilePicture.jpg">
-        <h2>Станислав Мартинов</h2>
-        <p>Коментира ваша снимка</p>
-        <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet aspernatur atque corporis cumque,
-          eaque eligen</p>
-        <img src="testimage.jpg" alt="">
-      </ion-item>
-
-      <ion-item class="item item-avatar">
-
-        <img src="profilePicture.jpg">
-        <h2>Мария Минчева</h2>
-        <p>Наблюдава 3 ваши преизвикателства</p>
-        <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
-        <img src="profilePicture.jpg">
-        <img src="profilePicture.jpg">
-        <img src="profilePicture.jpg">
-      </ion-item>
-
-      <ion-item class="item item-avatar">
-
-        <img src="profilePicture.jpg">
-        <h2>Петър Георгиев</h2>
-        <p>Коментира ваша снимка</p>
-        <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem dolore dolorem nulla optio pariatur reprehenderit velit veniam. Consequuntur eos esse facere fugit nostrum numquam perspiciatis quas, quia voluptas. Necessitatibus!</p>
-
-      </ion-item>
-    </ion-list>
-
-
-  </ion-content>
+				</ion-item>
+			</ion-list>
+		</div>
+	</ion-content>
 </ion-modal-view>

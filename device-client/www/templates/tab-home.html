@@ -1,8 +1,22 @@
 <ion-view>
-
   <ion-content class="padding">
-    <!--<div ng-include="'templates/menus/side-menu-test.html'"></div>-->
-    <button class="button" ng-click="callLoginModal()">Login</button>
-    <button class="button" ng-click="callRegisterModal()">Register</button>
+ 		<div class="row">
+ 			<h1> Suggested Friends</h1>
+			<ion-slide-box on-slide-changed="slideChanged(index)">
+				<ion-slide ng-repeat='user in users'>
+					<div class="row">
+						<div class="col">
+							<a  class="item-avatar"  ng-class = "{online : friend.friend.isOnline==true}">
+								<img  ng-src='{{SERVER_ADDRESS}}/{{friend.friend.avatar}}' alt="">
+							</a>	
+						</div>
+						<div class="col">
+							<h4>{{friend.friend.email}}</h4>
+							<h6>{{friend.friend.town}}, {{friend.friend.country}}</h6>
+						</div>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+ 		</div>
   </ion-content>
 </ion-view>
