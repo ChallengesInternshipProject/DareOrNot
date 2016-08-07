@@ -8,47 +8,38 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 	//Check if the user is authenticated
 	function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
-
-	var data = {};
-	if (AuthFactory.isAuthenticated()) {
-		$log.info('You are 100% logged no scam !');
-		return $q.when();
-	} else {
-		// console.log('false')
-		$timeout(function () {
-			// modal.loginModal.show();
-
-			console.log('not logged');
-			// $state.go('tab.home');
-
-			//Refresh the state because $state.go is not working !!! IMPORTANT
-			$state.go($state.current, {}, {reload: true});
-		}, 0);
-		return $q.reject();
+		var data = {};
+		if (AuthFactory.isAuthenticated()) {
+			$log.info('You are 100% logged no scam !');
+			return $q.when();
+		} else {
+			// console.log('false')
+			$timeout(function () {
+				// modal.loginModal.show();
+				console.log('not logged');
+				// $state.go('tab.home');
+				//Refresh the state because $state.go is not working !!! IMPORTANT
+				$state.go($state.current, {}, {reload: true});
+			}, 0);
+			return $q.reject();
+		}
 	}
-
-
-		
-}
 	
 
 	var datePickerObj = {
-
-
 		inputDate: new Date(),
-		setLabel: 'Set',
-		todayLabel: 'Today',
-		closeLabel: 'Close',
-		mondayFirst: false,
+		setLabel: 'Избери',
+		todayLabel: 'Днес',
+		closeLabel: 'Затвори',
+		mondayFirst: true,
 		weeksList: ["S", "M", "T", "W", "T", "F", "S"],
 		monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
-		templateType: 'popup',
+		templateType: 'modal',
 		from: new Date(2012, 8, 1),
 		to: new Date(2018, 8, 1),
-		showTodayButton: true,
-		dateFormat: 'dd MMMM yyyy',
-		closeOnSelect: false,
-		disableWeekdays: [6]
+		showTodayButton: false,
+		//dateFormat: 'dd MMMM yyyy',
+		closeOnSelect: true,
 	};
 	ionicDatePickerProvider.configDatePicker(datePickerObj);
 
