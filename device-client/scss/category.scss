@@ -111,104 +111,104 @@ body{
 @font-face {
   font-family:"Open Sans";
 }
+ 
+
+  main{
+    min-width:100%;
+    background-color:#e8edf0;
+    margin: 0 auto;
+  }
+
+  .box1{
+    position: relative;
+    display:inline-block;
+    vertical-align: top;
+    width: 47%;
+    height: 42vh;
+    background-color:#fff;
+    background-image:url(../img/funBig.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size: 60%;
+    margin: 2% 0.5% 1% 2%;
+  }
+
+   .box2{
+    position: relative;
+    display:inline-block;
+    vertical-align: top;
+    width: 47%;
+    height: 42vh;
+    background-color:#fff;
+    background-image:url(../img/BusinessBig.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: 60%;
+    margin: 2% 1% 1% 0%;
+  }
+
+  .box3{
+    position: relative;
+    display:inline-block;
+    width: 47%;
+    height: 42vh;
+    background-color:#fff;
+    background-image:url(../img/prizeBig.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: 60%;
+    margin: 1% 0.5% 2.5% 2%;
+  }
+
+   .box4{
+    position: relative;
+    display:inline-block;
+    width: 47%;
+    height: 42vh;
+    background-color:#fff;
+    background-image:url(../img/charityBig.png);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: 60%;
+    margin: 1% 1% 2.5% 0%;
+  }
+
+  main h1{
+    display: block;
+    font-size: 180%;
+    text-align: center;
+    margin-top: 10% !important;
+  }
+
+  main p{
+    display: block;
+    font-size:80%;;
+    text-align: center;
+    color: #03b2d1;
+    position: absolute;
+    left: 20%;
+    top: 77%;
+  }
 
 
-main{
-  min-width:100%;
-  background-color:#e8edf0;
-  margin: 0 auto;
-}
+  .color1{
+    color: #056686;
+  
+  }
 
-.box1{
-  position: relative;
-  display:inline-block;
-  vertical-align: top;
-  width: 47%;
-  height: 42vh;
-  background-color:#fff;
-  background-image:url(../img/funBig.png);
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size: 60%;
-  margin: 2% 0.5% 1% 2%;
-}
+  .color2{
+    color: #dc9138;
+  }
 
-.box2{
-  position: relative;
-  display:inline-block;
-  vertical-align: top;
-  width: 47%;
-  height: 42vh;
-  background-color:#fff;
-  background-image:url(../img/BusinessBig.png);
-  background-repeat: no-repeat;
-  background-position:center center;
-  background-size: 60%;
-  margin: 2% 1% 1% 0%;
-}
+  .color3{
+    color: #cd4c4c;
+  }
 
-.box3{
-  position: relative;
-  display:inline-block;
-  width: 47%;
-  height: 42vh;
-  background-color:#fff;
-  background-image:url(../img/prizeBig.png);
-  background-repeat: no-repeat;
-  background-position:center center;
-  background-size: 60%;
-  margin: 1% 0.5% 2.5% 2%;
-}
+  .color4{
+    color: #3b51a2;
+  }
 
-.box4{
-  position: relative;
-  display:inline-block;
-  width: 47%;
-  height: 42vh;
-  background-color:#fff;
-  background-image:url(../img/charityBig.png);
-  background-repeat: no-repeat;
-  background-position:center center;
-  background-size: 60%;
-  margin: 1% 1% 2.5% 0%;
-}
-
-main h1{
-  display: block;
-  font-size: 180%;
-  text-align: center;
-  margin-top: 10% !important;
-}
-
-main p{
-  display: block;
-  font-size:80%;;
-  text-align: center;
-  color: #03b2d1;
-  position: absolute;
-  left: 20%;
-  top: 77%;
-}
-
-
-.color1{
-  color: #056686;
-
-}
-
-.color2{
-  color: #dc9138;
-}
-
-.color3{
-  color: #cd4c4c;
-}
-
-.color4{
-  color: #3b51a2;
-}
-
-@media only screen and (max-width: 360px){
+  @media only screen and (max-width: 360px){
 
   .box1{
     width: 100%;
@@ -239,3 +239,4 @@ main p{
   }
 
 }
+ 
