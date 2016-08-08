@@ -1,6 +1,6 @@
-<ion-modal-view view-title="Активности">
+<ion-modal-view class="activity" view-title="Активности">
 
-	<ion-content>
+	  <ion-content class="cont">
 		<div class="bar bar-header" style='font-size:2em'>
 			<a href=""  ng-click="sideMenuActivityModal.hide()"
 				<i class="ion-ios-close-outline"></i>
@@ -17,14 +17,14 @@
 								<img ng-src="{{activity.user.avatar}}" >
 							</a>
 							<div class="col">
-								<div class="row">
+								<div class="row" style="color: #01cfe4;">
 									{{activity.user.name}}
 								</div>
 								<div class="row">
 									{{activity.message}}
 								</div>
 							</div>    
-							<div class="col">
+							<div class="col" style="margin-right: 2em;">
 								{{activity.lastUpdated}}
 							</div>        
 						</div>
