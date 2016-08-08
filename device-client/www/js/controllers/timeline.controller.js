@@ -14,9 +14,9 @@ angular.module('starter.controllers')
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS+':3000/';
 		GetTimeline();
 		function GetTimeline() {
-			$ionicLoading.show({
-				template: 'Loading...'
-			});
+			// $ionicLoading.show({
+			// 	template: 'Loading...'
+			// });
 			$http.get(SERVER_ADDRESS + ':3000/challenges/timeline/'+$localStorage.user.id).success(function (result) {
 				$ionicLoading.hide();
 				$scope.challenges = result ;

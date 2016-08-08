@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Profil */
+	ion-view  {
+		.cont{
+			 background-image: url(../img/BG.png);
+			 background-color: #012438;
+			 background-size: 100% 100%;
+			 text-align: center;
+			 display: block;
+			 .fa { 	width: 15vw !important;
+					height: 15vw;
+					display: inline-block;
+					float: left;
+   					margin-top: -6%
+					}
+
+			}
+			 .bar {background: transparent;
+				   color: #ffb400;
+				   div {
+					background: transparent;
+					display:block;
+					color: #ffb400;
+					height: auto;
+					margin-top: -10%;
+					margin-left: 10%;
+					h2 {color: #01cfe4;}
+				
+				}
+			
+			}
+			 .content {background: transparent;
+			 		   color: #ffb400;
+					   
+					   margin-top: 10%;	
+				 .list{
+				 		background: transparent;
+						border-color: #ffb400;
+						color: #01cfe4;	
+						.item-icon-left {
+										margin: 5%;
+										text-align: left;
+										background: transparent;
+										border: none;
+										font-size: 15px;
+										color: #01cfe4;
+						}
+			}
+		}
+	}

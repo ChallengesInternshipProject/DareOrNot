@@ -1,0 +1,27 @@
+ion-view .Contacts{
+     background:red;
+	color:#03b2d1;
+	line-height: 1%;
+ion-content .padding{
+
+   ion-list{
+   
+ 	  div .list  {
+   		p{margin:5%;}
+  	   }
+ /* SEND Form*/
+   	   form .contact {
+	  		div .list-inset { background: transparent;
+			
+/*	BUTTON SEND*/
+			 
+				.button.button-positive { background:#012438;}
+				
+				label .item {margin-bottom: 5%;
+				placeholder{ color:blue;}
+				}
+	   }
+   }
+  }
+ }
+ }

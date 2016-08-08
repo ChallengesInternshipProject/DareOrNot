@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS activities */
+
+.activity{
+	h3{color: #01cfe4;margin-left: 3em;}
+	div{text-align: left;
+		background: transparent;
+		border: none;
+		color: #fff;
+		font-size: 12px;
+		.col{float: left; margin-left: -2em; color: #01cfe4;}
+		.row{color: #ffb400;}
+		}
+	.content{
+		.list{ background: transparent;
+			 ion-item{
+			 		    padding:0;
+				 		background: transparent;
+						border-bottom: 1px solid #fff;
+						border-left: none;
+						border-right: none;
+						border-top: none;
+				
+					a.item {
+							border: none;
+							background-color: transparent;
+							}		 
+					 }
+			 ion-item:last-child {border:none;}
+		}
+
+	}
+}
