@@ -1,6 +1,24 @@
 <!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function ($scope, $rootScope, $state, $stateParams, $timeout, $log, $ionicModal, $localStorage, $sessionStorage, $ionicSlideBoxDelegate, ionicDatePicker, StatusFactory, LoginService, AuthFactory, RegisterService, FacebookService) {
+  .controller('HomeCtrl', function (
+    $scope,
+   $rootScope,
+   $state,
+   $stateParams,
+   $timeout,
+   $log,
+   $ionicModal,
+   $localStorage,
+   $sessionStorage,
+   $ionicSlideBoxDelegate,
+   ionicDatePicker,
+   StatusFactory,
+   LoginService,
+   AuthFactory,
+   RegisterService,
+   FacebookService,
+   UserResolver
+   ) {
 
     $scope.isLogged = false;
 
@@ -178,4 +196,6 @@ angular.module('starter')
       $state.go('tab.register');
       $scope.modal.hide();
     };
+
+    $scope.users = UserResolver
   });

@@ -41,6 +41,11 @@ angular.module('starter.services')
               angular.copy(data, user.friends);
           })
       }
+
+      user.getNonFriends = function(userID,searchString){
+        
+      }
+      //End of methods
       return user;
 
   });
