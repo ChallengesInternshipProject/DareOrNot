@@ -10140,7 +10140,6 @@ main {
   margin: 0 auto; }
 
 .box1 {
-  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 47%;
@@ -10153,7 +10152,6 @@ main {
   margin: 2% 0.5% 1% 2%; }
 
 .box2 {
-  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 47%;
@@ -10166,7 +10164,6 @@ main {
   margin: 2% 1% 1% 0%; }
 
 .box3 {
-  position: relative;
   display: inline-block;
   width: 47%;
   height: 42vh;
@@ -10178,7 +10175,6 @@ main {
   margin: 1% 0.5% 2.5% 2%; }
 
 .box4 {
-  position: relative;
   display: inline-block;
   width: 47%;
   height: 42vh;
@@ -10191,7 +10187,7 @@ main {
 
 main h1 {
   display: block;
-  font-size: 180%;
+  font-size: 1.5em;
   text-align: center;
   margin-top: 10% !important; }
 
@@ -10200,9 +10196,7 @@ main p {
   font-size: 80%;
   text-align: center;
   color: #03b2d1;
-  position: absolute;
-  left: 20%;
-  top: 77%; }
+  padding-top: 11em; }
 
 .color1 {
   color: #056686; }
@@ -10215,28 +10209,6 @@ main p {
 
 .color4 {
   color: #3b51a2; }
-
-@media only screen and (max-width: 360px) {
-  .box1 {
-    width: 100%;
-    height: 50vh;
-    background-size: 40%;
-    margin: 8px 0px; }
-  .box2 {
-    width: 100%;
-    height: 50vh;
-    background-size: 40%;
-    margin: 8px 0px; }
-  .box3 {
-    width: 100%;
-    height: 50vh;
-    background-size: 40%;
-    margin: 8px 0px; }
-  .box4 {
-    width: 100%;
-    height: 50vh;
-    background-size: 40%;
-    margin: 8px 0px; } }
 
 .demo {
   display: block;
@@ -10390,3 +10362,83 @@ main p {
   border-radius: 50%;
   border: 5px solid #fff;
   width: 130px; }
+
+@media only screen and (max-width: 404px) {
+  .dare-logo, .useruser, .like, header form, #menu, .social-footer {
+    display: none; }
+  .check {
+    float: right;
+    margin-right: 14px; }
+  .wrapper {
+    width: 100%; }
+  main .right, .navbar, .side-bar, main nav {
+    display: none; }
+  .demo {
+    width: 100%;
+    height: auto;
+    margin-left: auto; }
+  .demo > img {
+    width: 100%;
+    height: auto;
+    padding: 0 10px; }
+  .info {
+    width: 100%;
+    bottom: auto;
+    padding-top: 0px;
+    padding-left: 78px; }
+  .slider-container {
+    width: 100%;
+    height: auto; }
+  .demo h2 {
+    top: 5%;
+    font-size: 20px; }
+  header .likeLike {
+    display: none; }
+  .info .likeLike {
+    display: none; }
+  .likeLike .person {
+    width: 20px;
+    padding: 0;
+    background-size: 20px; }
+  .likeLike p {
+    font-size: 15px; }
+  .likeLike .comment {
+    width: 20px;
+    font-size: 20px;
+    background-size: 20px;
+    padding: 0; }
+  .likeLike .heart {
+    width: 20px;
+    font-size: 20px;
+    background-size: 20px;
+    padding: 0; }
+  .timecheck img {
+    width: 12px;
+    height: 16px; }
+  .timeclock img {
+    width: 14px;
+    height: 14px; }
+  .time {
+    font-size: 12px;
+    padding-left: 0px; }
+  .timeclock {
+    height: 14px; }
+  .timetime {
+    width: auto;
+    margin-top: -13px; }
+  .clock {
+    display: none; }
+  .clock h6 > p {
+    font-size: 7px; }
+  .clock h6 {
+    font-size: 18px; }
+  .user {
+    top: 60%; }
+  .user .img-circle {
+    width: 60px;
+    margin-left: 5px; }
+  .user-name {
+    font-size: 18px;
+    margin-left: 10px; }
+  .arrow {
+    top: 15%; } }
