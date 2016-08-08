@@ -148,16 +148,14 @@ angular.module('starter')
     // Init the login modal
     $ionicModal.fromTemplateUrl('templates/modals/login-modal.html', {
       scope: $scope,
-      animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      animation: 'slide-in-up'
     }).then(function (modal) {
       $scope.loginModal = modal;
     });
 
     $ionicModal.fromTemplateUrl('templates/modals/forgot-password-modal.html', {
       scope: $scope,
-      animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      animation: 'slide-in-up'
     }).then(function (modal) {
       $scope.forgottenPasswordModal = modal;
     });

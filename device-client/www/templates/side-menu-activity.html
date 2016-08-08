@@ -1,0 +1,47 @@
+<ion-modal-view class="activity" view-title="Активности">
+
+	  <ion-content class="cont">
+		<div class="bar bar-header" style='font-size:2em'>
+			<a href=""  ng-click="sideMenuActivityModal.hide()"
+				<i class="ion-ios-close-outline"></i>
+			</a>
+			<span>
+				<h3>Активност</h3>
+			</span>
+		</div>
+		<div class="content has-header padding">
+			<ion-list class="has-header">
+				<ion-item ng-repeat="activity in activities" class="">
+						<div class="row">
+							<a href="#" class="item item-avatar">
+								<img ng-src="{{activity.user.avatar}}" >
+							</a>
+							<div class="col">
+								<div class="row" style="color: #01cfe4;">
+									{{activity.user.name}}
+								</div>
+								<div class="row">
+									{{activity.message}}
+								</div>
+							</div>    
+							<div class="col" style="margin-right: 2em;">
+								{{activity.lastUpdated}}
+							</div>        
+						</div>
+						<div class="row" ng-if="activity.pictures" >
+							<a  ng-repeat="picture in activity.pictures" class="item item-thumbnail-left" href="#">
+									<img ng-src="{{picture}}">
+							</a>
+						</div>
+						<div class="row" ng-if="activity.text">
+									<div class="item item-text-wrap">
+								{{activity.text}}
+							</div>
+						</div>
+					
+
+				</ion-item>
+			</ion-list>
+		</div>
+	</ion-content>
+</ion-modal-view>

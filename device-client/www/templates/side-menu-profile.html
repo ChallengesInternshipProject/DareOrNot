@@ -1,0 +1,23 @@
+<ion-view view-title="Profile">
+	  <ion-content class="cont">
+	<div class="bar bar-header">
+		<img class="fa"src="profilePicture.jpg">
+        <div>
+		<h2>User Name Here</h2>
+		<p>email@email.com</p></div>
+	</div>
+	<div class="content has-header">
+		<div class="list">
+			<div  class = "item item-icon-left" ng-click="callActivity()"><i class="fa fa-activities-active"></i>Активност</div>
+			<div  class = "item item-icon-left" ng-click="callMyDares()"><i class="fa fa-fav-active"></i>Моите предизвикателства</div>
+			<div  class = "item item-icon-left" ng-click="callMyMessages()"><i class="fa fa-chat-active"></i>Съобщения</div>
+			<div  class = "item item-icon-left" ng-click="callMyNotifications()"><i class="fa fa-notification-active"></i>Известия</div>
+			<a  class = "item item-icon-left" href="#/app/friends">
+				<i class="fa  fa-friends-active"></i>
+				Приятели
+			</a>
+			<div  class = "item item-icon-left" ng-click="callMyFavorites()"><i class="fa fa-love-active"></i>Любими</div>
+		</div>
+	</div>
+	</ion-content>
+</ion-view>
