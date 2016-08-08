@@ -1,534 +1,241 @@
-
-
-
-/*Don't display nav icon*/
-
-ul.navbar li.icon {
-  display: none;
-}
-
-span:active{
-  color: #ffb400;
-}
-
-
-
-aside{
-  display: inline-block;
-  vertical-align: top;
-  width: 367px;
-  height: 1700px;
-  background-color: #002945;
-  margin-left: -5px;
-}
-
-/*------central section-----*/
-
-section{
-  display: inline-block;
-  vertical-align: top;
-  width: 1057px;
-  height: 1700px;
-  background-color: #e8edf1;
-  margin-left: -4px;
-}
-
-.CentralNav{
-  width: 100%;
-  height: 52px;
-  padding-left: 70px;
-  background-color: #002c47;
-  box-shadow: 0px 3px 0px #fff inset;
-}
-
-.content .CentralNav  li{
-  width: auto;
-  height: 10px;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
-  list-style-type: none;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-weight: normal;
+  outline: none;
+  vertical-align: baseline;
 }
 
-.content .CentralNav>ul>li>a:hover{
-  border-bottom-color: #00b8d4;
-}
 
-
-.content .CentralNav>ul>li{
-  float: left;
-  position: relative;
-  padding-right: 15px;
-}
-
-.content .CentralNav>ul>li{
-  display: inline-block;
-  vertical-align: top;
-}
-.content .CentralNav>ul>li>a{
-  position: relative;
-  padding-top: 17px;
-  padding-right: 10px;
-  height: 52.5px;
-  width: auto;
-  text-decoration: none;
-  text-align: center;
-  background-color: #002c47;
-  border-bottom:3px solid transparent;
-  box-shadow: 0px 3px 0px #fff inset;
-  color: white;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
   display: block;
-  font-size: 15px;
 }
 
-
-
-span:active{
-  color: #ffb400;
+html {
+  height: 100%;
 }
-
-
-/*------right section-----------*/
-
-main .right{
-  display: inline-block;
-  vertical-align: top;
-  width:372px;
-  height: 1700px;
-  background-color: #ffffff;
-  margin-left: -4px;
-  border: 1px solid #002c47;
-}
-
-/*-------content slider 1---------------*/
-
-.demo{
-  display: block;
-  width: 1020px;
-  height: 480px;
-  background-color: #fff;
-  margin-left: 18px;
-  margin-top: 16px;
-  position:relative;
-}
-
-
-
-.demo>img{
-  position: relative;
-  width:1020px;
-  height:391px;
-}
-
-.demo h2{
-  position: absolute;
-  top: 15%;
-  color: #fff;
-  font-size: 40px;
-  padding-left: 30px;
-}
-
-.time{
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-}
-
-.timetime{
-  display: inline-block;
-  vertical-align: top;
-  /*padding-left: 150px;*/
-  padding-top: 30px;
-  width: 350px;
-}
-
-.likeLike{
-  display: inline-block;
-}
-
-.info .person{
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/user1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  height: 80px;
-  padding-top: 15px;
-  padding-left: 35px;
-}
-
-.info .comment{
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/speech1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  height: 80px;
-  padding-top: 15px;
-  padding-left: 35px;
-}
-
-.info .heart{
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/love1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  padding-top: 15px;
-  height: 80px;
-  padding-left: 35px;
-}
-
-.likeLike>p{
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 15px;
-  font-size: 20px;
-  color: #03b2d1;;
-}
-
-.likeLike .person{
-  width: 40px;
-}
-
-.likeLike .comment{
-  width: 40px;
-}
-
-.likeLike .heart{
-  width: 40px;
-}
-
-.clock h6{
-  font-size: 40px;
-  color:#03b2d1;
-}
-
-.clock h6>p{
-  color:#ffcf7d;
-  font-size: 16px;
-  line-height: 10px;
-}
-.clock{
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 30px;
-  padding-top: 10px;
-}
-
-.timecheck{
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-}
-
-.timecheck img{
-  width: 16px;
-  height: 20px;
-}
-
-.timeclock{
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  height: 16px;
-}
-
-.timeclock img{
-  width: 16px;
-  height: 16px;
-}
-
-.info{
-  position: relative;
-  bottom: 20px;
-  width: 910px;
-  padding-top:25px;
-  padding-left: 160px;
-}
-.socialtwo{
-  display: none;
-}
-.responsive-logo{
-  display: none;
-}
-
-
-/*-------arrows---------*/
-
-
-.fa-left{
-  background: url("../img/left.png") ;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.fa-right {
-  background: url("../img/right.png") ;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.arrow{
-  position: absolute;
-  top:30%;
+body{
+  font-family:"Open Sans";
   width: 100%;
 }
 
-.arrowSecond{
-  position: absolute;
-  top: 50%;
-  width: 100%;
-}
-.arrow img{
-  width:150px;
-  height:150px;
-  border: none;
-}
-
-/*-------image on slider-------*/
-.user{
-  position: absolute;
-  bottom: 5%;
-  left: 3%;
-}
-.user-name{
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font-size: 25px;
-  margin-top:10px;
-  margin-left:30px;
-}
-.user-pic{
-  display:inline-block;
-}
-.user .img-circle {
-  border-radius: 50%;
-  border: 5px solid #fff;
-  width: 130px;
+@font-face {
+  font-family:"Open Sans";
 }
 
 
-.block{
-  width: 368px;
-  height: 462px;
-  background-color: #012438;
-  border-left: 2px solid #03a2c0;
-  margin: -0.5px;
+main{
+  min-width:100%;
+  background-color:#e8edf0;
+  margin: 0 auto;
 }
 
-.block>p{
-  color: #fff;
-  padding: 30px 15px;
-  font:small-caps;
-}
-
-aside .block .person{
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/user.png);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 65px;
-  height: 80px;
-  padding-top: 15px;
-  padding-left: 75px;
-}
-
-aside .block .comment{
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/speech.png);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 65px;
-  height: 80px;
-  width: 75px;
-  padding-top: 15px;
-  padding-left: 35px;
-
-}
-
-aside .block .heart{
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/love.png);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 65px;
-  height: 80px;
-  width: 75px;
-  padding-top: 15px;
-  padding-left: 35px;
-
-}
-
-.likeBlock{
+.box1{
   position: relative;
-  left: 30%;
-  width: 160px;
-}
-
-.likeBlock p{
   display:inline-block;
   vertical-align: top;
-  font-size: 45px;
-  text-align: center top;
-  color: #03b2d1;
-
+  width: 47%;
+  height: 42vh;
+  background-color:#fff;
+  background-image:url(../img/funBig.png);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size: 60%;
+  margin: 2% 0.5% 1% 2%;
 }
 
-.likeBlock div{
-  display: block;
-  text-align: left;
-  padding-top: 35px;
-}
-
-.provocation p>span{
-  color: #03b2d1;
-  float: right;
-}
-
-.provocation div:nth-child(1){
-  background-image: url(../img/BusinessSmall.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  width: 358px;
-}
-
-.provocation div:nth-child(3){
-  background-image: url(../img/prizeSmall.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  width: 358px;
-}
-
-.provocation div:nth-child(5){
-  background-image: url(../img/charitySmall.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  width: 358px;
-}
-
-.block .fun p{
-  font-size: 14px;
-  width: 310px;
-  color: #fff;
-  padding:30px 15px;
-}
-
-.provocation p{
-  font-size: 14px;
-  width: 312px;
-  color: #fff;
-  padding:30px 15px;
-}
-
-.fun{
-  background-image: url(../img/funSmall.png);
-  background-position: right;
-  background-repeat: no-repeat;
-  width: 358px;
-}
-
-hr {
-  height: 1.5px;
-  /* Set the hr color */
-  color:#03b2d1; /* old IE */
-  background-color: #03b2d1; /* Modern Browsers */
-  border: none;
-  width:15%;
-  margin-left: 20px;
-}
-
-footer{
-  display: block;
-  width: 100%;
-  height: 80px !important;
-  padding:25px 40px 10px 110px;
-  color: #fff;
-  font-size:14px;
-  text-align: center;
-  background-color:#18293a;
-}
-
-
-footer .social-footer{
-  display: inline-block;
-  vertical-align:middle;
-  width: 100%;
-  height: 55px;
-}
-
-footer .social-footer>ul>li>a{
-  color: #ffb400;
-  text-decoration: none;
-  padding-right: 5px;
-}
-
-footer .social-footer>ul>li {
-  display: inline;
-  margin-right: 16px;
-}
-
-footer .social-footer>ul>li img{
+.box2{
   position: relative;
-  display: inline-block;
-  height: 50px;
-  line-height: 60px;
-  vertical-align: middle;
-  padding:0px 5px 10px 0px;
-}
-
-footer .social-footer>ul>li i{
-  color: #fff;
-}
-
-footer .social-footer>ul>li>i>span{
-  color: #03b2d1;;
-}
-
-.fa-fb {
-  background: url("../img/facebook.png") ;
-  background-repeat: no-repeat;
-  background-size: 60%;
-}
-
-.fa-tw {
-  background: url("../img/twitter.png") ;
-  background-repeat: no-repeat;
-  background-size:60%;
-
-}
-
-.fa-g {
-  background: url("../img/g+.png") ;
-  background-repeat: no-repeat;
-  background-size: 60%;
-}
-
-.fa-wi {
-  background: url("../img/wi-fi.png") ;
-  background-repeat: no-repeat;
-  background-size: 60%;
-}
-
-.social-buttons{
-  display: inline-block;
+  display:inline-block;
   vertical-align: top;
-  width: 40px;
-  height: 40px;
+  width: 47%;
+  height: 42vh;
+  background-color:#fff;
+  background-image:url(../img/BusinessBig.png);
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: 60%;
+  margin: 2% 1% 1% 0%;
 }
 
-.social-buttons a{
-  height: 40px;
-  width: 40px;
+.box3{
+  position: relative;
+  display:inline-block;
+  width: 47%;
+  height: 42vh;
+  background-color:#fff;
+  background-image:url(../img/prizeBig.png);
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: 60%;
+  margin: 1% 0.5% 2.5% 2%;
+}
+
+.box4{
+  position: relative;
+  display:inline-block;
+  width: 47%;
+  height: 42vh;
+  background-color:#fff;
+  background-image:url(../img/charityBig.png);
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: 60%;
+  margin: 1% 1% 2.5% 0%;
+}
+
+main h1{
+  display: block;
+  font-size: 180%;
+  text-align: center;
+  margin-top: 10% !important;
+}
+
+main p{
+  display: block;
+  font-size:80%;;
+  text-align: center;
+  color: #03b2d1;
+  position: absolute;
+  left: 20%;
+  top: 77%;
+}
+
+
+.color1{
+  color: #056686;
 
 }
 
-.social-buttons li{
-  height: 70px;
+.color2{
+  color: #dc9138;
 }
 
+.color3{
+  color: #cd4c4c;
+}
+
+.color4{
+  color: #3b51a2;
+}
+
+@media only screen and (max-width: 360px){
+
+  .box1{
+    width: 100%;
+    height: 50vh;
+    background-size: 40%;
+    margin: 8px 0px;
+  }
+
+  .box2{
+    width: 100%;
+    height: 50vh;
+    background-size: 40%;
+    margin: 8px 0px;
+  }
+
+  .box3{
+    width: 100%;
+    height: 50vh;
+    background-size: 40%;
+    margin: 8px 0px;
+  }
+
+  .box4{
+    width: 100%;
+    height: 50vh;
+    background-size: 40%;
+    margin: 8px 0px;
+  }
+
+}

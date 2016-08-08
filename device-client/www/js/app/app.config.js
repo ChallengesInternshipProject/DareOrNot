@@ -60,10 +60,10 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 		.state('app.home', {
 			url: '/home',
-	 
+
 						templateUrl: 'templates/tab-home.html',
 						controller: 'HomeCtrl'
-	
+
 
 		})
 		.state('app.profile',{
@@ -93,10 +93,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 		.state('app.timeline', {
 			url: '/timeline',
 			templateUrl: 'templates/tab-timeline.html',
-			controller: 'TimelineCtrl',
-			resolve: {
-				isAuthenticated: isAuthenticated
-			}
+			controller: 'TimelineCtrl'
 		})
 		.state('app.categories', {
 			url: '/categories',
@@ -158,7 +155,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			url: '/tab',
 			abstract: true,
 			templateUrl: 'tabs.html'
- 
+
 			// Each tab has its own nav history stack:
 		})
 		.state('tab.login', {
@@ -186,10 +183,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			views: {
 				'tab-users': {
 					templateUrl: 'templates/tab-users.html',
-					controller: 'UsersCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'UsersCtrl'
 				}
 			}
 		})
@@ -198,10 +192,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			views: {
 				'tab-users': {
 					templateUrl: 'templates/tab-user-detail.html',
-					controller: 'UserDetailCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'UserDetailCtrl'
 				}
 			}
 		})
@@ -210,10 +201,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			views: {
 				'tab-chat': {
 					templateUrl: 'templates/tab-chat.html',
-					controller: 'ChatCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'ChatCtrl'
 				}
 			}
 		})
@@ -222,34 +210,16 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			views: {
 				'tab-chat': {
 					templateUrl: 'templates/tab-chat-detail.html',
-					controller: 'ChatDetailCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'ChatDetailCtrl'
 				}
 			}
 		})
-		// .state('tab.map', {
-		//   url: '/map',
-		//   views: {
-		//     'tab-map': {
-		//       templateUrl: 'templates/tab-map.html',
-		//       controller: 'MapCtrl',
-		//       resolve: {
-		//         isAuthenticated: isAuthenticated
-		//       }
-		//     }
-		//   }
-		// })
 		.state('tab.gMaps', {
 			url: '/gMaps',
 			views: {
 				'tab-gMaps': {
 					templateUrl: 'templates/tab-gMaps.html',
-					controller: 'GoogleMapCtrl',
-					// resolve: {
-					//   isAuthenticated: isAuthenticated
-					// }
+					controller: 'GoogleMapCtrl'
 				}
 			}
 		})
@@ -259,9 +229,6 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				'tab-contacts': {
 					templateUrl: 'templates/tab-contacts.html',
 					controller: 'ContactsCtrl'
-					// resolve: {
-					//   isAuthenticated: isAuthenticated
-					// }
 				}
 			}
 		})
@@ -270,10 +237,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			views: {
 				'tab-dare-list': {
 					templateUrl: 'templates/tab-dare-list.html',
-					controller: 'DareListCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'DareListCtrl'
 				}
 			}
 		})
@@ -282,27 +246,21 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			views: {
 				'tab-new-dare': {
 					templateUrl: 'templates/tab-new-dare.html',
-					controller: 'NewDareCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'NewDareCtrl'
 				}
 			}
 		})
-	 
+
 		.state('tab.calendar', {
 			url: '/calendar',
 			views: {
 				'tab-calendar': {
 					templateUrl: 'templates/tab-calendar.html',
-					controller: 'CalendarCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated
-					}
+					controller: 'CalendarCtrl'
 				}
 			}
 		})
-		
+
 		.state('tab.home', {
 			url: '/home',
 			views: {
@@ -322,7 +280,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				}
 			}
 		})
-		
+
 		.state('tab.landing', {
 			url: '/landing',
 			views: {
