@@ -1,4 +1,4 @@
-angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider, $ionicConfigProvider) {
+angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider, $ionicConfigProvider,ChartJsProvider) {
 	// Ionic uses AngularUI Router which uses the concept of states
 	// Learn more here: https://github.com/angular-ui/ui-router
 	// Set up the various states which the app can be in.
@@ -9,24 +9,28 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 	//Check if the user is authenticated
 	function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
 
-		var data = {};
-		if (AuthFactory.isAuthenticated()) {
-			$log.info('You are 100% logged no scam !');
-			return $q.when();
-		} else {
-			// console.log('false')
-			$timeout(function () {
-				// modal.loginModal.show();
+	var data = {};
+	if (AuthFactory.isAuthenticated()) {
+		$log.info('You are 100% logged no scam !');
+		return $q.when();
+	} else {
+		// console.log('false')
+		$timeout(function () {
+			// modal.loginModal.show();
 
-				console.log('not logged');
-				// $state.go('tab.home');
+			console.log('not logged');
+			// $state.go('tab.home');
 
-				//Refresh the state because $state.go is not working !!! IMPORTANT
-				$state.go($state.current, {}, {reload: true});
-			}, 0);
-			return $q.reject();
-		}
+			//Refresh the state because $state.go is not working !!! IMPORTANT
+			$state.go($state.current, {}, {reload: true});
+		}, 0);
+		return $q.reject();
 	}
+
+
+		
+}
+	
 
 	var datePickerObj = {
 
@@ -60,11 +64,15 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 		.state('app.home', {
 			url: '/home',
-	 
-						templateUrl: 'templates/tab-home.html',
-						controller: 'HomeCtrl'
-	
-
+			templateUrl: 'templates/tab-home.html',
+			controller: 'HomeCtrl',
+			resolve: {
+					UserResolver: ['UserService', function (UserService) {
+						return UserService.getAllUsers().then(function (data) {
+							return data
+						})
+					}]
+				}
 		})
 		.state('app.profile',{
 			url: '/profile',
@@ -142,6 +150,11 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			templateUrl: 'templates/tab-statistics.html',
 			controller: 'StatisticsCtrl'
 		})
+		.state('app.contacts', {
+			url: '/contacts',
+			templateUrl: 'templates/tab-contacts.html',
+			controller: 'ContactsCtrl'
+		})
 
 
 
@@ -156,7 +169,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			url: '/tab',
 			abstract: true,
 			templateUrl: 'tabs.html'
- 
+	
 			// Each tab has its own nav history stack:
 		})
 		.state('tab.login', {
@@ -251,18 +264,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				}
 			}
 		})
-		.state('tab.contacts', {
-			url: '/contacts',
-			views: {
-				'tab-contacts': {
-					templateUrl: 'templates/tab-contacts.html',
-					controller: 'ContactsCtrl'
-					// resolve: {
-					//   isAuthenticated: isAuthenticated
-					// }
-				}
-			}
-		})
+		
 		.state('tab.dare-list', {
 			url: '/dare-list',
 			views: {
@@ -287,7 +289,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 				}
 			}
 		})
-	 
+		
 		.state('tab.calendar', {
 			url: '/calendar',
 			views: {
