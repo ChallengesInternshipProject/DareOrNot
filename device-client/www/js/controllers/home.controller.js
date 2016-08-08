@@ -23,13 +23,17 @@ angular.module('starter')
     $scope.isLogged = false;
 
 
-    $scope.test = function () {
+    // Ionic.Auth.login('facebook').then(function (response) {
+    //   $log.info(response);
+    // });
 
+    $scope.test = function () {
       LoginService.checkUserExists('krasimirvelichkov@gmail.com')
         .then(function (result) {
           $log.info(result)
         });
     };
+
     $scope.$watch('isLogged', function () {
       // $log.info('test : ', $localStorage.test)
       // $log.info('$localStorage isLogged ', $localStorage.isLogged);
@@ -148,14 +152,16 @@ angular.module('starter')
     // Init the login modal
     $ionicModal.fromTemplateUrl('templates/modals/login-modal.html', {
       scope: $scope,
-      animation: 'slide-in-up'
+      animation: 'slide-in-up',
+      hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.loginModal = modal;
     });
 
     $ionicModal.fromTemplateUrl('templates/modals/forgot-password-modal.html', {
       scope: $scope,
-      animation: 'slide-in-up'
+      animation: 'slide-in-up',
+      hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.forgottenPasswordModal = modal;
     });
