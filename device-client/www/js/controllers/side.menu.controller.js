@@ -6,7 +6,7 @@ angular.module('starter.controllers')
 
 
     setInterval(function () {
-      $ionicInterval.hide();
+      $ionicLoading.hide();
     }, 1000);
     
     $scope.activities = [
