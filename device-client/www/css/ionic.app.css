@@ -10237,3 +10237,156 @@ main p {
     height: 50vh;
     background-size: 40%;
     margin: 8px 0px; } }
+
+.demo {
+  display: block;
+  width: 1409px;
+  height: 640px;
+  background-color: #fff;
+  margin-left: 18px;
+  margin-top: 16px;
+  position: relative; }
+
+.demo > img {
+  position: relative;
+  width: 1409px;
+  height: 540px; }
+
+.demo h2 {
+  position: absolute;
+  top: 15%;
+  color: #fff;
+  font-size: 40px;
+  padding-left: 30px; }
+
+.time {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px; }
+
+.timetime {
+  display: inline-block;
+  vertical-align: top;
+  /*padding-left: 150px;*/
+  padding-top: 30px;
+  width: 350px; }
+
+.likeLike {
+  display: inline-block; }
+
+.info .person {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/user1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  height: 80px;
+  padding-top: 15px;
+  padding-left: 35px; }
+
+.info .comment {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/speech1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  height: 80px;
+  padding-top: 15px;
+  padding-left: 35px; }
+
+.info .heart {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/love1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  padding-top: 15px;
+  height: 80px;
+  padding-left: 35px; }
+
+.likeLike > p {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 15px;
+  font-size: 20px;
+  color: #03b2d1; }
+
+.likeLike .person {
+  width: 40px; }
+
+.likeLike .comment {
+  width: 40px; }
+
+.likeLike .heart {
+  width: 40px; }
+
+.clock h6 {
+  font-size: 40px;
+  color: #03b2d1; }
+
+.clock h6 > p {
+  color: #ffcf7d;
+  font-size: 16px;
+  line-height: 10px; }
+
+.clock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 30px;
+  padding-top: 10px; }
+
+.timecheck {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px; }
+
+.timecheck img {
+  width: 16px;
+  height: 20px; }
+
+.timeclock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  height: 16px; }
+
+.timeclock img {
+  width: 16px;
+  height: 16px; }
+
+.info {
+  position: relative;
+  bottom: 20px;
+  width: 910px;
+  padding-top: 25px;
+  padding-left: 160px; }
+
+.socialtwo {
+  display: none; }
+
+.responsive-logo {
+  display: none; }
+
+.user {
+  position: absolute;
+  top: 74%;
+  left: 3%; }
+
+.user-name {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 30px; }
+
+.user-pic {
+  display: inline-block; }
+
+.user .img-circle {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 130px; }

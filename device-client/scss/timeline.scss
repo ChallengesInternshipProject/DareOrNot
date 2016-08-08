@@ -1,0 +1,294 @@
+
+
+	 .demo{ 
+		display: block;
+		width: 1409px;
+    	height: 640px;
+		background-color: #fff;
+		margin-left: 18px;
+		margin-top: 16px;
+		position:relative;
+		}
+
+
+
+	.demo>img{
+		position: relative;
+	  	width: 1409px;
+    	height: 540px;
+	 }
+
+	.demo h2{
+	 	position: absolute;
+	 	top: 15%;
+	 	color: #fff;
+	 	font-size: 40px;
+	 	padding-left: 30px;
+	 }
+
+	.time{
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 4px;
+	}
+
+	.timetime{
+		display: inline-block;
+		vertical-align: top;
+		/*padding-left: 150px;*/
+		padding-top: 30px;
+		width: 350px;
+	}
+
+	.likeLike{
+	 	display: inline-block;
+	 }
+
+	.info .person{
+	 	display: inline-block;
+		vertical-align: top;
+		background-image: url(../img/user1.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 40px;
+		height: 80px;
+		padding-top: 15px;
+		padding-left: 35px;
+	 }
+
+	.info .comment{
+	 	display: inline-block;
+		vertical-align: top;
+		background-image: url(../img/speech1.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 40px;
+		height: 80px;
+		padding-top: 15px;
+		padding-left: 35px;
+	 }
+
+	.info .heart{
+	 	display: inline-block;
+		vertical-align: top;
+		background-image: url(../img/love1.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 40px;
+		padding-top: 15px;
+		height: 80px;
+		padding-left: 35px;
+	 }
+
+	.likeLike>p{
+		display: inline-block;
+		vertical-align: top;
+		padding-top: 15px;
+		font-size: 20px;
+		color: #03b2d1;;
+	}
+
+	.likeLike .person{
+		width: 40px;
+	}
+
+	.likeLike .comment{
+		width: 40px;
+	}
+
+	.likeLike .heart{
+		width: 40px;
+	}
+
+	.clock h6{
+		font-size: 40px;
+		color:#03b2d1;
+	}
+
+	.clock h6>p{
+		color:#ffcf7d;
+		font-size: 16px;
+		line-height: 10px;
+	}
+	.clock{
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 30px;
+		padding-top: 10px;
+	}
+
+	.timecheck{
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 4px;
+	}
+
+	.timecheck img{
+		width: 16px;
+		height: 20px;
+	}
+
+	.timeclock{
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 4px;
+		height: 16px;
+	}
+
+	.timeclock img{
+		width: 16px;
+		height: 16px;
+	}
+
+	.info{
+		position: relative;
+		bottom: 20px;
+		width: 910px;
+		padding-top:25px;
+		padding-left: 160px;
+	}
+	.socialtwo{
+		display: none;
+	}
+	.responsive-logo{
+		display: none;
+	}
+	.user{
+		position: absolute;
+		top: 74%;
+		left: 3%;
+		}
+ 	.user-name{
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		font-size: 25px;
+		margin-top:10px;
+		margin-left:30px;
+		}
+	.user-pic{
+		display:inline-block;	
+		}
+	.user .img-circle {
+		border-radius: 50%;
+		border: 5px solid #fff;
+		width: 130px;
+	}
+
+
+@media only screen and (max-width: 404px){
+ 
+  .dare-logo,.useruser,.like,header form,#menu, .social-footer{
+    display: none;
+  }
+  .check{
+    float: right;
+    margin-right: 14px;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  main .right, .navbar, .side-bar, main nav{
+    display: none;
+  }
+  .demo{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+  } 
+  .demo > img{
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+  .info{
+    width: 100%;
+    bottom: auto;
+    padding-top: 0px;
+    padding-left: 78px;
+  }
+  .slider-container{
+    width: 100%;
+    height: auto;
+  }
+ .demo h2{
+    top: 5%;
+    font-size: 20px;
+  }
+  header .likeLike{
+    display: none;
+  }
+
+  .info .likeLike{
+    display: none;
+  }
+  .likeLike .person {
+    width: 20px;
+    padding: 0;
+    background-size: 20px;
+  }
+  .likeLike  p{
+    font-size: 15px;
+  }
+  .likeLike .comment{
+    width: 20px;
+    font-size: 20px;
+    background-size: 20px;
+    padding: 0;
+  }
+  .likeLike .heart {
+    width: 20px;
+    font-size: 20px;
+    background-size: 20px;
+    padding: 0;
+  }
+  .timecheck img {
+    width: 12px;
+    height: 16px;
+  }
+
+  .timeclock img{
+    width: 14px;
+    height: 14px;
+  }
+  .time{
+    font-size: 12px;
+    padding-left: 0px;
+  }
+  .timeclock{
+    height: 14px;
+  }
+  .timetime{
+    width: auto;
+    margin-top: -13px;
+  }
+
+  .clock{
+    display: none;
+  }
+  .clock h6 > p{
+    font-size: 7px;
+  }
+  .clock h6 {
+    font-size: 18px;
+  }
+  .user{
+    top: 60%;
+  }
+  .user .img-circle{
+    width: 60px;
+    margin-left: 5px;
+  }
+ .user-name{
+    font-size: 18px;
+    margin-left: 10px;
+  }
+ .arrow{
+    top:15%;
+  }
+
+ 
+  }
+
+
+
