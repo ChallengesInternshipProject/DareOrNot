@@ -1,0 +1,611 @@
+<ion-view>
+
+  <ion-content>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/responsive.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/javascript" src="js/dare.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    <nav id="menu-items">
+      <span class="close-side-bar" onClick="closeLeftSideBar()">X</span>
+      <ul>
+        <li><a href="#">НАЧАЛО</a></li>
+        <li><a href="#">КАТЕГОРИИ</a></li>
+        <li><a id="challenge" onClick="toggleChallenges()">ПРЕДИЗВИКАТЕЛСТВА</a>
+          <ul class="challenge-submenu">
+            <li><a href="#">Най-нови</a></li>
+            <li><a href="#">Най-добре платени</a></li>
+            <li><a href="#">Най-коментирани</a>
+            <li><a href="#">Най-споделяни</a></li>
+            <li><a href="#">Най-разглеждани</a></li>
+            <li><a href="#">Най-харесвани</a>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <header>
+        <span onClick="openLeftSideBar()" class="hamburger"></span>
+        <img class="dare-logo"  src="../ionic/img/DareLogo.png">
+        <nav id="menu">
+          <input type="checkbox" hidden id="menu-toggle"/>
+          <label id="open" for="menu-toggle"></label>
+          <div>
+            <ul>
+              <li><a href="#">НАЧАЛО</a></li>
+              <li><a href="#">КАТЕГОРИИ</a></li>
+              <li><a href="#">ПРЕДИЗВИКАТЕЛСТВА</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="useruser">
+          <div class="img_user">
+          </div>
+          <p style="float:right;color:#fff;padding-top:25px;padding-left:7px; font-size:22px;">Милена Милева</p>
+        </div>
+        <div class="like">
+          <div class="person">
+          </div>
+          <p>57</p>
+          <div class="comment">
+          </div>
+          <p>34</p>
+          <div class="heart">
+          </div>
+          <p>234</p>
+        </div>
+        <form>
+          <input type="text" placeholder="Placeholder text" value="НОВО ПРЕДИЗВИКАТЕЛСТВО">
+        </form>
+        <div class="check">
+          <div class="search">
+            <img src="img/Calendar.png">
+          </div>
+          <div class="search">
+            <img src="img/CheckIn.png">
+          </div>
+          <div class="search">
+            <img src="img/MagniFire.png">
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <nav>
+          <ul class="navbar">
+            <li class="icon" onClick="myFunction()">
+              <a class="active" href="#">
+           	<span class="fa-stack fa-2x">
+              <i class="fa fa-bars fa-stack-1x "></i>
+            </span>
+              </a>
+            </li>
+            <li class="fa fa-user" >
+              <a href="#home"> </a>
+            </li>
+            <li class="fa fa-activities" >
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-fav" >
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-speech">
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-notification" >
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-friends">
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-love">
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-event" >
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-categories">
+              <a href="#">	</a>
+            </li>
+            <li class="fa fa-stat">
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-history" >
+              <a href="#">	</a>
+            </li>
+            <li class="fa fa-settings" >
+              <a href="#"> </a>
+            </li>
+            <li class="fa fa-out">
+              <a href="#">	</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- `````````````````` Template changes come here```````````````````````````` -->
+        <!-- <section class="slider-container">
+                    <nav class="CentralNav">
+                            <ul>
+                                <li><a href="#">НАЙ-НОВИ</a></li>
+                                <li><a href="#">НАЙ-ДОБРЕ ПЛАТЕНИ</a></li>
+                                <li><a href="#">НАЙ-КОМЕНТИРАНИ</a></li>
+                                <li><a href="#">НАЙ-СПОДЕЛЯНИ</a></li>
+                                <li><a href="#">НАЙ-РАЗГЛЕЖДАНИ</a></li>
+                                <li><a href="#">НАЙ-СПОДЕЛЯНИ</a></li>
+                            </ul>
+                    </nav>
+            </section> -->
+
+
+        <section class="leading-page">
+          <article class="cover">
+            <div  class="demo">
+              <img class="mySlides" src="img/cover.jpg"style="display: block;"/>
+              <img class="mySlides" src="img/cover1.jpg"style="display: none;"/>
+              <img class="mySlides" src="img/cover2.jpg"style="display: none;"/>
+            </div>
+            <h2>Нахрани улична котка</h2>
+            <div class="arro">
+              <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+              </a>
+              <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+              </a>
+            </div>
+            <div class="user">
+              <img class="info img-circle" src="img/photo.jpg" style="border: none;"/>
+              <div class="info">
+                <h2>Свилен Митев</h2>
+                <i class="ionic ionic ion-ios-location-outline"></i>
+                <p>София</p>
+                <i class="ionic ionic ion-ios-location-outline"></i>
+                <p style="font-size: 30px;">Преди 4 Часа и 30 минути</p>
+              </div>
+              <div class="info">
+                <div class="person">
+                </div>
+                <p>57</p>
+                <div class="comment">
+                </div>
+                <p>34</p>
+                <div class="heart">
+                </div>
+                <p>234</p>
+              </div>
+              <div class="info clock">
+                <p>Оставащо време</p>
+                <h6>23:40Ч.</h6>
+              </div>
+            </div>
+          </article>
+          <article class="cover dare">
+            <div class="row">
+              <div class="coming">
+                <div class="user-dare">
+                  <div class="img-circle"/></div>
+                <p>93 845</p>
+                <h2>Предизвикателства</h2>
+              </div>
+            </div>
+            <div class="coming">
+              <div class="user-dare">
+                <div class="img-circle"/></div>
+              <p>344 214</p>
+              <h2>Активни потребители</h2>
+            </div>
+    </div>
+    <div class="coming">
+      <div class="user-dare">
+        <div class="img-circle"/></div>
+      <p>321 469 лв.</p>
+      <h2>Изплатени награди</h2>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+      <h1>Последни предизвикателства</h1>
+      <article class="coming coming-1">
+
+        <div  class="demo-1">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+        </div>
+        <h2>Прекарай с мен 10 дни в Рим</h2>
+        <div class="arrow">
+          <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+          </a>
+          <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+          </a>
+        </div>
+        <div class="user-1">
+          <img src="img/photo.jpg" align="top" class="img-circle"/>
+        </div>
+      </article>
+      <article class="coming coming-1">
+
+        <div  class="demo-1">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+        </div>
+        <h2>Нахрани улична котка</h2>
+        <div class="arrow">
+          <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+          </a>
+          <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+          </a>
+        </div>
+        <div class="user-1">
+          <img src="img/photo.jpg" align="top" class="img-circle"/>
+        </div>
+      </article>
+      <article class="coming coming-1">
+
+        <div  class="demo-1">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+        </div>
+        <h2>Състезание за най-добро суши</h2>
+        <div class="arrow">
+          <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+          </a>
+          <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+          </a>
+        </div>
+        <div class="user-1">
+          <img src="img/photo.jpg" align="top" class="img-circle"/>
+        </div>
+      </article>
+    </div>
+    <div class="row">
+      <h1>Най-активни предизвикателства</h1>
+      <article class="coming coming-1">
+
+        <div  class="demo-1">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+        </div>
+        <h2>Прекарай с мен 10 дни в Рим</h2>
+        <div class="arrow">
+          <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+          </a>
+          <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+          </a>
+        </div>
+        <div class="user-1">
+          <img src="img/photo.jpg" align="top" class="img-circle"/>
+        </div>
+      </article>
+      <article class="coming coming-1">
+
+        <div  class="demo-1">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+        </div>
+        <h2>Нахрани улична котка</h2>
+        <div class="arrow">
+          <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+          </a>
+          <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+          </a>
+        </div>
+        <div class="user-1">
+          <img src="img/photo.jpg" align="top" class="img-circle"/>
+        </div>
+      </article>
+      <article class="coming coming-1">
+
+        <div  class="demo-1">
+          <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+        </div>
+        <h2>Състезание за най-добро суши</h2>
+        <div class="arrow">
+          <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+          </a>
+          <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+          </a>
+        </div>
+        <div class="user-1">
+          <img src="img/photo.jpg" align="top" class="img-circle"/>
+        </div>
+      </article>
+    </div>
+    </article>
+    <article class="cover publicity">
+      <div class="consumption">
+        <h1>Най-активни потребители</h1>
+        <ul>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Михайл Митев</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Ангел Илиев</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Свилен Митев</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Лили Петрова</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Иван Тенев</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Ива Стефанова</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Ралица Тонева</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="img-circle" src="img/photo.jpg"/>
+              <h2>Милен Милчев</h2>
+              <i class="ionic ionic ion-ios-location-outline"></i>
+              <p>София</p>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="call row">
+        <img class="iphone" src="img/iphone.jpg"/>
+        <h1>Call to action text</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p style="background: transparent url(img/android.png) no-repeat; width: 17%; display: inline-block; height: 15%;"><a href="#"></a></p>
+        <p style="background: transparent url(img/ios.png) no-repeat; width: 19%; display: inline-block; height: 15%;">
+          <a href="#"></a></p>
+      </div>
+      <div class="bulletin row">
+
+        <form action="#" method="post" enctype="text/plain" style="width: 100%; height:60%; margin: -10%; padding: 0px;">
+          <h1>Запишете се за нашият бюлетин</h1>
+          <div style="border: 2px solid blue; display: inline; text-align: left;">
+				<span class="fa-stack">
+					<i class="fa fa-envelope-o"></i>
+			    </span>
+            <input class=" fa-envelope-o" name="mail" value="Вашият имейл" style="border: medium none; width: 20%;" type="text"></div>
+
+          <input type="submit" value="ИЗПРАТИ" style="width: 20%; background: rgb(6, 104, 134) none repeat scroll 0% 0%; color: rgb(255, 255, 255); font-size: 17px;">
+        </form>
+      </div>
+
+    </article>
+    <article class="cover grade">
+      <div class="row">
+        <h1>Класации</h1>
+        <ul>
+          <li><a href="#">Дневни</a></li>
+          <li><a href="#">Седмични</a></li>
+          <li><a href="#">Месечни</a></li>
+          <li><a href="#">Годишни</a></li>
+          <li><a href="#">All time</a></li>
+        </ul></br>
+        <ul>
+          <li><a href="#">Най-нови</a></li>
+          <li><a href="#">Най-добре платени</a></li>
+          <li><a href="#">Най-коментирани</a></li>
+          <li><a href="#">Най-споделяни</a></li>
+          <li><a href="#">Най-разглеждани</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <article class="coming coming-1">
+
+          <div  class="demo-1">
+            <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+          </div>
+          <h2>Нахрани улична котка</h2>
+          <div class="arrow">
+            <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+            </a>
+            <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+            </a>
+          </div>
+          <div class="user-1">
+            <img src="img/photo.jpg" align="top" class="img-circle"/>
+          </div>
+        </article>
+        <article class="coming coming-1">
+
+          <div  class="demo-1">
+            <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+          </div>
+          <h2>Нахрани улична котка</h2>
+          <div class="arrow">
+            <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+            </a>
+            <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+            </a>
+          </div>
+          <div class="user-1">
+            <img src="img/photo.jpg" align="top" class="img-circle"/>
+          </div>
+        </article>
+        <article class="coming coming-1">
+
+          <div  class="demo-1">
+            <img class="mySlides" src="https://placeimg.com/400/200/people"style="display: block;"/>
+          </div>
+          <h2>Нахрани улична котка</h2>
+          <div class="arrow">
+            <a class="fa fa-left" style="float: left" onclick="plusDivs(-1)">
+
+            </a>
+            <a class="fa fa-right" style="float: right" onclick="plusDivs(+1)">
+
+            </a>
+          </div>
+          <div class="user-1">
+            <img src="img/photo.jpg" align="top" class="img-circle"/>
+          </div>
+        </article>
+      </div>
+      <div class="row">
+        <h1>Нашите партньори</h1>
+        <ul>
+          <li>
+            <a href="cnn.com">
+              <img src="img/cnn.png" class="img-size" alt="" target="_blank"/>
+            </a>
+          </li>
+          <li>
+            <a href="nova.com">
+              <img src="img/nova.png" class="img-size" alt="" target="_blank"/>
+            </a>
+          </li>
+          <li>
+            <a href="nova.com">
+              <img src="img/blizoo.png" class="img-size" alt="" target="_blank"/>
+            </a>
+          </li>
+          <li>
+            <a href="cnbc.com">
+              <img src="img/cnbc.png" class="img-size" alt="" target="_blank"/>
+            </a>
+          </li>
+          <li>
+            <a href="bulst.com">
+              <img src="img/bulst.png" class="img-size" alt="" target="_blank"/>
+            </a>
+          </li>
+          <li>
+            <a href="btv.com">
+              <img src="img/btv.png" class="img-size" alt="" target="_blank"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <h1>Последни коментари</h1>
+
+        <article class="coming coming-1">
+          <h3>Милен Милчев</h3>
+          <div class="user-2">
+            <img src="img/photo.jpg" align="top" class="img-circle"/>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article class="coming coming-1">
+          <h3>Милен Милчев</h3>
+          <div class="user-2">
+            <img src="img/photo.jpg" align="top" class="img-circle"/>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article class="coming coming-1">
+          <h3>Милен Милчев</h3>
+          <div class="user-2">
+            <img src="img/photo.jpg" align="top" class="img-circle"/>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </article>
+
+      </div>
+    </article>
+    </section>
+
+    <!-- ```````````````````` Template end here ```````````````````````````` -->
+    </main>
+    <footer>
+      <div class="socialtwo">
+        <div class="likeLike">
+          <div class="separate">
+            <div class="person">
+            </div>
+            <p>57</p>
+          </div>
+          <div class="separate">
+            <div class="comment">
+            </div>
+            <p>34</p>
+          </div>
+          <div class="separate">
+            <div class="heart">
+            </div>
+            <p>234</p>
+          </div>
+        </div>
+        <div class="responsive-logo">
+          <img src="../ionic/img/dare_logo_footer.png">
+        </div>
+      </div>
+      <nav class="social-footer">
+        <ul style="width: 100%; padding: 0%;">
+          <li><a href="#">За нас</a></li>
+          <li><a href="#">Новини</a></li>
+          <li><a href="#">Общи условия</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Как работи</a></li>
+          <li><a href="#">Контакти</a></li>
+          <li><i> © 2015 <span> Dare Or Not?</span> All rights reserved</i></li>
+          <li><a href="#"><img id="big" src="img/android.png"/></a></li>
+          <li><a href="#"><img id="big" src="img/ios.png"></a></li>
+          <li><a href="#"><img src="img/pp-logo.png"></a></li>
+          <li><a href="#"><img src="img/visa.png"/></a></li>
+          <li><a href="#"><img src="img/mastercard.png"/></a></li>
+          <li><a href="#"><img src="img/easypay.png"/></a></li>
+          <li class=" fa-fb"><a class="social-buttons" href="https://www.facebook.com/" target="_blank"></a></li>
+          <li class=" fa-tw"><a class="social-buttons" href="https://www.twitter.com/" target="_blank"></a></li>
+          <li class="fa-g"><a class="social-buttons" href="https://www.google.com/" target="_blank"></a></li>
+          <li class=" fa-wi"><a class="social-buttons" href="https://www.google.com/" target="_blank"></a></li>
+        </ul>
+      </nav>
+
+    </footer>
+    </div>
+    </body>
+    </html>
+  </ion-content>
+
+</ion-view>

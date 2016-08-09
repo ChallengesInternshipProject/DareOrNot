@@ -1,0 +1,48 @@
+
+	<!-- Slide to the left  -->
+	<div ng-click="nextSlide()">Arrow Left</div>
+	<span>
+		{{challenge.title}}
+	</span>
+	<ion-slide-box on-slide-changed="slideChanged(index)">
+		<ion-slide ng-repeat='picture in challenge.pictures'>
+			<div>
+				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
+				<br>
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+	<!-- Slide to the right -->
+	<div ng-click="previousSlide()">Arrow right</div>
+
+	<div class="footer">
+		<span class="avatar">
+			<a class="item item-avatar" href="#">
+				<img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}">
+			</a>
+		</span>
+		<span>
+			<i class="icon ion-ios-location-outline"></i>
+			{{challenge.city}}
+		</span>
+		<span>
+			<i class="icon ion-ios-timer-outline"></i>
+			{{challenge.timeElapsed}}
+		</span>
+		<span>
+			<i class="icon ion-ios-person-outline"></i>
+			{{challenge.invitedUsers.length}}
+		</span>
+		<span>
+			<i class="icon ion-ios-chatbubble-outline"></i>
+			{{challenge.comments}}
+		</span>
+		<span>
+			<i class="icon ion-ios-heart-outline"></i>
+			{{challenge.likes}}
+		</span>
+		<span>
+			<h5>Приключва:</h5>
+			{{challenge.timeLeft}}
+		</span>
+	</div>
