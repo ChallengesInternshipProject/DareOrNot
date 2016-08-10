@@ -10731,69 +10731,76 @@ ion-view ion-content {
     font-size: 10px; }
 
 /* CSS list card */
-.TimeLineCard .arrows-right {
-  font-size: 4em;
-  float: right;
-  /* width: 100%; */
-  margin-top: -50%;
-  padding: 0;
-  position: relative;
-  color: #fff; }
-
-.TimeLineCard .arrows-left {
-  font-size: 4em;
-  float: left;
-  /* width: 100%; */
-  margin-top: -50%;
-  padding: 0;
-  position: relative;
-  color: #fff; }
-
-.TimeLineCard .arrows {
-  color: #fff;
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  font-size: 2em; }
-
-.TimeLineCard div.slider-pager {
-  visibility: hidden; }
-
-.TimeLineCard .footer {
-  width: 100%;
-  /* height: 10%; */
-  position: relative;
-  text-align: center;
-  display: inline-flex;
-  position: relative;
-  top: -4em;
-  width: 100%;
-  height: 35%;
-  padding: 1vh;
-  background: rgba(27, 73, 88, 0.3); }
-  .TimeLineCard .footer span {
-    width: 15%; }
-  .TimeLineCard .footer .avatar a {
-    border-radius: 50%; }
+.TimeLineCard {
+  max-height: 10em; }
+  .TimeLineCard .arrows-right {
+    font-size: 4em;
+    float: right;
+    /* width: 100%; */
+    margin-top: -50%;
+    padding: 0;
+    position: relative;
+    color: #fff; }
+  .TimeLineCard .arrows-left {
+    font-size: 4em;
+    float: left;
+    /* width: 100%; */
+    margin-top: -50%;
+    padding: 0;
+    position: relative;
+    color: #fff; }
+  .TimeLineCard .arrows {
+    color: #fff;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-size: 2em; }
+  .TimeLineCard div.slider-pager {
+    visibility: hidden; }
+  .TimeLineCard .footer {
+    width: 100%;
+    /* height: 10%; */
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: -54px;
+    width: 100%;
+    height: 35%;
+    padding: 1vh;
+    background: rgba(27, 73, 88, 0.3); }
+    .TimeLineCard .footer span {
+      width: 16%; }
+      .TimeLineCard .footer span .fa {
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        /* font-size: 2.5em; */
+        text-rendering: auto;
+        border-radius: 50%;
+        color: white;
+        /* margin-right: -3%; */
+        /* margin-bottom: -3%; */
+        padding: 10%;
+        /* margin-top: -3%; */ }
+    .TimeLineCard .footer .info {
+      display: inline-flex;
+      width: 10%;
+      height: 5em;
+      margin-top: 0%;
+      font-size: 10px;
+      color: #04a4c3;
+      margin-right: 3%; }
     .TimeLineCard .footer .avatar a img {
-      margin-left: 10%; }
-  .TimeLineCard .footer .ng-binding {
-    color: #04a4c3;
-    font-size: 10px;
-    margin-top: 3em;
-    margin-right: 2%; }
-    .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
-      color: #ffb400; }
-    .TimeLineCard .footer .ng-binding .fa {
-      width: 10vw !important;
-      height: 15vw;
-      display: inline-block;
-      border-radius: 100%;
-      /* text-rendering: auto; */
-      /* color: white; */
-      /* margin-right: 3%; */
-      /* margin-bottom: 3%; */
-      /* margin-top: 3%; */ }
+      margin-left: -3%;
+      border: 1px solid; }
+    .TimeLineCard .footer .ng-binding {
+      color: #04a4c3;
+      font-size: 10px;
+      margin-top: 2em;
+      margin-right: 2%; }
+      .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
+        color: #ffb400; }
 
 /* CSS list card */
 .challenges .bar-header span {

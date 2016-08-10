@@ -18,34 +18,28 @@
 
 	<div class="footer">
 		<span class="avatar">
-			<a class="item item-avatar" href="#">
+			<a class="fa item-avatar" href="#">
 				<img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}">
 			</a>
 		</span>
 		<span>
-			<i class="icon ion-ios-location-outline"></i>
+			<i class="ion-ios-location-outline"></i>
 			{{challenge.city}}
 		</span>
 		<span>
 			<i class="icon ion-ios-timer-outline"></i>
 			{{challenge.timeElapsed}}
 		</span>
-		<span style="    display: inline-flex;
-    margin-left: -5%;
-    margin-top: 5%;">
+		<span class="info">
 			<i class="fa fa-user-active"></i>
 			{{challenge.invitedUsers.length}}
 		</span>
-		<span style="    display: inline-flex;
-    margin-left: -5%;
-    margin-top: 5%;">
+		<span class="info">
 			<i class="fa fa-speech-active"></i>
 			{{challenge.comments}}
 		</span>
-		<span style=" display: inline-flex;
-    margin-left: -5%;
-    margin-top: 5%;">
-			<i class="fa fa-love-active"></i>
+		<span class="info">
+        	<i class="fa fa-love-active"></i>
 			{{challenge.likes}}
 		</span>
 		<span>
