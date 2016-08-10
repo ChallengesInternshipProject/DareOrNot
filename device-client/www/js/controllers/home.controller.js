@@ -23,13 +23,17 @@ angular.module('starter')
     $scope.isLogged = false;
 
 
-    $scope.test = function () {
+    // Ionic.Auth.login('facebook').then(function (response) {
+    //   $log.info(response);
+    // });
 
+    $scope.test = function () {
       LoginService.checkUserExists('krasimirvelichkov@gmail.com')
         .then(function (result) {
           $log.info(result)
         });
     };
+
     $scope.$watch('isLogged', function () {
       // $log.info('test : ', $localStorage.test)
       // $log.info('$localStorage isLogged ', $localStorage.isLogged);
