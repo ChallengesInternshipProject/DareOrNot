@@ -10475,8 +10475,7 @@ ion-view .Contacts {
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
-  display: block;
-  left: 1%; }
+  display: block; }
   .menu-left .fa {
     width: 15vw !important;
     height: 15vw;
