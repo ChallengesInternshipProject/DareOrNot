@@ -1,12 +1,12 @@
 angular.module('starter.services')
-  .service('LoginService', function ($q, $http, $log, $ionicLoading, $ionicPopup, RegisterService, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
+  .service('LoginService', function ($q, $http, $log, $ionicLoading, $ionicPopup, RegisterService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
       var isAuthenticated = false;
 
       // Save the user after the Facebook login/registration in the database with a ionicPopup for the password with a local login.
       var checkUserExists = function (email) {
         var deffered = $q.defer();
 
-        $http.get(SERVER_ADDRESS  + '/users/' + email)
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/users/' + email)
           .then(function (result) {
             deffered.resolve(result);
           }, function (error) {
@@ -32,7 +32,7 @@ angular.module('starter.services')
         var deferred = $q.defer();
         var promise = deferred.promise;
 
-        $http.get(SERVER_ADDRESS  + '/auth/login', {
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/auth/login', {
           params: {
             email: name,
             password: pass

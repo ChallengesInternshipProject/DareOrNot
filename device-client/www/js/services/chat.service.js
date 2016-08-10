@@ -1,17 +1,17 @@
 angular.module('starter.services')
-  .service('ChatService', function ($q, $http, $log, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
+  .service('ChatService', function ($q, $http, $log, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
 
     return {
       getMessages: function () {
         var deffered = $q.defer();
         var messages = [];
-        $http.get(SERVER_ADDRESS  + '/chat').success(function (result) {
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat').success(function (result) {
           deffered.resolve(result);
         });
         return deffered.promise;
       },
       emitMessage: function (sender, reciever, msg, socket) {
-        $http.get(SERVER_ADDRESS  + '/chat/submit?message=' + msg + '&reciever=' + reciever + '&sender=' + sender)
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat/submit?message=' + msg + '&reciever=' + reciever + '&sender=' + sender)
         socket.emit('message', {
           sender: sender,
           reciever: reciever,

@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-  .controller('ChatCtrl', function ($scope, $http, $log, $localStorage, $timeout, $ionicScrollDelegate, ChatService, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
+  .controller('ChatCtrl', function ($scope, $http, $log, $localStorage, $timeout, $ionicScrollDelegate, ChatService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
     //TODO make the socket global variable ?
     var socket = io(SERVER_ADDRESS + SOCKET_CHAT_PORT); // TIP: io() with no args does auto-discovery
 
@@ -20,7 +20,7 @@ angular.module('starter.controllers')
     //TODO REMOVE This functionality !!!
     //TODO device not making get request
     function getOnlineUsers() {
-      $http.get(SERVER_ADDRESS  + '/users')
+      $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
         .success(function (users) {
           users.forEach(function (user) {
             if (user.email !== $localStorage.user.email) {
@@ -47,7 +47,7 @@ angular.module('starter.controllers')
 
     //START TODO to move to the service or not to move to the service ? :O
     socket.on('clear', function () {
-      $http.get(SERVER_ADDRESS  + '/chat/clear');
+      $http.get(SERVER_ADDRESS + SERVER_PORT + '/chat/clear');
       $scope.messages = [];
       $scope.$apply();
       $scope.$broadcast('scroll.refreshComplete');

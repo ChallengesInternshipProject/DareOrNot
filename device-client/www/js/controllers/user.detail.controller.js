@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('UserDetailCtrl', function ($scope, $log, $timeout, $http, $state, $stateParams, $ionicModal, UserService, DareService, SERVER_ADDRESS) {
+  .controller('UserDetailCtrl', function ($scope, $log, $timeout, $http, $state, $stateParams, $ionicModal, UserService, DareService, SERVER_ADDRESS, SERVER_PORT) {
 
     //TODO fix the empty object result
     // $scope.user = UserService.getUser($stateParams.userID);
@@ -11,7 +11,7 @@ angular.module('starter.controllers')
       $log.info('working ?');
     };
 
-    $http.get(SERVER_ADDRESS  + '/users/' + $stateParams.userID)
+    $http.get(SERVER_ADDRESS + SERVER_PORT + '/users/' + $stateParams.userID)
       .success(function (user) {
         $log.info(user);
         $scope.user = user;

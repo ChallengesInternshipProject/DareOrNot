@@ -20,6 +20,7 @@ angular.module('starter.controllers')
 			$ionicLoading,
 			$ionicModal,
 			SERVER_ADDRESS,
+			SERVER_PORT,
 			$localStorage,
 			UserService,
 			DareService,

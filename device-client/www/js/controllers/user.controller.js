@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('UsersCtrl', function ($scope, $http, $log, $ionicLoading, $localStorage, $ionicModal, SERVER_ADDRESS, SOCKET_CHAT_PORT, UserService, DareService) {
+  .controller('UsersCtrl', function ($scope, $http, $log, $ionicLoading, $localStorage, $ionicModal, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT, UserService, DareService) {
 
     $scope.doRefresh = function () {
       GetUsers();
@@ -7,7 +7,7 @@ angular.module('starter.controllers')
       //$scope.friends = UserService.getFriends($localStorage.user.id,'Accepted',$scope.searchString).then(function(data){return data});
     };
 
-    $scope.SERVER_ADDRESS = SERVER_ADDRESS ;
+    $scope.SERVER_ADDRESS = SERVER_ADDRESS + SERVER_PORT;
 
     GetUsers();
 
@@ -16,7 +16,7 @@ angular.module('starter.controllers')
         template: 'Loading...'
       });
 
-      $http.get(SERVER_ADDRESS  + '/users').success(function (users) {
+      $http.get(SERVER_ADDRESS + SERVER_PORT + '/users').success(function (users) {
         $ionicLoading.hide();
         $scope.users = users;
         $scope.$broadcast('scroll.refreshComplete');

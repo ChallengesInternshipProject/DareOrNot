@@ -1,11 +1,11 @@
 angular.module('starter.services')
-  .service('UserService', function ($q, $http, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
+  .service('UserService', function ($q, $http, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
     var user =  {
       friends : []
     }
     user.getUser= function (email) {
         var deferred = $q.defer();
-        $http.get(SERVER_ADDRESS  + '/users/user/' + email)
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/users/user/' + email)
           .success(function (result) {
             console.log(result)
             deferred.resolve(result);
@@ -19,7 +19,7 @@ angular.module('starter.services')
       user.getAllUsers= function () {
         var deferred = $q.defer();
 
-        $http.get(SERVER_ADDRESS  + '/users')
+        $http.get(SERVER_ADDRESS + SERVER_PORT + '/users')
           .success(function (result) {
             deferred.resolve(result);
           });
