@@ -1,9 +1,4 @@
-
-	<!-- Slide to the left  -->
-	<div ng-click="nextSlide()">Arrow Left</div>
-	<span>
-		{{challenge.title}}
-	</span>
+<div class="TimeLineCard">
 	<ion-slide-box on-slide-changed="slideChanged(index)">
 		<ion-slide ng-repeat='picture in challenge.pictures'>
 			<div>
@@ -12,8 +7,14 @@
 			</div>
 		</ion-slide>
 	</ion-slide-box>
+    <!-- title  -->
+    <span class="arrows">
+		{{challenge.title}}
+	</span>
+    <!-- Slide to the left  -->
+	<div class="arrows-right" ng-click="nextSlide()"><i class="ion-ios-arrow-forward"></i></div>
 	<!-- Slide to the right -->
-	<div ng-click="previousSlide()">Arrow right</div>
+	<div class="arrows-left" ng-click="previousSlide()"><i class="ion-ios-arrow-back"></i></div>
 
 	<div class="footer">
 		<span class="avatar">
@@ -29,16 +30,22 @@
 			<i class="icon ion-ios-timer-outline"></i>
 			{{challenge.timeElapsed}}
 		</span>
-		<span>
-			<i class="icon ion-ios-person-outline"></i>
+		<span style="    display: inline-flex;
+    margin-left: -5%;
+    margin-top: 5%;">
+			<i class="fa fa-user-active"></i>
 			{{challenge.invitedUsers.length}}
 		</span>
-		<span>
-			<i class="icon ion-ios-chatbubble-outline"></i>
+		<span style="    display: inline-flex;
+    margin-left: -5%;
+    margin-top: 5%;">
+			<i class="fa fa-speech-active"></i>
 			{{challenge.comments}}
 		</span>
-		<span>
-			<i class="icon ion-ios-heart-outline"></i>
+		<span style=" display: inline-flex;
+    margin-left: -5%;
+    margin-top: 5%;">
+			<i class="fa fa-love-active"></i>
 			{{challenge.likes}}
 		</span>
 		<span>
@@ -46,3 +53,4 @@
 			{{challenge.timeLeft}}
 		</span>
 	</div>
+</div>
