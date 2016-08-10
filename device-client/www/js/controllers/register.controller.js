@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('RegisterCtrl', function ($scope, $http, $log, $ionicLoading, $ionicPopup, ionicDatePicker, StatusFactory, RegisterService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .controller('RegisterCtrl', function ($scope, $http, $log, $ionicLoading, $ionicPopup, ionicDatePicker, StatusFactory, RegisterService, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
 
       $scope.isLogged = StatusFactory.isLogged;
       $log.info(StatusFactory.isLogged);

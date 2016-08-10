@@ -1,5 +1,5 @@
 angular.module('starter.services')
-  .service('DareService', function ($q, $http, $log, $ionicModal, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
+  .service('DareService', function ($q, $http, $log, $ionicModal, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
 
 
     function sendDare(userID, dareinfo) {

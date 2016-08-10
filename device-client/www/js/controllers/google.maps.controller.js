@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-  .controller('GoogleMapCtrl', function ($scope, $state, $ionicModal, SERVER_ADDRESS, SERVER_PORT, $cordovaGeolocation, $ionicPopup, $http) {
+  .controller('GoogleMapCtrl', function ($scope, $state, $ionicModal, SERVER_ADDRESS, $cordovaGeolocation, $ionicPopup, $http) {
     var options = {timeout: 10000, enableHighAccuracy: true};
 
     $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
@@ -58,7 +58,7 @@ angular.module('starter.controllers')
 
 
       function setMarkersFromLocations() {
-        $http.get(SERVER_ADDRESS + SERVER_PORT + '/challenges').success(function (challenges) {
+        $http.get(SERVER_ADDRESS  + '/challenges').success(function (challenges) {
           challenges.forEach(function (challenge) {
             console.log(challenge);
             var marker = new google.maps.Marker({
