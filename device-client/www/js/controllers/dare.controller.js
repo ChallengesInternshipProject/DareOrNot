@@ -2,18 +2,17 @@
 
 angular.module('starter.controllers')
 	.directive('ngFiles', ['$parse', function ($parse) {
+		function fn_link(scope, element, attrs) {
+			var onChange = $parse(attrs.ngFiles);
+			element.on('change', function (event) {
+				onChange(scope, { $files: event.target.files });
+			});
+		};
 
-												function fn_link(scope, element, attrs) {
-																var onChange = $parse(attrs.ngFiles);
-																element.on('change', function (event) {
-																				onChange(scope, { $files: event.target.files });
-																});
-												};
-
-												return {
-																link: fn_link
-												}
-								} ])
+		return {
+			link: fn_link
+		}
+	} ])
 	.controller('DareCtrl', function (
 			$scope,
 			$http,
@@ -31,9 +30,9 @@ angular.module('starter.controllers')
 		) {
 				var formdata = new FormData();
 					$scope.getTheFiles = function ($files) {
-									angular.forEach($files, function (value, key) {
-													formdata.append(key, value);
-									});
+							angular.forEach($files, function (value, key) {
+									formdata.append(key, value);
+							});
 					};
 
 					// NOW UPLOAD THE FILES.
@@ -41,20 +40,20 @@ angular.module('starter.controllers')
 
 									var request = {
 													method: 'POST',
-													url: '/api/fileupload/',
+													url: 'http://localhost:3000/files/',
 													data: formdata,
 													headers: {
 																	'Content-Type': undefined
 													}
 									};
-
+									console.log(formdata)
 									// SEND THE FILES.
-									$http(request)
-													.success(function (d) {
-																	alert(d);
-													})
-													.error(function () {
-													});
+									// $http(request)
+									// 				.success(function (d) {
+									// 								alert(d);
+									// 				})
+									// 				.error(function () {
+									// 				});
 					}
 
 

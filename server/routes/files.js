@@ -10,14 +10,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	file = new File();
 	file.uploadFile(req,"testFile","fileInput","testObj","testObjID","me").then(function(result){
-		file.object = req.object;
-		file.objectId = req.objectId;
-		file.name = req.objectId;
-		file.type = "fileType";
-		file.save(function(err,file){
-			if (err) { return next(err);};
-			res.json(file)
-		})
+		res.json(result)
 	}).catch(function(err){
 		return next(err);
 	})

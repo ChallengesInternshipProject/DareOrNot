@@ -6,12 +6,10 @@
 			</div>
 		</div>
 			<br><br>
-		<div >
-      	  <input type="file" id="file1" name="file" multiple
-            ng-files="getTheFiles($files)" />
-
-      	  <input type="button" ng-click="uploadFiles()" value="Upload" />
-    </div>
+			<form action="http://localhost:3000/files/" method="post" enctype="multipart/form-data">
+				<input type="file" name='fileInput' multiple="">
+				<button>Send</button>
+			</form>
 		<div class="list list-inset">
 				<form enctype="multipart/form-data" ng-submit="submitDare()">
 				<!--Friends Slider-->
