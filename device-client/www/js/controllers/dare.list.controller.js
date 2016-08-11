@@ -5,7 +5,7 @@ angular.module('starter.controllers')
 
     $scope.dares = [];
 
-    $http.get('http://localhost:3000/challenges').success(function (result) {
+    $http.get(SERVER_ADDRESS+'/challenges').success(function (result) {
       $scope.dares = result;
     });
   });

@@ -17,12 +17,12 @@ angular.module('starter')
    AuthFactory,
    RegisterService,
    FacebookService,
-   UserResolver
+   UserResolver,
+   SERVER_ADDRESS
    ) {
 
     $scope.isLogged = false;
-
-
+  
     // Ionic.Auth.login('facebook').then(function (response) {
     //   $log.info(response);
     // });

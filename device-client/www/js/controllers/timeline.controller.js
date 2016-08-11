@@ -11,13 +11,13 @@ angular.module('starter.controllers')
 		$scope.previousSlide = function(){
 			$ionicSlideBoxDelegate.previous();
 		}
-		$scope.SERVER_ADDRESS = SERVER_ADDRESS+':3000/';
+		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		GetTimeline();
 		function GetTimeline() {
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			$http.get(SERVER_ADDRESS + ':3000/dares/timeline/'+$localStorage.user.id).success(function (result) {
+			$http.get(SERVER_ADDRESS + '/dares/timeline/'+$localStorage.user.id).success(function (result) {
 				$ionicLoading.hide();
 				$scope.challenges = result ;
 				$scope.$broadcast('scroll.refreshComplete');

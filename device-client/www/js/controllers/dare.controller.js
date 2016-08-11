@@ -25,9 +25,12 @@ angular.module('starter.controllers')
 			UserService,
 			DareService,
 			CategoryService,
-			ionicDatePicker
-
+			ionicDatePicker,	
+			SERVER_ADDRESS
 		) {
+				  $scope.SERVER_ADDRESS = SERVER_ADDRESS;
+    $log.info(SERVER_ADDRESS);
+				$log.info(SERVER_ADDRESS);
 				var formdata = new FormData();
 					$scope.getTheFiles = function ($files) {
 							angular.forEach($files, function (value, key) {
@@ -40,7 +43,7 @@ angular.module('starter.controllers')
 
 									var request = {
 													method: 'POST',
-													url: 'http://localhost:3000/files/',
+													url: 'http://localhost/files/',
 													data: formdata,
 													headers: {
 																	'Content-Type': undefined

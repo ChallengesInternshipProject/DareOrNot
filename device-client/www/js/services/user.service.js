@@ -28,7 +28,7 @@ angular.module('starter.services')
       },
       user.getFriends= function (userID, status, searchString) {
 
-        var urlPath = 'http://localhost:3000/users/friends/' + userID + '/' + status;
+        var urlPath = SERVER_ADDRESS + '/users/friends/' + userID + '/' + status;
         var config = {
           method: "GET",
           url: urlPath,
