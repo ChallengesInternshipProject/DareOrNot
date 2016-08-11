@@ -6,12 +6,9 @@
 			</div>
 		</div>
 			<br><br>
-			<form action="{{SERVER_ADDRESS}}" method="post" enctype="multipart/form-data">
-				<input type="file" name='fileInput' multiple="">
-				<button>Send</button>
-			</form>
+
 		<div class="list list-inset">
-				<form enctype="multipart/form-data" ng-submit="submitDare()">
+				<form   enctype="multipart/form-data" ng-submit="submitDare()">
 				<!--Friends Slider-->
 				<!-- <ion-slide-box on-slide-changed="slideHasChanged($index)">
 					<ion-slide>
@@ -25,11 +22,10 @@
 					</ion-slide>
 				</ion-slide-box>
 					-->
-				<!--add friends button-->
-				<!-- <button class="button button-block" ng-click="callFriendsModal()">Invite Friends</button> -->
+			
 				
 				<label class="item item-input">
-					<input type="text" placeholder="Заглавие на Предизвикателство" ng-model="data.name" value="Dare name here">
+					<input type="text" placeholder="Заглавие на Предизвикателство" ng-model="data.title" value="Dare name here">
 				</label>
 				<label class="item item-input">
 					<!-- <i class="icon placeholder-icon ion-edit"></i> -->
@@ -76,26 +72,26 @@
 					<div class="col">
 						<label class="item item-input">
 								<span class="input-label">От:</span>
-								<input type="number" ng-model="data.price.from">
+								<input type="number" ng-model="data.price.min">
 						</label>
 					</div>
 					<div class="col">
 						<label class="item item-input">
 								<span class="input-label">До:</span>
-								<input type="number" ng-model="data.price.to">
+								<input type="number" ng-model="data.price.max">
 						</label>
 					</div>
 				</div>
-				
+				<!-- 
 				<h3>Image</h3>
 				<div class="list">
 						<input type="file" accept="image/*" capture="camera" ng-model="dataFile" >
 						<button type="button" class="button" ng-click="testFile()">Ckucj</button> 
-				</div>
+				</div> -->
 				
 				<ion-list>
-					<ion-radio ng-model="data.isPrivate" ng-value="true" checked="checked">Private</ion-radio>
-					<ion-radio  ng-model="data.isPrivate" ng-value="false">Public</ion-radio>
+					<ion-radio ng-model="data.isPublic" ng-value="true" checked="checked">Public</ion-radio>
+					<ion-radio  ng-model="data.isPublic" ng-value="false">Private</ion-radio>
 				</ion-list>
 				<h3>Share in social</h3>
 				<div class="row responsive-sm">
@@ -112,7 +108,8 @@
 						  </div>
 					</div>
 					</ion-list>
-				
+					<!--add friends button-->
+					<button  type = "button" class="button button-block" ng-click="friendsModal.show()">Invite Friends</button>
 				</div>
 				<button class="button button-block button-balanced" type="submit">Create</button>
 			</form>

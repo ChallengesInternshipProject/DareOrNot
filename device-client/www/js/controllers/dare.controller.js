@@ -26,46 +26,36 @@ angular.module('starter.controllers')
 			DareService,
 			CategoryService,
 			ionicDatePicker,	
-			SERVER_ADDRESS
+			SERVER_ADDRESS,
+			FriendsResolver
 		) {
-				  $scope.SERVER_ADDRESS = SERVER_ADDRESS;
-    $log.info(SERVER_ADDRESS);
-				$log.info(SERVER_ADDRESS);
-				var formdata = new FormData();
-					$scope.getTheFiles = function ($files) {
-							angular.forEach($files, function (value, key) {
-									formdata.append(key, value);
-							});
-					};
+			var formdata = new FormData();
+				$scope.getTheFiles = function ($files) {
+						angular.forEach($files, function (value, key) {
+								formdata.append(key, value);
+						});
+				};
 
-					// NOW UPLOAD THE FILES.
-					$scope.uploadFiles = function () {
+			// NOW UPLOAD THE FILES.
+			$scope.uploadFiles = function () {
 
-									var request = {
-													method: 'POST',
-													url: 'http://localhost/files/',
-													data: formdata,
-													headers: {
-																	'Content-Type': undefined
-													}
-									};
-									console.log(formdata)
-									// SEND THE FILES.
-									// $http(request)
-									// 				.success(function (d) {
-									// 								alert(d);
-									// 				})
-									// 				.error(function () {
-									// 				});
-					}
-
-
-
-
-
-
-
-
+							var request = {
+											method: 'POST',
+											url: 'http://localhost/files/',
+											data: formdata,
+											headers: {
+															'Content-Type': undefined
+											}
+							};
+							console.log(formdata)
+							// SEND THE FILES.
+							// $http(request)
+							// 				.success(function (d) {
+							// 								alert(d);
+							// 				})
+							// 				.error(function () {
+							// 				});
+			}
 												
 			$scope.testFile = function(){
 				console.log($scope.dataFile);
@@ -88,42 +78,22 @@ angular.module('starter.controllers')
 				_cretaor:$localStorage.user.id
 			};
 			//Friends
-			UserService.getAllUsers()
-					.then(function (result) {
-							$scope.friends = result;
-					});
+			$scope.friends = FriendsResolver;
+			$log.info($scope.friends);
 			//Array with friends by ID's
-			$scope.friendsForInvite = [];
+			$scope.data.invitedUsers = [];
 			$scope.choice = [];
 
 			$scope.submitDare = function () {
 					// $scope.friendsForInvite = [];
 					//Set the selected friends into the friends array for the post request
-					angular.forEach($scope.friends, function (value, key) {
-							if (value.isChecked) {
-									$scope.friendsForInvite.push({id: value._id, email: value.email});
+					angular.forEach($scope.data.friends, function (value, key) {
+							if ($scope.data.friends[key]) {
+									$scope.data.invitedUsers.push(key);
 							}
 					});
-					$log.info($scope.data);
-					// $http({
-					//   method: 'POST',
-					//   url: 'http://localhost:3000/challenges/create',
-					//   data: {
-					//     name: $scope.data.name,
-					//     description: $scope.data.description,
-					//     location: {
-					//       lat: Number($scope.data.location.lat),
-					//       lng: Number($scope.data.location.lng)
-					//     },
-					//     choice: $scope.data.choice,
-					//     friends: $scope.friendsForInvite,
-					//     _creator: $localStorage.user.id
-					//   }
-					// }).then(function (response) {
-					//   $log.info($scope.data);
-					//   $log.info(response);
-					// })
-
+					DareService.create($scope.data);
+					
 			};
 
 			//Load the Add Friends modal
@@ -134,9 +104,7 @@ angular.module('starter.controllers')
 					$scope.friendsModal = modal;
 			});
 
-			$scope.callFriendsModal = function () {
-					$scope.friendsModal.show();
-			};
+			
 
 
 	});

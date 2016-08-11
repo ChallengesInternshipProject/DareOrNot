@@ -1,9 +1,16 @@
-angular.module('starter').config(function ($stateProvider, $urlRouterProvider, ionicDatePickerProvider, $ionicConfigProvider,ChartJsProvider) {
+angular.module('starter').config(function (
+	$stateProvider,
+	$urlRouterProvider,
+	ionicDatePickerProvider,
+	$ionicConfigProvider,
+	ChartJsProvider,
+	$sceDelegateProvider
+	) {
 	// Ionic uses AngularUI Router which uses the concept of states
 	// Learn more here: https://github.com/angular-ui/ui-router
 	// Set up the various states which the app can be in.
 	// Each state's controller can be found in controllers.js
-
+	
 	$ionicConfigProvider.tabs.position('top'); //bottom
 
 	//Check if the user is authenticated
@@ -151,8 +158,13 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			templateUrl: 'templates/tab-new-dare.html',
 			controller: 'DareCtrl',
 			resolve: {
-				isAuthenticated: isAuthenticated
+				isAuthenticated: isAuthenticated,
+				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
+					return UserService.getFriends($localStorage.user.id, 'Accepted', "").then(function (data) {
+						return data
+					})
 				}
+			]}
 		})
 
 
@@ -325,6 +337,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/timeline');
+
 
 });
 
