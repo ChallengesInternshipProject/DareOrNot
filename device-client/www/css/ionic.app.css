@@ -10829,3 +10829,21 @@ ion-modal-view .cont {
       ion-modal-view .cont .list .item-toggle .toggle.toggle-assertive input:checked + .track {
         border-color: #01cfe4;
         background-color: #01cfe4; }
+
+/* CSS NAv Menue */
+ion-side-menu-content ion-view .nav-bar-block {
+  border-style: none;
+  color: #03b2d1;
+  background: red; }
+
+/* CSS list */
+.disable-user-behavior .list ion-item, .disable-user-behavior .list a.item-content {
+  border: none;
+  background: transparent; }
+
+.disable-user-behavior .list a {
+  text-align: left; }
+  .disable-user-behavior .list a h2 {
+    color: #01cfe4; }
+  .disable-user-behavior .list a p {
+    color: #ffb400; }
