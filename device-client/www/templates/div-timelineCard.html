@@ -58,9 +58,24 @@
      		
      		</div>
     </ion-slide>
-	</ion-slide-box>
+</ion-slide-box>
+<div class="TimeLineCard">
+	<ion-slide-box on-slide-changed="slideChanged(index)">
+		<ion-slide ng-repeat='picture in challenge.pictures'>
+			<div>
+				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
+				<br>
+			</div>
+		</ion-slide>
+
+    <!-- title  -->
+    <span class="arrows">
+		{{challenge.title}}
+	</span>
+    <!-- Slide to the left  -->
+	<div class="arrows-right" ng-click="nextSlide()"><i class="ion-ios-arrow-forward"></i></div>
 	<!-- Slide to the right -->
-	<!-- <div ng-click="previousSlide()">Arrow right</div> -->
+	<div class="arrows-left" ng-click="previousSlide()"><i class="ion-ios-arrow-back"></i></div>
 
 	<ion-slide-box>
     <ion-slide class="demo">
@@ -75,28 +90,28 @@
 
 	<div class="footer">
 		<span class="avatar">
-			<a class="item item-avatar" href="">
+			<a class="fa item-avatar" href="#">
 				<img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}">
 			</a>
 		</span>
 		<span>
-			<i class="icon ion-ios-location-outline"></i>
+			<i class="ion-ios-location-outline"></i>
 			{{challenge.city}}
 		</span>
 		<span>
 			<i class="icon ion-ios-timer-outline"></i>
 			{{challenge.timeElapsed}}
 		</span>
-		<span>
-			<i class="icon ion-ios-person-outline"></i>
+		<span class="info">
+			<i class="fa fa-user-active"></i>
 			{{challenge.invitedUsers.length}}
 		</span>
-		<span>
-			<i class="icon ion-ios-chatbubble-outline"></i>
+		<span class="info">
+			<i class="fa fa-speech-active"></i>
 			{{challenge.comments}}
 		</span>
-		<span>
-			<i class="icon ion-ios-heart-outline"></i>
+		<span class="info">
+        	<i class="fa fa-love-active"></i>
 			{{challenge.likes}}
 		</span>
 		<span>
@@ -104,3 +119,4 @@
 			{{challenge.timeLeft}}
 		</span>
 	</div>
+</div>
