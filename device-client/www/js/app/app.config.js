@@ -93,9 +93,7 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 			url: '/timeline',
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
-			resolve: {
-				isAuthenticated: isAuthenticated
-			}
+			
 		})
 		.state('app.categories', {
 			url: '/categories',
@@ -329,3 +327,5 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 	$urlRouterProvider.otherwise('/app/timeline');
 
 });
+
+
