@@ -2,11 +2,12 @@
 
 	 .demo{ 
 		display: block;
-		width: 1409px;
-    	height: 640px;
+		width: 100%;
+		height: auto;
 		background-color: #fff;
-		margin-left: 18px;
-		margin-top: 16px;
+		// margin-left: 2%;
+		margin-top: 2%;
+		margin-right: 2%;
 		position:relative;
 		}
 
@@ -14,8 +15,8 @@
 
 	.demo>img{
 		position: relative;
-	  	width: 1409px;
-    	height: 540px;
+	  	width: 100%;
+    	height: auto;
 	 }
 
 	.demo h2{
@@ -35,9 +36,14 @@
 	.timetime{
 		display: inline-block;
 		vertical-align: top;
-		/*padding-left: 150px;*/
 		padding-top: 30px;
+		margin-left: -68%;
 		width: 350px;
+		height: auto;
+	}
+
+	.timetime p {
+		font-size: 10px;
 	}
 
 	.likeLike{
@@ -51,9 +57,9 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 40px;
-		height: 80px;
+		height: 40px;
 		padding-top: 15px;
-		padding-left: 35px;
+		// padding-left: 35px;
 	 }
 
 	.info .comment{
@@ -63,9 +69,9 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 40px;
-		height: 80px;
+		height: 40px;
 		padding-top: 15px;
-		padding-left: 35px;
+		// padding-left: 35px;
 	 }
 
 	.info .heart{
@@ -76,44 +82,44 @@
 		background-position: center;
 		background-size: 40px;
 		padding-top: 15px;
-		height: 80px;
-		padding-left: 35px;
+		height: 40px;
+		// padding-left: 35px;
 	 }
 
 	.likeLike>p{
 		display: inline-block;
 		vertical-align: top;
 		padding-top: 15px;
-		font-size: 20px;
+		font-size: 15px;
 		color: #03b2d1;;
 	}
 
 	.likeLike .person{
-		width: 40px;
+		width: 20px;
 	}
 
 	.likeLike .comment{
-		width: 40px;
+		width: 20px;
 	}
 
 	.likeLike .heart{
-		width: 40px;
+		width: 20px;
 	}
 
 	.clock h6{
-		font-size: 40px;
+		font-size: 13px;
 		color:#03b2d1;
 	}
 
 	.clock h6>p{
 		color:#ffcf7d;
-		font-size: 16px;
+		font-size: 6px;
 		line-height: 10px;
 	}
 	.clock{
 		display: inline-block;
 		vertical-align: top;
-		padding-left: 30px;
+		padding-left: 10px;
 		padding-top: 10px;
 	}
 
@@ -143,9 +149,7 @@
 	.info{
 		position: relative;
 		bottom: 20px;
-		width: 910px;
 		padding-top:25px;
-		padding-left: 160px;
 	}
 	.socialtwo{
 		display: none;
@@ -154,20 +158,21 @@
 		display: none;
 	}
 	.user{
+		width: 80%;
 		position: absolute;
-		top: 74%;
-		left: 3%;
+		bottom: 18%;
+		left: -1%;
 		}
  	.user-name{
 		display: inline-block;
 		vertical-align: top;
 		color: #fff;
-		font-size: 25px;
-		margin-top:10px;
-		margin-left:30px;
+		font-size: 1em;
+		margin-left:10px;
 		}
 	.user-pic{
-		display:inline-block;	
+		display:inline-block;
+		width: 20%;	
 		}
 	.user .img-circle {
 		border-radius: 50%;
@@ -175,120 +180,150 @@
 		width: 130px;
 	}
 
+	.arrow-left{
+	 	background: url("../img/left.png") ;
+		background-repeat: no-repeat;
+		background-position: center;   
+	 }
 
-@media only screen and (max-width: 404px){
+	.arrow-right { 
+		 background: url("../img/right.png") ;
+		 background-repeat: no-repeat;
+		 background-position: center; 
+	}
+
+	.arrow{
+		position: absolute;
+		top:10%;
+		width: 100%;
+	}
+
+	.arrowSecond{
+		position: absolute;
+		top: 30%;
+		width: 100%;
+	}
+	.arrow img{
+		width:50px;
+		height:50px;
+		border: none;
+		}
+
+
+
+// @media only screen and (max-width: 404px){
  
-  .dare-logo,.useruser,.like,header form,#menu, .social-footer{
-    display: none;
-  }
-  .check{
-    float: right;
-    margin-right: 14px;
-  }
-  .wrapper{
-    width: 100%;
-  }
-  main .right, .navbar, .side-bar, main nav{
-    display: none;
-  }
-  .demo{
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-  } 
-  .demo > img{
-    width: 100%;
-    height: auto;
-    padding: 0 10px;
-  }
-  .info{
-    width: 100%;
-    bottom: auto;
-    padding-top: 0px;
-    padding-left: 78px;
-  }
-  .slider-container{
-    width: 100%;
-    height: auto;
-  }
- .demo h2{
-    top: 5%;
-    font-size: 20px;
-  }
-  header .likeLike{
-    display: none;
-  }
+//   .dare-logo,.useruser,.like,header form,#menu, .social-footer{
+//     display: none;
+//   }
+//   .check{
+//     float: right;
+//     margin-right: 14px;
+//   }
+//   .wrapper{
+//     width: 100%;
+//   }
+//   main .right, .navbar, .side-bar, main nav{
+//     display: none;
+//   }
+//   .demo{
+//     width: 100%;
+//     height: auto;
+//     margin-left: auto;
+//   } 
+//   .demo > img{
+//     width: 100%;
+//     height: auto;
+//     padding: 0 10px;
+//   }
+//   .info{
+//     width: 100%;
+//     bottom: auto;
+//     padding-top: 0px;
+//     padding-left: 78px;
+//   }
+//   .slider-container{
+//     width: 100%;
+//     height: auto;
+//   }
+//  .demo h2{
+//     top: 5%;
+//     font-size: 20px;
+//   }
+//   header .likeLike{
+//     display: none;
+//   }
 
-  .info .likeLike{
-    display: none;
-  }
-  .likeLike .person {
-    width: 20px;
-    padding: 0;
-    background-size: 20px;
-  }
-  .likeLike  p{
-    font-size: 15px;
-  }
-  .likeLike .comment{
-    width: 20px;
-    font-size: 20px;
-    background-size: 20px;
-    padding: 0;
-  }
-  .likeLike .heart {
-    width: 20px;
-    font-size: 20px;
-    background-size: 20px;
-    padding: 0;
-  }
-  .timecheck img {
-    width: 12px;
-    height: 16px;
-  }
+//   .info .likeLike{
+//     display: none;
+//   }
+//   .likeLike .person {
+//     width: 20px;
+//     padding: 0;
+//     background-size: 20px;
+//   }
+//   .likeLike  p{
+//     font-size: 15px;
+//   }
+//   .likeLike .comment{
+//     width: 20px;
+//     font-size: 20px;
+//     background-size: 20px;
+//     padding: 0;
+//   }
+//   .likeLike .heart {
+//     width: 20px;
+//     font-size: 20px;
+//     background-size: 20px;
+//     padding: 0;
+//   }
+//   .timecheck img {
+//     width: 12px;
+//     height: 16px;
+//   }
 
-  .timeclock img{
-    width: 14px;
-    height: 14px;
-  }
-  .time{
-    font-size: 12px;
-    padding-left: 0px;
-  }
-  .timeclock{
-    height: 14px;
-  }
-  .timetime{
-    width: auto;
-    margin-top: -13px;
-  }
+//   .timeclock img{
+//     width: 14px;
+//     height: 14px;
+//   }
+//   .time{
+//     font-size: 12px;
+//     padding-left: 0px;
+//   }
+//   .timeclock{
+//     height: 14px;
+//   }
+//   .timetime{
+//     width: auto;
+//     margin-top: -13px;
+//   }
 
-  .clock{
-    display: none;
-  }
-  .clock h6 > p{
-    font-size: 7px;
-  }
-  .clock h6 {
-    font-size: 18px;
-  }
-  .user{
-    top: 60%;
-  }
-  .user .img-circle{
-    width: 60px;
-    margin-left: 5px;
-  }
- .user-name{
-    font-size: 18px;
-    margin-left: 10px;
-  }
- .arrow{
-    top:15%;
-  }
+//   .clock{
+//     display: none;
+//   }
+//   .clock h6 > p{
+//     font-size: 7px;
+//   }
+//   .clock h6 {
+//     font-size: 18px;
+//   }
+//   .user{
+//     top: 60%;
+//   }
+//   .user .img-circle{
+//     width: 60px;
+//     margin-left: 5px;
+//   }
+//  .user-name{
+//     font-size: 18px;
+//     margin-left: 10px;
+//   }
+//  .arrow{
+//     top:15%;
+//   }
 
  
-  }
+//   }
 
 
 

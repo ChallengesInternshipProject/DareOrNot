@@ -29,3 +29,5 @@ angular.module('starter', ['ionic', 'ngCordova', 'ngStorage', 'ionic-datepicker'
       }
     });
   });
+
+  

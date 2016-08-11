@@ -339,3 +339,5 @@ angular.module('starter').config(function ($stateProvider, $urlRouterProvider, i
 	$urlRouterProvider.otherwise('/app/home');
 
 });
+
+
