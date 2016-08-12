@@ -79,8 +79,8 @@ angular.module('starter').config(function (
 		})
 		.state('app.search', {
 			url: '/search',
-			templateUrl: 'templates/tab-search.html'
-			// controller: 'HomeCtrl'
+			templateUrl: 'templates/tab-search.html',
+			controller: 'SearchCtrl'
 		})
 
 		.state('app.map', {
