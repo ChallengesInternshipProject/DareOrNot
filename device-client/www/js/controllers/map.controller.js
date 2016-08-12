@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-  .controller('MapCtrl', function ($scope, $log, $http, StatusFactory) {
+  .controller('MapCtrl', function ($scope, $log, $http, StatusFactory,SERVER_ADDRESS) {
     $scope.mapCenter = {
       lat: 42.662888,
       lng: 23.354051,
@@ -9,7 +9,7 @@ angular.module('starter.controllers')
     };
 
     $scope.markers = [];
-    $http.get('http://localhost:3000/challenges').success(function (result) {
+    $http.get(SERVER_ADDRESS + '/challenges').success(function (result) {
       result.forEach(function (item) {
         $log.info(item.location);
         $scope.markers.push(item.location);
