@@ -1,0 +1,11 @@
+diff a/device-client/scss/TimeLineCard.scss b/device-client/scss/TimeLineCard.scss	(rejected hunks)
+@@ -69,7 +69,8 @@
+ 				margin-right: 3%;
+ 					}
+ 		.avatar a{
+-		img{margin-left: -3%;
++		img{margin-top: -20px;
++			margin-left: 0;
+     		border: 1px solid;}
+ 		}
+ 		.ng-binding{color: #04a4c3;
