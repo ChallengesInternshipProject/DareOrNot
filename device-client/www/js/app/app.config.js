@@ -10,7 +10,7 @@ angular.module('starter').config(function (
 	// Learn more here: https://github.com/angular-ui/ui-router
 	// Set up the various states which the app can be in.
 	// Each state's controller can be found in controllers.js
-	
+
 	$ionicConfigProvider.tabs.position('top'); //bottom
 
 	//Check if the user is authenticated
@@ -31,7 +31,7 @@ angular.module('starter').config(function (
 			return $q.reject();
 		}
 	}
-	
+
 
 	var datePickerObj = {
 		inputDate: new Date(),
@@ -100,7 +100,7 @@ angular.module('starter').config(function (
 			url: '/timeline',
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
-			
+
 		})
 		.state('app.categories', {
 			url: '/categories',
@@ -180,7 +180,7 @@ angular.module('starter').config(function (
 			url: '/tab',
 			abstract: true,
 			templateUrl: 'tabs.html'
-	
+
 			// Each tab has its own nav history stack:
 		})
 		.state('tab.login', {
@@ -275,7 +275,7 @@ angular.module('starter').config(function (
 				}
 			}
 		})
-		
+
 		.state('tab.dare-list', {
 			url: '/dare-list',
 			views: {
@@ -288,8 +288,8 @@ angular.module('starter').config(function (
 				}
 			}
 		})
-		
-		
+
+
 		.state('tab.calendar', {
 			url: '/calendar',
 			views: {
@@ -302,7 +302,7 @@ angular.module('starter').config(function (
 				}
 			}
 		})
-		
+
 		.state('tab.home', {
 			url: '/home',
 			views: {
@@ -322,7 +322,7 @@ angular.module('starter').config(function (
 				}
 			}
 		})
-		
+
 		.state('tab.landing', {
 			url: '/landing',
 			views: {
@@ -336,9 +336,7 @@ angular.module('starter').config(function (
 
 
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/timeline');
+	$urlRouterProvider.otherwise('/app/home');
 
 
 });
-
-

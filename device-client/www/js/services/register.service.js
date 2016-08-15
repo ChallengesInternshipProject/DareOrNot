@@ -6,7 +6,7 @@ angular.module('starter.services')
       function registerUser(user_data) {
         $log.info(user_data.password);
         $http({
-          method: 'GET',
+          method: 'POST',
           url: SERVER_ADDRESS + SERVER_PORT + '/auth/register',
           params: user_data
         }).then(function (response) {

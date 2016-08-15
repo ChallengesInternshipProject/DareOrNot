@@ -1,4 +1,3 @@
-<!--home page for login/register-->
 angular.module('starter')
   .controller('HomeCtrl', function (
     $scope,
@@ -22,7 +21,7 @@ angular.module('starter')
    ) {
 
     $scope.isLogged = false;
-  
+
     // Ionic.Auth.login('facebook').then(function (response) {
     //   $log.info(response);
     // });
@@ -30,7 +29,7 @@ angular.module('starter')
     $scope.test = function () {
       LoginService.checkUserExists('krasimirvelichkov@gmail.com')
         .then(function (result) {
-          $log.info(result)
+          $log.info(result);
         });
     };
 
@@ -103,7 +102,7 @@ angular.module('starter')
           $scope.loginModal.hide();
 
           //console.log();
-          $state.go('tab.users');
+          $state.go('app.profile');
         });
     };
 
@@ -144,7 +143,7 @@ angular.module('starter')
     $ionicModal.fromTemplateUrl('templates/modals/register-modal.html', {
       scope: $scope,
       animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      // hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.registerModal = modal;
     });
@@ -153,7 +152,7 @@ angular.module('starter')
     $ionicModal.fromTemplateUrl('templates/modals/login-modal.html', {
       scope: $scope,
       animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      // hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.loginModal = modal;
     });
@@ -161,7 +160,7 @@ angular.module('starter')
     $ionicModal.fromTemplateUrl('templates/modals/forgot-password-modal.html', {
       scope: $scope,
       animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      // hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.forgottenPasswordModal = modal;
     });
@@ -203,5 +202,5 @@ angular.module('starter')
       $scope.modal.hide();
     };
 
-    $scope.users = UserResolver
+    $scope.users = UserResolver;
   });

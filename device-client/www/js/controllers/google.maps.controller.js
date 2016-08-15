@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-  .controller('GoogleMapCtrl', function ($scope, $state, $ionicModal, SERVER_ADDRESS, SERVER_PORT, $cordovaGeolocation, $ionicPopup, $http) {
+  .controller('GoogleMapCtrl', function ($scope, $log, $state, $ionicModal, SERVER_ADDRESS, SERVER_PORT, $cordovaGeolocation, $ionicPopup, $http) {
     var options = {timeout: 10000, enableHighAccuracy: true};
 
     $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
@@ -117,6 +117,7 @@ angular.module('starter.controllers')
       $ionicPopup.alert({
         title: 'Location error'
       });
+      $log.info(error);
 
     });
     $scope.signingUpForChallenge = function () {

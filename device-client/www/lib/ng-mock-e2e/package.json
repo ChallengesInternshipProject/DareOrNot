@@ -1,0 +1,74 @@
+{
+  "_args": [
+    [
+      "ng-mock-e2e",
+      "C:\\DevNew\\internship\\DareOrNot\\device-client"
+    ]
+  ],
+  "_from": "ng-mock-e2e@latest",
+  "_id": "ng-mock-e2e@0.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ng-mock-e2e",
+  "_nodeVersion": "0.10.33",
+  "_npmUser": {
+    "email": "yevhen@pavliuk.com",
+    "name": "yevhenpavliuk"
+  },
+  "_npmVersion": "2.1.11",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ng-mock-e2e",
+    "raw": "ng-mock-e2e",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-mock-e2e/-/ng-mock-e2e-0.1.1.tgz",
+  "_shasum": "47ed1e7833b9bafe32bfd0e5ac1c9c005ec26158",
+  "_shrinkwrap": null,
+  "_spec": "ng-mock-e2e",
+  "_where": "C:\\DevNew\\internship\\DareOrNot\\device-client",
+  "author": {
+    "email": "yevhen@pavliuk.com",
+    "name": "Yevhen Pavliuk"
+  },
+  "bugs": {
+    "url": "https://github.com/yevhenpavliuk/ng-mock-e2e/issues"
+  },
+  "dependencies": {
+    "toSrc": "^0.1.4"
+  },
+  "description": "Mocking out HTTP backend implementation in Protractor end-to-end tests the same way it's done in AngularJS unit tests.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "47ed1e7833b9bafe32bfd0e5ac1c9c005ec26158",
+    "tarball": "https://registry.npmjs.org/ng-mock-e2e/-/ng-mock-e2e-0.1.1.tgz"
+  },
+  "gitHead": "51a4d99ffbb45f7e1c4293fcf3a5102aa562bf83",
+  "homepage": "https://github.com/yevhenpavliuk/ng-mock-e2e",
+  "license": "MIT",
+  "main": "ng-mock-e2e.js",
+  "maintainers": [
+    {
+      "email": "yevhen@pavliuk.com",
+      "name": "yevhenpavliuk"
+    }
+  ],
+  "name": "ng-mock-e2e",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yevhenpavliuk/ng-mock-e2e.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.1"
+}
