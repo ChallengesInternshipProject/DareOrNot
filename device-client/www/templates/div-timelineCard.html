@@ -8,8 +8,8 @@
 <!-- Това е за слайдъра, взема картинките на деар от сървара ,,,, кодовете за него са следващите 10 реда  -->
 	<ion-slide-box on-slide-changed="slideChanged(index)">
 		<ion-slide ng-repeat='picture in challenge.pictures'>
-			<div>
-				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
+			<div class="demo">
+      				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
 				<br>
 			</div>
 		</ion-slide>
