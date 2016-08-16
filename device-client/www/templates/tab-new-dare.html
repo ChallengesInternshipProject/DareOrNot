@@ -1,5 +1,5 @@
 <ion-view view-title="Ново предизвикателство" name="Ново предизвикателство">
-	<ion-content>
+	<ion-content class="newdare">
 		<div class="bar bar-header">
 			<div class="h1 title">
 				Създай Предизвикателство
@@ -33,13 +33,15 @@
 				</label>
 				<!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>-->
 				<br>
-				<h3>Choose Category</h3>
+				<h3>Избери предизвикателство</h3>
 				<br>
-				<ion-list>
+                
+				<ion-list class="cat">
 					<ion-radio  ng-repeat="category in categories" ng-model="data.category" ng-value="category.id">
 					{{category.title}}
 					</ion-radio>
 				</ion-list>
+                
 				<div class="row no-padding">
 					<div class="col">
 						Продължителност
