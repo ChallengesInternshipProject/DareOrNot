@@ -1,24 +1,25 @@
 angular.module('starter')
-  .controller('HomeCtrl', function (
-    $scope,
-   $rootScope,
-   $state,
-   $stateParams,
-   $timeout,
-   $log,
-   $ionicModal,
-   $localStorage,
-   $sessionStorage,
-   $ionicSlideBoxDelegate,
-   ionicDatePicker,
-   StatusFactory,
-   LoginService,
-   AuthFactory,
-   RegisterService,
-   FacebookService,
-   UserResolver,
-   SERVER_ADDRESS
-   ) {
+  .controller('HomeCtrl', function ($scope,
+                                    $rootScope,
+                                    $state,
+                                    $stateParams,
+                                    $timeout,
+                                    $log,
+                                    $ionicModal,
+                                    $ionicHistory,
+                                    $localStorage,
+                                    $location,
+                                    $sessionStorage,
+                                    $ionicSlideBoxDelegate,
+                                    ionicDatePicker,
+                                    StatusFactory,
+                                    LoginService,
+                                    AuthFactory,
+                                    RegisterService,
+                                    FacebookService,
+                                    UserResolver,
+                                    SERVER_ADDRESS,
+                                    $ionicPlatform) {
 
     $scope.isLogged = false;
 
