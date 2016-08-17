@@ -2,7 +2,7 @@ angular.module('starter.controllers')
 
   .controller('ChatCtrl', function ($scope, $http, $log, $localStorage, $timeout, $ionicScrollDelegate, ChatService, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT) {
     //TODO make the socket global variable ?
-    var socket = io(SERVER_ADDRESS + SOCKET_CHAT_PORT); // TIP: io() with no args does auto-discovery
+    var socket = io('http://dareornotchat.herokuapp.com/'); // TIP: io() with no args does auto-discovery
 
     //TODO improve logic
     socket.emit('add user', $localStorage.user);
@@ -31,7 +31,7 @@ angular.module('starter.controllers')
         });
     }
     getOnlineUsers();
-    
+
     //     .success(function (users) {
     $scope.me = $localStorage.user;
 
