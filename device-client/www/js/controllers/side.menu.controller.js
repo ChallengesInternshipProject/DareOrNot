@@ -8,7 +8,7 @@ angular.module('starter.controllers')
     setInterval(function () {
       $ionicLoading.hide();
     }, 1000);
-    
+
     $scope.activities = [
       {
         message: "Наблюдава 5 ваши предизвикателства",
@@ -152,6 +152,10 @@ angular.module('starter.controllers')
         $scope.sideMenuSettingsModal = modal;
         modal.show();
       });
+    };
+
+    $scope.exit = function () {
+      ionic.Platform.exitApp();
     };
 
     $scope.loadMap = function () {
