@@ -5,23 +5,49 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', 
+angular.module('starter',
   [
     'ionic',
     'ion-datetime-picker',
-   'ngCordova',
-   'ngStorage',
-   'ionic-datepicker',
-   'ionic-timepicker',
-   'starter.controllers',
-   'starter.services',
-   'starter.constants',
-   'leaflet-directive',
-   'ionic.contrib.ui.tinderCards',
-  'chart.js'
+    'ngCordova',
+    'ngStorage',
+    'ionic-datepicker',
+    'ionic-timepicker',
+    'starter.controllers',
+    'starter.services',
+    'starter.constants',
+    'leaflet-directive',
+    'ionic.contrib.ui.tinderCards',
+    'chart.js'
   ])
 
-  .run(function ($ionicPlatform) {
+  .run(function ($rootScope, $ionicPlatform, $ionicHistory, $location) {
+
+    //Double tap back button to close the app
+    $ionicPlatform.registerBackButtonAction(function (e) {
+      if ($rootScope.backButtonPressedOnceToExit) {
+        ionic.Platform.exitApp();
+      }
+
+      else if ($ionicHistory.backView()) {
+        $ionicHistory.goBack();
+      }
+      else {
+        $rootScope.backButtonPressedOnceToExit = true;
+        window.plugins.toast.showShortCenter(
+          "Press back button again to exit", function (a) {
+          }, function (b) {
+          }
+        );
+        window.plugins.toast.showShortCenter($location.path());
+        setTimeout(function () {
+          $rootScope.backButtonPressedOnceToExit = false;
+        }, 2000);
+      }
+      e.preventDefault();
+      return false;
+    }, 101);
+    //console.log($ionicHistory);
 
     //Fix post request issues
     // $httpBackend.whenGET(/templates\/\w+.*/).passThrough();
@@ -44,4 +70,3 @@ angular.module('starter',
     });
   });
 
-  
