@@ -2,17 +2,62 @@
 /* CSS Profil new dare */
 	.newdare{
 	 background-image: none;
-	 background-color: red;
+	 background-color: #e8edf0;
 	 background-size: 100% 100%;
 	 text-align: center;
-	 display: block;		
+	 display: block;
+	 color:#16b8d4;
 	 div .h1 {color:#044265;}
 	 h3 {color:#16b8d4;}
-	 div .radio-content {   
-						width: 60%;
-						font-size: 10px;
-						padding: 1%;
-						text-align: left;
-						}
+	 /*category challenges */
+	div .challeng ion-list .list {display: inline-block;
+									width: 100%;
+									padding: 0em;
+									font-size:1em;
+								 .item{	
+										display: inline-block;
+										width: 45%;
+									    font-size: 1em;
+										padding: 0.5%;
+										border:none;
+										text-align: center;
+										background: transparent;
+										:nth-child(1) { background: #3b6783;
+														color: #fff;
+														width: 100%;
+														font-size: 0.7em;
+														text-align: center;
+														/* margin-top: 1em; */
+														padding-top: 20%;
+														padding-bottom: 5%;
+														padding-left: 1%;
+														padding-right: 1%;
+														word-break: keep-all;
+														}
+										:nth-child(2) {
+														background: #17283a;											
+														color:#fff;
+														width:100%;
+													}
+									}
+								}
+	.list-inset{ width: 100%; background: transparent;}
+		label .item{
+					margin-top: 5%;
+				}
+	.fa {
+    width: 20vw !important;
+    height: 20vw;}
+	 /* WebKit browsers */
+	::-webkit-input-placeholder { 
+								color:#16b8d4;
+								opacity: 1 !important;
+								}
+		.item span {margin-top:-7em; 
+					margin-right:1em;
+					i{color:orange;
+					-webkit-transform: scale(-1, 1);}
+					}
+
 
 	}

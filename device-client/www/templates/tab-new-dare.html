@@ -27,20 +27,22 @@
 				<label class="item item-input">
 					<input type="text" placeholder="Заглавие на Предизвикателство" ng-model="data.title" value="Dare name here">
 				</label>
-				<label class="item item-input">
-					<!-- <i class="icon placeholder-icon ion-edit"></i> -->
-					<textarea placeholder="Dare Description" rows="8" cols="10" ng-model="data.description" value = "Some Description here"></textarea>
+				<label class="item item-input" style="margin-top:1vh;">
+					<span><i class="ion-edit"></i></span>
+				<textarea placeholder="Текст описващ предизвикателството" rows="8" cols="10" ng-model="data.description" value = "Some Description here"></textarea>
 				</label>
 				<!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>-->
 				<br>
 				<h3>Избери предизвикателство</h3>
 				<br>
-                
-				<ion-list class="cat">
+                <div class="challeng">
+				<ion-list>
 					<ion-radio  ng-repeat="category in categories" ng-model="data.category" ng-value="category.id">
 					{{category.title}}
 					</ion-radio>
 				</ion-list>
+				</div>
+
                 
 				<div class="row no-padding">
 					<div class="col">
@@ -90,30 +92,35 @@
 						<input type="file" accept="image/*" capture="camera" ng-model="dataFile" >
 						<button type="button" class="button" ng-click="testFile()">Ckucj</button> 
 				</div> -->
-				
+				<div class="challeng">
 				<ion-list>
-					<ion-radio ng-model="data.isPublic" ng-value="true" checked="checked">Public</ion-radio>
-					<ion-radio  ng-model="data.isPublic" ng-value="false">Private</ion-radio>
+					<ion-radio ng-model="data.isPublic" ng-value="true" checked="checked" style="font-size:2em;text-transform: uppercase;">Публично</ion-radio>
+					<ion-radio ng-model="data.isPublic" ng-value="false" style="font-size:2em;text-transform: uppercase;">Скрито</ion-radio>
 				</ion-list>
-				<h3>Share in social</h3>
+				</div>
+	
+				<h3 style="margin-top:1em;text-transform: uppercase;">Сподели в социалните мрежи:</h3>
 				<div class="row responsive-sm">
 					<ion-list>
 					<div class="row">
 						  <div class="col">
-						  	<ion-checkbox ng-model="data.share.googlePlus"> <i class="icon  ion-social-googleplus"></i></ion-checkbox>
+						  	<button class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook"
+							style="background-color: rgb(47, 123, 189);"></button>
 						  </div>
 						  <div class="col">
-						  	<ion-checkbox ng-model="data.share.facebook"><i class="icon  ion-social-facebook"></i></ion-checkbox>
+						   <button class="fa ion-social-twitter button button-block" ng-model="data.share.twitter"
+                      style="background-color: rgb(0, 191, 243);"></button>
 						  </div>
 						  <div class="col">
-						  	<ion-checkbox ng-model="data.share.twitter"><i class="icon  ion-social-twitter"></i></ion-checkbox>
+						  	 <button class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus"
+                      style="background-color: rgb(217, 3, 74);"></button>
 						  </div>
 					</div>
 					</ion-list>
 					<!--add friends button-->
 					<button  type = "button" class="button button-block" ng-click="friendsModal.show()">Invite Friends</button>
 				</div>
-				<button class="button button-block button-balanced" type="submit">Create</button>
+				<button class="button button-block button-balanced" type="submit" style="font-size:2em;text-transform: uppercase;background: #17283a;color:#fff;">Създай</button>
 			</form>
 		</div>
 	</ion-content>

@@ -10663,16 +10663,60 @@ ion-view .Contacts {
   background-color: #e8edf0;
   background-size: 100% 100%;
   text-align: center;
-  display: block; }
+  display: block;
+  color: #16b8d4;
+  /*category challenges */
+  /* WebKit browsers */ }
   .newdare div .h1 {
     color: #044265; }
   .newdare h3 {
     color: #16b8d4; }
-  .newdare ion-list .cat {
-    width: 60%;
-    font-size: 10px;
-    padding: 1%;
-    text-align: left; }
+  .newdare div .challeng ion-list .list {
+    display: inline-block;
+    width: 100%;
+    padding: 0em;
+    font-size: 1em; }
+    .newdare div .challeng ion-list .list .item {
+      display: inline-block;
+      width: 45%;
+      font-size: 1em;
+      padding: 0.5%;
+      border: none;
+      text-align: center;
+      background: transparent; }
+      .newdare div .challeng ion-list .list .item :nth-child(1) {
+        background: #3b6783;
+        color: #fff;
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        /* margin-top: 1em; */
+        padding-top: 20%;
+        padding-bottom: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        word-break: keep-all; }
+      .newdare div .challeng ion-list .list .item :nth-child(2) {
+        background: #17283a;
+        color: #fff;
+        width: 100%; }
+  .newdare .list-inset {
+    width: 100%;
+    background: transparent; }
+  .newdare label .item {
+    margin-top: 5%; }
+  .newdare .fa {
+    width: 20vw !important;
+    height: 20vw; }
+  .newdare ::-webkit-input-placeholder {
+    color: #16b8d4;
+    opacity: 1 !important; }
+  .newdare .item span {
+    margin-top: -7em;
+    margin-right: 1em; }
+    .newdare .item span i {
+      color: orange;
+      -webkit-transform: scale(-1, 1); }
 
 /* CSS left Menue, background*/
 .menu-left {
@@ -10924,8 +10968,86 @@ ion-view ion-content {
   .list a p {
     color: #ffb400; }
 
-/*@import "scss/TimeLineCard";*/
-/*@import "scss/div-timelineCard";*/
+/* CSS list card 
+		title and arrows*/
+.TimeLineCard {
+  max-height: 10em; }
+  .TimeLineCard .arrows-right {
+    max-height: 0.5em;
+    font-size: 1em;
+    float: right;
+    /* width: 100%; */
+    margin-top: -3%;
+    padding: 0;
+    position: relative;
+    color: blue; }
+  .TimeLineCard .arrows-left {
+    max-height: 0.5em;
+    font-size: 1em;
+    float: left;
+    /* width: 100%; */
+    margin-top: -3%;
+    padding: 0;
+    position: relative;
+    color: blue; }
+  .TimeLineCard .arrows {
+    color: blue;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-size: 1em; }
+  .TimeLineCard .footer {
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: 30px;
+    width: 100%;
+    background: rgba(27, 73, 88, 0.3);
+    /*make circle buttons*/
+    /* avatar settings, img*/ }
+    .TimeLineCard .footer span {
+      width: 16%; }
+      .TimeLineCard .footer span .fa {
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        /* font-size: 2.5em; */
+        text-rendering: auto;
+        border-radius: 50%;
+        color: white;
+        /* margin-right: -3%; */
+        /* margin-bottom: -3%; */
+        padding: 10%;
+        /* margin-top: -3%; */ }
+    .TimeLineCard .footer .info {
+      display: inline-flex;
+      width: 10%;
+      height: 5em;
+      margin-top: 0%;
+      font-size: 10px;
+      color: #04a4c3;
+      margin-right: 3%; }
+    .TimeLineCard .footer .avatar a img {
+      margin-top: -0.9em;
+      margin-left: -0.3em;
+      border: 1px solid;
+      min-width: 1.3em;
+      min-height: 1.3em; }
+    .TimeLineCard .footer .ng-binding {
+      color: #04a4c3;
+      font-size: 10px;
+      margin-top: 2em;
+      margin-right: 2%; }
+      .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
+        color: #ffb400; }
+
+/* CSS list card */
+.challenges .bar-header span {
+  color: #fff; }
+  .challenges .bar-header span h3:first-child {
+    font-size: 20px; }
+
 /* CSS tabs- Menue */
 ion-modal-view .cont {
   background-image: url(../img/BG.png);
