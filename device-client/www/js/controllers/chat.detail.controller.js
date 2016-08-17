@@ -7,13 +7,16 @@ angular.module('starter.controllers')
     $scope.message = '';
 
     $scope.user = $stateParams.userID;
-    var from = $localStorage.user.email;
+    var from = $localStorage.user.data.email;
+    $scope.me = $localStorage.user.data.email; //remove in future
     var to = $stateParams.userID;
 
-    $log.info(from + " " + to);
+    $log.info(from);
+
 
     $http.get(SERVER_ADDRESS+SERVER_PORT +'/chat/messages/' + from + '/' + to)
       .success(function (response) {
+        $log.info(response);
         $scope.messages = response;
       });
 
