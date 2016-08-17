@@ -167,7 +167,17 @@ angular.module('starter').config(function (
 			]}
 		})
 
+		.state('app.chat',{
+			url : '/chat',
+			templateUrl: 'templates/tab-chat.html',
+			controller: 'ChatCtrl'
+		})
 
+		.state('app.chat-details', {
+			url: '/chat/:userID',
+			templateUrl: 'templates/tab-chat-detail.html',
+			controller: 'ChatDetailCtrl',			
+		})
 
 
 

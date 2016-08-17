@@ -1,7 +1,8 @@
 angular.module('starter.controllers')
 
-  .controller('ChatDetailCtrl', function ($scope, $http, $log, $state, $stateParams, $localStorage, ChatService, SERVER_ADDRESS, SOCKET_CHAT_PORT) {
-    var socket = io(SERVER_ADDRESS + SOCKET_CHAT_PORT); // TIP: io() with no args does auto-discovery
+  .controller('ChatDetailCtrl', function ($scope, $http, $log, $state, $stateParams, $localStorage, ChatService, SERVER_ADDRESS,SERVER_PORT, SOCKET_CHAT_PORT) {
+    var socket = io('http://dareornotchat.herokuapp.com/');
+
     $scope.messages = [];
     $scope.message = '';
 
@@ -10,14 +11,15 @@ angular.module('starter.controllers')
     var to = $stateParams.userID;
 
     $log.info(from + " " + to);
-    
-    $http.get('http://localhost:3000/chat/messages/' + from + '/' + to)
+
+    $http.get(SERVER_ADDRESS+SERVER_PORT +'/chat/messages/' + from + '/' + to)
       .success(function (response) {
         $scope.messages = response;
       });
 
     socket.on('message', function () {
-      $http.get('http://localhost:3000/chat/messages/' + from + '/' + to)
+      $log.info('new message ?');
+      $http.get(SERVER_ADDRESS+SERVER_PORT +'/chat/messages/' + from + '/' + to)
         .success(function (response) {
           $scope.messages = response;
         });
@@ -25,6 +27,7 @@ angular.module('starter.controllers')
 
     $scope.emit = function (msg) {
       delete $scope.message;
+      $log.info('sent');
       ChatService.emitMessage(from, to, msg, socket);
     };
 
