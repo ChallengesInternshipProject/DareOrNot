@@ -10705,18 +10705,49 @@ ion-view .Contacts {
     background: transparent; }
   .newdare label .item {
     margin-top: 5%; }
+  .newdare .vh {
+    margin-top: 1vh;
+    width: 95%;
+    height: 3em; }
+  .newdare .la {
+    text-align: left; }
   .newdare .fa {
     width: 20vw !important;
     height: 20vw; }
   .newdare ::-webkit-input-placeholder {
     color: #16b8d4;
     opacity: 1 !important; }
-  .newdare .item span {
+  .newdare .pen {
     margin-top: -7em;
     margin-right: 1em; }
-    .newdare .item span i {
+    .newdare .pen i {
       color: orange;
       -webkit-transform: scale(-1, 1); }
+  .newdare .info {
+    font-size: 0.5em;
+    width: 10%;
+    height: 100%;
+    left: -1.2em;
+    bottom: 3em; }
+    .newdare .info i {
+      color: orange;
+      font-size: 3em; }
+  .newdare .fileContainer {
+    font-size: 1em;
+    padding: 0em;
+    margin-bottom: 0;
+    MARGIN-TOP: 5%;
+    box-sizing: border-box; }
+    .newdare .fileContainer i {
+      background: #fff;
+      border-radius: 0;
+      color: orange;
+      font-size: 2.5em;
+      /* margin: 0%; */
+      padding: 0.5em;
+      padding-bottom: 0.1em; }
+  .newdare .fileContainer [type=file] {
+    margin-top: -1em; }
 
 /* CSS left Menue, background*/
 .menu-left {
