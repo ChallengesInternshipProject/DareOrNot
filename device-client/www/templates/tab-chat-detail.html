@@ -23,14 +23,21 @@
      class="messages">
 
   <div class="message" >
+    <img class="avatar" src="https://api.adorable.io/avatars/40/abott@adorable.png" alt="avatar">
+
+    <div ng-show="msg.sender == me" class="time">{{msg.time| date:'HH:mm'}}</div>
 
     <span>
       <!-- <strong>{{msg.sender}}</strong> {{msg.time| date:'HH:mm:ss'}} -->
       {{msg.message}}
+
     </span>
+
+    <div ng-show="msg.sender != me"  class="time">{{msg.time| date:'HH:mm'}}</div>
+
   </div>
 
-  <div class="time" ng-class="{'slide-right': hideTime, '': !hideTime}">{{message.time}}</div>
+
 
 
 </div>

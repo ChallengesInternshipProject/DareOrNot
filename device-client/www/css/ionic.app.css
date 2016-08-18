@@ -10993,6 +10993,12 @@ ion-modal-view .cont {
   text-align: left !important;
   transform: translate3d(0, 0, 0) !important; }
 
+.messages .avatar {
+  border-radius: 50% !important; }
+
+.messages .time {
+  color: white; }
+
 .messages span {
   background: #007AFF !important;
   display: inline-block !important;
@@ -11001,10 +11007,14 @@ ion-modal-view .cont {
   border-radius: 10px !important;
   text-align: left !important;
   max-width: 240px !important; }
+  .messages span .time {
+    color: white; }
 
 .messages.other .message {
   transform: translate3d(0, 0, 0) !important;
   text-align: right !important; }
+  .messages.other .message .avatar {
+    display: none; }
 
 .messages.other .message.slide-right {
   transform: translate3d(120px, 0, 0) !important; }

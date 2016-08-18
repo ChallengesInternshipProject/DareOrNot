@@ -10,22 +10,39 @@
     overflow: hidden !important;
     text-align: left !important;
     transform: translate3d(0, 0, 0) !important;
+
+  }
+  .avatar{
+    // border:1px solid black !important;
+    // padding-top:50px;
+    border-radius: 50% !important;
+  }
+  .time{
+    color: white;
   }
   span {
     background: #007AFF !important;
     display: inline-block !important;
     color: white !important;
     padding: 10px !important;
+    // padding-top: 20px;
     border-radius: 10px !important;
     text-align: left !important;
     max-width: 240px !important;
+    .time{
+      color:white;
+    }
   }
+
 }
 //This will change
 .messages.other {
   .message {
     transform: translate3d(0, 0, 0) !important;
     text-align: right !important;
+    .avatar{
+      display: none;
+    }
   }
   .message.slide-right {
     transform: translate3d(120px, 0, 0) !important;
