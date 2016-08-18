@@ -170,7 +170,17 @@ $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 			]}
 		})
 
+		.state('app.chat',{
+			url : '/chat',
+			templateUrl: 'templates/tab-chat.html',
+			controller: 'ChatCtrl'
+		})
 
+		.state('app.chat-details', {
+			url: '/chat/:userID',
+			templateUrl: 'templates/tab-chat-detail.html',
+			controller: 'ChatDetailCtrl',			
+		})
 
 
 

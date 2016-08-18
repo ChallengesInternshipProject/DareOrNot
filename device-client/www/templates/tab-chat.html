@@ -6,7 +6,7 @@
       <ion-item>
         <h2>Chat with :</h2>
       </ion-item>
-      <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/tab/chat/{{user.email}}">
+      <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/app/chat/{{user.email}}">
         {{user.email}}
       </ion-item>
     </ion-list>
