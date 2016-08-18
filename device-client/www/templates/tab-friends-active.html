@@ -1,9 +1,10 @@
-<ion-view   title="Приятели" view-title='Приятели' name="friends-active">
+<ion-view class="friends"  title="Приятели" view-title='Приятели' name="friends-active">
 		<ion-content >
 		<ion-refresher
 			pulling-text="Pull to refresh..."
 			on-refresh="doRefresh()">
 		</ion-refresher>
+
 			<ion-list>
 				<ion-item ng-include  src="'templates/div-friends-search.html'"></ion-item>
 				<ion-item 
@@ -13,6 +14,7 @@
 					ng-if="friend.friend.isOnline"
 				>
 				</ion-item>
+				
 			</ion-list>
 		</ion-content>
 </ion-view>

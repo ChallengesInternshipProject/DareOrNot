@@ -3,8 +3,6 @@
  */
 
 angular.module('starter.constants', [])
-  .constant('SERVER_ADDRESS', 'http://localhost')
-  .constant('SOCKET_CHAT_PORT', ':1337')
-  .constant('SERVER_PORT', ':3000');
-
-
+  .constant('SERVER_ADDRESS', 'http://dareornot.herokuapp.com')
+  .constant('SOCKET_CHAT_PORT', '')
+  .constant('SERVER_PORT', '')

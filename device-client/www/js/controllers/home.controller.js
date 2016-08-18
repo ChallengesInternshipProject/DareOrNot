@@ -1,35 +1,39 @@
-<!--home page for login/register-->
 angular.module('starter')
-  .controller('HomeCtrl', function (
-    $scope,
-   $rootScope,
-   $state,
-   $stateParams,
-   $timeout,
-   $log,
-   $ionicModal,
-   $localStorage,
-   $sessionStorage,
-   $ionicSlideBoxDelegate,
-   ionicDatePicker,
-   StatusFactory,
-   LoginService,
-   AuthFactory,
-   RegisterService,
-   FacebookService,
-   UserResolver
-   ) {
+  .controller('HomeCtrl', function ($scope,
+                                    $rootScope,
+                                    $state,
+                                    $stateParams,
+                                    $timeout,
+                                    $log,
+                                    $ionicModal,
+                                    $ionicHistory,
+                                    $localStorage,
+                                    $location,
+                                    $sessionStorage,
+                                    $ionicSlideBoxDelegate,
+                                    ionicDatePicker,
+                                    StatusFactory,
+                                    LoginService,
+                                    AuthFactory,
+                                    RegisterService,
+                                    FacebookService,
+                                    UserResolver,
+                                    SERVER_ADDRESS,
+                                    $ionicPlatform) {
 
     $scope.isLogged = false;
 
+    // Ionic.Auth.login('facebook').then(function (response) {
+    //   $log.info(response);
+    // });
 
     $scope.test = function () {
-
       LoginService.checkUserExists('krasimirvelichkov@gmail.com')
         .then(function (result) {
-          $log.info(result)
+          $log.info(result);
         });
     };
+
     $scope.$watch('isLogged', function () {
       // $log.info('test : ', $localStorage.test)
       // $log.info('$localStorage isLogged ', $localStorage.isLogged);
@@ -99,7 +103,7 @@ angular.module('starter')
           $scope.loginModal.hide();
 
           //console.log();
-          $state.go('tab.users');
+          $state.go('app.profile');
         });
     };
 
@@ -140,7 +144,7 @@ angular.module('starter')
     $ionicModal.fromTemplateUrl('templates/modals/register-modal.html', {
       scope: $scope,
       animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      // hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.registerModal = modal;
     });
@@ -149,7 +153,7 @@ angular.module('starter')
     $ionicModal.fromTemplateUrl('templates/modals/login-modal.html', {
       scope: $scope,
       animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      // hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.loginModal = modal;
     });
@@ -157,7 +161,7 @@ angular.module('starter')
     $ionicModal.fromTemplateUrl('templates/modals/forgot-password-modal.html', {
       scope: $scope,
       animation: 'slide-in-up',
-      hardwareBackButtonClose: false
+      // hardwareBackButtonClose: false
     }).then(function (modal) {
       $scope.forgottenPasswordModal = modal;
     });
@@ -199,5 +203,5 @@ angular.module('starter')
       $scope.modal.hide();
     };
 
-    $scope.users = UserResolver
+    $scope.users = UserResolver;
   });

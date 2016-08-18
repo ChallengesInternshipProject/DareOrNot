@@ -1,18 +1,43 @@
 <ion-view view-title="Chatting with {{user}}">
   <ion-content>
     <h2>{{user.socketID}}</h2>
-    <ion-list>
+    <!-- <ion-list>
       <ion-item ng-repeat="msg in messages track by $index">
         <strong>{{msg.sender}}</strong> {{msg.time| date:'HH:mm:ss'}}
-        <div ng-class="{'strike': theItem, left : right}">
+        <div>
           {{msg.message}}
         </div>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
+    <!-- <ul>
+      <li ng-repeat="msg in messages track by $index">
+      <strong>{{msg.sender}}</strong> {{msg.time| date:'HH:mm:ss'}}
+      <div>
+        {{msg.message}}
+      </div>
+    </li>
+    </ul> -->
+
+    <div ng-repeat="msg in messages track by $index"
+     ng-class="{other: msg.sender == me}"
+     class="messages">
+
+  <div class="message" >
+
+    <span>
+      <!-- <strong>{{msg.sender}}</strong> {{msg.time| date:'HH:mm:ss'}} -->
+      {{msg.message}}
+    </span>
+  </div>
+
+  <div class="time" ng-class="{'slide-right': hideTime, '': !hideTime}">{{message.time}}</div>
+
+
+</div>
 
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
-    <form>
+
       <label class="item-input-wrapper input-form-submit">
         <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()"
                ng-model="message" on-focus="inputUp()" on-blur="inputDown()" ng-submit="emit(message)"/>
@@ -22,6 +47,16 @@
       <button ng-model="deleted" class="button button-clear button-form-submit" ng-click="emit(message)">
         Send
       </button>
-    </form>
+
   </ion-footer-bar>
+
+  <!-- <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+  <label class="item-input-wrapper">
+    <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="data.message" on-focus="inputUp()" on-blur="inputDown()" />
+  </label>
+  <button class="button button-clear" ng-click="sendMessage()">
+    Send
+  </button>
+</ion-footer-bar> -->
+
 </ion-view>

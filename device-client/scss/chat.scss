@@ -1,0 +1,37 @@
+// $stable:                          #f8f8f8 !default;
+
+
+.messages {
+
+  .message {
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+  span {
+    background: #007AFF !important;
+    display: inline-block !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    text-align: left !important;
+    max-width: 240px !important;
+  }
+}
+//This will change
+.messages.other {
+  .message {
+    transform: translate3d(0, 0, 0) !important;
+    text-align: right !important;
+  }
+  .message.slide-right {
+    transform: translate3d(120px, 0, 0) !important;
+  }
+  span {
+    color: black !important;
+    background-color: #C7C7CC !important;
+  }
+}

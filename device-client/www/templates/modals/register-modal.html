@@ -12,7 +12,7 @@
           <section class="list">
             <article class="logo">
             </article>
-            <article class="into-login">
+            <article class="into-login" style="margin-bottom: 10%;margin-top: 10%;">
               <i class="ion-android-person"></i>
               <label class="item item-input item-floating-label item-into">
                 <span class="input-label">Име</span>
@@ -39,7 +39,7 @@
             <button class="button button-block button-TR" ng-click="nextSlide()"><i class="ion-arrow-right-c"></i>
             </button>
             <!--adding some br's maybe it will be better with CSS ?-->
-
+			</br>
             Вече имате акаунт ? <a class="reg" ng-href="" ng-click="callLoginModal()"><span
             class="input-label">Влезте</span></a>
           </aside>
@@ -53,7 +53,7 @@
           <section class="list">
             <article class="logo">
             </article>
-            <article class="into-login">
+            <article class="into-login" style="margin-bottom: 10%;margin-top: 10%;">
               <i class="ion-ios-location-outline"></i>
               <label class="item item-input item-floating-label item-into">
                 <span class="input-label">Адрес</span>
@@ -79,12 +79,13 @@
             </article>
           </section>
           <aside class="regis">
-            <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
-            </button>
+
+            <!-- <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
+            </button> -->
             <button class="button button-block button-TR" ng-click="nextSlide()"><i class="ion-arrow-right-c"></i>
             </button>
             <!--adding some br's maybe it will be better with CSS ?-->
-
+			</br>
             Вече имате акаунт ? <a class="reg" ng-href="" ng-click="callLoginModal()"><span
             class="input-label">Влезте</span></a>
           </aside>
@@ -101,21 +102,24 @@
               <div class="logo"></div>
             </article>
             <article class="into-login">
-              <h2 style="font-size: 1em;  margin-top: 9%;  margin-bottom: 2%;"> Добави снимка </h2>
+              <h2 style="font-size: 2em; margin-bottom: 15%;"> Добави снимка </h2>
               <label class="fileContainer">
-                <i class="ion-ios-camera-outline" style=" font-size:3em;"></i> <input class="fil" type="file">
+                <i class="ion-ios-camera-outline"></i> <input class="fil" type="file">
               </label>
             </article>
           </section>
-          <aside class="regis">
-            <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
-            </button>
+           <aside class="regis">
+
+            <!-- <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
+            </button> -->
             <button class="button button-block button-TR" ng-click="nextSlide()"><i class="ion-arrow-right-c"></i>
             </button>
-            </br>
+            <!--adding some br's maybe it will be better with CSS ?-->
+			</br>
             Вече имате акаунт ? <a class="reg" ng-href="" ng-click="callLoginModal()"><span
             class="input-label">Влезте</span></a>
           </aside>
+
         </div>
       </ion-slide>
 
@@ -127,8 +131,8 @@
             <article>
               <div class="logo"></div>
             </article>
-            <article class="into-login">
-              <h1 style="color: rgb(120, 103, 30);"> Добави социална мрежа</h1>
+            <article class="into-login" style="margin-bottom: 10%;margin-top: 10%;">
+              <h1 style="color: rgb(120, 103, 30); font-size: 2em;margin-bottom: 15%;"> Добави социална мрежа</h1>
               <button class="fa ion-social-facebook button button-block " ng-click="loginWithFacebook()"
                       style="background-color: rgb(47, 123, 189);"></button>
               <button class="fa ion-social-twitter button button-block " ng-click="loginWithtwitter()"
@@ -137,14 +141,18 @@
                       style="background-color: rgb(217, 3, 74);"></button>
             </article>
           </section>
-          <aside class="regis">
-            <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
-            </button>
+           <aside class="regis">
+
+            <!-- <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
+            </button> -->
             <button class="button button-block button-TR" ng-click="nextSlide()"><i class="ion-arrow-right-c"></i>
             </button>
+            <!--adding some br's maybe it will be better with CSS ?-->
+			</br>
             Вече имате акаунт ? <a class="reg" ng-href="" ng-click="callLoginModal()"><span
             class="input-label">Влезте</span></a>
           </aside>
+
         </div>
       </ion-slide>
 
@@ -152,7 +160,7 @@
         <div class="content-list">
           <section class="list">
 
-            <article class="into-login">
+            <article class="into-login" style="margin-bottom: 10%;margin-top: 10%;">
               <div>{{registerInfo.name}}</div>
               <div>{{registerInfo.email}}</div>
               <div>{{registerInfo.password}}</div>
@@ -164,12 +172,19 @@
             </article>
           </section>
           <aside class="regis">
-            <button class="button button-block  button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
-            </button>
+
+            <!-- <button class="button button-block button-TR" ng-click="previousSlide()"><i class="ion-arrow-left-c"></i>
+            </button> -->
+            <!-- <button class="button button-block button-TR" ng-click="nextSlide()"><i class="ion-arrow-right-c"></i>
+            </button> -->
+            <!--adding some br's maybe it will be better with CSS ?-->
+			</br>
             <button class="button button-block  button-calm" ng-click="register()">РЕГИСТРИРАЙ МЕ</button>
+            </br>
             Вече имате акаунт ? <a class="reg" ng-href="" ng-click="callLoginModal()"><span
             class="input-label">Влезте</span></a>
           </aside>
+
 
         </div>
       </ion-slide>
