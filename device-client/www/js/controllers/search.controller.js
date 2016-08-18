@@ -4,7 +4,9 @@ angular.module('starter.controllers')
 		UserService,
 		$localStorage,
 		$log,
-		SERVER_ADDRESS
+		SERVER_ADDRESS,
+		 $ionicPopup, 
+		 $timeout
 	){
 		$scope.result = [];
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
@@ -15,6 +17,19 @@ angular.module('starter.controllers')
 				//$log.info($scope.result)
 			})
 		
+		}	
+		$scope.showAlert = function() {
+			var alertPopup = $ionicPopup.alert({
+					template: 'Изпратено'
+			});
+
+			alertPopup.then(function(res) {});
+		};
+		$scope.sendRequest = function(requestedID){
+			UserService.sendRequest($localStorage.user.data._id,requestedID).then(function(result){
+				$scope.showAlert();
+
+			});
 		}
 
 	});

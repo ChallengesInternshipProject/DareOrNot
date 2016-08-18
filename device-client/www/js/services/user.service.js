@@ -82,6 +82,9 @@ angular.module('starter.services')
 			return returnResult.promise
 
 		}
+		user.sendRequest = function(senderID,requestedID) {
+			return $http.post(SERVER_ADDRESS+ "/users/requestFriendship/",{	senderID : senderID,requestedID : requestedID,})
+		}
 		//End of methods
 		return user;
 
