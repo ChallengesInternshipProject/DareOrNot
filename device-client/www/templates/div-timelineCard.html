@@ -5,11 +5,10 @@
 	</span>
 	
 <!-- Това е за слайдъра, взема картинките на деар от сървара ,,,, кодовете за него са следващите 10 реда  -->
-	<ion-slide-box on-slide-changed="slideChanged(index)">
+	<ion-slide-box on-slide-changed="slideChanged(index)" style="min-width:100%; min-height:5em;">
 		<ion-slide ng-repeat='picture in challenge.pictures'>
 			<div>
       				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
-				<br>
 			</div>
 		</ion-slide>
 	</ion-slide-box>
@@ -20,9 +19,7 @@
 	<div ng-click="previousSlide()" class="arrows-right"><i class="ion-chevron-right"></i></div>
 	</div>
 	
-	
-	
-		<!-- Визитка на човека, На доло е нагласено и рабти!!!!  -->
+	<!-- Визитка на човека, На доло е нагласено и рабти!!!!  -->
 	<div class="footer">
 		<span class="avatar">
 			<a class="fa item-avatar" href="#">
