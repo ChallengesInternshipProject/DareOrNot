@@ -10437,7 +10437,7 @@ ion-view .Contacts {
           color: blue; }
 
 /* CSS Profil */
-.calendar {
+ion-content.calendar {
   background-image: none;
   background-color: #077795;
   text-align: center;

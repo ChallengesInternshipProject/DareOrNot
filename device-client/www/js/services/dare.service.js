@@ -21,6 +21,8 @@ angular.module('starter.services')
 			})
 
 		}
-
+		dareService.list = function(filter){
+			return $http.get(SERVER_ADDRESS + '/dares/list/',{params:{data:filter}});
+		}
 		return dareService;
 	});
