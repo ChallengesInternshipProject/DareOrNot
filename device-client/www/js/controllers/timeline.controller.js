@@ -1,5 +1,14 @@
 angular.module('starter.controllers')
-	.controller('TimelineCtrl', function ($scope, $http, $ionicLoading, SERVER_ADDRESS, $state, $localStorage, $ionicSlideBoxDelegate) {
+	.controller('TimelineCtrl', function (
+		$scope,
+		$http,
+		$ionicLoading,
+		SERVER_ADDRESS,
+		$state,
+		$localStorage,
+		$ionicSlideBoxDelegate,
+		DareService
+	 ) {
 
 		$scope.doRefresh = function () {
 			GetTimeline();
@@ -17,12 +26,15 @@ angular.module('starter.controllers')
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
-			$http.get(SERVER_ADDRESS + '/dares/timeline/'+			
-$localStorage.user.data._id).success(function (result) {
+			DareService.list({$or:[{_id:$localStorage.user.data._id},{isPublic:true}]}).then(function(result){
 				$ionicLoading.hide();
 				$scope.challenges = result ;
 				$scope.$broadcast('scroll.refreshComplete');
-			});
-		};
+			})
+		}
+
+
+
+	
 
 	});

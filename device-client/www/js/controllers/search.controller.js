@@ -28,7 +28,6 @@ angular.module('starter.controllers')
 		$scope.sendRequest = function(requestedID){
 			UserService.sendRequest($localStorage.user.data._id,requestedID).then(function(result){
 				$scope.showAlert();
-
 			});
 		}
 
