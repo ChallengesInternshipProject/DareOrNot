@@ -3,15 +3,18 @@ angular.module('starter.controllers')
 		$scope, 
 		UserService,
 		$localStorage,
-		$log
+		$log,
+		SERVER_ADDRESS
 	){
 		$scope.result = [];
-
+		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		$scope.search = function(){
-			UserService.getNonFriends($localStorage.user.data._id, $scope.searchString).then(function(result){
+			UserService.getNonFriends($localStorage.user.data._id,"").then(function(result){
 				$scope.result = result;
-				
+				$log.info($scope.searchText);
+				//$log.info($scope.result)
 			})
+		
 		}
 
 	});
