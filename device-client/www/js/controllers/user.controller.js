@@ -28,7 +28,7 @@ angular.module('starter.controllers')
 
     $scope.searchFriends = function () {
       $scope.friends = UserService.getFriends(			
-$localStorage.user.data._id, 'Accepted', $scope.searchString).then(function (data) {
+        $localStorage.user.data._id, 'Accepted', $scope.searchString).then(function (data) {
         return data
       });
     };
@@ -43,9 +43,7 @@ $localStorage.user.data._id, 'Accepted', $scope.searchString).then(function (dat
 
       // DareService.sendDare(userID);
     };
-    $scope.test = function () {
-      $log.info('testing ?');
-    };
+ 
 
   });
 

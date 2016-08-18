@@ -7,7 +7,7 @@ angular.module('starter.controllers')
 		$state,
 		$localStorage,
 		$ionicSlideBoxDelegate,
-		DareService,
+		DaresResolver,
 		$log
 	 ) {
 
@@ -22,18 +22,8 @@ angular.module('starter.controllers')
 			$ionicSlideBoxDelegate.previous();
 		}
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
-		GetTimeline();
-		function GetTimeline() {
-			$ionicLoading.show({
-				template: 'Loading...'
-			});
-			DareService.list({$or:[{_id:$localStorage.user.data._id},{isPublic:true}]}).then(function(result){
-				$ionicLoading.hide();
-				$scope.dares = result.data ;
-				$log.info($scope.dares);
-				$scope.$broadcast('scroll.refreshComplete');
-			})
-		}
+		$scope.dares = DaresResolver;
+	
 
 
 

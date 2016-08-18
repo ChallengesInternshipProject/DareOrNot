@@ -22,9 +22,7 @@ angular.module('starter.services')
 
 		}
 		dareService.list = function(filter){
-			$log.info(filter)
-			return $http.get(SERVER_ADDRESS + '/dares/timeline/',{params:filter});
+			return $http.get(SERVER_ADDRESS + '/dares/list/',{params:{data:filter}});
 		}
-
 		return dareService;
 	});
