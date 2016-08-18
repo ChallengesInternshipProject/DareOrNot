@@ -7,7 +7,8 @@ angular.module('starter.controllers')
 		$state,
 		$localStorage,
 		$ionicSlideBoxDelegate,
-		DareService
+		DareService,
+		$log
 	 ) {
 
 		$scope.doRefresh = function () {
@@ -28,7 +29,8 @@ angular.module('starter.controllers')
 			});
 			DareService.list({$or:[{_id:$localStorage.user.data._id},{isPublic:true}]}).then(function(result){
 				$ionicLoading.hide();
-				$scope.challenges = result ;
+				$scope.dares = result.data ;
+				$log.info($scope.dares);
 				$scope.$broadcast('scroll.refreshComplete');
 			})
 		}

@@ -1,14 +1,7 @@
-
-
-	<!-- Slide to the left  -->
-	<!-- <div ng-click="nextSlide()">Arrow Left</div> -->
-<span>
-	{{challenge.title}}
-</span>
+<h2>	{{dare.title}}</h2>
 <ion-slide-box class="demo">
-	<ion-slide>
-		<img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/7/79/2001_BMW_Z3_Sideview_Topdown_Topaz_Blue_2.5i.jpg">
-		<h2>Нахрани улична котка</h2>
+	<ion-slide ng-repeat="picture in dare.pictures">
+		<img style="width: 100%" ng-src="http://upload.wikimedia.org/wikipedia/commons/7/79/2001_BMW_Z3_Sideview_Topdown_Topaz_Blue_2.5i.jpg">
 	</ion-slide>
 </ion-slide-box>
 <div class="user">
@@ -21,52 +14,43 @@
 				<img src="../img/icons/location-icon.png" style="width:7px; height:auto;">
 			</div>
 			<div class="time">
-				<p>{{challenge.city}}София</p>
+				<p>{{dare.city}}</p>
 			</div>
 			<div class="timeclock">
 				<img src="../img/icons/time.png" style="width:8px; height:auto;">
 			</div>
 			<div class="time">
-				<p>{{challenge.timeElapsed}}Преди 4 часа и 30 минути</p>
+				<p>{{dare.timeElapsed}}</p>
 			</div>
 			<div class="likeLike">
 		<div class="person">
-			<p>{{challenge.invitedUsers.length}}57</p>
+			<p>{{dare.invitedUsers.length}}</p>
 		</div>
 		
 		<div class="comment">
-			<p>{{challenge.comments}}34</p>
+			<p>{{dare.comments}}</p>
 		</div>
 			
 		<div class="heart">
-			<p>{{challenge.likes}}234</p>
+			<p>{{dare.likes}}</p>
 		</div>
 		
 	</div>
 	<div class="clock">
 			<h6>
 				<p>Оставащо време</p>
-				23:40Ч.
-				{{challenge.timeLeft}}
+				{{dare.timeLeft}}
 			</h6>
 	</div>
 		</div>
 	</div>
-	<div class="arrow">
-	<div ng-click="nextSlide()">
-		<img src="../img/icons/left.png"></img>
-	</div>
- 	 <div ng-click="previousSlide()">
- 		 <img src="../img/icons/right.png"></img>
-	</div>
-	</div>
-
-	<!-- <div class="arrow">
-				<a class="arrow-left" ng-click="nextSlide()">
-				</a>
-				<a class="arrow-right" ng-click="previousSlide()">
-				</a>
-			</div>
+<!-- 	<div class="arrow">
+		<div ng-click="nextSlide()">
+			<img src="../img/icons/left.png"></img>
+		</div>
+		<div ng-click="previousSlide()">
+			<img src="../img/icons/right.png"></img>
+		</div>
 	</div> -->
 </div>
 
