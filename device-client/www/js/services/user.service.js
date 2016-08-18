@@ -44,12 +44,15 @@ angular.module('starter.services')
 				})
 		}
 		user.list = function(queryParams){
-			return $http({
+			var result = $q.defer()  
+			$http({
 				url : SERVER_ADDRESS+'/users/list/',
 				params : queryParams,
-			}).then(function(result){
-				return result;
+			}).then(function(resultData){
+				result.resolve(resultData.data);
 			})
+
+			return result.promise;
 		}
 		user.getNonFriends = function(userID,searchString){
 		
@@ -58,18 +61,25 @@ angular.module('starter.services')
 				friends.resolve(result)
 			})
 
+			var returnResult = $q.defer();
 			friends.promise.then(function(result){
-				 var friendsIdList = [];
-				 for(var friend in result){
-				 	friendsIdList.push(result[friend]._id);
-				 }
-
-				 var queryParams = {
-				 	friends : friendsIdList
-				 }
-
-				 return user.list(queryParams);
+				var queryParams = {
+					friends : []
+				}
+				//All Friends
+				for(var friend in result){
+					queryParams.friends.push(result[friend]._id);
+				}
+				//Add Users Self ID
+				queryParams.friends.push(userID);
+				returnResult.resolve(
+						user.list(queryParams)
+						.then(function(data){return data})
+					);
+			
 			})
+
+			return returnResult.promise
 
 		}
 		//End of methods

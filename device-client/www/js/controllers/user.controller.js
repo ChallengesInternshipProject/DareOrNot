@@ -4,7 +4,7 @@ angular.module('starter.controllers')
     $scope.doRefresh = function () {
       GetUsers();
       //$scope.searchString = "";
-      //$scope.friends = UserService.getFriends($localStorage.user.id,'Accepted',$scope.searchString).then(function(data){return data});
+      $scope.friends = UserService.getFriends($localStorage.user.data._id,'Accepted',$scope.searchString).then(function(data){return data});
     };
 
     $scope.SERVER_ADDRESS = SERVER_ADDRESS + SERVER_PORT;
@@ -27,7 +27,8 @@ angular.module('starter.controllers')
     $scope.friends = UserService.friends;
 
     $scope.searchFriends = function () {
-      $scope.friends = UserService.getFriends($localStorage.user.id, 'Accepted', $scope.searchString).then(function (data) {
+      $scope.friends = UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', $scope.searchString).then(function (data) {
         return data
       });
     };

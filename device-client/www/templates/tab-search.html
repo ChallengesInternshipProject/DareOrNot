@@ -4,8 +4,31 @@
 			<div class="list list-inset">
 					<label class="item item-input">
 							<i class="icon ion-search placeholder-icon"></i>
-							<input type="text" placeholder="Search" ng-keyup="search()">
+							<input type="text" placeholder="Search" ng-keyup="search()" ng-model="searchText">
 					</label>
+			</div>
+			<div style="background-color:white">{{result}}</div>
+			<!-- TODO unify with div-friends -->
+			<div ng-repeat = "firend in result" class="friends">
+				<div class="col">
+					<a  class="item-avatar"  ng-class = "{online : friend.isOnline==true}" ng-href="#/tab/user/{{friend.email}}">
+						<img  ng-src='{{SERVER_ADDRESS}}/{{friend.avatar}}' alt="">
+					</a>	
+				</div>
+				<div class="col col-1">
+					<h4>{{friend.email}}</h4>
+					<h6><i class="ion-ios-location-outline" style="color:#ffb400;font-size:15px;"></i>{{friend.town}}, {{friend.country}}</h6>
+				</div>
+				<div class="col">
+					<!-- TODO clarify the link to the dare -->
+					<a   class="button button-calm  button-small" href="#/tab/new-dare" >
+						Отправи Предизвикателсто
+					</a>
+				</div>
+				<div class="col">
+					<!-- TODO clarify the link to the chat -->
+					<a href="#/tab/chat /" class="button button-icon fa fa-chat"></a>
+				</div>
 			</div>
 		</ion-content>
 </ion-view>

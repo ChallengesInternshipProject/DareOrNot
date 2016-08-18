@@ -39,7 +39,7 @@ angular.module('starter.controllers')
 				template: 'Loading...'
 			});
 
-			$http.get(SERVER_ADDRESS + '/calendar/'+$localStorage.user.id+'/'+year+'/'+month).success(function (result) {
+			$http.get(SERVER_ADDRESS + '/calendar/'+$localStorage.user.data._id+'/'+year+'/'+month).success(function (result) {
 				$ionicLoading.hide();
 				$scope.calendar = result ;
 				$scope.weeks=[];

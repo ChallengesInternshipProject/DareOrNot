@@ -119,7 +119,8 @@ angular.module('starter').config(function (
 					controller: 'UsersCtrl',
 					resolve: {
 						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.id, 'Accepted', '').then(function (data) {
+							return UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', '').then(function (data) {
 								return data
 							})
 						}]
@@ -135,7 +136,8 @@ angular.module('starter').config(function (
 					controller: 'UsersCtrl',
 					resolve: {
 						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.id, 'Accepted', '').then(function (data) {
+							return UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', '').then(function (data) {
 								return data
 							})
 						}]
@@ -160,7 +162,8 @@ angular.module('starter').config(function (
 			resolve: {
 				isAuthenticated: isAuthenticated,
 				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
-					return UserService.getFriends($localStorage.user.id, 'Accepted', "").then(function (data) {
+					return UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', "").then(function (data) {
 						return data
 					})
 				}

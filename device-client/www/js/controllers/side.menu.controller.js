@@ -97,7 +97,8 @@ angular.module('starter.controllers')
       $ionicLoading.show({
         template: 'Loading...'
       });
-      $http.get(SERVER_ADDRESS + '/challenges/timeline/' + $localStorage.user.id).success(function (result) {
+      $http.get(SERVER_ADDRESS + '/challenges/timeline/' + 			
+$localStorage.user.data._id).success(function (result) {
         $ionicLoading.hide();
         $scope.challenges = result;
         $scope.SERVER_ADDRESS = SERVER_ADDRESS + '/';
