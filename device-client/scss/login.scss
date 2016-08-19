@@ -49,7 +49,6 @@ ion-content{
 
   /*BACKGROUND*/
   .content-list {
-
     text-align: center;
     font-size: 1em;
     color: #fff;
@@ -62,8 +61,6 @@ ion-content{
     display: block;
     width: 100%;
 	height: 100%;
-	margin: 0;
-
     box-sizing: border-box;
   }
 
@@ -209,22 +206,24 @@ ion-content{
   /*RADIUS BUTTON */
 
   .regis {
- 	background: transparent;
-    margin-TOP: 5%;
-    margin-bottom: 5%;
-    bottom: 0px;
+    background: transparent;
+    /* margin-TOP: 10%; */
+    /* margin-bottom: 5%; */
+    /* bottom: 0px; */
     width: 100%;
-    height: auto;
+    /* height: auto; */
     font-size: 1em;
-    display: inline-block;
-    position: relative;
+    /* display: inline-block; */
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
     box-sizing: border-box;
   }
 
   a.reg {
     color: #fff;
     margin: 0;
-    display: inline-block;
+    display: inline-flex;
   }
 
   /*ion-slide-box {*/
@@ -246,10 +245,12 @@ ion-content{
 
   div.slider-pager {
     position: relative;
-    bottom: 12em;
+    bottom: 10em;
     padding: 0em;
     overflow: auto;
     height: 100%;
+	visibility: hidden;
+	
   }
 
   /* upload photo */
@@ -259,29 +260,32 @@ ion-content{
   }
 
   .fileContainer [type=file] {
-    cursor: inherit;
-    display: block;
-    font-size: 999px;
+    /* cursor: inherit; */
+    /* display: block; */
+    font-size: 2em;
     filter: alpha(opacity=0);
-    min-height: 100%;
-    min-width: 100%;
+    /* min-height: 100%; */
+    /* min-width: 100%; */
     opacity: 0;
-    position: absolute;
-    right: 0;
-    text-align: right;
-    top: 0;
+    /* position: absolute; */
+    /* right: 0; */
+    /* text-align: right; */
+    /* top: 0; */
   }
 
   /* Example stylistic flourishes */
 
   .fileContainer {
-    background: #012438;
-    border-radius: 50%;
     font-size: 1em;
-    padding: 2.5em;
+    padding: 2em;
     margin-bottom: 15%;
     MARGIN-TOP: 10%;
     box-sizing: border-box;
+	i{ background: #012438;
+    border-radius: 50%;
+    font-size: 2em;
+    padding: 1.5em;
+   }
 
   }
 }
