@@ -10252,93 +10252,94 @@ ion-content {
   position: absolute;
   top: 15%;
   color: #fff;
-  font-size: 40px;
+  font-size: 20px;
   padding-left: 30px; }
 
 .time {
   display: inline-block;
-  vertical-align: top;
-  padding-left: 4px; }
+  vertical-align: top; }
 
 .timetime {
   display: inline-block;
   vertical-align: top;
-  padding-top: 30px;
-  margin-left: -68%;
-  width: 350px;
+  margin-left: -73%;
+  width: 174px;
   height: auto; }
 
 .timetime p {
-  font-size: 10px; }
+  font-size: 0.5em;
+  line-height: 22px;
+  color: #03b2d1; }
 
 .likeLike {
   display: inline-block; }
 
-.info .person {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/user1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  height: 40px;
-  padding-top: 15px; }
-
-.info .comment {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/speech1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  height: 40px;
-  padding-top: 15px; }
-
-.info .heart {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/love1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  padding-top: 15px;
-  height: 40px; }
-
-.likeLike > p {
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 15px;
-  font-size: 15px;
-  color: #03b2d1; }
-
 .likeLike .person {
-  width: 20px; }
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/user1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 19px;
+  width: 22px; }
 
 .likeLike .comment {
-  width: 20px; }
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/speech1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 17px;
+  width: 26px; }
 
 .likeLike .heart {
-  width: 20px; }
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/love1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 17px;
+  width: 26px; }
+
+.person p {
+  padding-left: 43%; }
+
+.comment p {
+  padding-left: 50%; }
+
+.heart p {
+  padding-left: 55%; }
+
+.likeLike p {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 8px;
+  color: #03b2d1; }
 
 .clock h6 {
   font-size: 13px;
-  color: #03b2d1; }
+  color: #03b2d1;
+  line-height: 12px; }
 
 .clock h6 > p {
   color: #ffcf7d;
-  font-size: 6px;
-  line-height: 10px; }
+  font-size: 5px;
+  line-height: 5px; }
 
 .clock {
   display: inline-block;
   vertical-align: top;
-  padding-left: 10px;
-  padding-top: 10px; }
+  padding-left: 4px;
+  padding-top: 5px; }
 
 .timecheck {
   display: inline-block;
   vertical-align: top;
-  padding-left: 4px; }
+  padding-left: 4px;
+  line-height: -1px; }
 
 .timecheck img {
   width: 16px;
@@ -10347,17 +10348,19 @@ ion-content {
 .timeclock {
   display: inline-block;
   vertical-align: top;
-  padding-left: 4px;
-  height: 16px; }
+  height: 16px;
+  line-height: -1px; }
 
 .timeclock img {
   width: 16px;
   height: 16px; }
 
 .info {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
   position: relative;
-  bottom: 20px;
-  padding-top: 25px; }
+  bottom: 20px; }
 
 .socialtwo {
   display: none; }
@@ -10368,34 +10371,25 @@ ion-content {
 .user {
   width: 80%;
   position: absolute;
-  bottom: 18%;
-  left: -1%; }
+  top: 74%;
+  left: -10%; }
 
 .user-name {
   display: inline-block;
   vertical-align: top;
   color: #fff;
-  font-size: 1em;
-  margin-left: 10px; }
+  font-size: 0.8em;
+  margin-left: 4px; }
 
 .user-pic {
   display: inline-block;
-  width: 20%; }
+  width: 20%;
+  margin-left: -6%; }
 
 .user .img-circle {
   border-radius: 50%;
-  border: 5px solid #fff;
+  border: 2px solid #fff;
   width: 130px; }
-
-.arrow-left {
-  background: url("../img/left.png");
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.arrow-right {
-  background: url("../img/right.png");
-  background-repeat: no-repeat;
-  background-position: center; }
 
 .arrow {
   position: absolute;
@@ -11153,6 +11147,216 @@ ion-modal-view .cont {
       ion-modal-view .cont .list .item-toggle .toggle.toggle-assertive input:checked + .track {
         border-color: #01cfe4;
         background-color: #01cfe4; }
+
+.demo {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 2%;
+  margin-right: 2%;
+  position: relative; }
+
+.demo > img {
+  position: relative;
+  width: 100%;
+  height: auto; }
+
+.demo h2 {
+  position: absolute;
+  top: 15%;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 30px; }
+
+.time {
+  display: inline-block;
+  vertical-align: top; }
+
+.timetime {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -73%;
+  width: 174px;
+  height: auto; }
+
+.timetime p {
+  font-size: 0.5em;
+  line-height: 22px;
+  color: #03b2d1; }
+
+.likeLike {
+  display: inline-block; }
+
+.likeLike .person {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/user1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 19px;
+  width: 22px; }
+
+.likeLike .comment {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/speech1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 17px;
+  width: 26px; }
+
+.likeLike .heart {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/love1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 17px;
+  width: 26px; }
+
+.person p {
+  padding-left: 43%; }
+
+.comment p {
+  padding-left: 50%; }
+
+.heart p {
+  padding-left: 55%; }
+
+.likeLike p {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 8px;
+  color: #03b2d1; }
+
+.clock h6 {
+  font-size: 13px;
+  color: #03b2d1;
+  line-height: 12px; }
+
+.clock h6 > p {
+  color: #ffcf7d;
+  font-size: 5px;
+  line-height: 5px; }
+
+.clock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-top: 5px; }
+
+.timecheck {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  line-height: -1px; }
+
+.timecheck img {
+  width: 16px;
+  height: 20px; }
+
+.timeclock {
+  display: inline-block;
+  vertical-align: top;
+  height: 16px;
+  line-height: -1px; }
+
+.timeclock img {
+  width: 16px;
+  height: 16px; }
+
+.info {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  bottom: 20px; }
+
+.socialtwo {
+  display: none; }
+
+.responsive-logo {
+  display: none; }
+
+.user {
+  width: 80%;
+  position: absolute;
+  top: 74%;
+  left: -10%; }
+
+.user-name {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  font-size: 0.8em;
+  margin-left: 4px; }
+
+.user-pic {
+  display: inline-block;
+  width: 20%;
+  margin-left: -6%; }
+
+.user .img-circle {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 130px; }
+
+.arrow {
+  position: absolute;
+  top: 10%;
+  width: 100%; }
+
+.arrowSecond {
+  position: absolute;
+  top: 30%;
+  width: 100%; }
+
+.arrow img {
+  width: 50px;
+  height: 50px;
+  border: none; }
+
+.messages .message {
+  flex: 1 1 auto !important;
+  padding: 10px !important;
+  transition: all 250ms ease-in-out !important;
+  overflow: hidden !important;
+  text-align: left !important;
+  transform: translate3d(0, 0, 0) !important; }
+
+.messages .avatar {
+  border-radius: 50% !important; }
+
+.messages .time {
+  color: white; }
+
+.messages span {
+  background: #007AFF !important;
+  display: inline-block !important;
+  color: white !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
+  text-align: left !important;
+  max-width: 240px !important; }
+  .messages span .time {
+    color: white; }
+
+.messages.other .message {
+  transform: translate3d(0, 0, 0) !important;
+  text-align: right !important; }
+  .messages.other .message .avatar {
+    display: none; }
+
+.messages.other .message.slide-right {
+  transform: translate3d(120px, 0, 0) !important; }
+
+.messages.other span {
+  color: black !important;
+  background-color: #C7C7CC !important; }
 
 /* CSS NAv Menue */
 ion-side-menu-content ion-view .nav-bar-block {

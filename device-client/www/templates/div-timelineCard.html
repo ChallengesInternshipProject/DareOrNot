@@ -1,12 +1,12 @@
 <!-- Това е класа по който взимам визитката , навигационите стрелки и заглавието по-доло-->
 <div class="TimeLineCard">
 	<span class="title">
-		{{challenge.title}}
+		{{dare.title}}
 	</span>
 	
 <!-- Това е за слайдъра, взема картинките на деар от сървара ,,,, кодовете за него са следващите 10 реда  -->
 	<ion-slide-box on-slide-changed="slideChanged(index)" style="min-width:100%; min-height:5em;">
-		<ion-slide ng-repeat='picture in challenge.pictures'>
+		<ion-slide ng-repeat='picture in dare.pictures'>
 			<div>
       				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
 			</div>
@@ -23,32 +23,32 @@
 	<div class="footer">
 		<span class="avatar">
 			<a class="fa item-avatar" href="#">
-				<img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}">
+				<img ng-src="{{SERVER_ADDRESS}}{{dare._creator.avatar}}">
 			</a>
 		</span>
 		<span>
 			<i class="icon ion-ios-location-outline"></i>
-			{{challenge.city}}
+			{{dare.city}}
 		</span>
 		<span>
 			<i class="icon ion-ios-timer-outline"></i>
-			{{challenge.timeElapsed}}
+			{{dare.timeElapsed}}
 		</span>
 		<span>
 			<i class="icon ion-ios-person-outline"></i>
-			{{challenge.invitedUsers.length}}
+			{{dare.invitedUsers.length}}
 		</span>
 		<span>
 			<i class="icon ion-ios-chatbubble-outline"></i>
-			{{challenge.comments}}
+			{{dare.comments}}
 		</span>
 		<span>
 			<i class="icon ion-ios-heart-outline"></i>
-			{{challenge.likes}}
+			{{dare.likes}}
 		</span>
 		<span>
 			<h5>Приключва:</h5>
-			{{challenge.timeLeft}}
+			{{dare.timeLeft}}
 		</span>
 	</div>
 </div>
