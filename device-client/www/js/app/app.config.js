@@ -100,12 +100,140 @@ angular.module('starter').config(function (
 			url: '/timeline',
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
-
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
+							$ionicLoading.show({
+								template: 'Loading...'
+							});
+							var filter = 	{
+										title : {$ne : null},
+										description : { $ne : null},
+										$or:[
+										{invitedUsers : {$in : [$localStorage.user.data._id]}},
+										{isPublic : true},
+									]
+								}
+							return DareService.list(JSON.stringify(filter)).then(function(result){
+								$ionicLoading.hide();
+								return  result.data ;
+							})
+					}
+				]
+			}
 		})
 		.state('app.categories', {
 			url: '/categories',
 			templateUrl: 'templates/tab-categories.html',
 			controller: 'CategoriesCtrl'
+		})
+		.state('app.funny',{
+			url: '/funny',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
+							$ionicLoading.show({
+								template: 'Loading...'
+							});
+							var filter = 	{
+										title : {$ne : null},
+										description : { $ne : null},
+										category : 1,
+										$or:[
+										{invitedUsers : {$in : [$localStorage.user.data._id]}},
+										{isPublic : true},
+									]
+								}
+							return DareService.list(JSON.stringify(filter)).then(function(result){
+								$ionicLoading.hide();
+								return  result.data ;
+							})
+					}
+				]
+			}
+		})
+		.state('app.business',{
+			url: '/business',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
+							$ionicLoading.show({
+								template: 'Loading...'
+							});
+							var filter = 	{
+										title : {$ne : null},
+										description : { $ne : null},
+										category : 2,
+										$or:[
+										{invitedUsers : {$in : [$localStorage.user.data._id]}},
+										{isPublic : true},
+									]
+								}
+							return DareService.list(JSON.stringify(filter)).then(function(result){
+								$ionicLoading.hide();
+								return  result.data ;
+							})
+					}
+				]
+			}
+		})
+		.state('app.price',{
+			url: '/price',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
+							$ionicLoading.show({
+								template: 'Loading...'
+							});
+							var filter = 	{
+										title : {$ne : null},
+										description : { $ne : null},
+										category : 3,
+										$or:[
+										{invitedUsers : {$in : [$localStorage.user.data._id]}},
+										{isPublic : true},
+									]
+								}
+							return DareService.list(JSON.stringify(filter)).then(function(result){
+								$ionicLoading.hide();
+								return  result.data ;
+							})
+					}
+				]
+			}
+		})
+		.state('app.charity',{
+			url: '/charity',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
+							$ionicLoading.show({
+								template: 'Loading...'
+							});
+							var filter = 	{
+										title : {$ne : null},
+										description : { $ne : null},
+										category : 4,
+										$or:[
+										{invitedUsers : {$in : [$localStorage.user.data._id]}},
+										{isPublic : true},
+									]
+								}
+							return DareService.list(JSON.stringify(filter)).then(function(result){
+								$ionicLoading.hide();
+								return  result.data ;
+							})
+					}
+				]
+			}
 		})
 		.state('app.friends', {
 			url: '/friends',
@@ -119,7 +247,8 @@ angular.module('starter').config(function (
 					controller: 'UsersCtrl',
 					resolve: {
 						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.id, 'Accepted', '').then(function (data) {
+							return UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', '').then(function (data) {
 								return data
 							})
 						}]
@@ -135,7 +264,8 @@ angular.module('starter').config(function (
 					controller: 'UsersCtrl',
 					resolve: {
 						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.id, 'Accepted', '').then(function (data) {
+							return UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', '').then(function (data) {
 								return data
 							})
 						}]
@@ -160,7 +290,8 @@ angular.module('starter').config(function (
 			resolve: {
 				isAuthenticated: isAuthenticated,
 				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
-					return UserService.getFriends($localStorage.user.id, 'Accepted', "").then(function (data) {
+					return UserService.getFriends(			
+$localStorage.user.data._id, 'Accepted', "").then(function (data) {
 						return data
 					})
 				}

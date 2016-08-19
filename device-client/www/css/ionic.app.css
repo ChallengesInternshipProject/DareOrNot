@@ -10198,7 +10198,8 @@ ion-content {
     font-size: 100%;
     position: relative;
     width: 30%;
-    display: inline; }
+    display: inline;
+    font-size: 4em; }
   ion-content div.slider-pager {
     position: relative;
     bottom: 10em;
@@ -10232,6 +10233,184 @@ ion-content {
       border-radius: 50%;
       font-size: 2em;
       padding: 1.5em; }
+
+.demo {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 2%;
+  margin-right: 2%;
+  position: relative; }
+
+.demo > img {
+  position: relative;
+  width: 100%;
+  height: auto; }
+
+.demo h2 {
+  position: absolute;
+  top: 15%;
+  color: #fff;
+  font-size: 40px;
+  padding-left: 30px; }
+
+.time {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px; }
+
+.timetime {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 30px;
+  margin-left: -68%;
+  width: 350px;
+  height: auto; }
+
+.timetime p {
+  font-size: 10px; }
+
+.likeLike {
+  display: inline-block; }
+
+.info .person {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/user1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  height: 40px;
+  padding-top: 15px; }
+
+.info .comment {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/speech1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  height: 40px;
+  padding-top: 15px; }
+
+.info .heart {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/love1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  padding-top: 15px;
+  height: 40px; }
+
+.likeLike > p {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 15px;
+  font-size: 15px;
+  color: #03b2d1; }
+
+.likeLike .person {
+  width: 20px; }
+
+.likeLike .comment {
+  width: 20px; }
+
+.likeLike .heart {
+  width: 20px; }
+
+.clock h6 {
+  font-size: 13px;
+  color: #03b2d1; }
+
+.clock h6 > p {
+  color: #ffcf7d;
+  font-size: 6px;
+  line-height: 10px; }
+
+.clock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 10px;
+  padding-top: 10px; }
+
+.timecheck {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px; }
+
+.timecheck img {
+  width: 16px;
+  height: 20px; }
+
+.timeclock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  height: 16px; }
+
+.timeclock img {
+  width: 16px;
+  height: 16px; }
+
+.info {
+  position: relative;
+  bottom: 20px;
+  padding-top: 25px; }
+
+.socialtwo {
+  display: none; }
+
+.responsive-logo {
+  display: none; }
+
+.user {
+  width: 80%;
+  position: absolute;
+  bottom: 18%;
+  left: -1%; }
+
+.user-name {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  font-size: 1em;
+  margin-left: 10px; }
+
+.user-pic {
+  display: inline-block;
+  width: 20%; }
+
+.user .img-circle {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 130px; }
+
+.arrow-left {
+  background: url("../img/left.png");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.arrow-right {
+  background: url("../img/right.png");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.arrow {
+  position: absolute;
+  top: 10%;
+  width: 100%; }
+
+.arrowSecond {
+  position: absolute;
+  top: 30%;
+  width: 100%; }
+
+.arrow img {
+  width: 50px;
+  height: 50px;
+  border: none; }
 
 html,
 body,
@@ -10418,25 +10597,43 @@ main p {
 .color4 {
   color: #3b51a2; }
 
-ion-view .Contacts {
-  background: red;
+ion-view ion-content .Contacts {
+  background-image: none;
+  background: e8edf0;
   color: #03b2d1;
   line-height: 1%; }
-  ion-view .Contacts ion-content .padding ion-list {
+  ion-view ion-content .Contacts ion-content .padding ion-list {
     /* SEND Form*/ }
-    ion-view .Contacts ion-content .padding ion-list div .list p {
+    ion-view ion-content .Contacts ion-content .padding ion-list div .list p {
       margin: 5%; }
-    ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset {
+    ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset {
       background: transparent;
       /*	BUTTON SEND*/ }
-      ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
+      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
         background: #012438; }
-      ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
+      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
         margin-bottom: 5%; }
-        ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
+        ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
           color: blue; }
 
-/* CSS Profil */
+/* CSS list card 
+		title and arrows*/
+.map {
+  min-height: 50%;
+  width: 65%;
+  margin: 10%; }
+  .map ion-content {
+    background-color: #fff;
+    background-image: none; }
+    .map ion-content .button.button-block, .map ion-content .button.button-full {
+      margin: 10%;
+      margin-bottom: 5%;
+      width: 80%;
+      height: 2em;
+      background: #066886;
+      color: #fff; }
+
+/* CSS calendar */
 .calendar {
   background-image: none;
   background-color: #077795;
@@ -10458,12 +10655,16 @@ ion-view .Contacts {
     background-color: #3b6783;
     color: #fff;
     width: 70%;
+    height: 1em;
     font-size: 1.2em;
     margin-right: 5%; }
-  .statistics .row .user h1 {
-    font-size: 1.2em;
-    margin-top: 20%;
-    color: #fff; }
+  .statistics .row .user {
+    top: 21px;
+    left: 15%;
+    height: 10%; }
+    .statistics .row .user h1 {
+      font-size: 1.2em;
+      color: #fff; }
   .statistics .row .dare h3 {
     padding: 0.5em;
     font-size: 10px;
@@ -10474,13 +10675,108 @@ ion-view .Contacts {
   .statistics .row canvas #line {
     background: transparent; }
 
-/* CSS left Menue */
+/* CSS Profil new dare */
+.newdare {
+  background-image: none;
+  background-color: #e8edf0;
+  background-size: 100% 100%;
+  text-align: center;
+  display: block;
+  color: #16b8d4;
+  /*category challenges */
+  /* WebKit browsers */ }
+  .newdare div .h1 {
+    color: #044265; }
+  .newdare h3 {
+    color: #16b8d4; }
+  .newdare div .challeng ion-list .list {
+    display: inline-block;
+    width: 100%;
+    padding: 0em;
+    font-size: 1em; }
+    .newdare div .challeng ion-list .list .item {
+      display: inline-block;
+      width: 45%;
+      font-size: 1em;
+      padding: 0.5%;
+      border: none;
+      text-align: center;
+      background: transparent; }
+      .newdare div .challeng ion-list .list .item :nth-child(1) {
+        background: #3b6783;
+        color: #fff;
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        /* margin-top: 1em; */
+        padding-top: 20%;
+        padding-bottom: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        word-break: keep-all; }
+      .newdare div .challeng ion-list .list .item :nth-child(2) {
+        background: #17283a;
+        color: #fff;
+        width: 100%; }
+  .newdare .list-inset {
+    width: 100%;
+    background: transparent; }
+  .newdare label .item {
+    margin-top: 5%; }
+  .newdare .vh {
+    margin-top: 1vh;
+    width: 95%;
+    height: 3em;
+    border-color: #8dc3cd; }
+  .newdare .la {
+    text-align: left; }
+  .newdare .fa {
+    width: 20vw !important;
+    height: 20vw; }
+  .newdare ::-webkit-input-placeholder {
+    color: #16b8d4;
+    opacity: 1 !important; }
+  .newdare .pen {
+    margin-top: -7em;
+    margin-right: 1em; }
+    .newdare .pen i {
+      color: orange;
+      -webkit-transform: scale(-1, 1); }
+  .newdare .info {
+    font-size: 0.5em;
+    width: 10%;
+    height: 100%;
+    left: -1.2em;
+    bottom: 3em; }
+    .newdare .info i {
+      color: orange;
+      font-size: 3em; }
+  .newdare .fileContainer {
+    font-size: 1em;
+    padding: 0em;
+    margin-bottom: 0;
+    MARGIN-TOP: 5%;
+    box-sizing: border-box; }
+    .newdare .fileContainer i {
+      background: #fff;
+      border-radius: 0;
+      color: orange;
+      font-size: 2.5em;
+      /* margin: 0%; */
+      padding: 0.5em;
+      padding-bottom: 0.1em; }
+  .newdare .fileContainer [type=file] {
+    margin-top: -1em; }
+
+/* CSS left Menue, background*/
 .menu-left {
   background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
-  display: block; }
+  display: block;
+  /*for icons*/
+  /*how to be display*/ }
   .menu-left .fa {
     width: 15vw !important;
     height: 15vw;
@@ -10503,44 +10799,46 @@ ion-view .Contacts {
         color: #ffb400;
         font-size: 30px; }
 
-/* CSS Profil */
-ion-view .cont .fa {
-  width: 15vw !important;
-  height: 15vw;
-  display: inline-block;
-  float: left;
-  margin-top: -6%; }
-
-ion-view .bar {
-  background: transparent;
-  color: #ffb400; }
-  ion-view .bar div {
+/* CSS for Profil view */
+ion-view {
+  /* edit some CSS content in content */ }
+  ion-view .cont {
+    /*  	 */ }
+    ion-view .cont .fa {
+      width: 15vw !important;
+      height: 15vw;
+      display: inline-block;
+      float: left;
+      margin-top: -6%; }
+  ion-view .bar {
     background: transparent;
-    display: block;
-    color: #ffb400;
-    height: auto;
-    margin-top: -10%;
-    margin-left: 10%; }
-    ion-view .bar div h2 {
-      color: #01cfe4; }
-
-ion-view .content {
-  background: transparent;
-  color: #ffb400;
-  margin-top: 10%; }
-  ion-view .content .list {
-    background: transparent;
-    border-color: #ffb400;
-    color: #01cfe4; }
-    ion-view .content .list .item-icon-left {
-      margin: 5%;
-      text-align: left;
+    color: #ffb400; }
+    ion-view .bar div {
       background: transparent;
-      border: none;
-      font-size: 15px;
+      display: block;
+      color: #ffb400;
+      height: auto;
+      margin-top: -10%;
+      margin-left: 10%; }
+      ion-view .bar div h2 {
+        color: #01cfe4; }
+  ion-view .content {
+    background: transparent;
+    color: #ffb400;
+    margin-top: 10%; }
+    ion-view .content .list {
+      background: transparent;
+      border-color: #ffb400;
       color: #01cfe4; }
+      ion-view .content .list .item-icon-left {
+        margin: 5%;
+        text-align: left;
+        background: transparent;
+        border: none;
+        font-size: 15px;
+        color: #01cfe4; }
 
-/* CSS Profil */
+/* CSS Profil background */
 ion-view ion-content {
   background-image: url(../img/BG.png);
   background-color: #012438;
@@ -10548,92 +10846,127 @@ ion-view ion-content {
   text-align: center;
   display: block; }
 
+/* CSS list for all pages at user profil*/
+.use {
+  background-image: none;
+  background-color: #012438; }
+  .use .usert-info {
+    background-image: url(../img/BG.png);
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    margin: 0;
+    resize: 10%;
+    text-align: center;
+    display: block; }
+    .use .usert-info .button-newcalm {
+      background-color: #3b6783;
+      color: #fff;
+      width: 50%;
+      padding: 1%;
+      border-color: #8dc3cd;
+      margin: 3%;
+      font-size: 1em;
+      position: relative;
+      left: 6%;
+      box-sizing: border-box; }
+    .use .usert-info .us {
+      width: 50%;
+      display: inline-block;
+      font-size: 2.5em;
+      text-rendering: auto;
+      border-radius: 50%;
+      color: white;
+      margin-right: 3%;
+      margin-bottom: 3%;
+      margin-top: 3%; }
+
 /* CSS activities */
-.activity h3 {
-  color: #01cfe4;
-  margin-left: 3em; }
-
-.activity div {
-  text-align: left;
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 12px; }
-  .activity div .col {
-    float: left;
-    margin-left: -2em;
-    color: #01cfe4; }
-  .activity div .row {
-    color: #ffb400; }
-
-.activity .content .list {
-  background: transparent; }
-  .activity .content .list ion-item {
-    padding: 0;
+.activity {
+  /* CSS content view */ }
+  .activity h3 {
+    color: #01cfe4;
+    margin-left: 3em; }
+  .activity div {
+    text-align: left;
     background: transparent;
-    border-bottom: 1px solid #fff;
-    border-left: none;
-    border-right: none;
-    border-top: none; }
-    .activity .content .list ion-item a.item {
-      border: none;
-      background-color: transparent; }
-  .activity .content .list ion-item:last-child {
-    border: none; }
+    border: none;
+    color: #fff;
+    font-size: 12px; }
+    .activity div .col {
+      text-align: right;
+      width: 50%;
+      margin-left: -2em;
+      color: #01cfe4; }
+    .activity div .row {
+      color: #ffb400; }
+  .activity .content .list {
+    background: transparent; }
+    .activity .content .list ion-item {
+      padding: 0;
+      background: transparent;
+      border-bottom: 1px solid #fff;
+      border-left: none;
+      border-right: none;
+      border-top: none; }
+      .activity .content .list ion-item a.item {
+        border: none;
+        background-color: transparent; }
+    .activity .content .list ion-item:last-child {
+      border: none; }
 
 /* CSS nothifications */
-.nothifications h3, .nothifications h2 {
-  color: #01cfe4;
-  margin-left: 15%;
-  width: 50%;
-  text-align: left; }
-
-.nothifications span {
-  float: left;
-  margin-left: 1%; }
-  .nothifications span i {
-    padding: 7px;
-    color: #fff;
-    background: #01cfe4;
-    border-radius: 30vh;
-    font-size: 10px;
-    margin: 0em; }
-
-.nothifications .list {
-  background: transparent;
-  margin-top: 2em; }
-  .nothifications .list ion-item {
-    width: 100%;
-    height: auto;
-    border: none;
-    border-left: 1px solid #fff;
-    margin-left: 1em;
-    color: #fff;
-    padding: 0;
-    background: transparent;
-    text-align: left;
-    display: inline-block; }
-    .nothifications .list ion-item p {
+.nothifications {
+  /* CSS edit in item */ }
+  .nothifications h3, .nothifications h2 {
+    color: #01cfe4;
+    margin-left: 15%;
+    width: 50%;
+    text-align: left; }
+  .nothifications span {
+    float: left;
+    margin-left: 1%; }
+    .nothifications span i {
+      padding: 7px;
       color: #fff;
-      word-wrap: break-word; }
-    .nothifications .list ion-item .p, .nothifications .list ion-item i {
-      color: #ffb400;
+      background: #01cfe4;
+      border-radius: 30vh;
+      font-size: 10px;
+      margin: 0em; }
+  .nothifications .list {
+    background: transparent;
+    margin-top: 2em; }
+    .nothifications .list ion-item {
       width: 100%;
-      margin-left: 17%;
-      text-align: left; }
-    .nothifications .list ion-item div {
-      width: 98%;
-      display: inline-flex;
-      margin: 1%;
-      padding: 1%; }
-    .nothifications .list ion-item div p {
-      color: #01cfe4;
-      margin-left: -30%;
-      width: 55%;
-      text-align: right; }
-    .nothifications .list ion-item .img {
-      height: 3em; }
-      .nothifications .list ion-item .img img {
+      height: auto;
+      border: none;
+      border-left: 1px solid #fff;
+      margin-left: 1em;
+      color: #fff;
+      padding: 0;
+      background: transparent;
+      text-align: left;
+      display: inline-block;
+      /* CSS imges */ }
+      .nothifications .list ion-item p {
+        color: #fff;
+        word-wrap: break-word; }
+      .nothifications .list ion-item .p, .nothifications .list ion-item i {
+        color: #ffb400;
+        width: 100%;
+        margin-left: 17%;
+        text-align: left; }
+      .nothifications .list ion-item div {
+        width: 98%;
+        display: inline-flex;
+        margin: 1%;
+        padding: 1%; }
+      .nothifications .list ion-item div p {
+        color: #01cfe4;
+        margin-left: -30%;
+        width: 55%;
+        text-align: right; }
+      .nothifications .list ion-item .img {
+        height: 3em;
         top: 16px;
         left: 16px;
         max-width: 40px;
@@ -10707,45 +11040,56 @@ ion-view ion-content {
     color: #01cfe4;
     font-size: 10px; }
 
-/* CSS list card */
+/* CSS list for all pages at user profil*/
+.list ion-item, .list a.item-content {
+  border: none;
+  background: transparent; }
+
+.list a {
+  text-align: left; }
+  .list a h2 {
+    color: #01cfe4; }
+  .list a p {
+    color: #ffb400; }
+
+/* CSS list card 
+		title and arrows*/
 .TimeLineCard {
   max-height: 10em; }
   .TimeLineCard .arrows-right {
-    font-size: 4em;
+    max-height: 0.5em;
+    font-size: 1em;
     float: right;
     /* width: 100%; */
-    margin-top: -50%;
+    margin-top: -3%;
     padding: 0;
     position: relative;
-    color: #fff; }
+    color: blue; }
   .TimeLineCard .arrows-left {
-    font-size: 4em;
+    max-height: 0.5em;
+    font-size: 1em;
     float: left;
     /* width: 100%; */
-    margin-top: -50%;
+    margin-top: -3%;
     padding: 0;
     position: relative;
-    color: #fff; }
-  .TimeLineCard .arrows {
-    color: #fff;
+    color: blue; }
+  .TimeLineCard .title {
+    color: blue;
     position: absolute;
     top: 2%;
     left: 5%;
-    font-size: 2em; }
-  .TimeLineCard div.slider-pager {
-    visibility: hidden; }
+    font-size: 1em; }
   .TimeLineCard .footer {
-    width: 100%;
-    /* height: 10%; */
     position: relative;
     text-align: center;
     display: inline-flex;
     position: relative;
-    top: -54px;
+    top: 30px;
     width: 100%;
-    height: 35%;
-    padding: 1vh;
-    background: rgba(27, 73, 88, 0.3); }
+    background: rgba(27, 73, 88, 0.3);
+    /*make circle buttons*/
+    /* avatar settings, img*/ }
     .TimeLineCard .footer span {
       width: 16%; }
       .TimeLineCard .footer span .fa {
@@ -10769,8 +11113,11 @@ ion-view ion-content {
       color: #04a4c3;
       margin-right: 3%; }
     .TimeLineCard .footer .avatar a img {
-      margin-left: -3%;
-      border: 1px solid; }
+      margin-top: -0.9em;
+      margin-left: -0.3em;
+      border: 1px solid;
+      min-width: 1.3em;
+      min-height: 1.3em; }
     .TimeLineCard .footer .ng-binding {
       color: #04a4c3;
       font-size: 10px;
@@ -10807,208 +11154,8 @@ ion-modal-view .cont {
         border-color: #01cfe4;
         background-color: #01cfe4; }
 
-.demo {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  margin-top: 2%;
-  margin-right: 2%;
-  position: relative; }
-
-.demo > img {
-  position: relative;
-  width: 100%;
-  height: auto; }
-
-.demo h2 {
-  position: absolute;
-  top: 15%;
-  color: #fff;
-  font-size: 40px;
-  padding-left: 30px; }
-
-.time {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px; }
-
-.timetime {
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 30px;
-  margin-left: -68%;
-  width: 350px;
-  height: auto; }
-
-.timetime p {
-  font-size: 10px; }
-
-.likeLike {
-  display: inline-block; }
-
-.info .person {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/user1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  height: 40px;
-  padding-top: 15px; }
-
-.info .comment {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/speech1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  height: 40px;
-  padding-top: 15px; }
-
-.info .heart {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/love1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 40px;
-  padding-top: 15px;
-  height: 40px; }
-
-.likeLike > p {
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 15px;
-  font-size: 15px;
-  color: #03b2d1; }
-
-.likeLike .person {
-  width: 20px; }
-
-.likeLike .comment {
-  width: 20px; }
-
-.likeLike .heart {
-  width: 20px; }
-
-.clock h6 {
-  font-size: 13px;
-  color: #03b2d1; }
-
-.clock h6 > p {
-  color: #ffcf7d;
-  font-size: 6px;
-  line-height: 10px; }
-
-.clock {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 10px;
-  padding-top: 10px; }
-
-.timecheck {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px; }
-
-.timecheck img {
-  width: 16px;
-  height: 20px; }
-
-.timeclock {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  height: 16px; }
-
-.timeclock img {
-  width: 16px;
-  height: 16px; }
-
-.info {
-  position: relative;
-  bottom: 20px;
-  padding-top: 25px; }
-
-.socialtwo {
-  display: none; }
-
-.responsive-logo {
-  display: none; }
-
-.user {
-  width: 80%;
-  position: absolute;
-  bottom: 18%;
-  left: -1%; }
-
-.user-name {
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font-size: 1em;
-  margin-left: 10px; }
-
-.user-pic {
-  display: inline-block;
-  width: 20%; }
-
-.user .img-circle {
-  border-radius: 50%;
-  border: 5px solid #fff;
-  width: 130px; }
-
-.arrow-left {
-  background: url("../img/left.png");
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.arrow-right {
-  background: url("../img/right.png");
-  background-repeat: no-repeat;
-  background-position: center; }
-
-.arrow {
-  position: absolute;
-  top: 10%;
-  width: 100%; }
-
-.arrowSecond {
-  position: absolute;
-  top: 30%;
-  width: 100%; }
-
-.arrow img {
-  width: 50px;
-  height: 50px;
-  border: none; }
-
-.messages .message {
-  flex: 1 1 auto !important;
-  padding: 10px !important;
-  transition: all 250ms ease-in-out !important;
-  overflow: hidden !important;
-  text-align: left !important;
-  transform: translate3d(0, 0, 0) !important; }
-
-.messages span {
-  background: #007AFF !important;
-  display: inline-block !important;
-  color: white !important;
-  padding: 10px !important;
-  border-radius: 10px !important;
-  text-align: left !important;
-  max-width: 240px !important; }
-
-.messages.other .message {
-  transform: translate3d(0, 0, 0) !important;
-  text-align: right !important; }
-
-.messages.other .message.slide-right {
-  transform: translate3d(120px, 0, 0) !important; }
-
-.messages.other span {
-  color: black !important;
-  background-color: #C7C7CC !important; }
+/* CSS NAv Menue */
+ion-side-menu-content ion-view .nav-bar-block {
+  border-style: none;
+  color: #03b2d1;
+  background: red; }

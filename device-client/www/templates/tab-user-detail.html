@@ -1,14 +1,52 @@
 <ion-view view-title="User Details" name="user-detail-view">
-  <ion-content>
+  <ion-content class="use statistics">
     <!--{{user}}-->
+	<div class="usert-info">
+	<div class="row">
+			<a href="#" class="fa item item-avatar">
+				<img ng-src="{{user.picture}}" src="img/avatar.png">
+			</a>
+			<div class="user">
+				<h1>
+					Name : {{user.name}}
+				</h1>
+				<i class="ion-ios-location-outline" style="color:#fcb301;margin-right:1em;"></i>{{user.town}}
+			</div>
+			
+		</div>
+		<div class="row">
+			<button class="button  button-newcalm" href="" ng-click="callDareModal(user._id)">Предизвикай {{user.name}}</button>
+			<a href="" class="us fa-chat">
+			
+			</a>
+		</div>
+		<div class="row" style="border-bottom: 1px solid #fff;">
+			<div class="dare">
+				<h1>231</h1>
+				<h3>ПРЕДИЗВИКАТЕЛСТВА</h3>
+			</div>
+			<div class="dare">
+				<h1>1.2K</h1>
+				<h3>ПРИЯТЕЛИ</h3>
+			</div>
+			<div class="dare">
+				<h1>320</h1>
+				<h3>ЗАВЪРШЕНИ</h3>
+			</div>
+			<div class="dare">
+				<h1>12</h1>
+				<h3>СПЕЧЕЛЕНИ</h3>
+			</div>
 
+		</div>
+		</div>
     <!--TODO Set the user picture link-->
     <!--<img ng-src="{{user.picture}}" alt="User Picture">-->
-    <h1>Email : {{user.email}}</h1>
-    <p>Name : {{user.name}}</p>
-    <i class="ion-ios-location-outline"></i>{{user.town}}
+    <!--<h1>Email : {{user.email}}</h1>-->
+    <!--<p>Name : {{user.name}}</p>-->
+    <!--<i class="ion-ios-location-outline"></i>{{user.town}}-->
     <!--{{user}}-->
-    <button class="button" ng-click="callDareModal(user._id)">Предизвикай {{user.name}}</button>
+    <!--<button class="button" ng-click="callDareModal(user._id)">Предизвикай {{user.name}}</button>-->
     <!--<p>Date Of Birth : {{user.dateOfBirth | date: 'medium'}}</p>-->
     <!--<p>Phone : {{user.phone}}</p>-->
     <!--<p>Friends : {{user.friends}} &#45;&#45; TODO add the friends</p>-->
