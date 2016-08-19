@@ -1,7 +1,8 @@
 @charset "utf-8";
-/* CSS Profil */
+/* CSS for Profil view */
 	ion-view  {
 		.cont{
+		/*  	 */
 			 .fa { 	width: 15vw !important;
 					height: 15vw;
 					display: inline-block;
@@ -24,9 +25,9 @@
 				}
 			
 			}
+			/* edit some CSS content in content */
 			 .content {background: transparent;
 			 		   color: #ffb400;
-					   
 					   margin-top: 10%;	
 				 .list{
 				 		background: transparent;
