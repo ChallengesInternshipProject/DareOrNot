@@ -1,5 +1,8 @@
 
 
+	@charset "utf-8";
+
+
 	 .demo{ 
 		display: block;
 		width: 100%;
@@ -41,7 +44,7 @@
 		height: auto;
 	}
 
-	.timetime p {
+	.timetime i{
 		font-size: 0.5em;
 		line-height: 22px;
 		color: #03b2d1;
@@ -209,6 +212,7 @@
 		position: absolute;
 		top: 30%;
 		width: 100%;
+		color: #000;
 	}
 	.arrow img{
 		width:50px;

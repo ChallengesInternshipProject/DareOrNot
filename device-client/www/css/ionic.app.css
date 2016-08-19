@@ -10228,6 +10228,179 @@ ion-content {
     MARGIN-TOP: 10%;
     box-sizing: border-box; }
 
+.demo {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-top: 2%;
+  margin-right: 2%;
+  position: relative; }
+
+.demo > img {
+  position: relative;
+  width: 100%;
+  height: auto; }
+
+.demo h2 {
+  position: absolute;
+  top: 15%;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 30px; }
+
+.time {
+  display: inline-block;
+  vertical-align: top; }
+
+.timetime {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -73%;
+  width: 174px;
+  height: auto; }
+
+.timetime i {
+  font-size: 0.5em;
+  line-height: 22px;
+  color: #03b2d1; }
+
+.likeLike {
+  display: inline-block; }
+
+.likeLike .person {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/user1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 19px;
+  width: 22px; }
+
+.likeLike .comment {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/speech1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 17px;
+  width: 26px; }
+
+.likeLike .heart {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url(../img/icons/love1.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 13px;
+  height: 17px;
+  width: 26px; }
+
+.person p {
+  padding-left: 43%; }
+
+.comment p {
+  padding-left: 50%; }
+
+.heart p {
+  padding-left: 55%; }
+
+.likeLike p {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 8px;
+  color: #03b2d1; }
+
+.clock h6 {
+  font-size: 13px;
+  color: #03b2d1;
+  line-height: 12px; }
+
+.clock h6 > p {
+  color: #ffcf7d;
+  font-size: 5px;
+  line-height: 5px; }
+
+.clock {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-top: 5px; }
+
+.timecheck {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 4px;
+  line-height: -1px; }
+
+.timecheck img {
+  width: 16px;
+  height: 20px; }
+
+.timeclock {
+  display: inline-block;
+  vertical-align: top;
+  height: 16px;
+  line-height: -1px; }
+
+.timeclock img {
+  width: 16px;
+  height: 16px; }
+
+.info {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  bottom: 20px; }
+
+.socialtwo {
+  display: none; }
+
+.responsive-logo {
+  display: none; }
+
+.user {
+  width: 80%;
+  position: absolute;
+  top: 74%;
+  left: -10%; }
+
+.user-name {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  font-size: 0.8em;
+  margin-left: 4px; }
+
+.user-pic {
+  display: inline-block;
+  width: 20%;
+  margin-left: -6%; }
+
+.user .img-circle {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 130px; }
+
+.arrow {
+  position: absolute;
+  top: 10%;
+  width: 100%; }
+
+.arrowSecond {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  color: #000; }
+
+.arrow img {
+  width: 50px;
+  height: 50px;
+  border: none; }
+
 html,
 body,
 div,
@@ -10413,23 +10586,158 @@ main p {
 .color4 {
   color: #3b51a2; }
 
-ion-view .Contacts {
-  background: red;
+ion-view .Cons {
+  background-color: red;
   color: #03b2d1;
   line-height: 1%; }
-  ion-view .Contacts ion-content .padding ion-list {
+  ion-view .Cons ion-list {
     /* SEND Form*/ }
-    ion-view .Contacts ion-content .padding ion-list div .list p {
+    ion-view .Cons ion-list div .list p {
       margin: 5%; }
-    ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset {
+    ion-view .Cons ion-list form .contact .list-inset {
       background: transparent;
       /*	BUTTON SEND*/ }
-      ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
+      ion-view .Cons ion-list form .contact .list-inset .button.button-positive {
         background: #012438; }
-      ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
+      ion-view .Cons ion-list form .contact .list-inset label .item {
         margin-bottom: 5%; }
-        ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
+        ion-view .Cons ion-list form .contact .list-inset label .item placeholder {
           color: blue; }
+
+/* CSS calendar */
+.calendar {
+  background-image: none;
+  background-color: #077795;
+  text-align: center;
+  display: block;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 2em; }
+
+/* CSS Tab-Statistics */
+.statistics .row {
+  margin-top: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 1.2em; }
+  .statistics .row a.item {
+    color: #fff; }
+  .statistics .row a.button.button-calm {
+    background-color: #3b6783;
+    color: #fff;
+    width: 70%;
+    height: 1em;
+    font-size: 1.2em;
+    margin-right: 5%; }
+  .statistics .row .user {
+    top: 21px;
+    left: 15%;
+    height: 10%; }
+    .statistics .row .user h1 {
+      font-size: 1.2em;
+      color: #fff; }
+  .statistics .row .dare h3 {
+    padding: 0.5em;
+    font-size: 10px;
+    color: #37637e; }
+  .statistics .row .dare h1 {
+    font-size: 1.2em;
+    color: #fff; }
+  .statistics .row canvas #line {
+    background: transparent; }
+
+/* CSS Profil new dare */
+.newdare {
+  background-image: none;
+  background-color: #e8edf0;
+  background-size: 100% 100%;
+  text-align: center;
+  display: block;
+  color: #16b8d4;
+  /*category challenges */
+  /* WebKit browsers */ }
+  .newdare div .h1 {
+    color: #044265; }
+  .newdare h3 {
+    color: #16b8d4; }
+  .newdare div .challeng ion-list .list {
+    display: inline-block;
+    width: 100%;
+    padding: 0em;
+    font-size: 1em; }
+    .newdare div .challeng ion-list .list .item {
+      display: inline-block;
+      width: 45%;
+      font-size: 1em;
+      padding: 0.5%;
+      border: none;
+      text-align: center;
+      background: transparent; }
+      .newdare div .challeng ion-list .list .item :nth-child(1) {
+        background: #3b6783;
+        color: #fff;
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        /* margin-top: 1em; */
+        padding-top: 20%;
+        padding-bottom: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        word-break: keep-all; }
+      .newdare div .challeng ion-list .list .item :nth-child(2) {
+        background: #17283a;
+        color: #fff;
+        width: 100%; }
+  .newdare .list-inset {
+    width: 100%;
+    background: transparent; }
+  .newdare label .item {
+    margin-top: 5%; }
+  .newdare .vh {
+    margin-top: 1vh;
+    width: 95%;
+    height: 3em;
+    border-color: #8dc3cd; }
+  .newdare .la {
+    text-align: left; }
+  .newdare .fa {
+    width: 20vw !important;
+    height: 20vw; }
+  .newdare ::-webkit-input-placeholder {
+    color: #16b8d4;
+    opacity: 1 !important; }
+  .newdare .pen {
+    margin-top: -7em;
+    margin-right: 1em; }
+    .newdare .pen i {
+      color: orange;
+      -webkit-transform: scale(-1, 1); }
+  .newdare .info {
+    font-size: 0.5em;
+    width: 10%;
+    height: 100%;
+    left: -1.2em;
+    bottom: 3em; }
+    .newdare .info i {
+      color: orange;
+      font-size: 3em; }
+  .newdare .fileContainer {
+    font-size: 1em;
+    padding: 0em;
+    margin-bottom: 0;
+    MARGIN-TOP: 5%;
+    box-sizing: border-box; }
+    .newdare .fileContainer i {
+      background: #fff;
+      border-radius: 0;
+      color: orange;
+      font-size: 2.5em;
+      /* margin: 0%; */
+      padding: 0.5em;
+      padding-bottom: 0.1em; }
+  .newdare .fileContainer [type=file] {
+    margin-top: -1em; }
 
 /* CSS left Menue */
 .menu-left {
@@ -10503,6 +10811,14 @@ ion-view .content {
       border: none;
       font-size: 15px;
       color: #01cfe4; }
+
+/* CSS Profil background */
+ion-view ion-content {
+  background-image: url(../img/BG.png);
+  background-color: #012438;
+  background-size: 100% 100%;
+  text-align: center;
+  display: block; }
 
 /* CSS activities */
 .activity h3 {
@@ -10598,6 +10914,163 @@ ion-view .content {
         height: 100%;
         margin: 3%; }
 
+/* CSS All 4 friends */
+.tabs-striped.tabs-background-stable .tabs {
+  border: none;
+  color: #00cde0;
+  background-color: #012438; }
+
+.tabs-top.tabs-striped .tab-item.tab-item-active {
+  border-color: #00cde0; }
+
+.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title {
+  color: #fff; }
+
+.friends .fa {
+  max-width: 2em;
+  max-height: 2em;
+  padding: 0;
+  background-size: 50%;
+  border-radius: 50%;
+  right: -50%; }
+
+.friends div .list, .friends ion-item {
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  margin: 1%;
+  padding: 1%;
+  color: #01cfe4; }
+
+.friends .col {
+  padding: 1%;
+  min-width: 20%; }
+
+.friends .col-1 {
+  margin-top: 5%;
+  margin-left: -8%; }
+
+.friends .button-small {
+  padding: 2px 4px 1px;
+  min-width: 2em;
+  min-height: 2em;
+  font-size: 10px;
+  line-height: 1.5em;
+  margin-top: 20%; }
+
+.friends label {
+  background: transparent;
+  border-color: #01cfe4;
+  border-top: none;
+  border-left: none;
+  border-right: none; }
+
+.friends .row {
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: #01cfe4; }
+  .friends .row h4 {
+    color: #fff;
+    font-size: 10px; }
+  .friends .row h6 {
+    color: #01cfe4;
+    font-size: 10px; }
+
+/* CSS list for all pages at user profil*/
+.list ion-item, .list a.item-content {
+  border: none;
+  background: transparent; }
+
+.list a {
+  text-align: left; }
+  .list a h2 {
+    color: #01cfe4; }
+  .list a p {
+    color: #ffb400; }
+
+/* CSS list card 
+		title and arrows*/
+.TimeLineCard {
+  max-height: 10em; }
+  .TimeLineCard .arrows-right {
+    max-height: 0.5em;
+    font-size: 1em;
+    float: right;
+    /* width: 100%; */
+    margin-top: -3%;
+    padding: 0;
+    position: relative;
+    color: blue; }
+  .TimeLineCard .arrows-left {
+    max-height: 0.5em;
+    font-size: 1em;
+    float: left;
+    /* width: 100%; */
+    margin-top: -3%;
+    padding: 0;
+    position: relative;
+    color: blue; }
+  .TimeLineCard .arrows {
+    color: blue;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-size: 1em; }
+  .TimeLineCard .footer {
+    position: relative;
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: 30px;
+    width: 100%;
+    background: rgba(27, 73, 88, 0.3);
+    /*make circle buttons*/
+    /* avatar settings, img*/ }
+    .TimeLineCard .footer span {
+      width: 16%; }
+      .TimeLineCard .footer span .fa {
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        /* font-size: 2.5em; */
+        text-rendering: auto;
+        border-radius: 50%;
+        color: white;
+        /* margin-right: -3%; */
+        /* margin-bottom: -3%; */
+        padding: 10%;
+        /* margin-top: -3%; */ }
+    .TimeLineCard .footer .info {
+      display: inline-flex;
+      width: 10%;
+      height: 5em;
+      margin-top: 0%;
+      font-size: 10px;
+      color: #04a4c3;
+      margin-right: 3%; }
+    .TimeLineCard .footer .avatar a img {
+      margin-top: -0.9em;
+      margin-left: -0.3em;
+      border: 1px solid;
+      min-width: 1.3em;
+      min-height: 1.3em; }
+    .TimeLineCard .footer .ng-binding {
+      color: #04a4c3;
+      font-size: 10px;
+      margin-top: 2em;
+      margin-right: 2%; }
+      .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
+        color: #ffb400; }
+
+/* CSS list card */
+.challenges .bar-header span {
+  color: #fff; }
+  .challenges .bar-header span h3:first-child {
+    font-size: 20px; }
+
 /* CSS tabs- Menue */
 ion-modal-view .cont {
   background-image: url(../img/BG.png);
@@ -10620,174 +11093,17 @@ ion-modal-view .cont {
         border-color: #01cfe4;
         background-color: #01cfe4; }
 
-.demo {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  margin-top: 2%;
-  margin-right: 2%;
-  position: relative; }
-
-.demo > img {
-  position: relative;
-  width: 100%;
-  height: auto; }
-
-.demo h2 {
-  position: absolute;
-  top: 15%;
-  color: #fff;
-  font-size: 20px;
-  padding-left: 30px; }
-
-.time {
-  display: inline-block;
-  vertical-align: top; }
-
-.timetime {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -73%;
-  width: 174px;
-  height: auto; }
-
-.timetime p {
-  font-size: 0.5em;
-  line-height: 22px;
-  color: #03b2d1; }
-
-.likeLike {
-  display: inline-block; }
-
-.likeLike .person {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/user1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 19px;
-  width: 22px; }
-
-.likeLike .comment {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/speech1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.likeLike .heart {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/love1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.person p {
-  padding-left: 43%; }
-
-.comment p {
-  padding-left: 50%; }
-
-.heart p {
-  padding-left: 55%; }
-
-.likeLike p {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 8px;
-  color: #03b2d1; }
-
-.clock h6 {
-  font-size: 13px;
+/* CSS NAv Menue */
+ion-side-menu div .item {
+  border-style: none;
   color: #03b2d1;
-  line-height: 12px; }
+  background: TRANSPARENT; }
 
-.clock h6 > p {
-  color: #ffcf7d;
-  font-size: 5px;
-  line-height: 5px; }
+ion-side-menu h2 {
+  color: #03b2d1; }
 
-.clock {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  padding-top: 5px; }
+ion-side-menu .item p {
+  color: #ffb400; }
 
-.timecheck {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  line-height: -1px; }
-
-.timecheck img {
-  width: 16px;
-  height: 20px; }
-
-.timeclock {
-  display: inline-block;
-  vertical-align: top;
-  height: 16px;
-  line-height: -1px; }
-
-.timeclock img {
-  width: 16px;
-  height: 16px; }
-
-.info {
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  bottom: 20px; }
-
-.socialtwo {
-  display: none; }
-
-.responsive-logo {
-  display: none; }
-
-.user {
-  width: 80%;
-  position: absolute;
-  top: 74%;
-  left: -10%; }
-
-.user-name {
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font-size: 0.8em;
-  margin-left: 4px; }
-
-.user-pic {
-  display: inline-block;
-  width: 20%;
-  margin-left: -6%; }
-
-.user .img-circle {
-  border-radius: 50%;
-  border: 2px solid #fff;
-  width: 130px; }
-
-.arrow {
-  position: absolute;
-  top: 10%;
-  width: 100%; }
-
-.arrowSecond {
-  position: absolute;
-  top: 30%;
-  width: 100%; }
-
-.arrow img {
-  width: 50px;
-  height: 50px;
-  border: none; }
+ion-side-menu .item-avata {
+  background: TRANSPARENT; }

@@ -1,74 +1,54 @@
-
-
-	<!-- Slide to the left  -->
-	<!-- <div ng-click="nextSlide()">Arrow Left</div> -->
-<span>
-	{{challenge.title}}
-</span>
-<ion-slide-box class="demo">
-	<ion-slide>
-		<img style="width: 100%" src="http://upload.wikimedia.org/wikipedia/commons/7/79/2001_BMW_Z3_Sideview_Topdown_Topaz_Blue_2.5i.jpg">
-		<h2>Нахрани улична котка</h2>
-	</ion-slide>
-</ion-slide-box>
-<div class="user">
-	<div class="user-pic"><img class="img-circle" src="img/photo.jpg"/></div>
-	<div class="user-name">Милена Милчева</div>
+<!-- Това е класа по който взимам визитката , навигационите стрелки и заглавието по-доло-->
+<div class="TimeLineCard">
+	<span class="arrows">
+		{{challenge.title}}
+	</span>
+	
+<!-- Това е за слайдъра, взема картинките на деар от сървара ,,,, кодовете за него са следващите 10 реда  -->
+	<ion-slide-box on-slide-changed="slideChanged(index)" style="min-width:100%; min-height:5em;">
+		<ion-slide ng-repeat='picture in challenge.pictures'>
+			<div>
+      				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
+			</div>
+		</ion-slide>
+	</ion-slide-box>
+	<!-- Slide to the right -->
+	<div>
+	<div ng-click="nextSlide()" class="arrows-left"><i class="ion-chevron-left"></i></div>
+			<!-- Slide to the left  -->
+	<div ng-click="previousSlide()" class="arrows-right"><i class="ion-chevron-right"></i></div>
+	</div>
+	
+	<!-- Визитка на човека, На доло е нагласено и рабти!!!!  -->
+	<div class="footer">
+		<span class="avatar">
+			<a class="fa item-avatar" href="#">
+				<img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}">
+			</a>
+		</span>
+		<span>
+			<i class="icon ion-ios-location-outline"></i>
+			{{challenge.city}}
+		</span>
+		<span>
+			<i class="icon ion-ios-timer-outline"></i>
+			{{challenge.timeElapsed}}
+		</span>
+		<span>
+			<i class="icon ion-ios-person-outline"></i>
+			{{challenge.invitedUsers.length}}
+		</span>
+		<span>
+			<i class="icon ion-ios-chatbubble-outline"></i>
+			{{challenge.comments}}
+		</span>
+		<span>
+			<i class="icon ion-ios-heart-outline"></i>
+			{{challenge.likes}}
+		</span>
+		<span>
+			<h5>Приключва:</h5>
+			{{challenge.timeLeft}}
+		</span>
+	</div>
 </div>
-<div class="info">
-	<div class="timetime">
-			<div class="timecheck">
-				<img src="../img/icons/location-icon.png" style="width:7px; height:auto;">
-			</div>
-			<div class="time">
-				<p>{{challenge.city}}София</p>
-			</div>
-			<div class="timeclock">
-				<img src="../img/icons/time.png" style="width:8px; height:auto;">
-			</div>
-			<div class="time">
-				<p>{{challenge.timeElapsed}}Преди 4 часа и 30 минути</p>
-			</div>
-			<div class="likeLike">
-		<div class="person">
-			<p>{{challenge.invitedUsers.length}}57</p>
-		</div>
-		
-		<div class="comment">
-			<p>{{challenge.comments}}34</p>
-		</div>
-			
-		<div class="heart">
-			<p>{{challenge.likes}}234</p>
-		</div>
-		
-	</div>
-	<div class="clock">
-			<h6>
-				<p>Оставащо време</p>
-				23:40Ч.
-				{{challenge.timeLeft}}
-			</h6>
-	</div>
-		</div>
-	</div>
-	<div class="arrow">
-	<div ng-click="nextSlide()">
-		<img src="../img/icons/left.png"></img>
-	</div>
- 	 <div ng-click="previousSlide()">
- 		 <img src="../img/icons/right.png"></img>
-	</div>
-	</div>
-
-	<!-- <div class="arrow">
-				<a class="arrow-left" ng-click="nextSlide()">
-				</a>
-				<a class="arrow-right" ng-click="previousSlide()">
-				</a>
-			</div>
-	</div> -->
-</div>
-
-
-

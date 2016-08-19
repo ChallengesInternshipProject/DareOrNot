@@ -1,4 +1,4 @@
-<ion-view view-title="Contacts View" name="contacts-view">
+<ion-view view-title="Cons View" name="contacts-view">
   <ion-content class="padding" ng-controller="ContactsCtrl">
     <ion-list>
       <p><i class="ion-ios-location-outline" style="color:orange;margin: 3%;"></i>{{companyLocation}}</p>
@@ -9,6 +9,7 @@
       <div class="list list-inset">
         <label class="item item-input">
         <i class="fa fa-user-active" style="color:orange;margin: 3%;"></i>
+
           <input ng-model="contact.name" name="fieldName" type="text" placeholder="Enter your name" required ng-minlength="2"
                  ng-maxlength="70">
         </label>
