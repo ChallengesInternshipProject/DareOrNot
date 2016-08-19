@@ -10597,22 +10597,23 @@ main p {
 .color4 {
   color: #3b51a2; }
 
-ion-view .Contacts {
-  background: red;
+ion-view ion-content .Contacts {
+  background-image: none;
+  background: e8edf0;
   color: #03b2d1;
   line-height: 1%; }
-  ion-view .Contacts ion-content .padding ion-list {
+  ion-view ion-content .Contacts ion-content .padding ion-list {
     /* SEND Form*/ }
-    ion-view .Contacts ion-content .padding ion-list div .list p {
+    ion-view ion-content .Contacts ion-content .padding ion-list div .list p {
       margin: 5%; }
-    ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset {
+    ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset {
       background: transparent;
       /*	BUTTON SEND*/ }
-      ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
+      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
         background: #012438; }
-      ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
+      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
         margin-bottom: 5%; }
-        ion-view .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
+        ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
           color: blue; }
 
 /* CSS list card 
@@ -11073,7 +11074,7 @@ ion-view ion-content {
     padding: 0;
     position: relative;
     color: blue; }
-  .TimeLineCard .arrows {
+  .TimeLineCard .title {
     color: blue;
     position: absolute;
     top: 2%;
