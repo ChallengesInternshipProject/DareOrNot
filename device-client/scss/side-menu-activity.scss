@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* CSS activities */
 
 .activity{
@@ -8,9 +9,14 @@
 		border: none;
 		color: #fff;
 		font-size: 12px;
-		.col{float: left; margin-left: -2em; color: #01cfe4;}
+		.col{text-align: right;
+			 width: 50%; 
+			 margin-left: -2em; 
+			 color: #01cfe4;
+			}
 		.row{color: #ffb400;}
 		}
+/* CSS content view */		
 	.content{
 		.list{ background: transparent;
 			 ion-item{

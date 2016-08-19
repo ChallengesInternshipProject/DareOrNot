@@ -2,12 +2,14 @@
 	<ion-content >
 		<main>
 			<div class = "{{category.class}}" ng-repeat ="category in categories">
-				<h1 class="{{category.titleClass}}">
-					{{category.count}}
-				</h1>
-				<p class="item-text-wrap">
-					{{category.title}}
-				</p>
+				<a href = "/#/app/{{category.slug}}">
+					<h1 class="{{category.titleClass}}">
+						{{category.count}}
+					</h1>
+					<p class="item-text-wrap">
+						{{category.title}}
+					</p>
+				</a>
 			</div>
 		</main>
 	</ion-content>

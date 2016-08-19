@@ -1,26 +1,61 @@
-<ion-modal-view style="width: 50%; height: 45%;">
+<ion-modal-view class="map">
   <!--<ion-header-bar>-->
   <!--&lt;!&ndash;<h1 class="title">Login or register to proceed</h1>&ndash;&gt;-->
   <!--</ion-header-bar>-->
   <ion-content>
-        <img src="http://placehold.it/350x100" alt="">
-
-        <div class="list">
-          <label class="item item-input item-floating-label">
-            <span>Име на предизвикателство</span>
-          </label>
-
-          <label class="item item-input item-floating-label">
-            <span>Потребителско име</span>
-          </label>
-
-          <label class="item item-input item-floating-label">
-            <span>Допълнително инфо</span>
-          </label>
-
-        </div>
-      <button class="button button-block" ng-click="signingUpForChallenge()">Запишете се</button>
-    <br><br>
+<!-- Това е класа по който взимам визитката , навигационите стрелки и заглавието по-доло-->
+<div class="TimeLineCard">
+	<span class="arrows">
+		{{challenge.title}}
+	</span>
+	
+<!-- Това е за слайдъра, взема картинките на деар от сървара ,,,, кодовете за него са следващите 10 реда  -->
+	<ion-slide-box on-slide-changed="slideChanged(index)" style="min-width:100%; min-height:5em;">
+		<ion-slide ng-repeat='picture in challenge.pictures'>
+      				<img ng-src="{{SERVER_ADDRESS}}{{picture}}" alt="">
+		</ion-slide>
+	</ion-slide-box>
+	<!-- Slide to the right -->
+	<div>
+	<div ng-click="nextSlide()" class="arrows-left"><i class="ion-chevron-left"></i></div>
+			<!-- Slide to the left  -->
+	<div ng-click="previousSlide()" class="arrows-right"><i class="ion-chevron-right"></i></div>
+	</div>
+		<!-- Визитка на човека, На доло е нагласено и рабти!!!!  -->
+	<div class="footer">
+		<span class="avatar">
+			<a class="fa item-avatar" href="#">
+				<img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}">
+			</a>
+		</span>
+		<span>
+			<i class="icon ion-ios-location-outline"></i>
+			{{challenge.city}}
+		</span>
+		<span>
+			<i class="icon ion-ios-timer-outline"></i>
+			{{challenge.timeElapsed}}
+		</span>
+		<span>
+			<i class="icon ion-ios-person-outline"></i>
+			{{challenge.invitedUsers.length}}
+		</span>
+		<span>
+			<i class="icon ion-ios-chatbubble-outline"></i>
+			{{challenge.comments}}
+		</span>
+		<span>
+			<i class="icon ion-ios-heart-outline"></i>
+			{{challenge.likes}}
+		</span>
+		<span>
+			<h5>Приключва:</h5>
+			{{challenge.timeLeft}}
+		</span>
+	</div>
+</div>
+	<br>
+    <button class="button button-block" ng-click="signingUpForChallenge()">Запишете се</button>
     <button class="button button-block" ng-click="closeModal()">Затвори</button>
 
   </ion-content>

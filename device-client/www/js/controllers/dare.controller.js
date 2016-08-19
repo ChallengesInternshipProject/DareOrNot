@@ -75,7 +75,8 @@ angular.module('starter.controllers')
 			// inital form data
 			$scope.data = {
 				isPrivate:true,
-				_cretaor:$localStorage.user.id
+				_cretaor:			
+$localStorage.user.data._id
 			};
 			//Friends
 			$scope.friends = FriendsResolver;
