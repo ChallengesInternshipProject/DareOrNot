@@ -1,16 +1,15 @@
 angular.module('starter.controllers')
-  .factory('moment', function ($window) {
+  .factory('moment', function($window) {
     return $window.moment;
   })
-  .controller('SideMenuCtrl', function ($scope, $http, $log, $ionicModal, $state, $ionicHistory, $ionicLoading, SERVER_ADDRESS, $localStorage) {
+  .controller('SideMenuCtrl', function($scope, $http, $log, $ionicModal, $state, $ionicHistory, $ionicLoading, SERVER_ADDRESS, $localStorage) {
 
 
-    setInterval(function () {
+    setInterval(function() {
       $ionicLoading.hide();
     }, 1000);
 
-    $scope.activities = [
-      {
+    $scope.activities = [{
         message: "Наблюдава 5 ваши предизвикателства",
         user: {
           name: "Петър Георгиев",
@@ -25,8 +24,7 @@ angular.module('starter.controllers')
           'img/Activities/9.jpg',
           'img/Activities/5.jpg',
         ]
-      },
-      {
+      }, {
         message: "Ви следва",
         user: {
           name: "Мирела Минчева",
@@ -35,8 +33,7 @@ angular.module('starter.controllers')
         count: 5,
         lastUpdated: new moment().subtract(15, 'm').fromNow(),
 
-      },
-      {
+      }, {
         message: "Коментира ваше видео",
         user: {
           name: "Станислава Мартиова",
@@ -45,8 +42,7 @@ angular.module('starter.controllers')
         count: 5,
         lastUpdated: new moment().subtract(34, 'm').fromNow(),
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium facilis vel, doloremque consequuntur corporis esse laudantium incidunt, velit eveniet a voluptate? Eaque officia, molestias architecto similique perspiciatis, libero assumenda vero!"
-      },
-      {
+      }, {
         message: "Наблюдава 3 ваши предизвикателства",
         user: {
           name: "Мирела Минчева",
@@ -59,8 +55,7 @@ angular.module('starter.controllers')
           'img/Activities/7.jpg',
           'img/Activities/8.jpg',
         ]
-      },
-      {
+      }, {
         message: "Коментира ваша снимка",
         user: {
           name: "Петър Георгиев",
@@ -71,34 +66,34 @@ angular.module('starter.controllers')
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium facilis vel, doloremque consequuntur corporis esse laudantium incidunt, velit eveniet a voluptate? Eaque officia, molestias architecto similique perspiciatis, libero assumenda vero!"
       },
 
-    ]
+    ];
 
-    $scope.callPorofile = function () {
+    $scope.callPorofile = function() {
       $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-profile.html', {
         scope: $scope,
         animation: 'slide-in-up'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.sideMenuModal = modal;
         modal.show();
       });
     };
 
-    $scope.callActivity = function () {
+    $scope.callActivity = function() {
       $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-activity.html', {
         scope: $scope,
         animation: 'slide-in-up'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.sideMenuActivityModal = modal;
         modal.show();
       });
     };
 
-    $scope.callMyDares = function () {
+    $scope.callMyDares = function() {
       $ionicLoading.show({
         template: 'Loading...'
       });
-      $http.get(SERVER_ADDRESS + '/challenges/timeline/' + 			
-$localStorage.user.data._id).success(function (result) {
+      $http.get(SERVER_ADDRESS + '/challenges/timeline/' +
+        $localStorage.user.data._id).success(function(result) {
         $ionicLoading.hide();
         $scope.challenges = result;
         $scope.SERVER_ADDRESS = SERVER_ADDRESS + '/';
@@ -106,7 +101,7 @@ $localStorage.user.data._id).success(function (result) {
         $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-my-dares.html', {
           scope: $scope,
           animation: 'slide-in-up'
-        }).then(function (modal) {
+        }).then(function(modal) {
           $scope.sideMenuMyDaresModal = modal;
           modal.show();
         });
@@ -115,11 +110,11 @@ $localStorage.user.data._id).success(function (result) {
 
     };
 
-    $scope.callMyNotifications = function () {
+    $scope.callMyNotifications = function() {
       $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-notifications.html', {
         scope: $scope,
         animation: 'slide-in-up'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.sideMenuMyNotoficationsModal = modal;
         modal.show();
       });
@@ -128,58 +123,57 @@ $localStorage.user.data._id).success(function (result) {
 
     // TODO Implemented but not yet !!!!!!!!!!!!!!!!!!!!!!!
 
-    $scope.callMyMessages = function () {
+    $scope.callMyMessages = function() {
 
     };
 
     // END OF TODO
 
-    $scope.callMyFavorites = function () {
+    $scope.callMyFavorites = function() {
       $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-favorites.html', {
         scope: $scope,
         animation: 'slide-in-left'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.sideMenuMyFavoritesModal = modal;
         modal.show();
       });
     };
 
-    $scope.callSettings = function () {
-      $log.info('called ?')
+    $scope.callSettings = function() {
       $ionicModal.fromTemplateUrl('templates/side-menu/side-menu-settings.html', {
         scope: $scope,
         animation: 'slide-in-left'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.sideMenuSettingsModal = modal;
         modal.show();
       });
     };
 
-    $scope.exit = function () {
+    $scope.exit = function() {
       ionic.Platform.exitApp();
     };
 
-    $scope.loadMap = function () {
+    $scope.loadMap = function() {
       $ionicModal.fromTemplateUrl('templates/menu/menu-map.html', {
         scope: $scope,
         animation: 'slide-in-left'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.mapModal = modal;
         modal.show();
       });
     };
 
-    $scope.loadCalendar = function () {
+    $scope.loadCalendar = function() {
       $ionicModal.fromTemplateUrl('templates/menu/menu-calendar.html', {
         scope: $scope,
         animation: 'slide-in-left'
-      }).then(function (modal) {
+      }).then(function(modal) {
         $scope.calendarModal = modal;
         modal.show();
       });
     };
 
-    $scope.goTo = function (location) {
+    $scope.goTo = function(location) {
       $state.go('app.search');
     };
   });

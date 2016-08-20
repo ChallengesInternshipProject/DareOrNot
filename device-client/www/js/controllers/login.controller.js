@@ -31,8 +31,8 @@ angular.module('starter.controllers')
           //Set the login status
           // StatusFactory.isLogged = true;
           $localStorage.isLogged = true;
-          $scope.$storage.user = data.email;
-          $log.info($scope.$storage.user);
+          $localStorage.user = data.email;
+          $log.info($localStorage.user);
           // $state.go('tab.chats');
         })
         .error(function (data) {
