@@ -314,7 +314,26 @@ $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 			templateUrl: 'templates/tab-chat-detail.html',
 			controller: 'ChatDetailCtrl',
 		})
-
+		.state('app.activity',{
+			url : '/activity',
+			templateUrl: 'templates/side-menu/activity.html',
+			// controller: 'A'
+		})
+		.state('app.notifications',{
+			url : '/notifications',
+			templateUrl: 'templates/side-menu/notifications.html',
+			// controller: 'A'
+		})
+		.state('app.settings',{
+			url : '/settings',
+			templateUrl: 'templates/side-menu/settings.html',
+			// controller: 'A'
+		})
+		.state('app.favorites',{
+			url : '/favorites',
+			templateUrl: 'templates/side-menu/favorites.html',
+			// controller: 'A'
+		})
 
 
 

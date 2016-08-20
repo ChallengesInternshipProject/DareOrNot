@@ -1,4 +1,4 @@
-<ion-modal-view class="activity" view-title="Активности">
+<ion-view class="activity" view-title="Активности">
 
 	  <ion-content class="cont">
 		<div class="bar bar-header" style='font-size:2em'>
@@ -23,10 +23,10 @@
 								<div class="row">
 									{{activity.message}}
 								</div>
-							</div>    
+							</div>
 							<div class="col" style="margin-right: 2em;">
 								{{activity.lastUpdated}}
-							</div>        
+							</div>
 						</div>
 						<div class="row" ng-if="activity.pictures" >
 							<a  ng-repeat="picture in activity.pictures" class="item item-thumbnail-left" href="#">
@@ -38,10 +38,10 @@
 								{{activity.text}}
 							</div>
 						</div>
-					
+
 
 				</ion-item>
 			</ion-list>
 		</div>
 	</ion-content>
-</ion-modal-view>
+</ion-view>
