@@ -39,7 +39,7 @@
 			/* edit some CSS content in content */
 			 .content { width: 100%;
 						position: relative;
-						padding: 1;
+						padding: 1%;
 						margin: 1%;
 						line-height: 1.8em;
 						font-size: 1em;
@@ -51,6 +51,8 @@
 						
 				 .list{	padding:1%;
 						margin:1%;
+						margin-left: 1em;
+						margin-top: 1em;
 						display: inline-block;
 				 		background: transparent;
 						border-color: #ffb400;
