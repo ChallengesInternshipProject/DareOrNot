@@ -1,19 +1,30 @@
 @charset "utf-8";
 /* CSS for Profil view */
 	ion-view  {
-		.cont{
+		.cont{	display: inline-block;
 		/*  	 */
-			 .fa { 	width: 15vw !important;
-					height: 15vw;
+			 .fa { 	width: 1em !important;
+					height: 1em;
 					display: inline-block;
-					float: left;
-   					margin-top: -6%
-					}
+					margin: 1%;
+					margin-bottom: -1%;
+					margin-top: 0%;
+				}
+		   .fa-img {
+					width: 20vw !important;
+					height: 20vw;
+					border-radius: 50%;
+					margin: 3%;
+					margin-bottom: 3%;
+					margin-top: -5%;
+								}
 
 			}
-			 .bar {background: transparent;
+			 .bar {
+				   background: transparent;
 				   color: #ffb400;
 				   div {
+					margin:1%;
 					margin-top: -5%;
 					padding: 1%;
 					background: transparent;
@@ -26,21 +37,35 @@
 			
 			}
 			/* edit some CSS content in content */
-			 .content {background: transparent;
-			 		   color: #ffb400;
-					   margin-top: 10%;	
-				 .list{
+			 .content { width: 100%;
+						position: relative;
+						padding: 1;
+						margin: 1%;
+						line-height: 1.8em;
+						font-size: 1em;
+						color: #ffb400;
+						display: inline-block;
+						background: transparent;
+
+					}
+						
+				 .list{	padding:1%;
+						margin:1%;
+						display: inline-block;
 				 		background: transparent;
 						border-color: #ffb400;
 						color: #01cfe4;	
-						.item-icon-left {
-										margin: 5%;
-										text-align: left;
-										background: transparent;
-										border: none;
-										font-size: 15px;
-										color: #01cfe4;
-						}
+
+				    a.item {width:99%;
+							margin: 1%;
+							padding:1%;
+							display: inline-block;
+							font-size: 1em;
+							text-align: left;
+							border: none;
+							background: transparent;
+							color: #01cfe4;
+							i{color: #ffb400; font-size:3em;}
+							}
 			}
-		}
 		}
