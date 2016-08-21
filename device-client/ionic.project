@@ -1,6 +1,6 @@
 {
   "name": "device-client",
-  "app_id": "",
+  "app_id": "bb0ecbf7",
   "gulpStartupTasks": [
     "sass",
     "watch"
