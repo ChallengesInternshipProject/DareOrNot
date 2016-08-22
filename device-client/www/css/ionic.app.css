@@ -10021,6 +10021,7 @@ a.button {
   background-position: center;
   background-size: 50% 50%; }
 
+/*BACKGROUND*/
 ion-content {
   background-color: #012438;
   background-image: url(../img/background.png);
@@ -10030,14 +10031,14 @@ ion-content {
   background-size: 100% 100%;
   box-sizing: border-box;
   /* Empty. Add your own CSS if you like */
-  /*BACKGROUND*/
+  /*BACKGROUND transgender*/
   /* LOGO */
   /*Enter LOGIN INFO*/
   /*Changes all the icon colors */
   /*ENTER BUTTON*/
   /*FORGET THE PASS*/
   /*UNDERLINE OR */
-  /*RADIUS BUTTON */
+  /*something like footer */
   /*ion-slide-box {*/
   /*height: 100vh !important;*/
   /*}*/
@@ -10069,34 +10070,41 @@ ion-content {
     float: left;
     width: 100vw; }
   ion-content .content-list {
+    margin: 1%;
+    padding: 1%;
+    display: block;
     text-align: center;
     font-size: 1em;
     color: #fff;
     background: transparent;
     box-sizing: border-box; }
   ion-content section.list {
-    background: transparent;
-    display: block;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box; }
-  ion-content .logo {
-    margin-top: 5%;
+    min-height: 30em;
+    padding: 1%;
+    margin: 1%;
     position: relative;
-    width: 90vw;
-    height: 20vh;
-    /*margin:0;*/
+    text-align: center;
+    font-size: 1em;
+    display: block;
+    background: transparent;
+    box-sizing: border-box; }
+    ion-content section.list .fa {
+      width: 15vw;
+      height: 15vw; }
+  ion-content .logo {
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    min-height: 20vh;
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-position: center center;
+    background-size: 50% 100%;
     box-sizing: border-box; }
   ion-content .into-login {
+    padding: 1%;
+    margin: 1%;
     color: #78671e;
-    left: 0%;
-    padding: 4%;
-    width: 100%;
-    height: auto;
     display: block;
     position: relative;
     font-size: 1em;
@@ -10119,6 +10127,8 @@ ion-content {
     width: 100%;
     background-color: transparent;
     text-align: center; }
+  ion-content .item-input input, ion-content .item-input textarea {
+    color: #fff; }
   ion-content input .item-input input {
     text-align: center; }
   ion-content span.input-label {
@@ -10146,7 +10156,6 @@ ion-content {
     left: 6%;
     box-sizing: border-box; }
   ion-content .forget {
-    display: block;
     color: #fff;
     margin: 3%;
     position: relative;
@@ -10177,17 +10186,12 @@ ion-content {
     left: 10%;
     position: relative; }
   ion-content .regis {
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    font-size: 1.4em;
+    display: block;
     background: transparent;
-    /* margin-TOP: 10%; */
-    /* margin-bottom: 5%; */
-    /* bottom: 0px; */
-    width: 100%;
-    /* height: auto; */
-    font-size: 1em;
-    /* display: inline-block; */
-    /* position: fixed; */
-    bottom: 0;
-    left: 0;
     box-sizing: border-box; }
   ion-content a.reg {
     color: #fff;
@@ -10224,15 +10228,13 @@ ion-content {
     /* top: 0; */ }
   ion-content .fileContainer {
     font-size: 1em;
-    padding: 2em;
-    margin-bottom: 15%;
-    MARGIN-TOP: 10%;
     box-sizing: border-box; }
     ion-content .fileContainer i {
       background: #012438;
       border-radius: 50%;
-      font-size: 2em;
-      padding: 1.5em; }
+      /*font-size: 4.5em; -- */
+      font-size: 1.5em;
+      padding: 1em; }
 
 .demo {
   display: block;
@@ -10767,13 +10769,14 @@ ion-view ion-content .Contacts {
   background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
+  border: none;
   text-align: center;
   display: block;
   /*for icons*/
   /*how to be display*/ }
   .menu-left .fa {
-    width: 15vw !important;
-    height: 15vw;
+    width: 1em !important;
+    height: 1em;
     display: inline-block;
     font-size: 2.5em;
     margin-left: 0%;
@@ -10781,6 +10784,7 @@ ion-view ion-content .Contacts {
     margin-top: -10%; }
   .menu-left div {
     padding: 5%;
+    border: none;
     background: transparent; }
     .menu-left div a.item {
       margin-bottom: 5%;
@@ -10791,52 +10795,81 @@ ion-view ion-content .Contacts {
       color: #01cfe4; }
       .menu-left div a.item i {
         color: #ffb400;
-        font-size: 30px; }
+        font-size: 3em; }
 
 /* CSS for Profil view */
 ion-view {
   /* edit some CSS content in content */ }
   ion-view .cont {
+    display: inline-block;
     /*  	 */ }
     ion-view .cont .fa {
-      width: 15vw !important;
-      height: 15vw;
+      width: 1em !important;
+      height: 1em;
       display: inline-block;
-      float: left;
-      margin-top: -6%; }
+      margin: 1%;
+      margin-bottom: -1%;
+      margin-top: 0%; }
+    ion-view .cont .fa-img {
+      width: 20vw !important;
+      height: 20vw;
+      border-radius: 50%;
+      margin: 3%;
+      margin-bottom: 3%;
+      margin-top: -5%; }
   ion-view .bar {
     background: transparent;
     color: #ffb400; }
     ion-view .bar div {
+      margin: 1%;
+      margin-top: -5%;
+      padding: 1%;
       background: transparent;
       display: block;
       color: #ffb400;
       height: auto;
-      margin-top: -10%;
-      margin-left: 10%; }
+      font-size: 1.5em; }
       ion-view .bar div h2 {
         color: #01cfe4; }
   ion-view .content {
-    background: transparent;
+    width: 100%;
+    position: relative;
+    padding: 1%;
+    margin: 1%;
+    line-height: 1.8em;
+    font-size: 1em;
     color: #ffb400;
-    margin-top: 10%; }
-    ion-view .content .list {
+    display: inline-block;
+    background: transparent; }
+  ion-view .list {
+    padding: 1%;
+    margin: 1%;
+    margin-left: 1em;
+    margin-top: 1em;
+    display: inline-block;
+    background: transparent;
+    border-color: #ffb400;
+    color: #01cfe4; }
+    ion-view .list a.item {
+      width: 99%;
+      margin: 1%;
+      padding: 1%;
+      display: inline-block;
+      font-size: 1em;
+      text-align: left;
+      border: none;
       background: transparent;
-      border-color: #ffb400;
       color: #01cfe4; }
-      ion-view .content .list .item-icon-left {
-        margin: 5%;
-        text-align: left;
-        background: transparent;
-        border: none;
-        font-size: 15px;
-        color: #01cfe4; }
+      ion-view .list a.item i {
+        color: #ffb400;
+        font-size: 3em; }
 
 /* CSS Profil background */
 ion-view ion-content {
   background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
+  font-size: 1em;
   text-align: center;
   display: block; }
 
@@ -11035,16 +11068,18 @@ ion-view ion-content {
     font-size: 10px; }
 
 /* CSS list for all pages at user profil*/
-.list ion-item, .list a.item-content {
-  border: none;
-  background: transparent; }
-
-.list a {
-  text-align: left; }
-  .list a h2 {
-    color: #01cfe4; }
-  .list a p {
-    color: #ffb400; }
+.list {
+  padding: 1%;
+  margin: 1%; }
+  .list ion-item, .list a.item-content {
+    border: none;
+    background: transparent; }
+  .list a {
+    text-align: left; }
+    .list a h2 {
+      color: #01cfe4; }
+    .list a p {
+      color: #ffb400; }
 
 /* CSS list card 
 		title and arrows*/
@@ -11127,26 +11162,45 @@ ion-view ion-content {
     font-size: 20px; }
 
 /* CSS tabs- Menue */
-ion-modal-view .cont {
-  background-image: url(../img/BG.png);
-  background-color: #012438;
-  background-size: 100% 100%;
-  text-align: center; }
-  ion-modal-view .cont h1 {
-    color: #04a4c3;
-    font-size: 15px; }
-  ion-modal-view .cont .list {
-    border: none;
-    color: #01cfe4; }
-    ion-modal-view .cont .list .item-toggle {
+ion-modal-view {
+  /* here is the mine CSS 4 background, colors and so on */ }
+  ion-modal-view .cont {
+    background-image: url(../img/BG.png);
+    background-color: #012438;
+    background-size: 100% 100%;
+    text-align: center;
+    /* here is the mine CSS 4 back button, heder and so on the bar*/ }
+    ion-modal-view .cont .bar-header {
+      margin: 1%;
+      padding: 1%;
       text-align: left;
+      font-size: 1.5em;
       background: transparent;
+      border: none; }
+      ion-modal-view .cont .bar-header i {
+        color: #fff; }
+      ion-modal-view .cont .bar-header h3 {
+        width: 100%;
+        color: #01cfe4;
+        margin-left: 1%;
+        text-align: center; }
+    ion-modal-view .cont h1 {
+      color: #04a4c3;
+      font-size: 15px; }
+    ion-modal-view .cont .list {
+      padding: 1%;
+      margin: 1%;
       border: none;
-      font-size: 15px;
       color: #01cfe4; }
-      ion-modal-view .cont .list .item-toggle .toggle.toggle-assertive input:checked + .track {
-        border-color: #01cfe4;
-        background-color: #01cfe4; }
+      ion-modal-view .cont .list .item-toggle {
+        text-align: left;
+        background: transparent;
+        border: none;
+        font-size: 15px;
+        color: #01cfe4; }
+        ion-modal-view .cont .list .item-toggle .toggle.toggle-assertive input:checked + .track {
+          border-color: #01cfe4;
+          background-color: #01cfe4; }
 
 .demo {
   display: block;

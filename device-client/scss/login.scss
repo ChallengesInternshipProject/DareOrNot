@@ -1,3 +1,4 @@
+  /*BACKGROUND*/
 ion-content{
     background-color: #012438;
     background-image: url(../img/background.png);
@@ -6,7 +7,10 @@ ion-content{
     position: relative;
     background-size: 100% 100%;
     box-sizing: border-box;
+	
+	
   /* Empty. Add your own CSS if you like */
+  
   .leafletMap {
     width: 100vw;
     height: 100vh;
@@ -47,8 +51,11 @@ ion-content{
 
   }
 
-  /*BACKGROUND*/
+  /*BACKGROUND transgender*/
   .content-list {
+    margin: 1%;
+    padding: 1%;
+	display:block;
     text-align: center;
     font-size: 1em;
     color: #fff;
@@ -57,41 +64,43 @@ ion-content{
   }
 
   section.list {
-  	background: transparent;
+	min-height: 30em;
+    padding: 1%;
+    margin: 1%;
+	position: relative;
+    text-align: center;
+    font-size: 1em;
     display: block;
-    width: 100%;
-	height: 100%;
+	background: transparent;
     box-sizing: border-box;
+	.fa {
+    width: 15vw;
+    height: 15vw;
   }
-
+}
   /* LOGO */
   .logo {
-    margin-top: 5%;
+    padding: 1%;
+    margin: 1%;
     position: relative;
-    width: 90vw;
-    height: 20vh;
-    /*margin:0;*/
+    min-height: 20vh;
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background-position: center center;
+    background-size: 50% 100%;
     box-sizing: border-box;
-
   }
 
   /*Enter LOGIN INFO*/
   .into-login {
+    padding: 1%;
+    margin: 1%;
     color: rgb(120, 103, 30);
-    left: 0%;
-    padding: 4%;
-    width: 100%;
-    height: auto;
     display: block;
     position: relative;
     font-size: 1em;
     line-height: 1.8;
     box-sizing: border-box;
-
   }
 
   label.item.item-into {
@@ -116,7 +125,9 @@ ion-content{
     background-color: transparent;
     text-align: center;
   }
-
+	.item-input input, .item-input textarea {
+    color: #fff;
+	}
   input .item-input input {
     text-align: center;
   }
@@ -159,7 +170,6 @@ ion-content{
 
   /*FORGET THE PASS*/
   .forget {
-    display: block;
     color: #fff;
     margin: 3%;
     position: relative;
@@ -203,20 +213,15 @@ ion-content{
     position: relative;
   }
 
-  /*RADIUS BUTTON */
+  /*something like footer */
 
   .regis {
-    background: transparent;
-    /* margin-TOP: 10%; */
-    /* margin-bottom: 5%; */
-    /* bottom: 0px; */
-    width: 100%;
-    /* height: auto; */
-    font-size: 1em;
-    /* display: inline-block; */
-    /* position: fixed; */
-    bottom: 0;
-    left: 0;
+    padding: 1%;
+    margin: 1%;
+	position: relative;
+    font-size: 1.4em;
+    display: block;
+	background: transparent;
     box-sizing: border-box;
   }
 
@@ -277,16 +282,15 @@ ion-content{
   /* Example stylistic flourishes */
 
   .fileContainer {
-    font-size: 1em;
-    padding: 2em;
-    margin-bottom: 15%;
-    MARGIN-TOP: 10%;
-    box-sizing: border-box;
-	i{ background: #012438;
-    border-radius: 50%;
-    font-size: 2em;
-    padding: 1.5em;
-   }
-
-  }
+		font-size: 1em;
+		box-sizing: border-box;
+		i{
+			background: #012438;
+			border-radius: 50%;
+			/*font-size: 4.5em; -- */
+			font-size: 1.5em;
+			padding: 1em;
+		}
+	
+	}
 }
