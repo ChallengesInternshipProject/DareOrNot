@@ -1,34 +1,45 @@
-<ion-view view-title="Contacts View" name="contacts-view">
-  <ion-content class="Contacts padding" ng-controller="ContactsCtrl">
+<ion-view view-title="View" name="contacts-view">
+  <ion-content class="Contacts" ng-controller="ContactsCtrl">
     <ion-list>
-      <p><i class="ion-ios-location-outline" style="color:orange;margin: 3%;"></i>{{companyLocation}}</p>
-      <p><i class="ion-iphone" style="color:orange;margin: 3%;"></i>{{companyPhone}}</p>
+      <div class="information">      
+      <p><i class="ion-ios-location-outline" style="color:orange;float:left;"></i>{{companyLocation}}</p>
+      </div>
+      <div class="information">      
+      <p><i class="ion-iphone" style="color:orange;height:1vh;"></i>{{companyPhone}}</p>
       <p>{{contactFormTitle}}</p>
+      </div>
     </ion-list>
     <form name="contactForm" class="contact" novalidate form-manager>
-      <div class="list list-inset">
-        <label class="item item-input">
-        <i class="fa fa-user-active" style="color:orange;margin: 3%;"></i>
-          <input ng-model="contact.name" name="fieldName" type="text" placeholder="Enter your name" required ng-minlength="2"
+      <div class="input-group">
+        <label>
+           <input ng-model="contact.name" name="fieldName" type="text" placeholder="Enter your name"  required ng-minlength="2"
                  ng-maxlength="70">
+              <div><img src="../img/icons/user1.png"></div>
         </label>
-        <label class="item item-input">
-        <i class="ion-ios-email-outline" style="color:orange;margin: 3%;"></i>
+      </div>
+      <div class="input-group">
+        <label>
+        <!-- <i class="icon ion-ios-email-outline" style="color:orange;margin: 3%;"></i> -->
           <input ng-model="contact.email" name="fieldEmail" type="email" placeholder="Enter email" required
                  ng-maxlength="50">
         </label>
-        <label class="item item-input">
-        <i class="ion-iphone" style="color:orange;margin: 3%;"></i>
+      </div>
+      <div class="input-group">
+        <label>
+        <!-- <i class="icon ion-iphone" style="color:orange;margin: 3%;"></i> -->
           <input ng-model="contact.phone" name="fieldPhone" type="text" placeholder="Enter your phone" required
                  ng-minlength="5" ng-maxlength="15">
         </label>
-        <label class="item item-input">
-        <i class="ion-edit" style="color:orange;margin: 3%;"></i>
+      </div>
+      <div class="input-group">
+        <label>
+        <!-- <i class="icon ion-edit" style="color:orange;margin: 3%;"></i> -->
           <textarea ng-model="contact.message" name="fieldMessage" placeholder="Message" rows="5" required ng-minlength="5"
                     ng-maxlength="250"></textarea>
         </label>
-        <button ng-click="submit()" class="button button-block button-positive"> Submit </button>
       </div>
+        <button ng-click="submit()" class="button button-blue">ИЗПРАТИ</button>
+    
     </form>
     <article  class="into-login">
     <p>folow us : </p>

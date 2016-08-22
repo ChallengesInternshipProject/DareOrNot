@@ -10530,7 +10530,7 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
-  margin: 2% 0.5% 1% 2%; }
+  margin: 2% 1.5% 1% 2%; }
 
 .box2 {
   display: inline-block;
@@ -10553,7 +10553,7 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
-  margin: 1% 0.5% 2.5% 2%; }
+  margin: 1% 1.5% 2.5% 2%; }
 
 .box4 {
   display: inline-block;
@@ -10577,7 +10577,7 @@ main p {
   font-size: 80%;
   text-align: center;
   color: #03b2d1;
-  padding-top: 11em; }
+  padding-top: 17em; }
 
 .color1 {
   color: #056686; }
@@ -10591,24 +10591,48 @@ main p {
 .color4 {
   color: #3b51a2; }
 
-ion-view ion-content .Contacts {
+a {
+  text-decoration: none; }
+
+.Contacts {
   background-image: none;
-  background: e8edf0;
+  background: #e8edf0;
   color: #03b2d1;
   line-height: 1%; }
-  ion-view ion-content .Contacts ion-content .padding ion-list {
-    /* SEND Form*/ }
-    ion-view ion-content .Contacts ion-content .padding ion-list div .list p {
-      margin: 5%; }
-    ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset {
-      background: transparent;
-      /*	BUTTON SEND*/ }
-      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
-        background: #012438; }
-      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
-        margin-bottom: 5%; }
-        ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
-          color: blue; }
+  .Contacts .button {
+    color: #fff; }
+  .Contacts form {
+    padding: 5%; }
+    .Contacts form .profil {
+      display: inline-block;
+      vertical-align: top; }
+  .Contacts .input-group {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 8vh;
+    margin-top: 3%; }
+  .Contacts .information {
+    width: 100%;
+    height: 10vh; }
+  .Contacts i {
+    width: 3vh;
+    height: 5vh;
+    text-rendering: auto;
+    float: left; }
+  .Contacts .input {
+    color: blue;
+    padding-left: 5px;
+    padding-top: 17px;
+    text-align: left; }
+  .Contacts textarea {
+    width: 100%; }
+  .Contacts .button-blue {
+    background-color: #012438;
+    width: 80%;
+    height: 8vh;
+    border-radius: 0px;
+    margin: 25% 7%; }
 
 /* CSS list card 
 		title and arrows*/
@@ -10763,6 +10787,9 @@ ion-view ion-content .Contacts {
     margin-top: -1em; }
 
 /* CSS left Menue, background*/
+.side-menu-bro {
+  background-color: #066886; }
+
 .menu-left {
   background-image: url(../img/BG.png);
   background-color: #012438;
@@ -11320,30 +11347,30 @@ ion-modal-view .cont {
   height: 50px;
   border: none; }
 
-.messages .message {
-  flex: 1 1 auto !important;
-  padding: 10px !important;
-  transition: all 250ms ease-in-out !important;
-  overflow: hidden !important;
-  text-align: left !important;
-  transform: translate3d(0, 0, 0) !important; }
-
-.messages .avatar {
-  border-radius: 50% !important; }
-
-.messages .time {
-  color: white; }
-
-.messages span {
-  background: #007AFF !important;
-  display: inline-block !important;
-  color: white !important;
-  padding: 10px !important;
-  border-radius: 10px !important;
-  text-align: left !important;
-  max-width: 240px !important; }
-  .messages span .time {
-    color: white; }
+.messages {
+  background-color: #e8edf0; }
+  .messages .message {
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    transform: translate3d(0, 0, 0) !important; }
+  .messages .avatar {
+    border-radius: 50% !important; }
+  .messages .time {
+    color: #000;
+    margin-top: 20px; }
+  .messages span {
+    background: #C7C7CC !important;
+    display: inline-block !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    text-align: left !important;
+    max-width: 240px !important; }
+    .messages span .time {
+      color: white; }
 
 .messages.other .message {
   transform: translate3d(0, 0, 0) !important;
@@ -11356,7 +11383,8 @@ ion-modal-view .cont {
 
 .messages.other span {
   color: black !important;
-  background-color: #C7C7CC !important; }
+  background-color: #007AFF !important;
+  margin-top: 12px; }
 
 /* CSS NAv Menue */
 ion-side-menu-content ion-view .nav-bar-block {

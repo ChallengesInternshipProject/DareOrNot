@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS left Menue, background*/
+.side-menu-bro {background-color:#066886};
 .menu-left {
 			 background-image: url(../img/BG.png);
 			 background-color: #012438;
@@ -7,6 +8,7 @@
 			 text-align: center;
 			 display: block;
 		/*for icons*/
+
 			  .fa { width: 15vw !important;
 					height: 15vw;
 					display: inline-block;
@@ -15,6 +17,7 @@
 					margin-bottom: -10%;
 					margin-top: -10%;
 					}
+			
 	/*how to be display*/
 		div {padding:5%;
 			 background: transparent;

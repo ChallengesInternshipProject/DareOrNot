@@ -1,27 +1,48 @@
-ion-view ion-content .Contacts{background-image:none;
-    background:e8edf0;
-	color:#03b2d1;
-	line-height: 1%;
-ion-content .padding{
+	@charset "utf-8";
 
-   ion-list{
-   
- 	  div .list  {
-   		p{margin:5%;}
-  	   }
- /* SEND Form*/
-   	   form .contact {
-	  		div .list-inset { background: transparent;
-			
-/*	BUTTON SEND*/
-			 
-				.button.button-positive { background:#012438;}
-				
-				label .item {margin-bottom: 5%;
-				placeholder{ color:blue;}
+.Contacts{background-image:none;
+   			background:#e8edf0;
+   			color:#03b2d1;
+   			line-height: 1%;
+		.button{color: #fff;}
+		form{padding:5%;
+			.profil{
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		.input-group{position: relative;
+					background-color: #fff;
+					width: 100%;
+					height: 8vh;
+					margin-top:3%;
 				}
-	   }
-   }
-  }
- }
- }
+
+				.information{
+					width: 100%;
+					height: 10vh;
+				}
+		i{width: 3vh;
+    		height: 5vh;
+    		text-rendering: auto;
+    		float: left;
+								}
+
+			.input{
+				color: blue;
+   				 padding-left: 5px;
+   				 padding-top: 17px;
+   				 text-align: left;
+			}
+
+
+		textarea{width: 100%};
+		.button-blue{background-color:#012438;
+					width: 80%;
+					height: 8vh;
+					border-radius: 0px;
+					margin: 25% 7%;
+								}
+ 									}  
+   	
+ 	  
