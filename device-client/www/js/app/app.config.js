@@ -75,7 +75,7 @@ angular.module('starter').config(function (
 		.state('app.profile',{
 			url: '/profile',
 			templateUrl: 'templates/side-menu/side-menu-profile.html',
-			controller: 'SideMenuCtrl'
+			controller: 'ProfileCtrl'
 		})
 		.state('app.search', {
 			url: '/search',
@@ -126,6 +126,11 @@ angular.module('starter').config(function (
 			url: '/categories',
 			templateUrl: 'templates/tab-categories.html',
 			controller: 'CategoriesCtrl'
+		})
+		.state('app.history', {
+			url: '/history',
+			templateUrl: 'templates/_app/history.html',
+			controller: 'HistoryCtrl'
 		})
 		.state('app.funny',{
 			url: '/funny',
@@ -247,7 +252,7 @@ angular.module('starter').config(function (
 					controller: 'UsersCtrl',
 					resolve: {
 						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends(			
+							return UserService.getFriends(
 $localStorage.user.data._id, 'Accepted', '').then(function (data) {
 								return data
 							})
@@ -264,7 +269,7 @@ $localStorage.user.data._id, 'Accepted', '').then(function (data) {
 					controller: 'UsersCtrl',
 					resolve: {
 						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends(			
+							return UserService.getFriends(
 $localStorage.user.data._id, 'Accepted', '').then(function (data) {
 								return data
 							})
@@ -290,7 +295,7 @@ $localStorage.user.data._id, 'Accepted', '').then(function (data) {
 			resolve: {
 				isAuthenticated: isAuthenticated,
 				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
-					return UserService.getFriends(			
+					return UserService.getFriends(
 $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 						return data
 					})
@@ -307,9 +312,28 @@ $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 		.state('app.chat-details', {
 			url: '/chat/:userID',
 			templateUrl: 'templates/tab-chat-detail.html',
-			controller: 'ChatDetailCtrl',			
+			controller: 'ChatDetailCtrl',
 		})
-
+		.state('app.activity',{
+			url : '/activity',
+			templateUrl: 'templates/side-menu/activity.html',
+			// controller: 'A'
+		})
+		.state('app.notifications',{
+			url : '/notifications',
+			templateUrl: 'templates/side-menu/notifications.html',
+			// controller: 'A'
+		})
+		.state('app.settings',{
+			url : '/settings',
+			templateUrl: 'templates/side-menu/settings.html',
+			// controller: 'A'
+		})
+		.state('app.favorites',{
+			url : '/favorites',
+			templateUrl: 'templates/side-menu/favorites.html',
+			// controller: 'A'
+		})
 
 
 

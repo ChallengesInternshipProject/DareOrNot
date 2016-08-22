@@ -22,6 +22,14 @@
     "karma-phantomjs-launcher": "^1.0.1",
     "shelljs": "^0.3.0"
   },
-  "cordovaPlugins": [],
+  "cordovaPlugins": [
+    {
+      "variables": {
+        "SENDER_ID": "GCM_PROJECT_NUMBER"
+      },
+      "locator": "phonegap-plugin-push",
+      "id": "phonegap-plugin-push"
+    }
+  ],
   "cordovaPlatforms": []
 }

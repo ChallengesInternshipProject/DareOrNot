@@ -1,21 +1,25 @@
 <ion-view view-title="Profile">
-	  <ion-content class="cont">
-	<div class="content">
-		<div class="bar bar-header" style="border: 1px solid; border-top: none; border-left: none; border-right: none;    position: relative;  margin: 1%;  margin-top: 1.5em;  padding: 1%;">
-			<img class="fa-img"src="img/avatar.png">
+	<ion-content class="cont">
+		<div class="bar bar-header">
+			<!-- <img class="fa" src="{{user.avatar}}"> -->
+			<img class="fa" src="https://api.adorable.io/avatars/285/ryuuu@adorable">
+
 			<div>
-			<h2>User Name Here</h2>
-			<p>email@email.com</p></div>
+				<h2>{{user.name}}</h2>
+				<p>{{user.email}}</p>
+			</div>
 		</div>
-		<div class="list">
-			<a  class = "item item-icon-left" ng-click="callActivity()"><i class="fa fa-activities-active"></i>Активност</a>
-			<a  class = "item item-icon-left" ng-click="callMyDares()"><i class="fa fa-fav-active"></i>Моите предизвикателства</a>
-			<a  class = "item item-icon-left" ng-click="callMyMessages()"><i class="fa fa-chat-active"></i>Съобщения</a>
-			<a  class = "item item-icon-left" ng-click="callMyNotifications()"><i class="fa fa-notification-active"></i>Известия</a>
-			<a  class = "item item-icon-left" href="#/app/friends">	<i class="fa  fa-friends-active"></i>Приятели	</a>
-			<a  class = "item item-icon-left" ng-click="callMyFavorites()"><i class="fa fa-love-active"></i>Любими</a>
+		<div class="content has-header">
+			<div class="list">
+				<a class="item item-icon-left" href="#/app/activity"><i class="fa fa-activities-active"></i>Активност</a>
+				<div class="item item-icon-left" ng-click="callMyDares()"><i class="fa fa-fav-active"></i>Моите предизвикателства</div>
+				<a class="item item-icon-left" ng-href="#/app/chat"><i class="fa fa-chat-active"></i>Съобщения</a>
+				<a class="item item-icon-left" href="#/app/notifications" ng-click="callMyNotifications()"><i class="fa fa-notification-active"></i>Известия</a>
+				<a class="item item-icon-left" href="#/app/friends">
+					<i class="fa  fa-friends-active"></i> Приятели
+				</a>
+				<a class="item item-icon-left" href="#/app/favorites"><i class="fa fa-love-active"></i>Любими</a>
+			</div>
 		</div>
-	</div>
-	
 	</ion-content>
 </ion-view>
