@@ -1,51 +1,52 @@
-<ion-view view-title="View" name="contacts-view">
+<ion-view view-title="Контакти" name="contacts-view">
   <ion-content class="Contacts" ng-controller="ContactsCtrl">
     <ion-list>
-      <div class="information">      
-      <p><i class="ion-ios-location-outline" style="color:orange;float:left;"></i>{{companyLocation}}</p>
+      <div class="empty">
+        
       </div>
-      <div class="information">      
-      <p><i class="ion-iphone" style="color:orange;height:1vh;"></i>{{companyPhone}}</p>
+      <div class="group-locatoin">      
+      <p style="padding-left: 3.5em;">{{companyLocation}}</p>
+      </div>
+      <div class="group-phone">      
+      <p style="font-size: 0.9em;">{{companyPhone}}</p>
       <p>{{contactFormTitle}}</p>
       </div>
     </ion-list>
     <form name="contactForm" class="contact" novalidate form-manager>
-      <div class="input-group">
-        <label>
-           <input ng-model="contact.name" name="fieldName" type="text" placeholder="Enter your name"  required ng-minlength="2"
+      <div class="input-group-user">
+           <input class="name" ng-model="contact.name" name="fieldName" type="text" placeholder="Enter your name"  required ng-minlength="2"
                  ng-maxlength="70">
-              <div><img src="../img/icons/user1.png"></div>
-        </label>
-      </div>
-      <div class="input-group">
-        <label>
-        <!-- <i class="icon ion-ios-email-outline" style="color:orange;margin: 3%;"></i> -->
-          <input ng-model="contact.email" name="fieldEmail" type="email" placeholder="Enter email" required
+             
+    </div>
+      <div class="input-group-mail">
+  
+          <input class="name" ng-model="contact.email" name="fieldEmail" type="email" placeholder="Enter email" required
                  ng-maxlength="50">
-        </label>
+  
       </div>
-      <div class="input-group">
-        <label>
-        <!-- <i class="icon ion-iphone" style="color:orange;margin: 3%;"></i> -->
-          <input ng-model="contact.phone" name="fieldPhone" type="text" placeholder="Enter your phone" required
+      <div class="input-group-phone">
+       
+          <input class="name" ng-model="contact.phone" name="fieldPhone" type="text" placeholder="Enter your phone" required
                  ng-minlength="5" ng-maxlength="15">
-        </label>
+
       </div>
-      <div class="input-group">
-        <label>
-        <!-- <i class="icon ion-edit" style="color:orange;margin: 3%;"></i> -->
-          <textarea ng-model="contact.message" name="fieldMessage" placeholder="Message" rows="5" required ng-minlength="5"
-                    ng-maxlength="250"></textarea>
-        </label>
-      </div>
+     <!--  <div class="input-group-message">
+       </div> -->
+          <textarea class="input-group-message name-2" ng-model="contact.message" name="fieldMessage" placeholder="Message" rows="5" required ng-minlength="5"
+                    ng-maxlength="250">
+                      
+          </textarea>
+
+      
         <button ng-click="submit()" class="button button-blue">ИЗПРАТИ</button>
     
     </form>
-    <article  class="into-login">
-    <p>folow us : </p>
-                <button class="fa ion-social-facebook button button-block " ng-click="loginWithFacebook()" style="background-color: rgb(47, 123, 189);"></button>
-                <button class="fa ion-social-twitter button button-block " ng-click="loginWithtwitter()" style="background-color: rgb(0, 191, 243);"></button>
-                 <button class="fa ion-social-googleplus button button-block " ng-click="loginWithGoogle()" style="background-color: rgb(217, 3, 74);"></button>
+    <p class="blue">Последвайте ни в социалните мрежи</p>
+    <article  class="log">
+    
+                <button class="fa ion-social-facebook button button-block " ng-click="loginWithFacebook()" style="background-color: rgb(47, 123, 189);margin:10% 7% 0 6%;"></button>
+                <button class="fa ion-social-twitter button button-block " ng-click="loginWithtwitter()" style="background-color: rgb(0, 191, 243);margin:10% 7% 0 6%;"></button>
+                 <button class="fa ion-social-googleplus button button-block " ng-click="loginWithGoogle()" style="background-color: rgb(217, 3, 74);margin:10% 7% 0 6%;"></button>
          </article>
   </ion-content>
 </ion-view>
