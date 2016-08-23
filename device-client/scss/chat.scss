@@ -1,8 +1,9 @@
+
 // $stable:                          #f8f8f8 !default;
 
 
 .messages {
-
+    background-color: #e8edf0;
   .message {
     flex: 1 1 auto !important;
     padding: 10px !important;
@@ -18,10 +19,11 @@
     border-radius: 50% !important;
   }
   .time{
-    color: white;
+    color: #000;
+    margin-top: 20px;
   }
   span {
-    background: #007AFF !important;
+    background:#C7C7CC !important;
     display: inline-block !important;
     color: white !important;
     padding: 10px !important;
@@ -31,6 +33,7 @@
     max-width: 240px !important;
     .time{
       color:white;
+
     }
   }
 
@@ -49,6 +52,7 @@
   }
   span {
     color: black !important;
-    background-color: #C7C7CC !important;
+    background-color:#007AFF !important;
+    margin-top: 12px;
   }
 }
