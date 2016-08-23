@@ -10601,10 +10601,10 @@ a {
   line-height: 1%; }
   .Contacts .button {
     color: #fff; }
-  .Contacts ion-list p {
-    line-height: 4vh;
-    text-align: left;
-    padding-left: 4em; }
+  .Contacts ion-list .f {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 13vh; }
   .Contacts form {
     padding: 5%;
     height: 73vh; }

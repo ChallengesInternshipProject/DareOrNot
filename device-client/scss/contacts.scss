@@ -8,19 +8,20 @@
 		.button{
 			color: #fff;
 			}
-	ion-list p{
-			line-height: 4vh;
-			text-align: left;
-			padding-left: 4em;		
-						}
+	ion-list .f{
+				text-align: center;
+    			font-size: 2rem;
+				line-height: 13vh;		}
 		
 		form{
 			padding:5%;
 			height: 73vh;
 			.blue{
 				color: #03b2d1;
+				}
+	
 
-			}
+	
 			article .log{
 					display: block;
     				position: relative;
