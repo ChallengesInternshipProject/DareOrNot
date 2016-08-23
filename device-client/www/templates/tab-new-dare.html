@@ -12,112 +12,47 @@
 
 		<div class="list list-inset">
 				<form   enctype="multipart/form-data" ng-submit="submitDare()">
-				<!--Friends Slider-->
-				<!-- <ion-slide-box on-slide-changed="slideHasChanged($index)">
-					<ion-slide>
-						<div class="box blue"><h1>BLUE</h1></div>
-					</ion-slide>
-					<ion-slide>
-						<div class="box yellow"><h1>YELLOW</h1></div>
-					</ion-slide>
-					<ion-slide>
-						<div class="box pink"><h1>PINK</h1></div>
-					</ion-slide>
-				</ion-slide-box>
-					-->
-					
-					
-			<!-- info about autor
-			<label class="vh item item-input">
-			<span class="info">
-				<i class="ion-ios-person-outline"></i>
-			</span>
-				<input  class="la" type="text" placeholder="Трите Имена" ng-model="data.firstName">
-			</label>
-			<label class="vh item item-input">
-			<span class="info">
-				<i class="ion-ios-email-outline"></i>
-			</span>
-				<input class="la" type="text" placeholder="Email" ng-model="data.email" required>
-			</label>
-			<label class="vh item item-input">
-			<span class="info">
-				<i class="ion-iphone"></i>
-			</span>
-				<input  class="la" type="text" placeholder="Phone" ng-model="data.phone">
-			</label>
-			<label class="vh item item-input">
-			<span class="info">
-				<i class="ion-ios-location-outline"></i>
-			</span>
-				<input  class="la" type="text" placeholder="Град" ng-model="data.city">
-			</label>
-			<label class="vh item item-input">
-				<input  class="la" type="text" placeholder="Държава" ng-model="data.country">
-			</label>-->
-			
-			<!-- it could be radio button ?!
-			<ion-list radio-group [(ngModel)]="gender"  class="la">
-			  <ion-list-header  class="la">
-				Пол
-			  </ion-list-header>
-			  <ion-item>
-				<ion-label>Жена</ion-label>
-				<ion-radio value="femail" checked="true"></ion-radio>
-			  </ion-item>
-			  <ion-item>
-				<ion-label>Мъж</ion-label>
-				<ion-radio value="male"></ion-radio>
-			  </ion-item>
-			</ion-list>-->
-
-				
-				<label class="vh item item-input">
-					<input type="text" placeholder="Заглавие на Предизвикателство" ng-model="data.title" value="Dare name here">
-				</label>
-				<label class="item item-input" style="margin-top:1em; width:95%; border-color: #8dc3cd;">
-					<span class="pen"><i class="ion-edit"></i></span>
-				<textarea placeholder="Текст описващ предизвикателството" rows="8" cols="10" ng-model="data.description" value = "Some Description here"></textarea>
-				</label>
-				<!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>-->
-				<br>
-				<h3>Избери предизвикателство</h3>
-				<br>
-                <div class="challeng">
-				<ion-list>
-					<ion-radio  ng-repeat="category in categories" ng-model="data.category" ng-value="category.id">
-					{{category.title}}
-					</ion-radio>
-				</ion-list>
-				</div>
-				
-				
-	<!--That's not working-->
-                
-				<div class="row no-padding">
-						<div class="col">
-						<h3 style="margin-top: 35%;">
-							Продължителност
-						</h3>
+					<label class="vh item item-input">
+						<input type="text" placeholder="Заглавие на Предизвикателство" ng-model="data.title" value="Dare name here">
+					</label>
+					<label class="item item-input" style="margin-top:1em; width:95%; border-color: #8dc3cd;">
+						<span class="pen"><i class="ion-edit"></i></span>
+						<textarea placeholder="Текст описващ предизвикателството" rows="8" cols="10" ng-model="data.description" value = "Some Description here"></textarea>
+					</label>
+					<!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>-->
+					<br>
+					<h3>Избери предизвикателство</h3>
+					<br>
+					<div class="challeng">
+						<ion-list>
+							<ion-radio  name="category" ng-repeat="category in categories" ng-model="data.category" ng-value="category.id">
+							{{category.title}}
+							</ion-radio>
+						</ion-list>
 					</div>
-					<div class="col">
-						<label class="item item-input" style="width: 100%; display:inline-block; background: transparent; border:none;">
-
-							<div class="col">
-								<div class="item" ion-datetime-picker ng-model="data.startDate">
-										От: {{data.startDate| date: "yyyy-MM-dd H:mm:ss"}}
-								</div >
-							</div>
-
-							<div class="col">
-									<div class="item" ion-datetime-picker ng-model="data.endDate">
-										До: {{data.endDate| date: "yyyy-MM-dd H:mm:ss"}}
+					<div class="row no-padding">
+						<div class="col">
+							<h3 style="margin-top: 35%;">
+								Продължителност
+							</h3>
+						</div>
+						<div class="col">
+								<div class="col">
+									<div class="item" ion-datetime-picker ng-model="data.startDate">
+											От: {{data.startDate| date: "yyyy-MM-dd H:mm:ss"}}
+									</div >
+								</div>
+								<div class="col">
+										<div class="item" ion-datetime-picker ng-model="data.endDate">
+											До: {{data.endDate| date: "yyyy-MM-dd H:mm:ss"}}
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				
-
+				<label class="item item-input">
+				  <span class="input-label">Number</span>
+				  <input type="number">
+				</label>
 				<div class="row">
 					<div class="col">
 						<h3>
@@ -137,43 +72,33 @@
 						</label>
 					</div>
 				</div>
-				
 				<!--choose an image -->
-			<div class="row">
-				 <label class="fileContainer">
-					<i class="ion-ios-camera-outline"></i> <input class="fil" type="file">
-				  </label>
-			</div>
-				<!-- 
-				<h3>Image</h3>
-				<div class="list">
-						<input type="file" accept="image/*" capture="camera" ng-model="dataFile" >
-						<button type="button" class="button" ng-click="testFile()">Ckucj</button> 
-				</div> -->
+				<div class="row">
+						<label class="fileContainer">
+						<i class="ion-ios-camera-outline"></i> <input class="fil" type="file">
+							</label>
+				</div>
+			
 				<div class="vh challeng">
 				<ion-list>
-					<ion-radio ng-model="data.isPublic" ng-value="true" checked="checked" style="font-size:2em;text-transform: uppercase;">Публично</ion-radio>
-					<ion-radio ng-model="data.isPublic" ng-value="false" style="font-size:2em;text-transform: uppercase;">Скрито</ion-radio>
+					<ion-radio name="isPublic" ng-model="data.isPublic" ng-value="true" checked="checked" style="font-size:2em;text-transform: uppercase;">Публично</ion-radio>
+					<ion-radio name="isPublic" ng-model="data.isPublic" ng-value="false" style="font-size:2em;text-transform: uppercase;">Скрито</ion-radio>
 				</ion-list>
 				</div>
-	
 				<h3 style="margin-top:2em;text-transform: uppercase;">Сподели в социалните мрежи:</h3>
 				<div class="row responsive-sm">
 					<ion-list>
-					<div class="row">
-						  <div class="col">
-						  	<button class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook"
-							style="background-color: rgb(47, 123, 189);"></button>
-						  </div>
-						  <div class="col">
-						   <button class="fa ion-social-twitter button button-block" ng-model="data.share.twitter"
-                      style="background-color: rgb(0, 191, 243);"></button>
-						  </div>
-						  <div class="col">
-						  	 <button class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus"
-                      style="background-color: rgb(217, 3, 74);"></button>
-						  </div>
-					</div>
+						<div class="row">
+									<div class="col">
+										<button type="button" ng-class="{'active' : data.socialNetworks.facebook == true }" ng-click="toggleSocial('facebook')" class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook" style="background-color: rgb(47, 123, 189);"></button>
+									</div>
+									<div class="col">
+										<button type="button" ng-class="{'active' : data.socialNetworks.twitter == true }"  ng-click="toggleSocial('twitter')" class="fa ion-social-twitter button button-block" ng-model="data.share.twitter" style="background-color: rgb(0, 191, 243);"></button>
+									</div>
+									<div class="col">
+											<button type="button"  ng-class="{'active' : data.socialNetworks.googlePlus == true }" ng-click="toggleSocial('googlePlus')" class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus" style="background-color: rgb(217, 3, 74);"></button>
+									</div>
+						</div>
 					</ion-list>
 				</div>
 					<!--add friends button-->

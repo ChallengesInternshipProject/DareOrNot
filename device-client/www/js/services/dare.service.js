@@ -12,12 +12,10 @@ angular.module('starter.services')
 		}
 
 		dareService.create = function (data){
-			$http({
+			return $http({
 				method: 'POST',
 				url: SERVER_ADDRESS + '/dares/create',
 				data: data
-			}).then(function (response) {
-				$log.info(response);
 			})
 
 		}

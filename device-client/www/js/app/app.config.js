@@ -107,9 +107,10 @@ angular.module('starter').config(function (
 								template: 'Loading...'
 							});
 							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										$or:[
+									title : {$ne : null},
+									description : { $ne : null},
+									endDate : {$gt : new Date()},
+									$or:[
 										{invitedUsers : {$in : [$localStorage.user.data._id]}},
 										{isPublic : true},
 									]
