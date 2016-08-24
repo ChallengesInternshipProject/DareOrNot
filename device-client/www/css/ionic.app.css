@@ -10038,3 +10038,74 @@ a.button {
       .SideMenu .menu-left div a.item i {
         color: #ffb400;
         font-size: 3em; }
+
+/* CSS for Profil view */
+.Profile {
+  /* edit some CSS content in content */ }
+  .Profile .cont {
+    display: inline-block;
+    /*  	 */ }
+    .Profile .cont .fa {
+      width: 1em !important;
+      height: 1em;
+      display: inline-block;
+      margin: 0 1% -1%; }
+    .Profile .cont .fa-img {
+      width: 20vw !important;
+      height: 20vw;
+      border-radius: 50%;
+      margin: -5% 3% 3%; }
+  .Profile .bar {
+    background: transparent;
+    color: #ffb400; }
+    .Profile .bar div {
+      margin: -5% 1% 1%;
+      padding: 1%;
+      background: transparent;
+      display: block;
+      color: #ffb400;
+      height: auto;
+      font-size: 1.5em; }
+      .Profile .bar div h2 {
+        color: #01cfe4; }
+  .Profile .content {
+    width: 100%;
+    position: relative;
+    padding: 1%;
+    margin: 1%;
+    line-height: 1.8em;
+    font-size: 1em;
+    color: #ffb400;
+    display: inline-block;
+    background: transparent; }
+  .Profile .list {
+    padding: 1%;
+    margin: 1em 1% 1% 1em;
+    display: inline-block;
+    background: transparent;
+    border-color: #ffb400;
+    color: #01cfe4; }
+    .Profile .list a.item {
+      width: 99%;
+      margin: 1%;
+      padding: 1%;
+      display: inline-block;
+      font-size: 1em;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: #01cfe4; }
+      .Profile .list a.item i {
+        color: #ffb400;
+        font-size: 3em; }
+
+/* CSS Profil background */
+ion-view ion-content {
+  background-image: url(../img/BG.png);
+  background-color: #012438;
+  background-size: 100% 100%;
+  font-size: 1em;
+  text-align: center;
+  display: block; }
+
+/* CSS NAv Menue */
