@@ -10853,14 +10853,24 @@ ion-view ion-content .Contacts {
   background-size: 100% 100%;
   text-align: center;
   /* CSS edit in item */ }
+  .Notifications .height {
+    height: 17vh;
+    width: 100%; }
+    .Notifications .height h1 {
+      position: relative;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
   .Notifications h3, .Notifications h2 {
     color: #01cfe4;
     margin-left: 5%;
     width: 50%;
-    text-align: left; }
+    text-align: left;
+    font-size: 0.8em; }
   .Notifications span {
     float: left;
-    margin-left: 0.3%;
+    margin-left: -0.5%;
+    margin-top: -0.5rem;
     position: absolute;
     z-index: 10; }
     .Notifications span i {
@@ -10884,33 +10894,42 @@ ion-view ion-content .Contacts {
       text-align: left;
       display: inline-block;
       /* CSS imges */ }
-      .Notifications .list ion-item .item p {
-        color: orange; }
       .Notifications .list ion-item .p, .Notifications .list ion-item i {
         color: #ffb400;
         width: 100%;
         margin-left: 5%;
-        text-align: left; }
+        padding-right: 1vw; }
       .Notifications .list ion-item div {
         width: 98%;
         display: inline-flex; }
       .Notifications .list ion-item div p {
         color: #01cfe4;
-        margin-left: -30%;
+        margin-left: 20vw;
+        margin-bottom: 1vh;
         width: 55%;
-        text-align: right; }
+        font-size: 0.8em; }
       .Notifications .list ion-item .img {
-        top: 16px;
-        left: 16px;
+        display: block;
         width: 100%;
-        height: 100%;
-        margin: 3%; }
+        height: auto;
+        margin: 5%; }
         .Notifications .list ion-item .img img {
-          width: 5em;
-          height: 5em; }
+          display: inline;
+          width: 4em;
+          height: 3.5em;
+          padding: 0.3em 1em 0.3em 0; }
       .Notifications .list ion-item ion-item.text {
         width: 30vw;
         height: 20vh; }
+  .Notifications .com p {
+    width: 61%;
+    padding-left: 3rem;
+    background: transparent;
+    text-align: left;
+    padding-bottom: 30px;
+    display: inline-block;
+    white-space: normal;
+    color: #fff; }
 
 /* CSS All 4 friends */
 .tabs-striped.tabs-background-stable .tabs {
