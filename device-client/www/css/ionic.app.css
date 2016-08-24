@@ -9815,970 +9815,200 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-/*-----div web-----*/
-.fa {
-  width: 15vw !important;
-  height: 10vw;
-  display: inline-block;
-  font-size: 2em;
-  text-rendering: auto;
-  border-radius: 50%;
-  color: white;
-  margin-right: 3%;
-  margin-bottom: 3%;
-  margin-top: 3%; }
-
-/*--icons--*/
-.fa-user {
+.app-icon-user {
   background: url("../img/icons/user.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-user-active {
+.app-icon-user-active {
   background: url("../img/icons/user1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-fav {
+.app-icon-fav {
   background: url("../img/icons/fav.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-fav-active {
+.app-icon-fav-active {
   background: url("../img/icons/fav1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-friends {
+.app-icon-friends {
   background: url("../img/icons/friends.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-friends-active {
+.app-icon-friends-active {
   background: url("../img/icons/friends1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-event {
+.app-icon-event {
   background: url("../img/icons/event.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-event-active {
+.app-icon-event-active {
   background: url("../img/icons/event1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-chat {
+.app-icon-chat {
   background: url("../img/icons/chat.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-chat-active {
+.app-icon-chat-active {
   background: url("../img/icons/chat1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-stat {
+.app-icon-stat {
   background: url("../img/icons/stat.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-stat-active {
+.app-icon-stat-active {
   background: url("../img/icons/stat1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-speech {
+.app-icon-speech {
   background: url("../img/icons/speech.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-speech-active {
+.app-icon-speech-active {
   background: url("../img/icons/speech1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-out {
+.app-icon-out {
   background: url("../img/icons/out.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-out-active {
+.app-icon-out-active {
   background: url("../img/icons/out1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-settings {
+.app-icon-settings {
   background: url("../img/icons/settings.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-settings-active {
+.app-icon-settings-active {
   background: url("../img/icons/settings1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-history {
+.app-icon-history {
   background: url("../img/icons/history.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-history-active {
+.app-icon-history-active {
   background: url("../img/icons/history1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-love {
+.app-icon-love {
   background: url("../img/icons/love.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-love-active {
+.app-icon-love-active {
   background: url("../img/icons/love1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-notification {
+.app-icon-notification {
   background: url("../img/icons/notification.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-notification-active {
+.app-icon-notification-active {
   background: url("../img/icons/notification1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-activities {
+.app-icon-activities {
   background: url("../img/icons/activities.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-activities-active {
+.app-icon-activities-active {
   background: url("../img/icons/activities1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-categories {
+.app-icon-categories {
   background: url("../img/icons/categories.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-categories-active {
+.app-icon-categories-active {
   background: url("../img/icons/categories1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-left {
+.app-icon-left {
   background: url("../img/icons/left.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-left-active {
+.app-icon-left-active {
   background: url("../img/icons/left1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-right {
+.app-icon-right {
   background: url("../img/icons/right.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-right-active {
+.app-icon-right-active {
   background: url("../img/icons/right1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-/*BACKGROUND*/
-/* Empty. Add your own CSS if you like */
-.leafletMap {
-  width: 100vw;
-  height: 100vh; }
-
-.leafletUserMap {
-  width: 50vw;
-  height: 50vh; }
-
-.leafletDareMap {
-  width: 100vw;
-  height: 50vh; }
-
-.scroll {
-  height: 100%; }
-
-#map {
-  width: 100%;
-  height: 100%; }
-
-form {
-  width: 100vw; }
-
-.button-form-submit {
-  display: none;
-  float: right;
-  width: 4vw; }
-
-.input-form-submit {
-  float: left;
-  width: 100vw; }
-
-/*BACKGROUND transgender*/
-.content-list {
-  margin: 1%;
-  padding: 1%;
-  display: block;
-  text-align: center;
-  font-size: 1em;
-  color: #fff;
-  background: transparent;
-  box-sizing: border-box; }
-
-section.list {
-  min-height: 30em;
-  padding: 1%;
-  margin: 1%;
-  position: relative;
-  text-align: center;
-  font-size: 1em;
-  display: block;
-  background: transparent;
-  box-sizing: border-box; }
-  section.list .fa {
-    width: 15vw;
-    height: 15vw; }
-
-/* LOGO */
-.logo {
-  padding: 1%;
-  margin: 1%;
-  position: relative;
-  min-height: 20vh;
-  background-image: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 100%;
-  box-sizing: border-box; }
-
-/*Enter LOGIN INFO*/
-.into-login {
-  padding: 1%;
-  margin: 1%;
-  color: #78671e;
-  display: block;
-  position: relative;
-  font-size: 1em;
-  line-height: 1.8;
-  box-sizing: border-box; }
-
-label.item.item-into {
-  color: #78671e;
-  border-bottom: 1px solid #808080;
-  border-top: 0;
-  width: 75%;
-  border-left: 0;
-  border-right: 0;
-  font-size: 1em; }
-
-label.item-into {
-  display: inline-flex; }
-
-input {
-  padding: 8px;
-  display: block;
-  border: none;
-  width: 100%;
-  background-color: transparent;
-  text-align: center; }
-
-.item-input input, .item-input textarea {
-  color: #fff; }
-
-input .item-input input {
-  text-align: center; }
-
-span.input-label {
-  color: #78671e;
-  white-space: nowrap;
-  font-size: 1em;
-  text-align: left;
-  margin: 0;
-  padding: 0; }
-
-.ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
-.ion-ios-wineglass-outline, .ion-ios-camera-outline,
-.ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
-  font-size: 1.5em; }
-
-/*Changes all the icon colors */
-/*ENTER BUTTON*/
-button.button.button-calm {
-  background-color: #012438;
-  color: #78671e;
-  width: 83%;
-  padding: 1%;
-  border: none;
-  margin: 3%;
-  font-size: 1em;
-  position: relative;
-  left: 6%;
-  box-sizing: border-box; }
-
-/*FORGET THE PASS*/
-.forget {
-  color: #fff;
-  margin: 3%;
-  position: relative;
-  font-size: 1em; }
-
-/*UNDERLINE OR */
-div.container h1 {
-  font-size: 1em;
-  display: inline-block;
-  color: #fff;
-  padding: 10px;
-  position: relative; }
-
-div.container h1:before,
-div.container h1:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  width: 500%; }
-
-div.container h1:before {
-  right: 100%; }
-
-div.container h1:after {
-  left: 100%; }
-
-div.container {
-  overflow: hidden;
-  text-align: center;
-  width: 80%;
-  left: 10%;
-  position: relative; }
-
-/*something like footer */
-.regis {
-  padding: 1%;
-  margin: 1%;
-  position: relative;
-  font-size: 1.4em;
-  display: block;
-  background: transparent;
-  box-sizing: border-box; }
-
-a.reg {
-  color: #fff;
-  margin: 0;
-  display: inline-flex; }
-
-/*ion-slide-box {*/
-/*height: 100vh !important;*/
-/*}*/
-/*NEXT / BACK BUUTON*/
-button.button-TR {
-  background: transparent none repeat scroll 0% 0%;
-  font-size: 100%;
-  position: relative;
-  width: 30%;
-  display: inline;
-  font-size: 4em; }
-
-/* bottom nav */
-div.slider-pager {
-  position: relative;
-  bottom: 10em;
-  padding: 0em;
-  overflow: auto;
-  height: 100%;
-  visibility: hidden; }
-
-/* upload photo */
-.fileContainer {
-  overflow: hidden;
-  position: relative; }
-
-.fileContainer [type=file] {
-  /* cursor: inherit; */
-  /* display: block; */
-  font-size: 2em;
-  filter: alpha(opacity=0);
-  /* min-height: 100%; */
-  /* min-width: 100%; */
-  opacity: 0;
-  /* position: absolute; */
-  /* right: 0; */
-  /* text-align: right; */
-  /* top: 0; */ }
-
-/* Example stylistic flourishes */
-.fileContainer {
-  font-size: 1em;
-  box-sizing: border-box; }
-  .fileContainer i {
-    background: #012438;
-    border-radius: 50%;
-    /*font-size: 4.5em; -- */
-    font-size: 1.5em;
-    padding: 1em; }
-
-.demo {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  margin-top: 2%;
-  margin-right: 2%;
-  position: relative; }
-
-.demo > img {
-  position: relative;
-  width: 100%;
-  height: auto; }
-
-.demo h2 {
-  position: absolute;
-  top: 15%;
-  color: #fff;
-  font-size: 20px;
-  padding-left: 30px; }
-
-.time {
-  display: inline-block;
-  vertical-align: top; }
-
-.timetime {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -73%;
-  width: 174px;
-  height: auto; }
-
-.timetime p {
-  font-size: 0.5em;
-  line-height: 22px;
-  color: #03b2d1; }
-
-.likeLike {
-  display: inline-block; }
-
-.likeLike .person {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/user1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 19px;
-  width: 22px; }
-
-.likeLike .comment {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/speech1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.likeLike .heart {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/love1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.person p {
-  padding-left: 43%; }
-
-.comment p {
-  padding-left: 50%; }
-
-.heart p {
-  padding-left: 55%; }
-
-.likeLike p {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 8px;
-  color: #03b2d1; }
-
-.clock h6 {
-  font-size: 13px;
-  color: #03b2d1;
-  line-height: 12px; }
-
-.clock h6 > p {
-  color: #ffcf7d;
-  font-size: 5px;
-  line-height: 5px; }
-
-.clock {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  padding-top: 5px; }
-
-.timecheck {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  line-height: -1px; }
-
-.timecheck img {
-  width: 16px;
-  height: 20px; }
-
-.timeclock {
-  display: inline-block;
-  vertical-align: top;
-  height: 16px;
-  line-height: -1px; }
-
-.timeclock img {
-  width: 16px;
-  height: 16px; }
-
-.info {
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  bottom: 20px; }
-
-.socialtwo {
-  display: none; }
-
-.responsive-logo {
-  display: none; }
-
-.user {
-  width: 80%;
-  position: absolute;
-  top: 74%;
-  left: -10%; }
-
-.user-name {
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font-size: 0.8em;
-  margin-left: 4px; }
-
-.user-pic {
-  display: inline-block;
-  width: 20%;
-  margin-left: -6%; }
-
-.user .img-circle {
-  border-radius: 50%;
-  border: 2px solid #fff;
-  width: 130px; }
-
-.arrow {
-  position: absolute;
-  top: 10%;
-  width: 100%; }
-
-.arrowSecond {
-  position: absolute;
-  top: 30%;
-  width: 100%; }
-
-.arrow img {
-  width: 50px;
-  height: 50px;
-  border: none; }
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  font: inherit;
-  font-weight: normal;
-  outline: none;
-  vertical-align: baseline; }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-menu,
-nav,
-section {
-  display: block; }
-
-html {
-  height: 100%; }
-
-body {
-  font-family: "Open Sans";
-  width: 100%; }
-
-@font-face {
-  font-family: "Open Sans"; }
-
-main {
-  min-width: 100%;
-  background-color: #e8edf0;
-  margin: 0 auto; }
-
-.box1 {
-  display: inline-block;
-  vertical-align: top;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/funBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 2% 0.5% 1% 2%; }
-
-.box2 {
-  display: inline-block;
-  vertical-align: top;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/BusinessBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 2% 1% 1% 0%; }
-
-.box3 {
-  display: inline-block;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/prizeBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 1% 0.5% 2.5% 2%; }
-
-.box4 {
-  display: inline-block;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/charityBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 1% 1% 2.5% 0%; }
-
-main h1 {
-  display: block;
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 10% !important; }
-
-main p {
-  display: block;
-  font-size: 80%;
-  text-align: center;
-  color: #03b2d1;
-  padding-top: 11em; }
-
-.color1 {
-  color: #056686; }
-
-.color2 {
-  color: #dc9138; }
-
-.color3 {
-  color: #cd4c4c; }
-
-.color4 {
-  color: #3b51a2; }
-
-ion-view ion-content .Contacts {
-  background-image: none;
-  background: e8edf0;
-  color: #03b2d1;
-  line-height: 1%; }
-  ion-view ion-content .Contacts ion-content .padding ion-list {
-    /* SEND Form*/ }
-    ion-view ion-content .Contacts ion-content .padding ion-list div .list p {
-      margin: 5%; }
-    ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset {
-      background: transparent;
-      /*	BUTTON SEND*/ }
-      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset .button.button-positive {
-        background: #012438; }
-      ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item {
-        margin-bottom: 5%; }
-        ion-view ion-content .Contacts ion-content .padding ion-list form .contact div .list-inset label .item placeholder {
-          color: blue; }
-
-/* CSS list card 
-		title and arrows*/
-.map {
-  min-height: 50%;
-  width: 65%;
-  margin: 10%; }
-
-/* CSS calendar */
-.calendar {
-  background-image: none;
-  background-color: #077795;
-  text-align: center;
-  display: block;
-  color: #fff;
-  font-size: 1.5em;
-  line-height: 2em; }
-
-/* CSS Tab-Statistics */
-.statistics .row {
-  margin-top: 5%;
-  margin-left: 1%;
-  margin-right: 1%;
-  font-size: 1.2em; }
-  .statistics .row a.item {
-    color: #fff; }
-  .statistics .row a.button.button-calm {
-    background-color: #3b6783;
-    color: #fff;
-    width: 70%;
-    height: 1em;
-    font-size: 1.2em;
-    margin-right: 5%; }
-  .statistics .row .user {
-    top: 21px;
-    left: 15%;
-    height: 10%; }
-    .statistics .row .user h1 {
-      font-size: 1.2em;
-      color: #fff; }
-  .statistics .row .dare h3 {
-    padding: 0.5em;
-    font-size: 10px;
-    color: #37637e; }
-  .statistics .row .dare h1 {
-    font-size: 1.2em;
-    color: #fff; }
-  .statistics .row canvas #line {
-    background: transparent; }
-
-/* CSS Profil new dare */
-.newdare {
-  background-image: none;
-  background-color: #e8edf0;
-  background-size: 100% 100%;
-  text-align: center;
-  display: block;
-  color: #16b8d4;
-  /*category challenges */
-  /* WebKit browsers */ }
-  .newdare div .h1 {
-    color: #044265; }
-  .newdare h3 {
-    color: #16b8d4; }
-  .newdare div .challeng ion-list .list {
-    display: inline-block;
-    width: 100%;
-    padding: 0em;
-    font-size: 1em; }
-    .newdare div .challeng ion-list .list .item {
-      display: inline-block;
-      width: 45%;
-      font-size: 1em;
-      padding: 0.5%;
-      border: none;
-      text-align: center;
-      background: transparent; }
-      .newdare div .challeng ion-list .list .item :nth-child(1) {
-        background: #3b6783;
-        color: #fff;
-        width: 100%;
-        font-size: 0.7em;
-        text-align: center;
-        /* margin-top: 1em; */
-        padding-top: 20%;
-        padding-bottom: 5%;
-        padding-left: 1%;
-        padding-right: 1%;
-        word-break: keep-all; }
-      .newdare div .challeng ion-list .list .item :nth-child(2) {
-        background: #17283a;
-        color: #fff;
-        width: 100%; }
-  .newdare .list-inset {
-    width: 100%;
-    background: transparent; }
-  .newdare label .item {
-    margin-top: 5%; }
-  .newdare .vh {
-    margin-top: 1vh;
-    width: 95%;
-    height: 3em;
-    border-color: #8dc3cd; }
-  .newdare .la {
-    text-align: left; }
-  .newdare .fa {
-    width: 20vw !important;
-    height: 20vw; }
-  .newdare ::-webkit-input-placeholder {
-    color: #16b8d4;
-    opacity: 1 !important; }
-  .newdare .pen {
-    margin-top: -7em;
-    margin-right: 1em; }
-    .newdare .pen i {
-      color: orange;
-      -webkit-transform: scale(-1, 1); }
-  .newdare .info {
-    font-size: 0.5em;
-    width: 10%;
-    height: 100%;
-    left: -1.2em;
-    bottom: 3em; }
-    .newdare .info i {
-      color: orange;
-      font-size: 3em; }
-  .newdare .fileContainer {
-    font-size: 1em;
-    padding: 0em;
-    margin-bottom: 0;
-    MARGIN-TOP: 5%;
-    box-sizing: border-box; }
-    .newdare .fileContainer i {
-      background: #fff;
-      border-radius: 0;
-      color: orange;
-      font-size: 2.5em;
-      /* margin: 0%; */
-      padding: 0.5em;
-      padding-bottom: 0.1em; }
-  .newdare .fileContainer [type=file] {
-    margin-top: -1em; }
-
-/* CSS left Menue, background*/
-.menu-left {
-  background-image: url(../img/BG.png);
+.SideMenu .menu-left {
+  background-image: url("../img/BG.png");
   background-color: #012438;
   background-size: 100% 100%;
   border: none;
@@ -10786,57 +10016,40 @@ ion-view ion-content .Contacts {
   display: block;
   /*for icons*/
   /*how to be display*/ }
-  .menu-left .fa {
+  .SideMenu .menu-left .app-icon {
     width: 1em !important;
     height: 1em;
     display: inline-block;
     font-size: 2.5em;
-    margin-left: 0%;
+    margin-left: 0;
     margin-bottom: -10%;
     margin-top: -10%; }
-  .menu-left div {
+  .SideMenu .menu-left div {
     padding: 5%;
     border: none;
     background: transparent; }
-    .menu-left div a.item {
+    .SideMenu .menu-left div a.item {
       margin-bottom: 5%;
       padding: 5%;
       text-align: left;
       border: none;
       background: transparent;
       color: #01cfe4; }
-      .menu-left div a.item i {
+      .SideMenu .menu-left div a.item i {
         color: #ffb400;
         font-size: 3em; }
 
 /* CSS for Profil view */
-/* CSS Profil background */
-/* CSS list for all pages at user profil*/
-.use {
-  background-image: none;
-  background-color: #012438; }
-  .use .usert-info {
-    background-image: url(../img/BG.png);
-    background-repeat: no-repeat;
-    background-size: 100% 70%;
-    margin: 0;
-    resize: 10%;
-    text-align: center;
-    display: block; }
-    .use .usert-info .button-newcalm {
-      background-color: #3b6783;
-      color: #fff;
-      width: 50%;
-      padding: 1%;
-      border-color: #8dc3cd;
-      margin: 3%;
-      font-size: 1em;
-      position: relative;
-      left: 6%;
-      box-sizing: border-box; }
-    .use .usert-info .us {
-      width: 50%;
+.Profile {
+  /* edit some CSS content in content */ }
+  .Profile .cont {
+    display: inline-block;
+    /*  	 */ }
+    .Profile .cont .fa {
+      width: 1em !important;
+      height: 1em;
       display: inline-block;
+<<<<<<< HEAD
       font-size: 2.5em;
       text-rendering: auto;
       border-radius: 50%;
@@ -10877,20 +10090,54 @@ ion-view ion-content .Contacts {
       padding: 7px;
       color: #fff;
       background: #01cfe4;
+=======
+      margin: 0 1% -1%; }
+    .Profile .cont .fa-img {
+      width: 20vw !important;
+      height: 20vw;
+>>>>>>> origin/master_css_rework
       border-radius: 50%;
-      font-size: 1em;
-      margin: 0em; }
-  .Notifications .list {
-    background: transparent; }
-    .Notifications .list ion-item {
-      width: 100%;
-      height: auto;
-      border: none;
-      border-left: 1px solid #fff;
-      margin-left: 1em;
-      color: #fff;
-      padding: 0;
+      margin: -5% 3% 3%; }
+  .Profile .bar {
+    background: transparent;
+    color: #ffb400; }
+    .Profile .bar div {
+      margin: -5% 1% 1%;
+      padding: 1%;
       background: transparent;
+      display: block;
+      color: #ffb400;
+      height: auto;
+      font-size: 1.5em; }
+      .Profile .bar div h2 {
+        color: #01cfe4; }
+  .Profile .content {
+    width: 100%;
+    position: relative;
+    padding: 1%;
+    margin: 1%;
+    line-height: 1.8em;
+    font-size: 1em;
+    color: #ffb400;
+    display: inline-block;
+    background: transparent; }
+  .Profile .list {
+    padding: 1%;
+    margin: 1em 1% 1% 1em;
+    display: inline-block;
+    background: transparent;
+    border-color: #ffb400;
+    color: #01cfe4; }
+    .Profile .list a.item {
+      width: 99%;
+      margin: 1%;
+      padding: 1%;
+      display: inline-block;
+      font-size: 1em;
+      text-align: left;
+      border: none;
+      background: transparent;
+<<<<<<< HEAD
       text-align: left;
       display: inline-block;
       /* CSS imges */ }
@@ -10953,302 +10200,20 @@ ion-view ion-content .Contacts {
   .list a {
     text-align: left; }
     .list a h2 {
+=======
+>>>>>>> origin/master_css_rework
       color: #01cfe4; }
-    .list a p {
-      color: #ffb400; }
+      .Profile .list a.item i {
+        color: #ffb400;
+        font-size: 3em; }
 
-/* CSS list card 
-		title and arrows*/
-.TimeLineCard {
-  max-height: 10em; }
-  .TimeLineCard .arrows-right {
-    max-height: 0.5em;
-    font-size: 1em;
-    float: right;
-    /* width: 100%; */
-    margin-top: -3%;
-    padding: 0;
-    position: relative;
-    color: blue; }
-  .TimeLineCard .arrows-left {
-    max-height: 0.5em;
-    font-size: 1em;
-    float: left;
-    /* width: 100%; */
-    margin-top: -3%;
-    padding: 0;
-    position: relative;
-    color: blue; }
-  .TimeLineCard .title {
-    color: blue;
-    position: absolute;
-    top: 2%;
-    left: 5%;
-    font-size: 1em; }
-  .TimeLineCard .footer {
-    position: relative;
-    text-align: center;
-    display: inline-flex;
-    position: relative;
-    top: 30px;
-    width: 100%;
-    background: rgba(27, 73, 88, 0.3);
-    /*make circle buttons*/
-    /* avatar settings, img*/ }
-    .TimeLineCard .footer span {
-      width: 16%; }
-      .TimeLineCard .footer span .fa {
-        width: 100%;
-        height: 100%;
-        display: inline-flex;
-        /* font-size: 2.5em; */
-        text-rendering: auto;
-        border-radius: 50%;
-        color: white;
-        /* margin-right: -3%; */
-        /* margin-bottom: -3%; */
-        padding: 10%;
-        /* margin-top: -3%; */ }
-    .TimeLineCard .footer .info {
-      display: inline-flex;
-      width: 10%;
-      height: 5em;
-      margin-top: 0%;
-      font-size: 10px;
-      color: #04a4c3;
-      margin-right: 3%; }
-    .TimeLineCard .footer .avatar a img {
-      margin-top: -0.9em;
-      margin-left: -0.3em;
-      border: 1px solid;
-      min-width: 1.3em;
-      min-height: 1.3em; }
-    .TimeLineCard .footer .ng-binding {
-      color: #04a4c3;
-      font-size: 10px;
-      margin-top: 2em;
-      margin-right: 2%; }
-      .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
-        color: #ffb400; }
-
-/* CSS list card */
-.challenges .bar-header span {
-  color: #fff; }
-  .challenges .bar-header span h3:first-child {
-    font-size: 20px; }
-
-/* CSS tabs- Menue */
-ion-modal-view {
-  /* here is the mine CSS 4 background, colors and so on */ }
-
-.demo {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  margin-top: 2%;
-  margin-right: 2%;
-  position: relative; }
-
-.demo > img {
-  position: relative;
-  width: 100%;
-  height: auto; }
-
-.demo h2 {
-  position: absolute;
-  top: 15%;
-  color: #fff;
-  font-size: 20px;
-  padding-left: 30px; }
-
-.time {
-  display: inline-block;
-  vertical-align: top; }
-
-.timetime {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -73%;
-  width: 174px;
-  height: auto; }
-
-.timetime p {
-  font-size: 0.5em;
-  line-height: 22px;
-  color: #03b2d1; }
-
-.likeLike {
-  display: inline-block; }
-
-.likeLike .person {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/user1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 19px;
-  width: 22px; }
-
-.likeLike .comment {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/speech1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.likeLike .heart {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/love1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.person p {
-  padding-left: 43%; }
-
-.comment p {
-  padding-left: 50%; }
-
-.heart p {
-  padding-left: 55%; }
-
-.likeLike p {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 8px;
-  color: #03b2d1; }
-
-.clock h6 {
-  font-size: 13px;
-  color: #03b2d1;
-  line-height: 12px; }
-
-.clock h6 > p {
-  color: #ffcf7d;
-  font-size: 5px;
-  line-height: 5px; }
-
-.clock {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  padding-top: 5px; }
-
-.timecheck {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  line-height: -1px; }
-
-.timecheck img {
-  width: 16px;
-  height: 20px; }
-
-.timeclock {
-  display: inline-block;
-  vertical-align: top;
-  height: 16px;
-  line-height: -1px; }
-
-.timeclock img {
-  width: 16px;
-  height: 16px; }
-
-.info {
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  bottom: 20px; }
-
-.socialtwo {
-  display: none; }
-
-.responsive-logo {
-  display: none; }
-
-.user {
-  width: 80%;
-  position: absolute;
-  top: 74%;
-  left: -10%; }
-
-.user-name {
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font-size: 0.8em;
-  margin-left: 4px; }
-
-.user-pic {
-  display: inline-block;
-  width: 20%;
-  margin-left: -6%; }
-
-.user .img-circle {
-  border-radius: 50%;
-  border: 2px solid #fff;
-  width: 130px; }
-
-.arrow {
-  position: absolute;
-  top: 10%;
-  width: 100%; }
-
-.arrowSecond {
-  position: absolute;
-  top: 30%;
-  width: 100%; }
-
-.arrow img {
-  width: 50px;
-  height: 50px;
-  border: none; }
-
-.messages .message {
-  flex: 1 1 auto !important;
-  padding: 10px !important;
-  transition: all 250ms ease-in-out !important;
-  overflow: hidden !important;
-  text-align: left !important;
-  transform: translate3d(0, 0, 0) !important; }
-
-.messages .avatar {
-  border-radius: 50% !important; }
-
-.messages .time {
-  color: white; }
-
-.messages span {
-  background: #007AFF !important;
-  display: inline-block !important;
-  color: white !important;
-  padding: 10px !important;
-  border-radius: 10px !important;
-  text-align: left !important;
-  max-width: 240px !important; }
-  .messages span .time {
-    color: white; }
-
-.messages.other .message {
-  transform: translate3d(0, 0, 0) !important;
-  text-align: right !important; }
-  .messages.other .message .avatar {
-    display: none; }
-
-.messages.other .message.slide-right {
-  transform: translate3d(120px, 0, 0) !important; }
-
-.messages.other span {
-  color: black !important;
-  background-color: #C7C7CC !important; }
+/* CSS Profil background */
+ion-view ion-content {
+  background-image: url(../img/BG.png);
+  background-color: #012438;
+  background-size: 100% 100%;
+  font-size: 1em;
+  text-align: center;
+  display: block; }
 
 /* CSS NAv Menue */
