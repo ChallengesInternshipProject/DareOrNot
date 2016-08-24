@@ -1,74 +1,73 @@
-
 @charset "utf-8";
 /* CSS for Profil view */
-	// ion-view  {
-	// 	.cont{	display: inline-block;
-	// 	/*  	 */
-	// 		 .fa { 	width: 1em !important;
-	// 				height: 1em;
-	// 				display: inline-block;
-	// 				margin: 1%;
-	// 				margin-bottom: -1%;
-	// 				margin-top: 0%;
-	// 			}
-	// 	   .fa-img {
-	// 				width: 20vw !important;
-	// 				height: 20vw;
-	// 				border-radius: 50%;
-	// 				margin: 3%;
-	// 				margin-bottom: 3%;
-	// 				margin-top: -5%;
-	// 							}
+	ion-view  {
+		.cont{	display: inline-block;
+		/*  	 */
+			 .fa { 	width: 1em !important;
+					height: 1em;
+					display: inline-block;
+					margin: 1%;
+					margin-bottom: -1%;
+					margin-top: 0%;
+				}
+		   .fa-img {
+					width: 20vw !important;
+					height: 20vw;
+					border-radius: 50%;
+					margin: 3%;
+					margin-bottom: 3%;
+					margin-top: -5%;
+								}
 
-	// 		}
-	// 		 .bar {
-	// 			   background: transparent;
-	// 			   color: #ffb400;
-	// 			   div {
-	// 				margin:1%;
-	// 				margin-top: -5%;
-	// 				padding: 1%;
-	// 				background: transparent;
-	// 				display: block;
-	// 				color: #ffb400;
-	// 				height: auto;
-	// 				font-size: 1.5em;
-	// 				h2 {color: #01cfe4;}
-	// 				}
+			}
+			 .bar {
+				   background: transparent;
+				   color: #ffb400;
+				   div {
+					margin:1%;
+					margin-top: -5%;
+					padding: 1%;
+					background: transparent;
+					display: block;
+					color: #ffb400;
+					height: auto;
+					font-size: 1.5em;
+					h2 {color: #01cfe4;}
+					}
 			
-	// 		}
-	// 		/* edit some CSS content in content */
-	// 		 .content { width: 100%;
-	// 					position: relative;
-	// 					padding: 1%;
-	// 					margin: 1%;
-	// 					line-height: 1.8em;
-	// 					font-size: 1em;
-	// 					color: #ffb400;
-	// 					display: inline-block;
-	// 					background: transparent;
+			}
+			/* edit some CSS content in content */
+			 .content { width: 100%;
+						position: relative;
+						padding: 1%;
+						margin: 1%;
+						line-height: 1.8em;
+						font-size: 1em;
+						color: #ffb400;
+						display: inline-block;
+						background: transparent;
 
-	// 				}
+					}
 						
-	// 			 .list{	padding:1%;
-	// 					margin:1%;
-	// 					margin-left: 1em;
-	// 					margin-top: 1em;
-	// 					display: inline-block;
-	// 			 		background: transparent;
-	// 					border-color: #ffb400;
-	// 					color: #01cfe4;	
+				 .list{	padding:1%;
+						margin:1%;
+						margin-left: 1em;
+						margin-top: 1em;
+						display: inline-block;
+				 		background: transparent;
+						border-color: #ffb400;
+						color: #01cfe4;	
 
-	// 			    a.item {width:99%;
-	// 						margin: 1%;
-	// 						padding:1%;
-	// 						display: inline-block;
-	// 						font-size: 1em;
-	// 						text-align: left;
-	// 						border: none;
-	// 						background: transparent;
-	// 						color: #01cfe4;
-	// 						i{color: #ffb400; font-size:3em;}
-	// 						}
-	// 		}
-	// 	}
+				    a.item {width:99%;
+							margin: 1%;
+							padding:1%;
+							display: inline-block;
+							font-size: 1em;
+							text-align: left;
+							border: none;
+							background: transparent;
+							color: #01cfe4;
+							i{color: #ffb400; font-size:3em;}
+							}
+			}
+		}

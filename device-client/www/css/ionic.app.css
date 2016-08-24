@@ -10022,241 +10022,219 @@ a.button {
   background-size: 50% 50%; }
 
 /*BACKGROUND*/
-/* Empty. Add your own CSS if you like */
-.leafletMap {
-  width: 100vw;
-  height: 100vh; }
-
-.leafletUserMap {
-  width: 50vw;
-  height: 50vh; }
-
-.leafletDareMap {
-  width: 100vw;
-  height: 50vh; }
-
-.scroll {
-  height: 100%; }
-
-#map {
-  width: 100%;
-  height: 100%; }
-
-form {
-  width: 100vw; }
-
-.button-form-submit {
-  display: none;
-  float: right;
-  width: 4vw; }
-
-.input-form-submit {
-  float: left;
-  width: 100vw; }
-
-/*BACKGROUND transgender*/
-.content-list {
-  margin: 1%;
-  padding: 1%;
-  display: block;
-  text-align: center;
-  font-size: 1em;
-  color: #fff;
-  background: transparent;
-  box-sizing: border-box; }
-
-section.list {
-  min-height: 30em;
-  padding: 1%;
-  margin: 1%;
-  position: relative;
-  text-align: center;
-  font-size: 1em;
-  display: block;
-  background: transparent;
-  box-sizing: border-box; }
-  section.list .fa {
-    width: 15vw;
-    height: 15vw; }
-
-/* LOGO */
-.logo {
-  padding: 1%;
-  margin: 1%;
-  position: relative;
-  min-height: 20vh;
-  background-image: url(../img/logo.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 100%;
-  box-sizing: border-box; }
-
-/*Enter LOGIN INFO*/
-.into-login {
-  padding: 1%;
-  margin: 1%;
-  color: #78671e;
-  display: block;
-  position: relative;
-  font-size: 1em;
-  line-height: 1.8;
-  box-sizing: border-box; }
-
-label.item.item-into {
-  color: #78671e;
-  border-bottom: 1px solid #808080;
-  border-top: 0;
-  width: 75%;
-  border-left: 0;
-  border-right: 0;
-  font-size: 1em; }
-
-label.item-into {
-  display: inline-flex; }
-
-input {
-  padding: 8px;
-  display: block;
-  border: none;
-  width: 100%;
-  background-color: transparent;
-  text-align: center; }
-
-.item-input input, .item-input textarea {
-  color: #fff; }
-
-input .item-input input {
-  text-align: center; }
-
-span.input-label {
-  color: #78671e;
-  white-space: nowrap;
-  font-size: 1em;
-  text-align: left;
-  margin: 0;
-  padding: 0; }
-
-.ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
-.ion-ios-wineglass-outline, .ion-ios-camera-outline,
-.ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
-  font-size: 1.5em; }
-
-/*Changes all the icon colors */
-/*ENTER BUTTON*/
-button.button.button-calm {
+ion-content {
   background-color: #012438;
-  color: #78671e;
-  width: 83%;
-  padding: 1%;
-  border: none;
-  margin: 3%;
-  font-size: 1em;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-  left: 6%;
-  box-sizing: border-box; }
-
-/*FORGET THE PASS*/
-.forget {
-  color: #fff;
-  margin: 3%;
-  position: relative;
-  font-size: 1em; }
-
-/*UNDERLINE OR */
-div.container h1 {
-  font-size: 1em;
-  display: inline-block;
-  color: #fff;
-  padding: 10px;
-  position: relative; }
-
-div.container h1:before,
-div.container h1:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  top: 50%;
-  width: 500%; }
-
-div.container h1:before {
-  right: 100%; }
-
-div.container h1:after {
-  left: 100%; }
-
-div.container {
-  overflow: hidden;
-  text-align: center;
-  width: 80%;
-  left: 10%;
-  position: relative; }
-
-/*something like footer */
-.regis {
-  padding: 1%;
-  margin: 1%;
-  position: relative;
-  font-size: 1.4em;
-  display: block;
-  background: transparent;
-  box-sizing: border-box; }
-
-a.reg {
-  color: #fff;
-  margin: 0;
-  display: inline-flex; }
-
-/*ion-slide-box {*/
-/*height: 100vh !important;*/
-/*}*/
-/*NEXT / BACK BUUTON*/
-button.button-TR {
-  background: transparent none repeat scroll 0% 0%;
-  font-size: 100%;
-  position: relative;
-  width: 30%;
-  display: inline;
-  font-size: 4em; }
-
-/* bottom nav */
-div.slider-pager {
-  position: relative;
-  bottom: 10em;
-  padding: 0em;
-  overflow: auto;
-  height: 100%;
-  visibility: hidden; }
-
-/* upload photo */
-.fileContainer {
-  overflow: hidden;
-  position: relative; }
-
-.fileContainer [type=file] {
-  /* cursor: inherit; */
-  /* display: block; */
-  font-size: 2em;
-  filter: alpha(opacity=0);
-  /* min-height: 100%; */
-  /* min-width: 100%; */
-  opacity: 0;
-  /* position: absolute; */
-  /* right: 0; */
-  /* text-align: right; */
-  /* top: 0; */ }
-
-/* Example stylistic flourishes */
-.fileContainer {
-  font-size: 1em;
-  box-sizing: border-box; }
-  .fileContainer i {
-    background: #012438;
-    border-radius: 50%;
-    /*font-size: 4.5em; -- */
-    font-size: 1.5em;
-    padding: 1em; }
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  /* Empty. Add your own CSS if you like */
+  /*BACKGROUND transgender*/
+  /* LOGO */
+  /*Enter LOGIN INFO*/
+  /*Changes all the icon colors */
+  /*ENTER BUTTON*/
+  /*FORGET THE PASS*/
+  /*UNDERLINE OR */
+  /*something like footer */
+  /*ion-slide-box {*/
+  /*height: 100vh !important;*/
+  /*}*/
+  /*NEXT / BACK BUUTON*/
+  /* bottom nav */
+  /* upload photo */
+  /* Example stylistic flourishes */ }
+  ion-content .leafletMap {
+    width: 100vw;
+    height: 100vh; }
+  ion-content .leafletUserMap {
+    width: 50vw;
+    height: 50vh; }
+  ion-content .leafletDareMap {
+    width: 100vw;
+    height: 50vh; }
+  ion-content .scroll {
+    height: 100%; }
+  ion-content #map {
+    width: 100%;
+    height: 100%; }
+  ion-content form {
+    width: 100vw; }
+  ion-content .button-form-submit {
+    display: none;
+    float: right;
+    width: 4vw; }
+  ion-content .input-form-submit {
+    float: left;
+    width: 100vw; }
+  ion-content .content-list {
+    margin: 1%;
+    padding: 1%;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    background: transparent;
+    box-sizing: border-box; }
+  ion-content section.list {
+    min-height: 30em;
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    display: block;
+    background: transparent;
+    box-sizing: border-box; }
+    ion-content section.list .fa {
+      width: 15vw;
+      height: 15vw; }
+  ion-content .logo {
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    min-height: 20vh;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 100%;
+    box-sizing: border-box; }
+  ion-content .into-login {
+    padding: 1%;
+    margin: 1%;
+    color: #78671e;
+    display: block;
+    position: relative;
+    font-size: 1em;
+    line-height: 1.8;
+    box-sizing: border-box; }
+  ion-content label.item.item-into {
+    color: #78671e;
+    border-bottom: 1px solid #808080;
+    border-top: 0;
+    width: 75%;
+    border-left: 0;
+    border-right: 0;
+    font-size: 1em; }
+  ion-content label.item-into {
+    display: inline-flex; }
+  ion-content input {
+    padding: 8px;
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    text-align: center; }
+  ion-content .item-input input, ion-content .item-input textarea {
+    color: #fff; }
+  ion-content input .item-input input {
+    text-align: center; }
+  ion-content span.input-label {
+    color: #78671e;
+    white-space: nowrap;
+    font-size: 1em;
+    text-align: left;
+    margin: 0;
+    padding: 0; }
+  ion-content .ion-ios-email-outline, ion-content .ion-ios-locked-outline, ion-content .ion-iphone, ion-content .ion-android-person, ion-content .ion-transgender,
+  ion-content .ion-ios-wineglass-outline, ion-content .ion-ios-camera-outline,
+  ion-content .ion-arrow-right-c, ion-content .ion-arrow-left-c, ion-content .ion-ios-camera-outline {
+    font-size: 1.5em; }
+  ion-content i {
+    color: #04a4c3; }
+  ion-content button.button.button-calm {
+    background-color: #012438;
+    color: #78671e;
+    width: 83%;
+    padding: 1%;
+    border: none;
+    margin: 3%;
+    font-size: 1em;
+    position: relative;
+    left: 6%;
+    box-sizing: border-box; }
+  ion-content .forget {
+    color: #fff;
+    margin: 3%;
+    position: relative;
+    font-size: 1em; }
+  ion-content div.container h1 {
+    font-size: 1em;
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    position: relative; }
+  ion-content div.container h1:before,
+  ion-content div.container h1:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 500%; }
+  ion-content div.container h1:before {
+    right: 100%; }
+  ion-content div.container h1:after {
+    left: 100%; }
+  ion-content div.container {
+    overflow: hidden;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    position: relative; }
+  ion-content .regis {
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    font-size: 1.4em;
+    display: block;
+    background: transparent;
+    box-sizing: border-box; }
+  ion-content a.reg {
+    color: #fff;
+    margin: 0;
+    display: inline-flex; }
+  ion-content button.button-TR {
+    background: transparent none repeat scroll 0% 0%;
+    font-size: 100%;
+    position: relative;
+    width: 30%;
+    display: inline;
+    font-size: 4em; }
+  ion-content div.slider-pager {
+    position: relative;
+    bottom: 10em;
+    padding: 0em;
+    overflow: auto;
+    height: 100%;
+    visibility: hidden; }
+  ion-content .fileContainer {
+    overflow: hidden;
+    position: relative; }
+  ion-content .fileContainer [type=file] {
+    /* cursor: inherit; */
+    /* display: block; */
+    font-size: 2em;
+    filter: alpha(opacity=0);
+    /* min-height: 100%; */
+    /* min-width: 100%; */
+    opacity: 0;
+    /* position: absolute; */
+    /* right: 0; */
+    /* text-align: right; */
+    /* top: 0; */ }
+  ion-content .fileContainer {
+    font-size: 1em;
+    box-sizing: border-box; }
+    ion-content .fileContainer i {
+      background: #012438;
+      border-radius: 50%;
+      /*font-size: 4.5em; -- */
+      font-size: 1.5em;
+      padding: 1em; }
 
 .demo {
   display: block;
@@ -10640,6 +10618,16 @@ ion-view ion-content .Contacts {
   min-height: 50%;
   width: 65%;
   margin: 10%; }
+  .map ion-content {
+    background-color: #fff;
+    background-image: none; }
+    .map ion-content .button.button-block, .map ion-content .button.button-full {
+      margin: 10%;
+      margin-bottom: 5%;
+      width: 80%;
+      height: 2em;
+      background: #066886;
+      color: #fff; }
 
 /* CSS calendar */
 .calendar {
@@ -10810,7 +10798,81 @@ ion-view ion-content .Contacts {
         font-size: 3em; }
 
 /* CSS for Profil view */
+ion-view {
+  /* edit some CSS content in content */ }
+  ion-view .cont {
+    display: inline-block;
+    /*  	 */ }
+    ion-view .cont .fa {
+      width: 1em !important;
+      height: 1em;
+      display: inline-block;
+      margin: 1%;
+      margin-bottom: -1%;
+      margin-top: 0%; }
+    ion-view .cont .fa-img {
+      width: 20vw !important;
+      height: 20vw;
+      border-radius: 50%;
+      margin: 3%;
+      margin-bottom: 3%;
+      margin-top: -5%; }
+  ion-view .bar {
+    background: transparent;
+    color: #ffb400; }
+    ion-view .bar div {
+      margin: 1%;
+      margin-top: -5%;
+      padding: 1%;
+      background: transparent;
+      display: block;
+      color: #ffb400;
+      height: auto;
+      font-size: 1.5em; }
+      ion-view .bar div h2 {
+        color: #01cfe4; }
+  ion-view .content {
+    width: 100%;
+    position: relative;
+    padding: 1%;
+    margin: 1%;
+    line-height: 1.8em;
+    font-size: 1em;
+    color: #ffb400;
+    display: inline-block;
+    background: transparent; }
+  ion-view .list {
+    padding: 1%;
+    margin: 1%;
+    margin-left: 1em;
+    margin-top: 1em;
+    display: inline-block;
+    background: transparent;
+    border-color: #ffb400;
+    color: #01cfe4; }
+    ion-view .list a.item {
+      width: 99%;
+      margin: 1%;
+      padding: 1%;
+      display: inline-block;
+      font-size: 1em;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: #01cfe4; }
+      ion-view .list a.item i {
+        color: #ffb400;
+        font-size: 3em; }
+
 /* CSS Profil background */
+ion-view ion-content {
+  background-image: url(../img/BG.png);
+  background-color: #012438;
+  background-size: 100% 100%;
+  font-size: 1em;
+  text-align: center;
+  display: block; }
+
 /* CSS list for all pages at user profil*/
 .use {
   background-image: none;
@@ -10846,33 +10908,61 @@ ion-view ion-content .Contacts {
       margin-top: 3%; }
 
 /* CSS activities */
-/* CSS nothifications */
-.Notifications {
-  background-image: url(../img/BG.png);
-  background-color: #012438;
-  background-size: 100% 100%;
-  text-align: center;
-  /* CSS edit in item */ }
-  .Notifications h3, .Notifications h2 {
+.activity {
+  /* CSS content view */ }
+  .activity h3 {
     color: #01cfe4;
-    margin-left: 5%;
+    margin-left: 3em; }
+  .activity div {
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 12px; }
+    .activity div .col {
+      text-align: right;
+      width: 50%;
+      margin-left: -2em;
+      color: #01cfe4; }
+    .activity div .row {
+      color: #ffb400; }
+  .activity .content .list {
+    background: transparent; }
+    .activity .content .list ion-item {
+      padding: 0;
+      background: transparent;
+      border-bottom: 1px solid #fff;
+      border-left: none;
+      border-right: none;
+      border-top: none; }
+      .activity .content .list ion-item a.item {
+        border: none;
+        background-color: transparent; }
+    .activity .content .list ion-item:last-child {
+      border: none; }
+
+/* CSS nothifications */
+.nothifications {
+  /* CSS edit in item */ }
+  .nothifications h3, .nothifications h2 {
+    color: #01cfe4;
+    margin-left: 15%;
     width: 50%;
     text-align: left; }
-  .Notifications span {
+  .nothifications span {
     float: left;
-    margin-left: 0.3%;
-    position: absolute;
-    z-index: 10; }
-    .Notifications span i {
+    margin-left: 1%; }
+    .nothifications span i {
       padding: 7px;
       color: #fff;
       background: #01cfe4;
-      border-radius: 50%;
-      font-size: 1em;
+      border-radius: 30vh;
+      font-size: 10px;
       margin: 0em; }
-  .Notifications .list {
-    background: transparent; }
-    .Notifications .list ion-item {
+  .nothifications .list {
+    background: transparent;
+    margin-top: 2em; }
+    .nothifications .list ion-item {
       width: 100%;
       height: auto;
       border: none;
@@ -10884,33 +10974,33 @@ ion-view ion-content .Contacts {
       text-align: left;
       display: inline-block;
       /* CSS imges */ }
-      .Notifications .list ion-item .item p {
-        color: orange; }
-      .Notifications .list ion-item .p, .Notifications .list ion-item i {
+      .nothifications .list ion-item p {
+        color: #fff;
+        word-wrap: break-word; }
+      .nothifications .list ion-item .p, .nothifications .list ion-item i {
         color: #ffb400;
         width: 100%;
-        margin-left: 5%;
+        margin-left: 17%;
         text-align: left; }
-      .Notifications .list ion-item div {
+      .nothifications .list ion-item div {
         width: 98%;
-        display: inline-flex; }
-      .Notifications .list ion-item div p {
+        display: inline-flex;
+        margin: 1%;
+        padding: 1%; }
+      .nothifications .list ion-item div p {
         color: #01cfe4;
         margin-left: -30%;
         width: 55%;
         text-align: right; }
-      .Notifications .list ion-item .img {
+      .nothifications .list ion-item .img {
+        height: 3em;
         top: 16px;
         left: 16px;
+        max-width: 40px;
+        max-height: 40px;
         width: 100%;
         height: 100%;
         margin: 3%; }
-        .Notifications .list ion-item .img img {
-          width: 5em;
-          height: 5em; }
-      .Notifications .list ion-item ion-item.text {
-        width: 30vw;
-        height: 20vh; }
 
 /* CSS All 4 friends */
 .tabs-striped.tabs-background-stable .tabs {
@@ -10923,6 +11013,59 @@ ion-view ion-content .Contacts {
 
 .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title {
   color: #fff; }
+
+.friends .fa {
+  max-width: 2em;
+  max-height: 2em;
+  padding: 0;
+  background-size: 50%;
+  border-radius: 50%;
+  right: -50%; }
+
+.friends div .list, .friends ion-item {
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  margin: 1%;
+  padding: 1%;
+  color: #01cfe4; }
+
+.friends .col {
+  padding: 1%;
+  min-width: 20%; }
+
+.friends .col-1 {
+  margin-top: 5%;
+  margin-left: -8%; }
+
+.friends .button-small {
+  padding: 2px 4px 1px;
+  min-width: 2em;
+  min-height: 2em;
+  font-size: 10px;
+  line-height: 1.5em;
+  margin-top: 20%; }
+
+.friends label {
+  background: transparent;
+  border-color: #01cfe4;
+  border-top: none;
+  border-left: none;
+  border-right: none; }
+
+.friends .row {
+  text-align: left;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: #01cfe4; }
+  .friends .row h4 {
+    color: #fff;
+    font-size: 10px; }
+  .friends .row h6 {
+    color: #01cfe4;
+    font-size: 10px; }
 
 /* CSS list for all pages at user profil*/
 .list {
@@ -11021,6 +11164,43 @@ ion-view ion-content .Contacts {
 /* CSS tabs- Menue */
 ion-modal-view {
   /* here is the mine CSS 4 background, colors and so on */ }
+  ion-modal-view .cont {
+    background-image: url(../img/BG.png);
+    background-color: #012438;
+    background-size: 100% 100%;
+    text-align: center;
+    /* here is the mine CSS 4 back button, heder and so on the bar*/ }
+    ion-modal-view .cont .bar-header {
+      margin: 1%;
+      padding: 1%;
+      text-align: left;
+      font-size: 1.5em;
+      background: transparent;
+      border: none; }
+      ion-modal-view .cont .bar-header i {
+        color: #fff; }
+      ion-modal-view .cont .bar-header h3 {
+        width: 100%;
+        color: #01cfe4;
+        margin-left: 1%;
+        text-align: center; }
+    ion-modal-view .cont h1 {
+      color: #04a4c3;
+      font-size: 15px; }
+    ion-modal-view .cont .list {
+      padding: 1%;
+      margin: 1%;
+      border: none;
+      color: #01cfe4; }
+      ion-modal-view .cont .list .item-toggle {
+        text-align: left;
+        background: transparent;
+        border: none;
+        font-size: 15px;
+        color: #01cfe4; }
+        ion-modal-view .cont .list .item-toggle .toggle.toggle-assertive input:checked + .track {
+          border-color: #01cfe4;
+          background-color: #01cfe4; }
 
 .demo {
   display: block;
@@ -11233,3 +11413,7 @@ ion-modal-view {
   background-color: #C7C7CC !important; }
 
 /* CSS NAv Menue */
+ion-side-menu-content ion-view .nav-bar-block {
+  border-style: none;
+  color: #03b2d1;
+  background: red; }
