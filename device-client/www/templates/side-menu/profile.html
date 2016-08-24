@@ -1,20 +1,36 @@
 <ion-view>
 	<ion-content class="Profile">
 
-		<div class="bar bar-header">
-			<img class="icon-img profile-avatar" src="img/avatar.png">
-			<div>
-				<h2>User Name Here</h2>
-				<p>email@email.com</p>
+		<div class="profile-info">
+			<img class="profile-avatar" src="img/avatar.png">
+
+			<div class="profile-user-credentials">
+				<h2 class="profile-username">Милена Милева</h2>
+				<p class="profile-email">milena.m@gmail.com</p>
 			</div>
+
 		</div>
-		<div class="list">
-			<a class="item item-icon-left" href="#/app/activity"><i class="profile-icons ion-alert-circled"></i>Активност</a>
-			<a class="item item-icon-left" href="#/app/timeline"><i class="profile-icons ion-alert-circled"></i>Моите предизвикателства</a>
-			<a class="item item-icon-left" href="#/app/chat"><i class="profile-icons ion-alert-circled"></i>Съобщения</a>
-			<a class="item item-icon-left" href="#/app/notifications"><i class="profile-icons ion-alert-circled"></i>Известия</a>
-			<a class="item item-icon-left" href="#/app/friends"> <i class="profile-icons ion-alert-circled"></i>Приятели </a>
-			<a class="item item-icon-left" href="#/app/favorites"><i class="profile-icons ion-alert-circled"></i>Любими</a>
+
+		<div class="profile-info-list">
+			<span class="profile-menu-item">
+				<i class="app-icon app-icon-activities-active"><a href="#/app/activity"></i>Активност</a>
+			</span>
+			<span class="profile-menu-item">
+				<i class="app-icon-fav-active"></i><a href="#/app/timeline">Моите предизвикателства</a>
+			</span>
+			<span class="profile-menu-item">
+				<i class="app-icon-chat-active"></i><a href="#/app/chat">Съобщения</a>
+			</span>
+			<span class="profile-menu-item">
+				<i class="app-icon-notification-active"></i><a href="#/app/notifications">Известия</a>
+			</span>
+			<span class="profile-menu-item">
+				<i class="app-icon-friends-active"></i><a href="#/app/friends">Приятели </a>
+			</span>
+			<span class="profile-menu-item">
+				<i class="app-icon-love-active"></i><a href="#/app/favorites">Любими</a>
+			</span>
 		</div>
+
 	</ion-content>
 </ion-view>

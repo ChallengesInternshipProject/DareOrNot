@@ -5,89 +5,119 @@
 	background-size: 100% 100%;
 	font-size: 1em;
 	// text-align: center;
-	display: block;
-	.profile-avatar {
-		width: 20vw;
-		height: 11vh;
-		border-radius: 50%;
-		border: 2px solid white;
-		margin-top: -3%;
-		// background-color: white;
-	}
-	// .cont {
-	// 	display: inline-block;
-	// 	/*  	 */
-	// .icon {
-	// 	width: 1em !important;
-	// 	height: 1em;
-	// 	display: inline-block;
-	// 	margin: 0 1% 20%;
-	// 	background-color: red;
-	// }
-	// .icon-img {
-	// 	width: 20vw !important;
-	// 	height: 20vw;
-	// 	border-radius: 50%;
-	// 	margin: -5% 3% 3%;
-	// }
-	.profile-icons {
-		margin-right: 2vw;
-	}
-	.bar {
-		background: transparent;
-		color: #ffb400;
-		// border: 1px solid;
-		border-top: none;
-		border-left: none;
-		border-right: none;
-		position: relative;
-		margin: 1.5em 1% 1%;
-		padding: 1%;
-		div {
-			margin: -5% 1% 1%;
-			padding: 1%;
-			background: transparent;
-			display: block;
-			color: #ffb400;
-			height: auto;
-			font-size: 1.5em;
-			h2 {
+	// display: block;
+	.profile-info {
+		display: block;
+		height: 20vh;
+		margin-top: 2vh;
+		padding: 3vw;
+		font-size: 3vw;
+		.profile-avatar {
+			float: left;
+			margin-left: 5vh;
+			// display: inline-block;
+			height: 12vh;
+			border-radius: 50%;
+			border: 3px solid white;
+		}
+		.profile-user-credentials {
+			// display: block;
+			margin-top: 3vw;
+			margin-left: 8vw;
+			float: right;
+			// color: white;
+			.profile-username {
 				color: #01cfe4;
+				display: block;
+			}
+			.profile-email {
+				margin-left: 3vh;
+				color: #ffb400;
 			}
 		}
 	}
-	/* edit some CSS content in content */
-	.content {
-		width: 100%;
-		position: relative;
-		padding: 1%;
-		margin: 1%;
-		line-height: 1.8em;
-		font-size: 1em;
-		color: #ffb400;
-		display: inline-block;
-		background: transparent;
+	.profile-info-list {
+		// display: block;
+		.profile-menu-item {
+			display: block;
+			color: red;
+			font-size: 2vw;
+			padding: 3vw;
+			a {
+				color: #01cfe4;
+				text-decoration: none;
+			}
+		}
 	}
-	.list {
-		padding: 1%;
-		margin: 1em 1% 1% 1em;
-		display: inline-block;
-		background: transparent;
-		border-color: #ffb400;
-		color: #01cfe4;
-		a.item {
-			width: 99%;
-			margin: 1%;
-			padding: 1%;
+	// Galaxy S5 360x640
+	@media screen and (max-width: 450px) {
+		.profile-info {
 			display: inline-block;
-			font-size: 1em;
-			text-align: left;
-			border: none;
-			background: transparent;
-			color: #01cfe4;
+			
+			.profile-user-credentials {
+				// float: right;
+				margin-left: 20vh;
+				margin-top: -20vw;
+				font-size: 2vh;
+				.profile-username {
+					font-size: 4vh;
+					display: inline-block;
+				}
+				.profile-email {
+					display: inline-block;
+				}
+			}
+		}
+		.profile-info-list {
 			i {
-				color: #ffb400;
-				font-size: 3em;
+				// width: 40px;
+				// height: 3vh;
+				padding: 2vh 2vh 2vh 6vh;
+			}
+			.profile-menu-item {
+				padding-left: 6vw;
+				padding-bottom: 6vh;
+				font-size: 2.5vh;
+			}
+		}
+	}
+	// Tablet 1920x1080
+	@media screen and (min-width: 1920px) {
+		.profile-info {
+			display: inline-block;
+			padding-top: -10vw;
+			padding-bottom: 11vw;
+			// padding: 3vw;
+			.profile-avatar {
+				height: 12vw;
+				margin-left: 6vw;
+				margin-top: -2vw;
+			}
+			.profile-user-credentials {
+				margin-top: 0;
+				margin-left: 2vw;
+				.profile-username {
+					display: inline-block;
+					font-size: 3vw;
+				}
+				.profile-email {
+					margin-left: 2vw;
+					margin-top: 3vw;
+					font-size: 2vw;
+				}
+			}
+		}
+		.profile-info-list {
+			margin-left: -10vw;
+			i {
+				// width: 40px;
+				// height: 3vh;
+				padding: 2vh 2vh 2vh 6vh;
+			}
+			.profile-menu-item {
+				padding-left: 15vw;
+				padding-bottom: 4vh;
+				font-size: 3vh;
 			}
 		}
 	}
