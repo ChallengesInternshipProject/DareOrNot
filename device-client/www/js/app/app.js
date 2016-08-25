@@ -17,7 +17,8 @@ angular.module('starter', [
   'starter.constants',
   'leaflet-directive',
   'ionic.contrib.ui.tinderCards',
-  'chart.js'
+  'chart.js',
+  'flow'
 ])
 
 .run(function($rootScope, $ionicPlatform, $ionicHistory, $location) {

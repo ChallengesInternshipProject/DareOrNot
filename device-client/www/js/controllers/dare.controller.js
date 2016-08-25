@@ -15,15 +15,12 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 	SERVER_ADDRESS,
 	FriendsResolver,
 	$state
+	// FileService
 ) {
-
-	//Friends
-	$scope.friends = FriendsResolver;
-	// Get Categories
-	$scope.categories = CategoryService.getAllGategories();
-	
-	// inital form data
+		// inital form data
 	$scope.data = {
+		title : "Test Title",
+		description : new Date(),
 		isPrivate:true,
 		_creator:	$localStorage.user.data._id,
 		socialNetworks : {
@@ -31,8 +28,30 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 			twitter : false,
 			googlePlus : false
 		},
-		invitedUsers : []
+		invitedUsers : [],
+		files : []
 	};
+
+	//Friends
+	$scope.friends = FriendsResolver;
+	// Get Categories
+	$scope.categories = CategoryService.getAllGategories();
+	//Files 
+	// $scope.FileService = FileService
+	$scope.FileService = {
+		files : [],
+		processFiles : function(files){
+			angular.forEach(files, function(flowFile, i){
+				var fileReader = new FileReader();
+				fileReader.onload = function (event) {
+					$scope.FileService.files.push(event.target.result);
+				};
+				fileReader.readAsDataURL(flowFile.file);
+			});
+		}
+	};
+
+
 
 
 	$scope.toggleSocial = function(network){
@@ -40,12 +59,16 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 		
 	}
 	$scope.submitDare = function () {
+			$ionicLoading.show({
+				template: 'Loading...'
+			});
 			//Set the selected friends into the friends array for the post request
 			angular.forEach($scope.data.friends, function (value, key) {
 					if ($scope.data.friends[key]) {
 							$scope.data.invitedUsers.push(key);
 					}
 			});
+			$log.info($scope.data);
 			DareService.create($scope.data).then(function(){
 				$state.go("app.timeline")
 			});
@@ -58,6 +81,10 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 	}).then(function (modal) {
 			$scope.friendsModal = modal;
 	});
+
+	
+	$scope.data.files =$scope.FileService.files
+		
 
 			
 

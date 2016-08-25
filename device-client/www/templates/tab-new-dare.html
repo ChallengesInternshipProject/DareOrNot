@@ -49,10 +49,6 @@
 							</div>
 						</div>
 					</div>
-				<label class="item item-input">
-				  <span class="input-label">Number</span>
-				  <input type="number">
-				</label>
 				<div class="row">
 					<div class="col">
 						<h3>
@@ -72,13 +68,22 @@
 						</label>
 					</div>
 				</div>
-				<!--choose an image -->
-				<div class="row">
-						<label class="fileContainer">
-						<i class="ion-ios-camera-outline"></i> <input class="fil" type="file">
-							</label>
+	
+				<!-- CHANGING THIS STRUCTURE WILL PREVENT FILE UPLOAD TO WORK-->
+				<div flow-init
+							flow-name="uploader.flow"
+							flow-files-added="FileService.processFiles($files)">
+					<div class="row"  > 
+						<div class="col ">
+							<button type= "button"  class="button fileContainer " flow-btn type="file">
+								<i class="ion-ios-camera-outline"></i>
+								<span ng-show= " data.files.length > 0" class="badge badge-positive">{{data.files.length}}</span>
+							</button>
+						</div>
+					</div>
 				</div>
-			
+				<!-- END OF STRUCTURE -->
+				
 				<div class="vh challeng">
 				<ion-list>
 					<ion-radio name="isPublic" ng-model="data.isPublic" ng-value="true" checked="checked" style="font-size:2em;text-transform: uppercase;">Публично</ion-radio>
