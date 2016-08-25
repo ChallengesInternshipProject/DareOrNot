@@ -1,9 +1,10 @@
 // $stable:                          #f8f8f8 !default;
 
-
+.Chat{
 .messages {
-
+    background-color: #e8edf0;
   .message {
+
     flex: 1 1 auto !important;
     padding: 10px !important;
     transition: all 250ms ease-in-out !important;
@@ -15,22 +16,29 @@
   .avatar{
     // border:1px solid black !important;
     // padding-top:50px;
+    // padding-top: 5vh;
+    // margin-top:0;
     border-radius: 50% !important;
   }
   .time{
-    color: white;
+    color: #000;
+    display: inline-block;
+    margin-top: 20px;
   }
   span {
-    background: #007AFF !important;
+    background:#C7C7CC !important;
     display: inline-block !important;
     color: white !important;
     padding: 10px !important;
     // padding-top: 20px;
     border-radius: 10px !important;
     text-align: left !important;
-    max-width: 240px !important;
+    // height:10vh
+    max-width: 70vw !important;
+    // width: 70vw;
     .time{
       color:white;
+
     }
   }
 
@@ -49,6 +57,8 @@
   }
   span {
     color: black !important;
-    background-color: #C7C7CC !important;
+    background-color:#007AFF !important;
+    margin-top: 12px;
   }
+}
 }
