@@ -1,8 +1,17 @@
 // Top navigation scss
-
 .app-side-menu-navigation {
   .app-side-menu-nav-bar {
     background-color: #012438 !important;
     border-color: #012438 !important;
+  }
+  .navigation-menu-button {
+    padding: 1vw;
+    font-size: 5vh;
+  }
+  .navigation-button {
+    padding: 1.1vw;
+    color: white;
+    font-size: 4.5vh;
+    height: 10px;
   }
 }
