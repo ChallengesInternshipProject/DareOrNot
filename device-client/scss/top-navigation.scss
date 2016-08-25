@@ -1,12 +1,8 @@
+// Top navigation scss
 
-@charset "utf-8";
-/* CSS NAv Menue */
-
-// ion-side-menu-content{
-// 	ion-view  {
-// 		.nav-bar-block{  border-style: none;
-// 			color: #03b2d1;
-// 			background: red;}
-
-// 	}
-// }
+.app-side-menu-navigation {
+  .app-side-menu-nav-bar {
+    background-color: #012438 !important;
+    border-color: #012438 !important;
+  }
+}
