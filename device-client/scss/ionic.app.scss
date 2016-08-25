@@ -18,7 +18,7 @@ $dark:                            #444 !default;
 //Global variables
 //If you want to overwrite some ionic scss files do it before the main ionic
 //scss library import
-@import "scss/globals";
+// @import "scss/globals";
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -79,10 +79,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // @import "scss/TimeLineCard";
 
 //Timeline page view SCSS
-@import "scss/timeline";
+// @import "scss/timeline";
 
 //Chat page view SCSS
 // @import "scss/chat";
 
 //Top navigation page view SCSS
-@import "scss/top-navigation";
+// @import "scss/top-navigation";
