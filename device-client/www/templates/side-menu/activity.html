@@ -1,47 +1,88 @@
-<ion-view class="activity">
-
-	  <ion-content class="cont">
-		<div class="bar bar-header" style='font-size:2em'>
-			<a href=""  ng-click="sideMenuActivityModal.hide()"
-				<i class="ion-ios-close-outline"></i>
-			</a>
-			<span>
-				<h3>Активност</h3>
-			</span>
-		</div>
-		<div class="content has-header padding">
-			<ion-list class="has-header">
-				<ion-item ng-repeat="activity in activities" class="">
-						<div class="row">
-							<a href="#" class="item item-avatar">
-								<img ng-src="{{activity.user.avatar}}" >
-							</a>
-							<div class="col">
-								<div class="row" style="color: #01cfe4;">
-									{{activity.user.name}}
-								</div>
-								<div class="row">
-									{{activity.message}}
-								</div>
-							</div>
-							<div class="col" style="margin-right: 2em;">
-								{{activity.lastUpdated}}
-							</div>
-						</div>
-						<div class="row" ng-if="activity.pictures" >
-							<a  ng-repeat="picture in activity.pictures" class="item item-thumbnail-left" href="#">
-									<img ng-src="{{picture}}">
-							</a>
-						</div>
-						<div class="row" ng-if="activity.text">
-									<div class="item item-text-wrap">
-								{{activity.text}}
-							</div>
-						</div>
 
 
-				</ion-item>
-			</ion-list>
-		</div>
+<ion-view>
+
+	  <ion-content  class="Activity">
+		
+		 
+               <h1>Активност</h1>
+        <i class="ion-chevron-left" ng-click="sideMenuMyNotoficationsModal.hide()" style="font-size:2em;position: relative;right: 47%;top: 1%;color: #fff;"></i>
+
+    
+  
+    <ion-list>
+      <ion-item class="item item-avatar">
+      		<img src="img/adam.jpg">
+        <div>
+        <h2>Петър Георгиев</h2>
+         <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
+         </div>
+        <p class="p">Наблюдава 5 ваши предизвикателства</p>
+       <div class="img">
+        <a href="#"><img src="img/flower.jpg"></a>
+        <a href="#"><img src="img/orange.jpg"></a>
+        <a href="#"><img src="img/roses.jpg"></a>
+        <a href="#"><img src="img/roses.jpg"></a>
+       </div>
+      </ion-item>
+                <hr width="90%">
+      <ion-item class="item item-avatar">
+      		<img src="img/photo.jpg">
+        <div>
+        <h2>Мария Минчева</h2>
+        <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
+        </div>
+        <p class="p">Ви последва</p>
+
+      </ion-item>
+                 <hr width="90%">
+
+      <ion-item class="item item-avatar">
+      		<img src="img/ben.png">
+        <div>
+        <h2>Станислав Мартинов</h2>
+         <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
+         </div>
+        <p  class="p">Коментира</p>
+
+     </ion-item>
+
+      <ion-item class="com">
+      		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem Ipsum</p>
+          <a href="#"><img  class="challenger" src="img/flower.jpg"></a>
+      </ion-item>
+
+                       <hr width="90%">
+
+      <ion-item class="item item-avatar">
+      		<img src="img/photo.jpg">
+        <div>
+        <h2>Мария Минчева</h2>
+        <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
+        </div>
+        <p class="p">Наблюдава 3 ваши преизвикателства</p>
+		<div class="img">
+        <a href="#"><img src="img/roses.jpg"></a>
+        <a href="#"><img src="img/orange.jpg"></a>
+        <a href="#"><img src="img/flower.jpg"></a>
+    </div>
+      </ion-item>
+	                    <hr width="90%">
+     
+      
+      <ion-item class="item item-avatar">
+        <img src="img/ben.png">
+        <div>
+        <h2>Петър Георгиев</h2>
+         <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
+         </div>
+        <p class="p">Ви последва</p>
+      </ion-item>
+        <ion-item class="com">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem Ipsum</p>
+    
+      </ion-item>
+    </ion-list>
+
 	</ion-content>
 </ion-view>
