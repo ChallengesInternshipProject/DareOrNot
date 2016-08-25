@@ -3,59 +3,11 @@
 @charset "utf-8";
 /* CSS list card 
 		title and arrows*/
-.TimeLineCard { max-height:10em;
-	.arrow-right{max-height: 0.5em;
-				font-size: 1em;
-				float: right;
-				/* width: 100%; */
-				margin-top: -3%;
-				padding: 0;
-				position: relative;
-				color: ;
-			}
-	.arrow-left{max-height: 0.5em;
-				font-size: 1em;
-				float: left;
-				/* width: 100%; */
-				margin-top: -3%;
-				padding: 0;
-				position: relative;
-				color: #fff;
-			}
-	.title{	color: blue;
-				position: absolute;
-				top: 2%;
-				left: 5%;
-				font-size: 1em;
-			
-			}
-	
-	.footer{
-			position: relative;
-			text-align: center;
-			display: inline-flex;
-			position: relative;
-			top: 30px;
-			width: 100%;
-			background: rgba(27,73,88, .3);
-			/*make circle buttons*/
-			span{width:16%;
-				.fa {
-						width: 100%;
-						height: 100%;
-						display: inline-flex;
-						/* font-size: 2.5em; */
-						text-rendering: auto;
-						border-radius: 50%;
-						color: white;
-						/* margin-right: -3%; */
-						/* margin-bottom: -3%; */
-						padding: 10%;
-						/* margin-top: -3%; */
-						}	
-				}
-				
-		.info{
+.TimeLineCard { 
+	max-height:10em;
+		
+
+	.info{
 		width: 25%;
     	display: inline-block;
     	vertical-align: top;
@@ -63,23 +15,6 @@
 		bottom: 20px;
 		// left: 30%;
 	}
-					
-	/* avatar settings, img*/
-		.user-pic a img{
-			margin-top: -0.9em;
-			margin-left: -0.3em;
-			border: 1px solid;
-			min-width: 1.3em;
-			min-height: 1.3em;}
-		.ng-binding{color: #04a4c3;
-					font-size: 10px;
-					margin-top: 2em;
-					margin-right: 2%;
-					h5, i{color: #ffb400;}
-					}
-		    }
-		
-
 
 	 .demo{ 
 		display: block;
@@ -268,4 +203,4 @@
 		width: 130px;
 	}
 
-	}
+}

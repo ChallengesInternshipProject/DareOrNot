@@ -74,12 +74,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // @import "scss/div-friends";
 // @import "scss/list";
-// @import "scss/TimeLineCard";
 // @import "scss/div-timelineCard";
 // @import "scss/side-menu-settings";
+// @import "scss/TimeLineCard";
 
 //Timeline page view SCSS
-// @import "scss/timeline";
+@import "scss/timeline";
 
 //Chat page view SCSS
 // @import "scss/chat";
