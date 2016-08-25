@@ -72,6 +72,7 @@ angular.module('starter.services')
 				}
 				//Add Users Self ID
 				queryParams.friends.push(userID);
+
 				returnResult.resolve(
 						user.list(queryParams)
 						.then(function(data){return data})
@@ -84,6 +85,9 @@ angular.module('starter.services')
 		}
 		user.sendRequest = function(senderID,requestedID) {
 			return $http.post(SERVER_ADDRESS+ "/users/requestFriendship/",{	senderID : senderID,requestedID : requestedID,})
+		}
+		user.acceptRequest = function(senderID,requestedID) {
+			return $http.post(SERVER_ADDRESS+ "/users/acceptFriendship/",{	senderID : senderID,requestedID : requestedID,})
 		}
 		//End of methods
 		return user;

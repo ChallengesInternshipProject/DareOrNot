@@ -318,12 +318,23 @@ $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 		.state('app.activity',{
 			url : '/activity',
 			templateUrl: 'templates/side-menu/activity.html',
-			// controller: 'A'
+			 controller: 'ActivityCtrl',
+			resolve:{
+				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
+					console.log("triggered");
+					return NotificationService.getAll($localStorage.user.data._id);
+				}]
+			}
 		})
 		.state('app.notifications',{
 			url : '/notifications',
 			templateUrl: 'templates/side-menu/notifications.html',
-			// controller: 'A'
+			controller: 'ActivityCtrl',
+			resolve:{
+				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
+					return NotificationService.getNotifications($localStorage.user.data._id);
+				}]
+			}
 		})
 		.state('app.settings',{
 			url : '/settings',

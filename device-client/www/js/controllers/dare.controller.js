@@ -62,6 +62,7 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 			$ionicLoading.show({
 				template: 'Loading...'
 			});
+			$scope.data.invitedUsers =[]
 			//Set the selected friends into the friends array for the post request
 			angular.forEach($scope.data.friends, function (value, key) {
 					if ($scope.data.friends[key]) {
@@ -70,7 +71,7 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 			});
 			$log.info($scope.data);
 			DareService.create($scope.data).then(function(){
-				$state.go("app.timeline")
+				// /$state.go("app.timeline")
 			});
 	};
 
