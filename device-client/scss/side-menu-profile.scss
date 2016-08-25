@@ -22,16 +22,20 @@
 		}
 		.profile-user-credentials {
 			// display: block;
-			margin-top: 3vw;
-			margin-left: 8vw;
-			float: right;
+			margin-top: 1vw;
+			margin-left: 2.5vw;
+			// margin-right: 25vw;
+
+			float: left;
 			// color: white;
 			.profile-username {
+				font-size: 4vh;
 				color: #01cfe4;
 				display: block;
 			}
 			.profile-email {
 				margin-left: 3vh;
+				font-size: 2vh;
 				color: #ffb400;
 			}
 		}
@@ -47,15 +51,18 @@
 				color: #01cfe4;
 				text-decoration: none;
 			}
+			i {
+				padding: 2vh 2vh 2vh 6vh;
+			}
 		}
 	}
 	// Galaxy S5 360x640
 	@media screen and (max-width: 450px) {
 		.profile-info {
 			display: inline-block;
-			
 			.profile-user-credentials {
 				// float: right;
+				margin-right: 0;
 				margin-left: 20vh;
 				margin-top: -20vw;
 				font-size: 2vh;
