@@ -1,54 +1,58 @@
 <!-- Това е класа по който взимам визитката , навигационите стрелки и заглавието по-доло-->
 <div class="TimeLineCard">
 	<span class="title">
-		{{dare.title}}
+		<!-- {{dare.title}} -->
 	</span>
 	
 <!-- Това е за слайдъра, взема картинките на деар от сървара ,,,, кодовете за него са следващите 10 реда  -->
-	<ion-slide-box on-slide-changed="slideChanged(index)" style="width:100%; height:5em;">
+	<ion-slide-box on-slide-changed="slideChanged(index)" style="width:100%; height:10em;">
 		<ion-slide ng-repeat='picture in dare.pictures'>
 			<div>
-      				<img ng-src="{{SERVER_ADDRESS}}/{{picture}}" alt="" style="width:100%;height:100%;">
+      				<img src="img/photo.jpg" ng-src="{{SERVER_ADDRESS}}/{{picture}}" alt="" style="width:100%;height:80%;">
+      				<div class="arrow">
+	<div ng-click="nextSlide()" class="arrow-left"></div>
+			<!-- Slide to the left  -->
+	<div ng-click="previousSlide()" class="arrow-right"></div>ng-src="{{SERVER_ADDRESS}}/{{dare._creator.avatar}}
+	</div>
+	
 			</div>
 		</ion-slide>
 	</ion-slide-box>
 	<!-- Slide to the right -->
-	<div>
-	<div ng-click="nextSlide()" class="arrows-left"><i class="ion-chevron-left"></i></div>
-			<!-- Slide to the left  -->
-	<div ng-click="previousSlide()" class="arrows-right"><i class="ion-chevron-right"></i></div>
-	</div>
 	
 	<!-- Визитка на човека, На доло е нагласено и рабти!!!!  -->
-	<div class="footer">
-		<span class="avatar">
-			<a class="fa item-avatar" href="#">
-				<img ng-src="{{SERVER_ADDRESS}}/{{dare._creator.avatar}}">
-			</a>
-		</span>
-		<span>
-			<i class="icon ion-ios-location-outline"></i>
-			{{dare.city}}
-		</span>
-		<span>
-			<i class="icon ion-ios-timer-outline"></i>
-			{{dare.timeElapsed}}
-		</span>
-		<span>
-			<i class="icon ion-ios-person-outline"></i>
-			{{dare.invitedUsers.length}}
-		</span>
-		<span>
-			<i class="icon ion-ios-chatbubble-outline"></i>
-			{{dare.comments}}
-		</span>
-		<span>
-			<i class="icon ion-ios-heart-outline"></i>
-			{{dare.likes}}
-		</span>
-		<span>
-			<h5>Приключва:</h5>
-			{{dare.timeLeft}}
-		</span>
-	</div>
-</div>
+	<div class="info">
+       				
+       					<div class="timetime">
+			       			<div class="timecheck">
+			       				<img src="img/location-icon.png">
+			       			</div>
+			       			<div class="time">
+			       				<p>София</p>
+			       			</div>
+			       			<div class="timeclock">
+			       				<img src="../img/time.png">
+			       			</div>
+			       			<div class="likeLike">
+       					<div class="person">
+						</div>
+						<p>57</p>
+						<div class="comment">
+						</div>
+						<p>34</p>	
+						<div class="heart">
+						</div>
+						<p>234</p>
+       				</div>
+       				<div class="clock">
+       					<H6>
+       						<p>Оставащо време</p>
+       						23:40Ч.
+       					</H6>
+       				</div>
+			       			<div class="time">
+			       				<p>Преди 4 часа и 30 минути</p>
+			       			</div>
+		       			</div>
+		       			
+     			</div>
