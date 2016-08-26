@@ -1,9 +1,9 @@
-<ion-view class="friends" title="Приятели" view-title='Приятели' name="friends-all">
+<ion-view class="friends"  name="friends-all">
 		<ion-content >
 			<ion-list>
 				<ion-item ng-include  src="'templates/div-friends-search.html'"></ion-item>
-				<ion-item 
-					ng-repeat="friend in friends" 
+				<ion-item
+					ng-repeat="friend in friends"
 					class="row"
 					ng-include src="'templates/div-friends.html'"
 				>

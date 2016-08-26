@@ -1,5 +1,5 @@
 
-<ion-view class="friends"  title="Приятели" view-title='Приятели' name="friends-active">
+<ion-view class="friends" name="friends-active">
 		<ion-content >
 		<ion-refresher
 			pulling-text="Pull to refresh..."
@@ -8,14 +8,14 @@
 
 			<ion-list>
 				<ion-item ng-include  src="'templates/div-friends-search.html'"></ion-item>
-				<ion-item 
-					ng-repeat="friend in friends" 
+				<ion-item
+					ng-repeat="friend in friends"
 					class="row"
 					ng-include src="'templates/div-friends.html'"
 					ng-if="friend.friend.isOnline"
 				>
 				</ion-item>
-				
+
 			</ion-list>
 		</ion-content>
 </ion-view>
