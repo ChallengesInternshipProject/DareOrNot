@@ -35,10 +35,10 @@
 						</div>
 						
 
-
-						<div class="row" ng-if="activity.pictures" >
-							<a  ng-repeat="picture in activity.pictures" class="item item-thumbnail-left" href="#">
-									<img ng-src="{{picture}}">
+						
+						<div class="row" ng-if="notification.refObjectID" >
+							<a  ng-repeat="picture in notification.refObjectID.pictures" class="item item-thumbnail-left" href="#">
+									<img ng-src="{{SERVER_ADDRESS}}/{{picture}}">
 							</a>
 						</div>
 						<div class="row" ng-if="activity.text">
