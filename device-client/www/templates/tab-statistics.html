@@ -1,8 +1,8 @@
-<ion-view title="Статистика">
-	<ion-content class="statistics" >
+<ion-view>
+	<ion-content class="Statistics">
 		<div class="row">
 			<a href="#" class="fa item item-avatar">
-				<img ng-src="img/avatar.png" >
+				<img ng-src="img/avatar.png">
 			</a>
 			<div class="user">
 				<h1>
@@ -10,12 +10,12 @@
 				</h1>
 				<i class="ion-ios-location-outline" style="color:#fcb301;margin-right:1em;"></i><img src="img/location-icon.png" alt="">
 			</div>
-			
+
 		</div>
 		<div class="row">
 			<a href="" class="button button-calm">Предизвикай Милена</a>
 			<a href="" class="fa fa-chat">
-			
+
 			</a>
 		</div>
 		<div class="row" style="border-bottom: 1px solid #fff;">
@@ -38,18 +38,10 @@
 
 		</div>
 		<div class="card">
-		
-				<canvas 
-					id="line"
-					class="chart chart-line" 
-					chart-data="data" 
-					chart-labels="labels" 
-					chart-legend="false" 
-					chart-series="series" 
-					chart-options="options"
-				></canvas>
 
-			</div>
+			<canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options"></canvas>
+
+		</div>
 		</div>
 
 	</ion-content>

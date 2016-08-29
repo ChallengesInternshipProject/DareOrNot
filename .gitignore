@@ -3,3 +3,4 @@
 node_modules
 *.sublime*
 device-client/www/css
+*.app.css
