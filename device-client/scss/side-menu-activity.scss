@@ -130,7 +130,7 @@
 
 				}
 
-				@media screen and (min-width: 1920px){
+				@media screen and (min-width: $tablet-width){
 						hr{
 							width: 90%;
 						}
@@ -138,6 +138,7 @@
 						.item-avatar>img:first-child{
 							position: none;
    							margin-left: 4vw;
+   							background-color: red;
    						}
 
 					.com p{

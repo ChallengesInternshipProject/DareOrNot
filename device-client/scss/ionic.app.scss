@@ -22,7 +22,8 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
+$tablet-width : 1920px;
+$tablet-height:1080px;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 //Icons
@@ -37,7 +38,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // @import "scss/timeline";
 
 //Category page view SCSS
-// @import "scss/category";
+@import "scss/category";
 
 //Contacts page view SCSS
 @import "scss/contacts";
