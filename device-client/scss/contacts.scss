@@ -1,5 +1,6 @@
 
-	@charset "utf-8";
+
+@charset "utf-8";
 
 .Contacts{
 			background-image:none;
@@ -22,6 +23,7 @@
 			width: 100%;
 			padding:5%;
 			height: 73vh;
+		}
 
 		article .log{
 					display: block;
@@ -36,7 +38,7 @@
 			}
 
 		
-		}
+		
 
 		
 		.input-group-user{
@@ -287,9 +289,9 @@
 				// 	height: 6em;
 				// 	background-color: red;
 				// }
-									}
+				}
 
-							}
+	}
 
 				
 
