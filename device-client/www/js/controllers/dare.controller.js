@@ -69,9 +69,8 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 							$scope.data.invitedUsers.push(key);
 					}
 			});
-			$log.info($scope.data);
 			DareService.create($scope.data).then(function(){
-				// /$state.go("app.timeline")
+				$state.go("app.timeline")
 			});
 	};
 

@@ -8,11 +8,12 @@ angular.module('starter.controllers')
 		$localStorage,
 		$ionicSlideBoxDelegate,
 		DaresResolver,
-		$log
-	 ) {
-
+		$log,
+		DareService,
+		$state
+		) {
 		$scope.doRefresh = function () {
-			GetTimeline();
+			$scope.dares = DareService.list($state.params);
 		};
 
 		$scope.nextSlide = function() {

@@ -102,23 +102,8 @@ angular.module('starter').config(function (
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-									title : {$ne : null},
-									description : { $ne : null},
-									endDate : {$gt : new Date()},
-									$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list()
 					}
 				]
 			}
@@ -136,26 +121,14 @@ angular.module('starter').config(function (
 		.state('app.funny',{
 			url: '/funny',
 			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:1
+			},
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 1,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list({category:1});
 					}
 				]
 			}
@@ -164,25 +137,13 @@ angular.module('starter').config(function (
 			url: '/business',
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
+			params:{
+				category:2
+			},
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 2,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list({category:2})
 					}
 				]
 			}
@@ -190,26 +151,14 @@ angular.module('starter').config(function (
 		.state('app.price',{
 			url: '/price',
 			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:3
+			},
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 3,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list({category:3})
 					}
 				]
 			}
@@ -217,26 +166,14 @@ angular.module('starter').config(function (
 		.state('app.charity',{
 			url: '/charity',
 			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:4
+			},
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 4,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+						return DareService.list({category:4})
 					}
 				]
 			}
