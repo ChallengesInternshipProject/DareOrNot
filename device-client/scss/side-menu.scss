@@ -1,10 +1,11 @@
 @charset "utf-8";
 @import "mixins";
-
 .SideMenu {
 	.menu-left {
-		{@include Mine_user_background;
-
+	@include Mine_user_background;
+	.height{@include height-heder;}
+	h3, h2 {@include large-text;}
+	span{@include span-position;}
 		/*for icons*/
 		.app-icon {
 			width: 1em !important;

@@ -1,9 +1,13 @@
+//background and body elements style//
+
+
 @mixin Mine_user_background{
 			background-image: url(../img/BG.png);
 			background-color: #012438;
 			background-size: 100% 100%;
 			text-align: center;	
 			}
+/*heder*/
 @mixin height-heder{
 			    display: inline;
 				height: 17vh;
@@ -20,6 +24,30 @@
 				color: #fff;
 				}
 			}
+@mixin list-style{  padding: 1%;
+					margin: 1%;
+					border: none;
+					color: #01cfe4;
+					background: transparent;
+					display: block;
+					position: relative;
+					}
+@mixin list-item-style{
+				margin: 1%;
+				padding: 1%;
+				width: 100%;
+				min-height: 3em;
+				font-size:1.2em;
+				text-align: left;
+				border: none;
+				color: #fff;
+				background: transparent;
+				display: inline-block;
+				position: relative;
+				 }
+
+ /*text stylings */
+	
 @mixin large-text { 
 			color: #01cfe4;
 			margin-left: 5%;
@@ -27,6 +55,17 @@
 			text-align: left;
 			font-size:0.8em;
 			}
+@mixin blue-color{
+	color: #04a4c3;
+    font-size: 1.5em;
+}	
+@mixin paragraf-style{
+	color: #ffb400; 
+	width: 100%;
+	margin-left: 5%;
+	padding-right: 1vw;
+	font-size:1.2em;
+	}
 @mixin span-position{
 		float: left;
     	margin-left: -0.5%;

@@ -8,25 +8,12 @@
 	span{@include span-position;}
 			
 	/* CSS edit in item */	
-	.list{background: transparent; 
+	.list{@include list-style;
 		  ion-item{
-		  		width: 100%;
-				 height:auto;
-		         border:none;
-				 border-left: 1px solid #fff;
- 			     margin-left: 1em;
-			     color:#fff;
-			 	 padding:0;
-				 background: transparent;
-				 text-align: left;
-				 display: inline-block;
-		
-			
+			@include list-item-style;
+			border-left: 1px solid #fff;
 			.p, i{
-				color: #ffb400; 
-				 width: 100%;
-				 margin-left: 5%;
-				 padding-right: 1vw;
+				@include paragraf-style;
 				 }
 
 			div	{width: 98%;
