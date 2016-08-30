@@ -1,6 +1,5 @@
 //background and body elements style//
 
-
 @mixin Mine_user_background{
 			background-image: url(../img/BG.png);
 			background-color: #012438;
@@ -11,7 +10,7 @@
 @mixin height-heder{
 			    display: inline;
 				height: 17vh;
-				width: 100%;
+				@include position-style;
 				h1{position: relative;
 				    display: inline-block;
 					top: 30%;
@@ -24,18 +23,17 @@
 				color: #fff;
 				}
 			}
-@mixin list-style{  padding: 1%;
-					margin: 1%;
+/*list*/
+@mixin list-style{  @include position-style;
 					border: none;
 					color: #01cfe4;
 					background: transparent;
 					display: block;
 					position: relative;
 					}
+/*list Item*/
 @mixin list-item-style{
-				margin: 1%;
-				padding: 1%;
-				width: 100%;
+				@include position-style;
 				min-height: 3em;
 				font-size:1.2em;
 				text-align: left;
@@ -45,13 +43,30 @@
 				display: inline-block;
 				position: relative;
 				 }
+				 
+/*Paragraf*/
 
- /*text stylings */
+@mixin paragraf-style{
+	color: #01cfe4;
+	@include position-style;
+	margin-bottom: 1vh;
+	display: inline-flex;
+	font-size:0.8em;
+	}		
+/*div*/	
+@mixin div-style{	
+	@include position-style;
+    display: inline-flex;
+    font-size: 1em;
+	}			 
 	
-@mixin large-text { 
+	
+ /*text stylings */
+@mixin large-text {
+			@include position-style;
 			color: #01cfe4;
 			margin-left: 5%;
-			width: 50%;
+			display:inline-flex;
 			text-align: left;
 			font-size:0.8em;
 			}
@@ -59,13 +74,16 @@
 	color: #04a4c3;
     font-size: 1.5em;
 }	
-@mixin paragraf-style{
-	color: #ffb400; 
-	width: 100%;
-	margin-left: 5%;
+
+
+@mixin left-minutes-style{
+	color: #ffb400;
+	@include position-style;
+    display: block;
 	padding-right: 1vw;
-	font-size:1.2em;
+	font-size:1em;
 	}
+
 @mixin span-position{
 		float: left;
     	margin-left: -0.5%;
@@ -81,4 +99,16 @@
 		font-size: 1em;
 		margin: 0em;
 		}
+/*img style*/
+@mixin image-style {	
+	@include position-style;
+	display: block;
+	}
+
+	
+/*some helpful varibals*/		
+@mixin position-style{margin: 1%;
+					  padding: 1%;
+					  width: 100%;
+					}
 

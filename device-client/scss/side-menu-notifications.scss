@@ -13,25 +13,17 @@
 			@include list-item-style;
 			border-left: 1px solid #fff;
 			.p, i{
-				@include paragraf-style;
+				@include left-minutes-style;
 				 }
-
-			div	{width: 98%;
-				display:inline-flex; 
+			div	{
+				@include div-style;	 
 				}
-			
-			div p{ color: #01cfe4;
-				margin-left: 20vw;
-				margin-bottom: 1vh;
-				width: 55%;
-				font-size:0.8em;
+			div p{
+				@include paragraf-style;
 				}
 			/* CSS imges */
 				.img{
-					display: block;
-					width: 100%;
-					height: auto;
-					margin:5%;
+					@include image-style;
 
 						img{
 							display: inline;

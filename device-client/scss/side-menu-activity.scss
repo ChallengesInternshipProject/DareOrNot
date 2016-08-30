@@ -16,34 +16,22 @@
 	}
 		
 	/* CSS edit in item */	
-	.list{@include list-style; 
-		  ion-item{
-		  @include list-item-style;
+	.list{
+		@include list-style; 
+		ion-item{
+			@include list-item-style;
 			.p, i{
-				color: #ffb400; 
-				 width: 100%;
-				 margin-left: 18%;
-				 padding-right: 1vw;
-				 font-size: 70%;
+				 @include left-minutes-style;
 				 }
-
-			div	{width: 98%;
-				display:inline-flex; 
+			div	{
+				@include div-style;		
 				}
-			
 			div p{ 
-				color: #01cfe4;
-				margin-left: 3vw;
-				margin-top: 4%;
-				width: 55%;
-				font-size: 70%;
+				@include paragraf-style;
 				}
 			/* CSS imges */
 				.img{
-					display: block;
-					width: 100%;
-					height: auto;
-					margin:6% 5% 4% 4%;
+				@include image-style;
 
 						img{
 							display: inline;
@@ -73,11 +61,9 @@
 					}
 
 				.list ion-item .img{
-						margin-left: 5%;
 					}
 					 h2{
-						margin-left: 18%;
-						margin-top: 5%;
+						margin-left: 15%;
 					}
 
 				ion-item div p{
@@ -111,7 +97,6 @@
 					}
 					 h2{
 						margin-left: 4.5%;
-						margin-top: 5%;
 					}
 				ion-item div p{
 						margin-left: 2vw;
