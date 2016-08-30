@@ -5,7 +5,7 @@
 			text-align: center;	
 			}
 @mixin height-heder{
-			    display: inline-block;
+			    display: inline;
 				height: 17vh;
 				width: 100%;
 				h1{position: relative;
@@ -14,7 +14,12 @@
 					color: #01cfe4;
 					font-size: 1.4em;
 				}
-}
+				i{font-size:2em;
+				position: relative;
+				right: 47%;top: 1%;
+				color: #fff;
+				}
+			}
 @mixin large-text { 
 			color: #01cfe4;
 			margin-left: 5%;

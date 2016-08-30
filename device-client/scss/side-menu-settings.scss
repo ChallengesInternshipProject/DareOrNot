@@ -1,11 +1,10 @@
 @charset "utf-8";
+@import "mixins";
+
 /* CSS tabs- Menue */
 /* here is the mine CSS 4 background, colors and so on */
-.Settings {
-	background-image: url("../img/BG.png");
-	background-color: #012438;
-	background-size: 100% 100%;
-	text-align: center;
+.Settings {@include Mine_user_background;
+
 	/* here is the mine CSS 4 back button, heder and so on the bar*/
 	.bar-header {
 		margin: 1%;

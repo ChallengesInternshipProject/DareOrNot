@@ -1,11 +1,10 @@
+@charset "utf-8";
+@import "mixins";
+
 .SideMenu {
 	.menu-left {
-		background-image: url("../img/BG.png");
-		background-color: #012438;
-		background-size: 100% 100%;
-		border: none;
-		text-align: center;
-		display: block;
+		{@include Mine_user_background;
+
 		/*for icons*/
 		.app-icon {
 			width: 1em !important;
