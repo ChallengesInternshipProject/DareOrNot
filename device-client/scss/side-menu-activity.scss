@@ -1,37 +1,12 @@
-
-
-
 @charset "utf-8";
-
 /* CSS activities */
-
+@import "mixins";
 .Activity{
-	@include {Mixin/Mine_user_background;}
+	@include Mine_user_background;
+	.height{@include height-heder;}
+	h3, h2 {@include large-text;}
+	span{@include span-position;}
 			
-
-	h3, h2 { 
-			color: #01cfe4;
-			margin-left: 18%;
-			margin-top: 5%;
-			width: 50%;
-			text-align: left;
-			font-size: 70%;
-			}
-	span{
-		float: left;
-    	margin-left: -0.5%;
-    	margin-top: -0.5rem;
-    	position: absolute;
-    	z-index: 10;
-		i{
-		padding: 7px;
-		color: #fff;
-		background: #01cfe4;
-		border-radius: 50%;
-		font-size: 1em;
-		margin: 0em;}
-		}
-
 	.challenger{
 		width:3em;
 		height:2.8em;

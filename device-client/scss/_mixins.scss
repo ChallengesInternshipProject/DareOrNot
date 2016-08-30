@@ -1,0 +1,40 @@
+@mixin Mine_user_background{
+			background-image: url(../img/BG.png);
+			background-color: #012438;
+			background-size: 100% 100%;
+			text-align: center;	
+			}
+@mixin height-heder{
+			    display: inline-block;
+				height: 17vh;
+				width: 100%;
+				h1{position: relative;
+				    display: inline-block;
+					top: 30%;
+					color: #01cfe4;
+					font-size: 1.4em;
+				}
+}
+@mixin large-text { 
+			color: #01cfe4;
+			margin-left: 5%;
+			width: 50%;
+			text-align: left;
+			font-size:0.8em;
+			}
+@mixin span-position{
+		float: left;
+    	margin-left: -0.5%;
+    	margin-top: -0.5rem;
+    	position: absolute;
+    	z-index: 10;
+		}
+@mixin 	i{
+		padding: 7px;
+		color: #fff;
+		background: #01cfe4;
+		border-radius: 50%;
+		font-size: 1em;
+		margin: 0em;
+		}
+
