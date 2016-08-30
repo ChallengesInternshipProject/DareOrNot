@@ -6,16 +6,7 @@
 /* CSS activities */
 
 .Activity{
-	background-image: url(../img/BG.png);
-			background-color: #012438;
-			background-size: 100% 100%;
-			text-align: center;
-	
-				h1{position: relative;
-					top: 1%;
-					color: #01cfe4;
-					font-size: 1.5em;
-				}
+	@include {Mixin/Mine_user_background;}
 			
 
 	h3, h2 { 
