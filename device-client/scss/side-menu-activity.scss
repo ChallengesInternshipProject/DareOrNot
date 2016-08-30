@@ -1,6 +1,7 @@
 @charset "utf-8";
-/* CSS activities */
 @import "mixins";
+
+/* CSS activities */
 .Activity{
 	@include Mine_user_background;
 	.height{@include height-heder;}

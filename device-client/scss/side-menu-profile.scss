@@ -1,11 +1,9 @@
+@charset "utf-8";
+@import "mixins";
 
 /* CSS for Profile view */
 .Profile {
-	background-image: url("../img/BG.png");
-	background-color: #012438;
-	background-size: 100% 100%;
-	font-size: 1em;
-
+	@include Mine_user_background;
 	// text-align: center;
 	// display: block;
 	.profile-info {
@@ -43,8 +41,9 @@
 		}
 	}
 	.profile-info-list {
-		// display: block;
+		 display: block;
 		.profile-menu-item {
+			text-align: left;
 			display: block;
 			color: red;
 			font-size: 2vw;

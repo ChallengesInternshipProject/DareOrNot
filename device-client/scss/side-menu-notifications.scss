@@ -1,6 +1,7 @@
 @charset "utf-8";
-/* CSS nothifications */
 @import "mixins";
+
+/* CSS nothifications */
 .Notifications{@include Mine_user_background;
 	.height{@include height-heder;}
 	h3, h2 {@include large-text;}
