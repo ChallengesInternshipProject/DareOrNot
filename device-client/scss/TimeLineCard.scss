@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Timeline	title and arrows*/
 	.timeline{@include gray_background;
-	.item{
 .TimeLineCard {min-height:12em;
 	.navigation{
 	.arrows-right{
@@ -74,4 +73,3 @@
 				}
 		}
 	}
-}

@@ -10972,9 +10972,9 @@ a.button {
   width: 100%;
   display: block;
   position: relative; }
-  .timeline .item .TimeLineCard {
+  .timeline .TimeLineCard {
     min-height: 12em; }
-    .timeline .item .TimeLineCard .navigation .arrows-right {
+    .timeline .TimeLineCard .navigation .arrows-right {
       height: 0.5em;
       font-size: 1.2em;
       margin-top: -20%;
@@ -10982,7 +10982,7 @@ a.button {
       position: relative;
       color: blue;
       float: right; }
-    .timeline .item .TimeLineCard .navigation .arrows-left {
+    .timeline .TimeLineCard .navigation .arrows-left {
       height: 0.5em;
       font-size: 1.2em;
       margin-top: -20%;
@@ -10990,20 +10990,20 @@ a.button {
       position: relative;
       color: blue;
       float: left; }
-    .timeline .item .TimeLineCard .navigation .title {
+    .timeline .TimeLineCard .navigation .title {
       color: blue;
       position: absolute;
       top: 2%;
       left: 5%;
       font-size: 1em; }
-    .timeline .item .TimeLineCard .content {
+    .timeline .TimeLineCard .content {
       min-height: 10em;
       width: 100%;
       position: relative;
       text-align: center;
       display: inline-flex;
       position: relative; }
-    .timeline .item .TimeLineCard .footer {
+    .timeline .TimeLineCard .footer {
       text-align: center;
       display: inline-flex;
       position: relative;
@@ -11014,9 +11014,9 @@ a.button {
       min-height: 2em;
       /*make circle buttons*/
       /* avatar settings, img*/ }
-      .timeline .item .TimeLineCard .footer span {
+      .timeline .TimeLineCard .footer span {
         width: 16%; }
-        .timeline .item .TimeLineCard .footer span .fa {
+        .timeline .TimeLineCard .footer span .fa {
           width: 100%;
           height: 100%;
           display: inline-flex;
@@ -11024,12 +11024,12 @@ a.button {
           border-radius: 50%;
           color: white;
           background-size: 100% 100%; }
-        .timeline .item .TimeLineCard .footer span .fa-size {
+        .timeline .TimeLineCard .footer span .fa-size {
           min-width: 2.5em;
           height: 2.5em;
           margin-top: 1.5em;
           background-size: 88% 90%; }
-      .timeline .item .TimeLineCard .footer .info {
+      .timeline .TimeLineCard .footer .info {
         display: inline-flex;
         width: 10%;
         height: 5em;
@@ -11038,12 +11038,12 @@ a.button {
         color: #04a4c3;
         margin: 1%;
         margin-right: 3%; }
-      .timeline .item .TimeLineCard .footer .ng-binding {
+      .timeline .TimeLineCard .footer .ng-binding {
         color: #04a4c3;
         font-size: 10px;
         margin-top: 1.5em;
         margin-right: 2%; }
-        .timeline .item .TimeLineCard .footer .ng-binding h5, .timeline .item .TimeLineCard .footer .ng-binding i {
+        .timeline .TimeLineCard .footer .ng-binding h5, .timeline .TimeLineCard .footer .ng-binding i {
           color: #ffb400; }
 
 .Chat .messages {
