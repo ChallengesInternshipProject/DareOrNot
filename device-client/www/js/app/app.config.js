@@ -4,7 +4,8 @@ angular.module('starter').config(function (
 	ionicDatePickerProvider,
 	$ionicConfigProvider,
 	ChartJsProvider,
-	$sceDelegateProvider
+	$sceDelegateProvider,
+	$localStorageProvider
 	) {
 	// Ionic uses AngularUI Router which uses the concept of states
 	// Learn more here: https://github.com/angular-ui/ui-router
@@ -178,6 +179,32 @@ angular.module('starter').config(function (
 				]
 			}
 		})
+		.state('app.mydares',{
+			url: '/mydares',
+			templateUrl: 'templates/tab-timeline.html',
+			params: {
+				title : {$ne : null},
+				description : { $ne : null},
+				endDate : {$gt : new Date()},
+				_creator :$localStorageProvider.get('user.data._id'),
+			},
+			controller: 'TimelineCtrl',
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage',  function(DareService,$localStorage){
+						return DareService.list({
+							title : {$ne : null},
+							description : { $ne : null},
+							endDate : {$gt : new Date()},
+							_creator :$localStorage.user.data._id,
+						},false)
+					}
+				]
+			}
+		})
+
+
+		
 		.state('app.friends', {
 			url: '/friends',
 			templateUrl: 'templates/tab-friends.html',

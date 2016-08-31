@@ -19,27 +19,31 @@ angular.module('starter.services')
 			})
 
 		}
-		dareService.list = function(filter){
+		dareService.list = function(filter,applyDefFilter){
+		
+			var applyDefFilter  = applyDefFilter != undefined ? applyDefFilter : true;
+			var defFilter = {};
 			
-			var defFilter = 	{
-				title : {$ne : null},
-				description : { $ne : null},
-				endDate : {$gt : new Date()},
-				$or:[
-					{invitedUsers : {$in : [$localStorage.user.data._id]}},
-					{isPublic : true},
-				]
+			if (applyDefFilter) {
+				defFilter = 	{
+					title : {$ne : null},
+					description : { $ne : null},
+					endDate : {$gt : new Date()},
+					$or:[
+						{invitedUsers : {$in : [$localStorage.user.data._id]}},
+						{
+							isPublic : true,
+						},
+					]
+				}
 			}
-
 			//Apply filters
 			for(var i in arguments){
 				for (var ii in arguments[i]) {
 					defFilter[ii] = (arguments[i][ii])
 				}
 			}
-
 			defFilter = JSON.stringify(defFilter);
-			
 			return $http.get(SERVER_ADDRESS + '/dares/list/',{params:{data:defFilter}}).then(function(result){
 			
 				return result.data

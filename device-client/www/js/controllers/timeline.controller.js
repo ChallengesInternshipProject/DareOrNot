@@ -13,9 +13,8 @@ angular.module('starter.controllers')
 		$state
 		) {
 		$scope.doRefresh = function () {
-			$scope.dares = DareService.list($state.params);
+			$scope.dares = DareService.list($state.params ,$state.current.url == "/mydares" ? false : true);
 		};
-
 		$scope.nextSlide = function() {
 			$ionicSlideBoxDelegate.next();
 		}
@@ -25,5 +24,5 @@ angular.module('starter.controllers')
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		$scope.dares = DaresResolver;
 		$log.info($scope.dares);
-
+		$log.info($state.current);
 	});

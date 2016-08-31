@@ -2,17 +2,21 @@
 	<div class="content">
 		<ion-slide-box on-slide-changed="slideChanged(index)"> 
 			<ion-slide ng-repeat='picture in dare.pictures'> 
-				<img ng-src="{{picture.fileString}}" alt="" style="max-height:200px;"> 
+				<img ng-src="{{picture.fileString}}" alt="" style="max-height:200px;"/> 
 			</ion-slide> 
 	</div>
 	 <div class="navigation">
 		<span class="title"> 
 			{{dare.title}}
 		</span>
-			<!-- Slide to the left  --> 
-	<div class="arrows-right"><i class="ion-ios-arrow-forward"></i></div> 
+		<!-- Slide to the left  --> 
+		<div class="arrows-right">
+			<i class="ion-ios-arrow-forward"></i>
+		</div> 
 		<!-- Slide to the right --> 
-	<div class="arrows-left" ><i class="ion-ios-arrow-back"></i></div> 
+		<div class="arrows-left" >
+			<i class="ion-ios-arrow-back"></i>
+		</div> 
 	 </div>
 	<div class="footer"> 
 		<span class=""> 
@@ -33,7 +37,7 @@
 		</span> 
 		<span class="info" style="margin-left: -1%;"> 
 			<i class="fa-size app-icon-user-active"></i> 
-			{{dare.invitedUsers.likes}}
+			{{dare.invitedUsers.length}}
 		</span> 
 		<span class="info" style="margin-left: -1%;"> 
 			<i class="fa-size app-icon-speech-active"></i> 
@@ -41,10 +45,10 @@
 		</span> 
 		<span class="info" style="margin-left: -1%;"> 
 					<i class="fa-size app-icon-love-active"></i> 
-		 4
+		 	{{dare.likes}}
 		</span> 
 		 <span class="ng-binding" style="width: 100%;">  
-		<h5>Приключва:</h5> 
+			<h5>Приключва:</h5> 
 			{{dare.timeLeft}}
 		</span> 
 	</div> 
