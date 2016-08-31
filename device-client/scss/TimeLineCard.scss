@@ -9,9 +9,10 @@
 				i{right: 70%;}
 			}
 		
-		.item{background: transparent;
+		.item{background: transparent;    
+			  border: none;
 		.TimeLineCard {min-height: 10em;
-						max-height: 12.5em;
+					   max-height: 12.5em;
 			.navigation{
 			.arrows-right{
 						@include arrows-position;
