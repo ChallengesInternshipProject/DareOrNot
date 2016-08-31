@@ -7,6 +7,7 @@
 	// text-align: center;
 	// display: block;
 	.profile-info {
+		width:100%;
 		display: block;
 		height: 20vh;
 		margin-top: 2vh;
@@ -14,8 +15,9 @@
 		font-size: 3vw;
 		.profile-avatar {
 			float: left;
-			margin-left: 5vh;
+			margin-left: 1vh;
 			// display: inline-block;
+			width:30%;
 			height: 12vh;
 			border-radius: 50%;
 			border: 3px solid white;
@@ -41,7 +43,7 @@
 		}
 	}
 	.profile-info-list {
-		 display: block;
+		display: block;
 		.profile-menu-item {
 			text-align: left;
 			display: block;

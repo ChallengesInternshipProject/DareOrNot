@@ -10327,15 +10327,55 @@ a.button {
     .Statistics .row canvas #line {
       background: transparent; }
 
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 .SideMenu .menu-left {
-  background-image: url("../img/BG.png");
+  background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
-  border: none;
   text-align: center;
-  display: block;
   /*for icons*/
   /*how to be display*/ }
+  .SideMenu .menu-left .height {
+    display: inline;
+    height: 17vh;
+    margin: 1%;
+    padding: 1%;
+    width: 100%; }
+    .SideMenu .menu-left .height h1 {
+      position: relative;
+      display: inline-block;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
+    .SideMenu .menu-left .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
+  .SideMenu .menu-left h3, .SideMenu .menu-left h2 {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    color: #01cfe4;
+    margin-left: 5%;
+    display: inline-flex;
+    text-align: left;
+    font-size: 0.8em; }
+  .SideMenu .menu-left span {
+    float: left;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
+    z-index: 10; }
   .SideMenu .menu-left .app-icon {
     width: 1em !important;
     height: 1em;
@@ -10359,13 +10399,22 @@ a.button {
         color: #ffb400;
         font-size: 3em; }
 
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 /* CSS for Profile view */
 .Profile {
-  background-image: url("../img/BG.png");
+  background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
-  font-size: 1em; }
+  text-align: center; }
   .Profile .profile-info {
+    width: 100%;
     display: block;
     height: 20vh;
     margin-top: 2vh;
@@ -10373,7 +10422,8 @@ a.button {
     font-size: 3vw; }
     .Profile .profile-info .profile-avatar {
       float: left;
-      margin-left: 5vh;
+      margin-left: 1vh;
+      width: 30%;
       height: 12vh;
       border-radius: 50%;
       border: 3px solid white; }
@@ -10389,16 +10439,19 @@ a.button {
         margin-left: 3vh;
         font-size: 2vh;
         color: #ffb400; }
-  .Profile .profile-info-list .profile-menu-item {
-    display: block;
-    color: red;
-    font-size: 2vw;
-    padding: 3vw; }
-    .Profile .profile-info-list .profile-menu-item a {
-      color: #01cfe4;
-      text-decoration: none; }
-    .Profile .profile-info-list .profile-menu-item i {
-      padding: 2vh 2vh 2vh 6vh; }
+  .Profile .profile-info-list {
+    display: block; }
+    .Profile .profile-info-list .profile-menu-item {
+      text-align: left;
+      display: block;
+      color: red;
+      font-size: 2vw;
+      padding: 3vw; }
+      .Profile .profile-info-list .profile-menu-item a {
+        color: #01cfe4;
+        text-decoration: none; }
+      .Profile .profile-info-list .profile-menu-item i {
+        padding: 2vh 2vh 2vh 6vh; }
   @media screen and (max-width: 450px) {
     .Profile .profile-info {
       display: inline-block; }
@@ -10447,6 +10500,14 @@ a.button {
         font-size: 3vh; } }
 
 /* CSS Profil background */
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 /* CSS activities */
 .Activity {
   background-image: url(../img/BG.png);
@@ -10454,91 +10515,112 @@ a.button {
   background-size: 100% 100%;
   text-align: center;
   /* CSS edit in item */ }
-  .Activity h1 {
-    position: relative;
-    top: 1%;
-    color: #01cfe4;
-    font-size: 1.5em; }
+  .Activity .height {
+    display: inline;
+    height: 17vh;
+    margin: 1%;
+    padding: 1%;
+    width: 100%; }
+    .Activity .height h1 {
+      position: relative;
+      display: inline-block;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
+    .Activity .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
   .Activity h3, .Activity h2 {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
     color: #01cfe4;
-    margin-left: 18%;
-    margin-top: 5%;
-    width: 50%;
+    margin-left: 5%;
+    display: inline-flex;
     text-align: left;
-    font-size: 70%; }
+    font-size: 0.8em; }
   .Activity span {
     float: left;
-    margin-left: -0.5%;
-    margin-top: -0.5rem;
-    position: absolute;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
     z-index: 10; }
-    .Activity span i {
-      padding: 7px;
-      color: #fff;
-      background: #01cfe4;
-      border-radius: 50%;
-      font-size: 1em;
-      margin: 0em; }
   .Activity .challenger {
     width: 3em;
     height: 2.8em;
     margin-bottom: 1.5em;
     margin-left: 0.9rem; }
   .Activity .list {
-    background: transparent; }
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    border: none;
+    color: #01cfe4;
+    background: transparent;
+    display: block;
+    position: relative; }
     .Activity .list ion-item {
+      margin: 1%;
+      padding: 1%;
       width: 100%;
-      height: auto;
-      border: none;
-      margin-left: 1em;
-      color: #fff;
-      padding: 0;
-      background: transparent;
+      min-height: 3em;
+      font-size: 1.2em;
       text-align: left;
-      display: inline-block;
+      border: none;
+      color: #fff;
+      background: transparent;
+      position: relative;
       /* CSS imges */ }
       .Activity .list ion-item .p, .Activity .list ion-item i {
         color: #ffb400;
+        margin: 1%;
+        padding: 1%;
         width: 100%;
-        margin-left: 18%;
+        display: block;
         padding-right: 1vw;
-        font-size: 70%; }
+        font-size: 1em; }
       .Activity .list ion-item div {
-        width: 98%;
-        display: inline-flex; }
+        margin: 1%;
+        padding: 1%;
+        width: 100%;
+        display: inline-flex;
+        font-size: 1em; }
       .Activity .list ion-item div p {
         color: #01cfe4;
-        margin-left: 3vw;
-        margin-top: 4%;
-        width: 55%;
-        font-size: 70%; }
-      .Activity .list ion-item .img {
-        display: block;
+        margin: 1%;
+        padding: 1%;
         width: 100%;
-        height: auto;
-        margin: 6% 5% 4% 4%; }
+        margin-bottom: 1vh;
+        display: inline-flex;
+        font-size: 0.8em; }
+      .Activity .list ion-item .img {
+        margin: 1%;
+        padding: 1%;
+        width: 100%;
+        display: block; }
         .Activity .list ion-item .img img {
           display: inline;
           width: 4em;
           height: 3.5em;
           padding: 0.3em 1em 0.3em 0; }
   .Activity .com p {
-    width: 63%;
+    width: 90%;
     padding-left: 1rem;
     background: transparent;
     text-align: left;
-    padding-bottom: 1em;
     display: inline-block;
     white-space: normal;
-    color: #fff; }
+    color: #fff;
+    width: 63%; }
   @media screen and (max-width: 450px) {
     .Activity .com p {
       padding-left: 1rem; }
-    .Activity .list ion-item .img {
-      margin-left: 5%; }
     .Activity h2 {
-      margin-left: 18%;
-      margin-top: 5%; }
+      margin-left: 15%; }
     .Activity ion-item div p {
       margin-right: 3vw; } }
   @media screen and (min-width: 1920px) {
@@ -10556,8 +10638,7 @@ a.button {
       width: 7em;
       height: 6.5em; }
     .Activity h2 {
-      margin-left: 4.5%;
-      margin-top: 5%; }
+      margin-left: 4.5%; }
     .Activity ion-item div p {
       margin-left: 2vw; }
     .Activity .list ion-item .p {
@@ -10565,6 +10646,14 @@ a.button {
     .Activity .challenger {
       margin-left: -3em; } }
 
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 /* CSS nothifications */
 .Notifications {
   background-image: url(../img/BG.png);
@@ -10573,65 +10662,88 @@ a.button {
   text-align: center;
   /* CSS edit in item */ }
   .Notifications .height {
+    display: inline;
     height: 17vh;
+    margin: 1%;
+    padding: 1%;
     width: 100%; }
     .Notifications .height h1 {
       position: relative;
+      display: inline-block;
       top: 30%;
       color: #01cfe4;
       font-size: 1.4em; }
+    .Notifications .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
   .Notifications h3, .Notifications h2 {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
     color: #01cfe4;
     margin-left: 5%;
-    width: 50%;
+    display: inline-flex;
     text-align: left;
     font-size: 0.8em; }
   .Notifications span {
     float: left;
-    margin-left: -0.5%;
-    margin-top: -0.5rem;
-    position: absolute;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
     z-index: 10; }
-    .Notifications span i {
-      padding: 7px;
-      color: #fff;
-      background: #01cfe4;
-      border-radius: 50%;
-      font-size: 1em;
-      margin: 0em; }
   .Notifications .list {
-    background: transparent; }
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    border: none;
+    color: #01cfe4;
+    background: transparent;
+    display: block;
+    position: relative; }
     .Notifications .list ion-item {
+      margin: 1%;
+      padding: 1%;
       width: 100%;
-      height: auto;
-      border: none;
-      border-left: 1px solid #fff;
-      margin-left: 1em;
-      color: #fff;
-      padding: 0;
-      background: transparent;
+      min-height: 3em;
+      font-size: 1.2em;
       text-align: left;
-      display: inline-block;
+      border: none;
+      color: #fff;
+      background: transparent;
+      position: relative;
+      border-left: 1px solid #fff;
       /* CSS imges */ }
       .Notifications .list ion-item .p, .Notifications .list ion-item i {
         color: #ffb400;
+        margin: 1%;
+        padding: 1%;
         width: 100%;
-        margin-left: 5%;
-        padding-right: 1vw; }
+        display: block;
+        padding-right: 1vw;
+        font-size: 1em; }
       .Notifications .list ion-item div {
-        width: 98%;
-        display: inline-flex; }
+        margin: 1%;
+        padding: 1%;
+        width: 100%;
+        display: inline-flex;
+        font-size: 1em; }
       .Notifications .list ion-item div p {
         color: #01cfe4;
-        margin-left: 20vw;
+        margin: 1%;
+        padding: 1%;
+        width: 100%;
         margin-bottom: 1vh;
-        width: 55%;
+        display: inline-flex;
         font-size: 0.8em; }
       .Notifications .list ion-item .img {
-        display: block;
+        margin: 1%;
+        padding: 1%;
         width: 100%;
-        height: auto;
-        margin: 5%; }
+        display: block; }
         .Notifications .list ion-item .img img {
           display: inline;
           width: 4em;
@@ -10641,11 +10753,10 @@ a.button {
         width: 30vw;
         height: 20vh; }
   .Notifications .com p {
-    width: 61%;
-    padding-left: 3rem;
+    width: 90%;
+    padding-left: 1rem;
     background: transparent;
     text-align: left;
-    padding-bottom: 30px;
     display: inline-block;
     white-space: normal;
     color: #fff; }
@@ -10766,189 +10877,174 @@ a.button {
     color: #01cfe4;
     font-size: 10px; }
 
+/* CSS list card */
+.challenges .bar-header span {
+  color: #fff; }
+  .challenges .bar-header span h3:first-child {
+    font-size: 20px; }
+
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 /* CSS tabs- Menue */
 /* here is the mine CSS 4 background, colors and so on */
 .Settings {
-  background-image: url("../img/BG.png");
+  background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
   /* here is the mine CSS 4 back button, heder and so on the bar*/ }
-  .Settings .bar-header {
+  .Settings .height {
+    display: inline;
+    height: 17vh;
     margin: 1%;
     padding: 1%;
-    text-align: left;
-    font-size: 1.5em;
-    background: transparent;
-    border: none; }
-    .Settings .bar-header i {
-      color: #fff; }
-    .Settings .bar-header h3 {
-      width: 100%;
+    width: 100%; }
+    .Settings .height h1 {
+      position: relative;
+      display: inline-block;
+      top: 30%;
       color: #01cfe4;
-      margin-left: 1%;
-      text-align: center; }
+      font-size: 1.4em; }
+    .Settings .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
+  .Settings h3, .Settings h2 {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    color: #01cfe4;
+    margin-left: 5%;
+    display: inline-flex;
+    text-align: left;
+    font-size: 0.8em; }
+  .Settings span {
+    float: left;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
+    z-index: 10; }
   .Settings h1 {
     color: #04a4c3;
-    font-size: 15px; }
+    font-size: 1.5em; }
   .Settings .list {
-    padding: 1%;
     margin: 1%;
+    padding: 1%;
+    width: 100%;
     border: none;
-    color: #01cfe4; }
-    .Settings .list .item-toggle {
+    color: #01cfe4;
+    background: transparent;
+    display: block;
+    position: relative; }
+    .Settings .list ion-item {
+      margin: 1%;
+      padding: 1%;
+      width: 100%;
+      min-height: 3em;
+      font-size: 1.2em;
       text-align: left;
-      background: transparent;
       border: none;
-      font-size: 15px;
+      color: #fff;
+      background: transparent;
+      position: relative;
       color: #01cfe4; }
-      .Settings .list .item-toggle .toggle.toggle-assertive input:checked + .track {
+      .Settings .list ion-item .toggle.toggle-assertive input:checked + .track {
         border-color: #01cfe4;
         background-color: #01cfe4; }
 
-.TimeLineCard {
-  max-height: 20em; }
-  .TimeLineCard .demo {
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: #fff;
-    margin-top: 2%;
-    margin-right: 2%;
-    position: relative; }
-  .TimeLineCard .demo > img {
-    position: relative;
-    width: 100%;
-    height: auto; }
-  .TimeLineCard .demo h2 {
-    position: absolute;
-    top: 15%;
-    color: #fff;
-    font-size: 20px;
-    padding-left: 30px; }
-  .TimeLineCard .time {
-    display: inline-block;
-    vertical-align: top; }
-  .TimeLineCard .timetime {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: -73%;
-    width: 174px;
-    height: auto; }
-  .TimeLineCard .timetime p {
-    font-size: 0.5em;
-    line-height: 22px;
-    color: #03b2d1; }
-  .TimeLineCard .likeLike {
-    display: inline-block; }
-  .TimeLineCard .likeLike .person {
-    display: inline-block;
-    vertical-align: top;
-    background-image: url(../img/icons/user1.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 13px;
-    height: 19px;
-    width: 22px; }
-  .TimeLineCard .likeLike .comment {
-    display: inline-block;
-    vertical-align: top;
-    background-image: url(../img/icons/speech1.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 13px;
-    height: 17px;
-    width: 26px; }
-  .TimeLineCard .likeLike .heart {
-    display: inline-block;
-    vertical-align: top;
-    background-image: url(../img/icons/love1.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 13px;
-    height: 17px;
-    width: 26px; }
-  .TimeLineCard .person p {
-    padding-left: 43%; }
-  .TimeLineCard .comment p {
-    padding-left: 50%; }
-  .TimeLineCard .heart p {
-    padding-left: 55%; }
-  .TimeLineCard .likeLike p {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 8px;
-    color: #03b2d1; }
-  .TimeLineCard .clock h6 {
-    font-size: 13px;
-    color: #03b2d1;
-    line-height: 12px; }
-  .TimeLineCard .clock h6 > p {
-    color: #ffcf7d;
-    font-size: 5px;
-    line-height: 5px; }
-  .TimeLineCard .clock {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 4px;
-    padding-top: 5px; }
-  .TimeLineCard .timecheck {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 4px;
-    line-height: -1px; }
-  .TimeLineCard .timecheck img {
-    width: 16px;
-    height: 20px; }
-  .TimeLineCard .timeclock {
-    display: inline-block;
-    vertical-align: top;
-    height: 16px;
-    line-height: -1px; }
-  .TimeLineCard .timeclock img {
-    width: 16px;
-    height: 16px; }
-  .TimeLineCard .info {
-    width: 25%;
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    bottom: 20px; }
-  .TimeLineCard .socialtwo {
-    display: none; }
-  .TimeLineCard .responsive-logo {
-    display: none; }
-  .TimeLineCard .user {
-    width: 80%;
-    position: absolute;
-    top: 28vh;
-    left: -10%; }
-  .TimeLineCard .user-name {
-    display: inline-block;
-    vertical-align: top;
-    color: #fff;
-    font-size: 0.8em;
-    margin-left: 4px; }
-  .TimeLineCard .user-pic {
-    display: inline-block;
-    width: 20%;
-    margin-left: -6%; }
-  .TimeLineCard .user .img-circle {
-    border-radius: 50%;
-    border: 2px solid #fff;
-    width: 4em; }
-  .TimeLineCard .arrow {
-    position: absolute;
-    top: 10%;
-    width: 100%; }
-  .TimeLineCard .arrowSecond {
-    position: absolute;
-    top: 30%;
-    width: 100%; }
-  .TimeLineCard .arrow img {
-    width: 50px;
-    height: 50px;
-    border: none; }
+/* CSS Timeline	title and arrows*/
+.timeline {
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  display: block;
+  position: relative; }
+  .timeline .TimeLineCard {
+    min-height: 12em; }
+    .timeline .TimeLineCard .navigation .arrows-right {
+      height: 0.5em;
+      font-size: 1.2em;
+      margin-top: -20%;
+      padding: 0;
+      position: relative;
+      color: blue;
+      float: right; }
+    .timeline .TimeLineCard .navigation .arrows-left {
+      height: 0.5em;
+      font-size: 1.2em;
+      margin-top: -20%;
+      padding: 0;
+      position: relative;
+      color: blue;
+      float: left; }
+    .timeline .TimeLineCard .navigation .title {
+      color: blue;
+      position: absolute;
+      top: 2%;
+      left: 5%;
+      font-size: 1em; }
+    .timeline .TimeLineCard .content {
+      min-height: 10em;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      display: inline-flex;
+      position: relative; }
+    .timeline .TimeLineCard .footer {
+      text-align: center;
+      display: inline-flex;
+      position: relative;
+      top: 2em;
+      padding: 1%;
+      background: rgba(27, 73, 88, 0.2);
+      width: 100%;
+      min-height: 2em;
+      /*make circle buttons*/
+      /* avatar settings, img*/ }
+      .timeline .TimeLineCard .footer span {
+        width: 16%; }
+        .timeline .TimeLineCard .footer span .fa {
+          width: 100%;
+          height: 100%;
+          display: inline-flex;
+          text-rendering: auto;
+          border-radius: 50%;
+          color: white;
+          background-size: 100% 100%; }
+        .timeline .TimeLineCard .footer span .fa-size {
+          min-width: 2.5em;
+          height: 2.5em;
+          margin-top: 1.5em;
+          background-size: 88% 90%; }
+      .timeline .TimeLineCard .footer .info {
+        display: inline-flex;
+        width: 10%;
+        height: 5em;
+        margin-top: 0%;
+        font-size: 10px;
+        color: #04a4c3;
+        margin: 1%;
+        margin-right: 3%; }
+      .timeline .TimeLineCard .footer .ng-binding {
+        color: #04a4c3;
+        font-size: 10px;
+        margin-top: 1.5em;
+        margin-right: 2%; }
+        .timeline .TimeLineCard .footer .ng-binding h5, .timeline .TimeLineCard .footer .ng-binding i {
+          color: #ffb400; }
 
 .Chat .messages {
   background-color: #e8edf0; }

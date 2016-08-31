@@ -283,6 +283,11 @@ $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 			templateUrl: 'templates/side-menu/favorites.html',
 			// controller: 'A'
 		})
+		.state('app.dare',{
+			url : '/dare',
+			templateUrl: 'templates/tab-single-dare.html',
+			// controller: 'A'
+		})
 
 
 

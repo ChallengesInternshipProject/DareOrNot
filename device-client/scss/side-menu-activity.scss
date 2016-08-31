@@ -34,24 +34,15 @@
 				@include image-style;
 
 						img{
-							display: inline;
-							width: 4em;
-							height: 3.5em;
-							padding: 0.3em 1em 0.3em 0;
+							@include image-square;
 						}
 
 					}
 			}
 		}
-			.com p{	
-				width: 63%;
-				padding-left: 1rem;
-			    background: transparent;
-			    text-align: left;
-			    padding-bottom: 1em;
-			    display: inline-block;
-			    white-space: normal;
-			    color: #fff;
+			.com p{
+				 @include paragraf-comentar;
+				 width: 63%;
 				}
 
 				@media screen and (max-width: 450px){
