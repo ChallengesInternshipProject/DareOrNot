@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS list card 
+		title and arrows*/
+.TimeLineCard { min-height:12em;
+	.arrows-right{max-height: 0.5em;
+				font-size: 1em;
+				float: right;
+				/* width: 100%; */
+				margin-top: -3%;
+				padding: 0;
+				position: relative;
+				color: blue;
+			}
+	.arrows-left{max-height: 0.5em;
+				font-size: 1em;
+				float: left;
+				/* width: 100%; */
+				margin-top: -3%;
+				padding: 0;
+				position: relative;
+				color: blue;
+			}
+	.arrows{	color: blue;
+				position: absolute;
+				top: 2%;
+				left: 5%;
+				font-size: 1em;
+			
+			}
+	.content{min-height: 10em;
+			position: relative;
+			text-align: center;
+			display: inline-flex;
+			position: relative;}
+	.footer{
+			    text-align: center;
+				display: inline-flex;
+				position: relative;
+				top: 2em;
+				padding: 1%;
+				background: rgba(27, 73, 88, 0.3);
+				width: 100%;
+			/*make circle buttons*/
+			span{width:16%;
+				.fa {
+						width: 100%;
+						height: 100%;
+						display: inline-flex;
+						/* font-size: 2.5em; */
+						text-rendering: auto;
+						border-radius: 50%;
+						color: white;
+						/* margin-right: -3%; */
+						/* margin-bottom: -3%; */
+						padding: 10%;
+						/* margin-top: -3%; */
+						}	
+				}
+				
+		.info{
+				display: inline-flex;
+				width: 10%;
+				height: 5em;
+				margin-top: 0%;
+				font-size: 10px;
+				color: #04a4c3;
+				margin-right: 3%;
+					}
+	/* avatar settings, img*/
+		.avatar a img{
+			margin-top: -0.9em;
+			margin-left: -0.3em;
+			border: 1px solid;
+			min-width: 1.3em;
+			min-height: 1.3em;}
+		.ng-binding{color: #04a4c3;
+					font-size: 10px;
+					margin-top: 2em;
+					margin-right: 2%;
+					h5, i{color: #ffb400;}
+					}
+		    }
+	}
