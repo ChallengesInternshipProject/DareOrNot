@@ -15,7 +15,7 @@ angular.module('starter.services')
 			return $http({
 				method: 'POST',
 				url: SERVER_ADDRESS + '/dares/create',
-				data: data
+				data: data,
 			})
 
 		}

@@ -15,7 +15,6 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 	SERVER_ADDRESS,
 	FriendsResolver,
 	$state
-	// FileService
 ) {
 		// inital form data
 	$scope.data = {
@@ -29,22 +28,22 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 			googlePlus : false
 		},
 		invitedUsers : [],
-		files : []
 	};
 
 	//Friends
 	$scope.friends = FriendsResolver;
+	c
 	// Get Categories
 	$scope.categories = CategoryService.getAllGategories();
 	//Files 
 	// $scope.FileService = FileService
 	$scope.FileService = {
-		files : [],
+		fileData : [],
 		processFiles : function(files){
 			angular.forEach(files, function(flowFile, i){
 				var fileReader = new FileReader();
 				fileReader.onload = function (event) {
-					$scope.FileService.files.push(event.target.result);
+					$scope.FileService.fileData.push(event.target.result);
 				};
 				fileReader.readAsDataURL(flowFile.file);
 			});
@@ -69,6 +68,7 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 							$scope.data.invitedUsers.push(key);
 					}
 			});
+			//console.log($scope.data)
 			DareService.create($scope.data).then(function(){
 				$state.go("app.timeline")
 			});
@@ -83,7 +83,7 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 	});
 
 	
-	$scope.data.files =$scope.FileService.files
+	$scope.data.fileData =$scope.FileService.fileData
 		
 
 			
