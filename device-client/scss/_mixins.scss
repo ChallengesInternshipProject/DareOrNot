@@ -144,6 +144,8 @@
 				margin: 0;
 				padding: 1%;
 				width: 100%;
+				display: block;
+				position: relative;
 		}
 	//timeline < navigation title style//	
 @mixin arrows-position{
