@@ -1,3 +1,7 @@
+
+//Activit, Notification, Settings//
+
+
 //background and body elements style//
 
 @mixin Mine_user_background{
@@ -40,7 +44,6 @@
 				border: none;
 				color: #fff;
 				background: transparent;
-				display: inline-block;
 				position: relative;
 				 }
 				 
@@ -101,9 +104,6 @@
 		display: inline-block;
 		z-index: 10;
 		}
-
-		
-		
 		
 @mixin 	i{
 		padding: 7px;
@@ -130,3 +130,27 @@
 					  width: 100%;
 					}
 
+					
+					
+	//Timeline,  //
+	
+//background and body elements style//
+
+@mixin gray_background{
+			    background: #e8edf0;
+				background-size: 100% 100%;
+				color: #03b2d1;
+				font-size: 1em;
+				margin: 0;
+				padding: 1%;
+				width: 100%;
+		}
+	//timeline < navigation title style//	
+@mixin arrows-position{
+	height: 0.5em;
+    font-size: 1.2em;
+    margin-top: -20%;
+    padding: 0;
+    position: relative;
+    color: blue;
+}

@@ -9,8 +9,8 @@
     </div>
  <div class="navigation">
   <!-- <!--   <!-- title  --> 
-  <span class="arrows"> 
-    {{challenge.title}} 
+  <span class="title"> 
+    Нахрани коте
   </span>
     <!-- Slide to the left  --> 
 <div class="arrows-right" ng-click="nextSlide()"><i class="ion-ios-arrow-forward"></i></div> 
@@ -18,30 +18,30 @@
 <div class="arrows-left" ng-click="previousSlide()"><i class="ion-ios-arrow-back"></i></div> 
  </div>
 <div class="footer"> 
-    <span class="avatar"> 
+    <span class="info avatar"> 
       <a class="fa item-avatar" href="#"> 
         <img ng-src="{{SERVER_ADDRESS}}{{challenge._creator.avatar}}"> 
       </a> 
     </span> 
-    <span> 
+     <span class="info">  
       <i class="ion-ios-location-outline"></i> 
-      {{challenge.city}} 
+      Пловдив
     </span> 
-    <span> 
+    <span class="info"> 
       <i class="icon ion-ios-timer-outline"></i> 
-      {{challenge.timeElapsed}} 
+      23:56
     </span> 
     <span class="info"> 
-      <i class="fa fa-user-active"></i> 
-      {{challenge.invitedUsers.length}} 
+      <i class="fa-size app-icon-user-active"></i> 
+   34
     </span> 
     <span class="info"> 
-      <i class="fa fa-speech-active"></i> 
-      {{challenge.comments}} 
+      <i class="fa-size app-icon-speech-active"></i> 
+      390
     </span> 
     <span class="info"> 
-          <i class="fa fa-love-active"></i> 
-      {{challenge.likes}} 
+          <i class="fa-size app-icon-love-active"></i> 
+     4
     </span> 
     <span> 
       <h5>Приключва:</h5> 
