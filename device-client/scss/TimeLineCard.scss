@@ -10,7 +10,8 @@
 			}
 		
 		.item{background: transparent;
-		.TimeLineCard {min-height:12em;
+		.TimeLineCard {min-height: 10em;
+						max-height: 12.5em;
 			.navigation{
 			.arrows-right{
 						@include arrows-position;
@@ -21,7 +22,7 @@
 						float: left;
 					}
 			.title{	
-						color: blue;
+						color: #fff;
 						position: absolute;
 						top: 2%;
 						left: 5%;
@@ -39,9 +40,8 @@
 					display: inline-flex;
 					position: relative;
 					top: 0.5em;
-					margin: 0%;
+					margin-top: -6%;
 					padding: 1%;
-					background: rgba(27, 73, 88, 0.2);
 					width: 100%;
 					min-height: 2em;
 					/*make circle buttons*/
@@ -60,7 +60,7 @@
 								height: 2.5em;
 								margin-top: 1.5em;
 								background-size: 88% 90%;}
-						}
+						}		
 						
 				.info{
 					display: inline-flex;
@@ -79,13 +79,14 @@
 							margin-top: 1.5em;
 							margin-right: 2%;
 							h5, i{color: #ffb400;}
-								}
-			.it-posi{
-						display: block;
-						margin-left: 50%;
-						margin-top: -35%;
-				}		
+								}	
 			}
+				.googleMap{  
+					width: 40%;
+					display: inline;
+					height: 24.6vh;
+					float: right;
+					margin-top: -46%;}	
 		}
 	}
 }
