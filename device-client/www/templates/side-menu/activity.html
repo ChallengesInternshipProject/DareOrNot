@@ -1,53 +1,82 @@
-<ion-view class="activity" view-title="Активности">
+<ion-view>
+	  <ion-content  class="Activity">
+    <div class="height">
+        <h1>Активност</h1>
+        <i class="ion-chevron-left" ng-click="activitiesModal.hide()"></i>
+	</div>
+    <ion-list>
+      <ion-item class="item item-avatar">
+        <img src="img/adam.jpg">
+        <div>
+        <h2>Петър Георгиев</h2>
+         <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
+         </div>
+        <p class="p">Наблюдава 5 ваши предизвикателства</p>
+       <div class="img">
+        <a href="#"><img src="img/flower.jpg"></a>
+        <a href="#"><img src="img/orange.jpg"></a>
+        <a href="#"><img src="img/roses.jpg"></a>
+        <a href="#"><img src="img/roses.jpg"></a>
+       </div>
+      </ion-item>
+                <hr width="90%">
+      <ion-item class="item item-avatar">
+      	<img src="img/photo.jpg">
+        <div>
+        <h2>Мария Минчева</h2>
+        <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
+        </div>
+        <p class="p">Ви последва</p>
 
-	  <ion-content class="cont">
-		<div class="bar bar-header" style='font-size:2em'>
-			<a href=""  ng-click="sideMenuActivityModal.hide()"
-				<i class="ion-ios-close-outline"></i>
-			</a>
-			<span>
-				<h3>Активност</h3>
-			</span>
-		</div>
+      </ion-item>
+                 <hr width="90%">
 
-		<div class="content has-header padding">
-			<ion-list class="has-header">
-				<ion-item ng-repeat="notification in notifications" class="">
-					<div class="row">
-						<div class="col">
-							<a href="#" class="item item-avatar">
-								<img ng-src="{{SERVER_ADDRESS}}/{{notification.sender.avatar}}" >
-							</a>
-						</div>
-						<div class="col">
-							<div class="row" style="color: #01cfe4;">
-								{{notification.sender.email}}
-							</div>
-							<div class="row">
-								{{notification.message}}
-							</div>
-							<div class="row" style="margin-right: 2em;">
-								{{notification.createdOn | date : 'medium'}}
-							</div>
-						</div>
-						<div class="col col-center" ng-show="notification.refObject ==  'Friendship Request'">
-							<button class="button button-positive button-small" ng-click="acceptFriendship(notification.receiver._id,notification.sender._id)">  Приеми</button>
-						</div>
-						
+      <ion-item class="item item-avatar">
+      		<img src="img/ben.png">
+        <div>
+        <h2>Станислав Мартинов</h2>
+         <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
+         </div>
+        <p  class="p">Коментира</p>
 
-						
-						<div class="row" ng-if="notification.refObjectID" >
-							<a  ng-repeat="picture in notification.refObjectID.pictures" class="item item-thumbnail-left" href="#">
-									<img ng-src="{{SERVER_ADDRESS}}/{{picture}}">
-							</a>
-						</div>
-						<div class="row" ng-if="activity.text">
-							<div class="item item-text-wrap">
-							{{notification.sender.avatar}}
-						</div>
-					</div>
-				</ion-item>
-			</ion-list>
-		</div>
+     </ion-item>
+
+      <ion-item class="com">
+      		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem Ipsum</p>
+          <a href="#"><img  class="challenger" src="img/flower.jpg"></a>
+      </ion-item>
+
+                       <hr width="90%">
+
+      <ion-item class="item item-avatar">
+      		<img src="img/photo.jpg">
+        <div>
+        <h2>Мария Минчева</h2>
+        <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
+        </div>
+        <p class="p">Наблюдава 3 ваши преизвикателства</p>
+		<div class="img">
+        <a href="#"><img src="img/roses.jpg"></a>
+        <a href="#"><img src="img/orange.jpg"></a>
+        <a href="#"><img src="img/flower.jpg"></a>
+    </div>
+      </ion-item>
+	                    <hr width="90%">
+     
+      
+      <ion-item class="item item-avatar">
+        <img src="img/ben.png">
+        <div>
+        <h2>Петър Георгиев</h2>
+         <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
+         </div>
+        <p class="p">Ви последва</p>
+      </ion-item>
+        <ion-item class="com">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem Ipsum</p>
+    
+      </ion-item>
+    </ion-list>
+
 	</ion-content>
 </ion-view>

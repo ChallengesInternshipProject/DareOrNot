@@ -7,7 +7,7 @@ For example, you might change some of the default colors:
 
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
+$positive:                        #012438 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
@@ -15,6 +15,10 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+.bar-positive {
+  background-color: #012438 !important;
+  border-color: #012438 !important; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -3707,7 +3711,7 @@ address {
   line-height: 1.42857; }
 
 a {
-  color: #387ef5; }
+  color: #012438; }
 
 a.subdued {
   padding-right: 10px;
@@ -3935,14 +3939,14 @@ a.subdued {
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
-    border-color: #0c60ee;
-    background-color: #387ef5;
-    background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
+    border-color: #000406;
+    background-color: #012438;
+    background-image: linear-gradient(0deg, #000406, #000406 50%, transparent 50%);
     color: #fff; }
     .bar.bar-positive .title {
       color: #fff; }
     .bar.bar-positive.bar-footer {
-      background-image: linear-gradient(180deg, #0c60ee, #0c60ee 50%, transparent 50%); }
+      background-image: linear-gradient(180deg, #000406, #000406 50%, transparent 50%); }
   .bar.bar-calm {
     border-color: #0a9dc7;
     background-color: #11c1f3;
@@ -4137,15 +4141,15 @@ a.subdued {
     background: none; }
 
 .bar-positive .button {
-  border-color: #0c60ee;
-  background-color: #387ef5;
+  border-color: #000406;
+  background-color: #012438;
   color: #fff; }
   .bar-positive .button:hover {
     color: #fff;
     text-decoration: none; }
   .bar-positive .button.active, .bar-positive .button.activated {
-    border-color: #0c60ee;
-    background-color: #0c60ee; }
+    border-color: #000406;
+    background-color: #000406; }
   .bar-positive .button.button-clear {
     border-color: transparent;
     background: none;
@@ -4406,14 +4410,14 @@ a.subdued {
 
 .tabs-positive > .tabs,
 .tabs.tabs-positive {
-  border-color: #0c60ee;
-  background-color: #387ef5;
-  background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
+  border-color: #000406;
+  background-color: #012438;
+  background-image: linear-gradient(0deg, #000406, #000406 50%, transparent 50%);
   color: #fff; }
   .tabs-positive > .tabs .tab-item .badge,
   .tabs.tabs-positive .tab-item .badge {
     background-color: #fff;
-    color: #387ef5; }
+    color: #012438; }
 
 .tabs-calm > .tabs,
 .tabs.tabs-calm {
@@ -4534,7 +4538,7 @@ a.subdued {
   top: 4%; }
 
 .tabs-striped.tabs-positive .tabs {
-  background-color: #387ef5; }
+  background-color: #012438; }
 
 .tabs-striped.tabs-positive .tab-item {
   color: rgba(255, 255, 255, 0.4);
@@ -4668,7 +4672,7 @@ a.subdued {
   background-image: none; }
 
 .tabs-striped.tabs-background-positive .tabs {
-  background-color: #387ef5;
+  background-color: #012438;
   background-image: none; }
 
 .tabs-striped.tabs-background-calm .tabs {
@@ -4724,14 +4728,14 @@ a.subdued {
       opacity: 1; }
 
 .tabs-striped.tabs-color-positive .tab-item {
-  color: rgba(56, 126, 245, 0.4);
+  color: rgba(1, 36, 56, 0.4);
   opacity: 1; }
   .tabs-striped.tabs-color-positive .tab-item .badge {
     opacity: 0.4; }
   .tabs-striped.tabs-color-positive .tab-item.tab-item-active, .tabs-striped.tabs-color-positive .tab-item.active, .tabs-striped.tabs-color-positive .tab-item.activated {
     margin-top: -2px;
-    color: #387ef5;
-    border: 0 solid #387ef5;
+    color: #012438;
+    border: 0 solid #012438;
     border-top-width: 2px; }
     .tabs-striped.tabs-color-positive .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-positive .tab-item.active .badge, .tabs-striped.tabs-color-positive .tab-item.activated .badge {
       top: 2px;
@@ -4835,9 +4839,9 @@ a.subdued {
 
 .tabs-background-positive .tabs,
 .tabs-background-positive > .tabs {
-  background-color: #387ef5;
-  background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
-  border-color: #0c60ee; }
+  background-color: #012438;
+  background-image: linear-gradient(0deg, #000406, #000406 50%, transparent 50%);
+  border-color: #000406; }
 
 .tabs-background-calm .tabs,
 .tabs-background-calm > .tabs {
@@ -4898,13 +4902,13 @@ a.subdued {
       opacity: 1; }
 
 .tabs-color-positive .tab-item {
-  color: rgba(56, 126, 245, 0.4);
+  color: rgba(1, 36, 56, 0.4);
   opacity: 1; }
   .tabs-color-positive .tab-item .badge {
     opacity: 0.4; }
   .tabs-color-positive .tab-item.tab-item-active, .tabs-color-positive .tab-item.active, .tabs-color-positive .tab-item.activated {
-    color: #387ef5;
-    border: 0 solid #387ef5; }
+    color: #012438;
+    border: 0 solid #012438; }
     .tabs-color-positive .tab-item.tab-item-active .badge, .tabs-color-positive .tab-item.active .badge, .tabs-color-positive .tab-item.activated .badge {
       opacity: 1; }
 
@@ -4995,11 +4999,11 @@ ion-tabs.tabs-striped.tabs-color-active-stable .tab-item.tab-item-active, ion-ta
 ion-tabs.tabs-color-active-positive .tab-item {
   color: #444; }
   ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
-    color: #387ef5; }
+    color: #012438; }
 
 ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated {
-  border-color: #387ef5;
-  color: #387ef5; }
+  border-color: #012438;
+  color: #012438; }
 
 ion-tabs.tabs-color-active-calm .tab-item {
   color: #444; }
@@ -5211,7 +5215,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   .tab-item.tab-item-active.tab-item-positive,
   .tab-item.active.tab-item-positive,
   .tab-item.activated.tab-item-positive {
-    color: #387ef5; }
+    color: #012438; }
   .tab-item.tab-item-active.tab-item-calm,
   .tab-item.active.tab-item-calm,
   .tab-item.activated.tab-item-calm {
@@ -5758,8 +5762,8 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
     background-color: #f8f8f8;
     color: #444; }
   .item.item-positive {
-    border-color: #0c60ee;
-    background-color: #387ef5;
+    border-color: #000406;
+    background-color: #012438;
     color: #fff; }
   .item.item-calm {
     border-color: #0a9dc7;
@@ -5846,16 +5850,16 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   .item-complex.activated .item-content.item-positive,
   .item .item-content.active.item-positive,
   .item .item-content.activated.item-positive {
-    border-color: #0c60ee;
-    background-color: #0c60ee; }
+    border-color: #000406;
+    background-color: #000406; }
     .item.active.item-positive.item-complex > .item-content,
     .item.activated.item-positive.item-complex > .item-content,
     .item-complex.active .item-content.item-positive.item-complex > .item-content,
     .item-complex.activated .item-content.item-positive.item-complex > .item-content,
     .item .item-content.active.item-positive.item-complex > .item-content,
     .item .item-content.activated.item-positive.item-complex > .item-content {
-      border-color: #0c60ee;
-      background-color: #0c60ee; }
+      border-color: #000406;
+      background-color: #000406; }
   .item.active.item-calm,
   .item.activated.item-calm,
   .item-complex.active .item-content.item-calm,
@@ -6061,15 +6065,15 @@ a.item-content {
       background-color: #e5e5e5; }
 
 .item-complex.item-positive > .item-content {
-  border-color: #0c60ee;
-  background-color: #387ef5;
+  border-color: #000406;
+  background-color: #012438;
   color: #fff; }
   .item-complex.item-positive > .item-content.active, .item-complex.item-positive > .item-content:active {
-    border-color: #0c60ee;
-    background-color: #0c60ee; }
+    border-color: #000406;
+    background-color: #000406; }
     .item-complex.item-positive > .item-content.active.item-complex > .item-content, .item-complex.item-positive > .item-content:active.item-complex > .item-content {
-      border-color: #0c60ee;
-      background-color: #0c60ee; }
+      border-color: #000406;
+      background-color: #000406; }
 
 .item-complex.item-calm > .item-content {
   border-color: #0a9dc7;
@@ -6741,7 +6745,7 @@ button.item.item-button-right {
 
 .tabs .tab-item .badge.badge-positive,
 .badge.badge-positive {
-  background-color: #387ef5;
+  background-color: #012438;
   color: #fff; }
 
 .tabs .tab-item .badge.badge-calm,
@@ -7455,8 +7459,8 @@ ion-slides {
     stroke: #f8f8f8;
     fill: #f8f8f8; }
   .spinner.spinner-positive {
-    stroke: #387ef5;
-    fill: #387ef5; }
+    stroke: #012438;
+    fill: #012438; }
   .spinner.spinner-calm {
     stroke: #11c1f3;
     fill: #11c1f3; }
@@ -7497,7 +7501,7 @@ ion-slides {
   stop-color: #f8f8f8; }
 
 .spinner-spiral.spinner-positive .stop2 {
-  stop-color: #387ef5; }
+  stop-color: #012438; }
 
 .spinner-spiral.spinner-calm .stop2 {
   stop-color: #11c1f3; }
@@ -7858,8 +7862,8 @@ input[type="checkbox"][readonly] {
     border-color: #ddd; }
   .checkbox input:checked:before,
   .checkbox input:checked + .checkbox-icon:before {
-    background: #387ef5;
-    border-color: #387ef5; }
+    background: #012438;
+    border-color: #012438; }
 
 .checkbox-light input:before,
 .checkbox-light .checkbox-icon:before {
@@ -7881,12 +7885,12 @@ input[type="checkbox"][readonly] {
 
 .checkbox-positive input:before,
 .checkbox-positive .checkbox-icon:before {
-  border-color: #387ef5; }
+  border-color: #012438; }
 
 .checkbox-positive input:checked:before,
 .checkbox-positive input:checked + .checkbox-icon:before {
-  background: #387ef5;
-  border-color: #387ef5; }
+  background: #012438;
+  border-color: #012438; }
 
 .checkbox-calm input:before,
 .checkbox-calm .checkbox-icon:before {
@@ -8087,8 +8091,8 @@ input:checked + .checkbox-icon:after {
   background-color: #b2b2b2; }
 
 .toggle.toggle-positive input:checked + .track {
-  border-color: #387ef5;
-  background-color: #387ef5; }
+  border-color: #012438;
+  background-color: #012438; }
 
 .toggle.toggle-calm input:checked + .track {
   border-color: #11c1f3;
@@ -8225,10 +8229,10 @@ input:checked + .checkbox-icon:after {
   background-color: #b2b2b2; }
 
 .toggle-small .toggle-positive input:checked + .track {
-  background-color: rgba(56, 126, 245, 0.5); }
+  background-color: rgba(1, 36, 56, 0.5); }
 
 .toggle-small .toggle-positive input:checked + .track .handle {
-  background-color: #387ef5; }
+  background-color: #012438; }
 
 .toggle-small .toggle-calm input:checked + .track {
   background-color: rgba(17, 193, 243, 0.5); }
@@ -8400,9 +8404,9 @@ input:checked + .checkbox-icon:after {
   .range.range-stable input::-ms-fill-lower {
     background: #b2b2b2; }
   .range.range-positive input::-webkit-slider-thumb:before {
-    background: #387ef5; }
+    background: #012438; }
   .range.range-positive input::-ms-fill-lower {
-    background: #387ef5; }
+    background: #012438; }
   .range.range-calm input::-webkit-slider-thumb:before {
     background: #11c1f3; }
   .range.range-calm input::-ms-fill-lower {
@@ -8522,7 +8526,7 @@ input:checked + .checkbox-icon:after {
   .item-select.item-stable:after, .item-select.item-stable .input-label {
     color: #666666; }
   .item-select.item-positive select {
-    background: #387ef5;
+    background: #012438;
     color: #fff; }
   .item-select.item-positive:after, .item-select.item-positive .input-label {
     color: #fff; }
@@ -8680,28 +8684,28 @@ progress {
         color: #fff; }
   .button.button-positive {
     border-color: transparent;
-    background-color: #387ef5;
+    background-color: #012438;
     color: #fff; }
     .button.button-positive:hover {
       color: #fff;
       text-decoration: none; }
     .button.button-positive.active, .button.button-positive.activated {
       border-color: #a2a2a2;
-      background-color: #0c60ee; }
+      background-color: #000406; }
     .button.button-positive.button-clear {
       border-color: transparent;
       background: none;
       box-shadow: none;
-      color: #387ef5; }
+      color: #012438; }
     .button.button-positive.button-icon {
       border-color: transparent;
       background: none; }
     .button.button-positive.button-outline {
-      border-color: #387ef5;
+      border-color: #012438;
       background: transparent;
-      color: #387ef5; }
+      color: #012438; }
       .button.button-positive.button-outline.active, .button.button-positive.button-outline.activated {
-        background-color: #387ef5;
+        background-color: #012438;
         box-shadow: none;
         color: #fff; }
   .button.button-calm {
@@ -9003,7 +9007,7 @@ a.button {
   .button-bar.bar-stable > .button {
     border-color: #b2b2b2; }
   .button-bar.bar-positive > .button {
-    border-color: #0c60ee; }
+    border-color: #000406; }
   .button-bar.bar-calm > .button {
     border-color: #0a9dc7; }
   .button-bar.bar-assertive > .button {
@@ -9509,13 +9513,13 @@ a.button {
   border-color: #b2b2b2; }
 
 .positive, a.positive {
-  color: #387ef5; }
+  color: #012438; }
 
 .positive-bg {
-  background-color: #387ef5; }
+  background-color: #012438; }
 
 .positive-border {
-  border-color: #0c60ee; }
+  border-color: #000406; }
 
 .calm, a.calm {
   color: #11c1f3; }
@@ -9815,542 +9819,204 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-/*-----div web-----*/
-.fa {
-  width: 15vw !important;
-  height: 10vw;
-  display: inline-block;
-  font-size: 2em;
-  text-rendering: auto;
-  border-radius: 50%;
-  color: white;
-  margin-right: 3%;
-  margin-bottom: 3%;
-  margin-top: 3%; }
+.app-icon-user {
+  background: url("../img/icons/user.png"); }
 
-/*--icons--*/
-.fa-user {
-  background: url("../img/icons/user.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50% 50%; }
-
-.fa-user-active {
+.app-icon-user-active {
   background: url("../img/icons/user1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-fav {
+.app-icon-fav {
   background: url("../img/icons/fav.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-fav-active {
+.app-icon-fav-active {
   background: url("../img/icons/fav1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-friends {
+.app-icon-friends {
   background: url("../img/icons/friends.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-friends-active {
+.app-icon-friends-active {
   background: url("../img/icons/friends1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-event {
+.app-icon-event {
   background: url("../img/icons/event.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-event-active {
+.app-icon-event-active {
   background: url("../img/icons/event1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-chat {
+.app-icon-chat {
   background: url("../img/icons/chat.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-chat-active {
+.app-icon-chat-active {
   background: url("../img/icons/chat1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-stat {
+.app-icon-stat {
   background: url("../img/icons/stat.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-stat-active {
+.app-icon-stat-active {
   background: url("../img/icons/stat1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-speech {
+.app-icon-speech {
   background: url("../img/icons/speech.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-speech-active {
+.app-icon-speech-active {
   background: url("../img/icons/speech1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-out {
+.app-icon-out {
   background: url("../img/icons/out.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-out-active {
+.app-icon-out-active {
   background: url("../img/icons/out1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-settings {
+.app-icon-settings {
   background: url("../img/icons/settings.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-settings-active {
+.app-icon-settings-active {
   background: url("../img/icons/settings1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-history {
+.app-icon-history {
   background: url("../img/icons/history.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-history-active {
+.app-icon-history-active {
   background: url("../img/icons/history1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-love {
+.app-icon-love {
   background: url("../img/icons/love.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-love-active {
+.app-icon-love-active {
   background: url("../img/icons/love1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-notification {
+.app-icon-notification {
   background: url("../img/icons/notification.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-notification-active {
+.app-icon-notification-active {
   background: url("../img/icons/notification1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-activities {
+.app-icon-activities {
   background: url("../img/icons/activities.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-activities-active {
+.app-icon-activities-active {
   background: url("../img/icons/activities1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-categories {
+.app-icon-categories {
   background: url("../img/icons/categories.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-categories-active {
+.app-icon-categories-active {
   background: url("../img/icons/categories1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-left {
+.app-icon-left {
   background: url("../img/icons/left.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-left-active {
+.app-icon-left-active {
   background: url("../img/icons/left1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-right {
+.app-icon-right {
   background: url("../img/icons/right.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-.fa-right-active {
+.app-icon-right-active {
   background: url("../img/icons/right1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50% 50%; }
 
-/*BACKGROUND*/
-ion-content {
-  background-color: #012438;
-  background-image: url(../img/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  background-size: 100% 100%;
-  box-sizing: border-box;
-  /* Empty. Add your own CSS if you like */
-  /*BACKGROUND transgender*/
-  /* LOGO */
-  /*Enter LOGIN INFO*/
-  /*Changes all the icon colors */
-  /*ENTER BUTTON*/
-  /*FORGET THE PASS*/
-  /*UNDERLINE OR */
-  /*something like footer */
-  /*ion-slide-box {*/
-  /*height: 100vh !important;*/
-  /*}*/
-  /*NEXT / BACK BUUTON*/
-  /* bottom nav */
-  /* upload photo */
-  /* Example stylistic flourishes */ }
-  ion-content .leafletMap {
-    width: 100vw;
-    height: 100vh; }
-  ion-content .leafletUserMap {
-    width: 50vw;
-    height: 50vh; }
-  ion-content .leafletDareMap {
-    width: 100vw;
-    height: 50vh; }
-  ion-content .scroll {
-    height: 100%; }
-  ion-content #map {
-    width: 100%;
-    height: 100%; }
-  ion-content form {
-    width: 100vw; }
-  ion-content .button-form-submit {
-    display: none;
-    float: right;
-    width: 4vw; }
-  ion-content .input-form-submit {
-    float: left;
-    width: 100vw; }
-  ion-content .content-list {
-    margin: 1%;
-    padding: 1%;
-    display: block;
-    text-align: center;
-    font-size: 1em;
-    color: #fff;
-    background: transparent;
-    box-sizing: border-box; }
-  ion-content section.list {
-    min-height: 30em;
-    padding: 1%;
-    margin: 1%;
-    position: relative;
-    text-align: center;
-    font-size: 1em;
-    display: block;
-    background: transparent;
-    box-sizing: border-box; }
-    ion-content section.list .fa {
-      width: 15vw;
-      height: 15vw; }
-  ion-content .logo {
-    padding: 1%;
-    margin: 1%;
-    position: relative;
-    min-height: 20vh;
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 100%;
-    box-sizing: border-box; }
-  ion-content .into-login {
-    padding: 1%;
-    margin: 1%;
-    color: #78671e;
-    display: block;
-    position: relative;
-    font-size: 1em;
-    line-height: 1.8;
-    box-sizing: border-box; }
-  ion-content label.item.item-into {
-    color: #78671e;
-    border-bottom: 1px solid #808080;
-    border-top: 0;
-    width: 75%;
-    border-left: 0;
-    border-right: 0;
-    font-size: 1em; }
-  ion-content label.item-into {
-    display: inline-flex; }
-  ion-content input {
-    padding: 8px;
-    display: block;
-    border: none;
-    width: 100%;
-    background-color: transparent;
-    text-align: center; }
-  ion-content .item-input input, ion-content .item-input textarea {
-    color: #fff; }
-  ion-content input .item-input input {
-    text-align: center; }
-  ion-content span.input-label {
-    color: #78671e;
-    white-space: nowrap;
-    font-size: 1em;
-    text-align: left;
-    margin: 0;
-    padding: 0; }
-  ion-content .ion-ios-email-outline, ion-content .ion-ios-locked-outline, ion-content .ion-iphone, ion-content .ion-android-person, ion-content .ion-transgender,
-  ion-content .ion-ios-wineglass-outline, ion-content .ion-ios-camera-outline,
-  ion-content .ion-arrow-right-c, ion-content .ion-arrow-left-c, ion-content .ion-ios-camera-outline {
-    font-size: 1.5em; }
-  ion-content i {
-    color: #04a4c3; }
-  ion-content button.button.button-calm {
-    background-color: #012438;
-    color: #78671e;
-    width: 83%;
-    padding: 1%;
-    border: none;
-    margin: 3%;
-    font-size: 1em;
-    position: relative;
-    left: 6%;
-    box-sizing: border-box; }
-  ion-content .forget {
-    color: #fff;
-    margin: 3%;
-    position: relative;
-    font-size: 1em; }
-  ion-content div.container h1 {
-    font-size: 1em;
-    display: inline-block;
-    color: #fff;
-    padding: 10px;
-    position: relative; }
-  ion-content div.container h1:before,
-  ion-content div.container h1:after {
-    background: #fff;
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    width: 500%; }
-  ion-content div.container h1:before {
-    right: 100%; }
-  ion-content div.container h1:after {
-    left: 100%; }
-  ion-content div.container {
-    overflow: hidden;
-    text-align: center;
-    width: 80%;
-    left: 10%;
-    position: relative; }
-  ion-content .regis {
-    padding: 1%;
-    margin: 1%;
-    position: relative;
-    font-size: 1.4em;
-    display: block;
-    background: transparent;
-    box-sizing: border-box; }
-  ion-content a.reg {
-    color: #fff;
-    margin: 0;
-    display: inline-flex; }
-  ion-content button.button-TR {
-    background: transparent none repeat scroll 0% 0%;
-    font-size: 100%;
-    position: relative;
-    width: 30%;
-    display: inline;
-    font-size: 4em; }
-  ion-content div.slider-pager {
-    position: relative;
-    bottom: 10em;
-    padding: 0em;
-    overflow: auto;
-    height: 100%;
-    visibility: hidden; }
-  ion-content .fileContainer {
-    overflow: hidden;
-    position: relative; }
-  ion-content .fileContainer [type=file] {
-    /* cursor: inherit; */
-    /* display: block; */
-    font-size: 2em;
-    filter: alpha(opacity=0);
-    /* min-height: 100%; */
-    /* min-width: 100%; */
-    opacity: 0;
-    /* position: absolute; */
-    /* right: 0; */
-    /* text-align: right; */
-    /* top: 0; */ }
-  ion-content .fileContainer {
-    font-size: 1em;
-    box-sizing: border-box; }
-    ion-content .fileContainer i {
-      background: #012438;
-      border-radius: 50%;
-      /*font-size: 4.5em; -- */
-      font-size: 1.5em;
-      padding: 1em; }
+.Category a:-webkit-any-link {
+  text-decoration: none; }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  font: inherit;
-  font-weight: normal;
-  outline: none;
-  vertical-align: baseline; }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-menu,
-nav,
-section {
-  display: block; }
-
-html {
-  height: 100%; }
-
-body {
-  font-family: "Open Sans";
-  width: 100%; }
-
-@font-face {
-  font-family: "Open Sans"; }
-
-main {
+.Category main {
   min-width: 100%;
   background-color: #e8edf0;
   margin: 0 auto; }
 
-.box1 {
+.Category .box1 {
   display: inline-block;
   vertical-align: top;
   width: 47%;
@@ -10360,9 +10026,9 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
-  margin: 2% 1.5% 1% 2%; }
+  margin: 1%; }
 
-.box2 {
+.Category .box2 {
   display: inline-block;
   vertical-align: top;
   width: 47%;
@@ -10372,9 +10038,9 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
-  margin: 2% 1% 1% 0%; }
+  margin: 1%; }
 
-.box3 {
+.Category .box3 {
   display: inline-block;
   width: 47%;
   height: 42vh;
@@ -10383,9 +10049,9 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
-  margin: 1% 1.5% 2.5% 2%; }
+  margin: 1%; }
 
-.box4 {
+.Category .box4 {
   display: inline-block;
   width: 47%;
   height: 42vh;
@@ -10394,35 +10060,36 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
-  margin: 1% 1% 2.5% 0%; }
+  margin: 1%; }
 
-main h1 {
+.Category main h1 {
   display: block;
   font-size: 1.5em;
   text-align: center;
   margin-top: 10% !important; }
 
-main p {
+.Category main p {
   display: block;
   font-size: 80%;
   text-align: center;
   color: #03b2d1;
-  padding-top: 17em; }
+  padding-top: 15em;
+  text-decoration: none !important; }
 
-.color1 {
+.Category .underline {
+  text-decoration: none; }
+
+.Category .color1 {
   color: #056686; }
 
-.color2 {
+.Category .color2 {
   color: #dc9138; }
 
-.color3 {
+.Category .color3 {
   color: #cd4c4c; }
 
-.color4 {
+.Category .color4 {
   color: #3b51a2; }
-
-a {
-  text-decoration: none; }
 
 .Contacts {
   background-image: none;
@@ -10431,25 +10098,26 @@ a {
   line-height: 1%; }
   .Contacts .button {
     color: #fff; }
-  .Contacts ion-list p {
-    line-height: 4vh;
-    text-align: left;
-    padding-left: 4em; }
+  .Contacts ion-list .f {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 5vh;
+    margin: 0 auto; }
   .Contacts form {
+    display: inline-block;
+    width: 100%;
     padding: 5%;
     height: 73vh; }
-    .Contacts form .blue {
-      color: #03b2d1; }
-    .Contacts form article .log {
-      display: block;
-      position: relative;
-      left: 0%;
-      padding: 3%;
-      width: 100%;
-      height: auto;
-      font-size: 1em;
-      line-height: 1.8;
-      box-sizing: border-box; }
+  .Contacts article .log {
+    display: block;
+    position: relative;
+    left: 0%;
+    padding: 3%;
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    line-height: 1.8;
+    box-sizing: border-box; }
   .Contacts .input-group-user {
     position: relative;
     background-color: #fff;
@@ -10491,7 +10159,7 @@ a {
     width: 100%;
     height: 8vh;
     margin-top: 3%; }
-  .Contacts .group-locatoin {
+  .Contacts .group-location {
     position: relative;
     background-color: #e8edf0;
     background-image: url(../img/icons/location-icon.png);
@@ -10502,6 +10170,10 @@ a {
     width: 100%;
     height: 8vh;
     margin-top: 3%; }
+    .Contacts .group-location p {
+      font-size: 0.8em;
+      padding-left: 19%;
+      line-height: 4vh; }
   .Contacts .group-phone {
     position: relative;
     background-color: #e8edf0;
@@ -10513,6 +10185,10 @@ a {
     width: 100%;
     height: 8vh;
     margin-top: 3%; }
+    .Contacts .group-phone p {
+      font-size: 0.8em;
+      padding-left: 19%;
+      line-height: 4vh; }
   .Contacts .empty {
     width: 100%;
     height: 8vh;
@@ -10525,9 +10201,10 @@ a {
     float: left; }
   .Contacts .name {
     padding-left: 4em;
-    padding-top: 2.6em;
+    padding-top: 1.6em;
     width: 100%;
-    text-align: left; }
+    text-align: left;
+    background-color: transparent; }
   .Contacts .name-2 {
     padding-left: 4em;
     padding-top: 1.3em;
@@ -10536,10 +10213,16 @@ a {
     text-align: left; }
   .Contacts .button-blue {
     background-color: #012438;
-    width: 80%;
+    width: 82%;
     height: 8vh;
     border-radius: 0px;
-    margin: 13% 7%; }
+    margin: 13% 9%; }
+  .Contacts article .button-block {
+    width: 14%;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10% 1% 10% 12.5%; }
   .Contacts ::-webkit-input-placeholder {
     color: #03b2d1; }
   .Contacts :-moz-placeholder {
@@ -10550,165 +10233,102 @@ a {
     color: #03b2d1; }
   .Contacts :-ms-input-placeholder {
     color: #03b2d1; }
-
-/* CSS list card 
-		title and arrows*/
-.map {
-  min-height: 50%;
-  width: 65%;
-  margin: 10%; }
-  .map ion-content {
-    background-color: #fff;
-    background-image: none; }
-    .map ion-content .button.button-block, .map ion-content .button.button-full {
-      margin: 10%;
-      margin-bottom: 5%;
-      width: 80%;
-      height: 2em;
-      background: #066886;
-      color: #fff; }
-
-/* CSS calendar */
-ion-content.calendar {
-  background-image: none;
-  background-color: #077795;
-  text-align: center;
-  display: block;
-  color: #fff;
-  font-size: 1.5em;
-  line-height: 2em; }
+  @media screen and (min-width: 1920px) {
+    .Contacts .group-location p {
+      font-size: 2.8em; }
+    .Contacts .group-phone p {
+      font-size: 2.8em; }
+    .Contacts ion-list .f {
+      font-size: 3rem;
+      line-height: 15vh; }
+    .Contacts .group-location {
+      background-size: 25px; }
+    .Contacts .group-phone {
+      background-size: 25px; }
+    .Contacts form .name {
+      padding-left: 12em;
+      padding-top: 1.6em; }
+    .Contacts form .name-2 {
+      padding-left: 12em;
+      padding-top: 1.3em; }
+    .Contacts input[type="text"] {
+      height: 4.5em;
+      font-size: 2em; }
+    .Contacts input[type="email"] {
+      height: 4.5em; }
+    .Contacts .button-blue {
+      margin: 7% 9%; }
+    .Contacts article .button-block {
+      width: 5%;
+      margin: 10% 8% 10% 16%; } }
+  @media screen and (min-height: 1080px) {
+    .Contacts .group-location p {
+      font-size: 2.8em; }
+    .Contacts .group-phone p {
+      font-size: 2.8em; }
+    .Contacts ion-list .f {
+      font-size: 3rem;
+      line-height: 15vh; }
+    .Contacts .group-location {
+      background-size: 25px; }
+    .Contacts .group-phone {
+      background-size: 25px; }
+    .Contacts form .name {
+      padding-left: 6em;
+      padding-top: 1.6em; }
+    .Contacts form .name-2 {
+      padding-left: 12em;
+      padding-top: 1.3em;
+      font-size: 2em;
+      padding-left: 6em; }
+    .Contacts input[type="text"] {
+      height: 4.5em;
+      font-size: 2em; }
+    .Contacts input[type="email"] {
+      height: 4.5em;
+      font-size: 2em; }
+    .Contacts .button-blue {
+      margin: 7% 9%; }
+    .Contacts article .button-block {
+      width: 5%;
+      margin: 10% 8% 10% 16%; } }
 
 /* CSS Tab-Statistics */
-.statistics .row {
-  margin-top: 5%;
-  margin-left: 1%;
-  margin-right: 1%;
-  font-size: 1.2em; }
-  .statistics .row a.item {
-    color: #fff; }
-  .statistics .row a.button.button-calm {
-    background-color: #3b6783;
-    color: #fff;
-    width: 70%;
-    height: 1em;
-    font-size: 1.2em;
-    margin-right: 5%; }
-  .statistics .row .user {
-    top: 21px;
-    left: 15%;
-    height: 10%; }
-    .statistics .row .user h1 {
+.Statistics {
+  background-color: #012438; }
+  .Statistics .row {
+    margin-top: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 1.2em; }
+    .Statistics .row a.item {
+      color: #fff; }
+    .Statistics .row a.button.button-calm {
+      background-color: #3b6783;
+      color: #fff;
+      width: 70%;
+      height: 1em;
+      font-size: 1.2em;
+      margin-right: 5%; }
+    .Statistics .row .user {
+      top: 21px;
+      left: 15%;
+      height: 10%; }
+      .Statistics .row .user h1 {
+        font-size: 1.2em;
+        color: #fff; }
+    .Statistics .row .dare h3 {
+      padding: 0.5em;
+      font-size: 10px;
+      color: #37637e; }
+    .Statistics .row .dare h1 {
       font-size: 1.2em;
       color: #fff; }
-  .statistics .row .dare h3 {
-    padding: 0.5em;
-    font-size: 10px;
-    color: #37637e; }
-  .statistics .row .dare h1 {
-    font-size: 1.2em;
-    color: #fff; }
-  .statistics .row canvas #line {
-    background: transparent; }
-
-/* CSS Profil new dare */
-.newdare {
-  background-image: none;
-  background-color: #e8edf0;
-  background-size: 100% 100%;
-  text-align: center;
-  display: block;
-  color: #16b8d4;
-  /*category challenges */
-  /* WebKit browsers */ }
-  .newdare div .h1 {
-    color: #044265; }
-  .newdare h3 {
-    color: #16b8d4; }
-  .newdare div .challeng ion-list .list {
-    display: inline-block;
-    width: 100%;
-    padding: 0em;
-    font-size: 1em; }
-    .newdare div .challeng ion-list .list .item {
-      display: inline-block;
-      width: 45%;
-      font-size: 1em;
-      padding: 0.5%;
-      border: none;
-      text-align: center;
+    .Statistics .row canvas #line {
       background: transparent; }
-      .newdare div .challeng ion-list .list .item :nth-child(1) {
-        background: #3b6783;
-        color: #fff;
-        width: 100%;
-        font-size: 0.7em;
-        text-align: center;
-        /* margin-top: 1em; */
-        padding-top: 20%;
-        padding-bottom: 5%;
-        padding-left: 1%;
-        padding-right: 1%;
-        word-break: keep-all; }
-      .newdare div .challeng ion-list .list .item :nth-child(2) {
-        background: #17283a;
-        color: #fff;
-        width: 100%; }
-  .newdare .list-inset {
-    width: 100%;
-    background: transparent; }
-  .newdare label .item {
-    margin-top: 5%; }
-  .newdare .vh {
-    margin-top: 1vh;
-    width: 95%;
-    height: 3em;
-    border-color: #8dc3cd; }
-  .newdare .la {
-    text-align: left; }
-  .newdare .fa {
-    width: 20vw !important;
-    height: 20vw; }
-  .newdare ::-webkit-input-placeholder {
-    color: #16b8d4;
-    opacity: 1 !important; }
-  .newdare .pen {
-    margin-top: -7em;
-    margin-right: 1em; }
-    .newdare .pen i {
-      color: orange;
-      -webkit-transform: scale(-1, 1); }
-  .newdare .info {
-    font-size: 0.5em;
-    width: 10%;
-    height: 100%;
-    left: -1.2em;
-    bottom: 3em; }
-    .newdare .info i {
-      color: orange;
-      font-size: 3em; }
-  .newdare .fileContainer {
-    font-size: 1em;
-    padding: 0em;
-    margin-bottom: 0;
-    MARGIN-TOP: 5%;
-    box-sizing: border-box; }
-    .newdare .fileContainer i {
-      background: #fff;
-      border-radius: 0;
-      color: orange;
-      font-size: 2.5em;
-      /* margin: 0%; */
-      padding: 0.5em;
-      padding-bottom: 0.1em; }
-  .newdare .fileContainer [type=file] {
-    margin-top: -1em; }
 
-/* CSS left Menue, background*/
-.side-menu-bro {
-  background-color: #066886; }
-
-.menu-left {
-  background-image: url(../img/BG.png);
+.SideMenu .menu-left {
+  background-image: url("../img/BG.png");
   background-color: #012438;
   background-size: 100% 100%;
   border: none;
@@ -10716,195 +10336,272 @@ ion-content.calendar {
   display: block;
   /*for icons*/
   /*how to be display*/ }
-  .menu-left .fa {
-    width: 15vw !important;
-    height: 15vw;
+  .SideMenu .menu-left .app-icon {
+    width: 1em !important;
+    height: 1em;
     display: inline-block;
     font-size: 2.5em;
-    margin-left: 0%;
+    margin-left: 0;
     margin-bottom: -10%;
     margin-top: -10%; }
-  .menu-left div {
+  .SideMenu .menu-left div {
     padding: 5%;
     border: none;
     background: transparent; }
-    .menu-left div a.item {
+    .SideMenu .menu-left div a.item {
       margin-bottom: 5%;
       padding: 5%;
       text-align: left;
       border: none;
       background: transparent;
       color: #01cfe4; }
-      .menu-left div a.item i {
+      .SideMenu .menu-left div a.item i {
         color: #ffb400;
         font-size: 3em; }
 
-/* CSS for Profil view */
-ion-view {
-  /* edit some CSS content in content */ }
-  ion-view .cont {
-    display: inline-block;
-    /*  	 */ }
-    ion-view .cont .fa {
-      width: 1em !important;
-      height: 1em;
-      display: inline-block;
-      margin: 1%;
-      margin-bottom: -1%;
-      margin-top: 0%; }
-    ion-view .cont .fa-img {
-      width: 20vw !important;
-      height: 20vw;
+/* CSS for Profile view */
+.Profile {
+  background-image: url("../img/BG.png");
+  background-color: #012438;
+  background-size: 100% 100%;
+  font-size: 1em; }
+  .Profile .profile-info {
+    display: block;
+    height: 20vh;
+    margin-top: 2vh;
+    padding: 3vw;
+    font-size: 3vw; }
+    .Profile .profile-info .profile-avatar {
+      float: left;
+      margin-left: 5vh;
+      height: 12vh;
       border-radius: 50%;
-      margin: 3%;
-      margin-bottom: 3%;
-      margin-top: -5%; }
-  ion-view .bar {
-    background: transparent;
-    color: #ffb400; }
-    ion-view .bar div {
-      margin: 1%;
-      margin-top: -5%;
-      padding: 1%;
-      background: transparent;
-      display: block;
-      color: #ffb400;
-      height: auto;
-      font-size: 1.5em; }
-      ion-view .bar div h2 {
-        color: #01cfe4; }
-  ion-view .content {
-    width: 100%;
-    position: relative;
-    padding: 1%;
-    margin: 1%;
-    line-height: 1.8em;
-    font-size: 1em;
-    color: #ffb400;
-    display: inline-block;
-    background: transparent; }
-  ion-view .list {
-    padding: 1%;
-    margin: 1%;
-    margin-left: 1em;
-    margin-top: 1em;
-    display: inline-block;
-    background: transparent;
-    border-color: #ffb400;
-    color: #01cfe4; }
-    ion-view .list a.item {
-      width: 99%;
-      margin: 1%;
-      padding: 1%;
+      border: 3px solid white; }
+    .Profile .profile-info .profile-user-credentials {
+      margin-top: 1vw;
+      margin-left: 2.5vw;
+      float: left; }
+      .Profile .profile-info .profile-user-credentials .profile-username {
+        font-size: 4vh;
+        color: #01cfe4;
+        display: block; }
+      .Profile .profile-info .profile-user-credentials .profile-email {
+        margin-left: 3vh;
+        font-size: 2vh;
+        color: #ffb400; }
+  .Profile .profile-info-list .profile-menu-item {
+    display: block;
+    color: red;
+    font-size: 2vw;
+    padding: 3vw; }
+    .Profile .profile-info-list .profile-menu-item a {
+      color: #01cfe4;
+      text-decoration: none; }
+    .Profile .profile-info-list .profile-menu-item i {
+      padding: 2vh 2vh 2vh 6vh; }
+  @media screen and (max-width: 450px) {
+    .Profile .profile-info {
+      display: inline-block; }
+      .Profile .profile-info .profile-user-credentials {
+        margin-right: 0;
+        margin-left: 20vh;
+        margin-top: -20vw;
+        font-size: 2vh; }
+        .Profile .profile-info .profile-user-credentials .profile-username {
+          font-size: 4vh;
+          display: inline-block; }
+        .Profile .profile-info .profile-user-credentials .profile-email {
+          display: inline-block; }
+    .Profile .profile-info-list i {
+      padding: 2vh 2vh 2vh 6vh; }
+    .Profile .profile-info-list .profile-menu-item {
+      padding-left: 6vw;
+      padding-bottom: 6vh;
+      font-size: 2.5vh; } }
+  @media screen and (min-width: 1920px) {
+    .Profile .profile-info {
       display: inline-block;
-      font-size: 1em;
-      text-align: left;
-      border: none;
-      background: transparent;
-      color: #01cfe4; }
-      ion-view .list a.item i {
-        color: #ffb400;
-        font-size: 3em; }
+      padding-top: -10vw;
+      padding-bottom: 11vw; }
+      .Profile .profile-info .profile-avatar {
+        height: 12vw;
+        margin-left: 6vw;
+        margin-top: -2vw; }
+      .Profile .profile-info .profile-user-credentials {
+        margin-top: 0;
+        margin-left: 2vw; }
+        .Profile .profile-info .profile-user-credentials .profile-username {
+          display: inline-block;
+          font-size: 3vw; }
+        .Profile .profile-info .profile-user-credentials .profile-email {
+          margin-left: 2vw;
+          margin-top: 3vw;
+          font-size: 2vw; }
+    .Profile .profile-info-list {
+      margin-left: -10vw; }
+      .Profile .profile-info-list i {
+        padding: 2vh 2vh 2vh 6vh; }
+      .Profile .profile-info-list .profile-menu-item {
+        padding-left: 15vw;
+        padding-bottom: 4vh;
+        font-size: 3vh; } }
 
 /* CSS Profil background */
-ion-view ion-content {
+/* CSS activities */
+.Activity {
   background-image: url(../img/BG.png);
   background-color: #012438;
   background-size: 100% 100%;
-  font-size: 1em;
   text-align: center;
-  display: block; }
-
-/* CSS list for all pages at user profil*/
-.use {
-  background-image: none;
-  background-color: #012438; }
-  .use .usert-info {
-    background-image: url(../img/BG.png);
-    background-repeat: no-repeat;
-    background-size: 100% 70%;
-    margin: 0;
-    resize: 10%;
-    text-align: center;
-    display: block; }
-    .use .usert-info .button-newcalm {
-      background-color: #3b6783;
-      color: #fff;
-      width: 50%;
-      padding: 1%;
-      border-color: #8dc3cd;
-      margin: 3%;
-      font-size: 1em;
-      position: relative;
-      left: 6%;
-      box-sizing: border-box; }
-    .use .usert-info .us {
-      width: 50%;
-      display: inline-block;
-      font-size: 2.5em;
-      text-rendering: auto;
-      border-radius: 50%;
-      color: white;
-      margin-right: 3%;
-      margin-bottom: 3%;
-      margin-top: 3%; }
-
-/* CSS activities */
-.activity {
-  /* CSS content view */ }
-  .activity h3 {
-    color: #01cfe4;
-    margin-left: 3em; }
-  .activity div {
-    text-align: left;
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-size: 12px; }
-    .activity div .col {
-      text-align: right;
-      width: 50%;
-      margin-left: -2em;
-      color: #01cfe4; }
-    .activity div .row {
-      color: #ffb400; }
-  .activity .content .list {
-    background: transparent; }
-    .activity .content .list ion-item {
-      padding: 0;
-      background: transparent;
-      border-bottom: 1px solid #fff;
-      border-left: none;
-      border-right: none;
-      border-top: none; }
-      .activity .content .list ion-item a.item {
-        border: none;
-        background-color: transparent; }
-    .activity .content .list ion-item:last-child {
-      border: none; }
-
-/* CSS nothifications */
-.nothifications {
   /* CSS edit in item */ }
-  .nothifications h3, .nothifications h2 {
+  .Activity h1 {
+    position: relative;
+    top: 1%;
     color: #01cfe4;
-    margin-left: 15%;
+    font-size: 1.5em; }
+  .Activity h3, .Activity h2 {
+    color: #01cfe4;
+    margin-left: 18%;
+    margin-top: 5%;
     width: 50%;
-    text-align: left; }
-  .nothifications span {
+    text-align: left;
+    font-size: 70%; }
+  .Activity span {
     float: left;
-    margin-left: 1%; }
-    .nothifications span i {
+    margin-left: -0.5%;
+    margin-top: -0.5rem;
+    position: absolute;
+    z-index: 10; }
+    .Activity span i {
       padding: 7px;
       color: #fff;
       background: #01cfe4;
-      border-radius: 30vh;
-      font-size: 10px;
+      border-radius: 50%;
+      font-size: 1em;
       margin: 0em; }
-  .nothifications .list {
+  .Activity .challenger {
+    width: 3em;
+    height: 2.8em;
+    margin-bottom: 1.5em;
+    margin-left: 0.9rem; }
+  .Activity .list {
+    background: transparent; }
+    .Activity .list ion-item {
+      width: 100%;
+      height: auto;
+      border: none;
+      margin-left: 1em;
+      color: #fff;
+      padding: 0;
+      background: transparent;
+      text-align: left;
+      display: inline-block;
+      /* CSS imges */ }
+      .Activity .list ion-item .p, .Activity .list ion-item i {
+        color: #ffb400;
+        width: 100%;
+        margin-left: 18%;
+        padding-right: 1vw;
+        font-size: 70%; }
+      .Activity .list ion-item div {
+        width: 98%;
+        display: inline-flex; }
+      .Activity .list ion-item div p {
+        color: #01cfe4;
+        margin-left: 3vw;
+        margin-top: 4%;
+        width: 55%;
+        font-size: 70%; }
+      .Activity .list ion-item .img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 6% 5% 4% 4%; }
+        .Activity .list ion-item .img img {
+          display: inline;
+          width: 4em;
+          height: 3.5em;
+          padding: 0.3em 1em 0.3em 0; }
+  .Activity .com p {
+    width: 63%;
+    padding-left: 1rem;
     background: transparent;
-    margin-top: 2em; }
-    .nothifications .list ion-item {
+    text-align: left;
+    padding-bottom: 1em;
+    display: inline-block;
+    white-space: normal;
+    color: #fff; }
+  @media screen and (max-width: 450px) {
+    .Activity .com p {
+      padding-left: 1rem; }
+    .Activity .list ion-item .img {
+      margin-left: 5%; }
+    .Activity h2 {
+      margin-left: 18%;
+      margin-top: 5%; }
+    .Activity ion-item div p {
+      margin-right: 3vw; } }
+  @media screen and (min-width: 1920px) {
+    .Activity hr {
+      width: 90%; }
+    .Activity .item-avatar > img:first-child {
+      position: none;
+      margin-left: 4vw;
+      background-color: red; }
+    .Activity .com p {
+      padding-left: 6em; }
+    .Activity .list ion-item .img {
+      margin-left: 5%; }
+    .Activity .list ion-item .img img {
+      width: 7em;
+      height: 6.5em; }
+    .Activity h2 {
+      margin-left: 4.5%;
+      margin-top: 5%; }
+    .Activity ion-item div p {
+      margin-left: 2vw; }
+    .Activity .list ion-item .p {
+      margin-left: 4.5%; }
+    .Activity .challenger {
+      margin-left: -3em; } }
+
+/* CSS nothifications */
+.Notifications {
+  background-image: url(../img/BG.png);
+  background-color: #012438;
+  background-size: 100% 100%;
+  text-align: center;
+  /* CSS edit in item */ }
+  .Notifications .height {
+    height: 17vh;
+    width: 100%; }
+    .Notifications .height h1 {
+      position: relative;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
+  .Notifications h3, .Notifications h2 {
+    color: #01cfe4;
+    margin-left: 5%;
+    width: 50%;
+    text-align: left;
+    font-size: 0.8em; }
+  .Notifications span {
+    float: left;
+    margin-left: -0.5%;
+    margin-top: -0.5rem;
+    position: absolute;
+    z-index: 10; }
+    .Notifications span i {
+      padding: 7px;
+      color: #fff;
+      background: #01cfe4;
+      border-radius: 50%;
+      font-size: 1em;
+      margin: 0em; }
+  .Notifications .list {
+    background: transparent; }
+    .Notifications .list ion-item {
       width: 100%;
       height: auto;
       border: none;
@@ -10916,47 +10613,106 @@ ion-view ion-content {
       text-align: left;
       display: inline-block;
       /* CSS imges */ }
-      .nothifications .list ion-item p {
-        color: #fff;
-        word-wrap: break-word; }
-      .nothifications .list ion-item .p, .nothifications .list ion-item i {
+      .Notifications .list ion-item .p, .Notifications .list ion-item i {
         color: #ffb400;
         width: 100%;
-        margin-left: 17%;
-        text-align: left; }
-      .nothifications .list ion-item div {
+        margin-left: 5%;
+        padding-right: 1vw; }
+      .Notifications .list ion-item div {
         width: 98%;
-        display: inline-flex;
-        margin: 1%;
-        padding: 1%; }
-      .nothifications .list ion-item div p {
+        display: inline-flex; }
+      .Notifications .list ion-item div p {
         color: #01cfe4;
-        margin-left: -30%;
+        margin-left: 20vw;
+        margin-bottom: 1vh;
         width: 55%;
-        text-align: right; }
-      .nothifications .list ion-item .img {
-        height: 3em;
-        top: 16px;
-        left: 16px;
-        max-width: 40px;
-        max-height: 40px;
+        font-size: 0.8em; }
+      .Notifications .list ion-item .img {
+        display: block;
         width: 100%;
-        height: 100%;
-        margin: 3%; }
+        height: auto;
+        margin: 5%; }
+        .Notifications .list ion-item .img img {
+          display: inline;
+          width: 4em;
+          height: 3.5em;
+          padding: 0.3em 1em 0.3em 0; }
+      .Notifications .list ion-item ion-item.text {
+        width: 30vw;
+        height: 20vh; }
+  .Notifications .com p {
+    width: 61%;
+    padding-left: 3rem;
+    background: transparent;
+    text-align: left;
+    padding-bottom: 30px;
+    display: inline-block;
+    white-space: normal;
+    color: #fff; }
 
 /* CSS All 4 friends */
-.tabs-striped.tabs-background-stable .tabs {
+.Friends .tabs-striped.tabs-background-stable .tabs {
   border: none;
   color: #00cde0;
   background-color: #012438; }
 
-.tabs-top.tabs-striped .tab-item.tab-item-active {
+.Friends .tabs-top.tabs-striped .tab-item.tab-item-active {
   border-color: #00cde0; }
 
-.tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title {
+.Friends .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title {
   color: #fff; }
 
-.friends .fa {
+.Friends .friends {
+  background-color: #012438; }
+  .Friends .friends .fa {
+    max-width: 2em;
+    max-height: 2em;
+    padding: 0;
+    background-size: 50%;
+    border-radius: 50%;
+    right: -50%; }
+  .Friends .friends div .list,
+  .Friends .friends ion-item {
+    text-align: left;
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    margin: 1%;
+    padding: 1%;
+    color: #01cfe4; }
+  .Friends .friends .col {
+    padding: 1%;
+    min-width: 20%; }
+  .Friends .friends .col-1 {
+    margin-top: 5%;
+    margin-left: -8%; }
+  .Friends .friends .button-small {
+    padding: 2px 4px 1px;
+    min-width: 2em;
+    min-height: 2em;
+    font-size: 10px;
+    line-height: 1.5em;
+    margin-top: 20%; }
+  .Friends .friends label {
+    background: transparent;
+    border-color: #01cfe4;
+    border-top: none;
+    border-left: none;
+    border-right: none; }
+  .Friends .friends .row {
+    text-align: left;
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    color: #01cfe4; }
+    .Friends .friends .row h4 {
+      color: #fff;
+      font-size: 10px; }
+    .Friends .friends .row h6 {
+      color: #01cfe4;
+      font-size: 10px; }
+
+.Friends .friends .fa {
   max-width: 2em;
   max-height: 2em;
   padding: 0;
@@ -10964,7 +10720,8 @@ ion-view ion-content {
   border-radius: 50%;
   right: -50%; }
 
-.friends div .list, .friends ion-item {
+.Friends .friends div .list,
+.Friends .friends ion-item {
   text-align: left;
   background: transparent;
   border: none;
@@ -10973,15 +10730,15 @@ ion-view ion-content {
   padding: 1%;
   color: #01cfe4; }
 
-.friends .col {
+.Friends .friends .col {
   padding: 1%;
   min-width: 20%; }
 
-.friends .col-1 {
+.Friends .friends .col-1 {
   margin-top: 5%;
   margin-left: -8%; }
 
-.friends .button-small {
+.Friends .friends .button-small {
   padding: 2px 4px 1px;
   min-width: 2em;
   min-height: 2em;
@@ -10989,370 +10746,260 @@ ion-view ion-content {
   line-height: 1.5em;
   margin-top: 20%; }
 
-.friends label {
+.Friends .friends label {
   background: transparent;
   border-color: #01cfe4;
   border-top: none;
   border-left: none;
   border-right: none; }
 
-.friends .row {
+.Friends .friends .row {
   text-align: left;
   background: transparent;
   border: none;
   font-size: 1em;
   color: #01cfe4; }
-  .friends .row h4 {
+  .Friends .friends .row h4 {
     color: #fff;
     font-size: 10px; }
-  .friends .row h6 {
+  .Friends .friends .row h6 {
     color: #01cfe4;
     font-size: 10px; }
 
-/* CSS list for all pages at user profil*/
-.list {
-  padding: 1%;
-  margin: 1%; }
-  .list ion-item, .list a.item-content {
-    border: none;
-    background: transparent; }
-  .list a {
-    text-align: left; }
-    .list a h2 {
-      color: #01cfe4; }
-    .list a p {
-      color: #ffb400; }
-
-/* CSS list card 
-		title and arrows*/
-.TimeLineCard {
-  max-height: 10em; }
-  .TimeLineCard .arrows-right {
-    max-height: 0.5em;
-    font-size: 1em;
-    float: right;
-    /* width: 100%; */
-    margin-top: -3%;
-    padding: 0;
-    position: relative;
-    color: blue; }
-  .TimeLineCard .arrows-left {
-    max-height: 0.5em;
-    font-size: 1em;
-    float: left;
-    /* width: 100%; */
-    margin-top: -3%;
-    padding: 0;
-    position: relative;
-    color: blue; }
-  .TimeLineCard .title {
-    color: blue;
-    position: absolute;
-    top: 2%;
-    left: 5%;
-    font-size: 1em; }
-  .TimeLineCard .footer {
-    position: relative;
-    text-align: center;
-    display: inline-flex;
-    position: relative;
-    top: 30px;
-    width: 100%;
-    background: rgba(27, 73, 88, 0.3);
-    /*make circle buttons*/
-    /* avatar settings, img*/ }
-    .TimeLineCard .footer span {
-      width: 16%; }
-      .TimeLineCard .footer span .fa {
-        width: 100%;
-        height: 100%;
-        display: inline-flex;
-        /* font-size: 2.5em; */
-        text-rendering: auto;
-        border-radius: 50%;
-        color: white;
-        /* margin-right: -3%; */
-        /* margin-bottom: -3%; */
-        padding: 10%;
-        /* margin-top: -3%; */ }
-    .TimeLineCard .footer .info {
-      display: inline-flex;
-      width: 10%;
-      height: 5em;
-      margin-top: 0%;
-      font-size: 10px;
-      color: #04a4c3;
-      margin-right: 3%; }
-    .TimeLineCard .footer .avatar a img {
-      margin-top: -0.9em;
-      margin-left: -0.3em;
-      border: 1px solid;
-      min-width: 1.3em;
-      min-height: 1.3em; }
-    .TimeLineCard .footer .ng-binding {
-      color: #04a4c3;
-      font-size: 10px;
-      margin-top: 2em;
-      margin-right: 2%; }
-      .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
-        color: #ffb400; }
-
-/* CSS list card */
-.challenges .bar-header span {
-  color: #fff; }
-  .challenges .bar-header span h3:first-child {
-    font-size: 20px; }
-
 /* CSS tabs- Menue */
-ion-modal-view {
-  /* here is the mine CSS 4 background, colors and so on */ }
-  ion-modal-view .cont {
-    background-image: url(../img/BG.png);
-    background-color: #012438;
-    background-size: 100% 100%;
-    text-align: center;
-    /* here is the mine CSS 4 back button, heder and so on the bar*/ }
-    ion-modal-view .cont .bar-header {
-      margin: 1%;
-      padding: 1%;
+/* here is the mine CSS 4 background, colors and so on */
+.Settings {
+  background-image: url("../img/BG.png");
+  background-color: #012438;
+  background-size: 100% 100%;
+  text-align: center;
+  /* here is the mine CSS 4 back button, heder and so on the bar*/ }
+  .Settings .bar-header {
+    margin: 1%;
+    padding: 1%;
+    text-align: left;
+    font-size: 1.5em;
+    background: transparent;
+    border: none; }
+    .Settings .bar-header i {
+      color: #fff; }
+    .Settings .bar-header h3 {
+      width: 100%;
+      color: #01cfe4;
+      margin-left: 1%;
+      text-align: center; }
+  .Settings h1 {
+    color: #04a4c3;
+    font-size: 15px; }
+  .Settings .list {
+    padding: 1%;
+    margin: 1%;
+    border: none;
+    color: #01cfe4; }
+    .Settings .list .item-toggle {
       text-align: left;
-      font-size: 1.5em;
       background: transparent;
-      border: none; }
-      ion-modal-view .cont .bar-header i {
-        color: #fff; }
-      ion-modal-view .cont .bar-header h3 {
-        width: 100%;
-        color: #01cfe4;
-        margin-left: 1%;
-        text-align: center; }
-    ion-modal-view .cont h1 {
-      color: #04a4c3;
-      font-size: 15px; }
-    ion-modal-view .cont .list {
-      padding: 1%;
-      margin: 1%;
       border: none;
+      font-size: 15px;
       color: #01cfe4; }
-      ion-modal-view .cont .list .item-toggle {
-        text-align: left;
-        background: transparent;
-        border: none;
-        font-size: 15px;
-        color: #01cfe4; }
-        ion-modal-view .cont .list .item-toggle .toggle.toggle-assertive input:checked + .track {
-          border-color: #01cfe4;
-          background-color: #01cfe4; }
+      .Settings .list .item-toggle .toggle.toggle-assertive input:checked + .track {
+        border-color: #01cfe4;
+        background-color: #01cfe4; }
 
-.demo {
-  display: block;
-  width: 100%;
-  height: auto;
-  background-color: #fff;
-  margin-top: 2%;
-  margin-right: 2%;
-  position: relative; }
+.TimeLineCard {
+  max-height: 20em; }
+  .TimeLineCard .demo {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-top: 2%;
+    margin-right: 2%;
+    position: relative; }
+  .TimeLineCard .demo > img {
+    position: relative;
+    width: 100%;
+    height: auto; }
+  .TimeLineCard .demo h2 {
+    position: absolute;
+    top: 15%;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 30px; }
+  .TimeLineCard .time {
+    display: inline-block;
+    vertical-align: top; }
+  .TimeLineCard .timetime {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -73%;
+    width: 174px;
+    height: auto; }
+  .TimeLineCard .timetime p {
+    font-size: 0.5em;
+    line-height: 22px;
+    color: #03b2d1; }
+  .TimeLineCard .likeLike {
+    display: inline-block; }
+  .TimeLineCard .likeLike .person {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../img/icons/user1.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 13px;
+    height: 19px;
+    width: 22px; }
+  .TimeLineCard .likeLike .comment {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../img/icons/speech1.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 13px;
+    height: 17px;
+    width: 26px; }
+  .TimeLineCard .likeLike .heart {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../img/icons/love1.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 13px;
+    height: 17px;
+    width: 26px; }
+  .TimeLineCard .person p {
+    padding-left: 43%; }
+  .TimeLineCard .comment p {
+    padding-left: 50%; }
+  .TimeLineCard .heart p {
+    padding-left: 55%; }
+  .TimeLineCard .likeLike p {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 8px;
+    color: #03b2d1; }
+  .TimeLineCard .clock h6 {
+    font-size: 13px;
+    color: #03b2d1;
+    line-height: 12px; }
+  .TimeLineCard .clock h6 > p {
+    color: #ffcf7d;
+    font-size: 5px;
+    line-height: 5px; }
+  .TimeLineCard .clock {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 4px;
+    padding-top: 5px; }
+  .TimeLineCard .timecheck {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 4px;
+    line-height: -1px; }
+  .TimeLineCard .timecheck img {
+    width: 16px;
+    height: 20px; }
+  .TimeLineCard .timeclock {
+    display: inline-block;
+    vertical-align: top;
+    height: 16px;
+    line-height: -1px; }
+  .TimeLineCard .timeclock img {
+    width: 16px;
+    height: 16px; }
+  .TimeLineCard .info {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    bottom: 20px; }
+  .TimeLineCard .socialtwo {
+    display: none; }
+  .TimeLineCard .responsive-logo {
+    display: none; }
+  .TimeLineCard .user {
+    width: 80%;
+    position: absolute;
+    top: 28vh;
+    left: -10%; }
+  .TimeLineCard .user-name {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 0.8em;
+    margin-left: 4px; }
+  .TimeLineCard .user-pic {
+    display: inline-block;
+    width: 20%;
+    margin-left: -6%; }
+  .TimeLineCard .user .img-circle {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 4em; }
+  .TimeLineCard .arrow {
+    position: absolute;
+    top: 10%;
+    width: 100%; }
+  .TimeLineCard .arrowSecond {
+    position: absolute;
+    top: 30%;
+    width: 100%; }
+  .TimeLineCard .arrow img {
+    width: 50px;
+    height: 50px;
+    border: none; }
 
-.demo > img {
-  position: relative;
-  width: 100%;
-  height: auto; }
-
-.demo h2 {
-  position: absolute;
-  top: 15%;
-  color: #fff;
-  font-size: 20px;
-  padding-left: 30px; }
-
-.timetime {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: -73%;
-  width: 174px;
-  height: auto; }
-
-.timetime p {
-  font-size: 0.5em;
-  line-height: 22px;
-  color: #03b2d1; }
-
-.likeLike {
-  display: inline-block; }
-
-.likeLike .person {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/user1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 19px;
-  width: 22px; }
-
-.likeLike .comment {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/speech1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.likeLike .heart {
-  display: inline-block;
-  vertical-align: top;
-  background-image: url(../img/icons/love1.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 13px;
-  height: 17px;
-  width: 26px; }
-
-.person p {
-  padding-left: 43%; }
-
-.comment p {
-  padding-left: 50%; }
-
-.heart p {
-  padding-left: 55%; }
-
-.likeLike p {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 8px;
-  color: #03b2d1; }
-
-.clock h6 {
-  font-size: 13px;
-  color: #03b2d1;
-  line-height: 12px; }
-
-.clock h6 > p {
-  color: #ffcf7d;
-  font-size: 5px;
-  line-height: 5px; }
-
-.clock {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  padding-top: 5px; }
-
-.timecheck {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 4px;
-  line-height: -1px; }
-
-.timecheck img {
-  width: 16px;
-  height: 20px; }
-
-.timeclock {
-  display: inline-block;
-  vertical-align: top;
-  height: 16px;
-  line-height: -1px; }
-
-.timeclock img {
-  width: 16px;
-  height: 16px; }
-
-.info {
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  bottom: 20px; }
-
-.socialtwo {
-  display: none; }
-
-.responsive-logo {
-  display: none; }
-
-.user {
-  width: 80%;
-  position: absolute;
-  top: 74%;
-  left: -10%; }
-
-.user-name {
-  display: inline-block;
-  vertical-align: top;
-  color: #fff;
-  font-size: 0.8em;
-  margin-left: 4px; }
-
-.user-pic {
-  display: inline-block;
-  width: 20%;
-  margin-left: -6%; }
-
-.user .img-circle {
-  border-radius: 50%;
-  border: 2px solid #fff;
-  width: 130px; }
-
-.arrow {
-  position: absolute;
-  top: 10%;
-  width: 100%; }
-
-.arrowSecond {
-  position: absolute;
-  top: 30%;
-  width: 100%; }
-
-.arrow img {
-  width: 50px;
-  height: 50px;
-  border: none; }
-
-.messages {
+.Chat .messages {
   background-color: #e8edf0; }
-  .messages .message {
+  .Chat .messages .message {
     flex: 1 1 auto !important;
     padding: 10px !important;
     transition: all 250ms ease-in-out !important;
     overflow: hidden !important;
     text-align: left !important;
     transform: translate3d(0, 0, 0) !important; }
-  .messages .avatar {
+  .Chat .messages .avatar {
     border-radius: 50% !important; }
-  .messages .time {
+  .Chat .messages .time {
     color: #000;
+    display: inline-block;
     margin-top: 20px; }
-  .messages span {
+  .Chat .messages span {
     background: #C7C7CC !important;
     display: inline-block !important;
     color: white !important;
     padding: 10px !important;
     border-radius: 10px !important;
     text-align: left !important;
-    max-width: 240px !important; }
-    .messages span .time {
+    max-width: 70vw !important; }
+    .Chat .messages span .time {
       color: white; }
 
-.messages.other .message {
+.Chat .messages.other .message {
   transform: translate3d(0, 0, 0) !important;
   text-align: right !important; }
-  .messages.other .message .avatar {
+  .Chat .messages.other .message .avatar {
     display: none; }
 
-.messages.other .message.slide-right {
+.Chat .messages.other .message.slide-right {
   transform: translate3d(120px, 0, 0) !important; }
 
-.messages.other span {
+.Chat .messages.other span {
   color: black !important;
   background-color: #007AFF !important;
   margin-top: 12px; }
 
-/* CSS NAv Menue */
-ion-side-menu-content ion-view .nav-bar-block {
-  border-style: none;
-  color: #03b2d1;
-  background: red; }
+.app-side-menu-navigation {
+  display: block; }
+  .app-side-menu-navigation .app-side-menu-nav-bar {
+    background-color: #012438 !important;
+    border-color: #012438 !important; }
+  .app-side-menu-navigation .navigation-menu-button {
+    padding: 3vw;
+    font-size: 5vh; }
+  .app-side-menu-navigation .navigation-button {
+    padding: 1.1vw;
+    color: white;
+    font-size: 4.5vh;
+    height: 10px; }

@@ -1,0 +1,114 @@
+//background and body elements style//
+
+@mixin Mine_user_background{
+			background-image: url(../img/BG.png);
+			background-color: #012438;
+			background-size: 100% 100%;
+			text-align: center;	
+			}
+/*heder*/
+@mixin height-heder{
+			    display: inline;
+				height: 17vh;
+				@include position-style;
+				h1{position: relative;
+				    display: inline-block;
+					top: 30%;
+					color: #01cfe4;
+					font-size: 1.4em;
+				}
+				i{font-size:2em;
+				position: relative;
+				right: 47%;top: 1%;
+				color: #fff;
+				}
+			}
+/*list*/
+@mixin list-style{  @include position-style;
+					border: none;
+					color: #01cfe4;
+					background: transparent;
+					display: block;
+					position: relative;
+					}
+/*list Item*/
+@mixin list-item-style{
+				@include position-style;
+				min-height: 3em;
+				font-size:1.2em;
+				text-align: left;
+				border: none;
+				color: #fff;
+				background: transparent;
+				display: inline-block;
+				position: relative;
+				 }
+				 
+/*Paragraf*/
+
+@mixin paragraf-style{
+	color: #01cfe4;
+	@include position-style;
+	margin-bottom: 1vh;
+	display: inline-flex;
+	font-size:0.8em;
+	}		
+/*div*/	
+@mixin div-style{	
+	@include position-style;
+    display: inline-flex;
+    font-size: 1em;
+	}			 
+	
+	
+ /*text stylings */
+@mixin large-text {
+			@include position-style;
+			color: #01cfe4;
+			margin-left: 5%;
+			display:inline-flex;
+			text-align: left;
+			font-size:0.8em;
+			}
+@mixin blue-color{
+	color: #04a4c3;
+    font-size: 1.5em;
+}	
+
+
+@mixin left-minutes-style{
+	color: #ffb400;
+	@include position-style;
+    display: block;
+	padding-right: 1vw;
+	font-size:1em;
+	}
+
+@mixin span-position{
+		float: left;
+    	margin-left: -0.5%;
+    	margin-top: -0.5rem;
+    	position: absolute;
+    	z-index: 10;
+		}
+@mixin 	i{
+		padding: 7px;
+		color: #fff;
+		background: #01cfe4;
+		border-radius: 50%;
+		font-size: 1em;
+		margin: 0em;
+		}
+/*img style*/
+@mixin image-style {	
+	@include position-style;
+	display: block;
+	}
+
+	
+/*some helpful varibals*/		
+@mixin position-style{margin: 1%;
+					  padding: 1%;
+					  width: 100%;
+					}
+

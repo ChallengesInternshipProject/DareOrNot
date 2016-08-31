@@ -1,4 +1,6 @@
-	@charset "utf-8";
+
+
+@charset "utf-8";
 
 .Contacts{
 			background-image:none;
@@ -8,20 +10,22 @@
 		.button{
 			color: #fff;
 			}
-	ion-list p{
-			line-height: 4vh;
-			text-align: left;
-			padding-left: 4em;		
-						}
+	ion-list .f{
+				text-align: center;
+    			font-size: 1rem;
+				line-height: 5vh;
+				margin: 0 auto;		
+			}
+
 		
 		form{
+			display: inline-block;
+			width: 100%;
 			padding:5%;
 			height: 73vh;
-			.blue{
-				color: #03b2d1;
+		}
 
-			}
-			article .log{
+		article .log{
 					display: block;
     				position: relative;
 					left: 0%;
@@ -32,7 +36,11 @@
     				line-height: 1.8;
     				box-sizing: border-box;
 			}
-		}
+
+		
+		
+
+		
 		.input-group-user{
 					position: relative;
 					background-color: #fff;
@@ -67,7 +75,7 @@
 					width: 100%;
 					height: 8vh;
 					margin-top:3%;
-								
+							
 								}
 		.input-group-message{
 					position: relative;
@@ -83,7 +91,7 @@
 								
 								}
 
-		.group-locatoin{
+		.group-location{
 					position: relative;
 					background-color: #e8edf0;
 					background-image: url(../img/icons/location-icon.png);
@@ -94,8 +102,12 @@
 					width: 100%;
 					height: 8vh;
 					margin-top:3%;
-								
-								}
+							p{
+								font-size: 0.8em;
+								padding-left: 19%;
+								line-height: 4vh;
+							}
+						}
 		.group-phone{
 					position: relative;
 					background-color: #e8edf0;
@@ -107,14 +119,18 @@
 					width: 100%;
 					height: 8vh;
 					margin-top:3%;
-								
-								}
+							p{
+								font-size: 0.8em;
+								padding-left: 19%;
+								line-height: 4vh;
+							}
+						}
 			.empty{
 					width: 100%;
 					height: 8vh;
 					margin-top:3%;
 					background-color: #e8edf0;
-		}		
+								}		
 				i{
 					width: 3vh;
     				height: 5vh;
@@ -123,10 +139,10 @@
 								}
 				.name{
    				 	padding-left: 4em;
-    				padding-top: 2.6em;
+    				padding-top: 1.6em;
     				width: 100%;
    	 				text-align: left;
-   				 				
+   				 	background-color: transparent;			
 
 								}
 				.name-2{
@@ -135,15 +151,22 @@
     				width: 100%;
     				height: 17vh;
    	 				text-align: left;
-				}
+									}
 			
 				.button-blue{
 					background-color:#012438;
-					width: 80%;
+					width: 82%;
 					height: 8vh;
 					border-radius: 0px;
-					margin: 13% 7%;
+					margin: 13% 9%;
 								}
+				article .button-block{
+						width: 14%;
+    					border-radius: 50%;
+    					display: inline-block;
+    					vertical-align: top;
+    					margin: 10% 1% 10% 12.5%;
+					}
 				::-webkit-input-placeholder {
   									 color: #03b2d1;
 									}
@@ -159,7 +182,119 @@
 				:-ms-input-placeholder {  
   									 color: #03b2d1;  
 									}
+				@media screen and (min-width: $tablet-width){
+					.group-location p{
+						font-size: 2.8em;
+					}
+					.group-phone p{
+						font-size: 2.8em;
+					}
+
+					ion-list .f{
+						font-size: 3rem;
+						line-height: 15vh;
+					}
+
+					.group-location{
+						background-size: 25px;
+					}
+					.group-phone{
+						background-size: 25px;
+					}
+
+					.input-group-mail{
+
+					}
+
+						form .name{
+   				 	padding-left: 12em;
+    				padding-top: 1.6em;
+    							
+
+								}
+				form .name-2{
+					padding-left: 12em;
+    				padding-top: 1.3em;
+    			
+									}
+				input[type="text"]{
+					height: 4.5em;
+					font-size: 2em;
+							}
+				input[type="email"]{
+				height: 4.5em;
+							}
+				.button-blue{
+					margin: 7% 9%;
+				}
+				article .button-block{
+					width: 5%;
+					margin: 10% 8% 10% 16%;
+
+				}
+										}
+				@media screen and (min-height: $tablet-height){
+					.group-location p{
+						font-size: 2.8em;
+					}
+					.group-phone p{
+						font-size: 2.8em;
+					}
+
+					ion-list .f{
+						font-size: 3rem;
+						line-height: 15vh;
+					}
+
+					.group-location{
+						background-size: 25px;
+					}
+					.group-phone{
+						background-size: 25px;
+					}
+
+					.input-group-mail{
+
+					}
+
+						form .name{
+   				 	padding-left: 6em;
+    				padding-top: 1.6em;
+    							
+							}
+				form .name-2{
+					padding-left: 12em;
+    				padding-top: 1.3em;
+    				font-size: 2em;
+    				padding-left: 6em;
+									}
+				input[type="text"]{
+					height: 4.5em;
+					font-size: 2em;
+							}
+				input[type="email"]{
+				height: 4.5em;
+				font-size: 2em;
+							}
+				.button-blue{
+					margin: 7% 9%;
+				}
+				article .button-block{
+					width: 5%;
+					margin: 10% 8% 10% 16%;
+
+				}
+
+				// .bar-positive{
+				// 	height: 6em;
+				// 	background-color: red;
+				// }
+				}
+
+	}
+
+				
+
  									
- 								}  
+ 						  
    	
- 	  

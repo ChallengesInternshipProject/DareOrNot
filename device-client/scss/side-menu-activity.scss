@@ -1,39 +1,111 @@
 @charset "utf-8";
+@import "mixins";
 
 /* CSS activities */
-
-.activity{
-	h3{color: #01cfe4;margin-left: 3em;}
-	div{text-align: left;
-		background: transparent;
-		border: none;
-		color: #fff;
-		font-size: 12px;
-		.col{text-align: right;
-			 width: 50%; 
-			 margin-left: -2em; 
-			 color: #01cfe4;
-			}
-		.row{color: #ffb400;}
-		}
-/* CSS content view */		
-	.content{
-		.list{ background: transparent;
-			 ion-item{
-			 		    padding:0;
-				 		background: transparent;
-						border-bottom: 1px solid #fff;
-						border-left: none;
-						border-right: none;
-						border-top: none;
-				
-					a.item {
-							border: none;
-							background-color: transparent;
-							}		 
-					 }
-			 ion-item:last-child {border:none;}
-		}
-
+.Activity{
+	@include Mine_user_background;
+	.height{@include height-heder;}
+	h3, h2 {@include large-text;}
+	span{@include span-position;}
+			
+	.challenger{
+		width:3em;
+		height:2.8em;
+		margin-bottom:1.5em;
+		margin-left:0.9rem;
 	}
+		
+	/* CSS edit in item */	
+	.list{
+		@include list-style; 
+		ion-item{
+			@include list-item-style;
+			.p, i{
+				 @include left-minutes-style;
+				 }
+			div	{
+				@include div-style;		
+				}
+			div p{ 
+				@include paragraf-style;
+				}
+			/* CSS imges */
+				.img{
+				@include image-style;
+
+						img{
+							display: inline;
+							width: 4em;
+							height: 3.5em;
+							padding: 0.3em 1em 0.3em 0;
+						}
+
+					}
+			}
+		}
+			.com p{	
+				width: 63%;
+				padding-left: 1rem;
+			    background: transparent;
+			    text-align: left;
+			    padding-bottom: 1em;
+			    display: inline-block;
+			    white-space: normal;
+			    color: #fff;
+				}
+
+				@media screen and (max-width: 450px){
+					
+					.com p{
+						padding-left: 1rem;
+					}
+
+				.list ion-item .img{
+					}
+					 h2{
+						margin-left: 15%;
+					}
+
+				ion-item div p{
+						margin-right: 3vw;
+					}
+
+				}
+
+				@media screen and (min-width: $tablet-width){
+						hr{
+							width: 90%;
+						}
+
+						.item-avatar>img:first-child{
+							position: none;
+   							margin-left: 4vw;
+   							background-color: red;
+   						}
+
+					.com p{
+						padding-left: 6em;
+					}
+
+					.list ion-item .img{
+						margin-left: 5%;
+					}
+
+					.list ion-item .img img{
+						width:7em;
+						height: 6.5em;
+					}
+					 h2{
+						margin-left: 4.5%;
+					}
+				ion-item div p{
+						margin-left: 2vw;
+					}
+					.list ion-item .p{
+						 margin-left: 4.5%;
+					}
+					.challenger{
+						margin-left: -3em;
+					}
+				}
 }

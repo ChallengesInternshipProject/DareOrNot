@@ -1,10 +1,11 @@
 
 // $stable:                          #f8f8f8 !default;
 
-
+.Chat{
 .messages {
     background-color: #e8edf0;
   .message {
+
     flex: 1 1 auto !important;
     padding: 10px !important;
     transition: all 250ms ease-in-out !important;
@@ -16,10 +17,13 @@
   .avatar{
     // border:1px solid black !important;
     // padding-top:50px;
+    // padding-top: 5vh;
+    // margin-top:0;
     border-radius: 50% !important;
   }
   .time{
     color: #000;
+    display: inline-block;
     margin-top: 20px;
   }
   span {
@@ -30,7 +34,9 @@
     // padding-top: 20px;
     border-radius: 10px !important;
     text-align: left !important;
-    max-width: 240px !important;
+    // height:10vh
+    max-width: 70vw !important;
+    // width: 70vw;
     .time{
       color:white;
 
@@ -55,4 +61,5 @@
     background-color:#007AFF !important;
     margin-top: 12px;
   }
+}
 }

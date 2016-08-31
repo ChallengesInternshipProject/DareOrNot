@@ -74,7 +74,7 @@ angular.module('starter').config(function (
 		})
 		.state('app.profile',{
 			url: '/profile',
-			templateUrl: 'templates/side-menu/side-menu-profile.html',
+			templateUrl: 'templates/side-menu/profile.html',
 			controller: 'ProfileCtrl'
 		})
 		.state('app.search', {

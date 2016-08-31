@@ -6,7 +6,7 @@ For example, you might change some of the default colors:
 
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
+$positive:                        #012438 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
@@ -15,31 +15,78 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+//Global variables
+//If you want to overwrite some ionic scss files do it before the main ionic
+//scss library import
+@import "scss/globals";
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
+$tablet-width : 1920px;
+$tablet-height:1080px;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+//Icons
 @import "scss/icons";
-@import "scss/login";
-@import "scss/category";
-@import "scss/contacts";
-@import "scss/maps-modal";
-@import "scss/tab-calendar";
-@import "scss/tab-statistics";
-@import "scss/tab-new-dare";
-@import "scss/side-menu";
-@import "scss/side-menu-profile";
-@import "scss/profile";
-@import "scss/usert";
-@import "scss/side-menu-activity";
-@import "scss/side-menu-notifications";
-@import "scss/div-friends";
-@import "scss/list";
-@import "scss/TimeLineCard";
-@import "scss/div-timelineCard";
-@import "scss/side-menu-settings";
-@import "scss/timeline";
-@import "scss/chat";
-@import "scss/top-navigation";
 
+
+
+//Login modal SCSS
+// @import "scss/login";
+
+//Timeline page view SCSS
+// @import "scss/timeline";
+
+//Category page view SCSS
+@import "scss/category";
+
+//Contacts page view SCSS
+@import "scss/contacts";
+
+// @import "scss/maps-modal";
+
+// Calendar page view SCSS
+// @import "scss/tab-calendar";
+
+// Statistics page view SCSS
+@import "scss/tab-statistics";
+
+// New Dare page view SCSS
+// @import "scss/tab-new-dare";
+
+//Side menu SCSS
+@import "scss/side-menu";
+
+// Profile SCSS
+@import "scss/side-menu-profile";
+
+//Unknown scss file with global variables
+@import "scss/profile";
+
+//Unknown SCSS with global variables TODO FIX !!!
+// @import "scss/usert";
+
+//Side-menu Activity page view SCSS
+@import "scss/side-menu-activity";
+
+//Side-menu Notifications page view SCSS
+@import "scss/side-menu-notifications";
+
+
+@import "scss/div-friends";
+// @import "scss/list";
+// @import "scss/div-timelineCard";
+
+//Side-menu Settings page view SCSS
+@import "scss/side-menu-settings";
+
+// @import "scss/TimeLineCard";
+
+//Timeline page view SCSS
+@import "scss/timeline";
+
+//Chat page view SCSS
+@import "scss/chat";
+
+//Top navigation page view SCSS
+@import "scss/top-navigation";

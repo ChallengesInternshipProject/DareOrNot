@@ -1,11 +1,11 @@
 <ion-view>
-
-    <ion-content class="cont">
-    <i class="ion-arrow-left-a" ng-click="sideMenuMyFavoritesModal.hide()"></i>
+  <ion-content class="cont">
+  <div class="height">
     <h1>Любими предизвикателства</h1>
-
+	<i class="ion-arrow-left-a" ng-click="favoritesModal.hide()"></i>
+	</div>
+	
     <ion-list>
-
       <ion-item>
         <ion-slide-box on-slide-changed="slideHasChanged($index)">
           <ion-slide>
