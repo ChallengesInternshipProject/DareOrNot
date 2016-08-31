@@ -1,54 +1,51 @@
 <div class="TimeLineCard"> 
-<div class="content">
-  <ion-slide-box on-slide-changed="slideChanged(index)"> 
-    <ion-slide ng-repeat='picture in challenge.pictures'> 
-      <div> 
-        <img src="../img/cover.jpg" alt=""> 
-      </div> 
-    </ion-slide> 
-    </div>
- <div class="navigation">
-  <!-- <!--   <!-- title  --> 
-  <span class="title"> 
-    Нахрани коте
-  </span>
-    <!-- Slide to the left  --> 
-<div class="arrows-right" ng-click="nextSlide()"><i class="ion-ios-arrow-forward"></i></div> 
-  <!-- Slide to the right --> 
-<div class="arrows-left" ng-click="previousSlide()"><i class="ion-ios-arrow-back"></i></div> 
- </div>
-<div class="footer"> 
-    <span class=""> 
-      <a class="fa item-avatar" href="#"> 
-        <img ng-src="../img/adam.jpg" style="margin-top: -15%;
+	<div class="content">
+		<ion-slide-box on-slide-changed="slideChanged(index)"> 
+			<ion-slide ng-repeat='picture in dare.pictures'> 
+				<img ng-src="{{picture.fileString}}" alt="" style="max-height:200px;"> 
+			</ion-slide> 
+	</div>
+	 <div class="navigation">
+		<span class="title"> 
+			{{dare.title}}
+		</span>
+			<!-- Slide to the left  --> 
+	<div class="arrows-right"><i class="ion-ios-arrow-forward"></i></div> 
+		<!-- Slide to the right --> 
+	<div class="arrows-left" ><i class="ion-ios-arrow-back"></i></div> 
+	 </div>
+	<div class="footer"> 
+		<span class=""> 
+			<a class="fa item-avatar" href="#"> 
+				<img ng-src="{{ dare._creator.picture.fileString?dare._creator.picture.fileString:'img/avatar.png'}}" style="margin-top: -15%;
 					margin-left: -3%;
 					min-width: 4em;
 					min-height: 4em;"> 
-      </a> 
-    </span> 
-     <span class="ng-binding">  
-      <i class="ion-ios-location-outline"></i> 
-      Пловдив
-    </span> 
-    <span class="ng-binding"> 
-      <i class="icon ion-ios-timer-outline"></i> 
-      23:56
-    </span> 
-    <span class="info" style="margin-left: -1%;"> 
-      <i class="fa-size app-icon-user-active"></i> 
-   34
-    </span> 
-    <span class="info" style="margin-left: -1%;"> 
-      <i class="fa-size app-icon-speech-active"></i> 
-      390
-    </span> 
-    <span class="info" style="margin-left: -1%;"> 
-          <i class="fa-size app-icon-love-active"></i> 
-     4
-    </span> 
-     <span class="ng-binding" style="width: 100%;">  
-    <h5>Приключва:</h5> 
-      33:55 часа
-    </span> 
-  </div> 
+			</a> 
+		</span> 
+		 <span class="ng-binding">  
+			<i class="ion-ios-location-outline"></i> 
+			{{dare.city}}
+		</span> 
+		<span class="ng-binding"> 
+			<i class="icon ion-ios-timer-outline"></i> 
+			{{dare.timeElapsed}}
+		</span> 
+		<span class="info" style="margin-left: -1%;"> 
+			<i class="fa-size app-icon-user-active"></i> 
+			{{dare.invitedUsers.likes}}
+		</span> 
+		<span class="info" style="margin-left: -1%;"> 
+			<i class="fa-size app-icon-speech-active"></i> 
+			{{dare.comments}}
+		</span> 
+		<span class="info" style="margin-left: -1%;"> 
+					<i class="fa-size app-icon-love-active"></i> 
+		 4
+		</span> 
+		 <span class="ng-binding" style="width: 100%;">  
+		<h5>Приключва:</h5> 
+			{{dare.timeLeft}}
+		</span> 
+	</div> 
 </div>

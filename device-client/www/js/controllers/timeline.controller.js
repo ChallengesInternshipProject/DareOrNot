@@ -24,5 +24,6 @@ angular.module('starter.controllers')
 		}
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		$scope.dares = DaresResolver;
+		$log.info($scope.dares);
 
 	});

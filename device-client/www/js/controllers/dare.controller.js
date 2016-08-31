@@ -32,7 +32,7 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 
 	//Friends
 	$scope.friends = FriendsResolver;
-	c
+	
 	// Get Categories
 	$scope.categories = CategoryService.getAllGategories();
 	//Files 
