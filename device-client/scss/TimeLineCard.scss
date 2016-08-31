@@ -47,32 +47,27 @@
 						background-size: 100% 100%;
 						}	
 						.fa-size{
-						min-width: 3em;
-						height: 3em;
-						margin-top: 10%;
+						min-width: 2.5em;
+						height: 2.5em;
+						margin-top: 1.5em;
 						background-size: 88% 90%;}
 				}
 				
 		.info{
-				display: inline-flex;
-				width: 10%;
-				height: 5em;
-				margin-top: 0%;
-				font-size: 10px;
-				color: #04a4c3;
-				margin: 3%;
-				padding:3%;
-					}
+			display: inline-flex;
+			width: 10%;
+			height: 5em;
+			margin-top: 0%;
+			font-size: 10px;
+			color: #04a4c3;
+			margin: 1%;
+			margin-right: 3%;
+		}
 	/* avatar settings, img*/
-		.avatar a img{
-					margin-top: -15%;
-					margin-left: -3%;
-					min-width: 4em;
-					min-height: 4em;
-						}
+
 		.ng-binding{color: #04a4c3;
 					font-size: 10px;
-					margin-top: 2em;
+					margin-top: 1.5em;
 					margin-right: 2%;
 					h5, i{color: #ffb400;}
 						}
