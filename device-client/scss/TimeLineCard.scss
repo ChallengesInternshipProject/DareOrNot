@@ -33,10 +33,7 @@
 			.info{@include info-size;}
 				
 	/* avatar settings, NAME*/
-			.ng-binding{color: #04a4c3;
-						font-size: 10px;
-						margin-top: 1.5em;
-						margin-right: 2%;
+			.ng-binding{@include binding-style;
 					h3,	h5, i{color: #ffb400;}
 					.profil-avatar{@include profil-avatar-position;}	
 				}	
@@ -100,8 +97,7 @@
 					}		
 			.info{@include info-size-height;}				
 	/* avatar settings, NAME*/
-			.ng-binding{font-size:2em;
-						margin-right: 6%;
+			.ng-binding{@include binding-height;
 						.profil-avatar{@include profil-avatar-height;}
 					}
 			}	
