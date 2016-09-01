@@ -75,15 +75,17 @@ $tablet-height:1080px;
 
 @import "scss/div-friends";
 // @import "scss/list";
-@import "scss/div-timelineCard";
+
 
 //Side-menu Settings page view SCSS
 @import "scss/side-menu-settings";
 
-@import "scss/TimeLineCard";
-
 //Timeline page view SCSS
-//@import "scss/timeline";
+@import "scss/TimeLineCard";
+@import "scss/div-timelineCard";
+
+//single dare page view SCSS
+@import "scss/timeline";
 
 //Chat page view SCSS
 @import "scss/chat";

@@ -99,6 +99,18 @@
 					min-width: 5em;
 					min-height: 5em;
 					}
+@mixin profil-avatar-width{
+					margin-top: -2%;
+					margin-left: 1%;
+					min-width: 4em;
+					min-height: 4em;
+					}
+@mixin profil-avatar-height{
+				margin-top: -3%;
+				margin-left: 0%;
+				min-width: 4em;
+				min-height: 4em;
+			}
 @mixin google-Map-img{  
 					width: 40%;
 					display: inline;
@@ -106,3 +118,24 @@
 					float: right;
 					margin-top: -46%;
 					}
+@mixin google-Map-img-width{  
+
+					}
+@mixin google-Map-img-height{  
+
+					}
+					
+@mixin	button-style-color{
+				@include background-bordernone;
+				background-color: #021e2f;
+				width: 97%;
+				height:3em;
+				color: #fff;
+				}
+@mixin circle-border{
+				border-radius: 50%;
+				width: 3em;
+				color: #fff;
+				margin: 1%;
+				padding: 1%;
+				}

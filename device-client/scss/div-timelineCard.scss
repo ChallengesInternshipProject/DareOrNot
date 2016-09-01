@@ -5,11 +5,6 @@
 /* CSS Timeline	title and arrows*/
 
 	.timeline{@include gray_background;
-		.height{@include height-heder; 
-				h1{left: 20%;}
-				i{right: 70%;}
-			}
-		
 		.item{@include background-bordernone;
 	}
 }
