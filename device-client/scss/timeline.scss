@@ -98,7 +98,8 @@
 							.profil-avatar{@include profil-avatar-position;}	
 						}	
 				}
-					.googleMap{margin-top: -15%;}
+					.googleMap{margin-top: -22%;
+								height: 30vh;}
 			}
 			h3 {font-size: 4em;}
 			.button-new{height: 5em;
@@ -154,7 +155,7 @@
 							.profil-avatar{@include profil-avatar-position;}	
 						}	
 				}
-					.googleMap{margin-top: -40%;}
+					.googleMap{margin-top: -40%; height: 17.6vh;}
 			}
 		}
 	}

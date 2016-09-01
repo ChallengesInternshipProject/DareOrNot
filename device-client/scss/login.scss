@@ -1,153 +1,39 @@
+@charset "utf-8";
+@import "mixins";
+@import "login_mixins";
 
-  /*BACKGROUND*/
-// ion-content{
-//     background-color: #012438;
-//     background-image: url(../img/background.png);
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     position: relative;
-//     background-size: 100% 100%;
-//     box-sizing: border-box;
+  /*BACKGROUND Login and Registration*/
+	.login-view .content-list{@include content-list-login;
 	
-	
-  /* Empty. Add your own CSS if you like */
-  
-  .leafletMap {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .leafletUserMap {
-    width: 50vw;
-    height: 50vh;
-  }
-
-  .leafletDareMap {
-    width: 100vw;
-    height: 50vh;
-  }
-
-  .scroll {
-    height: 100%;
-  }
-
-  #map {
-    width: 100%;
-    height: 100%;
-  }
-
-  form {
-    width: 100vw;
-  }
-
-  .button-form-submit {
-    display: none;
-    float: right;
-    width: 4vw;
-  }
-
-  .input-form-submit {
-    float: left;
-    width: 100vw;
-
-  }
-
   /*BACKGROUND transgender*/
-  .content-list {
-    margin: 1%;
-    padding: 1%;
-	display:block;
-    text-align: center;
-    font-size: 1em;
-    color: #fff;
-	background: transparent;
-    box-sizing: border-box;
-  }
-
-  section.list {
-	min-height: 30em;
-    padding: 1%;
-    margin: 1%;
-	position: relative;
-    text-align: center;
-    font-size: 1em;
-    display: block;
-	background: transparent;
-    box-sizing: border-box;
-	.fa {
-    width: 15vw;
-    height: 15vw;
-  }
-}
+	  .content-list {@include content-list-view;}
+	   section.list {@include list-view;
+		.fa {
+		width: 15vw;
+		height: 15vw;
+		border-radius: 50%;
+		color: #fff;
+		display: inline-block;
+		margin: 5%;
+		  }
+		}
   /* LOGO */
-  .logo {
-    padding: 1%;
-    margin: 1%;
-    position: relative;
-    min-height: 20vh;
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 100%;
-    box-sizing: border-box;
-  }
+	 .logo {@include logo-view;}
 
   /*Enter LOGIN INFO*/
-  .into-login {
-    padding: 1%;
-    margin: 1%;
-    color: rgb(120, 103, 30);
-    display: block;
-    position: relative;
-    font-size: 1em;
-    line-height: 1.8;
-    box-sizing: border-box;
-  }
-
-  label.item.item-into {
-    color: rgb(120, 103, 30);
-    border-bottom: 1px solid #808080;
-    border-top: 0;
-    width: 75%;
-    border-left: 0;
-    border-right: 0;
-    font-size: 1em;
-  }
-
-  label.item-into {
-    display: inline-flex;
-  }
-
-  input {
-    padding: 8px;
-    display: block;
-    border: none;
-    width: 100%;
-    background-color: transparent;
-    text-align: center;
-  }
-	.item-input input, .item-input textarea {
-    color: #fff;
-	}
-  input .item-input input {
-    text-align: center;
-  }
-
-  span.input-label {
-    color: rgb(120, 103, 30);
-    white-space: nowrap;
-    font-size: 1em;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-
-  }
+  .into-login {@include into-login-view;}
+  label.item.item-into {@include item-into-view;}
+  label.item-into {display: inline-flex;}
+  input {@include input-view;}
+ .item-input input, .item-input textarea {color: #fff;}
+  input .item-input input {text-align: center;}
+  span.input-label {@include input-label-view;}
 
   .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
   .ion-ios-wineglass-outline, .ion-ios-camera-outline,
   .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
-    font-size: 1.5em;
-  }
+		font-size: 1.5em;
+	  }
 
   /*Changes all the icon colors */
   // i {
@@ -156,18 +42,7 @@
 
   /*ENTER BUTTON*/
 
-  button.button.button-calm {
-    background-color: rgb(1, 36, 56);
-    color: rgb(120, 103, 30);
-    width: 83%;
-    padding: 1%;
-    border: none;
-    margin: 3%;
-    font-size: 1em;
-    position: relative;
-    left: 6%;
-    box-sizing: border-box;
-  }
+  button.button.button-calm {@include button-calm-view;}
 
   /*FORGET THE PASS*/
   .forget {
@@ -216,13 +91,16 @@
 
   /*something like footer */
 
-  .regis {
+  .regis {    
+	color: #fff;
     padding: 1%;
     margin: 1%;
-	position: relative;
+    margin-top: 14%;
+    position: relative;
+    text-align: center;
     font-size: 1.4em;
     display: block;
-	background: transparent;
+    background: transparent;
     box-sizing: border-box;
   }
 
@@ -283,15 +161,14 @@
   /* Example stylistic flourishes */
 
   .fileContainer {
-		font-size: 1em;
+		font-size: 2em;
 		box-sizing: border-box;
 		i{
-			background: #012438;
-			border-radius: 50%;
-			/*font-size: 4.5em; -- */
-			font-size: 1.5em;
-			padding: 1em;
+		background: #012438;
+		border-radius: 50%;
+		font-size: 2em;
+		padding: 1em;
 		}
 	
 	}
-
+}

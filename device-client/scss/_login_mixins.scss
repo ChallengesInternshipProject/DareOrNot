@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import "varibals";
+
+//LogIn and Registration//
+
+
+//background and body elements style//
+@mixin  content-list-login{ background-color: #012438;
+	background-image: url(../img/background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	position: relative;
+	height: 100% !important;
+	background-size: 100% 100%;
+	box-sizing: border-box;
+ }
+@mixin  content-list-view{
+	display:block;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+	background: transparent;
+    box-sizing: border-box;
+	}
+@mixin  list-view{
+	min-height: 30em;
+    margin: 0%;
+	position: relative;
+    text-align: center;
+    font-size: 1em;
+    display: block;
+	background: transparent;
+    box-sizing: border-box;	
+	}
+@mixin  logo-view{  
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    min-height: 20vh;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 100%;
+    box-sizing: border-box;
+	}
+@mixin into-login-view{
+    padding: 1%;
+    margin: 1%;
+    color: rgb(120, 103, 30);
+    display: block;
+    position: relative;
+    font-size: 1em;
+    line-height: 1.8;
+    box-sizing: border-box;
+	}	
+@mixin item-into-view{
+	color: rgb(120, 103, 30);
+    border-bottom: 1px solid #808080;
+    border-top: 0;
+    width: 75%;
+    border-left: 0;
+    border-right: 0;
+    font-size: 1em;
+}
+@mixin input-view{ 
+    padding: 8px;
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;   
+	}
+@mixin input-label-view{
+    color: rgb(120, 103, 30);
+    white-space: nowrap;
+    font-size: 1em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+	}
+@mixin button-calm-view{
+	background-color: rgb(1, 36, 56);
+    color: rgb(120, 103, 30);
+    width: 83%;
+    padding: 1%;
+    border: none;
+    margin: 3%;
+    font-size: 1em;
+    position: relative;
+    left: 6%;
+    box-sizing: border-box;
+	}	
+	

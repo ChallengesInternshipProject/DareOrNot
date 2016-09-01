@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import "varibals";
+
 
 //Activit, Notification, Settings//
 
@@ -126,15 +129,3 @@
 	padding: 0.3em 1em 0.3em 0;
 	}
 	
-	
-/*some helpful varibals*/		
-
-@mixin position-style{margin: 1%;
-					  padding: 1%;
-					  width: 100%;
-					}	
-@mixin background-bordernone{
-			  background: transparent;    
-			  border: none;
-			}					
-

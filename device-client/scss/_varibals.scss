@@ -1,0 +1,14 @@
+
+
+	
+/*some helpful varibals*/		
+
+@mixin position-style{margin: 1%;
+					  padding: 1%;
+					  width: 100%;
+					}	
+@mixin background-bordernone{
+			  background: transparent;    
+			  border: none;
+			}					
+
