@@ -41,8 +41,8 @@
 				.googleMap{@include google-Map-img;}
 		}
 @media screen and (min-width: $tablet-width){
-	.TimeLineCard {min-height: 15em;
-				   max-height: 20em;
+	.TimeLineCard {min-height: 25em;
+				   max-height: 30em;
 		.navigation{
 			.arrows-right{
 						@include arrows-position;
@@ -55,8 +55,8 @@
 			.title{@include dare-title-width;}
 			}
 		.content{
-				min-height: 16em;
-				img{height: 16em;}
+				min-height: 20em;
+				img{height: 20em;}
 				}
 		.footer{@include footer-style;
 				span{font-size:2em;
@@ -103,4 +103,3 @@
 			}	
 		}
 	}
-	

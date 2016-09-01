@@ -18,13 +18,14 @@
 				}
 			}
 	/*timeline settings */
-			.TimeLineCard {
+			.TimeLineCard { 
 				.navigation{
 						.title{left: 1em;}
 						}
 				.footer{@include footer-style;
 						@include footer-style-single;
-					span{width:16%;
+					span{width:16%; margin-bottom:2%;
+						h5{font-size:1em;}
 						.fa{@include fa-size;}
 					}
 					img{@include img-single;}
@@ -32,7 +33,7 @@
 						
 			/* avatar settings, NAME*/
 					.ng-binding{@include binding-single;
-							h3,	h5, i{color: #ffb400;text-transform: uppercase;}
+							h3, i{color: #ffb400;text-transform: uppercase;}
 							.profil-avatar{@include profil-avatar-position;}	
 						}	
 				}
@@ -43,11 +44,117 @@
 				img{width: 3em;}
 				h6 i {
 					color:#ffb400;
-					font-size:15px;
+					font-size:1em;
 				     }
-				h6{color: #01cfe4;}
-				h4{color: #3c6884;}
+				 
+				h6, h7{color: #01cfe4;}
+				h2{ 
+					top: 0em;
+					left:1em;
+					position: relative;
+					}
+				h4, h2{color: #3c6884;}
+				h7{  
+					top: 0em;
+					left: 1em;
+					position: relative;
+					}
 				}
 			.fa{@include circle-border;}
 			.button-block{@include block-single;}
 		}
+		
+@media screen and (min-width: $tablet-width){
+	.single{@include gray_background;
+		.height{font-size: 2em;
+				h1{font-size: 4.4em;}
+				i{font-size: 4.4em;}
+			}
+		.item{@include background-bordernone;
+		label {
+				margin-top: 1em;
+				width: 83%;
+				border-color: #8dc3cd;
+				float: right;
+				}
+			}
+	/*timeline settings */
+			.TimeLineCard {min-height: 30em;
+					   max-height: 30em;
+				.footer{margin-top: 3%;
+						font-size: 3em;
+					span{width:16%;
+						.fa{@include fa-size;}
+					}
+					img{margin-top: -20%;
+						margin-left: 2%;
+						min-width: 6.5em;
+						min-height: 6.5em;}
+					.info{font-size: 0.5em;}
+						
+			/* avatar settings, NAME*/
+					.ng-binding{font-size: 1em;
+							h3, i{color: #ffb400;text-transform: uppercase;}
+							.profil-avatar{@include profil-avatar-position;}	
+						}	
+				}
+					.googleMap{margin-top: -15%;}
+			}
+			h3 {font-size: 4em;}
+			.button-new{height: 5em;
+						font-size: 2em;}
+			.col{min-height: 20.5em;
+				img{width: 10em; 
+					}
+				h6 i {font-size:2em;}
+				h6, h7{font-size:3em;}
+				
+				h4, h2{font-size:5em; top: -2em; left: 4em;}
+		 		h7{font-size: 4.5em; top: -1em; left: 4em;}
+				}
+			.fa{@include circle-border;}
+			.button-block{ margin: 2%; padding: 2%; font-size: 5em;}
+		}
+		
+		}
+		
+@media screen and (min-height: $tablet-height){
+		
+		.single{@include gray_background;
+		.height{font-size: 2em;
+				h1{font-size: 2.4em;}
+				i{font-size: 2.4em;}
+			}
+		.item{@include background-bordernone;
+		label {
+				margin-top: 1em;
+				width: 83%;
+				border-color: #8dc3cd;
+				float: right;
+				}
+			}
+	/*timeline settings */
+			.TimeLineCard {min-height: 35em;
+					   max-height: 35em;
+				.content{min-height: 35em;img{ height:35em;}} 	   
+				.footer{margin-top: 3%;
+						font-size: 3em;
+					span{width:16%;
+						.fa{@include fa-size;}
+					}
+					img{margin-top: -20%;
+						margin-left: 2%;
+						min-width: 4.5em;
+						min-height: 4.5em;}
+					.info{font-size: 0.5em;}
+						
+			/* avatar settings, NAME*/
+					.ng-binding{font-size: 1em;    margin-top: 2%;
+							h3, i{color: #ffb400;text-transform: uppercase;}
+							.profil-avatar{@include profil-avatar-position;}	
+						}	
+				}
+					.googleMap{margin-top: -40%;}
+			}
+		}
+	}
