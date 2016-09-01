@@ -7,8 +7,10 @@
 
 			<ion-nav-buttons side="left">
 				<!-- Toggle left side menu -->
-				<i menu-toggle="left" class="navigation-menu-button ion-android-menu"></i>
-
+				<i menu-toggle="left" class="navigation-menu-button ion-android-menu">	
+					<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
+				</i>
+		
 			</ion-nav-buttons>
 
 			<ion-nav-buttons side="right">
@@ -31,10 +33,12 @@
 			</div>
 			<div class="list">
 				<a href="#/app/profile" class="item item-app-icon-left" menu-close>
+
 					<i class=""></i>
 				</a>
 				<a href="#/app/profile" class="item item-app-icon-left" menu-close>
 					<i class="app-icon app-icon-user-active"></i> Профил
+					<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
 				</a>
 				<a href="#/app/timeline" class="item item-app-icon-left" menu-close>
 					<i class="app-icon app-icon-event-active"></i> Събития

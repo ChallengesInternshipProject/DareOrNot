@@ -18,10 +18,11 @@ angular.module('starter', [
   'leaflet-directive',
   'ionic.contrib.ui.tinderCards',
   'chart.js',
-  'flow'
+  'flow',
+  'angularMoment'
 ])
 
-.run(function($rootScope, $ionicPlatform, $ionicHistory, $location) {
+.run(function($rootScope, $ionicPlatform, $ionicHistory, $location,amMoment) {
 
   // var push = new Ionic.Push({});
   //
@@ -72,4 +73,5 @@ angular.module('starter', [
       StatusBar.styleDefault();
     }
   });
+  amMoment.changeLocale('bg');
 });

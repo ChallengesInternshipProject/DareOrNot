@@ -58,7 +58,15 @@ angular.module('starter').config(function (
 			url: '/app',
 			abstract: true,
 			templateUrl: 'templates/side-menu/side-menu.html',
-			controller: 'SideMenuCtrl'
+			controller: 'SideMenuCtrl',
+			resolve : {
+				notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
+					return   NotificationService.getUnseen($localStorage.user.data._id)
+    						.then(function(result){
+    							return result.length
+  						})
+				}]
+			}
 		})
 
 		.state('app.home', {
@@ -76,7 +84,15 @@ angular.module('starter').config(function (
 		.state('app.profile',{
 			url: '/profile',
 			templateUrl: 'templates/side-menu/profile.html',
-			controller: 'ProfileCtrl'
+			controller: 'ProfileCtrl',
+			resolve : {
+				notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
+					return   NotificationService.getUnseen($localStorage.user.data._id)
+    						.then(function(result){
+    							return result.length
+  						})
+				}]
+			}
 		})
 		.state('app.search', {
 			url: '/search',

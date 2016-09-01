@@ -13,7 +13,11 @@
 
 		<div class="profile-info-list">
 			<span class="profile-menu-item">
-				<i class="app-icon app-icon-activities-active"></i><a href="#/app/activity">Активност</a>
+				<i class="app-icon app-icon-activities-active"></i>
+				<a href="#/app/activity">
+					Активност
+					<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
+				</a>
 			</span>
 			<span class="profile-menu-item">
 				<i class="app-icon-fav-active"></i><a href="#/app/mydares">Моите предизвикателства</a>

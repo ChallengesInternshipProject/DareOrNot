@@ -10369,7 +10369,7 @@ a.button {
     display: inline-flex;
     text-align: left;
     font-size: 0.8em; }
-  .SideMenu .menu-left span {
+  .SideMenu .menu-left span:not(.badge) {
     float: left;
     margin-bottom: -5%;
     margin-left: -3.5%;

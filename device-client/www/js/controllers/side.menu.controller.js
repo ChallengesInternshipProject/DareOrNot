@@ -2,7 +2,18 @@ angular.module('starter.controllers')
   .factory('moment', function($window) {
     return $window.moment;
   })
-  .controller('SideMenuCtrl', function($scope, $http, $log, $ionicModal, $state, $ionicHistory, $ionicLoading, SERVER_ADDRESS, $localStorage) {
+  .controller('SideMenuCtrl', function(
+    $scope,
+     $http,
+     $log,
+     $ionicModal,
+     $state,
+     $ionicHistory,
+     $ionicLoading,
+     SERVER_ADDRESS,
+     $localStorage,
+    notificationsCount
+    ) {
 
 
     setInterval(function() {
@@ -122,4 +133,9 @@ angular.module('starter.controllers')
     $scope.goTo = function(location) {
       $state.go('app.search');
     };
+
+ 
+      $scope.notificationsCount = notificationsCount
+      $log.info($scope.notificationsCount)
+   
   });
