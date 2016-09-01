@@ -1,0 +1,47 @@
+	//Timeline,  //
+	
+//background and body elements style//
+
+@mixin gray_background{
+			    background: #e8edf0;
+				background-size: 100% 100%;
+				color: #03b2d1;
+				font-size: 1em;
+				margin: 0;
+				padding: 1%;
+				width: 100%;
+				display: block;
+				position: relative;
+		}
+	//timeline < navigation title style//	
+@mixin arrows-position{
+	height: 0.5em;
+    font-size: 1.5em;
+    margin-top: -20%;
+    padding: 0;
+    position: relative;
+    color: #fff;
+	}
+@mixin dare-title-style{
+	color: #fff;
+	position: relative;
+	top: -6em;
+	left: -3em;
+	font-size: 1.5em;
+	}
+@mixin footer-style{	
+	text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: -1em;
+    margin-top: -13%;
+    padding: 1%;
+    width: 100%;
+	}
+	
+@mixin profil-avatar-position{
+					margin-top: -10%;
+					margin-left: -4%;
+					min-width: 5em;
+					min-height: 5em;
+					}
