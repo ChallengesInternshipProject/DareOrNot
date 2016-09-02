@@ -8,10 +8,12 @@
 //background and body elements style//
 
 @mixin Mine_user_background{
-			background-image: url(../img/BG.png);
-			background-color: #012438;
-			background-size: 100% 100%;
-			text-align: center;	
+			 background-image: url(../img/BG.png);
+  			 background-color: #012438;
+  			 background-size: 100% 100%;
+ +			 font-size:1em;
+  			 text-align: center;
+  			 display: block;
 			}
 /*heder side- menue*/
 @mixin height-heder{
@@ -35,6 +37,7 @@
 					@include background-bordernone;
 					color: #01cfe4;
 					display: block;
+					width: 98%;
 					position: relative;
 					}
 /*list Item*/

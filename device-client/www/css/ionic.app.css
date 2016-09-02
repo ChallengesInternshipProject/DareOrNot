@@ -10695,6 +10695,7 @@ a.button {
       padding-bottom: 11vw; }
       .Profile .profile-info .profile-avatar {
         height: 12vw;
+        width: 12vw;
         margin-left: 6vw;
         margin-top: -2vw; }
       .Profile .profile-info .profile-user-credentials {
@@ -10779,6 +10780,7 @@ a.button {
     border: none;
     color: #01cfe4;
     display: block;
+    width: 98%;
     position: relative; }
     .Activity .list ion-item {
       margin: 1%;
@@ -10920,6 +10922,7 @@ a.button {
     border: none;
     color: #01cfe4;
     display: block;
+    width: 98%;
     position: relative; }
     .Notifications .list ion-item {
       margin: 1%;
@@ -11155,6 +11158,7 @@ a.button {
     border: none;
     color: #01cfe4;
     display: block;
+    width: 98%;
     position: relative; }
     .Settings .list ion-item {
       margin: 1%;
