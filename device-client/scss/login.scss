@@ -4,17 +4,24 @@
 
   /*BACKGROUND Login and Registration*/
 	.login-view .content-list{@include content-list-login;
+	 
+/*Slider-page dots on the bottom of the page*/
+		div>div>div .slider-pager{
+			display:none;
+	}
 	
   /*BACKGROUND transgender*/
 	  .content-list {@include content-list-view;}
 	   section.list {@include list-view;
 		.fa {
+		margin: 5%;
+		padding: 1%;
 		width: 15vw;
 		height: 15vw;
+		font-size: 3em;
 		border-radius: 50%;
 		color: #fff;
 		display: inline-block;
-		margin: 5%;
 		  }
 		}
   /* LOGO */
@@ -32,13 +39,9 @@
   .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
   .ion-ios-wineglass-outline, .ion-ios-camera-outline,
   .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
-		font-size: 1.5em;
+		font-size: 2em; 
+		
 	  }
-
-  /*Changes all the icon colors */
-  // i {
-  //   color: #04a4c3;
-  // }
 
   /*ENTER BUTTON*/
 
@@ -54,6 +57,7 @@
   }
 
   /*UNDERLINE OR */
+  
   div.container h1 {
     font-size: 1em;
     display: inline-block;
@@ -95,7 +99,7 @@
 	color: #fff;
     padding: 1%;
     margin: 1%;
-    margin-top: 14%;
+    margin-top: 10%;
     position: relative;
     text-align: center;
     font-size: 1.4em;
@@ -110,10 +114,10 @@
     display: inline-flex;
   }
 
-  /*ion-slide-box {*/
-  /*height: 100vh !important;*/
+ion-slide-box {
+height: 100vh !important;}
 
-  /*}*/
+
 
   /*NEXT / BACK BUUTON*/
 
@@ -171,4 +175,208 @@
 		}
 	
 	}
+}
+
+
+@media screen and (min-width: $tablet-width){
+	.login-view .content-list{
+    line-height: 1.0;
+	
+  /*buttons size */
+	   section.list {
+		.fa {
+		width: 6vw;
+		height: 6vw;
+		font-size: 6em;
+		margin:4%;
+		  }
+		}
+	}
+  /* LOGO */
+	 .logo { 
+			padding: 1%;
+			margin: 1%;
+			min-height: 10vh;
+			background-size: 10% 100%;
+		}
+  .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
+  .ion-ios-wineglass-outline, .ion-ios-camera-outline,
+  .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
+		font-size: 2.5em;
+	  }
+
+  /*ENTER BUTTON*/
+
+  button.button.button-calm {margin: 1%;}
+
+  /*FORGET THE PASS*/
+  .forget {
+    margin: 3%;
+    font-size: 1em;
+  }
+  /*UNDERLINE OR */
+  div.container h1 {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px;
+  }
+
+  div.container h1:before,
+  div.container h1:after {
+    height: 2px;
+    top: 50%;
+    width: 500%;
+  }
+
+  div.container h1:before {
+    right: 100%;
+  }
+
+  div.container h1:after {
+    left: 100%;
+  }
+
+  /*something like footer */
+
+  .regis {    
+    margin-top: 5%;
+    font-size: 1em;
+  }
+ /* bottom nav */
+
+  div.slider-pager {
+	visibility: hidden;
+
+  }
+  ion-slide-box {
+  height: 50vh !important;
+}
+
+  /*NEXT / BACK BUUTON*/
+
+  button.button-TR {
+    width: 30%;
+	font-size: 4em;
+  }
+
+ 
+
+  /* upload photo */
+
+  .fileContainer [type=file] {
+    font-size: 2em;
+  }
+
+  /* Example stylistic flourishes */
+
+  .fileContainer {
+		font-size: 2em;
+		i{
+		border-radius: 50%;
+		font-size: 2em;
+		padding: 1em;
+		}
+	
+	}
+}
+
+@media screen and (min-height: $tablet-height){
+	.login-view .content-list{min-height: 60vh;
+	    font-size: 1.5em;
+	
+  /*circle buttons style*/
+		.content-list{.regis{margin-top: 25%;}}
+	   section.list {
+		.fa {
+		    width: 8vw;
+			height: 8vw;
+			font-size: 2.5em;
+		  }
+		}
+  /* LOGO */
+	 .logo { 
+			padding: 1%;
+			margin: 1%;
+			background-size: 40% 50%;
+			min-height: 17vh;
+		}
+
+  .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
+  .ion-ios-wineglass-outline, .ion-ios-camera-outline,
+  .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
+		font-size: 2.5em;
+	  }
+
+  /*ENTER BUTTON*/
+
+  button.button.button-calm {margin-top: 7%; margin-bottom:7%;}
+
+  /*FORGET THE PASS*/
+  .forget {
+    margin: 3%;
+    font-size: 1em;
+
+  }
+
+  /*UNDERLINE OR */
+  div.container h1 {
+    font-size: 1em;
+    padding: 1em;
+  }
+
+  div.container h1:before,
+  div.container h1:after {
+    height: 2px;
+  }
+
+  div.container h1:before {
+    right: 100%;
+  }
+
+  div.container h1:after {
+    left: 100%;
+  }
+
+  div.container {
+    width: 80%;
+    left: 10%;
+  }
+
+  /*something like footer */
+
+  .regis {    
+    padding: 1%;
+    margin: 1%;
+    margin-top: 10%;
+    font-size: 1.4em;
+  }
+
+  a.reg {
+    margin: 0;
+  }
+
+  /*NEXT / BACK BUUTON*/
+
+  button.button-TR {
+    width: 30%;
+	font-size: 4em;
+  }
+
+  /* upload photo */
+  .fileContainer [type=file] {
+    font-size: 2em;
+  }
+
+  /* Example stylistic flourishes */
+
+  .fileContainer {
+		font-size: 2em;
+		i{
+		border-radius: 50%;
+		font-size: 2em;
+		padding: 1em;
+		}
+	
+	}
+}
 }

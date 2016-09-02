@@ -10019,31 +10019,32 @@ a.button {
 /*some helpful varibals*/
 /*BACKGROUND Login and Registration*/
 .login-view .content-list {
+  margin: 0;
+  padding: 0;
   background-color: #012438;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  position: relative;
-  height: 100% !important;
   background-size: 100% 100%;
   box-sizing: border-box;
+  /*Slider-page dots on the bottom of the page*/
   /*BACKGROUND transgender*/
   /* LOGO */
   /*Enter LOGIN INFO*/
-  /*Changes all the icon colors */
   /*ENTER BUTTON*/
   /*FORGET THE PASS*/
   /*UNDERLINE OR */
   /*something like footer */
-  /*ion-slide-box {*/
-  /*height: 100vh !important;*/
-  /*}*/
   /*NEXT / BACK BUUTON*/
   /* bottom nav */
   /* upload photo */
   /* Example stylistic flourishes */ }
+  .login-view .content-list div > div > div .slider-pager {
+    display: none; }
   .login-view .content-list .content-list {
+    margin: 0%;
+    padding: 0%;
     display: block;
     text-align: center;
     font-size: 1em;
@@ -10051,7 +10052,8 @@ a.button {
     background: transparent;
     box-sizing: border-box; }
   .login-view .content-list section.list {
-    min-height: 30em;
+    min-height: 35em;
+    padding: 0%;
     margin: 0%;
     position: relative;
     text-align: center;
@@ -10060,17 +10062,19 @@ a.button {
     background: transparent;
     box-sizing: border-box; }
     .login-view .content-list section.list .fa {
+      margin: 5%;
+      padding: 1%;
       width: 15vw;
       height: 15vw;
+      font-size: 3em;
       border-radius: 50%;
       color: #fff;
-      display: inline-block;
-      margin: 5%; }
+      display: inline-block; }
   .login-view .content-list .logo {
-    padding: 1%;
-    margin: 1%;
+    padding: 2%;
+    margin: 2%;
     position: relative;
-    min-height: 20vh;
+    min-height: 25vh;
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -10078,7 +10082,6 @@ a.button {
     box-sizing: border-box; }
   .login-view .content-list .into-login {
     padding: 1%;
-    margin: 1%;
     color: #78671e;
     display: block;
     position: relative;
@@ -10116,7 +10119,7 @@ a.button {
   .login-view .content-list .ion-ios-email-outline, .login-view .content-list .ion-ios-locked-outline, .login-view .content-list .ion-iphone, .login-view .content-list .ion-android-person, .login-view .content-list .ion-transgender,
   .login-view .content-list .ion-ios-wineglass-outline, .login-view .content-list .ion-ios-camera-outline,
   .login-view .content-list .ion-arrow-right-c, .login-view .content-list .ion-arrow-left-c, .login-view .content-list .ion-ios-camera-outline {
-    font-size: 1.5em; }
+    font-size: 2em; }
   .login-view .content-list button.button.button-calm {
     background-color: #012438;
     color: #78671e;
@@ -10162,7 +10165,7 @@ a.button {
     color: #fff;
     padding: 1%;
     margin: 1%;
-    margin-top: 14%;
+    margin-top: 10%;
     position: relative;
     text-align: center;
     font-size: 1.4em;
@@ -10173,6 +10176,8 @@ a.button {
     color: #fff;
     margin: 0;
     display: inline-flex; }
+  .login-view .content-list ion-slide-box {
+    height: 100vh !important; }
   .login-view .content-list button.button-TR {
     background: transparent none repeat scroll 0% 0%;
     font-size: 100%;
@@ -10210,6 +10215,136 @@ a.button {
       border-radius: 50%;
       font-size: 2em;
       padding: 1em; }
+
+@media screen and (min-width: 1920px) {
+  .login-view .content-list {
+    line-height: 1.0;
+    /*buttons size */ }
+    .login-view .content-list section.list .fa {
+      width: 6vw;
+      height: 6vw;
+      font-size: 6em;
+      margin: 4%; }
+  /* LOGO */
+  .logo {
+    padding: 1%;
+    margin: 1%;
+    min-height: 10vh;
+    background-size: 10% 100%; }
+  .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
+  .ion-ios-wineglass-outline, .ion-ios-camera-outline,
+  .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
+    font-size: 2.5em; }
+  /*ENTER BUTTON*/
+  button.button.button-calm {
+    margin: 1%; }
+  /*FORGET THE PASS*/
+  .forget {
+    margin: 3%;
+    font-size: 1em; }
+  /*UNDERLINE OR */
+  div.container h1 {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px; }
+  div.container h1:before,
+  div.container h1:after {
+    height: 2px;
+    top: 50%;
+    width: 500%; }
+  div.container h1:before {
+    right: 100%; }
+  div.container h1:after {
+    left: 100%; }
+  /*something like footer */
+  .regis {
+    margin-top: 5%;
+    font-size: 1em; }
+  /* bottom nav */
+  div.slider-pager {
+    visibility: hidden; }
+  ion-slide-box {
+    height: 50vh !important; }
+  /*NEXT / BACK BUUTON*/
+  button.button-TR {
+    width: 30%;
+    font-size: 4em; }
+  /* upload photo */
+  .fileContainer [type=file] {
+    font-size: 2em; }
+  /* Example stylistic flourishes */
+  .fileContainer {
+    font-size: 2em; }
+    .fileContainer i {
+      border-radius: 50%;
+      font-size: 2em;
+      padding: 1em; } }
+
+@media screen and (min-height: 1080px) {
+  .login-view .content-list {
+    min-height: 60vh;
+    font-size: 1.5em;
+    /*circle buttons style*/
+    /* LOGO */
+    /*ENTER BUTTON*/
+    /*FORGET THE PASS*/
+    /*UNDERLINE OR */
+    /*something like footer */
+    /*NEXT / BACK BUUTON*/
+    /* upload photo */
+    /* Example stylistic flourishes */ }
+    .login-view .content-list .content-list .regis {
+      margin-top: 25%; }
+    .login-view .content-list section.list .fa {
+      width: 8vw;
+      height: 8vw;
+      font-size: 2.5em; }
+    .login-view .content-list .logo {
+      padding: 1%;
+      margin: 1%;
+      background-size: 40% 50%;
+      min-height: 17vh; }
+    .login-view .content-list .ion-ios-email-outline, .login-view .content-list .ion-ios-locked-outline, .login-view .content-list .ion-iphone, .login-view .content-list .ion-android-person, .login-view .content-list .ion-transgender,
+    .login-view .content-list .ion-ios-wineglass-outline, .login-view .content-list .ion-ios-camera-outline,
+    .login-view .content-list .ion-arrow-right-c, .login-view .content-list .ion-arrow-left-c, .login-view .content-list .ion-ios-camera-outline {
+      font-size: 2.5em; }
+    .login-view .content-list button.button.button-calm {
+      margin-top: 7%;
+      margin-bottom: 7%; }
+    .login-view .content-list .forget {
+      margin: 3%;
+      font-size: 1em; }
+    .login-view .content-list div.container h1 {
+      font-size: 1em;
+      padding: 1em; }
+    .login-view .content-list div.container h1:before,
+    .login-view .content-list div.container h1:after {
+      height: 2px; }
+    .login-view .content-list div.container h1:before {
+      right: 100%; }
+    .login-view .content-list div.container h1:after {
+      left: 100%; }
+    .login-view .content-list div.container {
+      width: 80%;
+      left: 10%; }
+    .login-view .content-list .regis {
+      padding: 1%;
+      margin: 1%;
+      margin-top: 10%;
+      font-size: 1.4em; }
+    .login-view .content-list a.reg {
+      margin: 0; }
+    .login-view .content-list button.button-TR {
+      width: 30%;
+      font-size: 4em; }
+    .login-view .content-list .fileContainer [type=file] {
+      font-size: 2em; }
+    .login-view .content-list .fileContainer {
+      font-size: 2em; }
+      .login-view .content-list .fileContainer i {
+        border-radius: 50%;
+        font-size: 2em;
+        padding: 1em; } }
 
 /* CSS list for all pages at user profil*/
 .list {
@@ -10554,9 +10689,12 @@ a.button {
 /*img style*/
 .SideMenu .menu-left {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /*for icons*/
   /*how to be display*/ }
   .SideMenu .menu-left .height {
@@ -10627,9 +10765,12 @@ a.button {
 /* CSS for Profile view */
 .Profile {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
-  text-align: center; }
+  text-align: center;
+  display: block; }
   .Profile .profile-info {
     width: 100%;
     display: block;
@@ -10729,9 +10870,12 @@ a.button {
 /* CSS activities */
 .Activity {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /* CSS edit in item */ }
   .Activity .height {
     display: inline;
@@ -10876,9 +11020,12 @@ a.button {
 /* CSS nothifications */
 .Notifications {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /* CSS edit in item */ }
   .Notifications .height {
     display: inline;
@@ -11109,9 +11256,12 @@ a.button {
 /* here is the mine CSS 4 background, colors and so on */
 .Settings {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /* here is the mine CSS 4 back button, heder and so on the bar*/ }
   .Settings .height {
     display: inline;

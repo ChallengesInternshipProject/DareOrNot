@@ -5,39 +5,43 @@
 
 
 //background and body elements style//
-@mixin content-list-login{ background-color: #012438;
-	background-image: url(../img/background.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	position: relative;
-	position: relative;
-	height: 100% !important;
-	background-size: 100% 100%;
-	box-sizing: border-box;
+@mixin content-list-login{ 
+	margin:0;
+	padding:0;
+    background-color: #012438;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: 100% 100%;
+    box-sizing: border-box;
  }
 @mixin content-list-view{
-	display:block;
+   margin: 0%;
+   padding: 0%;
+  display:block;
   text-align: center;
   font-size: 1em;
   color: #fff;
-	background: transparent;
+  background: transparent;
   box-sizing: border-box;
 	}
 @mixin list-view{
-	min-height: 30em;
+	min-height: 35em;
+    padding: 0%;
     margin: 0%;
 	position: relative;
     text-align: center;
     font-size: 1em;
     display: block;
 	background: transparent;
-   box-sizing: border-box;	
+    box-sizing: border-box;
 	}
 @mixin logo-view{ 
-  padding: 1%;
-  margin: 1%;
+  padding: 2%;
+  margin: 2%;
   position: relative;
-  min-height: 20vh;
+  min-height: 25vh;
   background-image: url(../img/logo.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -46,7 +50,6 @@
 	}
 @mixin into-login-view{
   padding: 1%;
-  margin: 1%;
   color: rgb(120, 103, 30);
   display: block;
   position: relative;
@@ -55,21 +58,21 @@
   box-sizing: border-box;
 	}	
 @mixin item-into-view{
-	color: rgb(120, 103, 30);
-  border-bottom: 1px solid #808080;
-  border-top: 0;
-  width: 75%;
-  border-left: 0;
-  border-right: 0;
-  font-size: 1em;
+    color: rgb(120, 103, 30);
+    border-bottom: 1px solid #808080;
+    border-top: 0;
+    width: 75%;
+    border-left: 0;
+    border-right: 0;
+    font-size: 1em;
 }
 @mixin input-view{ 
-  padding: 8px;
-  display: block;
-  border: none;
-  width: 100%;
-  background-color: transparent;
-  text-align: center;  
+    padding: 8px;
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;  
 	}
 @mixin input-label-view{
   color: rgb(120, 103, 30);
@@ -80,15 +83,15 @@
   padding: 0;
 	}
 @mixin button-calm-view{
-	background-color: rgb(1, 36, 56);
-  color: rgb(120, 103, 30);
-  width: 83%;
-  padding: 1%;
-  border: none;
-  margin: 3%;
-  font-size: 1em;
-  position: relative;
-  left: 6%;
-  box-sizing: border-box;
+    background-color: rgb(1, 36, 56);
+    color: rgb(120, 103, 30);
+    width: 83%;
+    padding: 1%;
+    border: none;
+    margin: 3%;
+    font-size: 1em;
+    position: relative;
+    left: 6%;
+    box-sizing: border-box;
 	}	
 	

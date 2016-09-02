@@ -9,9 +9,10 @@
 
 @mixin Mine_user_background{
 			 background-image: url(../img/BG.png);
+			 background-repeat: no-repeat;
+			 background-position: center;
   			 background-color: #012438;
   			 background-size: 100% 100%;
- +			 font-size:1em;
   			 text-align: center;
   			 display: block;
 			}
