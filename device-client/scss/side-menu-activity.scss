@@ -28,6 +28,9 @@
 				}
 			div p{ 
 				@include paragraf-style;
+				i{
+				 @include left-minutes-style;
+				 }
 				}
 			/* CSS imges */
 				.img{
@@ -64,18 +67,23 @@
 				}
 
 				@media screen and (min-width: $tablet-width){
+				h2{margin-left: 18.5%;
+					font-size: 3em;
+					margin-top: -3%;}
 						hr{
 							width: 90%;
 						}
 
 						.item-avatar>img:first-child{
-							position: none;
-   							margin-left: 4vw;
-   							background-color: red;
+							min-width: 10em; 
+							min-height: 10em;
+							margin-left: 6vw;
    						}
-
+					
 					.com p{
-						padding-left: 6em;
+						margin-left: 2em;
+						font-size: 2em;
+						padding: 1%;
 					}
 
 					.list ion-item .img{
@@ -83,20 +91,83 @@
 					}
 
 					.list ion-item .img img{
-						width:7em;
-						height: 6.5em;
+					    width: 12em;
+						height: 10.5em;
 					}
-					 h2{
-						margin-left: 4.5%;
-					}
-				ion-item div p{
-						margin-left: 2vw;
+
+				.Activity div p{
+						width: 100%;
+						font-size: 3em;
+						.ion-ios-clock-outline{
+							width: 30%;
+							font-size: 4em;
+						}
 					}
 					.list ion-item .p{
+						 width: 100%;
 						 margin-left: 4.5%;
+						 font-size: 3em;
+						 
 					}
 					.challenger{
 						margin-left: -3em;
+						margin-TOP: -3em;
+						width: 12em;
+						height: 10.5em;
 					}
 				}
-}
+
+				@media screen and (min-height: $tablet-height){
+						h2{margin-left: 23.5%;
+						font-size: 2.5em;
+						margin-top: -2%;
+						}
+						hr{
+							width: 90%;
+						}
+
+						.item-avatar>img:first-child{
+							min-width: 10em; 
+							min-height: 10em;
+							margin-left: 6vw;
+   						}
+					
+					.com p{
+					    margin-left: 2em;
+						font-size: 2em;
+						padding: 1%;
+						line-height: 1.5;
+						margin: 1%;
+					}
+
+					.list ion-item .img{
+						margin-left: 5%;
+					}
+
+					.list ion-item .img img{
+					    width: 12em;
+						height: 10.5em;
+					}
+				.Activity div p{
+						width: 100%;
+						font-size: 3em;
+						.ion-ios-clock-outline{
+							width: 30%;
+							font-size: 4em;
+						}
+					}
+					.list ion-item .p{
+					margin-left: 0;
+					margin-top: 2em;
+					margin-bottom: 1em;
+					font-size: 3em;
+					padding: 1%;
+					}
+					.challenger{
+						margin-left: 5em;
+						margin-TOP: 0em;
+						width: 12em;
+						height: 10.5em;
+					}
+				}
+			}

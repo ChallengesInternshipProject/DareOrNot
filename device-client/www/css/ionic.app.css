@@ -10119,7 +10119,7 @@ a.button {
   .login-view .content-list .ion-ios-email-outline, .login-view .content-list .ion-ios-locked-outline, .login-view .content-list .ion-iphone, .login-view .content-list .ion-android-person, .login-view .content-list .ion-transgender,
   .login-view .content-list .ion-ios-wineglass-outline, .login-view .content-list .ion-ios-camera-outline,
   .login-view .content-list .ion-arrow-right-c, .login-view .content-list .ion-arrow-left-c, .login-view .content-list .ion-ios-camera-outline {
-    font-size: 2em; }
+    font-size: 1.5em; }
   .login-view .content-list button.button.button-calm {
     background-color: #012438;
     color: #78671e;
@@ -10652,7 +10652,8 @@ a.button {
     margin-top: 5%;
     margin-left: 1%;
     margin-right: 1%;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    text-align: center; }
     .Statistics .row a.item {
       color: #fff; }
     .Statistics .row a.button.button-calm {
@@ -10663,12 +10664,17 @@ a.button {
       font-size: 1.2em;
       margin-right: 5%; }
     .Statistics .row .user {
-      top: 21px;
-      left: 15%;
-      height: 10%; }
+      width: 70%; }
       .Statistics .row .user h1 {
         font-size: 1.2em;
         color: #fff; }
+    .Statistics .row .fa {
+      float: left;
+      margin-left: 1vh;
+      width: 20%;
+      height: 10vh;
+      border-radius: 50%;
+      background-size: 100% 75%; }
     .Statistics .row .dare h3 {
       padding: 0.5em;
       font-size: 10px;
@@ -10678,6 +10684,23 @@ a.button {
       color: #fff; }
     .Statistics .row canvas #line {
       background: transparent; }
+
+@media screen and (min-height: 1080px) {
+  .dare {
+    width: 25%;
+    font-size: 3em; }
+  .fa {
+    float: left;
+    margin-left: 1vh;
+    width: 20%;
+    height: 5vh;
+    border-radius: 50%;
+    background-size: 70% 70%; }
+  button.button-calm {
+    width: 70%;
+    font-size: 3.2em;
+    margin: 5%;
+    padding: 5%; } }
 
 /*some helpful varibals*/
 /*heder side- menue*/
@@ -10960,6 +10983,14 @@ a.button {
         margin-bottom: 1vh;
         display: inline-flex;
         font-size: 0.8em; }
+        .Activity .list ion-item div p i {
+          color: #ffb400;
+          margin: 1%;
+          padding: 1%;
+          width: 100%;
+          display: block;
+          padding-right: 1vw;
+          font-size: 1em; }
       .Activity .list ion-item .img {
         margin: 1%;
         padding: 1%;
@@ -10987,27 +11018,79 @@ a.button {
     .Activity ion-item div p {
       margin-right: 3vw; } }
   @media screen and (min-width: 1920px) {
+    .Activity h2 {
+      margin-left: 18.5%;
+      font-size: 3em;
+      margin-top: -3%; }
     .Activity hr {
       width: 90%; }
     .Activity .item-avatar > img:first-child {
-      position: none;
-      margin-left: 4vw;
-      background-color: red; }
+      min-width: 10em;
+      min-height: 10em;
+      margin-left: 6vw; }
     .Activity .com p {
-      padding-left: 6em; }
+      margin-left: 2em;
+      font-size: 2em;
+      padding: 1%; }
     .Activity .list ion-item .img {
       margin-left: 5%; }
     .Activity .list ion-item .img img {
-      width: 7em;
-      height: 6.5em; }
-    .Activity h2 {
-      margin-left: 4.5%; }
-    .Activity ion-item div p {
-      margin-left: 2vw; }
+      width: 12em;
+      height: 10.5em; }
+    .Activity .Activity div p {
+      width: 100%;
+      font-size: 3em; }
+      .Activity .Activity div p .ion-ios-clock-outline {
+        width: 30%;
+        font-size: 4em; }
     .Activity .list ion-item .p {
-      margin-left: 4.5%; }
+      width: 100%;
+      margin-left: 4.5%;
+      font-size: 3em; }
     .Activity .challenger {
-      margin-left: -3em; } }
+      margin-left: -3em;
+      margin-TOP: -3em;
+      width: 12em;
+      height: 10.5em; } }
+  @media screen and (min-height: 1080px) {
+    .Activity h2 {
+      margin-left: 23.5%;
+      font-size: 2.5em;
+      margin-top: -2%; }
+    .Activity hr {
+      width: 90%; }
+    .Activity .item-avatar > img:first-child {
+      min-width: 10em;
+      min-height: 10em;
+      margin-left: 6vw; }
+    .Activity .com p {
+      margin-left: 2em;
+      font-size: 2em;
+      padding: 1%;
+      line-height: 1.5;
+      margin: 1%; }
+    .Activity .list ion-item .img {
+      margin-left: 5%; }
+    .Activity .list ion-item .img img {
+      width: 12em;
+      height: 10.5em; }
+    .Activity .Activity div p {
+      width: 100%;
+      font-size: 3em; }
+      .Activity .Activity div p .ion-ios-clock-outline {
+        width: 30%;
+        font-size: 4em; }
+    .Activity .list ion-item .p {
+      margin-left: 0;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-size: 3em;
+      padding: 1%; }
+    .Activity .challenger {
+      margin-left: 5em;
+      margin-TOP: 0em;
+      width: 12em;
+      height: 10.5em; } }
 
 /*some helpful varibals*/
 /*heder side- menue*/
@@ -11697,6 +11780,7 @@ a.button {
   .single .fa {
     border-radius: 50%;
     width: 3em;
+    height: 3em;
     color: #fff;
     margin: 1%;
     padding: 1%; }
@@ -11790,6 +11874,7 @@ a.button {
     .single .fa {
       border-radius: 50%;
       width: 3em;
+      height: 3em;
       color: #fff;
       margin: 1%;
       padding: 1%; }

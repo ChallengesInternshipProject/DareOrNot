@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "timeline_mixins";
 /* CSS Tab-Statistics */
 .Statistics {
 	background-color: #012438;
@@ -7,6 +8,7 @@
 		margin-left: 1%;
 		margin-right: 1%;
 		font-size: 1.2em;
+		text-align: center;
 		a.item {
 			color: #fff;
 		}
@@ -19,14 +21,19 @@
 			margin-right: 5%;
 		}
 		.user {
-			top: 21px;
-			left: 15%;
-			height: 10%;
+			width: 70%;
 			h1 {
 				font-size: 1.2em;
 				color: #fff;
 			}
 		}
+		.fa{float: left;
+			margin-left: 1vh;
+			width: 20%;
+			height: 10vh;
+			border-radius: 50%;
+			background-size: 100% 75%;
+			}
 		.dare h3 {
 			padding: 0.5em;
 			font-size: 10px;
@@ -41,3 +48,33 @@
 		}
 	}
 }
+@media screen and (min-width: $tablet-width){
+
+
+}
+
+@media screen and (min-height: $tablet-height){
+	.dare{
+		width: 25%;
+		font-size: 3em;
+		}
+	.fa {
+		float: left;
+		margin-left: 1vh;
+		width: 20%;
+		height: 5vh;
+		border-radius: 50%;
+		background-size: 70% 70%;
+		}
+	button.button-calm{	
+		width: 70%;
+		font-size: 3.2em;
+		margin: 5%;
+		padding: 5%;
+		}
+
+}	
+	
+	
+	
+	
