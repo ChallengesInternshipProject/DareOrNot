@@ -113,9 +113,8 @@
 		
 @mixin 	i{
 		padding: 7px;
-		color: #fff;
+		@include radius-fa;
 		background: #01cfe4;
-		border-radius: 50%;
 		font-size: 1em;
 		margin: 0em;
 		}

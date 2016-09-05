@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "mixins";
+@import "varibals";
 @import "login_mixins";
 
   /*BACKGROUND Login and Registration*/
@@ -19,9 +20,7 @@
 		width: 15vw;
 		height: 15vw;
 		font-size: 3em;
-		border-radius: 50%;
-		color: #fff;
-		display: inline-block;
+		@include radius-fa;
 		  }
 		}
   /* LOGO */
@@ -149,17 +148,9 @@ height: 100vh !important;}
   }
 
   .fileContainer [type=file] {
-    /* cursor: inherit; */
-    /* display: block; */
     font-size: 2em;
     filter: alpha(opacity=0);
-    /* min-height: 100%; */
-    /* min-width: 100%; */
     opacity: 0;
-    /* position: absolute; */
-    /* right: 0; */
-    /* text-align: right; */
-    /* top: 0; */
   }
 
   /* Example stylistic flourishes */

@@ -34,8 +34,6 @@ $tablet-height:1080px;
 //Login modal SCSS
 @import "scss/login";
 @import "scss/list";
-//Timeline page view SCSS
-// @import "scss/timeline";
 
 //Category page view SCSS
 @import "scss/category";
@@ -52,7 +50,7 @@ $tablet-height:1080px;
 @import "scss/tab-statistics";
 
 // New Dare page view SCSS
-// @import "scss/tab-new-dare";
+@import "scss/tab-new-dare";
 
 //Side menu SCSS
 @import "scss/side-menu";

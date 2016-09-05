@@ -12,3 +12,8 @@
 			  border: none;
 			}					
 
+@mixin radius-fa{
+		color: #fff;
+		border-radius: 50%;
+		display: inline-block;
+		}

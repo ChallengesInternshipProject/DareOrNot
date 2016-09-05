@@ -10017,6 +10017,7 @@ a.button {
 /*text stylings */
 /*img style*/
 /*some helpful varibals*/
+/*some helpful varibals*/
 /*BACKGROUND Login and Registration*/
 .login-view .content-list {
   margin: 0;
@@ -10067,8 +10068,8 @@ a.button {
       width: 15vw;
       height: 15vw;
       font-size: 3em;
-      border-radius: 50%;
       color: #fff;
+      border-radius: 50%;
       display: inline-block; }
   .login-view .content-list .logo {
     padding: 2%;
@@ -10196,17 +10197,9 @@ a.button {
     overflow: hidden;
     position: relative; }
   .login-view .content-list .fileContainer [type=file] {
-    /* cursor: inherit; */
-    /* display: block; */
     font-size: 2em;
     filter: alpha(opacity=0);
-    /* min-height: 100%; */
-    /* min-width: 100%; */
-    opacity: 0;
-    /* position: absolute; */
-    /* right: 0; */
-    /* text-align: right; */
-    /* top: 0; */ }
+    opacity: 0; }
   .login-view .content-list .fileContainer {
     font-size: 2em;
     box-sizing: border-box; }
@@ -10690,17 +10683,116 @@ a.button {
     width: 25%;
     font-size: 3em; }
   .fa {
-    float: left;
-    margin-left: 1vh;
-    width: 20%;
-    height: 5vh;
-    border-radius: 50%;
-    background-size: 70% 70%; }
+    float: left; }
   button.button-calm {
     width: 70%;
     font-size: 3.2em;
     margin: 5%;
     padding: 5%; } }
+
+/*some helpful varibals*/
+/*some helpful varibals*/
+/* CSS Profil new dare */
+.newdare {
+  background-image: none;
+  background-color: #e8edf0;
+  background-size: 100% 100%;
+  text-align: center;
+  display: block;
+  color: #16b8d4;
+  /*category challenges */
+  /* WebKit browsers */
+  /* upload photo */
+  /* Example stylistic flourishes */ }
+  .newdare div .h1 {
+    color: #044265; }
+  .newdare h3 {
+    color: #16b8d4; }
+  .newdare div .challeng ion-list .list {
+    display: inline-block;
+    width: 100%;
+    padding: 0em;
+    font-size: 1em; }
+    .newdare div .challeng ion-list .list .item {
+      display: inline-block;
+      width: 45%;
+      font-size: 1em;
+      padding: 0.5%;
+      border: none;
+      text-align: center;
+      background: transparent; }
+      .newdare div .challeng ion-list .list .item :nth-child(1) {
+        background: #3b6783;
+        color: #fff;
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        /* margin-top: 1em; */
+        padding-top: 20%;
+        padding-bottom: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        word-break: keep-all; }
+      .newdare div .challeng ion-list .list .item :nth-child(2) {
+        background: #17283a;
+        color: #fff;
+        width: 100%; }
+  .newdare .list-inset {
+    width: 100%;
+    background: transparent; }
+  .newdare label .item {
+    margin-top: 5%; }
+  .newdare .vh {
+    margin-top: 1vh;
+    width: 95%;
+    height: 3em;
+    border-color: #8dc3cd; }
+  .newdare .la {
+    text-align: left; }
+  .newdare .fa {
+    margin: 5%;
+    padding: 1%;
+    width: 10vw !important;
+    height: 10vw;
+    font-size: 3em;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block; }
+  .newdare ::-webkit-input-placeholder {
+    color: #16b8d4;
+    opacity: 1 !important; }
+  .newdare .pen {
+    margin-top: -7em;
+    margin-right: 1em; }
+    .newdare .pen i {
+      color: orange;
+      -webkit-transform: scale(-1, 1); }
+  .newdare .info {
+    font-size: 0.5em;
+    width: 10%;
+    height: 100%;
+    left: -1.2em;
+    bottom: 3em; }
+    .newdare .info i {
+      color: orange;
+      font-size: 3em; }
+  .newdare .fileContainer {
+    overflow: hidden;
+    position: relative; }
+  .newdare .fileContainer {
+    font-size: 2em;
+    box-sizing: border-box; }
+    .newdare .fileContainer i {
+      margin: 1%;
+      padding: 0.5em;
+      background: #fff;
+      color: orange;
+      font-size: 2em;
+      border-radius: 50%;
+      display: inline-block; }
+    .newdare .fileContainer input[type="file"] {
+      overflow: hidden;
+      position: relative; }
 
 /*some helpful varibals*/
 /*heder side- menue*/
@@ -11392,7 +11484,8 @@ a.button {
     color: #01cfe4;
     display: block;
     width: 98%;
-    position: relative; }
+    position: relative;
+    width: 98%; }
     .Settings .list ion-item {
       margin: 1%;
       padding: 1%;
