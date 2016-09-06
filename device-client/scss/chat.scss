@@ -1,10 +1,10 @@
-// $stable:                          #f8f8f8 !default;
+// $stable: #f8f8f8 !default;
 
-.Chat{
+.Chat{ background-color: yellow;
 .messages {
-    background-color: #e8edf0;
+   @include position-style;
+   @include background-bordernone;
   .message {
-
     flex: 1 1 auto !important;
     padding: 10px !important;
     transition: all 250ms ease-in-out !important;
@@ -62,3 +62,4 @@
   }
 }
 }
+.bar.bar-stable.bar-footer { background-color: yellow;}

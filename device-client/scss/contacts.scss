@@ -1,15 +1,9 @@
-
-
 @charset "utf-8";
+@import "mixins";
+@import "varibals";
 
-.Contacts{
-			background-image:none;
-   			background:#e8edf0;
-   			color:#03b2d1;
-   			line-height: 1%;
-		.button{
-			color: #fff;
-			}
+.Contacts{@include Mine_Gray_background;
+	.bar-header{.h1 {color:#044265;}i {color:blue;}}		
 	ion-list .f{
 				text-align: center;
     			font-size: 1rem;
@@ -37,10 +31,6 @@
     				box-sizing: border-box;
 			}
 
-		
-		
-
-		
 		.input-group-user{
 					position: relative;
 					background-color: #fff;

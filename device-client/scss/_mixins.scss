@@ -16,6 +16,15 @@
   			 text-align: center;
   			 display: block;
 			}
+@mixin Mine_Gray_background{
+			background-image:none;
+   			background:#e8edf0;
+			background-size: 100% 100%;
+   			color:#03b2d1;
+			text-align: center;
+			display: block;
+   			line-height: 1%;
+			}
 /*heder side- menue*/
 @mixin height-heder{
 			    display: inline;
