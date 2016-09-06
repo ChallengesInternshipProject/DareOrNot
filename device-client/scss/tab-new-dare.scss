@@ -1,5 +1,7 @@
 
 @charset "utf-8";
+@import "varibals";
+@import "login_mixins";
 /* CSS Profil new dare */
 	.newdare{
 	 background-image: none;
@@ -53,8 +55,12 @@
 	
 	.la{text-align: left;}	
 	.fa {
-    width: 20vw !important;
-    height: 20vw;}
+	margin: 5%;
+	padding: 1%;
+    width: 10vw !important;
+    height: 10vw;
+	font-size: 3em;
+	@include radius-fa;}
 	 /* WebKit browsers */
 	::-webkit-input-placeholder { 
 								color:#16b8d4;
@@ -72,23 +78,28 @@
 			bottom: 3em;
 			i{color:orange;
 			font-size: 3em;}
-			}
-	.fileContainer {
-					font-size: 1em;
-					padding: 0em;
-					margin-bottom: 0;
-					MARGIN-TOP: 5%;
-					box-sizing: border-box;
-					i {
-						background: #fff;
-						border-radius: 0;
-						color:orange;
-						font-size: 2.5em;
-						/* margin: 0%; */
-						padding: 0.5em;
-						padding-bottom: 0.1em;
-					}
-					}
-	 .fileContainer [type=file] {  margin-top: -1em;}
+		}
+ /* upload photo */
+  .fileContainer {
+    overflow: hidden;
+    position: relative;
+  }
 
+  /* Example stylistic flourishes */
+
+  .fileContainer {
+		font-size: 2em;
+		box-sizing: border-box;
+		i{
+		 margin: 1%;
+		 padding: 0.5em;
+		 background: #fff;
+		 color:orange;
+		 font-size: 2em;
+		 border-radius:50%;
+		 display: inline-block;
+		}
+	input[type="file"] {overflow: hidden;
+    position: relative;}
 	}
+}

@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import "varibals";
+
 
 //Activit, Notification, Settings//
 
@@ -5,10 +8,13 @@
 //background and body elements style//
 
 @mixin Mine_user_background{
-			background-image: url(../img/BG.png);
-			background-color: #012438;
-			background-size: 100% 100%;
-			text-align: center;	
+			 background-image: url(../img/BG.png);
+			 background-repeat: no-repeat;
+			 background-position: center;
+  			 background-color: #012438;
+  			 background-size: 100% 100%;
+  			 text-align: center;
+  			 display: block;
 			}
 /*heder side- menue*/
 @mixin height-heder{
@@ -29,10 +35,10 @@
 			}
 /*list*/
 @mixin list-style{  @include position-style;
-					border: none;
+					@include background-bordernone;
 					color: #01cfe4;
-					background: transparent;
 					display: block;
+					width: 98%;
 					position: relative;
 					}
 /*list Item*/
@@ -107,52 +113,22 @@
 		
 @mixin 	i{
 		padding: 7px;
-		color: #fff;
+		@include radius-fa;
 		background: #01cfe4;
-		border-radius: 50%;
 		font-size: 1em;
 		margin: 0em;
 		}
 /*img style*/
+
 @mixin image-style {	
 	@include position-style;
 	display: block;
 	}
+	
 @mixin image-square {
 	display: inline;
 	width: 4em;
 	height: 3.5em;
 	padding: 0.3em 1em 0.3em 0;
 	}
-/*some helpful varibals*/		
-@mixin position-style{margin: 1%;
-					  padding: 1%;
-					  width: 100%;
-					}
-
-					
-					
-	//Timeline,  //
 	
-//background and body elements style//
-
-@mixin gray_background{
-			    background: #e8edf0;
-				background-size: 100% 100%;
-				color: #03b2d1;
-				font-size: 1em;
-				margin: 0;
-				padding: 1%;
-				width: 100%;
-				display: block;
-				position: relative;
-		}
-	//timeline < navigation title style//	
-@mixin arrows-position{
-	height: 0.5em;
-    font-size: 1.2em;
-    margin-top: -20%;
-    padding: 0;
-    position: relative;
-    color: blue;
-}

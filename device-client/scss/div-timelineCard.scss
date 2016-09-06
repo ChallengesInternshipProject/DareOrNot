@@ -1,8 +1,10 @@
 @charset "utf-8";
-/* CSS list card */
+@import "mixins";
+@import "timeline_mixins";
 
-.challenges{
-	.bar-header span{color:#fff;
-	h3:first-child{font-size:20px;}
+/* CSS Timeline	title and arrows*/
+
+	.timeline{@include gray_background;
+		.item{@include background-bordernone;
 	}
 }

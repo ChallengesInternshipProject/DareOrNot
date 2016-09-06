@@ -1,334 +1,161 @@
+@charset "utf-8";
+@import "mixins";
+@import "timeline_mixins";
 
+/* CSS single Dare	title and arrows*/
 
-	 .demo{ 
-		display: block;
-		width: 100%;
-		height: auto;
-		background-color: #fff;
-		// margin-left: 2%;
-		margin-top: 2%;
-		margin-right: 2%;
-		position:relative;
+	.single{@include gray_background;
+		.height{@include height-heder; 
+				h1{left: 20%;}
+				i{right: 70%;}
+			}
+		.item{@include background-bordernone;
+		label {
+				margin-top: 1em;
+				width: 83%;
+				border-color: #8dc3cd;
+				float: right;
+				}
+			}
+	/*timeline settings */
+			.TimeLineCard { 
+				.navigation{
+						.title{left: 1em;}
+						}
+				.footer{@include footer-style;
+						@include footer-style-single;
+					span{width:16%; margin-bottom:2%;
+						h5{font-size:1em;}
+						.fa{@include fa-size;}
+					}
+					img{@include img-single;}
+					.info{@include info-size;}
+						
+			/* avatar settings, NAME*/
+					.ng-binding{@include binding-single;
+							h3, i{color: #ffb400;text-transform: uppercase;}
+							.profil-avatar{@include profil-avatar-position;}	
+						}	
+				}
+			}
+			h3 {@include h3-single;}
+			.button-new{@include button-style-color;text-transform: uppercase;}
+			.col{@include col-single;
+				img{width: 3em;}
+				h6 i {
+					color:#ffb400;
+					font-size:1em;
+				     }
+				 
+				h6, h7{color: #01cfe4;}
+				h2{ 
+					top: 0em;
+					left:1em;
+					position: relative;
+					}
+				h4, h2{color: #3c6884;}
+				h7{  
+					top: 0em;
+					left: 1em;
+					position: relative;
+					}
+				}
+			.fa{@include circle-border;}
+			.button-block{@include block-single;}
 		}
-
-
-
-	.demo>img{
-		position: relative;
-	  	width: 100%;
-    	height: auto;
-	 }
-
-	.demo h2{
-	 	position: absolute;
-	 	top: 15%;
-	 	color: #fff;
-	 	font-size: 40px;
-	 	padding-left: 30px;
-	 }
-	
-	// .time{
-	// 	display: inline-block;
-	// 	vertical-align: top;
-	// }
-
-	.time{
-		display: inline-block;
-		vertical-align: top;
-		padding-left: 4px;
-	}
-
-	.timetime{
-		display: inline-block;
-		vertical-align: top;
-		padding-top: 30px;
-		margin-left: -68%;
-		width: 350px;
-		height: auto;
-	}
-
-	.timetime p {
-		font-size: 10px;
-	}
-
-	.likeLike{
-	 	display: inline-block;
-	 }
-
-	.info .person{
-	 	display: inline-block;
-		vertical-align: top;
-		background-image: url(../img/user1.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 40px;
-		height: 40px;
-		padding-top: 15px;
-		// padding-left: 35px;
-	 }
-
-	.info .comment{
-	 	display: inline-block;
-		vertical-align: top;
-		background-image: url(../img/speech1.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 40px;
-		height: 40px;
-		padding-top: 15px;
-		// padding-left: 35px;
-	 }
-
-	.info .heart{
-	 	display: inline-block;
-		vertical-align: top;
-		background-image: url(../img/love1.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 40px;
-		padding-top: 15px;
-		height: 40px;
-		// padding-left: 35px;
-	 }
-
-	.likeLike>p{
-		display: inline-block;
-		vertical-align: top;
-		padding-top: 15px;
-		font-size: 15px;
-		color: #03b2d1;;
-	}
-
-	.likeLike .person{
-		width: 20px;
-	}
-
-	.likeLike .comment{
-		width: 20px;
-	}
-
-	.likeLike .heart{
-		width: 20px;
-	}
-
-	.clock h6{
-		font-size: 13px;
-		color:#03b2d1;
-	}
-
-	.clock h6>p{
-		color:#ffcf7d;
-		font-size: 6px;
-		line-height: 10px;
-	}
-	.clock{
-		display: inline-block;
-		vertical-align: top;
-		padding-left: 10px;
-		padding-top: 10px;
-	}
-
-	.timecheck{
-		display: inline-block;
-		vertical-align: top;
-		padding-left: 4px;
-	}
-
-	.timecheck img{
-		width: 16px;
-		height: 20px;
-	}
-
-	.timeclock{
-		display: inline-block;
-		vertical-align: top;
-		padding-left: 4px;
-		height: 16px;
-	}
-
-	.timeclock img{
-		width: 16px;
-		height: 16px;
-	}
-
-	.info{
-		position: relative;
-		bottom: 20px;
-		padding-top:25px;
-	}
-	.socialtwo{
-		display: none;
-	}
-	.responsive-logo{
-		display: none;
-	}
-	.user{
-		width: 80%;
-		position: absolute;
-		bottom: 18%;
-		left: -1%;
+		
+@media screen and (min-width: $tablet-width){
+	.single{@include gray_background;
+		.height{font-size: 2em;
+				h1{font-size: 4.4em;}
+				i{font-size: 4.4em;}
+			}
+		.item{@include background-bordernone;
+		label {
+				margin-top: 1em;
+				width: 83%;
+				border-color: #8dc3cd;
+				float: right;
+				}
+			}
+	/*timeline settings */
+			.TimeLineCard {min-height: 30em;
+					   max-height: 30em;
+				.footer{margin-top: 3%;
+						font-size: 3em;
+					span{width:16%;
+						.fa{@include fa-size;}
+					}
+					img{margin-top: -20%;
+						margin-left: 2%;
+						min-width: 6.5em;
+						min-height: 6.5em;}
+					.info{font-size: 0.5em;}
+						
+			/* avatar settings, NAME*/
+					.ng-binding{font-size: 1em;
+							h3, i{color: #ffb400;text-transform: uppercase;}
+							.profil-avatar{@include profil-avatar-position;}	
+						}	
+				}
+					.googleMap{margin-top: -22%;
+								height: 30vh;}
+			}
+			h3 {font-size: 4em;}
+			.button-new{height: 5em;
+						font-size: 2em;}
+			.col{min-height: 20.5em;
+				img{width: 10em; 
+					}
+				h6 i {font-size:2em;}
+				h6, h7{font-size:3em;}
+				
+				h4, h2{font-size:5em; top: -2em; left: 4em;}
+		 		h7{font-size: 4.5em; top: -1em; left: 4em;}
+				}
+			.fa{@include circle-border;}
+			.button-block{ margin: 2%; padding: 2%; font-size: 5em;}
 		}
- 	.user-name{
-		display: inline-block;
-		vertical-align: top;
-		color: #fff;
-		font-size: 1em;
-		margin-left:10px;
+		
 		}
-	.user-pic{
-		display:inline-block;
-		width: 20%;	
+		
+@media screen and (min-height: $tablet-height){
+		
+		.single{@include gray_background;
+		.height{font-size: 2em;
+				h1{font-size: 2.4em;}
+				i{font-size: 2.4em;}
+			}
+		.item{@include background-bordernone;
+		label {
+				margin-top: 1em;
+				width: 83%;
+				border-color: #8dc3cd;
+				float: right;
+				}
+			}
+	/*timeline settings */
+			.TimeLineCard {min-height: 35em;
+					   max-height: 35em;
+				.content{min-height: 35em;img{ height:35em;}} 	   
+				.footer{margin-top: 3%;
+						font-size: 3em;
+					span{width:16%;
+						.fa{@include fa-size;}
+					}
+					img{margin-top: -20%;
+						margin-left: 2%;
+						min-width: 4.5em;
+						min-height: 4.5em;}
+					.info{font-size: 0.5em;}
+						
+			/* avatar settings, NAME*/
+					.ng-binding{font-size: 1em;    margin-top: 2%;
+							h3, i{color: #ffb400;text-transform: uppercase;}
+							.profil-avatar{@include profil-avatar-position;}	
+						}	
+				}
+					.googleMap{margin-top: -40%; height: 17.6vh;}
+			}
 		}
-	.user .img-circle {
-		border-radius: 50%;
-		border: 5px solid #fff;
-		width: 130px;
 	}
-
-	.arrow-left{
-	 	background: url("../img/left.png") ;
-		background-repeat: no-repeat;
-		background-position: center;   
-	 }
-
-	.arrow-right { 
-		 background: url("../img/right.png") ;
-		 background-repeat: no-repeat;
-		 background-position: center; 
-	}
-
-	.arrow{
-		position: absolute;
-		top:10%;
-		width: 100%;
-	}
-
-	.arrowSecond{
-		position: absolute;
-		top: 30%;
-		width: 100%;
-	}
-	.arrow img{
-		width:50px;
-		height:50px;
-		border: none;
-		}
-
-
-
-// @media only screen and (max-width: 404px){
- 
-//   .dare-logo,.useruser,.like,header form,#menu, .social-footer{
-//     display: none;
-//   }
-//   .check{
-//     float: right;
-//     margin-right: 14px;
-//   }
-//   .wrapper{
-//     width: 100%;
-//   }
-//   main .right, .navbar, .side-bar, main nav{
-//     display: none;
-//   }
-//   .demo{
-//     width: 100%;
-//     height: auto;
-//     margin-left: auto;
-//   } 
-//   .demo > img{
-//     width: 100%;
-//     height: auto;
-//     padding: 0 10px;
-//   }
-//   .info{
-//     width: 100%;
-//     bottom: auto;
-//     padding-top: 0px;
-//     padding-left: 78px;
-//   }
-//   .slider-container{
-//     width: 100%;
-//     height: auto;
-//   }
-//  .demo h2{
-//     top: 5%;
-//     font-size: 20px;
-//   }
-//   header .likeLike{
-//     display: none;
-//   }
-
-//   .info .likeLike{
-//     display: none;
-//   }
-//   .likeLike .person {
-//     width: 20px;
-//     padding: 0;
-//     background-size: 20px;
-//   }
-//   .likeLike  p{
-//     font-size: 15px;
-//   }
-//   .likeLike .comment{
-//     width: 20px;
-//     font-size: 20px;
-//     background-size: 20px;
-//     padding: 0;
-//   }
-//   .likeLike .heart {
-//     width: 20px;
-//     font-size: 20px;
-//     background-size: 20px;
-//     padding: 0;
-//   }
-//   .timecheck img {
-//     width: 12px;
-//     height: 16px;
-//   }
-
-//   .timeclock img{
-//     width: 14px;
-//     height: 14px;
-//   }
-//   .time{
-//     font-size: 12px;
-//     padding-left: 0px;
-//   }
-//   .timeclock{
-//     height: 14px;
-//   }
-//   .timetime{
-//     width: auto;
-//     margin-top: -13px;
-//   }
-
-//   .clock{
-//     display: none;
-//   }
-//   .clock h6 > p{
-//     font-size: 7px;
-//   }
-//   .clock h6 {
-//     font-size: 18px;
-//   }
-//   .user{
-//     top: 60%;
-//   }
-//   .user .img-circle{
-//     width: 60px;
-//     margin-left: 5px;
-//   }
-//  .user-name{
-//     font-size: 18px;
-//     margin-left: 10px;
-//   }
-//  .arrow{
-//     top:15%;
-//   }
-
- 
-//   }
-
-
-

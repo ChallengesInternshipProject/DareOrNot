@@ -2,7 +2,8 @@
 @import "mixins";
 
 /* CSS nothifications */
-.Notifications{@include Mine_user_background;
+.Notifications{
+	@include Mine_user_background;
 	.height{@include height-heder;}
 	h3, h2 {@include large-text;}
 	span{@include span-position;}

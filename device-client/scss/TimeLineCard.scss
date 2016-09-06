@@ -1,82 +1,105 @@
 @charset "utf-8";
 @import "mixins";
+@import "timeline_mixins";
 
 /* CSS Timeline	title and arrows*/
-	.height{@include height-heder;}
-	.timeline{@include gray_background;
-	.item{background: transparent;
 
-.TimeLineCard {min-height:12em;
-	.navigation{
-	.arrows-right{
-				@include arrows-position;
-				float: right;
-			}
-	.arrows-left{
-				@include arrows-position;
-				float: left;
-			}
-	.title{	
-				color: blue;
-				position: absolute;
-				top: 2%;
-				left: 5%;
-				font-size: 1em;
-			}
-	}
-	.content{
-			min-height: 10em;
-			width:100%;
-			position: relative;
-			text-align: center;
-			display: inline-flex;
-			position: relative;}
-	.footer{text-align: center;
-			display: inline-flex;
-			position: relative;
-			top: 0.5em;
-			margin: 0%;
-			padding: 1%;
-			background: rgba(27, 73, 88, 0.2);
-			width: 100%;
-			min-height: 2em;
-			/*make circle buttons*/
-			span{width:16%;
-				.fa {
+	.TimeLineCard {min-height: 10em;
+				   max-height: 12.5em;
+		.navigation{
+			.arrows-right{
+						@include arrows-position;
+						float: right;
+					}
+			.arrows-left{
+						@include arrows-position;
+						float: left;
+					}
+			.title{@include dare-title-style;}
+		}
+		.content{
+					min-height: 10em;
+					width:100%;
+					position: relative;
+					text-align: center;
+					img{height: 10em;
 						width: 100%;
-						height: 100%;
-						display: inline-flex;
-						text-rendering: auto;
-						border-radius: 50%;
-						color: white;
-						background-size: 100% 100%;
-						}	
-						.fa-size{
-						min-width: 2.5em;
-						height: 2.5em;
-						margin-top: 1.5em;
-						background-size: 88% 90%;}
-				}
-				
-		.info{
-			display: inline-flex;
-			width: 10%;
-			height: 5em;
-			margin-top: 0%;
-			font-size: 10px;
-			color: #04a4c3;
-			margin: 1%;
-			margin-right: 3%;
-		}
-	/* avatar settings, img*/
-
-		.ng-binding{color: #04a4c3;
-					font-size: 10px;
-					margin-top: 1.5em;
-					margin-right: 2%;
-					h5, i{color: #ffb400;}
 						}
+		}
+		.footer{@include footer-style;
+			span{width:16%;
+				.fa{@include fa-size;}
+			}		
+			.info{@include info-size;}
+				
+	/* avatar settings, NAME*/
+			.ng-binding{@include binding-style;
+					h3,	h5, i{color: #ffb400;}
+					.profil-avatar{@include profil-avatar-position;}	
+				}	
+		}
+				.googleMap{@include google-Map-img;}
+		}
+@media screen and (min-width: $tablet-width){
+	.TimeLineCard {min-height: 25em;
+				   max-height: 30em;
+		.navigation{
+			.arrows-right{
+						@include arrows-position;
+						@include arrows-position-width;
 				}
+			.arrows-left{
+						@include arrows-position;
+						@include arrows-position-width;
+						}
+			.title{@include dare-title-width;}
+			}
+		.content{
+				min-height: 20em;
+				img{height: 20em;}
+				}
+		.footer{@include footer-style;
+				span{font-size:2em;
+					.fa{@include fa-size-width;}
+					}		
+			.info{@include info-size-width;}
+				  
+	/* avatar settings, NAME*/
+			.ng-binding{font-size:2em;
+				.profil-avatar{@include profil-avatar-width;}
+				}	
+			}	
 		}
 	}
-}
+			
+@media screen and (min-height: $tablet-height){
+	.TimeLineCard {   min-height: 25em;
+					   max-height: 30em;
+		.navigation{
+			.arrows-right{
+						@include arrows-position;
+						@include arrows-position-height;
+					}
+			.arrows-left{
+						@include arrows-position;
+						@include arrows-position-height;
+					}
+			.title{	@include dare-title-height;	}
+				}
+		.content{
+					min-height: 20em;
+					img{height: 20em;}
+					}
+		.footer{  @include footer-style;
+					/*make circle buttons*/
+			span{font-size:2em;
+				.fa{@include fa-size-height;}
+					}		
+			.info{@include info-size-height;}				
+	/* avatar settings, NAME*/
+			.ng-binding{@include binding-height;
+						.profil-avatar{@include profil-avatar-height;}
+					}
+			}	
+		}
+	}
