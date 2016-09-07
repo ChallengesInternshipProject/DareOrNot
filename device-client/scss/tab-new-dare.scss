@@ -3,20 +3,18 @@
 @import "varibals";
 @import "login_mixins";
 /* CSS Profil new dare */
-	.newdare{
-	 background-image: none;
-	 background-color: #e8edf0;
-	 background-size: 100% 100%;
-	 text-align: center;
-	 display: block;
-	 color:#16b8d4;
-	 div .h1 {color:#044265;}
-	 h3 {color:#16b8d4;}
+	.newdare{@include Mine_Gray_background;	
+			 color:#16b8d4;
+	.bar-header{@include background-bordernone; 
+				margin-top: -15%;
+				h1 {font-size: 1.2em;}
+		}
+	 h1, h3 {color:#16b8d4;}
+	 .list-inset{ margin-top:15%;}
 	 /*category challenges */
-	div .challeng ion-list .list {display: inline-block;
-									width: 100%;
-									padding: 0em;
-									font-size:1em;
+	div .challeng ion-list .list {@include position-style;
+								  display: inline-block;
+								  font-size:1em;
 								 .item{	
 										display: inline-block;
 										width: 45%;

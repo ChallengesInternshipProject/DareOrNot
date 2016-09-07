@@ -10436,13 +10436,27 @@ a.button {
 .Category .color4 {
   color: #3b51a2; }
 
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 .Contacts {
   background-image: none;
   background: #e8edf0;
+  background-size: 100% 100%;
   color: #03b2d1;
+  text-align: center;
+  display: block;
   line-height: 1%; }
-  .Contacts .button {
-    color: #fff; }
+  .Contacts .bar-header .h1 {
+    color: #044265; }
+  .Contacts .bar-header i {
+    color: blue; }
   .Contacts ion-list .f {
     text-align: center;
     font-size: 1rem;
@@ -10695,23 +10709,32 @@ a.button {
 /* CSS Profil new dare */
 .newdare {
   background-image: none;
-  background-color: #e8edf0;
+  background: #e8edf0;
   background-size: 100% 100%;
+  color: #03b2d1;
   text-align: center;
   display: block;
+  line-height: 1%;
   color: #16b8d4;
   /*category challenges */
   /* WebKit browsers */
   /* upload photo */
   /* Example stylistic flourishes */ }
-  .newdare div .h1 {
-    color: #044265; }
-  .newdare h3 {
+  .newdare .bar-header {
+    background: transparent;
+    border: none;
+    margin-top: -15%; }
+    .newdare .bar-header h1 {
+      font-size: 1.2em; }
+  .newdare h1, .newdare h3 {
     color: #16b8d4; }
+  .newdare .list-inset {
+    margin-top: 15%; }
   .newdare div .challeng ion-list .list {
-    display: inline-block;
+    margin: 1%;
+    padding: 1%;
     width: 100%;
-    padding: 0em;
+    display: inline-block;
     font-size: 1em; }
     .newdare div .challeng ion-list .list .item {
       display: inline-block;
@@ -12042,45 +12065,89 @@ a.button {
         margin-top: -40%;
         height: 17.6vh; } }
 
-.Chat .messages {
-  background-color: #e8edf0; }
-  .Chat .messages .message {
-    flex: 1 1 auto !important;
-    padding: 10px !important;
-    transition: all 250ms ease-in-out !important;
-    overflow: hidden !important;
-    text-align: left !important;
-    transform: translate3d(0, 0, 0) !important; }
-  .Chat .messages .avatar {
-    border-radius: 50% !important; }
-  .Chat .messages .time {
-    color: #000;
-    display: inline-block;
-    margin-top: 20px; }
-  .Chat .messages span {
-    background: #C7C7CC !important;
-    display: inline-block !important;
-    color: white !important;
-    padding: 10px !important;
-    border-radius: 10px !important;
-    text-align: left !important;
-    max-width: 70vw !important; }
-    .Chat .messages span .time {
-      color: white; }
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS Tab Chat  */
+.report {
+  background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #012438;
+  background-size: 100% 100%;
+  text-align: center;
+  display: block; }
+  .report .height {
+    display: inline;
+    height: 17vh;
+    margin: 1%;
+    padding: 1%;
+    width: 100%; }
+    .report .height h1 {
+      position: relative;
+      display: inline-block;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
+    .report .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
+  .report a.item-content {
+    color: #fff; }
 
-.Chat .messages.other .message {
-  transform: translate3d(0, 0, 0) !important;
-  text-align: right !important; }
-  .Chat .messages.other .message .avatar {
-    display: none; }
+.Chat {
+  background-color: yellow; }
+  .Chat .messages {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    background: transparent;
+    border: none; }
+    .Chat .messages .message {
+      flex: 1 1 auto !important;
+      padding: 10px !important;
+      transition: all 250ms ease-in-out !important;
+      overflow: hidden !important;
+      text-align: left !important;
+      transform: translate3d(0, 0, 0) !important; }
+    .Chat .messages .avatar {
+      border-radius: 50% !important; }
+    .Chat .messages .time {
+      color: #000;
+      display: inline-block;
+      margin-top: 20px; }
+    .Chat .messages span {
+      background: #C7C7CC !important;
+      display: inline-block !important;
+      color: white !important;
+      padding: 10px !important;
+      border-radius: 10px !important;
+      text-align: left !important;
+      max-width: 70vw !important; }
+      .Chat .messages span .time {
+        color: white; }
+  .Chat .messages.other .message {
+    transform: translate3d(0, 0, 0) !important;
+    text-align: right !important; }
+    .Chat .messages.other .message .avatar {
+      display: none; }
+  .Chat .messages.other .message.slide-right {
+    transform: translate3d(120px, 0, 0) !important; }
+  .Chat .messages.other span {
+    color: black !important;
+    background-color: #007AFF !important;
+    margin-top: 12px; }
 
-.Chat .messages.other .message.slide-right {
-  transform: translate3d(120px, 0, 0) !important; }
-
-.Chat .messages.other span {
-  color: black !important;
-  background-color: #007AFF !important;
-  margin-top: 12px; }
+.bar.bar-stable.bar-footer {
+  background-color: yellow; }
 
 .app-side-menu-navigation {
   display: block; }

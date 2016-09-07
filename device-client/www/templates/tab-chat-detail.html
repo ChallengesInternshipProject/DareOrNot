@@ -23,7 +23,7 @@
       <div class="message">
         <img class="avatar" src="https://api.adorable.io/avatars/40/abott@adorable.png" alt="avatar">
 
-        <div ng-show="msg.sender == me" class="time">{{msg.time| date:'HH:mm'}}</div>
+        <div class="time" ng-show="msg.sender == me">{{msg.time| date:'HH:mm'}}</div>
 
         <span>{{msg.message}}</span>
 
