@@ -11536,7 +11536,7 @@ a.button {
 /* CSS Timeline	title and arrows*/
 .TimeLineCard {
   min-height: 10em;
-  max-height: 12.5em; }
+  max-height: 13.5em; }
   .TimeLineCard .navigation .arrows-right {
     height: 0.5em;
     font-size: 1.5em;
@@ -12064,6 +12064,29 @@ a.button {
       .single .TimeLineCard .googleMap {
         margin-top: -40%;
         height: 17.6vh; } }
+
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS Timeline	title and arrows*/
+.timeline {
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  display: block;
+  position: relative; }
+  .timeline .item {
+    background: transparent;
+    border: none; }
 
 /*some helpful varibals*/
 /*heder side- menue*/
