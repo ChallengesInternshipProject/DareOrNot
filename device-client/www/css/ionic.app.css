@@ -10008,6 +10008,18 @@ a.button {
   background-position: center;
   background-size: 50% 50%; }
 
+.app-icon-time {
+  background: url("../img/icons/time.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%; }
+
+.app-icon-time-active {
+  background: url("../img/icons/time1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%; }
+
 /*some helpful varibals*/
 /*heder side- menue*/
 /*list*/

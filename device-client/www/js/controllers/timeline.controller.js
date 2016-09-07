@@ -23,6 +23,7 @@ angular.module('starter.controllers')
 		}
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		$scope.dares = DaresResolver;
-		$log.info($scope.dares);
-		$log.info($state.current);
+		if ($state.current.name === 'mydares') {
+			$scope.showBackButton = true;
+		}
 	});

@@ -19,7 +19,7 @@ angular.module('starter', [
   'ionic.contrib.ui.tinderCards',
   'chart.js',
   'flow',
-  'angularMoment'
+  'angularMoment' 
 ])
 
 .run(function($rootScope, $ionicPlatform, $ionicHistory, $location,amMoment) {

@@ -1,5 +1,6 @@
+<div ng-if='showBackButton' ng-include="'templates/static/back-button.html'" ></div>
 <ion-view class="timeline">
-	<ion-content>
+	<ion-content  ng-class="showBackButton ? 'has-header' : ''">
 		<ion-refresher
 			pulling-text="Pull to refresh..."
 			on-refresh="doRefresh()">
