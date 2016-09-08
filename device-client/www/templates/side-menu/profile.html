@@ -17,7 +17,6 @@
 				<i class="app-icon app-icon-activities-active"></i>
 				<a href="#/app/activity">
 					Активност
-					<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
 				</a>
 			</span>
 			<span class="profile-menu-item">
@@ -27,7 +26,11 @@
 				<i class="app-icon-chat-active"></i><a href="#/app/chat">Съобщения</a>
 			</span>
 			<span class="profile-menu-item">
-				<i class="app-icon-notification-active"></i><a href="#/notifications">Известия</a>
+				<i class="app-icon-notification-active"></i>
+				<a href="#/notifications">
+					Известия
+						<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
+				</a>
 			</span>
 			<span class="profile-menu-item">
 				<i class="app-icon-friends-active"></i><a href="#/friends">Приятели </a>

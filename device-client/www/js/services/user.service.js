@@ -86,7 +86,8 @@ angular.module('starter.services')
 		user.sendRequest = function(senderID,requestedID) {
 			return $http.post(SERVER_ADDRESS+ "/users/requestFriendship/",{	senderID : senderID,requestedID : requestedID,})
 		}
-		user.acceptRequest = function(senderID,requestedID) {
+		user.acceptFriendship = function(senderID,requestedID) {
+			console.log(arguments)
 			return $http.post(SERVER_ADDRESS+ "/users/acceptFriendship/",{	senderID : senderID,requestedID : requestedID,})
 		}
 		//End of methods

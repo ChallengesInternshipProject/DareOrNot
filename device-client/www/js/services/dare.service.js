@@ -4,11 +4,7 @@ angular.module('starter.services')
 
 
 		dareService.sendDare = function(userID, dareinfo) {
-
-			$log.info(userID);
-			$log.info(dareinfo);
-
-			// return userID;
+			return userID;
 		}
 
 		dareService.create = function (data){

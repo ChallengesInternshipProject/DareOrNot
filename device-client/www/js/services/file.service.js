@@ -2,22 +2,18 @@ angular.module('starter.services')
 	.service('FileService', function($ionicLoading){
 			
 		var file = {
-			files : []
+			fileData : []
 		}
 
 		file.processFiles = function(files){
-			$ionicLoading.show({
-				template: 'Loading...'
-			});
 			angular.forEach(files, function(flowFile, i){
 				var fileReader = new FileReader();
 				fileReader.onload = function (event) {
-				var uri = event.target.result;
-						file.files[i] = uri;     
+					file.fileData.push(event.target.result);
 				};
 				fileReader.readAsDataURL(flowFile.file);
 			});
-		};
+		}
 
 		return file;
 	})

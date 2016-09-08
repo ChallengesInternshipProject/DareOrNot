@@ -14,7 +14,9 @@ angular.module('starter.controllers')
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		$log.info($scope.notifications);
 		$scope.acceptFriendship = function(requested,requester) {
-			UserService.acceptRequest(requested,requester);
+			UserService.acceptFriendship(requested,requester).then(function(data){
+				console.log(data)
+			});
 		}
 
 	NotificationService.markAsSeen($localStorage.user.data._id);

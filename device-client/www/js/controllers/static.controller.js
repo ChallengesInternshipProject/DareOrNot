@@ -7,7 +7,7 @@ angular.module('starter.controllers')
 	){
 		$scope.goBack = function(){
 			var stateId = $ionicHistory.backView() ? $ionicHistory.backView().stateId : 'app.home';
-			$log.info($ionicHistory.viewHistory());
+			$log.info(stateId);
 			$state.go(stateId);
 		}
 }]);

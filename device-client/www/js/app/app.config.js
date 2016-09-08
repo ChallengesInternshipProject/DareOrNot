@@ -92,7 +92,7 @@ angular.module('starter').config(function (
 		})
 		.state('friends', {
 			url: '/friends',
-			templateUrl: 'templates/tab-friends.html',
+			templateUrl: 'templates/tab-friends.html',	
 		})
 		.state('friends.all', {
 			url: '/all',
