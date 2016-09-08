@@ -103,7 +103,7 @@ angular.module('starter')
           $scope.loginModal.hide();
 
           //console.log();
-          $state.go('app.profile');
+          $state.go('profile');
         });
     };
 

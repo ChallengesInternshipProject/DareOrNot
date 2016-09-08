@@ -154,6 +154,9 @@ angular.module('starter').config(function (
 			controller: 'SideMenuCtrl',
 			resolve : {
 				notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
+					if (!$localStorage.user ) {
+						return 0 
+					}
 					return   NotificationService.getUnseen($localStorage.user.data._id)
     						.then(function(result){
     							return result.length
