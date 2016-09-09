@@ -10063,11 +10063,12 @@ a.button {
     background: transparent;
     box-sizing: border-box; }
     .login-view .content-list section.list .fa {
-      margin: 5%;
-      padding: 1%;
       width: 15vw;
       height: 15vw;
       font-size: 3em;
+      display: inline-block;
+      vertical-align: top;
+      margin: 10% 1% 10% 12.5%;
       color: #fff;
       border-radius: 50%;
       display: inline-block; }
@@ -10448,20 +10449,28 @@ a.button {
 .Contacts {
   background-image: none;
   background: #e8edf0;
+  /*gray*/
   background-size: 100% 100%;
   color: #03b2d1;
   text-align: center;
   display: block;
   line-height: 1%; }
-  .Contacts .bar-header .h1 {
-    color: #044265; }
-  .Contacts .bar-header i {
-    color: blue; }
-  .Contacts ion-list .f {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 5vh;
-    margin: 0 auto; }
+  .Contacts .bar-header {
+    background: transparent;
+    border: none;
+    background-color: transparent; }
+    .Contacts .bar-header .h1 {
+      color: #044265; }
+    .Contacts .bar-header i {
+      font-size: 2em;
+      color: blue; }
+  .Contacts ion-list {
+    margin-top: 10em; }
+    .Contacts ion-list .f {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 5vh;
+      margin: 0 auto; }
   .Contacts form {
     display: inline-block;
     width: 100%;
@@ -10571,12 +10580,14 @@ a.button {
     height: 17vh;
     text-align: left; }
   .Contacts .button-blue {
+    color: orange;
     background-color: #012438;
     width: 82%;
     height: 8vh;
     border-radius: 0px;
     margin: 13% 9%; }
   .Contacts article .button-block {
+    color: #fff;
     width: 14%;
     border-radius: 50%;
     display: inline-block;
@@ -10710,6 +10721,7 @@ a.button {
 .newdare {
   background-image: none;
   background: #e8edf0;
+  /*gray*/
   background-size: 100% 100%;
   color: #03b2d1;
   text-align: center;
@@ -10846,6 +10858,7 @@ a.button {
       display: inline-block;
       top: 30%;
       color: #01cfe4;
+      /*blue*/
       font-size: 1.4em; }
     .SideMenu .menu-left .height i {
       font-size: 2em;
@@ -11026,6 +11039,7 @@ a.button {
       display: inline-block;
       top: 30%;
       color: #01cfe4;
+      /*blue*/
       font-size: 1.4em; }
     .Activity .height i {
       font-size: 2em;
@@ -11061,6 +11075,7 @@ a.button {
     background: transparent;
     border: none;
     color: #01cfe4;
+    /*blue*/
     display: block;
     width: 98%;
     position: relative; }
@@ -11092,6 +11107,7 @@ a.button {
         font-size: 1em; }
       .Activity .list ion-item div p {
         color: #01cfe4;
+        /*blue*/
         margin: 1%;
         padding: 1%;
         width: 100%;
@@ -11236,6 +11252,7 @@ a.button {
       display: inline-block;
       top: 30%;
       color: #01cfe4;
+      /*blue*/
       font-size: 1.4em; }
     .Notifications .height i {
       font-size: 2em;
@@ -11266,6 +11283,7 @@ a.button {
     background: transparent;
     border: none;
     color: #01cfe4;
+    /*blue*/
     display: block;
     width: 98%;
     position: relative; }
@@ -11298,6 +11316,7 @@ a.button {
         font-size: 1em; }
       .Notifications .list ion-item div p {
         color: #01cfe4;
+        /*blue*/
         margin: 1%;
         padding: 1%;
         width: 100%;
@@ -11472,6 +11491,7 @@ a.button {
       display: inline-block;
       top: 30%;
       color: #01cfe4;
+      /*blue*/
       font-size: 1.4em; }
     .Settings .height i {
       font-size: 2em;
@@ -11505,6 +11525,7 @@ a.button {
     background: transparent;
     border: none;
     color: #01cfe4;
+    /*blue*/
     display: block;
     width: 98%;
     position: relative;
@@ -11784,6 +11805,7 @@ a.button {
       display: inline-block;
       top: 30%;
       color: #01cfe4;
+      /*blue*/
       font-size: 1.4em; }
     .single .height i {
       font-size: 2em;
@@ -12093,6 +12115,7 @@ a.button {
       display: inline-block;
       top: 30%;
       color: #01cfe4;
+      /*blue*/
       font-size: 1.4em; }
     .report .height i {
       font-size: 2em;
@@ -12121,9 +12144,10 @@ a.button {
     .Chat .messages .avatar {
       border-radius: 50% !important; }
     .Chat .messages .time {
+      float: left;
       color: #000;
       display: inline-block;
-      margin-top: 20px; }
+      margin-top: 1.5em; }
     .Chat .messages span {
       background: #C7C7CC !important;
       display: inline-block !important;

@@ -23,7 +23,7 @@
       <div class="message">
         <img class="avatar" src="https://api.adorable.io/avatars/40/abott@adorable.png" alt="avatar">
 
-        <div class="time" ng-show="msg.sender == me">{{msg.time| date:'HH:mm'}}</div>
+        <div ng-show="msg.sender == me" class="time">{{msg.time| date:'HH:mm'}}</div>
 
         <span>{{msg.message}}</span>
 
@@ -45,7 +45,7 @@
 
     <!--don't delete the button it is hidden on purpose-->
     <button ng-model="deleted" class="button button-clear button-form-submit" ng-click="emit(message)">
-      Send
+     <i class="ion-paperclip" style=""></i>
     </button>
 
   </ion-footer-bar>
