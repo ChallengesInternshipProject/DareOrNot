@@ -33,5 +33,6 @@ angular.module('starter.controllers')
 		$scope.goToDare = function(dareID){
 			$state.go('app.dare',{dareID:dareID})
 		}
+		
 		NotificationService.markAsSeen($localStorage.user.data._id);
 }]);

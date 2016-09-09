@@ -70,11 +70,33 @@
 				
 				</a>
 			</ion-item>
+			<h3>Добави Доказателство</h3>
+			<ion-item >
+
+				<!-- CHANGING THIS STRUCTURE WILL PREVENT FILE UPLOAD TO WORK-->
+				<div flow-init
+							flow-name="uploader.flow"
+							flow-files-added="FileService.processFiles($files)">
+					<div class="row"  > 
+						<div class="col ">
+							<button type= "button"  class="button fileContainer " flow-btn type="file">
+								<i class="ion-ios-camera-outline"></i>
+								<span ng-show= " data.fileData.length > 0" class="badge badge-positive">{{data.fileData.length}}</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- END OF STRUCTURE -->
+			</ion-item>
 			<h3>Доказани</h3>
 			<ion-item class="row item">
-				<div class="col" style="background-color: #177794;">some prove</div>
-				<div class="col" style="background-color: #177794;">some prove</div>
-				<div class="col" style="background-color: #177794;">some prove</div>
+				<div class="col" style="background-color: #177794;" ng-repeat="prove in dare.proves">
+					  <video ng-if="prove.fileType == 'video'"controls="controls" >
+				  		<source ng-src="{{prove.fileString}}" />
+					  </video>
+					  <img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}"/>
+				</div>
+				
 			</ion-item>
 			 <h3>Сподели</h3>
 			<ion-item class="row item">

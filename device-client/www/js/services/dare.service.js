@@ -50,5 +50,22 @@ angular.module('starter.services')
 				return result.data
 			})
 		}
+		dareService.addProve = function(fileString,dareID,userID) {
+			console.log(arguments)
+			if (fileString.match(/^data:video.*/)){
+				var fileType = 'video'
+			} else {
+				var fileType ="image"
+			}
+
+			var data = {
+				object : 'dare',
+				objectId : dareID,
+				fileString : fileString,
+				fileType : fileType,
+				uploadedBy:userID,
+			}
+			return $http.post(SERVER_ADDRESS+'/dares/prove/',data)
+		}
 		return dareService;
 	});
