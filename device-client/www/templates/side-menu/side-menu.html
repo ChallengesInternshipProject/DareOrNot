@@ -7,8 +7,10 @@
 
 			<ion-nav-buttons side="left">
 				<!-- Toggle left side menu -->
-				<i menu-toggle="left" class="navigation-menu-button ion-android-menu"></i>
-
+				<i menu-toggle="left" class="navigation-menu-button ion-android-menu">	
+					<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
+				</i>
+		
 			</ion-nav-buttons>
 
 			<ion-nav-buttons side="right">
@@ -31,10 +33,12 @@
 			</div>
 			<div class="list">
 				<a href="#/app/profile" class="item item-app-icon-left" menu-close>
+
 					<i class=""></i>
 				</a>
-				<a href="#/app/profile" class="item item-app-icon-left" menu-close>
+				<a href="#/profile" class="item item-app-icon-left" menu-close>
 					<i class="app-icon app-icon-user-active"></i> Профил
+					<span  ng-show="notificationsCount > 0" class="badge badge-calm">{{notificationsCount}}</span>
 				</a>
 				<a href="#/app/timeline" class="item item-app-icon-left" menu-close>
 					<i class="app-icon app-icon-event-active"></i> Събития
@@ -42,17 +46,17 @@
 				<a href="#/app/categories" class="item item-app-icon-left" menu-close>
 					<i class="app-icon app-icon-categories-active"></i> Категории
 				</a>
-				<a href="#/app/statistics" class="item item-app-icon-left disabled" menu-close>
+				<a href="#/statistics" class="item item-app-icon-left disabled" menu-close>
 					<i class="app-icon app-icon-stat-active"></i> Статистика
 				</a>
 				<a href="#/app/history" class="item item-app-icon-left disabled" menu-close>
 					<i class="app-icon app-icon-history-active"></i> История
 				</a>
-				<a href="#/app/settings" class="item item-app-icon-left disabled" menu-close>
+				<a href="#/settings" class="item item-app-icon-left disabled" menu-close>
 					<i class="app-icon app-icon-settings-active"></i> Настройки
 				</a>
 				<a href="#/app/contacts" class="item item-app-icon-left disabled" menu-close>
-					<i class="ion-ios-clock-outline"></i> Контакт
+					<i class="app-icon app-icon-time-active"></i> Контакт
 				</a>
 				<a href="#/" class="item item-app-icon-left disabled" menu-close ng-click="exit()">
 					<i class="app-icon app-icon-out-active"></i> Изход

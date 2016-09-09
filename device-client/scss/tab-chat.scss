@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import "mixins";
+
+/* CSS Tab Chat  */
+.report{
+	@include Mine_user_background;
+	.height{@include height-heder;}
+	a.item-content{color: #fff;}
+}

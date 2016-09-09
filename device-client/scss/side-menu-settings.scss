@@ -16,6 +16,7 @@
 		}
 	.list {
 		@include list-style;
+		width: 98%;
 		ion-item{
 			@include list-item-style;
 			color: #01cfe4;

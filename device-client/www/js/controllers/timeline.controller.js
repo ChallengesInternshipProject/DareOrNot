@@ -8,13 +8,13 @@ angular.module('starter.controllers')
 		$localStorage,
 		$ionicSlideBoxDelegate,
 		DaresResolver,
-		$log
-	 ) {
-
+		$log,
+		DareService,
+		$state
+		) {
 		$scope.doRefresh = function () {
-			GetTimeline();
+			$scope.dares = DareService.list($state.params ,$state.current.url == "/mydares" ? false : true);
 		};
-
 		$scope.nextSlide = function() {
 			$ionicSlideBoxDelegate.next();
 		}
@@ -23,10 +23,10 @@ angular.module('starter.controllers')
 		}
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
 		$scope.dares = DaresResolver;
-	
-
-
-
-	
-
+		if ($state.current.name === 'mydares') {
+			$scope.showBackButton = true;
+		}
+		$scope.goToDare = function(dareID){
+			$state.go('app.dare',{dareID:dareID})
+		}
 	});

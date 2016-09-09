@@ -13,6 +13,7 @@
     "angular-mocks": "^1.5.7",
     "ionic-ion-swipe-cards": "*",
     "ionic-ion-tinder-cards": "ionic-contrib-tinder-cards#*",
-    "ion-datetime-picker": "^0.3.1"
+    "ion-datetime-picker": "^0.3.1",
+    "ng-flow": "^2.7.4"
   }
 }

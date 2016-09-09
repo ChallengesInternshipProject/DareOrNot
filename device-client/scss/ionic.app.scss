@@ -32,10 +32,8 @@ $tablet-height:1080px;
 
 
 //Login modal SCSS
-// @import "scss/login";
-
-//Timeline page view SCSS
-// @import "scss/timeline";
+@import "scss/login";
+@import "scss/list";
 
 //Category page view SCSS
 @import "scss/category";
@@ -52,7 +50,7 @@ $tablet-height:1080px;
 @import "scss/tab-statistics";
 
 // New Dare page view SCSS
-// @import "scss/tab-new-dare";
+@import "scss/tab-new-dare";
 
 //Side menu SCSS
 @import "scss/side-menu";
@@ -75,17 +73,23 @@ $tablet-height:1080px;
 
 @import "scss/div-friends";
 // @import "scss/list";
-// @import "scss/div-timelineCard";
+
 
 //Side-menu Settings page view SCSS
 @import "scss/side-menu-settings";
 
-// @import "scss/TimeLineCard";
-
 //Timeline page view SCSS
+@import "scss/TimeLineCard";
+@import "scss/div-timelineCard";
+
+//single dare page view SCSS
 @import "scss/timeline";
 
+@import "scss/div-timelineCard";
+
+
 //Chat page view SCSS
+@import "scss/tab-chat";
 @import "scss/chat";
 
 //Top navigation page view SCSS

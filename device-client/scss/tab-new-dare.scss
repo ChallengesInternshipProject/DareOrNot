@@ -1,19 +1,20 @@
+
 @charset "utf-8";
+@import "varibals";
+@import "login_mixins";
 /* CSS Profil new dare */
-	.newdare{
-	 background-image: none;
-	 background-color: #e8edf0;
-	 background-size: 100% 100%;
-	 text-align: center;
-	 display: block;
-	 color:#16b8d4;
-	 div .h1 {color:#044265;}
-	 h3 {color:#16b8d4;}
+	.newdare{@include Mine_Gray_background;	
+			 color:#16b8d4;
+	.bar-header{@include background-bordernone; 
+				margin-top: -15%;
+				h1 {font-size: 1.2em;}
+		}
+	 h1, h3 {color:#16b8d4;}
+	 .list-inset{ margin-top:15%;}
 	 /*category challenges */
-	div .challeng ion-list .list {display: inline-block;
-									width: 100%;
-									padding: 0em;
-									font-size:1em;
+	div .challeng ion-list .list {@include position-style;
+								  display: inline-block;
+								  font-size:1em;
 								 .item{	
 										display: inline-block;
 										width: 45%;
@@ -52,8 +53,12 @@
 	
 	.la{text-align: left;}	
 	.fa {
-    width: 20vw !important;
-    height: 20vw;}
+	margin: 5%;
+	padding: 1%;
+    width: 10vw !important;
+    height: 10vw;
+	font-size: 3em;
+	@include radius-fa;}
 	 /* WebKit browsers */
 	::-webkit-input-placeholder { 
 								color:#16b8d4;
@@ -71,23 +76,28 @@
 			bottom: 3em;
 			i{color:orange;
 			font-size: 3em;}
-			}
-	.fileContainer {
-					font-size: 1em;
-					padding: 0em;
-					margin-bottom: 0;
-					MARGIN-TOP: 5%;
-					box-sizing: border-box;
-					i {
-						background: #fff;
-						border-radius: 0;
-						color:orange;
-						font-size: 2.5em;
-						/* margin: 0%; */
-						padding: 0.5em;
-						padding-bottom: 0.1em;
-					}
-					}
-	 .fileContainer [type=file] {  margin-top: -1em;}
+		}
+ /* upload photo */
+  .fileContainer {
+    overflow: hidden;
+    position: relative;
+  }
 
+  /* Example stylistic flourishes */
+
+  .fileContainer {
+		font-size: 2em;
+		box-sizing: border-box;
+		i{
+		 margin: 1%;
+		 padding: 0.5em;
+		 background: #fff;
+		 color:orange;
+		 font-size: 2em;
+		 border-radius:50%;
+		 display: inline-block;
+		}
+	input[type="file"] {overflow: hidden;
+    position: relative;}
 	}
+}

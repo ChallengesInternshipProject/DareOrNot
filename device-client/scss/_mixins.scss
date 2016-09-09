@@ -1,12 +1,31 @@
+@charset "utf-8";
+@import "varibals";
+
+
+//Activit, Notification, Settings//
+
+
 //background and body elements style//
 
 @mixin Mine_user_background{
-			background-image: url(../img/BG.png);
-			background-color: #012438;
-			background-size: 100% 100%;
-			text-align: center;	
+			 background-image: url(../img/BG.png);
+			 background-repeat: no-repeat;
+			 background-position: center;
+  			 background-color: #012438;
+  			 background-size: 100% 100%;
+  			 text-align: center;
+  			 display: block;
 			}
-/*heder*/
+@mixin Mine_Gray_background{
+			background-image:none;
+   			background:#e8edf0;
+			background-size: 100% 100%;
+   			color:#03b2d1;
+			text-align: center;
+			display: block;
+   			line-height: 1%;
+			}
+/*heder side- menue*/
 @mixin height-heder{
 			    display: inline;
 				height: 17vh;
@@ -25,10 +44,10 @@
 			}
 /*list*/
 @mixin list-style{  @include position-style;
-					border: none;
+					@include background-bordernone;
 					color: #01cfe4;
-					background: transparent;
 					display: block;
+					width: 98%;
 					position: relative;
 					}
 /*list Item*/
@@ -40,7 +59,6 @@
 				border: none;
 				color: #fff;
 				background: transparent;
-				display: inline-block;
 				position: relative;
 				 }
 				 
@@ -53,6 +71,15 @@
 	display: inline-flex;
 	font-size:0.8em;
 	}		
+@mixin paragraf-comentar{	
+	width: 90%;
+    padding-left: 1rem;
+    background: transparent;
+    text-align: left;
+    display: inline-block;
+    white-space: normal;
+    color: #fff;
+	}
 /*div*/	
 @mixin div-style{	
 	@include position-style;
@@ -84,31 +111,33 @@
 	font-size:1em;
 	}
 
-@mixin span-position{
+@mixin span-position{		
 		float: left;
-    	margin-left: -0.5%;
-    	margin-top: -0.5rem;
-    	position: absolute;
-    	z-index: 10;
+		margin-bottom: -5%;
+		margin-left: -3.5%;
+		position: relative;
+		display: inline-block;
+		z-index: 10;
 		}
+		
 @mixin 	i{
 		padding: 7px;
-		color: #fff;
+		@include radius-fa;
 		background: #01cfe4;
-		border-radius: 50%;
 		font-size: 1em;
 		margin: 0em;
 		}
 /*img style*/
+
 @mixin image-style {	
 	@include position-style;
 	display: block;
 	}
-
 	
-/*some helpful varibals*/		
-@mixin position-style{margin: 1%;
-					  padding: 1%;
-					  width: 100%;
-					}
-
+@mixin image-square {
+	display: inline;
+	width: 4em;
+	height: 3.5em;
+	padding: 0.3em 1em 0.3em 0;
+	}
+	

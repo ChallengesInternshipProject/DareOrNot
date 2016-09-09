@@ -4,7 +4,8 @@ angular.module('starter').config(function (
 	ionicDatePickerProvider,
 	$ionicConfigProvider,
 	ChartJsProvider,
-	$sceDelegateProvider
+	$sceDelegateProvider,
+	$localStorageProvider
 	) {
 	// Ionic uses AngularUI Router which uses the concept of states
 	// Learn more here: https://github.com/angular-ui/ui-router
@@ -53,13 +54,116 @@ angular.module('starter').config(function (
 	$stateProvider
 
 	// setup an abstract state for the tabs directive
+		.state('profile',{
+			url: '/profile',
+			templateUrl: 'templates/side-menu/profile.html',
+			controller: 'ProfileCtrl',
+			resolve : {
+				notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
+					return   NotificationService.getUnseen($localStorage.user.data._id)
+    						.then(function(result){
+    							return result.length
+  						})
+				}]
+			}
+		})
+		.state('mydares',{
+			url: '/mydares',
+			templateUrl: 'templates/tab-timeline.html',
+			params: {
+				title : {$ne : null},
+				description : { $ne : null},
+				endDate : {$gt : new Date()},
+				_creator :$localStorageProvider.get('user.data._id'),
+			},
+			controller: 'TimelineCtrl',
+			resolve : {
+				DaresResolver : [
+					'DareService', '$localStorage',  function(DareService,$localStorage){
+						return DareService.list({
+							title : {$ne : null},
+							description : { $ne : null},
+							endDate : {$gt : new Date()},
+							_creator :$localStorage.user.data._id,
+						},false)
+					}
+				]
+			}
+		})
+		.state('friends', {
+			url: '/friends',
+			templateUrl: 'templates/tab-friends.html',	
+		})
+		.state('friends.all', {
+			url: '/all',
+			views: {
+				'app-friends-all': {
+					templateUrl: 'templates/tab-friends-all.html',
+					controller: 'UsersCtrl',
+					resolve: {
+						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
+							return UserService.getFriends($localStorage.user.data._id, 'Accepted', '').then(function (data) {
+								return data
+							})
+						}]
+					}
+				}
+			}
+		})
+		.state('friends.active', {
+			url: '/active',
+			views: {
+				'app-friends-active': {
+					templateUrl: 'templates/tab-friends-active.html',
+					controller: 'UsersCtrl',
+					resolve: {
+						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
+							return UserService.getFriends($localStorage.user.data._id, 'Accepted', '').then(function (data) {
+								return data
+							})
+						}]
+					}
+				}
+			}
+		})
+		.state('notifications',{
+			url : '/notifications',
+			templateUrl: 'templates/side-menu/notifications.html',
+			controller: 'ActivityCtrl',
+			resolve:{
+				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
+					return NotificationService.getAll($localStorage.user.data._id);
+				}]
+			}
+		})
+		.state('app.settings',{
+			url : '/settings',
+			templateUrl: 'templates/side-menu/settings.html',
+			// controller: 'A'
+		})
+		.state('favorites',{
+			url : '/favorites',
+			templateUrl: 'templates/side-menu/favorites.html',
+			// controller: 'A'
+		})
+
 		.state('app', {
 			url: '/app',
 			abstract: true,
 			templateUrl: 'templates/side-menu/side-menu.html',
-			controller: 'SideMenuCtrl'
+			controller: 'SideMenuCtrl',
+			resolve : {
+				notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
+					if (!$localStorage.user ) {
+						return 0 
+					}
+					return   NotificationService.getUnseen($localStorage.user.data._id)
+    						.then(function(result){
+    							return result.length
+  						})
+				}]
+			}
 		})
-
 		.state('app.home', {
 			url: '/home',
 			templateUrl: 'templates/tab-home.html',
@@ -72,11 +176,7 @@ angular.module('starter').config(function (
 					}]
 				}
 		})
-		.state('app.profile',{
-			url: '/profile',
-			templateUrl: 'templates/side-menu/profile.html',
-			controller: 'ProfileCtrl'
-		})
+		
 		.state('app.search', {
 			url: '/search',
 			templateUrl: 'templates/tab-search.html',
@@ -102,22 +202,8 @@ angular.module('starter').config(function (
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list()
 					}
 				]
 			}
@@ -135,26 +221,14 @@ angular.module('starter').config(function (
 		.state('app.funny',{
 			url: '/funny',
 			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:1
+			},
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 1,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list({category:1});
 					}
 				]
 			}
@@ -163,25 +237,13 @@ angular.module('starter').config(function (
 			url: '/business',
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
+			params:{
+				category:2
+			},
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 2,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list({category:2})
 					}
 				]
 			}
@@ -189,26 +251,14 @@ angular.module('starter').config(function (
 		.state('app.price',{
 			url: '/price',
 			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:3
+			},
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 3,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+							return DareService.list({category:3})
 					}
 				]
 			}
@@ -216,68 +266,19 @@ angular.module('starter').config(function (
 		.state('app.charity',{
 			url: '/charity',
 			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:4
+			},
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService, $localStorage, $ionicLoading){
-							$ionicLoading.show({
-								template: 'Loading...'
-							});
-							var filter = 	{
-										title : {$ne : null},
-										description : { $ne : null},
-										category : 4,
-										$or:[
-										{invitedUsers : {$in : [$localStorage.user.data._id]}},
-										{isPublic : true},
-									]
-								}
-							return DareService.list(JSON.stringify(filter)).then(function(result){
-								$ionicLoading.hide();
-								return  result.data ;
-							})
+					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
+						return DareService.list({category:4})
 					}
 				]
 			}
 		})
-		.state('app.friends', {
-			url: '/friends',
-			templateUrl: 'templates/tab-friends.html',
-		})
-		.state('app.friends.all', {
-			url: '/all',
-			views: {
-				'app-friends-all': {
-					templateUrl: 'templates/tab-friends-all.html',
-					controller: 'UsersCtrl',
-					resolve: {
-						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends(
-$localStorage.user.data._id, 'Accepted', '').then(function (data) {
-								return data
-							})
-						}]
-					}
-				}
-			}
-		})
-		.state('app.friends.active', {
-			url: '/active',
-			views: {
-				'app-friends-active': {
-					templateUrl: 'templates/tab-friends-active.html',
-					controller: 'UsersCtrl',
-					resolve: {
-						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends(
-$localStorage.user.data._id, 'Accepted', '').then(function (data) {
-								return data
-							})
-						}]
-					}
-				}
-			}
-		})
+		
 		.state('app.statistics', {
 			url: '/statistics',
 			templateUrl: 'templates/tab-statistics.html',
@@ -295,8 +296,7 @@ $localStorage.user.data._id, 'Accepted', '').then(function (data) {
 			resolve: {
 				isAuthenticated: isAuthenticated,
 				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
-					return UserService.getFriends(
-$localStorage.user.data._id, 'Accepted', "").then(function (data) {
+					return UserService.getFriends($localStorage.user.data._id, 'Accepted', "").then(function (data) {
 						return data
 					})
 				}
@@ -314,37 +314,32 @@ $localStorage.user.data._id, 'Accepted', "").then(function (data) {
 			templateUrl: 'templates/tab-chat-detail.html',
 			controller: 'ChatDetailCtrl',
 		})
-		.state('app.activity',{
+		.state('activity',{
 			url : '/activity',
 			templateUrl: 'templates/side-menu/activity.html',
-			// controller: 'A'
+			 controller: 'ActivityCtrl',
+			resolve:{
+				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
+					console.log("triggered");
+					return NotificationService.getAll($localStorage.user.data._id);
+				}]
+			}
 		})
-		.state('app.notifications',{
-			url : '/notifications',
-			templateUrl: 'templates/side-menu/notifications.html',
-			// controller: 'A'
-		})
-		.state('app.settings',{
-			url : '/settings',
-			templateUrl: 'templates/side-menu/settings.html',
-			// controller: 'A'
-		})
-		.state('app.favorites',{
-			url : '/favorites',
-			templateUrl: 'templates/side-menu/favorites.html',
-			// controller: 'A'
-		})
+	
 		.state('app.dare',{
-			url : '/dare',
+			url : '/dare/:dareID',
+			params : {
+				dareID:null
+			},
 			templateUrl: 'templates/tab-single-dare.html',
-			// controller: 'A'
+			controller: 'SingeDareCtrl',
+			resolve : {
+				dare : [ 'DareService','$stateParams', function(DareService,$stateParams) {
+						return DareService.get($stateParams.dareID); 	
+					}
+				]
+			}
 		})
-
-
-
-
-
-
 
 		.state('tab', {
 			url: '/tab',

@@ -10008,6 +10008,363 @@ a.button {
   background-position: center;
   background-size: 50% 50%; }
 
+.app-icon-time {
+  background: url("../img/icons/time.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%; }
+
+.app-icon-time-active {
+  background: url("../img/icons/time1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%; }
+
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
+/*some helpful varibals*/
+/*BACKGROUND Login and Registration*/
+.login-view .content-list {
+  margin: 0;
+  padding: 0;
+  background-color: #012438;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  /*Slider-page dots on the bottom of the page*/
+  /*BACKGROUND transgender*/
+  /* LOGO */
+  /*Enter LOGIN INFO*/
+  /*ENTER BUTTON*/
+  /*FORGET THE PASS*/
+  /*UNDERLINE OR */
+  /*something like footer */
+  /*NEXT / BACK BUUTON*/
+  /* bottom nav */
+  /* upload photo */
+  /* Example stylistic flourishes */ }
+  .login-view .content-list div > div > div .slider-pager {
+    display: none; }
+  .login-view .content-list .content-list {
+    margin: 0%;
+    padding: 0%;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    background: transparent;
+    box-sizing: border-box; }
+  .login-view .content-list section.list {
+    min-height: 35em;
+    padding: 0%;
+    margin: 0%;
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    display: block;
+    background: transparent;
+    box-sizing: border-box; }
+    .login-view .content-list section.list .fa {
+      margin: 5%;
+      padding: 1%;
+      width: 15vw;
+      height: 15vw;
+      font-size: 3em;
+      color: #fff;
+      border-radius: 50%;
+      display: inline-block; }
+  .login-view .content-list .logo {
+    padding: 2%;
+    margin: 2%;
+    position: relative;
+    min-height: 25vh;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 100%;
+    box-sizing: border-box; }
+  .login-view .content-list .into-login {
+    padding: 1%;
+    color: #78671e;
+    display: block;
+    position: relative;
+    font-size: 1em;
+    line-height: 1.8;
+    box-sizing: border-box; }
+  .login-view .content-list label.item.item-into {
+    color: #78671e;
+    border-bottom: 1px solid #808080;
+    border-top: 0;
+    width: 75%;
+    border-left: 0;
+    border-right: 0;
+    font-size: 1em; }
+  .login-view .content-list label.item-into {
+    display: inline-flex; }
+  .login-view .content-list input {
+    padding: 8px;
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    text-align: center; }
+  .login-view .content-list .item-input input, .login-view .content-list .item-input textarea {
+    color: #fff; }
+  .login-view .content-list input .item-input input {
+    text-align: center; }
+  .login-view .content-list span.input-label {
+    color: #78671e;
+    white-space: nowrap;
+    font-size: 1em;
+    text-align: left;
+    margin: 0;
+    padding: 0; }
+  .login-view .content-list .ion-ios-email-outline, .login-view .content-list .ion-ios-locked-outline, .login-view .content-list .ion-iphone, .login-view .content-list .ion-android-person, .login-view .content-list .ion-transgender,
+  .login-view .content-list .ion-ios-wineglass-outline, .login-view .content-list .ion-ios-camera-outline,
+  .login-view .content-list .ion-arrow-right-c, .login-view .content-list .ion-arrow-left-c, .login-view .content-list .ion-ios-camera-outline {
+    font-size: 1.5em; }
+  .login-view .content-list button.button.button-calm {
+    background-color: #012438;
+    color: #78671e;
+    width: 83%;
+    padding: 1%;
+    border: none;
+    margin: 3%;
+    font-size: 1em;
+    position: relative;
+    left: 6%;
+    box-sizing: border-box; }
+  .login-view .content-list .forget {
+    color: #fff;
+    margin: 3%;
+    position: relative;
+    font-size: 1em; }
+  .login-view .content-list div.container h1 {
+    font-size: 1em;
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+    position: relative; }
+  .login-view .content-list div.container h1:before,
+  .login-view .content-list div.container h1:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 500%; }
+  .login-view .content-list div.container h1:before {
+    right: 100%; }
+  .login-view .content-list div.container h1:after {
+    left: 100%; }
+  .login-view .content-list div.container {
+    overflow: hidden;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    position: relative; }
+  .login-view .content-list .regis {
+    color: #fff;
+    padding: 1%;
+    margin: 1%;
+    margin-top: 10%;
+    position: relative;
+    text-align: center;
+    font-size: 1.4em;
+    display: block;
+    background: transparent;
+    box-sizing: border-box; }
+  .login-view .content-list a.reg {
+    color: #fff;
+    margin: 0;
+    display: inline-flex; }
+  .login-view .content-list ion-slide-box {
+    height: 100vh !important; }
+  .login-view .content-list button.button-TR {
+    background: transparent none repeat scroll 0% 0%;
+    font-size: 100%;
+    position: relative;
+    width: 30%;
+    display: inline;
+    font-size: 4em; }
+  .login-view .content-list div.slider-pager {
+    position: relative;
+    bottom: 10em;
+    padding: 0em;
+    overflow: auto;
+    height: 100%;
+    visibility: hidden; }
+  .login-view .content-list .fileContainer {
+    overflow: hidden;
+    position: relative; }
+  .login-view .content-list .fileContainer [type=file] {
+    font-size: 2em;
+    filter: alpha(opacity=0);
+    opacity: 0; }
+  .login-view .content-list .fileContainer {
+    font-size: 2em;
+    box-sizing: border-box; }
+    .login-view .content-list .fileContainer i {
+      background: #012438;
+      border-radius: 50%;
+      font-size: 2em;
+      padding: 1em; }
+
+@media screen and (min-width: 1920px) {
+  .login-view .content-list {
+    line-height: 1.0;
+    /*buttons size */ }
+    .login-view .content-list section.list .fa {
+      width: 6vw;
+      height: 6vw;
+      font-size: 6em;
+      margin: 4%; }
+  /* LOGO */
+  .logo {
+    padding: 1%;
+    margin: 1%;
+    min-height: 10vh;
+    background-size: 10% 100%; }
+  .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
+  .ion-ios-wineglass-outline, .ion-ios-camera-outline,
+  .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
+    font-size: 2.5em; }
+  /*ENTER BUTTON*/
+  button.button.button-calm {
+    margin: 1%; }
+  /*FORGET THE PASS*/
+  .forget {
+    margin: 3%;
+    font-size: 1em; }
+  /*UNDERLINE OR */
+  div.container h1 {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px; }
+  div.container h1:before,
+  div.container h1:after {
+    height: 2px;
+    top: 50%;
+    width: 500%; }
+  div.container h1:before {
+    right: 100%; }
+  div.container h1:after {
+    left: 100%; }
+  /*something like footer */
+  .regis {
+    margin-top: 5%;
+    font-size: 1em; }
+  /* bottom nav */
+  div.slider-pager {
+    visibility: hidden; }
+  ion-slide-box {
+    height: 50vh !important; }
+  /*NEXT / BACK BUUTON*/
+  button.button-TR {
+    width: 30%;
+    font-size: 4em; }
+  /* upload photo */
+  .fileContainer [type=file] {
+    font-size: 2em; }
+  /* Example stylistic flourishes */
+  .fileContainer {
+    font-size: 2em; }
+    .fileContainer i {
+      border-radius: 50%;
+      font-size: 2em;
+      padding: 1em; } }
+
+@media screen and (min-height: 1080px) {
+  .login-view .content-list {
+    min-height: 60vh;
+    font-size: 1.5em;
+    /*circle buttons style*/
+    /* LOGO */
+    /*ENTER BUTTON*/
+    /*FORGET THE PASS*/
+    /*UNDERLINE OR */
+    /*something like footer */
+    /*NEXT / BACK BUUTON*/
+    /* upload photo */
+    /* Example stylistic flourishes */ }
+    .login-view .content-list .content-list .regis {
+      margin-top: 25%; }
+    .login-view .content-list section.list .fa {
+      width: 8vw;
+      height: 8vw;
+      font-size: 2.5em; }
+    .login-view .content-list .logo {
+      padding: 1%;
+      margin: 1%;
+      background-size: 40% 50%;
+      min-height: 17vh; }
+    .login-view .content-list .ion-ios-email-outline, .login-view .content-list .ion-ios-locked-outline, .login-view .content-list .ion-iphone, .login-view .content-list .ion-android-person, .login-view .content-list .ion-transgender,
+    .login-view .content-list .ion-ios-wineglass-outline, .login-view .content-list .ion-ios-camera-outline,
+    .login-view .content-list .ion-arrow-right-c, .login-view .content-list .ion-arrow-left-c, .login-view .content-list .ion-ios-camera-outline {
+      font-size: 2.5em; }
+    .login-view .content-list button.button.button-calm {
+      margin-top: 7%;
+      margin-bottom: 7%; }
+    .login-view .content-list .forget {
+      margin: 3%;
+      font-size: 1em; }
+    .login-view .content-list div.container h1 {
+      font-size: 1em;
+      padding: 1em; }
+    .login-view .content-list div.container h1:before,
+    .login-view .content-list div.container h1:after {
+      height: 2px; }
+    .login-view .content-list div.container h1:before {
+      right: 100%; }
+    .login-view .content-list div.container h1:after {
+      left: 100%; }
+    .login-view .content-list div.container {
+      width: 80%;
+      left: 10%; }
+    .login-view .content-list .regis {
+      padding: 1%;
+      margin: 1%;
+      margin-top: 10%;
+      font-size: 1.4em; }
+    .login-view .content-list a.reg {
+      margin: 0; }
+    .login-view .content-list button.button-TR {
+      width: 30%;
+      font-size: 4em; }
+    .login-view .content-list .fileContainer [type=file] {
+      font-size: 2em; }
+    .login-view .content-list .fileContainer {
+      font-size: 2em; }
+      .login-view .content-list .fileContainer i {
+        border-radius: 50%;
+        font-size: 2em;
+        padding: 1em; } }
+
+/* CSS list for all pages at user profil*/
+.list {
+  padding: 1%;
+  margin: 1%; }
+  .list ion-item, .list a.item-content {
+    border: none;
+    background: transparent; }
+  .list a {
+    text-align: left; }
+    .list a h2 {
+      color: #01cfe4; }
+    .list a p {
+      color: #ffb400; }
+
 .Category a:-webkit-any-link {
   text-decoration: none; }
 
@@ -10091,13 +10448,27 @@ a.button {
 .Category .color4 {
   color: #3b51a2; }
 
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
 .Contacts {
   background-image: none;
   background: #e8edf0;
+  background-size: 100% 100%;
   color: #03b2d1;
+  text-align: center;
+  display: block;
   line-height: 1%; }
-  .Contacts .button {
-    color: #fff; }
+  .Contacts .bar-header .h1 {
+    color: #044265; }
+  .Contacts .bar-header i {
+    color: blue; }
   .Contacts ion-list .f {
     text-align: center;
     font-size: 1rem;
@@ -10300,7 +10671,8 @@ a.button {
     margin-top: 5%;
     margin-left: 1%;
     margin-right: 1%;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    text-align: center; }
     .Statistics .row a.item {
       color: #fff; }
     .Statistics .row a.button.button-calm {
@@ -10311,12 +10683,17 @@ a.button {
       font-size: 1.2em;
       margin-right: 5%; }
     .Statistics .row .user {
-      top: 21px;
-      left: 15%;
-      height: 10%; }
+      width: 70%; }
       .Statistics .row .user h1 {
         font-size: 1.2em;
         color: #fff; }
+    .Statistics .row .fa {
+      float: left;
+      margin-left: 1vh;
+      width: 20%;
+      height: 10vh;
+      border-radius: 50%;
+      background-size: 100% 75%; }
     .Statistics .row .dare h3 {
       padding: 0.5em;
       font-size: 10px;
@@ -10327,19 +10704,147 @@ a.button {
     .Statistics .row canvas #line {
       background: transparent; }
 
-/*heder*/
+@media screen and (min-height: 1080px) {
+  .dare {
+    width: 25%;
+    font-size: 3em; }
+  .fa {
+    float: left; }
+  button.button-calm {
+    width: 70%;
+    font-size: 3.2em;
+    margin: 5%;
+    padding: 5%; } }
+
+/*some helpful varibals*/
+/*some helpful varibals*/
+/* CSS Profil new dare */
+.newdare {
+  background-image: none;
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  text-align: center;
+  display: block;
+  line-height: 1%;
+  color: #16b8d4;
+  /*category challenges */
+  /* WebKit browsers */
+  /* upload photo */
+  /* Example stylistic flourishes */ }
+  .newdare .bar-header {
+    background: transparent;
+    border: none;
+    margin-top: -15%; }
+    .newdare .bar-header h1 {
+      font-size: 1.2em; }
+  .newdare h1, .newdare h3 {
+    color: #16b8d4; }
+  .newdare .list-inset {
+    margin-top: 15%; }
+  .newdare div .challeng ion-list .list {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    display: inline-block;
+    font-size: 1em; }
+    .newdare div .challeng ion-list .list .item {
+      display: inline-block;
+      width: 45%;
+      font-size: 1em;
+      padding: 0.5%;
+      border: none;
+      text-align: center;
+      background: transparent; }
+      .newdare div .challeng ion-list .list .item :nth-child(1) {
+        background: #3b6783;
+        color: #fff;
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        /* margin-top: 1em; */
+        padding-top: 20%;
+        padding-bottom: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        word-break: keep-all; }
+      .newdare div .challeng ion-list .list .item :nth-child(2) {
+        background: #17283a;
+        color: #fff;
+        width: 100%; }
+  .newdare .list-inset {
+    width: 100%;
+    background: transparent; }
+  .newdare label .item {
+    margin-top: 5%; }
+  .newdare .vh {
+    margin-top: 1vh;
+    width: 95%;
+    height: 3em;
+    border-color: #8dc3cd; }
+  .newdare .la {
+    text-align: left; }
+  .newdare .fa {
+    margin: 5%;
+    padding: 1%;
+    width: 10vw !important;
+    height: 10vw;
+    font-size: 3em;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block; }
+  .newdare ::-webkit-input-placeholder {
+    color: #16b8d4;
+    opacity: 1 !important; }
+  .newdare .pen {
+    margin-top: -7em;
+    margin-right: 1em; }
+    .newdare .pen i {
+      color: orange;
+      -webkit-transform: scale(-1, 1); }
+  .newdare .info {
+    font-size: 0.5em;
+    width: 10%;
+    height: 100%;
+    left: -1.2em;
+    bottom: 3em; }
+    .newdare .info i {
+      color: orange;
+      font-size: 3em; }
+  .newdare .fileContainer {
+    overflow: hidden;
+    position: relative; }
+  .newdare .fileContainer {
+    font-size: 2em;
+    box-sizing: border-box; }
+    .newdare .fileContainer i {
+      margin: 1%;
+      padding: 0.5em;
+      background: #fff;
+      color: orange;
+      font-size: 2em;
+      border-radius: 50%;
+      display: inline-block; }
+    .newdare .fileContainer input[type="file"] {
+      overflow: hidden;
+      position: relative; }
+
+/*some helpful varibals*/
+/*heder side- menue*/
 /*list*/
 /*list Item*/
 /*Paragraf*/
 /*div*/
 /*text stylings */
 /*img style*/
-/*some helpful varibals*/
 .SideMenu .menu-left {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /*for icons*/
   /*how to be display*/ }
   .SideMenu .menu-left .height {
@@ -10369,11 +10874,12 @@ a.button {
     display: inline-flex;
     text-align: left;
     font-size: 0.8em; }
-  .SideMenu .menu-left span {
+  .SideMenu .menu-left span:not(.badge) {
     float: left;
-    margin-left: -0.5%;
-    margin-top: -0.5rem;
-    position: absolute;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
     z-index: 10; }
   .SideMenu .menu-left .app-icon {
     width: 1em !important;
@@ -10398,21 +10904,25 @@ a.button {
         color: #ffb400;
         font-size: 3em; }
 
-/*heder*/
+/*some helpful varibals*/
+/*heder side- menue*/
 /*list*/
 /*list Item*/
 /*Paragraf*/
 /*div*/
 /*text stylings */
 /*img style*/
-/*some helpful varibals*/
 /* CSS for Profile view */
 .Profile {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
-  text-align: center; }
+  text-align: center;
+  display: block; }
   .Profile .profile-info {
+    width: 100%;
     display: block;
     height: 20vh;
     margin-top: 2vh;
@@ -10420,7 +10930,8 @@ a.button {
     font-size: 3vw; }
     .Profile .profile-info .profile-avatar {
       float: left;
-      margin-left: 5vh;
+      margin-left: 1vh;
+      width: 30%;
       height: 12vh;
       border-radius: 50%;
       border: 3px solid white; }
@@ -10475,6 +10986,7 @@ a.button {
       padding-bottom: 11vw; }
       .Profile .profile-info .profile-avatar {
         height: 12vw;
+        width: 12vw;
         margin-left: 6vw;
         margin-top: -2vw; }
       .Profile .profile-info .profile-user-credentials {
@@ -10497,20 +11009,23 @@ a.button {
         font-size: 3vh; } }
 
 /* CSS Profil background */
-/*heder*/
+/*some helpful varibals*/
+/*heder side- menue*/
 /*list*/
 /*list Item*/
 /*Paragraf*/
 /*div*/
 /*text stylings */
 /*img style*/
-/*some helpful varibals*/
 /* CSS activities */
 .Activity {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /* CSS edit in item */ }
   .Activity .height {
     display: inline;
@@ -10541,9 +11056,10 @@ a.button {
     font-size: 0.8em; }
   .Activity span {
     float: left;
-    margin-left: -0.5%;
-    margin-top: -0.5rem;
-    position: absolute;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
     z-index: 10; }
   .Activity .challenger {
     width: 3em;
@@ -10554,10 +11070,11 @@ a.button {
     margin: 1%;
     padding: 1%;
     width: 100%;
+    background: transparent;
     border: none;
     color: #01cfe4;
-    background: transparent;
     display: block;
+    width: 98%;
     position: relative; }
     .Activity .list ion-item {
       margin: 1%;
@@ -10569,7 +11086,6 @@ a.button {
       border: none;
       color: #fff;
       background: transparent;
-      display: inline-block;
       position: relative;
       /* CSS imges */ }
       .Activity .list ion-item .p, .Activity .list ion-item i {
@@ -10594,6 +11110,14 @@ a.button {
         margin-bottom: 1vh;
         display: inline-flex;
         font-size: 0.8em; }
+        .Activity .list ion-item div p i {
+          color: #ffb400;
+          margin: 1%;
+          padding: 1%;
+          width: 100%;
+          display: block;
+          padding-right: 1vw;
+          font-size: 1em; }
       .Activity .list ion-item .img {
         margin: 1%;
         padding: 1%;
@@ -10605,14 +11129,14 @@ a.button {
           height: 3.5em;
           padding: 0.3em 1em 0.3em 0; }
   .Activity .com p {
-    width: 63%;
+    width: 90%;
     padding-left: 1rem;
     background: transparent;
     text-align: left;
-    padding-bottom: 1em;
     display: inline-block;
     white-space: normal;
-    color: #fff; }
+    color: #fff;
+    width: 63%; }
   @media screen and (max-width: 450px) {
     .Activity .com p {
       padding-left: 1rem; }
@@ -10621,42 +11145,97 @@ a.button {
     .Activity ion-item div p {
       margin-right: 3vw; } }
   @media screen and (min-width: 1920px) {
+    .Activity h2 {
+      margin-left: 18.5%;
+      font-size: 3em;
+      margin-top: -3%; }
     .Activity hr {
       width: 90%; }
     .Activity .item-avatar > img:first-child {
-      position: none;
-      margin-left: 4vw;
-      background-color: red; }
+      min-width: 10em;
+      min-height: 10em;
+      margin-left: 6vw; }
     .Activity .com p {
-      padding-left: 6em; }
+      margin-left: 2em;
+      font-size: 2em;
+      padding: 1%; }
     .Activity .list ion-item .img {
       margin-left: 5%; }
     .Activity .list ion-item .img img {
-      width: 7em;
-      height: 6.5em; }
-    .Activity h2 {
-      margin-left: 4.5%; }
-    .Activity ion-item div p {
-      margin-left: 2vw; }
+      width: 12em;
+      height: 10.5em; }
+    .Activity .Activity div p {
+      width: 100%;
+      font-size: 3em; }
+      .Activity .Activity div p .ion-ios-clock-outline {
+        width: 30%;
+        font-size: 4em; }
     .Activity .list ion-item .p {
-      margin-left: 4.5%; }
+      width: 100%;
+      margin-left: 4.5%;
+      font-size: 3em; }
     .Activity .challenger {
-      margin-left: -3em; } }
+      margin-left: -3em;
+      margin-TOP: -3em;
+      width: 12em;
+      height: 10.5em; } }
+  @media screen and (min-height: 1080px) {
+    .Activity h2 {
+      margin-left: 23.5%;
+      font-size: 2.5em;
+      margin-top: -2%; }
+    .Activity hr {
+      width: 90%; }
+    .Activity .item-avatar > img:first-child {
+      min-width: 10em;
+      min-height: 10em;
+      margin-left: 6vw; }
+    .Activity .com p {
+      margin-left: 2em;
+      font-size: 2em;
+      padding: 1%;
+      line-height: 1.5;
+      margin: 1%; }
+    .Activity .list ion-item .img {
+      margin-left: 5%; }
+    .Activity .list ion-item .img img {
+      width: 12em;
+      height: 10.5em; }
+    .Activity .Activity div p {
+      width: 100%;
+      font-size: 3em; }
+      .Activity .Activity div p .ion-ios-clock-outline {
+        width: 30%;
+        font-size: 4em; }
+    .Activity .list ion-item .p {
+      margin-left: 0;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-size: 3em;
+      padding: 1%; }
+    .Activity .challenger {
+      margin-left: 5em;
+      margin-TOP: 0em;
+      width: 12em;
+      height: 10.5em; } }
 
-/*heder*/
+/*some helpful varibals*/
+/*heder side- menue*/
 /*list*/
 /*list Item*/
 /*Paragraf*/
 /*div*/
 /*text stylings */
 /*img style*/
-/*some helpful varibals*/
 /* CSS nothifications */
 .Notifications {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /* CSS edit in item */ }
   .Notifications .height {
     display: inline;
@@ -10687,18 +11266,20 @@ a.button {
     font-size: 0.8em; }
   .Notifications span {
     float: left;
-    margin-left: -0.5%;
-    margin-top: -0.5rem;
-    position: absolute;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
     z-index: 10; }
   .Notifications .list {
     margin: 1%;
     padding: 1%;
     width: 100%;
+    background: transparent;
     border: none;
     color: #01cfe4;
-    background: transparent;
     display: block;
+    width: 98%;
     position: relative; }
     .Notifications .list ion-item {
       margin: 1%;
@@ -10710,7 +11291,6 @@ a.button {
       border: none;
       color: #fff;
       background: transparent;
-      display: inline-block;
       position: relative;
       border-left: 1px solid #fff;
       /* CSS imges */ }
@@ -10750,11 +11330,10 @@ a.button {
         width: 30vw;
         height: 20vh; }
   .Notifications .com p {
-    width: 61%;
-    padding-left: 3rem;
+    width: 90%;
+    padding-left: 1rem;
     background: transparent;
     text-align: left;
-    padding-bottom: 30px;
     display: inline-block;
     white-space: normal;
     color: #fff; }
@@ -10875,21 +11454,24 @@ a.button {
     color: #01cfe4;
     font-size: 10px; }
 
-/*heder*/
+/*some helpful varibals*/
+/*heder side- menue*/
 /*list*/
 /*list Item*/
 /*Paragraf*/
 /*div*/
 /*text stylings */
 /*img style*/
-/*some helpful varibals*/
 /* CSS tabs- Menue */
 /* here is the mine CSS 4 background, colors and so on */
 .Settings {
   background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
+  display: block;
   /* here is the mine CSS 4 back button, heder and so on the bar*/ }
   .Settings .height {
     display: inline;
@@ -10920,9 +11502,10 @@ a.button {
     font-size: 0.8em; }
   .Settings span {
     float: left;
-    margin-left: -0.5%;
-    margin-top: -0.5rem;
-    position: absolute;
+    margin-bottom: -5%;
+    margin-left: -3.5%;
+    position: relative;
+    display: inline-block;
     z-index: 10; }
   .Settings h1 {
     color: #04a4c3;
@@ -10931,11 +11514,13 @@ a.button {
     margin: 1%;
     padding: 1%;
     width: 100%;
+    background: transparent;
     border: none;
     color: #01cfe4;
-    background: transparent;
     display: block;
-    position: relative; }
+    width: 98%;
+    position: relative;
+    width: 98%; }
     .Settings .list ion-item {
       margin: 1%;
       padding: 1%;
@@ -10946,196 +11531,658 @@ a.button {
       border: none;
       color: #fff;
       background: transparent;
-      display: inline-block;
       position: relative;
       color: #01cfe4; }
       .Settings .list ion-item .toggle.toggle-assertive input:checked + .track {
         border-color: #01cfe4;
         background-color: #01cfe4; }
 
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS Timeline	title and arrows*/
 .TimeLineCard {
-  max-height: 20em; }
-  .TimeLineCard .demo {
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: #fff;
-    margin-top: 2%;
-    margin-right: 2%;
-    position: relative; }
-  .TimeLineCard .demo > img {
+  min-height: 10em;
+  max-height: 13.5em; }
+  .TimeLineCard .navigation .arrows-right {
+    height: 0.5em;
+    font-size: 1.5em;
+    margin-top: -20%;
+    padding: 0;
     position: relative;
-    width: 100%;
-    height: auto; }
-  .TimeLineCard .demo h2 {
-    position: absolute;
-    top: 15%;
     color: #fff;
-    font-size: 20px;
-    padding-left: 30px; }
-  .TimeLineCard .time {
-    display: inline-block;
-    vertical-align: top; }
-  .TimeLineCard .timetime {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: -73%;
-    width: 174px;
-    height: auto; }
-  .TimeLineCard .timetime p {
-    font-size: 0.5em;
-    line-height: 22px;
-    color: #03b2d1; }
-  .TimeLineCard .likeLike {
-    display: inline-block; }
-  .TimeLineCard .likeLike .person {
-    display: inline-block;
-    vertical-align: top;
-    background-image: url(../img/icons/user1.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 13px;
-    height: 19px;
-    width: 22px; }
-  .TimeLineCard .likeLike .comment {
-    display: inline-block;
-    vertical-align: top;
-    background-image: url(../img/icons/speech1.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 13px;
-    height: 17px;
-    width: 26px; }
-  .TimeLineCard .likeLike .heart {
-    display: inline-block;
-    vertical-align: top;
-    background-image: url(../img/icons/love1.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 13px;
-    height: 17px;
-    width: 26px; }
-  .TimeLineCard .person p {
-    padding-left: 43%; }
-  .TimeLineCard .comment p {
-    padding-left: 50%; }
-  .TimeLineCard .heart p {
-    padding-left: 55%; }
-  .TimeLineCard .likeLike p {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 8px;
-    color: #03b2d1; }
-  .TimeLineCard .clock h6 {
-    font-size: 13px;
-    color: #03b2d1;
-    line-height: 12px; }
-  .TimeLineCard .clock h6 > p {
-    color: #ffcf7d;
-    font-size: 5px;
-    line-height: 5px; }
-  .TimeLineCard .clock {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 4px;
-    padding-top: 5px; }
-  .TimeLineCard .timecheck {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 4px;
-    line-height: -1px; }
-  .TimeLineCard .timecheck img {
-    width: 16px;
-    height: 20px; }
-  .TimeLineCard .timeclock {
-    display: inline-block;
-    vertical-align: top;
-    height: 16px;
-    line-height: -1px; }
-  .TimeLineCard .timeclock img {
-    width: 16px;
-    height: 16px; }
-  .TimeLineCard .info {
-    width: 25%;
-    display: inline-block;
-    vertical-align: top;
+    float: right; }
+  .TimeLineCard .navigation .arrows-left {
+    height: 0.5em;
+    font-size: 1.5em;
+    margin-top: -20%;
+    padding: 0;
     position: relative;
-    bottom: 20px; }
-  .TimeLineCard .socialtwo {
-    display: none; }
-  .TimeLineCard .responsive-logo {
-    display: none; }
-  .TimeLineCard .user {
-    width: 80%;
-    position: absolute;
-    top: 28vh;
-    left: -10%; }
-  .TimeLineCard .user-name {
-    display: inline-block;
-    vertical-align: top;
     color: #fff;
-    font-size: 0.8em;
-    margin-left: 4px; }
-  .TimeLineCard .user-pic {
-    display: inline-block;
-    width: 20%;
-    margin-left: -6%; }
-  .TimeLineCard .user .img-circle {
-    border-radius: 50%;
-    border: 2px solid #fff;
-    width: 4em; }
-  .TimeLineCard .arrow {
-    position: absolute;
-    top: 10%;
-    width: 100%; }
-  .TimeLineCard .arrowSecond {
-    position: absolute;
-    top: 30%;
-    width: 100%; }
-  .TimeLineCard .arrow img {
-    width: 50px;
-    height: 50px;
+    float: left; }
+  .TimeLineCard .navigation .title {
+    color: #fff;
+    position: relative;
+    top: -6em;
+    left: -3em;
+    font-size: 1.5em; }
+  .TimeLineCard .content {
+    min-height: 10em;
+    width: 100%;
+    position: relative;
+    text-align: center; }
+    .TimeLineCard .content img {
+      height: 10em;
+      width: 100%; }
+  .TimeLineCard .footer {
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: -1em;
+    margin-top: -13%;
+    padding: 1%;
+    width: 100%;
+    /* avatar settings, NAME*/ }
+    .TimeLineCard .footer span {
+      width: 16%; }
+      .TimeLineCard .footer span .fa {
+        min-width: 2.5em;
+        height: 2.5em;
+        margin-top: 1.5em;
+        background-size: 88% 90%; }
+    .TimeLineCard .footer .info {
+      display: inline-flex;
+      width: 10%;
+      height: 5em;
+      margin-top: 0%;
+      font-size: 10px;
+      color: #04a4c3;
+      margin: 1%;
+      margin-right: 3%; }
+    .TimeLineCard .footer .ng-binding {
+      color: #04a4c3;
+      font-size: 10px;
+      margin-top: 1.5em;
+      margin-right: 2%; }
+      .TimeLineCard .footer .ng-binding h3, .TimeLineCard .footer .ng-binding h5, .TimeLineCard .footer .ng-binding i {
+        color: #ffb400; }
+      .TimeLineCard .footer .ng-binding .profil-avatar {
+        margin-top: -10%;
+        margin-left: -4%;
+        min-width: 5em;
+        min-height: 5em; }
+  .TimeLineCard .googleMap {
+    width: 40%;
+    display: inline;
+    height: 24.6vh;
+    float: right;
+    margin-top: -46%; }
+
+@media screen and (min-width: 1920px) {
+  .TimeLineCard {
+    min-height: 25em;
+    max-height: 30em; }
+    .TimeLineCard .navigation .arrows-right {
+      height: 0.5em;
+      font-size: 1.5em;
+      margin-top: -20%;
+      padding: 0;
+      position: relative;
+      color: #fff;
+      height: 1.5em;
+      font-size: 4.5em;
+      margin-top: -8%; }
+    .TimeLineCard .navigation .arrows-left {
+      height: 0.5em;
+      font-size: 1.5em;
+      margin-top: -20%;
+      padding: 0;
+      position: relative;
+      color: #fff;
+      height: 1.5em;
+      font-size: 4.5em;
+      margin-top: -8%; }
+    .TimeLineCard .navigation .title {
+      top: -9em;
+      left: -13em;
+      font-size: 3.5em; }
+    .TimeLineCard .content {
+      min-height: 20em; }
+      .TimeLineCard .content img {
+        height: 20em; }
+    .TimeLineCard .footer {
+      text-align: center;
+      display: inline-flex;
+      position: relative;
+      top: -1em;
+      margin-top: -13%;
+      padding: 1%;
+      width: 100%;
+      /* avatar settings, NAME*/ }
+      .TimeLineCard .footer span {
+        font-size: 2em; }
+        .TimeLineCard .footer span .fa {
+          min-width: 3.5em;
+          height: 2.5em;
+          margin-top: 1em; }
+      .TimeLineCard .footer .info {
+        font-size: 2em;
+        margin: -1%;
+        padding-left: 10%; }
+      .TimeLineCard .footer .ng-binding {
+        font-size: 2em; }
+        .TimeLineCard .footer .ng-binding .profil-avatar {
+          margin-top: -2%;
+          margin-left: 1%;
+          min-width: 4em;
+          min-height: 4em; } }
+
+@media screen and (min-height: 1080px) {
+  .TimeLineCard {
+    min-height: 25em;
+    max-height: 30em; }
+    .TimeLineCard .navigation .arrows-right {
+      height: 0.5em;
+      font-size: 1.5em;
+      margin-top: -20%;
+      padding: 0;
+      position: relative;
+      color: #fff;
+      height: 1.5em;
+      font-size: 4.5em;
+      margin-top: -17%; }
+    .TimeLineCard .navigation .arrows-left {
+      height: 0.5em;
+      font-size: 1.5em;
+      margin-top: -20%;
+      padding: 0;
+      position: relative;
+      color: #fff;
+      height: 1.5em;
+      font-size: 4.5em;
+      margin-top: -17%; }
+    .TimeLineCard .navigation .title {
+      top: -7em;
+      left: -9em;
+      font-size: 2.5em; }
+    .TimeLineCard .content {
+      min-height: 20em; }
+      .TimeLineCard .content img {
+        height: 20em; }
+    .TimeLineCard .footer {
+      text-align: center;
+      display: inline-flex;
+      position: relative;
+      top: -1em;
+      margin-top: -13%;
+      padding: 1%;
+      width: 100%;
+      /*make circle buttons*/
+      /* avatar settings, NAME*/ }
+      .TimeLineCard .footer span {
+        font-size: 2em; }
+        .TimeLineCard .footer span .fa {
+          min-width: 3.5em;
+          height: 3.5em; }
+      .TimeLineCard .footer .info {
+        font-size: 1.5em;
+        margin: 1%;
+        margin-right: 1%; }
+      .TimeLineCard .footer .ng-binding {
+        font-size: 2em;
+        margin-right: 6%; }
+        .TimeLineCard .footer .ng-binding .profil-avatar {
+          margin-top: -3%;
+          margin-left: 0%;
+          min-width: 4em;
+          min-height: 4em; } }
+
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS Timeline	title and arrows*/
+.timeline {
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  display: block;
+  position: relative; }
+  .timeline .item {
+    background: transparent;
     border: none; }
 
-.Chat .messages {
-  background-color: #e8edf0; }
-  .Chat .messages .message {
-    flex: 1 1 auto !important;
-    padding: 10px !important;
-    transition: all 250ms ease-in-out !important;
-    overflow: hidden !important;
-    text-align: left !important;
-    transform: translate3d(0, 0, 0) !important; }
-  .Chat .messages .avatar {
-    border-radius: 50% !important; }
-  .Chat .messages .time {
-    color: #000;
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS single Dare	title and arrows*/
+.single {
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  display: block;
+  position: relative;
+  /*timeline settings */ }
+  .single .height {
+    display: inline;
+    height: 17vh;
+    margin: 1%;
+    padding: 1%;
+    width: 100%; }
+    .single .height h1 {
+      position: relative;
+      display: inline-block;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
+    .single .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
+    .single .height h1 {
+      left: 20%; }
+    .single .height i {
+      right: 70%; }
+  .single .item {
+    background: transparent;
+    border: none; }
+    .single .item label {
+      margin-top: 1em;
+      width: 83%;
+      border-color: #8dc3cd;
+      float: right; }
+  .single .TimeLineCard .navigation .title {
+    left: 1em; }
+  .single .TimeLineCard .footer {
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: -1em;
+    margin-top: -13%;
+    padding: 1%;
+    width: 100%;
+    margin-top: -10%;
+    width: 60%;
+    display: block;
+    /* avatar settings, NAME*/ }
+    .single .TimeLineCard .footer span {
+      width: 16%;
+      margin-bottom: 2%; }
+      .single .TimeLineCard .footer span h5 {
+        font-size: 1em; }
+      .single .TimeLineCard .footer span .fa {
+        min-width: 2.5em;
+        height: 2.5em;
+        margin-top: 1.5em;
+        background-size: 88% 90%; }
+    .single .TimeLineCard .footer img {
+      margin-top: -15%;
+      margin-left: -6%;
+      min-width: 5em;
+      min-height: 5em; }
+    .single .TimeLineCard .footer .info {
+      display: inline-flex;
+      width: 10%;
+      height: 5em;
+      margin-top: 0%;
+      font-size: 10px;
+      color: #04a4c3;
+      margin: 1%;
+      margin-right: 3%; }
+    .single .TimeLineCard .footer .ng-binding {
+      color: #04a4c3;
+      font-size: 10px;
+      display: block;
+      margin-left: 50%;
+      margin-top: 0%; }
+      .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
+        color: #ffb400;
+        text-transform: uppercase; }
+      .single .TimeLineCard .footer .ng-binding .profil-avatar {
+        margin-top: -10%;
+        margin-left: -4%;
+        min-width: 5em;
+        min-height: 5em; }
+  .single h3 {
+    position: relative;
     display: inline-block;
-    margin-top: 20px; }
-  .Chat .messages span {
-    background: #C7C7CC !important;
-    display: inline-block !important;
-    color: white !important;
-    padding: 10px !important;
-    border-radius: 10px !important;
-    text-align: left !important;
-    max-width: 70vw !important; }
-    .Chat .messages span .time {
-      color: white; }
+    width: 100%;
+    color: #01cfe4;
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase; }
+  .single .button-new {
+    background: transparent;
+    border: none;
+    background-color: #021e2f;
+    width: 97%;
+    height: 3em;
+    color: #fff;
+    text-transform: uppercase; }
+  .single .col {
+    min-height: 6.5em;
+    margin: 1%;
+    padding: 1%;
+    color: #fff; }
+    .single .col img {
+      width: 3em; }
+    .single .col h6 i {
+      color: #ffb400;
+      font-size: 1em; }
+    .single .col h6, .single .col h7 {
+      color: #01cfe4; }
+    .single .col h2 {
+      top: 0em;
+      left: 1em;
+      position: relative; }
+    .single .col h4, .single .col h2 {
+      color: #3c6884; }
+    .single .col h7 {
+      top: 0em;
+      left: 1em;
+      position: relative; }
+  .single .fa {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    color: #fff;
+    margin: 1%;
+    padding: 1%; }
+  .single .button-block {
+    background-color: #3c6884;
+    color: #fff;
+    margin: 1%;
+    padding: 1%; }
 
-.Chat .messages.other .message {
-  transform: translate3d(0, 0, 0) !important;
-  text-align: right !important; }
-  .Chat .messages.other .message .avatar {
-    display: none; }
+@media screen and (min-width: 1920px) {
+  .single {
+    background: #e8edf0;
+    background-size: 100% 100%;
+    color: #03b2d1;
+    font-size: 1em;
+    margin: 0;
+    padding: 1%;
+    width: 100%;
+    display: block;
+    position: relative;
+    /*timeline settings */ }
+    .single .height {
+      font-size: 2em; }
+      .single .height h1 {
+        font-size: 4.4em; }
+      .single .height i {
+        font-size: 4.4em; }
+    .single .item {
+      background: transparent;
+      border: none; }
+      .single .item label {
+        margin-top: 1em;
+        width: 83%;
+        border-color: #8dc3cd;
+        float: right; }
+    .single .TimeLineCard {
+      min-height: 30em;
+      max-height: 30em; }
+      .single .TimeLineCard .footer {
+        margin-top: 3%;
+        font-size: 3em;
+        /* avatar settings, NAME*/ }
+        .single .TimeLineCard .footer span {
+          width: 16%; }
+          .single .TimeLineCard .footer span .fa {
+            min-width: 2.5em;
+            height: 2.5em;
+            margin-top: 1.5em;
+            background-size: 88% 90%; }
+        .single .TimeLineCard .footer img {
+          margin-top: -20%;
+          margin-left: 2%;
+          min-width: 6.5em;
+          min-height: 6.5em; }
+        .single .TimeLineCard .footer .info {
+          font-size: 0.5em; }
+        .single .TimeLineCard .footer .ng-binding {
+          font-size: 1em; }
+          .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
+            color: #ffb400;
+            text-transform: uppercase; }
+          .single .TimeLineCard .footer .ng-binding .profil-avatar {
+            margin-top: -10%;
+            margin-left: -4%;
+            min-width: 5em;
+            min-height: 5em; }
+      .single .TimeLineCard .googleMap {
+        margin-top: -22%;
+        height: 30vh; }
+    .single h3 {
+      font-size: 4em; }
+    .single .button-new {
+      height: 5em;
+      font-size: 2em; }
+    .single .col {
+      min-height: 20.5em; }
+      .single .col img {
+        width: 10em; }
+      .single .col h6 i {
+        font-size: 2em; }
+      .single .col h6, .single .col h7 {
+        font-size: 3em; }
+      .single .col h4, .single .col h2 {
+        font-size: 5em;
+        top: -2em;
+        left: 4em; }
+      .single .col h7 {
+        font-size: 4.5em;
+        top: -1em;
+        left: 4em; }
+    .single .fa {
+      border-radius: 50%;
+      width: 3em;
+      height: 3em;
+      color: #fff;
+      margin: 1%;
+      padding: 1%; }
+    .single .button-block {
+      margin: 2%;
+      padding: 2%;
+      font-size: 5em; } }
 
-.Chat .messages.other .message.slide-right {
-  transform: translate3d(120px, 0, 0) !important; }
+@media screen and (min-height: 1080px) {
+  .single {
+    background: #e8edf0;
+    background-size: 100% 100%;
+    color: #03b2d1;
+    font-size: 1em;
+    margin: 0;
+    padding: 1%;
+    width: 100%;
+    display: block;
+    position: relative;
+    /*timeline settings */ }
+    .single .height {
+      font-size: 2em; }
+      .single .height h1 {
+        font-size: 2.4em; }
+      .single .height i {
+        font-size: 2.4em; }
+    .single .item {
+      background: transparent;
+      border: none; }
+      .single .item label {
+        margin-top: 1em;
+        width: 83%;
+        border-color: #8dc3cd;
+        float: right; }
+    .single .TimeLineCard {
+      min-height: 35em;
+      max-height: 35em; }
+      .single .TimeLineCard .content {
+        min-height: 35em; }
+        .single .TimeLineCard .content img {
+          height: 35em; }
+      .single .TimeLineCard .footer {
+        margin-top: 3%;
+        font-size: 3em;
+        /* avatar settings, NAME*/ }
+        .single .TimeLineCard .footer span {
+          width: 16%; }
+          .single .TimeLineCard .footer span .fa {
+            min-width: 2.5em;
+            height: 2.5em;
+            margin-top: 1.5em;
+            background-size: 88% 90%; }
+        .single .TimeLineCard .footer img {
+          margin-top: -20%;
+          margin-left: 2%;
+          min-width: 4.5em;
+          min-height: 4.5em; }
+        .single .TimeLineCard .footer .info {
+          font-size: 0.5em; }
+        .single .TimeLineCard .footer .ng-binding {
+          font-size: 1em;
+          margin-top: 2%; }
+          .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
+            color: #ffb400;
+            text-transform: uppercase; }
+          .single .TimeLineCard .footer .ng-binding .profil-avatar {
+            margin-top: -10%;
+            margin-left: -4%;
+            min-width: 5em;
+            min-height: 5em; }
+      .single .TimeLineCard .googleMap {
+        margin-top: -40%;
+        height: 17.6vh; } }
 
-.Chat .messages.other span {
-  color: black !important;
-  background-color: #007AFF !important;
-  margin-top: 12px; }
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS Timeline	title and arrows*/
+.timeline {
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  display: block;
+  position: relative; }
+  .timeline .item {
+    background: transparent;
+    border: none; }
+
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/* CSS Tab Chat  */
+.report {
+  background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #012438;
+  background-size: 100% 100%;
+  text-align: center;
+  display: block; }
+  .report .height {
+    display: inline;
+    height: 17vh;
+    margin: 1%;
+    padding: 1%;
+    width: 100%; }
+    .report .height h1 {
+      position: relative;
+      display: inline-block;
+      top: 30%;
+      color: #01cfe4;
+      font-size: 1.4em; }
+    .report .height i {
+      font-size: 2em;
+      position: relative;
+      right: 47%;
+      top: 1%;
+      color: #fff; }
+  .report a.item-content {
+    color: #fff; }
+
+.Chat {
+  background-color: yellow; }
+  .Chat .messages {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    background: transparent;
+    border: none; }
+    .Chat .messages .message {
+      flex: 1 1 auto !important;
+      padding: 10px !important;
+      transition: all 250ms ease-in-out !important;
+      overflow: hidden !important;
+      text-align: left !important;
+      transform: translate3d(0, 0, 0) !important; }
+    .Chat .messages .avatar {
+      border-radius: 50% !important; }
+    .Chat .messages .time {
+      color: #000;
+      display: inline-block;
+      margin-top: 20px; }
+    .Chat .messages span {
+      background: #C7C7CC !important;
+      display: inline-block !important;
+      color: white !important;
+      padding: 10px !important;
+      border-radius: 10px !important;
+      text-align: left !important;
+      max-width: 70vw !important; }
+      .Chat .messages span .time {
+        color: white; }
+  .Chat .messages.other .message {
+    transform: translate3d(0, 0, 0) !important;
+    text-align: right !important; }
+    .Chat .messages.other .message .avatar {
+      display: none; }
+  .Chat .messages.other .message.slide-right {
+    transform: translate3d(120px, 0, 0) !important; }
+  .Chat .messages.other span {
+    color: black !important;
+    background-color: #007AFF !important;
+    margin-top: 12px; }
+
+.bar.bar-stable.bar-footer {
+  background-color: yellow; }
 
 .app-side-menu-navigation {
   display: block; }

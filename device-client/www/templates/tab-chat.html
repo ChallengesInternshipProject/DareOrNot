@@ -1,11 +1,11 @@
 <ion-view name="login-view">
-  <ion-content class="padding">
+  <ion-content class="report">
+   <div class="height">
+               <h1>Chat room</h1>
+        <i class="ion-chevron-left" ng-click="NotoficationsModal.hide()"></i>
+    </div>
     <!--users online here-->
     <ion-list>
-
-      <ion-item>
-        <h2>Chat with :</h2>
-      </ion-item>
       <ion-item ng-repeat="user in onlineUsers track by $index" ng-href="#/app/chat/{{user.email}}">
         {{user.email}}
       </ion-item>
