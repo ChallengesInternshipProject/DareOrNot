@@ -36,11 +36,11 @@
     <splash density="port-hdpi" src="resources/android/splash/drawable-port-hdpi-screen.png"/>
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png"/>
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png"/>
-    <icon src="resources\android\icon\drawable-ldpi-icon.png" density="ldpi"/>
-    <icon src="resources\android\icon\drawable-mdpi-icon.png" density="mdpi"/>
-    <icon src="resources\android\icon\drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
   </platform>
-  <icon src="resources\android\icon\drawable-hdpi-icon.png"/>
+  <icon src="resources/android/icon/drawable-hdpi-icon.png"/>
   <plugin name="phonegap-facebook-plugin" spec="https://github.com/Wizcorp/phonegap-facebook-plugin.git">
     <variable name="APP_ID" value="245875272461364"/>
     <variable name="APP_NAME" value="DareOrNotApp"/>
