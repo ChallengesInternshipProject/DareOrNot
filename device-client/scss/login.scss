@@ -15,11 +15,12 @@
 	  .content-list {@include content-list-view;}
 	   section.list {@include list-view;
 		.fa {
-		margin: 5%;
-		padding: 1%;
 		width: 15vw;
 		height: 15vw;
 		font-size: 3em;
+		display: inline-block;
+		vertical-align: top;
+		margin: 10% 1% 10% 12.5%;
 		@include radius-fa;
 		  }
 		}

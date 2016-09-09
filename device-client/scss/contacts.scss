@@ -3,15 +3,16 @@
 @import "varibals";
 
 .Contacts{@include Mine_Gray_background;
-	.bar-header{.h1 {color:#044265;}i {color:blue;}}		
-	ion-list .f{
+	.bar-header{@include background-bordernone; background-color:transparent; .h1 {color:#044265;}i {font-size: 2em;color:blue;}}		
+	ion-list {margin-top:10em;
+		.f{
 				text-align: center;
     			font-size: 1rem;
 				line-height: 5vh;
 				margin: 0 auto;		
 			}
 
-		
+		}
 		form{
 			display: inline-block;
 			width: 100%;
@@ -144,6 +145,7 @@
 									}
 			
 				.button-blue{
+					color: orange;
 					background-color:#012438;
 					width: 82%;
 					height: 8vh;
@@ -151,6 +153,7 @@
 					margin: 13% 9%;
 								}
 				article .button-block{
+						color:#fff;
 						width: 14%;
     					border-radius: 50%;
     					display: inline-block;
