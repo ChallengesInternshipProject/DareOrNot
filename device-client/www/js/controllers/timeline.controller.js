@@ -26,4 +26,7 @@ angular.module('starter.controllers')
 		if ($state.current.name === 'mydares') {
 			$scope.showBackButton = true;
 		}
+		$scope.goToDare = function(dareID){
+			$state.go('app.dare',{dareID:dareID})
+		}
 	});

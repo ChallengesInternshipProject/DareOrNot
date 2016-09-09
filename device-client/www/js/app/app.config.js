@@ -327,16 +327,19 @@ angular.module('starter').config(function (
 		})
 	
 		.state('app.dare',{
-			url : '/dare',
+			url : '/dare/:dareID',
+			params : {
+				dareID:null
+			},
 			templateUrl: 'templates/tab-single-dare.html',
-			// controller: 'A'
+			controller: 'SingeDareCtrl',
+			resolve : {
+				dare : [ 'DareService','$stateParams', function(DareService,$stateParams) {
+						return DareService.get($stateParams.dareID); 	
+					}
+				]
+			}
 		})
-
-
-
-
-
-
 
 		.state('tab', {
 			url: '/tab',

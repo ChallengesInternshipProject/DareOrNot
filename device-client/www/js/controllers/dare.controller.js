@@ -17,7 +17,7 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 	$state,
 	FileService
 ) {
-		// inital form data
+	// inital form data
 	$scope.data = {
 		title : "New Dare",
 		description : new Date(),
@@ -70,10 +70,4 @@ angular.module('starter.controllers').controller('DareCtrl', function (
 	});
 
 	
-
-		
-
-			
-
-
 });

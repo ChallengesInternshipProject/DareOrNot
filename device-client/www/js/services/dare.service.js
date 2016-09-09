@@ -2,7 +2,6 @@ angular.module('starter.services')
 	.service('DareService', function ($q, $http, $log, $ionicModal, SERVER_ADDRESS, SERVER_PORT, SOCKET_CHAT_PORT,$localStorage, $ionicLoading) {
 		var dareService = {};
 
-
 		dareService.sendDare = function(userID, dareinfo) {
 			return userID;
 		}
@@ -44,6 +43,12 @@ angular.module('starter.services')
 			
 				return result.data
 			});
+		}
+		dareService.get = function(dareID) {
+		
+			return $http.get(SERVER_ADDRESS+'/dares/get/',{params:{dareID:dareID}}).then(function(result){
+				return result.data
+			})
 		}
 		return dareService;
 	});

@@ -1,4 +1,4 @@
-<div class="TimeLineCard"> 
+<div class="TimeLineCard"  ng-click="goToDare(	dare._id)"> 
 	<div class="content">
 		<ion-slide-box >  
 			<ion-slide ng-repeat='picture in dare.pictures'>  
@@ -15,7 +15,7 @@
 		<!-- Slide to the right --> 
 		<div class="arrows-left"><i class="ion-ios-arrow-back"></i></div> 
 	 </div>
-	<div class="footer"> 
+	<div class="footer" > 
 		<span class="ng-binding"> 
 			<a class="item-avatar" href="#"> 
 				<img ng-src="../img/adam.jpg" class="profil-avatar"> 
