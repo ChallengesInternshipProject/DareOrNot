@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import "mixins";
-
 /* CSS nothifications */
 .Notifications{
 	@include Mine_user_background;
@@ -23,21 +22,53 @@
 				@include paragraf-style;
 				}
 			/* CSS imges */
-				.img{
-					@include image-style;
-
-						img{
-							@include image-square;
-						}
-
-					}
+			.img{
+				@include image-style;
+				img{
+					@include image-square;
+				}
+			}
 			ion-item.text{
 				width: 30vw;
 				height: 20vh;
-			}	
+				}	
 			}
 		}
-			.com p{	
-				 @include paragraf-comentar;
+	.com p{	
+		 @include paragraf-comentar;
+		}
+	@media screen and (min-width: $tablet-width){
+			h3, h2 {font-size: 2em;}
+			span{@include span-position-width; 
+				font-size: 1em;
 				}
-	 }
+			.list{
+				ion-item{
+					.p{font-size:1.5em;}
+					i{margin: -6%;
+					  font-size:2em;}
+				div p {width: 30%;font-size:1.5em;}
+				}
+			}
+		}
+	@media screen and (min-height: $tablet-height){
+			h3, h2 {font-size: 2em;}
+			span{@include span-position-height;
+				font-size: 1em;}
+
+			.list{
+				ion-item{
+					.p{font-size:1.5em;}
+					i{margin: -2%;
+					  font-size:2.5em;}
+					div p {width: 30%;}
+					.img{
+						img{	
+							width: 12em;
+							height: 10.5em;
+							}
+					}
+				}
+			}	
+		}
+	}

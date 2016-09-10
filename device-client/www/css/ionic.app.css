@@ -10877,8 +10877,9 @@ a.button {
     font-size: 0.8em; }
   .SideMenu .menu-left span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
@@ -10932,7 +10933,7 @@ a.button {
     .Profile .profile-info .profile-avatar {
       float: left;
       margin-left: 1vh;
-      width: 30%;
+      width: 25%;
       height: 12vh;
       border-radius: 50%;
       border: 3px solid white; }
@@ -10949,6 +10950,7 @@ a.button {
         font-size: 2vh;
         color: #ffb400; }
   .Profile .profile-info-list {
+    line-height: 1.5;
     display: block; }
     .Profile .profile-info-list .profile-menu-item {
       text-align: left;
@@ -11003,11 +11005,18 @@ a.button {
     .Profile .profile-info-list {
       margin-left: -10vw; }
       .Profile .profile-info-list i {
-        padding: 2vh 2vh 2vh 6vh; }
+        padding: 6vh 3vh 3vh 10vh; }
       .Profile .profile-info-list .profile-menu-item {
         padding-left: 15vw;
         padding-bottom: 4vh;
         font-size: 3vh; } }
+  @media screen and (min-height: 1080px) {
+    .Profile .profile-info-list {
+      line-height: 3; }
+      .Profile .profile-info-list .profile-menu-item a {
+        font-size: 2em; }
+      .Profile .profile-info-list i {
+        padding: 6vh 3vh 3vh 10vh; } }
 
 /* CSS Profil background */
 /*some helpful varibals*/
@@ -11058,8 +11067,9 @@ a.button {
     font-size: 0.8em; }
   .Activity span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
@@ -11098,7 +11108,7 @@ a.button {
         width: 100%;
         display: block;
         padding-right: 1vw;
-        font-size: 1em; }
+        font-size: 0.5em; }
       .Activity .list ion-item div {
         margin: 1%;
         padding: 1%;
@@ -11121,7 +11131,7 @@ a.button {
           width: 100%;
           display: block;
           padding-right: 1vw;
-          font-size: 1em; }
+          font-size: 0.5em; }
       .Activity .list ion-item .img {
         margin: 1%;
         padding: 1%;
@@ -11153,8 +11163,6 @@ a.button {
       margin-left: 18.5%;
       font-size: 3em;
       margin-top: -3%; }
-    .Activity hr {
-      width: 90%; }
     .Activity .item-avatar > img:first-child {
       min-width: 10em;
       min-height: 10em;
@@ -11165,19 +11173,20 @@ a.button {
       padding: 1%; }
     .Activity .list ion-item .img {
       margin-left: 5%; }
-    .Activity .list ion-item .img img {
-      width: 12em;
-      height: 10.5em; }
-    .Activity .Activity div p {
-      width: 100%;
-      font-size: 3em; }
-      .Activity .Activity div p .ion-ios-clock-outline {
-        width: 30%;
-        font-size: 4em; }
+      .Activity .list ion-item .img img {
+        width: 12em;
+        height: 10.5em; }
     .Activity .list ion-item .p {
-      width: 100%;
-      margin-left: 4.5%;
-      font-size: 3em; }
+      margin-left: 25%;
+      margin-top: -3em;
+      margin-bottom: 1em;
+      font-size: 1.5em; }
+    .Activity .list ion-item div p {
+      width: 40%;
+      font-size: 1em; }
+      .Activity .list ion-item div p i {
+        margin: -4%;
+        font-size: 2em; }
     .Activity .challenger {
       margin-left: -3em;
       margin-TOP: -3em;
@@ -11188,8 +11197,6 @@ a.button {
       margin-left: 23.5%;
       font-size: 2.5em;
       margin-top: -2%; }
-    .Activity hr {
-      width: 90%; }
     .Activity .item-avatar > img:first-child {
       min-width: 10em;
       min-height: 10em;
@@ -11202,21 +11209,20 @@ a.button {
       margin: 1%; }
     .Activity .list ion-item .img {
       margin-left: 5%; }
-    .Activity .list ion-item .img img {
-      width: 12em;
-      height: 10.5em; }
-    .Activity .Activity div p {
-      width: 100%;
-      font-size: 3em; }
-      .Activity .Activity div p .ion-ios-clock-outline {
-        width: 30%;
-        font-size: 4em; }
+      .Activity .list ion-item .img img {
+        width: 12em;
+        height: 10.5em; }
     .Activity .list ion-item .p {
-      margin-left: 0;
-      margin-top: 2em;
-      margin-bottom: 1em;
-      font-size: 3em;
-      padding: 1%; }
+      margin-left: 25%;
+      margin-top: 0em;
+      margin-bottom: 2em;
+      font-size: 1.5em; }
+    .Activity .list ion-item div p {
+      width: 40%;
+      font-size: 1em; }
+      .Activity .list ion-item div p i {
+        margin: -4%;
+        font-size: 2em; }
     .Activity .challenger {
       margin-left: 5em;
       margin-TOP: 0em;
@@ -11271,8 +11277,9 @@ a.button {
     font-size: 0.8em; }
   .Notifications span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
@@ -11307,7 +11314,7 @@ a.button {
         width: 100%;
         display: block;
         padding-right: 1vw;
-        font-size: 1em; }
+        font-size: 0.5em; }
       .Notifications .list ion-item div {
         margin: 1%;
         padding: 1%;
@@ -11344,6 +11351,38 @@ a.button {
     display: inline-block;
     white-space: normal;
     color: #fff; }
+  @media screen and (min-width: 1920px) {
+    .Notifications h3, .Notifications h2 {
+      font-size: 2em; }
+    .Notifications span {
+      margin-left: 0;
+      font-size: 1em; }
+    .Notifications .list ion-item .p {
+      font-size: 1.5em; }
+    .Notifications .list ion-item i {
+      margin: -6%;
+      font-size: 2em; }
+    .Notifications .list ion-item div p {
+      width: 30%;
+      font-size: 1.5em; } }
+  @media screen and (min-height: 1080px) {
+    .Notifications h3, .Notifications h2 {
+      font-size: 2em; }
+    .Notifications span {
+      margin-top: -1%;
+      margin-bottom: -1%;
+      margin-left: -8px;
+      font-size: 1em; }
+    .Notifications .list ion-item .p {
+      font-size: 1.5em; }
+    .Notifications .list ion-item i {
+      margin: -2%;
+      font-size: 2.5em; }
+    .Notifications .list ion-item div p {
+      width: 30%; }
+    .Notifications .list ion-item .img img {
+      width: 12em;
+      height: 10.5em; } }
 
 /* CSS All 4 friends */
 .Friends .tabs-striped.tabs-background-stable .tabs {
@@ -11510,8 +11549,9 @@ a.button {
     font-size: 0.8em; }
   .Settings span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }

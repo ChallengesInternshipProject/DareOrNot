@@ -108,16 +108,24 @@
 	@include position-style;
     display: block;
 	padding-right: 1vw;
-	font-size:1em;
+	font-size: 0.5em;
 	}
-
 @mixin span-position{		
 		float: left;
-		margin-bottom: -5%;
-		margin-left: -3.5%;
+		margin-top: -2%;
+		margin-bottom: -2%;
+		margin-left: -14px;
 		position: relative;
 		display: inline-block;
 		z-index: 10;
+		}
+@mixin span-position-width{		
+		margin-left: 0;
+		}
+@mixin span-position-height{		
+		margin-top: -1%;
+		margin-bottom: -1%;
+		margin-left: -8px;
 		}
 		
 @mixin 	i{
