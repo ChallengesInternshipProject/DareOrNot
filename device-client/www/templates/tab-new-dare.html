@@ -2,10 +2,6 @@
 
 <ion-view view-title="Ново предизвикателство" name="Ново предизвикателство">
 	<ion-content class="newdare">
-        <div class="bar bar-header">
-          <i class="ion-chevron-left" ng-click="NweDareModal.hide()"></i>
-               <h1>Създай Предизвикателство</h1>
-   	    </div>
 		<div class="list list-inset">
 				<form   enctype="multipart/form-data" ng-submit="submitDare()">
 				<!--Friends Slider-->
@@ -92,7 +88,7 @@
                 
 				<div class="row no-padding">
 						<div class="col">
-						<h3 style="margin-top: 35%;">
+						<h3 class="continue">
 							Продължителност
 						</h3>
 					</div>
@@ -147,16 +143,14 @@
 						<button type="button" class="button" ng-click="testFile()">Ckucj</button> 
 				</div> -->
 				<div class="vh challeng">
-				<ion-list>
-					<ion-radio ng-model="data.isPublic" ng-value="true" checked="checked" style="font-size:2em;text-transform: uppercase;">Публично</ion-radio>
-					<ion-radio ng-model="data.isPublic" ng-value="false" style="font-size:2em;text-transform: uppercase;">Скрито</ion-radio>
-				</ion-list>
+                <ion-list>
+					<ion-radio class="butt" ng-model="data.isPublic" ng-value="true" checked="checked">Публично</ion-radio>
+					<ion-radio class="butt" ng-model="data.isPublic" ng-value="false">Скрито</ion-radio>
+                 </ion-list>
 				</div>
 	
 				<h3 style="margin-top:2em;text-transform: uppercase;">Сподели в социалните мрежи:</h3>
-				<div class="row responsive-sm">
-					<ion-list>
-					<div class="row">
+				<div class="row responsive">
 						  <div class="col">
 						  	<button class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook"
 							style="background-color: rgb(47, 123, 189);"></button>
@@ -169,8 +163,6 @@
 						  	 <button class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus"
                       style="background-color: rgb(217, 3, 74);"></button>
 						  </div>
-					</div>
-					</ion-list>
 				</div>
 					<!--add friends button-->
 					<button  type = "button" class="button button-block" ng-click="friendsModal.show()">Invite Friends</button>

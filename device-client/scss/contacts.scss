@@ -3,7 +3,10 @@
 @import "varibals";
 
 .Contacts{@include Mine_Gray_background;
-	.bar-header{@include background-bordernone; background-color:transparent; .h1 {color:#044265;}i {font-size: 2em;color:blue;}}		
+	.bar-header{@include background-bordernone; background-color:transparent; 
+		.h1 {color:#044265;}
+		i {font-size: 2em;color:blue;}
+		}		
 	ion-list {margin-top:10em;
 		.f{
 				text-align: center;
@@ -226,7 +229,7 @@
 
 				}
 										}
-				@media screen and (min-height: $tablet-height){
+@media screen and (min-height: $tablet-height){
 					.group-location p{
 						font-size: 2.8em;
 					}
