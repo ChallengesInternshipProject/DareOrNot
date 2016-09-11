@@ -4,19 +4,15 @@
 
 /* CSS single Dare	title and arrows*/
 
-	.single{@include gray_background;
-		.height{@include height-heder; 
-				h1{left: 20%;}
-				i{right: 70%;}
-			}
-		.item{@include background-bordernone;
+.single{@include gray_background;
+	.item{@include background-bordernone;
 		label {
-				margin-top: 1em;
-				width: 83%;
-				border-color: #8dc3cd;
-				float: right;
-				}
+			margin-top: 1em;
+			width: 83%;
+			border-color: #8dc3cd;
+			float: right;
 			}
+		}
 	/*timeline settings */
 			.TimeLineCard { 
 				.navigation{
@@ -64,12 +60,35 @@
 			.button-block{@include block-single;}
 		}
 		
+@media only screen and (device-width: 768px) {	
+			TimeLineCard{min-height: 20em;
+						max-height: 26em;
+					.content {min-height: 15em;
+							  img{height: 15em;}
+							  }
+					.navigation{font-size:1.1em;
+						.arrows-right{margin-top: -20%;}
+						.arrows-left{margin-top: -20%;}
+						.title{
+							top: -8em;
+							left: -10em;
+						}
+					}
+					.footer{@include footer-style-ipad;
+						span {width: 50%;}
+							.ng-binding{
+									.profil-avatar{
+											margin-top: -8%;
+											margin-left: 0%;
+											min-width: 10em;
+											min-height: 10em;
+										}	
+								}	
+						}
+				}	
+		}
 @media screen and (min-width: $tablet-width){
 	.single{@include gray_background;
-		.height{font-size: 2em;
-				h1{font-size: 4.4em;}
-				i{font-size: 4.4em;}
-			}
 		.item{@include background-bordernone;
 		label {
 				margin-top: 1em;
@@ -122,10 +141,6 @@
 @media screen and (min-height: $tablet-height){
 		
 		.single{@include gray_background;
-		.height{font-size: 2em;
-				h1{font-size: 2.4em;}
-				i{font-size: 2.4em;}
-			}
 		.item{@include background-bordernone;
 		label {
 				margin-top: 1em;
