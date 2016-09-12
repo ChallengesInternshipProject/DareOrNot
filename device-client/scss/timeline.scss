@@ -58,13 +58,12 @@
 				}
 			.fa{@include circle-border;}
 			.button-block{@include block-single;}
-		}
-		
+
 @media only screen and (device-width: 768px) {	
 			TimeLineCard{min-height: 20em;
-						max-height: 26em;
-					.content {min-height: 15em;
-							  img{height: 15em;}
+						max-height: 30em;
+					.content {min-height: 25em;
+							  img{height: 20em;}
 							  }
 					.navigation{font-size:1.1em;
 						.arrows-right{margin-top: -20%;}
@@ -74,7 +73,8 @@
 							left: -10em;
 						}
 					}
-					.footer{@include footer-style-ipad;
+					.footer{@include footer-style-ipad;   
+							margin-top: 4% !important;
 						span {width: 50%;}
 							.ng-binding{
 									.profil-avatar{
@@ -83,7 +83,14 @@
 											min-width: 10em;
 											min-height: 10em;
 										}	
-								}	
+								}
+							.googleMap {
+									width: 58%;
+									display: inline;
+									height: 24.6vh;
+									float: right;
+									margin-top: -33%;
+								}
 						}
 				}	
 		}
@@ -174,3 +181,5 @@
 			}
 		}
 	}
+			}
+		
