@@ -60,9 +60,9 @@
 			.button-block{@include block-single;}
 
 @media only screen and (device-width: 768px) {	
-			TimeLineCard{min-height: 20em;
-						max-height: 30em;
-					.content {min-height: 25em;
+			.TimeLineCard{min-height: 20em;
+						  max-height: 30em;
+					.content {min-height: 20em;
 							  img{height: 20em;}
 							  }
 					.navigation{font-size:1.1em;
@@ -70,13 +70,17 @@
 						.arrows-left{margin-top: -20%;}
 						.title{
 							top: -8em;
-							left: -10em;
+							font-size: 2em;
+							left: 1em;
 						}
 					}
 					.footer{@include footer-style-ipad;   
 							margin-top: 4% !important;
 						span {width: 50%;}
 							.ng-binding{
+									font-size: 1em;
+									margin-left: 33%;
+									margin-top: 0%;
 									.profil-avatar{
 											margin-top: -8%;
 											margin-left: 0%;
@@ -84,14 +88,26 @@
 											min-height: 10em;
 										}	
 								}
-							.googleMap {
-									width: 58%;
-									display: inline;
-									height: 24.6vh;
-									float: right;
-									margin-top: -33%;
-								}
+							img {
+								margin-top: -30%;
+								margin-left: 0%;
+								min-width: 10em;
+								min-height: 10em;
+							}
+						.info {
+								width: 25%;
+								height: 4em;
+								font-size: 0.7em;
+								margin-right: -5%;
+							}
 						}
+					.googleMap {
+								width: 58%;
+								display: inline;
+								height: 24.6vh;
+								float: right;
+								margin-top: -33%;
+								}
 				}	
 		}
 @media screen and (min-width: $tablet-width){
