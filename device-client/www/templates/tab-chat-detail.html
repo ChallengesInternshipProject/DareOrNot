@@ -38,14 +38,14 @@
 
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
-
+ <i class="ion-ios-reverse-camera-outline" style=""></i>
     <label class="item-input-wrapper input-form-submit">
       <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="message" on-focus="inputUp()" on-blur="inputDown()" ng-submit="emit(message)" />
     </label>
 
     <!--don't delete the button it is hidden on purpose-->
     <button ng-model="deleted" class="button button-clear button-form-submit" ng-click="emit(message)">
-     <i class="ion-paperclip" style=""></i>
+     <i class="ion-paperclip" style=" color: orange;"></i>
     </button>
 
   </ion-footer-bar>
