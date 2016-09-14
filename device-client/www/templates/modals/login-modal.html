@@ -1,6 +1,6 @@
-<ion-modal-view>
- <ion-content class="login-view">
- <div class="content-list">
+<ion-modal-view class="login-view">
+ <ion-content>
+ <ion-slide class="content-list">
     <section class="list">
       <article class="into-login"> 
 		<div class="logo"></div>
@@ -34,11 +34,10 @@
          <button class="fa ion-social-googleplus button button-block " ng-click="loginWithGoogle()" style="background-color: rgb(217, 3, 74);"></button>
      </article>
      </section>
-   		<aside class="regis" style="margin-top: 20%;">
+   		<aside class="regis" style="margin:5%;">
         Нямате акаунт ? <a class="reg" ng-href="" ng-click="callRegisterModal()" >
         <span class="input-label">Регистрирайте се</span></a>
       </aside>
-
-   </div>
+</ion-slide>
  </ion-content>
 </ion-modal-view>

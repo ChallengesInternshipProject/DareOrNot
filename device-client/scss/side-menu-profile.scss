@@ -1,6 +1,5 @@
 @charset "utf-8";
 @import "mixins";
-
 /* CSS for Profile view */
 .Profile {
 	@include Mine_user_background;
@@ -17,7 +16,7 @@
 			float: left;
 			margin-left: 1vh;
 			// display: inline-block;
-			width:30%;
+			width:25%;
 			height: 12vh;
 			border-radius: 50%;
 			border: 3px solid white;
@@ -43,6 +42,7 @@
 		}
 	}
 	.profile-info-list {
+		line-height: 1.5;
 		display: block;
 		.profile-menu-item {
 			text-align: left;
@@ -92,7 +92,7 @@
 		}
 	}
 	// Tablet 1920x1080
-	@media screen and (min-width: 1920px) {
+@media screen and (min-width: $tablet-width){
 		.profile-info {
 			display: inline-block;
 			padding-top: -10vw;
@@ -123,12 +123,28 @@
 			i {
 				// width: 40px;
 				// height: 3vh;
-				padding: 2vh 2vh 2vh 6vh;
+				padding: 6vh 3vh 3vh 10vh;
 			}
 			.profile-menu-item {
 				padding-left: 15vw;
 				padding-bottom: 4vh;
 				font-size: 3vh;
+			}
+		}
+	}
+	// Tablet 1080x1920
+@media screen and (min-height: $tablet-height){
+	.profile-info-list {
+		line-height: 3;
+		.profile-menu-item {
+			a {
+				font-size: 2em;
+				}
+			}
+			i {
+				// width: 40px;
+				// height: 3vh;
+				padding: 6vh 3vh 3vh 10vh;
 			}
 		}
 	}

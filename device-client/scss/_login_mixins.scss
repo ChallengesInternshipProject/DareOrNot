@@ -8,6 +8,7 @@
 @mixin content-list-login{ 
 	margin:0;
 	padding:0;
+	min-height: 110vw;
     background-color: #012438;
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
@@ -27,7 +28,7 @@
   box-sizing: border-box;
 	}
 @mixin list-view{
-	min-height: 35em;
+	min-height: 40em;
     padding: 0%;
     margin: 0%;
 	position: relative;

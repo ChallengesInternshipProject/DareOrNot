@@ -8,21 +8,21 @@
 //background and body elements style//
 
 @mixin Mine_user_background{
+			@include background-settings;
 			 background-image: url(../img/BG.png);
-			 background-repeat: no-repeat;
-			 background-position: center;
   			 background-color: #012438;
-  			 background-size: 100% 100%;
-  			 text-align: center;
-  			 display: block;
+
 			}
+@mixin search-view{
+			@include background-settings;
+			 background-image: url(../img/Search.png);
+  			 background-color: #066886;
+			 }
 @mixin Mine_Gray_background{
+			@include background-settings;
 			background-image:none;
-   			background:#e8edf0;
-			background-size: 100% 100%;
+   			background:#e8edf0; /*gray*/
    			color:#03b2d1;
-			text-align: center;
-			display: block;
    			line-height: 1%;
 			}
 /*heder side- menue*/
@@ -33,7 +33,7 @@
 				h1{position: relative;
 				    display: inline-block;
 					top: 30%;
-					color: #01cfe4;
+					color: #01cfe4; /*blue*/
 					font-size: 1.4em;
 				}
 				i{font-size:2em;
@@ -45,7 +45,7 @@
 /*list*/
 @mixin list-style{  @include position-style;
 					@include background-bordernone;
-					color: #01cfe4;
+					color: #01cfe4; /*blue*/
 					display: block;
 					width: 98%;
 					position: relative;
@@ -65,7 +65,7 @@
 /*Paragraf*/
 
 @mixin paragraf-style{
-	color: #01cfe4;
+	color: #01cfe4; /*blue*/
 	@include position-style;
 	margin-bottom: 1vh;
 	display: inline-flex;
@@ -108,22 +108,30 @@
 	@include position-style;
     display: block;
 	padding-right: 1vw;
-	font-size:1em;
+	font-size: 0.5em;
 	}
-
 @mixin span-position{		
 		float: left;
-		margin-bottom: -5%;
-		margin-left: -3.5%;
+		margin-top: -2%;
+		margin-bottom: -2%;
+		margin-left: -14px;
 		position: relative;
 		display: inline-block;
 		z-index: 10;
+		}
+@mixin span-position-width{		
+		margin-left: 0;
+		}
+@mixin span-position-height{		
+		margin-top: -1%;
+		margin-bottom: -1%;
+		margin-left: -8px;
 		}
 		
 @mixin 	i{
 		padding: 7px;
 		@include radius-fa;
-		background: #01cfe4;
+		background: orangae;
 		font-size: 1em;
 		margin: 0em;
 		}

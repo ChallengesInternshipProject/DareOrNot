@@ -3,10 +3,6 @@
 
 <ion-view view-title="Ново предизвикателство" name="Ново предизвикателство">
 	<ion-content class="newdare">
-        <div class="bar bar-header">
-          <i class="ion-chevron-left" ng-click="NweDareModal.hide()"></i>
-               <h1>Създай Предизвикателство</h1>
-   	    </div>
 		<div class="list list-inset">
 				<form   enctype="multipart/form-data" ng-submit="submitDare()">
 					<label class="vh item item-input">
@@ -16,13 +12,12 @@
 						<span class="pen"><i class="ion-edit"></i></span>
 						<textarea placeholder="Текст описващ предизвикателството" rows="8" cols="10" ng-model="data.description" value = "Some Description here"></textarea>
 					</label>
-					<!--<leaflet defaults="map.defaults" center="mapCenter" markers="markers" class="leafletDareMap"></leaflet>-->
 					<br>
-					<h3>Избери предизвикателство</h3>
+						<h3>Избери предизвикателство</h3>
 					<br>
 					<div class="challeng">
 						<ion-list>
-							<ion-radio  name="category" ng-repeat="category in categories" ng-model="data.category" ng-value="category.id">
+							<ion-radio  ng-repeat="category in categories" ng-model="data.category" ng-value="category.id">
 							{{category.title}}
 							</ion-radio>
 						</ion-list>
@@ -36,7 +31,7 @@
 						<div class="col">
 								<div class="col">
 									<div class="item" ion-datetime-picker ng-model="data.startDate">
-											От: {{data.startDate| date: "yyyy-MM-dd H:mm:ss"}}
+											От: {{data.startDate| date: "yyyy-MM-dd H:mm:ss"}}a
 									</div >
 								</div>
 								<div class="col">
@@ -65,7 +60,6 @@
 						</label>
 					</div>
 				</div>
-	
 				<!-- CHANGING THIS STRUCTURE WILL PREVENT FILE UPLOAD TO WORK-->
 				<div flow-init
 							flow-name="uploader.flow"
@@ -80,32 +74,41 @@
 					</div>
 				</div>
 				<!-- END OF STRUCTURE -->
-				
 				<div class="vh challeng">
-				<ion-list>
-					<ion-radio name="isPublic" ng-model="data.isPublic" ng-value="true" checked="checked" style="font-size:2em;text-transform: uppercase;">Публично</ion-radio>
-					<ion-radio name="isPublic" ng-model="data.isPublic" ng-value="false" style="font-size:2em;text-transform: uppercase;">Скрито</ion-radio>
-				</ion-list>
+					<ion-list>
+						<ion-radio class="butt" ng-model="data.isPublic" ng-value="true" checked="checked">Публично</ion-radio>
+						<ion-radio class="butt" ng-model="data.isPublic" ng-value="false">Скрито</ion-radio>
+					</ion-list>
 				</div>
 				<h3 style="margin-top:2em;text-transform: uppercase;">Сподели в социалните мрежи:</h3>
+				<div class="row responsive">
+					<div class="col">
+						<button class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook" style="background-color: rgb(47, 123, 189);"></button>
+					</div>
+					<div class="col">
+						<button class="fa ion-social-twitter button button-block" ng-model="data.share.twitter" style="background-color: rgb(0, 191, 243);"></button>
+					</div>
+					<div class="col">
+						<button class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus" style="background-color: rgb(217, 3, 74);"></button>
+					</div>
+				</div>
 				<div class="row responsive-sm">
 					<ion-list>
 						<div class="row">
-									<div class="col">
-										<button type="button" ng-class="{'active' : data.socialNetworks.facebook == true }" ng-click="toggleSocial('facebook')" class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook" style="background-color: rgb(47, 123, 189);"></button>
-									</div>
-									<div class="col">
-										<button type="button" ng-class="{'active' : data.socialNetworks.twitter == true }"  ng-click="toggleSocial('twitter')" class="fa ion-social-twitter button button-block" ng-model="data.share.twitter" style="background-color: rgb(0, 191, 243);"></button>
-									</div>
-									<div class="col">
-											<button type="button"  ng-class="{'active' : data.socialNetworks.googlePlus == true }" ng-click="toggleSocial('googlePlus')" class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus" style="background-color: rgb(217, 3, 74);"></button>
-									</div>
+							<div class="col">
+								<button type="button" ng-class="{'active' : data.socialNetworks.facebook == true }" ng-click="toggleSocial('facebook')" class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook" style="background-color: rgb(47, 123, 189);"></button>
+							</div>
+							<div class="col">
+								<button type="button" ng-class="{'active' : data.socialNetworks.twitter == true }"  ng-click="toggleSocial('twitter')" class="fa ion-social-twitter button button-block" ng-model="data.share.twitter" style="background-color: rgb(0, 191, 243);"></button>
+							</div>
+							<div class="col">
+									<button type="button"  ng-class="{'active' : data.socialNetworks.googlePlus == true }" ng-click="toggleSocial('googlePlus')" class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus" style="background-color: rgb(217, 3, 74);"></button>
+							</div>
 						</div>
 					</ion-list>
 				</div>
-					<!--add friends button-->
-					<button  type = "button" class="button button-block" ng-click="friendsModal.show()">Покани Приятел</button>
-
+				<!--add friends button-->
+				<button  type = "button" class="button button-block" ng-click="friendsModal.show()">Покани Приятел</button>
 				<button class="button button-block button-balanced" type="submit" style="font-size:2em;text-transform: uppercase;background: #17283a;color:#fff;">Създай</button>
 			</form>
 		</div>

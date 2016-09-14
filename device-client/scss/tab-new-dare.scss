@@ -5,14 +5,10 @@
 /* CSS Profil new dare */
 	.newdare{@include Mine_Gray_background;	
 			 color:#16b8d4;
-	.bar-header{@include background-bordernone; 
-				margin-top: -15%;
-				h1 {font-size: 1.2em;}
-		}
 	 h1, h3 {color:#16b8d4;}
-	 .list-inset{ margin-top:15%;}
+	 .continue{margin-top: 30%;}
 	 /*category challenges */
-	div .challeng ion-list .list {@include position-style;
+	div .challeng .list {@include position-style;
 								  display: inline-block;
 								  font-size:1em;
 								 .item{	
@@ -26,39 +22,47 @@
 										:nth-child(1) { background: #3b6783;
 														color: #fff;
 														width: 100%;
-														font-size: 0.7em;
+														font-size:0.7em;
 														text-align: center;
-														/* margin-top: 1em; */
-														padding-top: 20%;
-														padding-bottom: 5%;
+														margin-top: 1%;
+														padding-top: 10%;
+														padding-bottom: 10%;
 														padding-left: 1%;
 														padding-right: 1%;
 														word-break: keep-all;
 														}
-										:nth-child(2) {
-														background: #17283a;											
+										:nth-child(2) {									
 														color:#fff;
 														width:100%;
 													}
 									}
 								}
+		
 	.list-inset{ width: 100%; background: transparent;}
-		label .item{
-					margin-top: 5%;
-				}
+		label .item{margin-top:5%;	}
 	.vh{margin-top: 1vh;
-	    width: 95%;
-		height: 3em;
-		border-color: #8dc3cd;}
-	
+	    width: 95%;		
+		min-height: 3em;
+		border-color: #8dc3cd;
+		font-size:1.5em;
+		.butt{
+			width: 50%;
+			margin: 1%;
+			font-size:1.5em;
+			text-transform:uppercase;
+			}
+	}
+	.responsive{ display:inline;
+		.col{width:30%; display:inline;}
+		}
 	.la{text-align: left;}	
 	.fa {
-	margin: 5%;
-	padding: 1%;
-    width: 10vw !important;
-    height: 10vw;
-	font-size: 3em;
-	@include radius-fa;}
+		margin: 5%;
+		padding: 1%;
+		width: 10vw !important;
+		height: 10vw;
+		font-size: 3em;
+		@include radius-fa;}
 	 /* WebKit browsers */
 	::-webkit-input-placeholder { 
 								color:#16b8d4;
@@ -69,7 +73,8 @@
 			i{color:orange;
 			-webkit-transform: scale(-1, 1);}
 			}
-	 	.info{font-size: 0.5em;
+	 	.info{
+			font-size: 0.5em;
 			width: 10%;
 			height: 100%;
 			left: -1.2em;
@@ -78,14 +83,15 @@
 			font-size: 3em;}
 		}
  /* upload photo */
-  .fileContainer {
-    overflow: hidden;
-    position: relative;
-  }
 
   /* Example stylistic flourishes */
 
   .fileContainer {
+		margin-left: 30%;  
+	    margin-top: 10%;
+		margin-bottom: 10%;
+		overflow: hidden;
+		position: relative;
 		font-size: 2em;
 		box-sizing: border-box;
 		i{
@@ -97,7 +103,20 @@
 		 border-radius:50%;
 		 display: inline-block;
 		}
-	input[type="file"] {overflow: hidden;
-    position: relative;}
+	input[type="file"] {
+		    display: none;
+			overflow: hidden;
+			position: relative;
+			}
+		}
+@media screen and (min-height: $tablet-height){
+		.responsive{ display:inline;
+		.col{width:25%; display:inline-block;}
+		}
+	 .fileContainer {	
+			margin-left: 40%;
+			position: relative;
+			}
+		.continue{margin-top: 18%;}
+		}
 	}
-}
