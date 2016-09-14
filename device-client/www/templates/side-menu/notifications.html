@@ -1,83 +1,91 @@
-
+<div ng-include="'templates/static/back-button.html'" ></div>
 <ion-view>
-    <ion-content class="Notifications">
-    <div class="height">
-               <h1>Известия</h1>
-        <i class="ion-chevron-left" ng-click="NotoficationsModal.hide()"></i>
-    </div>
-  
-    <ion-list>
-      <span><img src="img/comment2.png" style="width: 80%;"></span>
-      <ion-item class="item item-avatar">
-        <div>
-        <h2>Петър Георгиев</h2>
-         <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
-         </div>
-        <p class="p">Наблюдава 5 ваши предизвикателства</p>
-       <div class="img">
-        <a href="#"><img src="img/flower.jpg"></a>
-        <a href="#"><img src="img/orange.jpg"></a>
-        <a href="#"><img src="img/roses.jpg"></a>
-       </div>
-      </ion-item>
+		<ion-content class="Notifications has-header">
+		<div class="height">
+			<h1>Известия</h1>
+		</div>
+	
+		<ion-list>
+			<div ng-repeat="notification in notifications">
+				<span><img src="img/comment2.png" style="width: 80%;"></span>
+				<ion-item class="item item-avatar">
+					<div>
+						<h2>{{notification.sender.name ? notification.sender.name : notification.sender.email}}</h2>
+					 	<p>
+					 		<i class="ion-ios-clock-outline"></i>
+					 		<span am-time-ago="notification.createdOn"></span>
+					 	</p>
+					 </div>
+					<p class="p">
+						{{notification.message}} 
+						<button ng-if="notification.refObject === 'Friendship Request'" type='button ' class ="button button-calm button-small" ng-click = "acceptFriendship	(notification.receiver._id, notification.sender._id)" >Приеми</button>
+					</p>
+					 <div class="img" ng-if="notification.refObject == 'dare' " ng-click="goToDare(notification.refObjectID._id)">
+					 	{{notification.refObjectID.title}}
+					 	<br>
+						<img ng-repeat='picture in notification.refObjectID.pictures' ng-src='{{picture.fileString}}' />
+					 </div>
+				</ion-item>
+			</div>
+			
+<!-- 
+			<span><img src="img/comment2.png" style="width: 80%;"></span>
+			<ion-item class="item item-avatar">
+				<div>
+				<h2>Мария Минчева</h2>
+				<p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
+				</div>
+				<p class="p">Ви последва</p>
 
-	<span><img src="img/comment2.png" style="width: 80%;"></span>
-      <ion-item class="item item-avatar">
-        <div>
-        <h2>Мария Минчева</h2>
-        <p><i class="ion-ios-clock-outline"></i>Преди 15 минути</p>
-        </div>
-        <p class="p">Ви последва</p>
-
-      </ion-item>
+			</ion-item>
 
 	 <span><img src="img/comment2.png" style="width: 80%;"></span>
-      <ion-item class="item item-avatar">
+			<ion-item class="item item-avatar">
 
-        <div>
-        <h2>Станислав Мартинов</h2>
-         <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
-         </div>
-        <p  class="p">Коментира</p>
+				<div>
+				<h2>Станислав Мартинов</h2>
+				 <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
+				 </div>
+				<p  class="p">Коментира</p>
 
-     </ion-item>
+		 </ion-item>
 
-      <ion-item class="com"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem Ipsum</p></ion-item>
+			<ion-item class="com"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem Ipsum</p></ion-item>
 
 	<span><img src="img/add.png" style="width: 80%;"></span>
-      <ion-item class="item item-avatar">
+			<ion-item class="item item-avatar">
 
-        <div>
-        <h2>Мария Минчева</h2>
-        <p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
-        </div>
-        <p class="p">Наблюдава 3 ваши преизвикателства</p>
+				<div>
+				<h2>Мария Минчева</h2>
+				<p><i class="ion-ios-clock-outline"></i>Преди 34 минути</p>
+				</div>
+				<p class="p">Наблюдава 3 ваши преизвикателства</p>
 		<div class="img">
-        <a href="#"><img src="img/roses.jpg"></a>
-        <a href="#"><img src="img/orange.jpg"></a>
-        <a href="#"><img src="img/flower.jpg"></a>
-        <a href="#"><img src="img/orange.jpg"></a>
-        <a href="#"><img src="img/roses.jpg"></a>
-    
-        </div>
-      </ion-item>
-	  <span><img src="img/comment2.png" style="width: 80%;"></span>
-      <ion-item class="item item-avatar">
-        <div>
-        <h2>Петър Георгиев</h2>
-         <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
-         </div>
-        <p class="p">Ви последва</p>
-      </ion-item>
-      
-      <span><img src="img/add.png" style="width: 80%;"></span>
-      <ion-item class="item item-avatar">
-        <div>
-        <h2>Петър Георгиев</h2>
-         <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
-         </div>
-        <p class="p">Ви последва</p>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+				<a href="#"><img src="img/roses.jpg"></a>
+				<a href="#"><img src="img/orange.jpg"></a>
+				<a href="#"><img src="img/flower.jpg"></a>
+				<a href="#"><img src="img/orange.jpg"></a>
+				<a href="#"><img src="img/roses.jpg"></a>
+		
+				</div>
+			</ion-item>
+		<span><img src="img/comment2.png" style="width: 80%;"></span>
+			<ion-item class="item item-avatar">
+				<div>
+				<h2>Петър Георгиев</h2>
+				 <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
+				 </div>
+				<p class="p">Ви последва</p>
+			</ion-item>
+			
+			<span><img src="img/add.png" style="width: 80%;"></span>
+			<ion-item class="item item-avatar">
+				<div>
+				<h2>Петър Георгиев</h2>
+				 <p><i class="ion-ios-clock-outline"></i>Преди 52 минути</p>
+				 </div>
+				<p class="p">Ви последва</p>
+			</ion-item>
+		</ion-list> -->
+	</ion-content>
 </ion-view>
