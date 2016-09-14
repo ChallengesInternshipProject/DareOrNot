@@ -17,3 +17,10 @@
 		border-radius: 50%;
 		display: inline-block;
 		}
+@mixin background-settings{
+  			 background-size: 100% 100%;
+  			 text-align: center;
+  			 display: block;
+			 background-repeat: no-repeat;
+			 background-position: center;
+			 }

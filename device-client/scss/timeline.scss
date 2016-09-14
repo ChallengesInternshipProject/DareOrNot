@@ -4,19 +4,15 @@
 
 /* CSS single Dare	title and arrows*/
 
-	.single{@include gray_background;
-		.height{@include height-heder; 
-				h1{left: 20%;}
-				i{right: 70%;}
-			}
-		.item{@include background-bordernone;
+.single{@include gray_background;
+	.item{@include background-bordernone;
 		label {
-				margin-top: 1em;
-				width: 83%;
-				border-color: #8dc3cd;
-				float: right;
-				}
+			margin-top: 1em;
+			width: 83%;
+			border-color: #8dc3cd;
+			float: right;
 			}
+		}
 	/*timeline settings */
 			.TimeLineCard { 
 				.navigation{
@@ -62,14 +58,60 @@
 				}
 			.fa{@include circle-border;}
 			.button-block{@include block-single;}
+
+@media only screen and (device-width: 768px) {	
+			.TimeLineCard{min-height: 20em;
+						  max-height: 30em;
+					.content {min-height: 20em;
+							  img{height: 20em;}
+							  }
+					.navigation{font-size:1.1em;
+						.arrows-right{margin-top: -20%;}
+						.arrows-left{margin-top: -20%;}
+						.title{
+							top: -8em;
+							font-size: 2em;
+							left: 1em;
+						}
+					}
+					.footer{@include footer-style-ipad;   
+							margin-top: 4% !important;
+						span {width: 50%;}
+							.ng-binding{
+									font-size: 1em;
+									margin-left: 33%;
+									margin-top: 0%;
+									.profil-avatar{
+											margin-top: -8%;
+											margin-left: 0%;
+											min-width: 10em;
+											min-height: 10em;
+										}	
+								}
+							img {
+								margin-top: -30%;
+								margin-left: 0%;
+								min-width: 10em;
+								min-height: 10em;
+							}
+						.info {
+								width: 25%;
+								height: 4em;
+								font-size: 0.7em;
+								margin-right: -5%;
+							}
+						}
+					.googleMap {
+								width: 58%;
+								display: inline;
+								height: 24.6vh;
+								float: right;
+								margin-top: -33%;
+								}
+				}	
 		}
-		
 @media screen and (min-width: $tablet-width){
 	.single{@include gray_background;
-		.height{font-size: 2em;
-				h1{font-size: 4.4em;}
-				i{font-size: 4.4em;}
-			}
 		.item{@include background-bordernone;
 		label {
 				margin-top: 1em;
@@ -122,10 +164,6 @@
 @media screen and (min-height: $tablet-height){
 		
 		.single{@include gray_background;
-		.height{font-size: 2em;
-				h1{font-size: 2.4em;}
-				i{font-size: 2.4em;}
-			}
 		.item{@include background-bordernone;
 		label {
 				margin-top: 1em;
@@ -159,3 +197,5 @@
 			}
 		}
 	}
+			}
+		

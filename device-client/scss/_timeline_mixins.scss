@@ -99,6 +99,12 @@
 					min-width: 5em;
 					min-height: 5em;
 					}
+@mixin profil-avatar-ipad{
+					margin-top: -10%;
+					margin-left: -4%;
+					min-width: 5em;
+					min-height: 5em;
+					}					
 @mixin profil-avatar-width{
 					margin-top: -2%;
 					margin-left: 1%;
@@ -138,6 +144,12 @@
 		width:60%;
 		display: block;
 		}
+@mixin footer-style-ipad{
+	margin-top: -1% !important;
+    margin-left: 0%;
+    min-width: 6em;
+    min-height: 6em;
+}
 @mixin img-single{
 			margin-top: -15%;
 			margin-left: -6%;

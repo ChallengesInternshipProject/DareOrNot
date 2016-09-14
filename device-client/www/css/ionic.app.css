@@ -10034,6 +10034,7 @@ a.button {
 .login-view .content-list {
   margin: 0;
   padding: 0;
+  min-height: 110vw;
   background-color: #012438;
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
@@ -10065,7 +10066,7 @@ a.button {
     background: transparent;
     box-sizing: border-box; }
   .login-view .content-list section.list {
-    min-height: 35em;
+    min-height: 40em;
     padding: 0%;
     margin: 0%;
     position: relative;
@@ -10075,15 +10076,15 @@ a.button {
     background: transparent;
     box-sizing: border-box; }
     .login-view .content-list section.list .fa {
-      width: 15vw;
-      height: 15vw;
-      font-size: 3em;
-      display: inline-block;
+      width: 10vw;
+      height: 10vw;
+      font-size: 2em;
       vertical-align: top;
       margin: 10% 1% 10% 12.5%;
       color: #fff;
       border-radius: 50%;
-      display: inline-block; }
+      display: inline-block;
+      float: none; }
   .login-view .content-list .logo {
     padding: 2%;
     margin: 2%;
@@ -10179,7 +10180,7 @@ a.button {
     color: #fff;
     padding: 1%;
     margin: 1%;
-    margin-top: 10%;
+    margin-top: -15%;
     position: relative;
     text-align: center;
     font-size: 1.4em;
@@ -10190,8 +10191,6 @@ a.button {
     color: #fff;
     margin: 0;
     display: inline-flex; }
-  .login-view .content-list ion-slide-box {
-    height: 100vh !important; }
   .login-view .content-list button.button-TR {
     background: transparent none repeat scroll 0% 0%;
     font-size: 100%;
@@ -10222,135 +10221,13 @@ a.button {
       font-size: 2em;
       padding: 1em; }
 
-@media screen and (min-width: 1920px) {
-  .login-view .content-list {
-    line-height: 1.0;
-    /*buttons size */ }
-    .login-view .content-list section.list .fa {
-      width: 6vw;
-      height: 6vw;
-      font-size: 6em;
-      margin: 4%; }
-  /* LOGO */
-  .logo {
-    padding: 1%;
-    margin: 1%;
-    min-height: 10vh;
-    background-size: 10% 100%; }
-  .ion-ios-email-outline, .ion-ios-locked-outline, .ion-iphone, .ion-android-person, .ion-transgender,
-  .ion-ios-wineglass-outline, .ion-ios-camera-outline,
-  .ion-arrow-right-c, .ion-arrow-left-c, .ion-ios-camera-outline {
-    font-size: 2.5em; }
-  /*ENTER BUTTON*/
-  button.button.button-calm {
-    margin: 1%; }
-  /*FORGET THE PASS*/
-  .forget {
-    margin: 3%;
-    font-size: 1em; }
-  /*UNDERLINE OR */
-  div.container h1 {
-    font-size: 1em;
-    color: #fff;
-    padding: 10px; }
-  div.container h1:before,
-  div.container h1:after {
-    height: 2px;
-    top: 50%;
-    width: 500%; }
-  div.container h1:before {
-    right: 100%; }
-  div.container h1:after {
-    left: 100%; }
-  /*something like footer */
-  .regis {
-    margin-top: 5%;
-    font-size: 1em; }
-  /* bottom nav */
-  div.slider-pager {
-    visibility: hidden; }
-  ion-slide-box {
-    height: 50vh !important; }
-  /*NEXT / BACK BUUTON*/
-  button.button-TR {
-    width: 30%;
-    font-size: 4em; }
-  /* upload photo */
-  .fileContainer [type=file] {
-    font-size: 2em; }
-  /* Example stylistic flourishes */
-  .fileContainer {
-    font-size: 2em; }
-    .fileContainer i {
-      border-radius: 50%;
-      font-size: 2em;
-      padding: 1em; } }
-
 @media screen and (min-height: 1080px) {
-  .login-view .content-list {
-    min-height: 60vh;
-    font-size: 1.5em;
-    /*circle buttons style*/
-    /* LOGO */
-    /*ENTER BUTTON*/
-    /*FORGET THE PASS*/
-    /*UNDERLINE OR */
-    /*something like footer */
-    /*NEXT / BACK BUUTON*/
-    /* upload photo */
-    /* Example stylistic flourishes */ }
-    .login-view .content-list .content-list .regis {
-      margin-top: 25%; }
-    .login-view .content-list section.list .fa {
-      width: 8vw;
-      height: 8vw;
-      font-size: 2.5em; }
-    .login-view .content-list .logo {
-      padding: 1%;
-      margin: 1%;
-      background-size: 40% 50%;
-      min-height: 17vh; }
-    .login-view .content-list .ion-ios-email-outline, .login-view .content-list .ion-ios-locked-outline, .login-view .content-list .ion-iphone, .login-view .content-list .ion-android-person, .login-view .content-list .ion-transgender,
-    .login-view .content-list .ion-ios-wineglass-outline, .login-view .content-list .ion-ios-camera-outline,
-    .login-view .content-list .ion-arrow-right-c, .login-view .content-list .ion-arrow-left-c, .login-view .content-list .ion-ios-camera-outline {
-      font-size: 2.5em; }
-    .login-view .content-list button.button.button-calm {
-      margin-top: 7%;
-      margin-bottom: 7%; }
-    .login-view .content-list .forget {
-      margin: 3%;
-      font-size: 1em; }
-    .login-view .content-list div.container h1 {
-      font-size: 1em;
-      padding: 1em; }
-    .login-view .content-list div.container h1:before,
-    .login-view .content-list div.container h1:after {
-      height: 2px; }
-    .login-view .content-list div.container h1:before {
-      right: 100%; }
-    .login-view .content-list div.container h1:after {
-      left: 100%; }
-    .login-view .content-list div.container {
-      width: 80%;
-      left: 10%; }
-    .login-view .content-list .regis {
-      padding: 1%;
-      margin: 1%;
-      margin-top: 10%;
-      font-size: 1.4em; }
-    .login-view .content-list a.reg {
-      margin: 0; }
-    .login-view .content-list button.button-TR {
-      width: 30%;
-      font-size: 4em; }
-    .login-view .content-list .fileContainer [type=file] {
-      font-size: 2em; }
-    .login-view .content-list .fileContainer {
-      font-size: 2em; }
-      .login-view .content-list .fileContainer i {
-        border-radius: 50%;
-        font-size: 2em;
-        padding: 1em; } }
+  .login-view .content-list section .list {
+    min-height: 70em; }
+    .login-view .content-list section .list .fa {
+      width: 10vw;
+      height: 10vw;
+      font-size: 6em; } }
 
 /* CSS list for all pages at user profil*/
 .list {
@@ -10744,23 +10621,17 @@ a.button {
   /* WebKit browsers */
   /* upload photo */
   /* Example stylistic flourishes */ }
-  .newdare .bar-header {
-    background: transparent;
-    border: none;
-    margin-top: -15%; }
-    .newdare .bar-header h1 {
-      font-size: 1.2em; }
   .newdare h1, .newdare h3 {
     color: #16b8d4; }
-  .newdare .list-inset {
-    margin-top: 15%; }
-  .newdare div .challeng ion-list .list {
+  .newdare .continue {
+    margin-top: 30%; }
+  .newdare div .challeng .list {
     margin: 1%;
     padding: 1%;
     width: 100%;
     display: inline-block;
     font-size: 1em; }
-    .newdare div .challeng ion-list .list .item {
+    .newdare div .challeng .list .item {
       display: inline-block;
       width: 45%;
       font-size: 1em;
@@ -10768,20 +10639,19 @@ a.button {
       border: none;
       text-align: center;
       background: transparent; }
-      .newdare div .challeng ion-list .list .item :nth-child(1) {
+      .newdare div .challeng .list .item :nth-child(1) {
         background: #3b6783;
         color: #fff;
         width: 100%;
         font-size: 0.7em;
         text-align: center;
-        /* margin-top: 1em; */
-        padding-top: 20%;
-        padding-bottom: 5%;
+        margin-top: 1%;
+        padding-top: 10%;
+        padding-bottom: 10%;
         padding-left: 1%;
         padding-right: 1%;
         word-break: keep-all; }
-      .newdare div .challeng ion-list .list .item :nth-child(2) {
-        background: #17283a;
+      .newdare div .challeng .list .item :nth-child(2) {
         color: #fff;
         width: 100%; }
   .newdare .list-inset {
@@ -10792,8 +10662,19 @@ a.button {
   .newdare .vh {
     margin-top: 1vh;
     width: 95%;
-    height: 3em;
-    border-color: #8dc3cd; }
+    min-height: 3em;
+    border-color: #8dc3cd;
+    font-size: 1.5em; }
+    .newdare .vh .butt {
+      width: 50%;
+      margin: 1%;
+      font-size: 1.5em;
+      text-transform: uppercase; }
+  .newdare .responsive {
+    display: inline; }
+    .newdare .responsive .col {
+      width: 30%;
+      display: inline; }
   .newdare .la {
     text-align: left; }
   .newdare .fa {
@@ -10824,9 +10705,11 @@ a.button {
       color: orange;
       font-size: 3em; }
   .newdare .fileContainer {
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     overflow: hidden;
-    position: relative; }
-  .newdare .fileContainer {
+    position: relative;
     font-size: 2em;
     box-sizing: border-box; }
     .newdare .fileContainer i {
@@ -10838,8 +10721,20 @@ a.button {
       border-radius: 50%;
       display: inline-block; }
     .newdare .fileContainer input[type="file"] {
+      display: none;
       overflow: hidden;
       position: relative; }
+  @media screen and (min-height: 1080px) {
+    .newdare .responsive {
+      display: inline; }
+      .newdare .responsive .col {
+        width: 25%;
+        display: inline-block; }
+    .newdare .fileContainer {
+      margin-left: 40%;
+      position: relative; }
+    .newdare .continue {
+      margin-top: 18%; } }
 
 /*some helpful varibals*/
 /*heder side- menue*/
@@ -10889,8 +10784,9 @@ a.button {
     font-size: 0.8em; }
   .SideMenu .menu-left span:not(.badge) {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
@@ -10944,7 +10840,7 @@ a.button {
     .Profile .profile-info .profile-avatar {
       float: left;
       margin-left: 1vh;
-      width: 30%;
+      width: 25%;
       height: 12vh;
       border-radius: 50%;
       border: 3px solid white; }
@@ -10961,6 +10857,7 @@ a.button {
         font-size: 2vh;
         color: #ffb400; }
   .Profile .profile-info-list {
+    line-height: 1.5;
     display: block; }
     .Profile .profile-info-list .profile-menu-item {
       text-align: left;
@@ -11015,11 +10912,18 @@ a.button {
     .Profile .profile-info-list {
       margin-left: -10vw; }
       .Profile .profile-info-list i {
-        padding: 2vh 2vh 2vh 6vh; }
+        padding: 6vh 3vh 3vh 10vh; }
       .Profile .profile-info-list .profile-menu-item {
         padding-left: 15vw;
         padding-bottom: 4vh;
         font-size: 3vh; } }
+  @media screen and (min-height: 1080px) {
+    .Profile .profile-info-list {
+      line-height: 3; }
+      .Profile .profile-info-list .profile-menu-item a {
+        font-size: 2em; }
+      .Profile .profile-info-list i {
+        padding: 6vh 3vh 3vh 10vh; } }
 
 /* CSS Profil background */
 /*some helpful varibals*/
@@ -11070,8 +10974,9 @@ a.button {
     font-size: 0.8em; }
   .Activity span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
@@ -11110,7 +11015,7 @@ a.button {
         width: 100%;
         display: block;
         padding-right: 1vw;
-        font-size: 1em; }
+        font-size: 0.5em; }
       .Activity .list ion-item div {
         margin: 1%;
         padding: 1%;
@@ -11133,7 +11038,7 @@ a.button {
           width: 100%;
           display: block;
           padding-right: 1vw;
-          font-size: 1em; }
+          font-size: 0.5em; }
       .Activity .list ion-item .img {
         margin: 1%;
         padding: 1%;
@@ -11165,8 +11070,6 @@ a.button {
       margin-left: 18.5%;
       font-size: 3em;
       margin-top: -3%; }
-    .Activity hr {
-      width: 90%; }
     .Activity .item-avatar > img:first-child {
       min-width: 10em;
       min-height: 10em;
@@ -11177,19 +11080,20 @@ a.button {
       padding: 1%; }
     .Activity .list ion-item .img {
       margin-left: 5%; }
-    .Activity .list ion-item .img img {
-      width: 12em;
-      height: 10.5em; }
-    .Activity .Activity div p {
-      width: 100%;
-      font-size: 3em; }
-      .Activity .Activity div p .ion-ios-clock-outline {
-        width: 30%;
-        font-size: 4em; }
+      .Activity .list ion-item .img img {
+        width: 12em;
+        height: 10.5em; }
     .Activity .list ion-item .p {
-      width: 100%;
-      margin-left: 4.5%;
-      font-size: 3em; }
+      margin-left: 25%;
+      margin-top: -3em;
+      margin-bottom: 1em;
+      font-size: 1.5em; }
+    .Activity .list ion-item div p {
+      width: 40%;
+      font-size: 1em; }
+      .Activity .list ion-item div p i {
+        margin: -4%;
+        font-size: 2em; }
     .Activity .challenger {
       margin-left: -3em;
       margin-TOP: -3em;
@@ -11200,8 +11104,6 @@ a.button {
       margin-left: 23.5%;
       font-size: 2.5em;
       margin-top: -2%; }
-    .Activity hr {
-      width: 90%; }
     .Activity .item-avatar > img:first-child {
       min-width: 10em;
       min-height: 10em;
@@ -11214,21 +11116,20 @@ a.button {
       margin: 1%; }
     .Activity .list ion-item .img {
       margin-left: 5%; }
-    .Activity .list ion-item .img img {
-      width: 12em;
-      height: 10.5em; }
-    .Activity .Activity div p {
-      width: 100%;
-      font-size: 3em; }
-      .Activity .Activity div p .ion-ios-clock-outline {
-        width: 30%;
-        font-size: 4em; }
+      .Activity .list ion-item .img img {
+        width: 12em;
+        height: 10.5em; }
     .Activity .list ion-item .p {
-      margin-left: 0;
-      margin-top: 2em;
-      margin-bottom: 1em;
-      font-size: 3em;
-      padding: 1%; }
+      margin-left: 25%;
+      margin-top: 0em;
+      margin-bottom: 2em;
+      font-size: 1.5em; }
+    .Activity .list ion-item div p {
+      width: 40%;
+      font-size: 1em; }
+      .Activity .list ion-item div p i {
+        margin: -4%;
+        font-size: 2em; }
     .Activity .challenger {
       margin-left: 5em;
       margin-TOP: 0em;
@@ -11283,8 +11184,9 @@ a.button {
     font-size: 0.8em; }
   .Notifications span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
@@ -11319,7 +11221,7 @@ a.button {
         width: 100%;
         display: block;
         padding-right: 1vw;
-        font-size: 1em; }
+        font-size: 0.5em; }
       .Notifications .list ion-item div {
         margin: 1%;
         padding: 1%;
@@ -11356,6 +11258,38 @@ a.button {
     display: inline-block;
     white-space: normal;
     color: #fff; }
+  @media screen and (min-width: 1920px) {
+    .Notifications h3, .Notifications h2 {
+      font-size: 2em; }
+    .Notifications span {
+      margin-left: 0;
+      font-size: 1em; }
+    .Notifications .list ion-item .p {
+      font-size: 1.5em; }
+    .Notifications .list ion-item i {
+      margin: -6%;
+      font-size: 2em; }
+    .Notifications .list ion-item div p {
+      width: 30%;
+      font-size: 1.5em; } }
+  @media screen and (min-height: 1080px) {
+    .Notifications h3, .Notifications h2 {
+      font-size: 2em; }
+    .Notifications span {
+      margin-top: -1%;
+      margin-bottom: -1%;
+      margin-left: -8px;
+      font-size: 1em; }
+    .Notifications .list ion-item .p {
+      font-size: 1.5em; }
+    .Notifications .list ion-item i {
+      margin: -2%;
+      font-size: 2.5em; }
+    .Notifications .list ion-item div p {
+      width: 30%; }
+    .Notifications .list ion-item .img img {
+      width: 12em;
+      height: 10.5em; } }
 
 /* CSS All 4 friends */
 .Friends .tabs-striped.tabs-background-stable .tabs {
@@ -11522,8 +11456,9 @@ a.button {
     font-size: 0.8em; }
   .Settings span {
     float: left;
-    margin-bottom: -5%;
-    margin-left: -3.5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -14px;
     position: relative;
     display: inline-block;
     z-index: 10; }
