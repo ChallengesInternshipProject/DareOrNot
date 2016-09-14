@@ -7,6 +7,8 @@
 			 color:#16b8d4;
 	 h1, h3 {color:#16b8d4;}
 	 .continue{margin-top: 30%;}
+	 .row{.col{display: inline-block;.contin{margin-top: 33%;
+    font-size: 12px;}}
 	 /*category challenges */
 	div .challeng .list {@include position-style;
 								  display: inline-block;
@@ -53,7 +55,7 @@
 			}
 	}
 	.responsive{ display:inline;
-		.col{width:30%; display:inline;}
+		.col{width:30%; display: inline-block;}
 		}
 	.la{text-align: left;}	
 	.fa {
@@ -86,8 +88,8 @@
 
   /* Example stylistic flourishes */
 
-  .fileContainer {
-		margin-left: 30%;  
+  .fileContainer {background: transparent;
+		margin-left: 0%;  
 	    margin-top: 10%;
 		margin-bottom: 10%;
 		overflow: hidden;
@@ -109,13 +111,19 @@
 			position: relative;
 			}
 		}
-@media screen and (min-height: $tablet-height){
-		.responsive{ display:inline;
-		.col{width:25%; display:inline-block;}
+@media screen and (min-height: 768px){
+	 .row{
+		.col{display: inline-block;
+			.contin{margin-top: 9%;
+				font-size: 2em;
+			}
 		}
+	}
+@media screen and (min-height: $tablet-height){
+		.responsive{display:inline;}
+		.row .col .contin {margin-top: 4%;}
 	 .fileContainer {	
-			margin-left: 40%;
-			position: relative;
+			font-size: 4em;
 			}
 		.continue{margin-top: 18%;}
 		}
