@@ -10336,23 +10336,16 @@ a.button {
 /*img style*/
 /*some helpful varibals*/
 .Contacts {
+  background-size: 100% 100%;
+  text-align: center;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: none;
   background: #e8edf0;
   /*gray*/
-  background-size: 100% 100%;
   color: #03b2d1;
-  text-align: center;
-  display: block;
   line-height: 1%; }
-  .Contacts .bar-header {
-    background: transparent;
-    border: none;
-    background-color: transparent; }
-    .Contacts .bar-header .h1 {
-      color: #044265; }
-    .Contacts .bar-header i {
-      font-size: 2em;
-      color: blue; }
   .Contacts ion-list {
     margin-top: 10em; }
     .Contacts ion-list .f {
@@ -10552,6 +10545,39 @@ a.button {
       width: 5%;
       margin: 10% 8% 10% 16%; } }
 
+/*some helpful varibals*/
+/*heder side- menue*/
+/*list*/
+/*list Item*/
+/*Paragraf*/
+/*div*/
+/*text stylings */
+/*img style*/
+/*some helpful varibals*/
+.search {
+  background-size: 100% 100%;
+  text-align: center;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/Search.png);
+  background-color: #066886; }
+  .search ion-list {
+    margin: 0%;
+    padding: 0%;
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    background: transparent;
+    box-sizing: border-box; }
+    .search ion-list .item-input {
+      background: transparent;
+      border: none;
+      color: #fff; }
+      .search ion-list .item-input i {
+        color: orange; }
+
 /* CSS Tab-Statistics */
 .Statistics {
   background-color: #012438; }
@@ -10608,13 +10634,15 @@ a.button {
 /*some helpful varibals*/
 /* CSS Profil new dare */
 .newdare {
+  background-size: 100% 100%;
+  text-align: center;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: none;
   background: #e8edf0;
   /*gray*/
-  background-size: 100% 100%;
   color: #03b2d1;
-  text-align: center;
-  display: block;
   line-height: 1%;
   color: #16b8d4;
   /*category challenges */
@@ -10745,13 +10773,13 @@ a.button {
 /*text stylings */
 /*img style*/
 .SideMenu .menu-left {
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG.png);
+  background-color: #012438;
   /*for icons*/
   /*how to be display*/ }
   .SideMenu .menu-left .height {
@@ -10823,13 +10851,13 @@ a.button {
 /*img style*/
 /* CSS for Profile view */
 .Profile {
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
-  display: block; }
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG.png);
+  background-color: #012438; }
   .Profile .profile-info {
     width: 100%;
     display: block;
@@ -10936,13 +10964,13 @@ a.button {
 /*img style*/
 /* CSS activities */
 .Activity {
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG.png);
+  background-color: #012438;
   /* CSS edit in item */ }
   .Activity .height {
     display: inline;
@@ -11146,13 +11174,13 @@ a.button {
 /*img style*/
 /* CSS nothifications */
 .Notifications {
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG.png);
+  background-color: #012438;
   /* CSS edit in item */ }
   .Notifications .height {
     display: inline;
@@ -11418,13 +11446,13 @@ a.button {
 /* CSS tabs- Menue */
 /* here is the mine CSS 4 background, colors and so on */
 .Settings {
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG.png);
+  background-color: #012438;
   /* here is the mine CSS 4 back button, heder and so on the bar*/ }
   .Settings .height {
     display: inline;
@@ -11578,6 +11606,36 @@ a.button {
     height: 24.6vh;
     float: right;
     margin-top: -46%; }
+
+@media only screen and (device-width: 768px) {
+  .TimeLineCard {
+    min-height: 15em;
+    max-height: 20em; }
+    .TimeLineCard .content {
+      min-height: 15em; }
+      .TimeLineCard .content img {
+        height: 15em; }
+    .TimeLineCard .navigation {
+      font-size: 1.1em; }
+      .TimeLineCard .navigation .arrows-right {
+        margin-top: -20%; }
+      .TimeLineCard .navigation .arrows-left {
+        margin-top: -20%; }
+      .TimeLineCard .navigation .title {
+        top: -8em;
+        left: -10em; }
+    .TimeLineCard .footer {
+      margin-top: -1% !important;
+      margin-left: 0%;
+      min-width: 6em;
+      min-height: 6em; }
+      .TimeLineCard .footer span {
+        width: 50%; }
+      .TimeLineCard .footer .ng-binding .profil-avatar {
+        margin-top: -8%;
+        margin-left: 0%;
+        min-width: 10em;
+        min-height: 10em; } }
 
 @media screen and (min-width: 1920px) {
   .TimeLineCard {
@@ -11741,29 +11799,6 @@ a.button {
   display: block;
   position: relative;
   /*timeline settings */ }
-  .single .height {
-    display: inline;
-    height: 17vh;
-    margin: 1%;
-    padding: 1%;
-    width: 100%; }
-    .single .height h1 {
-      position: relative;
-      display: inline-block;
-      top: 30%;
-      color: #01cfe4;
-      /*blue*/
-      font-size: 1.4em; }
-    .single .height i {
-      font-size: 2em;
-      position: relative;
-      right: 47%;
-      top: 1%;
-      color: #fff; }
-    .single .height h1 {
-      left: 20%; }
-    .single .height i {
-      right: 70%; }
   .single .item {
     background: transparent;
     border: none; }
@@ -11874,165 +11909,202 @@ a.button {
     color: #fff;
     margin: 1%;
     padding: 1%; }
-
-@media screen and (min-width: 1920px) {
-  .single {
-    background: #e8edf0;
-    background-size: 100% 100%;
-    color: #03b2d1;
-    font-size: 1em;
-    margin: 0;
-    padding: 1%;
-    width: 100%;
-    display: block;
-    position: relative;
-    /*timeline settings */ }
-    .single .height {
-      font-size: 2em; }
-      .single .height h1 {
-        font-size: 4.4em; }
-      .single .height i {
-        font-size: 4.4em; }
-    .single .item {
-      background: transparent;
-      border: none; }
-      .single .item label {
-        margin-top: 1em;
-        width: 83%;
-        border-color: #8dc3cd;
-        float: right; }
+  @media only screen and (device-width: 768px) {
     .single .TimeLineCard {
-      min-height: 30em;
+      min-height: 20em;
       max-height: 30em; }
-      .single .TimeLineCard .footer {
-        margin-top: 3%;
-        font-size: 3em;
-        /* avatar settings, NAME*/ }
-        .single .TimeLineCard .footer span {
-          width: 16%; }
-          .single .TimeLineCard .footer span .fa {
-            min-width: 2.5em;
-            height: 2.5em;
-            margin-top: 1.5em;
-            background-size: 88% 90%; }
-        .single .TimeLineCard .footer img {
-          margin-top: -20%;
-          margin-left: 2%;
-          min-width: 6.5em;
-          min-height: 6.5em; }
-        .single .TimeLineCard .footer .info {
-          font-size: 0.5em; }
-        .single .TimeLineCard .footer .ng-binding {
-          font-size: 1em; }
-          .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
-            color: #ffb400;
-            text-transform: uppercase; }
-          .single .TimeLineCard .footer .ng-binding .profil-avatar {
-            margin-top: -10%;
-            margin-left: -4%;
-            min-width: 5em;
-            min-height: 5em; }
-      .single .TimeLineCard .googleMap {
-        margin-top: -22%;
-        height: 30vh; }
-    .single h3 {
-      font-size: 4em; }
-    .single .button-new {
-      height: 5em;
-      font-size: 2em; }
-    .single .col {
-      min-height: 20.5em; }
-      .single .col img {
-        width: 10em; }
-      .single .col h6 i {
-        font-size: 2em; }
-      .single .col h6, .single .col h7 {
-        font-size: 3em; }
-      .single .col h4, .single .col h2 {
-        font-size: 5em;
-        top: -2em;
-        left: 4em; }
-      .single .col h7 {
-        font-size: 4.5em;
-        top: -1em;
-        left: 4em; }
-    .single .fa {
-      border-radius: 50%;
-      width: 3em;
-      height: 3em;
-      color: #fff;
-      margin: 1%;
-      padding: 1%; }
-    .single .button-block {
-      margin: 2%;
-      padding: 2%;
-      font-size: 5em; } }
-
-@media screen and (min-height: 1080px) {
-  .single {
-    background: #e8edf0;
-    background-size: 100% 100%;
-    color: #03b2d1;
-    font-size: 1em;
-    margin: 0;
-    padding: 1%;
-    width: 100%;
-    display: block;
-    position: relative;
-    /*timeline settings */ }
-    .single .height {
-      font-size: 2em; }
-      .single .height h1 {
-        font-size: 2.4em; }
-      .single .height i {
-        font-size: 2.4em; }
-    .single .item {
-      background: transparent;
-      border: none; }
-      .single .item label {
-        margin-top: 1em;
-        width: 83%;
-        border-color: #8dc3cd;
-        float: right; }
-    .single .TimeLineCard {
-      min-height: 35em;
-      max-height: 35em; }
       .single .TimeLineCard .content {
-        min-height: 35em; }
+        min-height: 20em; }
         .single .TimeLineCard .content img {
-          height: 35em; }
+          height: 20em; }
+      .single .TimeLineCard .navigation {
+        font-size: 1.1em; }
+        .single .TimeLineCard .navigation .arrows-right {
+          margin-top: -20%; }
+        .single .TimeLineCard .navigation .arrows-left {
+          margin-top: -20%; }
+        .single .TimeLineCard .navigation .title {
+          top: -8em;
+          font-size: 2em;
+          left: 1em; }
       .single .TimeLineCard .footer {
-        margin-top: 3%;
-        font-size: 3em;
-        /* avatar settings, NAME*/ }
+        margin-top: -1% !important;
+        margin-left: 0%;
+        min-width: 6em;
+        min-height: 6em;
+        margin-top: 4% !important; }
         .single .TimeLineCard .footer span {
-          width: 16%; }
-          .single .TimeLineCard .footer span .fa {
-            min-width: 2.5em;
-            height: 2.5em;
-            margin-top: 1.5em;
-            background-size: 88% 90%; }
-        .single .TimeLineCard .footer img {
-          margin-top: -20%;
-          margin-left: 2%;
-          min-width: 4.5em;
-          min-height: 4.5em; }
-        .single .TimeLineCard .footer .info {
-          font-size: 0.5em; }
+          width: 50%; }
         .single .TimeLineCard .footer .ng-binding {
           font-size: 1em;
-          margin-top: 2%; }
-          .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
-            color: #ffb400;
-            text-transform: uppercase; }
+          margin-left: 33%;
+          margin-top: 0%; }
           .single .TimeLineCard .footer .ng-binding .profil-avatar {
-            margin-top: -10%;
-            margin-left: -4%;
-            min-width: 5em;
-            min-height: 5em; }
+            margin-top: -8%;
+            margin-left: 0%;
+            min-width: 10em;
+            min-height: 10em; }
+        .single .TimeLineCard .footer img {
+          margin-top: -30%;
+          margin-left: 0%;
+          min-width: 10em;
+          min-height: 10em; }
+        .single .TimeLineCard .footer .info {
+          width: 25%;
+          height: 4em;
+          font-size: 0.7em;
+          margin-right: -5%; }
       .single .TimeLineCard .googleMap {
-        margin-top: -40%;
-        height: 17.6vh; } }
+        width: 58%;
+        display: inline;
+        height: 24.6vh;
+        float: right;
+        margin-top: -33%; } }
+  @media screen and (min-width: 1920px) {
+    .single .single {
+      background: #e8edf0;
+      background-size: 100% 100%;
+      color: #03b2d1;
+      font-size: 1em;
+      margin: 0;
+      padding: 1%;
+      width: 100%;
+      display: block;
+      position: relative;
+      /*timeline settings */ }
+      .single .single .item {
+        background: transparent;
+        border: none; }
+        .single .single .item label {
+          margin-top: 1em;
+          width: 83%;
+          border-color: #8dc3cd;
+          float: right; }
+      .single .single .TimeLineCard {
+        min-height: 30em;
+        max-height: 30em; }
+        .single .single .TimeLineCard .footer {
+          margin-top: 3%;
+          font-size: 3em;
+          /* avatar settings, NAME*/ }
+          .single .single .TimeLineCard .footer span {
+            width: 16%; }
+            .single .single .TimeLineCard .footer span .fa {
+              min-width: 2.5em;
+              height: 2.5em;
+              margin-top: 1.5em;
+              background-size: 88% 90%; }
+          .single .single .TimeLineCard .footer img {
+            margin-top: -20%;
+            margin-left: 2%;
+            min-width: 6.5em;
+            min-height: 6.5em; }
+          .single .single .TimeLineCard .footer .info {
+            font-size: 0.5em; }
+          .single .single .TimeLineCard .footer .ng-binding {
+            font-size: 1em; }
+            .single .single .TimeLineCard .footer .ng-binding h3, .single .single .TimeLineCard .footer .ng-binding i {
+              color: #ffb400;
+              text-transform: uppercase; }
+            .single .single .TimeLineCard .footer .ng-binding .profil-avatar {
+              margin-top: -10%;
+              margin-left: -4%;
+              min-width: 5em;
+              min-height: 5em; }
+        .single .single .TimeLineCard .googleMap {
+          margin-top: -22%;
+          height: 30vh; }
+      .single .single h3 {
+        font-size: 4em; }
+      .single .single .button-new {
+        height: 5em;
+        font-size: 2em; }
+      .single .single .col {
+        min-height: 20.5em; }
+        .single .single .col img {
+          width: 10em; }
+        .single .single .col h6 i {
+          font-size: 2em; }
+        .single .single .col h6, .single .single .col h7 {
+          font-size: 3em; }
+        .single .single .col h4, .single .single .col h2 {
+          font-size: 5em;
+          top: -2em;
+          left: 4em; }
+        .single .single .col h7 {
+          font-size: 4.5em;
+          top: -1em;
+          left: 4em; }
+      .single .single .fa {
+        border-radius: 50%;
+        width: 3em;
+        height: 3em;
+        color: #fff;
+        margin: 1%;
+        padding: 1%; }
+      .single .single .button-block {
+        margin: 2%;
+        padding: 2%;
+        font-size: 5em; } }
+  @media screen and (min-height: 1080px) {
+    .single .single {
+      background: #e8edf0;
+      background-size: 100% 100%;
+      color: #03b2d1;
+      font-size: 1em;
+      margin: 0;
+      padding: 1%;
+      width: 100%;
+      display: block;
+      position: relative;
+      /*timeline settings */ }
+      .single .single .item {
+        background: transparent;
+        border: none; }
+        .single .single .item label {
+          margin-top: 1em;
+          width: 83%;
+          border-color: #8dc3cd;
+          float: right; }
+      .single .single .TimeLineCard {
+        min-height: 35em;
+        max-height: 35em; }
+        .single .single .TimeLineCard .content {
+          min-height: 35em; }
+          .single .single .TimeLineCard .content img {
+            height: 35em; }
+        .single .single .TimeLineCard .footer {
+          margin-top: 3%;
+          font-size: 3em;
+          /* avatar settings, NAME*/ }
+          .single .single .TimeLineCard .footer span {
+            width: 16%; }
+            .single .single .TimeLineCard .footer span .fa {
+              min-width: 2.5em;
+              height: 2.5em;
+              margin-top: 1.5em;
+              background-size: 88% 90%; }
+          .single .single .TimeLineCard .footer img {
+            margin-top: -20%;
+            margin-left: 2%;
+            min-width: 4.5em;
+            min-height: 4.5em; }
+          .single .single .TimeLineCard .footer .info {
+            font-size: 0.5em; }
+          .single .single .TimeLineCard .footer .ng-binding {
+            font-size: 1em;
+            margin-top: 2%; }
+            .single .single .TimeLineCard .footer .ng-binding h3, .single .single .TimeLineCard .footer .ng-binding i {
+              color: #ffb400;
+              text-transform: uppercase; }
+            .single .single .TimeLineCard .footer .ng-binding .profil-avatar {
+              margin-top: -10%;
+              margin-left: -4%;
+              min-width: 5em;
+              min-height: 5em; }
+        .single .single .TimeLineCard .googleMap {
+          margin-top: -40%;
+          height: 17.6vh; } }
 
 /*some helpful varibals*/
 /*heder side- menue*/
@@ -12067,13 +12139,13 @@ a.button {
 /*img style*/
 /* CSS Tab Chat  */
 .report {
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #012438;
   background-size: 100% 100%;
   text-align: center;
-  display: block; }
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/BG.png);
+  background-color: #012438; }
   .report .height {
     display: inline;
     height: 17vh;
