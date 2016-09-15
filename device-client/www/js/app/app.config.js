@@ -54,7 +54,7 @@ angular.module('starter').config(function (
 	$stateProvider
 
 	// setup an abstract state for the tabs directive
-		.state('profile',{
+		.state('app.profile',{
 			url: '/profile',
 			templateUrl: 'templates/side-menu/profile.html',
 			controller: 'ProfileCtrl',
@@ -67,28 +67,16 @@ angular.module('starter').config(function (
 				}]
 			}
 		})
-		.state('mydares',{
-			url: '/mydares',
+		.state('app.mydares',{
+			url: '/myDare',
 			templateUrl: 'templates/tab-timeline.html',
 			params: {
 				title : {$ne : null},
 				description : { $ne : null},
 				endDate : {$gt : new Date()},
-				_creator :$localStorageProvider.get('user.data._id'),
+				_creator :$localStorageProvider.get('user').data._id,
 			},
 			controller: 'TimelineCtrl',
-			resolve : {
-				DaresResolver : [
-					'DareService', '$localStorage',  function(DareService,$localStorage){
-						return DareService.list({
-							title : {$ne : null},
-							description : { $ne : null},
-							endDate : {$gt : new Date()},
-							_creator :$localStorage.user.data._id,
-						},false)
-					}
-				]
-			}
 		})
 		.state('friends', {
 			url: '/friends',
@@ -152,17 +140,7 @@ angular.module('starter').config(function (
 			abstract: true,
 			templateUrl: 'templates/side-menu/side-menu.html',
 			controller: 'SideMenuCtrl',
-			resolve : {
-				notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
-					if (!$localStorage.user ) {
-						return 0 
-					}
-					return   NotificationService.getUnseen($localStorage.user.data._id)
-    						.then(function(result){
-    							return result.length
-  						})
-				}]
-			}
+			
 		})
 		.state('app.home', {
 			url: '/home',
@@ -200,13 +178,6 @@ angular.module('starter').config(function (
 			url: '/timeline',
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
-			resolve : {
-				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
-							return DareService.list()
-					}
-				]
-			}
 		})
 		.state('app.categories', {
 			url: '/categories',

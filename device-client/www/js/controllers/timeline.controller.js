@@ -7,13 +7,16 @@ angular.module('starter.controllers')
 		$state,
 		$localStorage,
 		$ionicSlideBoxDelegate,
-		DaresResolver,
 		$log,
-		DareService,
-		$state
+		DareService
 		) {
-		$scope.doRefresh = function () {
-			$scope.dares = DareService.list($state.params ,$state.current.url == "/mydares" ? false : true);
+		 $scope.doRefresh = function () {
+		 	console.log("doRefresh")
+		 	DareService.list($state.params ,$state.current.url == "/myDare" ? false : true).then(function(result){
+				$scope.dares  = result;
+				console.log(result);		
+				$scope.$broadcast('scroll.refreshComplete');
+			})
 		};
 		$scope.nextSlide = function() {
 			$ionicSlideBoxDelegate.next();
@@ -22,11 +25,14 @@ angular.module('starter.controllers')
 			$ionicSlideBoxDelegate.previous();
 		}
 		$scope.SERVER_ADDRESS = SERVER_ADDRESS;
-		$scope.dares = DaresResolver;
 		if ($state.current.name === 'mydares') {
 			$scope.showBackButton = true;
 		}
 		$scope.goToDare = function(dareID){
 			$state.go('app.dare',{dareID:dareID})
 		}
+
+		$scope.$on("$ionicView.beforeEnter", function(event, data){
+			$scope.doRefresh();
+		});
 	});
