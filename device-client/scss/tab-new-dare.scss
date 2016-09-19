@@ -7,8 +7,14 @@
 			 color:#16b8d4;
 	 h1, h3 {color:#16b8d4;}
 	 .continue{margin-top: 30%;}
-	 .row{.col{display: inline-block;.contin{margin-top: 33%;
-    font-size: 12px;}}
+	 .row{
+	 	.col{
+	 		display: inline-block;
+	 		.contin{
+	 			margin-top: 33%;
+    			font-size: 12px;
+    		}
+    	}
 	 /*category challenges */
 	div .challeng .list {@include position-style;
 								  display: inline-block;
@@ -111,6 +117,8 @@
 			position: relative;
 			}
 		}
+	}
+}
 @media screen and (min-height: 768px){
 	 .row{
 		.col{display: inline-block;

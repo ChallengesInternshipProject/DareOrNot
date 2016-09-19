@@ -18,7 +18,7 @@ angular.module('starter').config(function (
 	function isAuthenticated($q, $state, $log, $timeout, AuthFactory) {
 		var data = {};
 		if (AuthFactory.isAuthenticated()) {
-			$log.info('You are 100% logged no scam !');
+			//$log.info('You are 100% logged no scam !');
 			return $q.when();
 		} else {
 			// console.log('false')
@@ -27,7 +27,7 @@ angular.module('starter').config(function (
 				console.log('not logged');
 				// $state.go('tab.home');
 				//Refresh the state because $state.go is not working !!! IMPORTANT
-				$state.go($state.current, {}, {reload: true});
+				$state.go("login");
 			}, 0);
 			return $q.reject();
 		}
@@ -54,6 +54,150 @@ angular.module('starter').config(function (
 	$stateProvider
 
 	// setup an abstract state for the tabs directive
+		
+
+		.state('login', {
+			url: '/login',
+			templateUrl: 'templates/modals/login-modal.html',
+			controller: 'LoginCtrl'
+		})
+		.state('app', {
+			url: '/app',
+			abstract: true,
+			templateUrl: 'templates/side-menu/side-menu.html',
+			controller: 'SideMenuCtrl',
+			
+		})
+		.state('app.home', {
+			url: '/home',
+			templateUrl: 'templates/tab-home.html',
+			controller: 'HomeCtrl',
+			resolve: {
+					UserResolver: ['UserService', function (UserService) {
+						return UserService.getAllUsers().then(function (data) {
+							return data
+						})
+					}]
+				}
+		})
+		
+		.state('app.search', {
+			url: '/search',
+			templateUrl: 'templates/tab-search.html',
+			controller: 'SearchCtrl'
+		})
+
+		.state('app.map', {
+			url: '/map',
+			templateUrl: 'templates/tab-gMaps.html',
+			controller: 'GoogleMapCtrl'
+			// controller: 'HomeCtrl'
+		})
+
+		.state('app.calendar', {
+			url: '/calendar',
+			templateUrl: 'templates/tab-calendar.html',
+			controller: 'CalendarCtrl',
+			// controller: 'HomeCtrl'
+		})
+		.state('app.timeline', {
+			url: '/timeline',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
+			resolve: {
+				isAuthenticated: isAuthenticated,
+			}
+		})
+		.state('app.categories', {
+			url: '/categories',
+			templateUrl: 'templates/tab-categories.html',
+			controller: 'CategoriesCtrl'
+		})
+		.state('app.history', {
+			url: '/history',
+			templateUrl: 'templates/_app/history.html',
+			controller: 'HistoryCtrl'
+		})
+		.state('app.funny',{
+			url: '/funny',
+			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:1
+			},
+			controller: 'TimelineCtrl',
+		})
+		.state('app.business',{
+			url: '/business',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
+			params:{
+				category:2
+			},
+		
+		})
+		.state('app.price',{
+			url: '/price',
+			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:3
+			},
+			controller: 'TimelineCtrl',
+		})
+		.state('app.charity',{
+			url: '/charity',
+			templateUrl: 'templates/tab-timeline.html',
+			params:{
+				category:4
+			},
+			controller: 'TimelineCtrl',
+		})
+		
+		.state('app.statistics', {
+			url: '/statistics',
+			templateUrl: 'templates/tab-statistics.html',
+			controller: 'StatisticsCtrl'
+		})
+		.state('app.contacts', {
+			url: '/contacts',
+			templateUrl: 'templates/tab-contacts.html',
+			controller: 'ContactsCtrl'
+		})
+		.state('app.newdare',{
+			url : '/newdare',
+			templateUrl: 'templates/tab-new-dare.html',
+			controller: 'DareCtrl',
+			resolve: {
+				isAuthenticated: isAuthenticated,
+				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
+					return UserService.getFriends($localStorage.user.data._id, 'Accepted', "").then(function (data) {
+						return data
+					})
+				}
+			]}
+		})
+
+		.state('app.chat',{
+			url : '/chat',
+			templateUrl: 'templates/tab-chat.html',
+			controller: 'ChatCtrl'
+		})
+
+		.state('app.chat-details', {
+			url: '/chat/:userID',
+			templateUrl: 'templates/tab-chat-detail.html',
+			controller: 'ChatDetailCtrl',
+		})
+		.state('app.activity',{
+			url : '/activity',
+			templateUrl: 'templates/side-menu/activity.html',
+			 controller: 'ActivityCtrl',
+			resolve:{
+				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
+					console.log("triggered");
+					return NotificationService.getAll($localStorage.user.data._id);
+				}]
+			}
+		})
 		.state('app.profile',{
 			url: '/profile',
 			templateUrl: 'templates/side-menu/profile.html',
@@ -68,14 +212,14 @@ angular.module('starter').config(function (
 			}
 		})
 		.state('app.mydares',{
-			url: '/myDare',
-			templateUrl: 'templates/tab-timeline.html',
+			url: '/mydares',
 			params: {
 				title : {$ne : null},
 				description : { $ne : null},
 				endDate : {$gt : new Date()},
-				_creator :$localStorageProvider.get('user').data._id,
+				_creator :$localStorageProvider.get('user') ?$localStorageProvider.get('user').data._id : null ,
 			},
+			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
 		})
 		.state('friends', {
@@ -134,182 +278,17 @@ angular.module('starter').config(function (
 			templateUrl: 'templates/side-menu/favorites.html',
 			// controller: 'A'
 		})
-
-		.state('app', {
-			url: '/app',
-			abstract: true,
-			templateUrl: 'templates/side-menu/side-menu.html',
-			controller: 'SideMenuCtrl',
-			
-		})
-		.state('app.home', {
-			url: '/home',
-			templateUrl: 'templates/tab-home.html',
-			controller: 'HomeCtrl',
-			resolve: {
-					UserResolver: ['UserService', function (UserService) {
-						return UserService.getAllUsers().then(function (data) {
-							return data
-						})
-					}]
-				}
-		})
-		
-		.state('app.search', {
-			url: '/search',
-			templateUrl: 'templates/tab-search.html',
-			controller: 'SearchCtrl'
-		})
-
-		.state('app.map', {
-			url: '/map',
-			templateUrl: 'templates/tab-gMaps.html',
-			controller: 'GoogleMapCtrl'
-			// controller: 'HomeCtrl'
-		})
-
-		.state('app.calendar', {
-			url: '/calendar',
-			templateUrl: 'templates/tab-calendar.html',
-			controller: 'CalendarCtrl',
-			// controller: 'HomeCtrl'
-		})
-		.state('app.timeline', {
-			url: '/timeline',
-			templateUrl: 'templates/tab-timeline.html',
-			controller: 'TimelineCtrl',
-		})
-		.state('app.categories', {
-			url: '/categories',
-			templateUrl: 'templates/tab-categories.html',
-			controller: 'CategoriesCtrl'
-		})
-		.state('app.history', {
-			url: '/history',
-			templateUrl: 'templates/_app/history.html',
-			controller: 'HistoryCtrl'
-		})
-		.state('app.funny',{
-			url: '/funny',
-			templateUrl: 'templates/tab-timeline.html',
-			params:{
-				category:1
-			},
-			controller: 'TimelineCtrl',
-			resolve : {
-				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
-							return DareService.list({category:1});
-					}
-				]
-			}
-		})
-		.state('app.business',{
-			url: '/business',
-			templateUrl: 'templates/tab-timeline.html',
-			controller: 'TimelineCtrl',
-			params:{
-				category:2
-			},
-			resolve : {
-				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
-							return DareService.list({category:2})
-					}
-				]
-			}
-		})
-		.state('app.price',{
-			url: '/price',
-			templateUrl: 'templates/tab-timeline.html',
-			params:{
-				category:3
-			},
-			controller: 'TimelineCtrl',
-			resolve : {
-				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
-							return DareService.list({category:3})
-					}
-				]
-			}
-		})
-		.state('app.charity',{
-			url: '/charity',
-			templateUrl: 'templates/tab-timeline.html',
-			params:{
-				category:4
-			},
-			controller: 'TimelineCtrl',
-			resolve : {
-				DaresResolver : [
-					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
-						return DareService.list({category:4})
-					}
-				]
-			}
-		})
-		
-		.state('app.statistics', {
-			url: '/statistics',
-			templateUrl: 'templates/tab-statistics.html',
-			controller: 'StatisticsCtrl'
-		})
-		.state('app.contacts', {
-			url: '/contacts',
-			templateUrl: 'templates/tab-contacts.html',
-			controller: 'ContactsCtrl'
-		})
-		.state('app.newdare',{
-			url : '/newdare',
-			templateUrl: 'templates/tab-new-dare.html',
-			controller: 'DareCtrl',
-			resolve: {
-				isAuthenticated: isAuthenticated,
-				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
-					return UserService.getFriends($localStorage.user.data._id, 'Accepted', "").then(function (data) {
-						return data
-					})
-				}
-			]}
-		})
-
-		.state('app.chat',{
-			url : '/chat',
-			templateUrl: 'templates/tab-chat.html',
-			controller: 'ChatCtrl'
-		})
-
-		.state('app.chat-details', {
-			url: '/chat/:userID',
-			templateUrl: 'templates/tab-chat-detail.html',
-			controller: 'ChatDetailCtrl',
-		})
-		.state('activity',{
-			url : '/activity',
-			templateUrl: 'templates/side-menu/activity.html',
-			 controller: 'ActivityCtrl',
-			resolve:{
-				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
-					console.log("triggered");
-					return NotificationService.getAll($localStorage.user.data._id);
-				}]
-			}
-		})
-	
 		.state('app.dare',{
 			url : '/dare/:dareID',
 			params : {
 				dareID:null
 			},
-			templateUrl: 'templates/tab-single-dare.html',
-			controller: 'SingeDareCtrl',
-			resolve : {
-				dare : [ 'DareService','$stateParams', function(DareService,$stateParams) {
-						return DareService.get($stateParams.dareID); 	
-					}
-				]
-			}
+			// views : {
+			// 	'mainContent' : {
+					templateUrl: 'templates/tab-single-dare.html',
+					controller: 'SingeDareCtrl',
+			// 	}
+			// }
 		})
 
 		.state('tab', {
@@ -319,15 +298,7 @@ angular.module('starter').config(function (
 
 			// Each tab has its own nav history stack:
 		})
-		.state('tab.login', {
-			url: '/login',
-			views: {
-				'tab-login': {
-					templateUrl: 'templates/tab-login.html',
-					controller: 'LoginCtrl'
-				}
-			}
-		})
+		
 
 		.state('tab.register', {
 			url: '/register',
@@ -472,7 +443,7 @@ angular.module('starter').config(function (
 
 
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/home');
+	$urlRouterProvider.otherwise('/login');
 
 
 });
