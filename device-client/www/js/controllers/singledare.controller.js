@@ -7,6 +7,7 @@ angular.module('starter.controllers').controller('SingeDareCtrl', [
 	'$log',
 	'$ionicLoading',
 	'$ionicModal',
+	'dare',
 	function (
 	$scope,
 	$state,
@@ -15,16 +16,10 @@ angular.module('starter.controllers').controller('SingeDareCtrl', [
 	$localStorage,
 	$log,
 	$ionicLoading,
-	$ionicModal
+	$ionicModal,
+	dare
 ) {
-		$scope.$on("$ionicView.beforeEnter", function(event, data){
-			$log.info('Loading single dare');
-			$ionicLoading.show();
-			DareService.get($stateParams.dareID).then(function(result){
-				$scope.dare = result;
-				$ionicLoading.hide()
-			});
-		});
+		$scope.dare = dare;
 		$scope.FileService ={};
 		$scope.FileService.processFiles = function(files){
 			angular.forEach(files, function(flowFile, i){
