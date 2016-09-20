@@ -12210,61 +12210,45 @@ a.button {
   .report a.item-content {
     color: #fff; }
 
-.Chat {
+.Chat .messages {
   background-color: #e8edf0; }
-  .Chat .messages {
-    margin: 1%;
-    padding: 1%;
-    width: 100%;
-    background: transparent;
-    border: none; }
-    .Chat .messages .message {
-      flex: 1 1 auto !important;
-      padding: 10px !important;
-      transition: all 250ms ease-in-out !important;
-      overflow: hidden !important;
-      text-align: left !important;
-      transform: translate3d(0, 0, 0) !important; }
-    .Chat .messages label i {
-      font-size: 2em;
-      color: orange; }
-    .Chat .messages .avatar {
-      border-radius: 50% !important; }
-    .Chat .messages .time {
-      float: left;
-      color: gray;
-      display: inline-block;
-      margin-top: 1.5em; }
-    .Chat .messages span {
-      background: #C7C7CC !important;
-      display: inline-block !important;
-      color: white !important;
-      padding: 10px !important;
-      border-radius: 10px !important;
-      text-align: left !important;
-      max-width: 70vw !important; }
-      .Chat .messages span .time {
-        color: white; }
-  .Chat .messages.other .message {
-    transform: translate3d(0, 0, 0) !important;
-    text-align: right !important; }
-    .Chat .messages.other .message .avatar {
-      display: none; }
-  .Chat .messages.other .message.slide-right {
-    transform: translate3d(120px, 0, 0) !important; }
-  .Chat .messages.other span {
-    color: #fff !important;
-    background-color: #007AFF !important;
-    margin-top: 12px; }
+  .Chat .messages .message {
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    transform: translate3d(0, 0, 0) !important; }
+  .Chat .messages .avatar {
+    border-radius: 50% !important; }
+  .Chat .messages .time {
+    color: #000;
+    display: inline-block;
+    margin-top: 20px; }
+  .Chat .messages span {
+    background: #C7C7CC !important;
+    display: inline-block !important;
+    color: white !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    text-align: left !important;
+    max-width: 70vw !important; }
+    .Chat .messages span .time {
+      color: white; }
 
-.bar.bar-stable.bar-footer {
-  color: orange;
-  background-color: #fff; }
+.Chat .messages.other .message {
+  transform: translate3d(0, 0, 0) !important;
+  text-align: right !important; }
+  .Chat .messages.other .message .avatar {
+    display: none; }
 
-.bar.item-input-inset .item-input-wrapper {
-  background: transparent; }
-  .bar.item-input-inset .item-input-wrapper input {
-    color: orange; }
+.Chat .messages.other .message.slide-right {
+  transform: translate3d(120px, 0, 0) !important; }
+
+.Chat .messages.other span {
+  color: black !important;
+  background-color: #007AFF !important;
+  margin-top: 12px; }
 
 .app-side-menu-navigation {
   display: block; }
