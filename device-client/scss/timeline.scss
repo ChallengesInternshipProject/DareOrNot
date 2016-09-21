@@ -15,25 +15,32 @@
 		}
 	/*timeline settings */
 			.TimeLineCard { 
+			div .slider-pager{display:none;}
 				.navigation{
 						.title{left: 1em;}
 						}
 				.footer{@include footer-style;
 						@include footer-style-single;
-					span{width:16%; margin-bottom:2%;
+					span{width: 20%;
+						margin-bottom: 1em;
 						h5{font-size:1em;}
 						.fa{@include fa-size;}
 					}
 					img{@include img-single;}
-					.info{@include info-size;}
-						
+				.googleMap{margin-right:5em;
+					 margin-top:5em;
+					.badge{@include info-size;}
+					}	
 			/* avatar settings, NAME*/
 					.ng-binding{@include binding-single;
 							h3, i{color: #ffb400;text-transform: uppercase;}
 							.profil-avatar{@include profil-avatar-position;}	
 						}	
 				}
-			}
+					.notice{display: -webkit-inline-box;
+						width: 88%;
+						}
+					}	
 			h3 {@include h3-single;}
 			.button-new{@include button-style-color;text-transform: uppercase;}
 			.col{@include col-single;
@@ -58,7 +65,7 @@
 				}
 			.fa{@include circle-border;}
 			.button-block{@include block-single;}
-
+	
 @media only screen and (device-width: 768px) {	
 			.TimeLineCard{min-height: 20em;
 						  max-height: 30em;
@@ -102,65 +109,19 @@
 							}
 						}
 					.googleMap {
-								width: 58%;
+								width: 50%;
 								display: inline;
 								height: 24.6vh;
 								float: right;
-								margin-top: -33%;
+								margin-top: -38%;
 								}
+					.notice{display: -webkit-inline-box;
+						width: 50%;
+						margin-left: -45%;
+						}
 				}	
 		}
-@media screen and (min-width: $tablet-width){
-	.single{@include gray_background;
-		.item{@include background-bordernone;
-		label {
-				margin-top: 1em;
-				width: 83%;
-				border-color: #8dc3cd;
-				float: right;
-				}
-			}
-	/*timeline settings */
-			.TimeLineCard {min-height: 30em;
-					   max-height: 30em;
-				.footer{margin-top: 3%;
-						font-size: 3em;
-					span{width:16%;
-						.fa{@include fa-size;}
-					}
-					img{margin-top: -20%;
-						margin-left: 2%;
-						min-width: 6.5em;
-						min-height: 6.5em;}
-					.info{font-size: 0.5em;}
-						
-			/* avatar settings, NAME*/
-					.ng-binding{font-size: 1em;
-							h3, i{color: #ffb400;text-transform: uppercase;}
-							.profil-avatar{@include profil-avatar-position;}	
-						}	
-				}
-					.googleMap{margin-top: -22%;
-								height: 30vh;}
-			}
-			h3 {font-size: 4em;}
-			.button-new{height: 5em;
-						font-size: 2em;}
-			.col{min-height: 20.5em;
-				img{width: 10em; 
-					}
-				h6 i {font-size:2em;}
-				h6, h7{font-size:3em;}
-				
-				h4, h2{font-size:5em; top: -2em; left: 4em;}
-		 		h7{font-size: 4.5em; top: -1em; left: 4em;}
-				}
-			.fa{@include circle-border;}
-			.button-block{ margin: 2%; padding: 2%; font-size: 5em;}
-		}
-		
-		}
-		
+
 @media screen and (min-height: $tablet-height){
 		
 		.single{@include gray_background;
@@ -176,16 +137,16 @@
 			.TimeLineCard {min-height: 35em;
 					   max-height: 35em;
 				.content{min-height: 35em;img{ height:35em;}} 	   
-				.footer{margin-top: 3%;
-						font-size: 3em;
+				.footer{@include footer-style-height;
 					span{width:16%;
 						.fa{@include fa-size;}
 					}
-					img{margin-top: -20%;
-						margin-left: 2%;
-						min-width: 4.5em;
-						min-height: 4.5em;}
-					.info{font-size: 0.5em;}
+					img{margin-top: -34%;
+						margin-left: 1%;
+						min-width: 7em;
+						min-height: 7em;
+						}
+					.info{font-size: 0.5em; display:inline;}
 						
 			/* avatar settings, NAME*/
 					.ng-binding{font-size: 1em;    margin-top: 2%;
@@ -193,9 +154,13 @@
 							.profil-avatar{@include profil-avatar-position;}	
 						}	
 				}
-					.googleMap{margin-top: -40%; height: 17.6vh;}
+					.googleMap {
+							width: 40%;
+							height: 24.6vh;
+							margin-top: -10%;
+						}
+				}
 			}
 		}
 	}
-			}
 		
