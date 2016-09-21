@@ -1,18 +1,18 @@
-// $stable:                          #f8f8f8 !default;
+// $stable: #f8f8f8 !default;
 
-.Chat{
+.Chat{ background-color: #e8edf0;
 .messages {
-    background-color: #e8edf0;
+   @include position-style;
+   @include background-bordernone;
   .message {
-
     flex: 1 1 auto !important;
     padding: 10px !important;
     transition: all 250ms ease-in-out !important;
     overflow: hidden !important;
     text-align: left !important;
     transform: translate3d(0, 0, 0) !important;
-
   }
+  label i{font-size: 2em; color: orange;}
   .avatar{
     // border:1px solid black !important;
     // padding-top:50px;
@@ -21,9 +21,10 @@
     border-radius: 50% !important;
   }
   .time{
-    color: #000;
+	float: left;
+    color: gray;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 1.5em;
   }
   span {
     background:#C7C7CC !important;
@@ -38,27 +39,32 @@
     // width: 70vw;
     .time{
       color:white;
-
     }
+	
   }
 
 }
 //This will change
 .messages.other {
-  .message {
-    transform: translate3d(0, 0, 0) !important;
-    text-align: right !important;
-    .avatar{
-      display: none;
-    }
-  }
-  .message.slide-right {
-    transform: translate3d(120px, 0, 0) !important;
-  }
-  span {
-    color: black !important;
-    background-color:#007AFF !important;
-    margin-top: 12px;
-  }
+	.message {
+		transform: translate3d(0, 0, 0) !important;
+		text-align: right !important;
+		.avatar{
+		  display: none;
+		}
+	  }
+	  .message.slide-right {
+		transform: translate3d(120px, 0, 0) !important;
+	  }
+	  span {
+		color: #fff !important;
+		background-color:#007AFF !important;
+		margin-top: 12px;
+	  }
+	}
 }
+.bar.bar-stable.bar-footer { color: orange; background-color: #fff;}
+.bar.item-input-inset .item-input-wrapper {background: transparent; 
+input { color: orange;}
 }
+
