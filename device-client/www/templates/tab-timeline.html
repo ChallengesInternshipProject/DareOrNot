@@ -1,12 +1,16 @@
-<div ng-if='showBackButton' ng-include="'templates/static/back-button.html'" ></div>
-<ion-view class="timeline">
-	<ion-content  ng-class="showBackButton ? 'has-header' : ''">
+	<ion-content  class="has-header" >
 		<ion-refresher
 			pulling-text="Pull to refresh..."
 			on-refresh="doRefresh()">
 		</ion-refresher>
+		<br>
+		<br>
+		<div ng-hide="dares.length > 0">
+		<div class="">
+				<h1 class="title">Няма Предизвикателства</h1>
+		</div>
+		</div>
 		<div class="list card" ng-repeat="dare in dares">
 			<div class="item item-image" ng-include src="'templates/div-timelineCard.html'"></div>
 		</div>
 	</ion-content>
-</ion-view>
