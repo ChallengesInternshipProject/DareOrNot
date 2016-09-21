@@ -65,8 +65,40 @@
 				}
 			.fa{@include circle-border;}
 			.button-block{@include block-single;}
-	
+	}
+	@media only screen and (device-height: 1080px) {	
+		
+		.single{
+			.TimeLineCard{min-height: 35em;
+					   max-height: 35em;
+				.content{min-height: 35em;img{ height:35em;}} 	   
+				.footer{@include footer-style-height;
+					span{width:16%;
+						.fa{@include fa-size;}
+					}
+					img{margin-top: -34%;
+						margin-left: 1%;
+						min-width: 7em;
+						min-height: 7em;
+						}
+					.info{font-size: 0.5em; display:inline;}
+						
+			/* avatar settings, NAME*/
+					.ng-binding{font-size: 1em;    margin-top: 2%;
+							h3, i{color: #ffb400;text-transform: uppercase;}
+							.profil-avatar{@include profil-avatar-position;}	
+						}	
+				}
+					.googleMap {
+							width: 40%;
+							height: 24.6vh;
+							margin-top: -10%;
+						}
+				}
+			}
+		}
 @media only screen and (device-width: 768px) {	
+	.single{
 			.TimeLineCard{min-height: 20em;
 						  max-height: 30em;
 					.content {min-height: 20em;
@@ -121,46 +153,6 @@
 						}
 				}	
 		}
-
-@media screen and (min-height: $tablet-height){
-		
-		.single{@include gray_background;
-		.item{@include background-bordernone;
-		label {
-				margin-top: 1em;
-				width: 83%;
-				border-color: #8dc3cd;
-				float: right;
-				}
-			}
-	/*timeline settings */
-			.TimeLineCard {min-height: 35em;
-					   max-height: 35em;
-				.content{min-height: 35em;img{ height:35em;}} 	   
-				.footer{@include footer-style-height;
-					span{width:16%;
-						.fa{@include fa-size;}
-					}
-					img{margin-top: -34%;
-						margin-left: 1%;
-						min-width: 7em;
-						min-height: 7em;
-						}
-					.info{font-size: 0.5em; display:inline;}
-						
-			/* avatar settings, NAME*/
-					.ng-binding{font-size: 1em;    margin-top: 2%;
-							h3, i{color: #ffb400;text-transform: uppercase;}
-							.profil-avatar{@include profil-avatar-position;}	
-						}	
-				}
-					.googleMap {
-							width: 40%;
-							height: 24.6vh;
-							margin-top: -10%;
-						}
-				}
-			}
-		}
 	}
+
 		

@@ -12046,7 +12046,7 @@ a.button {
         display: -webkit-inline-box;
         width: 50%;
         margin-left: -45%; } }
-  @media screen and (min-height: 1080px) {
+  @media only screen and (device-width: 1080px) {
     .single .single {
       background: #e8edf0;
       background-size: 100% 100%;
