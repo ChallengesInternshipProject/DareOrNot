@@ -26,7 +26,7 @@ angular.module('starter.controllers').controller('SingeDareCtrl', [
 				var fileReader = new FileReader();
 				fileReader.onload = function (event) {
 					DareService.addProve(event.target.result,$stateParams.dareID,$localStorage.user.data._id).then(function(){
-						$state.reload();
+						$state.go('app.timeline');
 					});
 				};
 				fileReader.readAsDataURL(flowFile.file);
