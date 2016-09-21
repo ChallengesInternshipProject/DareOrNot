@@ -7,6 +7,14 @@
 			 color:#16b8d4;
 	 h1, h3 {color:#16b8d4;}
 	 .continue{margin-top: 30%;}
+	 .row{
+	 	.col{
+	 		display: inline-block;
+	 		.contin{
+	 			margin-top: 33%;
+    			font-size: 12px;
+    		}
+    	}
 	 /*category challenges */
 	div .challeng .list {@include position-style;
 								  display: inline-block;
@@ -37,23 +45,23 @@
 													}
 									}
 								}
-		
-	.list-inset{ width: 100%; background: transparent;}
-		label .item{margin-top:5%;	}
-	.vh{margin-top: 1vh;
-	    width: 95%;		
-		min-height: 3em;
-		border-color: #8dc3cd;
-		font-size:1.5em;
-		.butt{
-			width: 50%;
-			margin: 1%;
+		.list-inset{ width: 100%; background: transparent;}
+			label .item{margin-top:5%;	}
+		.vh{margin-top: 1vh;
+			width: 95%;		
+			min-height: 3em;
+			border-color: #8dc3cd;
 			font-size:1.5em;
-			text-transform:uppercase;
-			}
+			.butt{
+				width: 50%;
+				margin: 1%;
+				font-size:1.5em;
+				text-transform:uppercase;
+				}
+		}
 	}
 	.responsive{ display:inline;
-		.col{width:30%; display:inline;}
+		.col{width:30%; display: inline-block;}
 		}
 	.la{text-align: left;}	
 	.fa {
@@ -86,8 +94,8 @@
 
   /* Example stylistic flourishes */
 
-  .fileContainer {
-		margin-left: 30%;  
+  .fileContainer {background: transparent;
+		margin-left: 0%;  
 	    margin-top: 10%;
 		margin-bottom: 10%;
 		overflow: hidden;
@@ -109,14 +117,21 @@
 			position: relative;
 			}
 		}
-@media screen and (min-height: $tablet-height){
-		.responsive{ display:inline;
-		.col{width:25%; display:inline-block;}
-		}
-	 .fileContainer {	
-			margin-left: 40%;
-			position: relative;
+	@media screen and (min-height: 768px){
+		 .row{
+			.col{display: inline-block;
+				.contin{margin-top: 9%;
+					font-size: 2em;
+				}
 			}
-		.continue{margin-top: 18%;}
+		}
+	@media screen and (min-height: $tablet-height){
+			.responsive{display:inline;}
+			.row .col .contin {margin-top: 4%;}
+		 .fileContainer {	
+				font-size: 4em;
+				}
+			.continue{margin-top: 18%;}
+			}
 		}
 	}

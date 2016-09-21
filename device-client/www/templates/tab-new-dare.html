@@ -24,14 +24,14 @@
 					</div>
 					<div class="row no-padding">
 						<div class="col">
-							<h3 style="margin-top: 35%;">
+							<h3 class="contin">
 								Продължителност
 							</h3>
 						</div>
 						<div class="col">
 								<div class="col">
 									<div class="item" ion-datetime-picker ng-model="data.startDate">
-											От: {{data.startDate| date: "yyyy-MM-dd H:mm:ss"}}a
+											От: {{data.startDate| date: "yyyy-MM-dd H:mm:ss"}}
 									</div >
 								</div>
 								<div class="col">
@@ -92,21 +92,7 @@
 						<button class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus" style="background-color: rgb(217, 3, 74);"></button>
 					</div>
 				</div>
-				<div class="row responsive-sm">
-					<ion-list>
-						<div class="row">
-							<div class="col">
-								<button type="button" ng-class="{'active' : data.socialNetworks.facebook == true }" ng-click="toggleSocial('facebook')" class="fa ion-social-facebook button button-block "  ng-model="data.share.facebook" style="background-color: rgb(47, 123, 189);"></button>
-							</div>
-							<div class="col">
-								<button type="button" ng-class="{'active' : data.socialNetworks.twitter == true }"  ng-click="toggleSocial('twitter')" class="fa ion-social-twitter button button-block" ng-model="data.share.twitter" style="background-color: rgb(0, 191, 243);"></button>
-							</div>
-							<div class="col">
-									<button type="button"  ng-class="{'active' : data.socialNetworks.googlePlus == true }" ng-click="toggleSocial('googlePlus')" class="fa ion-social-googleplus button button-block "  ng-model="data.share.googlePlus" style="background-color: rgb(217, 3, 74);"></button>
-							</div>
-						</div>
-					</ion-list>
-				</div>
+				
 				<!--add friends button-->
 				<button  type = "button" class="button button-block" ng-click="friendsModal.show()">Покани Приятел</button>
 				<button class="button button-block button-balanced" type="submit" style="font-size:2em;text-transform: uppercase;background: #17283a;color:#fff;">Създай</button>

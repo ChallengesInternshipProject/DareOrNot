@@ -1,10 +1,10 @@
-// $stable: #f8f8f8 !default;
+// $stable:                          #f8f8f8 !default;
 
-.Chat{ background-color: yellow;
+.Chat{
 .messages {
-   @include position-style;
-   @include background-bordernone;
+    background-color: #e8edf0;
   .message {
+
     flex: 1 1 auto !important;
     padding: 10px !important;
     transition: all 250ms ease-in-out !important;
@@ -21,10 +21,9 @@
     border-radius: 50% !important;
   }
   .time{
-	float: left;
     color: #000;
     display: inline-block;
-    margin-top: 1.5em;
+    margin-top: 20px;
   }
   span {
     background:#C7C7CC !important;
@@ -63,4 +62,3 @@
   }
 }
 }
-.bar.bar-stable.bar-footer { background-color: yellow;}

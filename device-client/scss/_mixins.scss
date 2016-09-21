@@ -67,9 +67,10 @@
 @mixin paragraf-style{
 	color: #01cfe4; /*blue*/
 	@include position-style;
+	width: 60%;
 	margin-bottom: 1vh;
 	display: inline-flex;
-	font-size:0.8em;
+	font-size:0.7em;
 	}		
 @mixin paragraf-comentar{	
 	width: 90%;
@@ -114,18 +115,20 @@
 		float: left;
 		margin-top: -2%;
 		margin-bottom: -2%;
-		margin-left: -14px;
+		margin-left: -4%;
 		position: relative;
 		display: inline-block;
 		z-index: 10;
 		}
 @mixin span-position-width{		
-		margin-left: 0;
+			margin-top: -1%;
+			margin-bottom: -1%;
+			margin-left: -2%;
 		}
 @mixin span-position-height{		
-		margin-top: -1%;
-		margin-bottom: -1%;
-		margin-left: -8px;
+    margin-top: -1%;
+    margin-bottom: -1%;
+    margin-left: -1%;
 		}
 		
 @mixin 	i{

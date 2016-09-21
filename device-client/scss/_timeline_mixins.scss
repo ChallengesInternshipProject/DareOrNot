@@ -49,20 +49,11 @@
 	left: -9em;
 	font-size: 2.5em;
 	}
-@mixin footer-style{	
-	text-align: center;
-    display: inline-flex;
-    position: relative;
-    top: -1em;
-    margin-top: -13%;
-    padding: 1%;
-    width: 100%;
-	}
 @mixin fa-size{
 				min-width: 2.5em;
 				height: 2.5em;
 				margin-top: 1.5em;
-				background-size: 88% 90%;
+				background-size: 75% 75%;
 				}
 @mixin fa-size-width{
 				min-width: 3.5em;
@@ -118,11 +109,11 @@
 				min-height: 4em;
 			}
 @mixin google-Map-img{  
-					width: 40%;
+					width: 47%;
 					display: inline;
 					height: 24.6vh;
 					float: right;
-					margin-top: -46%;
+					margin-top: -57%;
 					}			
 @mixin	button-style-color{
 				@include background-bordernone;
@@ -139,11 +130,27 @@
 				margin: 1%;
 				padding: 1%;
 				}
+@mixin footer-style{	
+	text-align: center;
+    display: inline-flex;
+    position: relative;
+    top: -1em;
+    margin-top: -13%;
+    padding: 1%;
+    width: 100%;
+	}		
 @mixin footer-style-single{
 		margin-top: -10%;
 		width:60%;
 		display: block;
 		}
+
+@mixin footer-style-height{
+			  margin-top: 6em;
+			  padding: 1%;
+			  margin-top: 7%;
+			  width: 50%;
+		}		
 @mixin footer-style-ipad{
 	margin-top: -1% !important;
     margin-left: 0%;

@@ -6,7 +6,7 @@
 					<div class="content">
 						<ion-slide-box >   
 							<ion-slide ng-repeat='picture in dare.pictures'>   
-								<img ng-src="{{picture.fileString}}" alt="" >   
+								<img ng-src="{{picture.fileString}}" alt="" ng-click="openFile2(picture._id)" >   
 							</ion-slide>  
 						</ion-slide-box>  
 					</div>
@@ -24,7 +24,7 @@
 							<img ng-src="../img/adam.jpg"/> 
 						 </a> 
 						<span class="ng-binding" style="width:100%; margin-left: 15%; margin-top: -20%;">  
-							 <h1 style="font-size:1.5em;">  {{dare._creator.name}} </h1>
+							 <h1 style="font-size:1.5em;    margin-left: -15%;">  {{dare._creator.name}} </h1>
 						</span>
 						<span class="ng-binding">  
 							<i class="ion-ios-location-outline"></i> 
@@ -38,18 +38,20 @@
 							<h5>Приключва:</h5> 
 							<span am-time-ago="dare.endDate"></span>
 						</span>
-						 <span class="info" style="margin-left: -1%;"> 
+						<div  class="notice">
+						<span class="" style="margin-left: -1%;"> 
 							<i class="fa app-icon-user-active"></i> 
 							 {{dare.invitedUsers.length}}
 						 </span> 
-						<span class="info" style="margin-left: -1%;"> 
+						<span class="" style="margin-left: -1%;"> 
 							<i class="fa app-icon-speech-active"></i> 
 							{{dare.comments.length}}
 						</span> 
-						<span class="info" style="margin-left: -1%;"> 
+						<span class="" style="margin-left: -1%;"> 
 							<i class="fa app-icon-love-active"></i> 
 							{{dare.likes}}
 						</span>
+						</div>
 					 </div> 
 					<img src="../img/map.png" class="googleMap"/>
 				</div>
@@ -65,8 +67,8 @@
 							flow-name="uploader.flow" 
 							flow-files-added="FileService.processFiles($files)"> 
 					<div class="row"  >  
-						<div class="col "> 
-							<button type= "button"  class="button fileContainer " flow-btn type="file"> 
+						<div class="col"> 
+							<button type= "button"  class="button fileContainer " flow-btn type="file" style="left:40%"> 
 								<i class="ion-ios-camera-outline"></i> 
 								<span ng-show= " data.fileData.length > 0" class="badge badge-positive">{{data.fileData.length}}</span> 
 							</button> 
@@ -75,7 +77,7 @@
 				</div> 
 				<!-- END OF STRUCTURE --> 
 			</ion-item> 
-			 <ion-item class="item">
+		<!-- 	 <ion-item class="item">
 					<section class="video" ng-video>
 							<img src="../img/Activities/3.jpg"style=" height: 10em; width: 100%;"> </div> 
 					</section>
@@ -88,14 +90,14 @@
 				<button class="button-new" href="" ng-click="callDareModal(user._id)">Предизвикай </button>
 				<a href="" class="us fa-chat">
 				</a>
-			</ion-item>
+			</ion-item> -->
 			 <h3>Доказани</h3> 
 			<ion-item class="row item"> 
 				<div class="col" style="background-color: #177794;"ng-repeat="prove in dare.proves" > 
 					<video ng-if="prove.fileType == 'video'"controls="controls" > 
 						<source ng-src="{{prove.fileString}}" /> 
 					</video> 
-					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}"/> 
+					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}" ng-click="openFile(prove._id)"/> 
 				</div> 
 			</ion-item> 
 			 <h3>Сподели</h3> 

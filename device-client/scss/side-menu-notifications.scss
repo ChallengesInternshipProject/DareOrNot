@@ -12,14 +12,32 @@
 		  ion-item{
 			@include list-item-style;
 			border-left: 1px solid #fff;
-			.p, i{
+			.p {
 				@include left-minutes-style;
 				 }
+			i{
+				color: #ffb400;
+				margin: 1%;
+				margin-top: -3%;
+				margin-right: 20%;
+				padding: 1%;
+				width: 1em;
+				font-size: 1em;
+				}
 			div	{
 				@include div-style;	 
 				}
 			div p{
 				@include paragraf-style;
+				span {
+						float: left;
+						margin-top: -2%;
+						margin-bottom: -2%;
+						margin-left: 0em;
+						position: relative;
+						display: inline-block;
+						z-index: 10;
+					}
 				}
 			/* CSS imges */
 			.img{
@@ -39,15 +57,18 @@
 		}
 	@media screen and (min-width: $tablet-width){
 			h3, h2 {font-size: 2em;}
-			span{@include span-position-width; 
-				font-size: 1em;
+			span{@include span-position-width;
 				}
 			.list{
-				ion-item{
+				ion-item{border-left: 2px solid #fff;
 					.p{font-size:1.5em;}
 					i{margin: -6%;
 					  font-size:2em;}
-				div p {width: 30%;font-size:1.5em;}
+				div p {width: 50%;font-size:1.5em;
+					span{margin-top: -1%;
+						margin-left: 2em;
+							}
+					}
 				}
 			}
 		}
@@ -61,7 +82,11 @@
 					.p{font-size:1.5em;}
 					i{margin: -2%;
 					  font-size:2.5em;}
-					div p {width: 30%;}
+					div p {width: 50%;
+							span{margin-top: -1%;
+								margin-left: 2em;
+								}
+							}
 					.img{
 						img{	
 							width: 12em;
