@@ -9826,199 +9826,232 @@ a.button {
   background: url("../img/icons/user1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-fav {
   background: url("../img/icons/fav.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-fav-active {
   background: url("../img/icons/fav1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-friends {
   background: url("../img/icons/friends.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-friends-active {
   background: url("../img/icons/friends1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-event {
   background: url("../img/icons/event.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-event-active {
   background: url("../img/icons/event1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-chat {
   background: url("../img/icons/chat.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-chat-active {
   background: url("../img/icons/chat1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-stat {
   background: url("../img/icons/stat.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-stat-active {
   background: url("../img/icons/stat1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-speech {
   background: url("../img/icons/speech.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-speech-active {
   background: url("../img/icons/speech1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-out {
   background: url("../img/icons/out.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-out-active {
   background: url("../img/icons/out1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-settings {
   background: url("../img/icons/settings.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-settings-active {
   background: url("../img/icons/settings1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-history {
   background: url("../img/icons/history.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-history-active {
   background: url("../img/icons/history1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-love {
   background: url("../img/icons/love.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-love-active {
   background: url("../img/icons/love1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-notification {
   background: url("../img/icons/notification.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-notification-active {
   background: url("../img/icons/notification1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-activities {
   background: url("../img/icons/activities.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-activities-active {
   background: url("../img/icons/activities1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-categories {
   background: url("../img/icons/categories.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-categories-active {
   background: url("../img/icons/categories1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-left {
   background: url("../img/icons/left.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-left-active {
   background: url("../img/icons/left1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-right {
   background: url("../img/icons/right.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-right-active {
   background: url("../img/icons/right1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-time {
   background: url("../img/icons/time.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 .app-icon-time-active {
   background: url("../img/icons/time1.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50% 50%; }
+  background-size: 50% 50%;
+  display: inline-block; }
 
 /*some helpful varibals*/
 /*heder side- menue*/
@@ -10644,17 +10677,70 @@ a.button {
   /*gray*/
   color: #03b2d1;
   line-height: 1%;
-  color: #16b8d4; }
+  color: #16b8d4;
+  /* WebKit browsers */
+  /* upload photo */
+  /* Example stylistic flourishes */ }
   .newdare h1, .newdare h3 {
     color: #16b8d4; }
   .newdare .continue {
     margin-top: 30%; }
   .newdare .row {
-    /*category challenges */
-    /* WebKit browsers */
-    /* upload photo */
-    /* Example stylistic flourishes */ }
+    /*category challenges */ }
     .newdare .row .col {
+      display: inline-block; }
+      .newdare .row .col .contin {
+        margin-top: 33%;
+        font-size: 12px; }
+    .newdare .row div .challeng .list {
+      margin: 1%;
+      padding: 1%;
+      width: 100%;
+      display: inline-block;
+      font-size: 1em; }
+      .newdare .row div .challeng .list .item {
+        display: inline-block;
+        width: 45%;
+        font-size: 1em;
+        padding: 0.5%;
+        border: none;
+        text-align: center;
+        background: transparent; }
+        .newdare .row div .challeng .list .item :nth-child(1) {
+          background: #3b6783;
+          color: #fff;
+          width: 100%;
+          font-size: 0.7em;
+          text-align: center;
+          margin-top: 1%;
+          padding-top: 10%;
+          padding-bottom: 10%;
+          padding-left: 1%;
+          padding-right: 1%;
+          word-break: keep-all; }
+        .newdare .row div .challeng .list .item :nth-child(2) {
+          color: #fff;
+          width: 100%; }
+    .newdare .row .list-inset {
+      width: 100%;
+      background: transparent; }
+    .newdare .row label .item {
+      margin-top: 5%; }
+    .newdare .row .vh {
+      margin-top: 1vh;
+      width: 95%;
+      min-height: 3em;
+      border-color: #8dc3cd;
+      font-size: 1.5em; }
+      .newdare .row .vh .butt {
+        width: 50%;
+        margin: 1%;
+        font-size: 1.5em;
+        text-transform: uppercase; }
+  .newdare .responsive {
+    display: inline; }
+    .newdare .responsive .col {
+      width: 30%;
       display: inline-block; }
       .newdare .row .col .contin {
         margin-top: 33%;
@@ -10744,37 +10830,22 @@ a.button {
       margin-top: 10%;
       margin-bottom: 10%;
       overflow: hidden;
-      position: relative;
-      font-size: 2em;
-      box-sizing: border-box; }
-      .newdare .row .fileContainer i {
-        margin: 1%;
-        padding: 0.5em;
-        background: #fff;
-        color: orange;
-        font-size: 2em;
-        border-radius: 50%;
-        display: inline-block; }
-      .newdare .row .fileContainer input[type="file"] {
-        display: none;
-        overflow: hidden;
-        position: relative; }
-
-@media screen and (min-height: 768px) {
-  .row .col {
-    display: inline-block; }
-    .row .col .contin {
-      margin-top: 9%;
-      font-size: 2em; } }
+      position: relative; }
+  @media screen and (min-height: 768px) {
+    .newdare .row .col {
+      display: inline-block; }
+      .newdare .row .col .contin {
+        margin-top: 9%;
+        font-size: 2em; } }
 
 @media screen and (min-height: 768px) and (min-height: 1080px) {
-  .responsive {
+  .newdare .responsive {
     display: inline; }
-  .row .col .contin {
+  .newdare .row .col .contin {
     margin-top: 4%; }
-  .fileContainer {
+  .newdare .fileContainer {
     font-size: 4em; }
-  .continue {
+  .newdare .continue {
     margin-top: 18%; } }
 
 /*some helpful varibals*/
@@ -11620,7 +11691,7 @@ a.button {
         min-width: 2.5em;
         height: 2.5em;
         margin-top: 1.5em;
-        background-size: 88% 90%; }
+        background-size: 75% 75%; }
     .TimeLineCard .footer .info {
       display: inline-flex;
       width: 10%;
@@ -11643,11 +11714,11 @@ a.button {
         min-width: 5em;
         min-height: 5em; }
   .TimeLineCard .googleMap {
-    width: 40%;
+    width: 47%;
     display: inline;
     height: 24.6vh;
     float: right;
-    margin-top: -46%; }
+    margin-top: -57%; }
 
 @media only screen and (device-width: 768px) {
   .TimeLineCard {
@@ -11849,6 +11920,8 @@ a.button {
       width: 83%;
       border-color: #8dc3cd;
       float: right; }
+  .single .TimeLineCard div .slider-pager {
+    display: none; }
   .single .TimeLineCard .navigation .title {
     left: 1em; }
   .single .TimeLineCard .footer {
@@ -11864,29 +11937,32 @@ a.button {
     display: block;
     /* avatar settings, NAME*/ }
     .single .TimeLineCard .footer span {
-      width: 16%;
-      margin-bottom: 2%; }
+      width: 20%;
+      margin-bottom: 1em; }
       .single .TimeLineCard .footer span h5 {
         font-size: 1em; }
       .single .TimeLineCard .footer span .fa {
         min-width: 2.5em;
         height: 2.5em;
         margin-top: 1.5em;
-        background-size: 88% 90%; }
+        background-size: 75% 75%; }
     .single .TimeLineCard .footer img {
       margin-top: -15%;
       margin-left: -6%;
       min-width: 5em;
       min-height: 5em; }
-    .single .TimeLineCard .footer .info {
-      display: inline-flex;
-      width: 10%;
-      height: 5em;
-      margin-top: 0%;
-      font-size: 10px;
-      color: #04a4c3;
-      margin: 1%;
-      margin-right: 3%; }
+    .single .TimeLineCard .footer .googleMap {
+      margin-right: 5em;
+      margin-top: 5em; }
+      .single .TimeLineCard .footer .googleMap .badge {
+        display: inline-flex;
+        width: 10%;
+        height: 5em;
+        margin-top: 0%;
+        font-size: 10px;
+        color: #04a4c3;
+        margin: 1%;
+        margin-right: 3%; }
     .single .TimeLineCard .footer .ng-binding {
       color: #04a4c3;
       font-size: 10px;
@@ -11901,6 +11977,9 @@ a.button {
         margin-left: -4%;
         min-width: 5em;
         min-height: 5em; }
+  .single .TimeLineCard .notice {
+    display: -webkit-inline-box;
+    width: 88%; }
   .single h3 {
     position: relative;
     display: inline-block;
@@ -11997,97 +12076,15 @@ a.button {
           font-size: 0.7em;
           margin-right: -5%; }
       .single .TimeLineCard .googleMap {
-        width: 58%;
+        width: 50%;
         display: inline;
         height: 24.6vh;
         float: right;
-        margin-top: -33%; } }
-  @media screen and (min-width: 1920px) {
-    .single .single {
-      background: #e8edf0;
-      background-size: 100% 100%;
-      color: #03b2d1;
-      font-size: 1em;
-      margin: 0;
-      padding: 1%;
-      width: 100%;
-      display: block;
-      position: relative;
-      /*timeline settings */ }
-      .single .single .item {
-        background: transparent;
-        border: none; }
-        .single .single .item label {
-          margin-top: 1em;
-          width: 83%;
-          border-color: #8dc3cd;
-          float: right; }
-      .single .single .TimeLineCard {
-        min-height: 30em;
-        max-height: 30em; }
-        .single .single .TimeLineCard .footer {
-          margin-top: 3%;
-          font-size: 3em;
-          /* avatar settings, NAME*/ }
-          .single .single .TimeLineCard .footer span {
-            width: 16%; }
-            .single .single .TimeLineCard .footer span .fa {
-              min-width: 2.5em;
-              height: 2.5em;
-              margin-top: 1.5em;
-              background-size: 88% 90%; }
-          .single .single .TimeLineCard .footer img {
-            margin-top: -20%;
-            margin-left: 2%;
-            min-width: 6.5em;
-            min-height: 6.5em; }
-          .single .single .TimeLineCard .footer .info {
-            font-size: 0.5em; }
-          .single .single .TimeLineCard .footer .ng-binding {
-            font-size: 1em; }
-            .single .single .TimeLineCard .footer .ng-binding h3, .single .single .TimeLineCard .footer .ng-binding i {
-              color: #ffb400;
-              text-transform: uppercase; }
-            .single .single .TimeLineCard .footer .ng-binding .profil-avatar {
-              margin-top: -10%;
-              margin-left: -4%;
-              min-width: 5em;
-              min-height: 5em; }
-        .single .single .TimeLineCard .googleMap {
-          margin-top: -22%;
-          height: 30vh; }
-      .single .single h3 {
-        font-size: 4em; }
-      .single .single .button-new {
-        height: 5em;
-        font-size: 2em; }
-      .single .single .col {
-        min-height: 20.5em; }
-        .single .single .col img {
-          width: 10em; }
-        .single .single .col h6 i {
-          font-size: 2em; }
-        .single .single .col h6, .single .single .col h7 {
-          font-size: 3em; }
-        .single .single .col h4, .single .single .col h2 {
-          font-size: 5em;
-          top: -2em;
-          left: 4em; }
-        .single .single .col h7 {
-          font-size: 4.5em;
-          top: -1em;
-          left: 4em; }
-      .single .single .fa {
-        border-radius: 50%;
-        width: 3em;
-        height: 3em;
-        color: #fff;
-        margin: 1%;
-        padding: 1%; }
-      .single .single .button-block {
-        margin: 2%;
-        padding: 2%;
-        font-size: 5em; } }
+        margin-top: -38%; }
+      .single .TimeLineCard .notice {
+        display: -webkit-inline-box;
+        width: 50%;
+        margin-left: -45%; } }
   @media screen and (min-height: 1080px) {
     .single .single {
       background: #e8edf0;
@@ -12116,8 +12113,10 @@ a.button {
           .single .single .TimeLineCard .content img {
             height: 35em; }
         .single .single .TimeLineCard .footer {
-          margin-top: 3%;
-          font-size: 3em;
+          margin-top: 6em;
+          padding: 1%;
+          margin-top: 7%;
+          width: 50%;
           /* avatar settings, NAME*/ }
           .single .single .TimeLineCard .footer span {
             width: 16%; }
@@ -12125,14 +12124,15 @@ a.button {
               min-width: 2.5em;
               height: 2.5em;
               margin-top: 1.5em;
-              background-size: 88% 90%; }
+              background-size: 75% 75%; }
           .single .single .TimeLineCard .footer img {
-            margin-top: -20%;
-            margin-left: 2%;
-            min-width: 4.5em;
-            min-height: 4.5em; }
+            margin-top: -34%;
+            margin-left: 1%;
+            min-width: 7em;
+            min-height: 7em; }
           .single .single .TimeLineCard .footer .info {
-            font-size: 0.5em; }
+            font-size: 0.5em;
+            display: inline; }
           .single .single .TimeLineCard .footer .ng-binding {
             font-size: 1em;
             margin-top: 2%; }
@@ -12145,8 +12145,9 @@ a.button {
               min-width: 5em;
               min-height: 5em; }
         .single .single .TimeLineCard .googleMap {
-          margin-top: -40%;
-          height: 17.6vh; } }
+          width: 40%;
+          height: 24.6vh;
+          margin-top: -10%; } }
 
 /*some helpful varibals*/
 /*heder side- menue*/

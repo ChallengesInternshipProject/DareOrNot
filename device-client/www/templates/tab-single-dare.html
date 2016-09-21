@@ -24,7 +24,7 @@
 							<img ng-src="../img/adam.jpg"/> 
 						 </a> 
 						<span class="ng-binding" style="width:100%; margin-left: 15%; margin-top: -20%;">  
-							 <h1 style="font-size:1.5em;">  {{dare._creator.name}} </h1>
+							 <h1 style="font-size:1.5em;    margin-left: -15%;">  {{dare._creator.name}} </h1>
 						</span>
 						<span class="ng-binding">  
 							<i class="ion-ios-location-outline"></i> 
@@ -38,18 +38,20 @@
 							<h5>Приключва:</h5> 
 							<span am-time-ago="dare.endDate"></span>
 						</span>
-						 <span class="info" style="margin-left: -1%;"> 
+						<div  class="notice">
+						<span class="" style="margin-left: -1%;"> 
 							<i class="fa app-icon-user-active"></i> 
 							 {{dare.invitedUsers.length}}
 						 </span> 
-						<span class="info" style="margin-left: -1%;"> 
+						<span class="" style="margin-left: -1%;"> 
 							<i class="fa app-icon-speech-active"></i> 
 							{{dare.comments.length}}
 						</span> 
-						<span class="info" style="margin-left: -1%;"> 
+						<span class="" style="margin-left: -1%;"> 
 							<i class="fa app-icon-love-active"></i> 
 							{{dare.likes}}
 						</span>
+						</div>
 					 </div> 
 					<img src="../img/map.png" class="googleMap"/>
 				</div>
@@ -65,8 +67,8 @@
 							flow-name="uploader.flow" 
 							flow-files-added="FileService.processFiles($files)"> 
 					<div class="row"  >  
-						<div class="col "> 
-							<button type= "button"  class="button fileContainer " flow-btn type="file"> 
+						<div class="col"> 
+							<button type= "button"  class="button fileContainer " flow-btn type="file" style="left:40%"> 
 								<i class="ion-ios-camera-outline"></i> 
 								<span ng-show= " data.fileData.length > 0" class="badge badge-positive">{{data.fileData.length}}</span> 
 							</button> 
