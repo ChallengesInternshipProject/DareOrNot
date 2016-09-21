@@ -38,12 +38,9 @@
 
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
-   <i class="ion-ios-reverse-camera-outline" style=""></i>
-  
+ <i class="ion-ios-reverse-camera-outline" style=""></i>
     <label class="item-input-wrapper input-form-submit">
-    <form ng-submit="emit(message)">
-          <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="message" on-focus="inputUp()" on-blur="inputDown()"  />
-    </form>
+      <input type="text" placeholder="Type your message" on-return="sendMessage(); closeKeyboard()" ng-model="message" on-focus="inputUp()" on-blur="inputDown()" ng-submit="emit(message)" />
     </label>
 
     <!--don't delete the button it is hidden on purpose-->

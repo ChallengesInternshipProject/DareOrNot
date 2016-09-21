@@ -19,41 +19,6 @@ $dark:                            #444 !default;
   background-color: #012438 !important;
   border-color: #012438 !important; }
 
-.view-container {
-  background-color: #012438;
-  background-image: url(../img/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%; }
-
-.content-list {
-  background-color: transperent; }
-
-.signup.modal,
-.login-view.modal {
-  background-color: #012438;
-  background-image: url(../img/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%; }
-
-.login-view .content-list section.list {
-  height: 70%; }
-
-@media (min-width: 680px) {
-  .login-view.modal {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent; }
-  .login-view .content-list .logo {
-    min-height: 27vh !important; }
-  .signup.modal {
-    top: 7%;
-    bottom: 7%; } }
-
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -12026,107 +11991,124 @@ a.button {
     color: #fff;
     margin: 1%;
     padding: 1%; }
-
-@media only screen and (device-height: 1080px) {
-  .single .TimeLineCard {
-    min-height: 35em;
-    max-height: 35em; }
-    .single .TimeLineCard .content {
-      min-height: 35em; }
-      .single .TimeLineCard .content img {
-        height: 35em; }
-    .single .TimeLineCard .footer {
-      margin-top: 6em;
-      padding: 1%;
-      margin-top: 7%;
-      width: 50%;
-      /* avatar settings, NAME*/ }
-      .single .TimeLineCard .footer span {
-        width: 16%; }
-        .single .TimeLineCard .footer span .fa {
-          min-width: 2.5em;
-          height: 2.5em;
-          margin-top: 1.5em;
-          background-size: 75% 75%; }
-      .single .TimeLineCard .footer img {
-        margin-top: -34%;
-        margin-left: 1%;
-        min-width: 7em;
-        min-height: 7em; }
-      .single .TimeLineCard .footer .info {
-        font-size: 0.5em;
-        display: inline; }
-      .single .TimeLineCard .footer .ng-binding {
-        font-size: 1em;
-        margin-top: 2%; }
-        .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
-          color: #ffb400;
-          text-transform: uppercase; }
-        .single .TimeLineCard .footer .ng-binding .profil-avatar {
-          margin-top: -10%;
-          margin-left: -4%;
-          min-width: 5em;
-          min-height: 5em; }
-    .single .TimeLineCard .googleMap {
-      width: 40%;
-      height: 24.6vh;
-      margin-top: -10%; } }
-
-@media only screen and (device-width: 768px) {
-  .single .TimeLineCard {
-    min-height: 20em;
-    max-height: 30em; }
-    .single .TimeLineCard .content {
-      min-height: 20em; }
-      .single .TimeLineCard .content img {
-        height: 20em; }
-    .single .TimeLineCard .navigation {
-      font-size: 1.1em; }
-      .single .TimeLineCard .navigation .arrows-right {
-        margin-top: -20%; }
-      .single .TimeLineCard .navigation .arrows-left {
-        margin-top: -20%; }
-      .single .TimeLineCard .navigation .title {
-        top: -8em;
-        font-size: 2em;
-        left: 1em; }
-    .single .TimeLineCard .footer {
-      margin-top: -1% !important;
-      margin-left: 0%;
-      min-width: 6em;
-      min-height: 6em;
-      margin-top: 4% !important; }
-      .single .TimeLineCard .footer span {
-        width: 50%; }
-      .single .TimeLineCard .footer .ng-binding {
-        font-size: 1em;
-        margin-left: 33%;
-        margin-top: 0%; }
-        .single .TimeLineCard .footer .ng-binding .profil-avatar {
-          margin-top: -8%;
+  @media only screen and (device-width: 768px) {
+    .single .TimeLineCard {
+      min-height: 20em;
+      max-height: 30em; }
+      .single .TimeLineCard .content {
+        min-height: 20em; }
+        .single .TimeLineCard .content img {
+          height: 20em; }
+      .single .TimeLineCard .navigation {
+        font-size: 1.1em; }
+        .single .TimeLineCard .navigation .arrows-right {
+          margin-top: -20%; }
+        .single .TimeLineCard .navigation .arrows-left {
+          margin-top: -20%; }
+        .single .TimeLineCard .navigation .title {
+          top: -8em;
+          font-size: 2em;
+          left: 1em; }
+      .single .TimeLineCard .footer {
+        margin-top: -1% !important;
+        margin-left: 0%;
+        min-width: 6em;
+        min-height: 6em;
+        margin-top: 4% !important; }
+        .single .TimeLineCard .footer span {
+          width: 50%; }
+        .single .TimeLineCard .footer .ng-binding {
+          font-size: 1em;
+          margin-left: 33%;
+          margin-top: 0%; }
+          .single .TimeLineCard .footer .ng-binding .profil-avatar {
+            margin-top: -8%;
+            margin-left: 0%;
+            min-width: 10em;
+            min-height: 10em; }
+        .single .TimeLineCard .footer img {
+          margin-top: -30%;
           margin-left: 0%;
           min-width: 10em;
           min-height: 10em; }
-      .single .TimeLineCard .footer img {
-        margin-top: -30%;
-        margin-left: 0%;
-        min-width: 10em;
-        min-height: 10em; }
-      .single .TimeLineCard .footer .info {
-        width: 25%;
-        height: 4em;
-        font-size: 0.7em;
-        margin-right: -5%; }
-    .single .TimeLineCard .googleMap {
-      width: 50%;
-      display: inline;
-      height: 24.6vh;
-      float: right;
-      margin-top: -38%; }
-    .single .TimeLineCard .notice {
-      display: -webkit-inline-box;
-      width: 50%;
-      margin-left: -45%; } }
+        .single .TimeLineCard .footer .info {
+          width: 25%;
+          height: 4em;
+          font-size: 0.7em;
+          margin-right: -5%; }
+      .single .TimeLineCard .googleMap {
+        width: 50%;
+        display: inline;
+        height: 24.6vh;
+        float: right;
+        margin-top: -38%; }
+      .single .TimeLineCard .notice {
+        display: -webkit-inline-box;
+        width: 50%;
+        margin-left: -45%; } }
+  @media only screen and (device-width: 1080px) {
+    .single .single {
+      background: #e8edf0;
+      background-size: 100% 100%;
+      color: #03b2d1;
+      font-size: 1em;
+      margin: 0;
+      padding: 1%;
+      width: 100%;
+      display: block;
+      position: relative;
+      /*timeline settings */ }
+      .single .single .item {
+        background: transparent;
+        border: none; }
+        .single .single .item label {
+          margin-top: 1em;
+          width: 83%;
+          border-color: #8dc3cd;
+          float: right; }
+      .single .single .TimeLineCard {
+        min-height: 35em;
+        max-height: 35em; }
+        .single .single .TimeLineCard .content {
+          min-height: 35em; }
+          .single .single .TimeLineCard .content img {
+            height: 35em; }
+        .single .single .TimeLineCard .footer {
+          margin-top: 6em;
+          padding: 1%;
+          margin-top: 7%;
+          width: 50%;
+          /* avatar settings, NAME*/ }
+          .single .single .TimeLineCard .footer span {
+            width: 16%; }
+            .single .single .TimeLineCard .footer span .fa {
+              min-width: 2.5em;
+              height: 2.5em;
+              margin-top: 1.5em;
+              background-size: 75% 75%; }
+          .single .single .TimeLineCard .footer img {
+            margin-top: -34%;
+            margin-left: 1%;
+            min-width: 7em;
+            min-height: 7em; }
+          .single .single .TimeLineCard .footer .info {
+            font-size: 0.5em;
+            display: inline; }
+          .single .single .TimeLineCard .footer .ng-binding {
+            font-size: 1em;
+            margin-top: 2%; }
+            .single .single .TimeLineCard .footer .ng-binding h3, .single .single .TimeLineCard .footer .ng-binding i {
+              color: #ffb400;
+              text-transform: uppercase; }
+            .single .single .TimeLineCard .footer .ng-binding .profil-avatar {
+              margin-top: -10%;
+              margin-left: -4%;
+              min-width: 5em;
+              min-height: 5em; }
+        .single .single .TimeLineCard .googleMap {
+          width: 40%;
+          height: 24.6vh;
+          margin-top: -10%; } }
 
 /*some helpful varibals*/
 /*heder side- menue*/

@@ -6,11 +6,7 @@
 					<div class="content">
 						<ion-slide-box >   
 							<ion-slide ng-repeat='picture in dare.pictures'>   
-<<<<<<< HEAD
 								<img ng-src="{{picture.fileString}}" alt="" >   
-=======
-								<img ng-src="{{picture.fileString}}" alt="" ng-click="openFile2(picture._id)" >   
->>>>>>> master_css_rework
 							</ion-slide>  
 						</ion-slide-box>  
 					</div>
@@ -81,11 +77,7 @@
 				</div> 
 				<!-- END OF STRUCTURE --> 
 			</ion-item> 
-<<<<<<< HEAD
 			 <ion-item class="item">
-=======
-		<!-- 	 <ion-item class="item">
->>>>>>> master_css_rework
 					<section class="video" ng-video>
 							<img src="../img/Activities/3.jpg"style=" height: 10em; width: 100%;"> </div> 
 					</section>
@@ -98,22 +90,14 @@
 				<button class="button-new" href="" ng-click="callDareModal(user._id)">Предизвикай </button>
 				<a href="" class="us fa-chat">
 				</a>
-<<<<<<< HEAD
 			</ion-item>
-=======
-			</ion-item> -->
->>>>>>> master_css_rework
 			 <h3>Доказани</h3> 
 			<ion-item class="row item"> 
 				<div class="col" style="background-color: #177794;"ng-repeat="prove in dare.proves" > 
 					<video ng-if="prove.fileType == 'video'"controls="controls" > 
 						<source ng-src="{{prove.fileString}}" /> 
 					</video> 
-<<<<<<< HEAD
 					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}"/> 
-=======
-					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}" ng-click="openFile(prove._id)"/> 
->>>>>>> master_css_rework
 				</div> 
 			</ion-item> 
 			 <h3>Сподели</h3> 

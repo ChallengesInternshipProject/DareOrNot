@@ -166,53 +166,38 @@ angular.module('starter').config(function (
 		})
 		.state('app.home', {
 			url: '/home',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-home.html',
-					controller: 'HomeCtrl',
-					resolve: {
-						UserResolver: ['UserService', function (UserService) {
-							return UserService.getAllUsers().then(function (data) {
-								return data
-							})
-						}]
-					}
+			templateUrl: 'templates/tab-home.html',
+			controller: 'HomeCtrl',
+			resolve: {
+					UserResolver: ['UserService', function (UserService) {
+						return UserService.getAllUsers().then(function (data) {
+							return data
+						})
+					}]
 				}
-			}
 		})
 		
 		.state('app.search', {
 			url: '/search',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-search.html',
-					controller: 'SearchCtrl'
-				}
-			}
+			templateUrl: 'templates/tab-search.html',
+			controller: 'SearchCtrl'
 		})
 
 		.state('app.map', {
 			url: '/map',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-gMaps.html',
-					controller: 'GoogleMapCtrl'
-				}
-			}
+			templateUrl: 'templates/tab-gMaps.html',
+			controller: 'GoogleMapCtrl'
+			// controller: 'HomeCtrl'
 		})
 
 		.state('app.calendar', {
 			url: '/calendar',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-calendar.html',
-					controller: 'CalendarCtrl',
-				}
-			}
+			templateUrl: 'templates/tab-calendar.html',
+			controller: 'CalendarCtrl',
+			// controller: 'HomeCtrl'
 		})
 		.state('app.timeline', {
 			url: '/timeline',
-<<<<<<< HEAD
 			templateUrl: 'templates/tab-timeline.html',
 			controller: 'TimelineCtrl',
 			resolve : {
@@ -221,42 +206,24 @@ angular.module('starter').config(function (
 							return DareService.list()
 					}
 				]
-=======
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-timeline.html',
-					controller: 'TimelineCtrl',
-				}
-			},
-			resolve: {
-				isAuthenticated: isAuthenticated,
->>>>>>> master_css_rework
 			}
 		})
 		.state('app.categories', {
 			url: '/categories',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-categories.html',
-					controller: 'CategoriesCtrl'
-				}
-			}
+			templateUrl: 'templates/tab-categories.html',
+			controller: 'CategoriesCtrl'
 		})
 		.state('app.history', {
 			url: '/history',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/_app/history.html',
-					controller: 'HistoryCtrl'
-				}
-			}
+			templateUrl: 'templates/_app/history.html',
+			controller: 'HistoryCtrl'
 		})
 		.state('app.funny',{
 			url: '/funny',
+			templateUrl: 'templates/tab-timeline.html',
 			params:{
 				category:1
 			},
-<<<<<<< HEAD
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
@@ -264,21 +231,15 @@ angular.module('starter').config(function (
 							return DareService.list({category:1});
 					}
 				]
-=======
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-timeline.html',
-					controller: 'TimelineCtrl',
-				}
->>>>>>> master_css_rework
 			}
 		})
 		.state('app.business',{
 			url: '/business',
+			templateUrl: 'templates/tab-timeline.html',
+			controller: 'TimelineCtrl',
 			params:{
 				category:2
 			},
-<<<<<<< HEAD
 			resolve : {
 				DaresResolver : [
 					'DareService', '$localStorage', '$ionicLoading' , function(DareService){
@@ -286,22 +247,13 @@ angular.module('starter').config(function (
 					}
 				]
 			}
-=======
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-timeline.html',
-					controller: 'TimelineCtrl',
-				}
-			}
-		
->>>>>>> master_css_rework
 		})
 		.state('app.price',{
 			url: '/price',
+			templateUrl: 'templates/tab-timeline.html',
 			params:{
 				category:3
 			},
-<<<<<<< HEAD
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
@@ -309,21 +261,14 @@ angular.module('starter').config(function (
 							return DareService.list({category:3})
 					}
 				]
-=======
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-timeline.html',
-					controller: 'TimelineCtrl',
-				}
->>>>>>> master_css_rework
 			}
 		})
 		.state('app.charity',{
 			url: '/charity',
+			templateUrl: 'templates/tab-timeline.html',
 			params:{
 				category:4
 			},
-<<<<<<< HEAD
 			controller: 'TimelineCtrl',
 			resolve : {
 				DaresResolver : [
@@ -331,192 +276,61 @@ angular.module('starter').config(function (
 						return DareService.list({category:4})
 					}
 				]
-=======
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-timeline.html',
-					controller: 'TimelineCtrl',
-				}
->>>>>>> master_css_rework
 			}
 		})
 		
 		.state('app.statistics', {
 			url: '/statistics',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-statistics.html',
-					controller: 'StatisticsCtrl'	
-				}
-			}
+			templateUrl: 'templates/tab-statistics.html',
+			controller: 'StatisticsCtrl'
 		})
 		.state('app.contacts', {
 			url: '/contacts',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-contacts.html',
-					controller: 'ContactsCtrl'
-				}
-			}
+			templateUrl: 'templates/tab-contacts.html',
+			controller: 'ContactsCtrl'
 		})
 		.state('app.newdare',{
 			url : '/newdare',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-new-dare.html',
-					controller: 'DareCtrl',
-					resolve: {
-						isAuthenticated: isAuthenticated,
-						FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.data._id, 'Accepted', "").then(function (data) {
-								return data
-							})
-						}
-					]}
+			templateUrl: 'templates/tab-new-dare.html',
+			controller: 'DareCtrl',
+			resolve: {
+				isAuthenticated: isAuthenticated,
+				FriendsResolver: ['UserService', '$localStorage', function (UserService, $localStorage) {
+					return UserService.getFriends($localStorage.user.data._id, 'Accepted', "").then(function (data) {
+						return data
+					})
 				}
-			}
+			]}
 		})
 
 		.state('app.chat',{
 			url : '/chat',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-chat.html',
-					controller: 'ChatCtrl'
-				}
-			}
+			templateUrl: 'templates/tab-chat.html',
+			controller: 'ChatCtrl'
 		})
 
 		.state('app.chat-details', {
 			url: '/chat/:userID',
-				views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-chat-detail.html',
-					controller: 'ChatDetailCtrl',
-				}
-			}
+			templateUrl: 'templates/tab-chat-detail.html',
+			controller: 'ChatDetailCtrl',
 		})
 		.state('activity',{
 			url : '/activity',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/side-menu/activity.html',
-					controller: 'ActivityCtrl',
-					resolve:{
-						notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
-							console.log("triggered");
-							return NotificationService.getAll($localStorage.user.data._id);
-						}]
-					}
-				}
+			templateUrl: 'templates/side-menu/activity.html',
+			 controller: 'ActivityCtrl',
+			resolve:{
+				notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
+					console.log("triggered");
+					return NotificationService.getAll($localStorage.user.data._id);
+				}]
 			}
 		})
-<<<<<<< HEAD
 	
-=======
-		.state('app.profile',{
-			url: '/profile',
-			views : {
-				"menuContent" : {
-					templateUrl: 'templates/side-menu/profile.html',
-					controller: 'ProfileCtrl',
-				}
-			}
-		})
-		.state('app.mydares',{
-			url: '/mydares',
-			params: {
-				title : {$ne : null},
-				description : { $ne : null},
-				endDate : {$gt : new Date()},
-				_creator :$localStorageProvider.get('user') ?$localStorageProvider.get('user').data._id : null ,
-			},
-			views : { 
-				'menuContent' : {
-					templateUrl: 'templates/tab-timeline.html',
-					controller: 'TimelineCtrl',
-				}
-			}
-		})
-		.state('friends', {
-			url: '/friends',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-friends.html',			
-				}
-			}
-		})
-		.state('friends.all', {
-			url: '/all',
-			views: {
-				'app-friends-all': {
-					templateUrl: 'templates/tab-friends-all.html',
-					controller: 'UsersCtrl',
-					resolve: {
-						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.data._id, 'Accepted', '').then(function (data) {
-								return data
-							})
-						}]
-					}
-				}
-			}
-		})
-		.state('friends.active', {
-			url: '/active',
-			views: {
-				'app-friends-active': {
-					templateUrl: 'templates/tab-friends-active.html',
-					controller: 'UsersCtrl',
-					resolve: {
-						friendsPromise: ['UserService', '$localStorage', function (UserService, $localStorage) {
-							return UserService.getFriends($localStorage.user.data._id, 'Accepted', '').then(function (data) {
-								return data
-							})
-						}]
-					}
-				}
-			}
-		})
-		.state('app.notifications',{
-			url : '/notifications',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/side-menu/notifications.html',
-					controller: 'ActivityCtrl',
-					resolve:{
-						notifications : ['NotificationService','$localStorage',function(NotificationService,$localStorage){
-							return NotificationService.getAll($localStorage.user.data._id);
-						}]
-					}
-				}
-			}
-		})
-		.state('app.settings',{
-			url : '/settings',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/side-menu/settings.html',
-				}
-			}
-			// controller: 'A'
-		})
-		.state('favorites',{
-			url : '/favorites',
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/side-menu/favorites.html',
-				}
-			}
-			// controller: 'A'
-		})
->>>>>>> master_css_rework
 		.state('app.dare',{
 			url : '/dare/:dareID',
 			params : {
 				dareID:null
 			},
-<<<<<<< HEAD
 			templateUrl: 'templates/tab-single-dare.html',
 			controller: 'SingeDareCtrl',
 			resolve : {
@@ -524,30 +338,14 @@ angular.module('starter').config(function (
 						return DareService.get($stateParams.dareID); 	
 					}
 				]
-=======
-			views : {
-				'menuContent' : {
-					templateUrl: 'templates/tab-single-dare.html',
-					controller: 'SingeDareCtrl',
-					 resolve : { 
-				        dare : [ 'DareService','$stateParams', function(DareService,$stateParams) { 
-				            return DareService.get($stateParams.dareID);    
-				          } 
-				        ] 
-				      } 
-				}
->>>>>>> master_css_rework
 			}
 		})
-		// if none of the above states are matched, use this as the fallback
-		$urlRouterProvider.otherwise('/login');
 
-		// .state('tab', {
-		// 	url: '/tab',
-		// 	abstract: true,
-		// 	templateUrl: 'tabs.html'
+		.state('tab', {
+			url: '/tab',
+			abstract: true,
+			templateUrl: 'tabs.html'
 
-<<<<<<< HEAD
 			// Each tab has its own nav history stack:
 		})
 		.state('tab.login', {
@@ -559,160 +357,151 @@ angular.module('starter').config(function (
 				}
 			}
 		})
-=======
-		// 	// Each tab has its own nav history stack:
-		// })
-		
->>>>>>> master_css_rework
 
-		// .state('tab.register', {
-		// 	url: '/register',
-		// 	views: {
-		// 		'tab-register': {
-		// 			templateUrl: 'templates/tab-register.html',
-		// 			controller: 'RegisterCtrl'
-		// 		}
-		// 	}
-		// })
+		.state('tab.register', {
+			url: '/register',
+			views: {
+				'tab-register': {
+					templateUrl: 'templates/tab-register.html',
+					controller: 'RegisterCtrl'
+				}
+			}
+		})
 
-		// .state('tab.users', {
-		// 	url: '/users',
-		// 	views: {
-		// 		'tab-users': {
-		// 			templateUrl: 'templates/tab-users.html',
-		// 			controller: 'UsersCtrl',
-		// 			resolve: {
-		// 				isAuthenticated: isAuthenticated
-		// 			}
-		// 		}
-		// 	}
+		.state('tab.users', {
+			url: '/users',
+			views: {
+				'tab-users': {
+					templateUrl: 'templates/tab-users.html',
+					controller: 'UsersCtrl',
+					resolve: {
+						isAuthenticated: isAuthenticated
+					}
+				}
+			}
+		})
+		.state('tab.user-details', {
+			url: '/user/:userID',
+			views: {
+				'tab-users': {
+					templateUrl: 'templates/tab-user-detail.html',
+					controller: 'UserDetailCtrl',
+					resolve: {
+						isAuthenticated: isAuthenticated
+					}
+				}
+			}
+		})
+		.state('tab.chat', {
+			url: '/chat',
+			views: {
+				'tab-chat': {
+					templateUrl: 'templates/tab-chat.html',
+					controller: 'ChatCtrl',
+					resolve: {
+						isAuthenticated: isAuthenticated
+					}
+				}
+			}
+		})
+		.state('tab.chat-details', {
+			url: '/chat/:userID',
+			views: {
+				'tab-chat': {
+					templateUrl: 'templates/tab-chat-detail.html',
+					controller: 'ChatDetailCtrl',
+					resolve: {
+						isAuthenticated: isAuthenticated
+					}
+				}
+			}
+		})
+		// .state('tab.map', {
+		//   url: '/map',
+		//   views: {
+		//     'tab-map': {
+		//       templateUrl: 'templates/tab-map.html',
+		//       controller: 'MapCtrl',
+		//       resolve: {
+		//         isAuthenticated: isAuthenticated
+		//       }
+		//     }
+		//   }
 		// })
-		// .state('tab.user-details', {
-		// 	url: '/user/:userID',
-		// 	views: {
-		// 		'tab-users': {
-		// 			templateUrl: 'templates/tab-user-detail.html',
-		// 			controller: 'UserDetailCtrl',
-		// 			resolve: {
-		// 				isAuthenticated: isAuthenticated
-		// 			}
-		// 		}
-		// 	}
-		// })
-		// .state('tab.chat', {
-		// 	url: '/chat',
-		// 	views: {
-		// 		'tab-chat': {
-		// 			templateUrl: 'templates/tab-chat.html',
-		// 			controller: 'ChatCtrl',
-		// 			resolve: {
-		// 				isAuthenticated: isAuthenticated
-		// 			}
-		// 		}
-		// 	}
-		// })
-		// .state('tab.chat-details', {
-		// 	url: '/chat/:userID',
-		// 	views: {
-		// 		'tab-chat': {
-		// 			templateUrl: 'templates/tab-chat-detail.html',
-		// 			controller: 'ChatDetailCtrl',
-		// 			resolve: {
-		// 				isAuthenticated: isAuthenticated
-		// 			}
-		// 		}
-		// 	}
-		// })
-		// // .state('tab.map', {
-		// //   url: '/map',
-		// //   views: {
-		// //     'tab-map': {
-		// //       templateUrl: 'templates/tab-map.html',
-		// //       controller: 'MapCtrl',
-		// //       resolve: {
-		// //         isAuthenticated: isAuthenticated
-		// //       }
-		// //     }
-		// //   }
-		// // })
-		// .state('tab.gMaps', {
-		// 	url: '/gMaps',
-		// 	views: {
-		// 		'tab-gMaps': {
-		// 			templateUrl: 'templates/tab-gMaps.html',
-		// 			controller: 'GoogleMapCtrl',
-		// 			// resolve: {
-		// 			//   isAuthenticated: isAuthenticated
-		// 			// }
-		// 		}
-		// 	}
-		// })
+		.state('tab.gMaps', {
+			url: '/gMaps',
+			views: {
+				'tab-gMaps': {
+					templateUrl: 'templates/tab-gMaps.html',
+					controller: 'GoogleMapCtrl',
+					// resolve: {
+					//   isAuthenticated: isAuthenticated
+					// }
+				}
+			}
+		})
 
-		// .state('tab.dare-list', {
-		// 	url: '/dare-list',
-		// 	views: {
-		// 		'tab-dare-list': {
-		// 			templateUrl: 'templates/tab-dare-list.html',
-		// 			controller: 'DareListCtrl',
-		// 			resolve: {
-		// 				isAuthenticated: isAuthenticated
-		// 			}
-		// 		}
-		// 	}
-		// })
+		.state('tab.dare-list', {
+			url: '/dare-list',
+			views: {
+				'tab-dare-list': {
+					templateUrl: 'templates/tab-dare-list.html',
+					controller: 'DareListCtrl',
+					resolve: {
+						isAuthenticated: isAuthenticated
+					}
+				}
+			}
+		})
 
 
-		// .state('tab.calendar', {
-		// 	url: '/calendar',
-		// 	views: {
-		// 		'tab-calendar': {
-		// 			templateUrl: 'templates/tab-calendar.html',
-		// 			controller: 'CalendarCtrl',
-		// 			resolve: {
-		// 				isAuthenticated: isAuthenticated
-		// 			}
-		// 		}
-		// 	}
-		// })
+		.state('tab.calendar', {
+			url: '/calendar',
+			views: {
+				'tab-calendar': {
+					templateUrl: 'templates/tab-calendar.html',
+					controller: 'CalendarCtrl',
+					resolve: {
+						isAuthenticated: isAuthenticated
+					}
+				}
+			}
+		})
 
-		// .state('tab.home', {
-		// 	url: '/home',
-		// 	views: {
-		// 		'tab-home': {
-		// 			templateUrl: 'templates/tab-home.html',
-		// 			controller: 'HomeCtrl'
-		// 		}
+		.state('tab.home', {
+			url: '/home',
+			views: {
+				'tab-home': {
+					templateUrl: 'templates/tab-home.html',
+					controller: 'HomeCtrl'
+				}
 
-		// 	}
-		// })
-		// .state('tab.walkthrough', {
-		// 	url: '/walkthrough',
-		// 	views: {
-		// 		'tab-walkthrough': {
-		// 			templateUrl: 'templates/tab-walkthrough.html',
-		// 			controller: 'CardsCtrl'
-		// 		}
-		// 	}
-		// })
+			}
+		})
+		.state('tab.walkthrough', {
+			url: '/walkthrough',
+			views: {
+				'tab-walkthrough': {
+					templateUrl: 'templates/tab-walkthrough.html',
+					controller: 'CardsCtrl'
+				}
+			}
+		})
 
-		// .state('tab.landing', {
-		// 	url: '/landing',
-		// 	views: {
-		// 		'tab-landing': {
-		// 			templateUrl: 'templates/tab-landing.html'
-		// 			// controller: 'CategoriesCtrl'
-		// 		}
-		// 	}
-		// });
+		.state('tab.landing', {
+			url: '/landing',
+			views: {
+				'tab-landing': {
+					templateUrl: 'templates/tab-landing.html'
+					// controller: 'CategoriesCtrl'
+				}
+			}
+		});
 
 
 
-<<<<<<< HEAD
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/home');
-=======
-	
->>>>>>> master_css_rework
 
 
 });
