@@ -7,10 +7,10 @@
 			pulling-text="Pull to refresh..."
 			on-refresh="doRefresh()">
 		</ion-refresher>
-		<div ng-hide="dares.length > 0">
-		<div class="">
-				<h1 class="title">Няма Предизвикателства</h1>
-		</div>
+		<div ng-show="dares.length < 1">
+			<div class="">
+					<h1 class="title">Няма Предизвикателства</h1>
+			</div>
 		</div>
 		<div class="list card" ng-repeat="dare in dares">
 			<div class="item item-image" ng-include src="'templates/div-timelineCard.html'"></div>

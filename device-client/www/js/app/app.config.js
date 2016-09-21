@@ -270,14 +270,6 @@ angular.module('starter').config(function (
 				"menuContent" : {
 					templateUrl: 'templates/side-menu/profile.html',
 					controller: 'ProfileCtrl',
-					resolve : {
-						notificationsCount : ['NotificationService','$localStorage',	 function(NotificationService,$localStorage){
-							return   NotificationService.getUnseen($localStorage.user.data._id)
-		    						.then(function(result){
-		    							return result.length
-		  						})
-						}]
-					}
 				}
 			}
 		})
