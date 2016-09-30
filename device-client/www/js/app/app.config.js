@@ -139,7 +139,7 @@ angular.module('starter').config(function (
 			url: '/history',
 			views : {
 				'menuContent' : {
-					templateUrl: 'templates/_app/history.html',
+					templateUrl: 'templates/app/history.html',
 					controller: 'HistoryCtrl'
 				}
 			}

@@ -19,6 +19,41 @@ $dark:                            #444 !default;
   background-color: #012438 !important;
   border-color: #012438 !important; }
 
+.view-container {
+  background-color: #012438;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+
+.content-list {
+  background-color: transperent; }
+
+.signup.modal,
+.login-view.modal {
+  background-color: #012438;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; }
+
+.login-view .content-list section.list {
+  height: 70%; }
+
+@media (min-width: 680px) {
+  .login-view.modal {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; }
+  .login-view .content-list .logo {
+    min-height: 27vh !important; }
+  .signup.modal {
+    top: 7%;
+    bottom: 7%; } }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -10742,93 +10777,54 @@ a.button {
     .newdare .responsive .col {
       width: 30%;
       display: inline-block; }
-      .newdare .row .col .contin {
-        margin-top: 33%;
-        font-size: 12px; }
-    .newdare .row div .challeng .list {
+  .newdare .la {
+    text-align: left; }
+  .newdare .fa {
+    margin: 5%;
+    padding: 1%;
+    width: 10vw !important;
+    height: 10vw;
+    font-size: 3em;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block; }
+  .newdare ::-webkit-input-placeholder {
+    color: #16b8d4;
+    opacity: 1 !important; }
+  .newdare .pen {
+    margin-top: -7em;
+    margin-right: 1em; }
+    .newdare .pen i {
+      color: orange;
+      -webkit-transform: scale(-1, 1); }
+  .newdare .info {
+    font-size: 0.5em;
+    width: 10%;
+    height: 100%;
+    left: -1.2em;
+    bottom: 3em; }
+    .newdare .info i {
+      color: orange;
+      font-size: 3em; }
+  .newdare .fileContainer {
+    background: transparent;
+    margin-left: 0%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    overflow: hidden;
+    position: relative;
+    font-size: 2em;
+    box-sizing: border-box; }
+    .newdare .fileContainer i {
       margin: 1%;
-      padding: 1%;
-      width: 100%;
-      display: inline-block;
-      font-size: 1em; }
-      .newdare .row div .challeng .list .item {
-        display: inline-block;
-        width: 45%;
-        font-size: 1em;
-        padding: 0.5%;
-        border: none;
-        text-align: center;
-        background: transparent; }
-        .newdare .row div .challeng .list .item :nth-child(1) {
-          background: #3b6783;
-          color: #fff;
-          width: 100%;
-          font-size: 0.7em;
-          text-align: center;
-          margin-top: 1%;
-          padding-top: 10%;
-          padding-bottom: 10%;
-          padding-left: 1%;
-          padding-right: 1%;
-          word-break: keep-all; }
-        .newdare .row div .challeng .list .item :nth-child(2) {
-          color: #fff;
-          width: 100%; }
-    .newdare .row .list-inset {
-      width: 100%;
-      background: transparent; }
-    .newdare .row label .item {
-      margin-top: 5%; }
-    .newdare .row .vh {
-      margin-top: 1vh;
-      width: 95%;
-      min-height: 3em;
-      border-color: #8dc3cd;
-      font-size: 1.5em; }
-      .newdare .row .vh .butt {
-        width: 50%;
-        margin: 1%;
-        font-size: 1.5em;
-        text-transform: uppercase; }
-    .newdare .row .responsive {
-      display: inline; }
-      .newdare .row .responsive .col {
-        width: 30%;
-        display: inline-block; }
-    .newdare .row .la {
-      text-align: left; }
-    .newdare .row .fa {
-      margin: 5%;
-      padding: 1%;
-      width: 10vw !important;
-      height: 10vw;
-      font-size: 3em;
-      color: #fff;
+      padding: 0.5em;
+      background: #fff;
+      color: orange;
+      font-size: 2em;
       border-radius: 50%;
       display: inline-block; }
-    .newdare .row ::-webkit-input-placeholder {
-      color: #16b8d4;
-      opacity: 1 !important; }
-    .newdare .row .pen {
-      margin-top: -7em;
-      margin-right: 1em; }
-      .newdare .row .pen i {
-        color: orange;
-        -webkit-transform: scale(-1, 1); }
-    .newdare .row .info {
-      font-size: 0.5em;
-      width: 10%;
-      height: 100%;
-      left: -1.2em;
-      bottom: 3em; }
-      .newdare .row .info i {
-        color: orange;
-        font-size: 3em; }
-    .newdare .row .fileContainer {
-      background: transparent;
-      margin-left: 0%;
-      margin-top: 10%;
-      margin-bottom: 10%;
+    .newdare .fileContainer input[type="file"] {
+      display: none;
       overflow: hidden;
       position: relative; }
   @media screen and (min-height: 768px) {
