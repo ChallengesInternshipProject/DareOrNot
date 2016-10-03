@@ -10311,88 +10311,93 @@ a.button {
     .list a p {
       color: #ffb400; }
 
-.Category a:-webkit-any-link {
-  text-decoration: none; }
-
-.Category main {
-  min-width: 100%;
-  background-color: #e8edf0;
-  margin: 0 auto; }
-
-.Category .box1 {
-  display: inline-block;
-  vertical-align: top;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/funBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 1%; }
-
-.Category .box2 {
-  display: inline-block;
-  vertical-align: top;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/BusinessBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 1%; }
-
-.Category .box3 {
-  display: inline-block;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/prizeBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 1%; }
-
-.Category .box4 {
-  display: inline-block;
-  width: 47%;
-  height: 42vh;
-  background-color: #fff;
-  background-image: url(../img/charityBig.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  margin: 1%; }
-
-.Category main h1 {
-  display: block;
-  font-size: 1.5em;
-  text-align: center;
-  margin-top: 10% !important; }
-
-.Category main p {
-  display: block;
-  font-size: 80%;
-  text-align: center;
+.Category {
+  background: #e8edf0;
+  background-size: 100% 100%;
   color: #03b2d1;
-  padding-top: 15em;
-  text-decoration: none !important; }
-
-.Category .underline {
-  text-decoration: none; }
-
-.Category .color1 {
-  color: #056686; }
-
-.Category .color2 {
-  color: #dc9138; }
-
-.Category .color3 {
-  color: #cd4c4c; }
-
-.Category .color4 {
-  color: #3b51a2; }
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  display: block;
+  position: relative; }
+  .Category a:-webkit-any-link {
+    text-decoration: none; }
+  .Category .box1 {
+    margin-top: 5px;
+    vertical-align: top;
+    margin-left: 2.5px;
+    width: 48%;
+    height: 42vh;
+    background-color: #fff;
+    background-image: url(../img/funBig.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    float: left; }
+  .Category .box2 {
+    margin-top: 5px;
+    margin-left: 9px;
+    vertical-align: top;
+    width: 48%;
+    height: 42vh;
+    background-color: #fff;
+    background-image: url(../img/BusinessBig.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    float: left; }
+  .Category .box3 {
+    margin-top: 10px;
+    margin-left: 2.5px;
+    margin-bottom: 5px;
+    width: 48%;
+    height: 42vh;
+    background-color: #fff;
+    background-image: url(../img/prizeBig.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    float: left; }
+  .Category .box4 {
+    margin-top: 10px;
+    margin-left: 9px;
+    margin-bottom: 5px;
+    width: 48%;
+    height: 42vh;
+    background-color: #fff;
+    background-image: url(../img/charityBig.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    float: left; }
+  .Category main h1 {
+    display: block;
+    font-size: 1.5em;
+    text-align: center; }
+  .Category main p {
+    display: block;
+    font-size: 80%;
+    padding-top: 27vh;
+    margin-left: 9vw;
+    text-align: center;
+    color: #03b2d1;
+    text-decoration: none !important;
+    width: 61%; }
+  .Category .underline {
+    text-decoration: none; }
+  .Category .color1 {
+    color: #056686;
+    margin-top: 2vh; }
+  .Category .color2 {
+    color: #dc9138;
+    margin-top: 2vh; }
+  .Category .color3 {
+    color: #cd4c4c;
+    margin-top: 2vh; }
+  .Category .color4 {
+    color: #3b51a2;
+    margin-top: 2vh; }
 
 /*some helpful varibals*/
 /*heder side- menue*/

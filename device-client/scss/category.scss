@@ -1,79 +1,88 @@
 
+@import "timeline_mixins";
+
 .Category{
+      @include gray_background;
   a:-webkit-any-link {
     text-decoration: none;
-}
+} 
 
-  main{
-    min-width:100%;
-    background-color:#e8edf0;
-    margin: 0 auto;
-  }
 
   .box1{
-    display:inline-block;
+    margin-top:5px;
     vertical-align: top;
-    width: 47%;
+    margin-left: 2.5px;
+    width: 48%;
     height: 42vh;
     background-color:#fff;
     background-image:url(../img/funBig.png);
     background-repeat:no-repeat;
     background-position:center center;
     background-size: 60%;
-    margin:1%;
+    float:left;
   }
 
    .box2{
-    display:inline-block;
+    margin-top:5px;
+    margin-left: 9px;
     vertical-align: top;
-    width: 47%;
+    width: 48%;
     height: 42vh;
     background-color:#fff;
     background-image:url(../img/BusinessBig.png);
     background-repeat: no-repeat;
     background-position:center center;
     background-size: 60%;
-    margin:1%;
+    float:left;
+    
   }
 
   .box3{
-    display:inline-block;
-    width: 47%;
+    margin-top:10px;
+    margin-left: 2.5px;
+    margin-bottom: 5px;
+    width: 48%;
     height: 42vh;
     background-color:#fff;
     background-image:url(../img/prizeBig.png);
     background-repeat: no-repeat;
     background-position:center center;
     background-size: 60%;
-    margin:1%;
+    float:left;
+    
   }
 
    .box4{
-    display:inline-block;
-    width: 47%;
+    margin-top:10px;
+    margin-left: 9px;
+    margin-bottom: 5px;
+    width: 48%;
     height: 42vh;
     background-color:#fff;
     background-image:url(../img/charityBig.png);
     background-repeat: no-repeat;
     background-position:center center;
     background-size: 60%;
-    margin:1%;
+    float:left;
+    
   }
 
   main h1{
     display: block;
     font-size: 1.5em;
     text-align: center;
-    margin-top: 10% !important;
+    
   }
 
   main p{
     display: block;
-    font-size:80%;;
+    font-size: 80%;
+    padding-top: 27vh;
+    margin-left: 9vw;
     text-align: center;
     color: #03b2d1;
-    padding-top: 15em;
     text-decoration: none !important;
+    width: 61%;
   }
 
   .underline{
@@ -83,19 +92,23 @@
 
   .color1{
     color: #056686;
+    margin-top: 2vh;
   
   }
 
   .color2{
     color: #dc9138;
+    margin-top: 2vh;
   }
 
   .color3{
     color: #cd4c4c;
+    margin-top: 2vh;
   }
 
   .color4{
     color: #3b51a2;
+    margin-top: 2vh;
   }
 }
 
