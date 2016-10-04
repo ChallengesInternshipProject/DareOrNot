@@ -1,4 +1,3 @@
-@charset "utf-8";
 @import "mixins";
 @import "timeline_mixins";
 
@@ -14,7 +13,7 @@
 			}
 		}
 	/*timeline settings */
-			.TimeLineCard { 
+			.TimeLineCard {
 			div .slider-pager{display:none;}
 				.navigation{
 						.title{left: 1em;}
@@ -30,17 +29,17 @@
 				.googleMap{margin-right:5em;
 					 margin-top:5em;
 					.badge{@include info-size;}
-					}	
+					}
 			/* avatar settings, NAME*/
 					.ng-binding{@include binding-single;
 							h3, i{color: #ffb400;text-transform: uppercase;}
-							.profil-avatar{@include profil-avatar-position;}	
-						}	
+							.profil-avatar{@include profil-avatar-position;}
+						}
 				}
 					.notice{display: -webkit-inline-box;
 						width: 88%;
 						}
-					}	
+					}
 			h3 {@include h3-single;}
 			.button-new{@include button-style-color;text-transform: uppercase;}
 			.col{@include col-single;
@@ -49,15 +48,15 @@
 					color:#ffb400;
 					font-size:1em;
 				     }
-				 
+
 				h6, h7{color: #01cfe4;}
-				h2{ 
+				h2{
 					top: 0em;
 					left:1em;
 					position: relative;
 					}
 				h4, h2{color: #3c6884;}
-				h7{  
+				h7{
 					top: 0em;
 					left: 1em;
 					position: relative;
@@ -65,8 +64,8 @@
 				}
 			.fa{@include circle-border;}
 			.button-block{@include block-single;}
-	
-@media only screen and (device-width: 768px) {	
+
+@media only screen and (device-width: 768px) {
 			.TimeLineCard{min-height: 20em;
 						  max-height: 30em;
 					.content {min-height: 20em;
@@ -81,7 +80,7 @@
 							left: 1em;
 						}
 					}
-					.footer{@include footer-style-ipad;   
+					.footer{@include footer-style-ipad;
 							margin-top: 4% !important;
 						span {width: 50%;}
 							.ng-binding{
@@ -93,7 +92,7 @@
 											margin-left: 0%;
 											min-width: 10em;
 											min-height: 10em;
-										}	
+										}
 								}
 							img {
 								margin-top: -30%;
@@ -119,11 +118,11 @@
 						width: 50%;
 						margin-left: -45%;
 						}
-				}	
+				}
 		}
 
 @media screen and (min-height: $tablet-height){
-		
+
 		.single{@include gray_background;
 		.item{@include background-bordernone;
 		label {
@@ -136,7 +135,7 @@
 	/*timeline settings */
 			.TimeLineCard {min-height: 35em;
 					   max-height: 35em;
-				.content{min-height: 35em;img{ height:35em;}} 	   
+				.content{min-height: 35em;img{ height:35em;}}
 				.footer{@include footer-style-height;
 					span{width:16%;
 						.fa{@include fa-size;}
@@ -147,12 +146,12 @@
 						min-height: 7em;
 						}
 					.info{font-size: 0.5em; display:inline;}
-						
+
 			/* avatar settings, NAME*/
 					.ng-binding{font-size: 1em;    margin-top: 2%;
 							h3, i{color: #ffb400;text-transform: uppercase;}
-							.profil-avatar{@include profil-avatar-position;}	
-						}	
+							.profil-avatar{@include profil-avatar-position;}
+						}
 				}
 					.googleMap {
 							width: 40%;
@@ -163,4 +162,3 @@
 			}
 		}
 	}
-		
