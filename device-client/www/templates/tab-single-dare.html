@@ -2,84 +2,84 @@
 	<ion-content>
 		<ion-list>
 			<ion-item class="">
-				 <div class="TimeLineCard"> 
+				 <div class="TimeLineCard">
 					<div class="content">
-						<ion-slide-box >   
-							<ion-slide ng-repeat='picture in dare.pictures'>   
-								<img ng-src="{{picture.fileString}}" alt="" ng-click="openFile2(picture._id)" >   
-							</ion-slide>  
-						</ion-slide-box>  
+						<ion-slide-box >
+							<ion-slide ng-repeat='picture in dare.pictures'>
+								<img ng-src="{{picture.fileString}}" alt="" ng-click="openFile2(picture._id)" >
+							</ion-slide>
+						</ion-slide-box>
 					</div>
 					 <div class="navigation">
-						<span class="title"> 
-							{{dare.title}} 
+						<span class="title">
+							{{dare.title}}
 						</span>
-							<!-- Slide to the left  --> 
-						<div class="arrows-right" ng-click="nextSlide()"><i class="ion-ios-arrow-forward"></i></div> 
-						<!-- Slide to the right --> 
-						<div class="arrows-left" ng-click="previousSlide()"><i class="ion-ios-arrow-back"></i></div> 
+							<!-- Slide to the left  -->
+						<div class="arrows-right" ng-click="nextSlide()"><i class="ion-ios-arrow-forward"></i></div>
+						<!-- Slide to the right -->
+						<div class="arrows-left" ng-click="previousSlide()"><i class="ion-ios-arrow-back"></i></div>
 					 </div>
-					 <div class="footer"> 
-						 <a class="fa item-avatar" href="#"> 
-							<img ng-src="../img/adam.jpg"/> 
-						 </a> 
-						<span class="ng-binding" style="width:100%; margin-left: 15%; margin-top: -20%;">  
+					 <div class="footer">
+						 <a class="fa item-avatar" href="#">
+							<img ng-src="../img/adam.jpg"/>
+						 </a>
+						<span class="ng-binding" style="width:100%; margin-left: 15%; margin-top: -20%;">
 							 <h1 style="font-size:1.5em;    margin-left: -15%;">  {{dare._creator.name}} </h1>
 						</span>
-						<span class="ng-binding">  
-							<i class="ion-ios-location-outline"></i> 
+						<span class="ng-binding">
+							<i class="ion-ios-location-outline"></i>
 							{{dare.city}}
 						</span>
-						<span class="ng-binding">  
-							<i class="icon ion-ios-timer-outline"></i> 
-							<span am-time-ago="dare.startDate"></span> 
+						<span class="ng-binding">
+							<i class="icon ion-ios-timer-outline"></i>
+							<span am-time-ago="dare.startDate"></span>
 						</span>
-						<span class="ng-binding" style="width: 100%; margin-left: 10%;">   
-							<h5>Приключва:</h5> 
+						<span class="ng-binding" style="width: 100%; margin-left: 10%;">
+							<h5>Приключва:</h5>
 							<span am-time-ago="dare.endDate"></span>
 						</span>
 						<div  class="notice">
-						<span class="" style="margin-left: -1%;"> 
-							<i class="fa app-icon-user-active"></i> 
+						<span class="" style="margin-left: -1%;">
+							<i class="fa app-icon-user-active"></i>
 							 {{dare.invitedUsers.length}}
-						 </span> 
-						<span class="" style="margin-left: -1%;"> 
-							<i class="fa app-icon-speech-active"></i> 
+						 </span>
+						<span class="" style="margin-left: -1%;">
+							<i class="fa app-icon-speech-active"></i>
 							{{dare.comments.length}}
-						</span> 
-						<span class="" style="margin-left: -1%;"> 
-							<i class="fa app-icon-love-active"></i> 
+						</span>
+						<span class="" style="margin-left: -1%;">
+							<i class="fa app-icon-love-active"></i>
 							{{dare.likes}}
 						</span>
 						</div>
-					 </div> 
+					 </div>
 					<img src="../img/map.png" class="googleMap"/>
 				</div>
 			</ion-item>
-			 <ion-item class="item"> 
-				<button class="button-new" href="" ng-click="callDareModal(user._id)">Предизвикай </button> 
-				<a href="" class="us fa-chat"> </a> 
-			</ion-item> 
-			<h3>Добави Доказателство</h3> 
-			<ion-item > 
-				<!-- CHANGING THIS STRUCTURE WILL PREVENT FILE UPLOAD TO WORK--> 
-				<div flow-init 
-							flow-name="uploader.flow" 
-							flow-files-added="FileService.processFiles($files)"> 
-					<div class="row"  >  
-						<div class="col"> 
-							<button type= "button"  class="button fileContainer " flow-btn type="file" style="left:40%"> 
-								<i class="ion-ios-camera-outline"></i> 
-								<span ng-show= " data.fileData.length > 0" class="badge badge-positive">{{data.fileData.length}}</span> 
-							</button> 
-						</div> 
-					</div> 
-				</div> 
-				<!-- END OF STRUCTURE --> 
-			</ion-item> 
+			 <ion-item class="item">
+				<button class="button-new" href="" ng-click="callDareModal(user._id)">Предизвикай </button>
+				<a href="" class="us fa-chat"> </a>
+			</ion-item>
+			<h3>Добави Доказателство</h3>
+			<ion-item >
+				<!-- CHANGING THIS STRUCTURE WILL PREVENT FILE UPLOAD TO WORK-->
+				<div flow-init
+							flow-name="uploader.flow"
+							flow-files-added="FileService.processFiles($files)">
+					<div class="row"  >
+						<div class="col">
+							<button type= "button"  class="button fileContainer " flow-btn type="file" style="left:40%">
+								<i class="ion-ios-camera-outline"></i>
+								<span ng-show= " data.fileData.length > 0" class="badge badge-positive">{{data.fileData.length}}</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- END OF STRUCTURE -->
+			</ion-item>
 		<!-- 	 <ion-item class="item">
 					<section class="video" ng-video>
-							<img src="../img/Activities/3.jpg"style=" height: 10em; width: 100%;"> </div> 
+							<img src="../img/Activities/3.jpg"style=" height: 10em; width: 100%;"> </div>
 					</section>
 					<section>
 						<p>Note: You can load multi-sources for each video for fallback purposes with multiSource.
@@ -91,22 +91,22 @@
 				<a href="" class="us fa-chat">
 				</a>
 			</ion-item> -->
-			 <h3>Доказани</h3> 
-			<ion-item class="row item"> 
-				<div class="col" style="background-color: #177794;"ng-repeat="prove in dare.proves" > 
-					<video ng-if="prove.fileType == 'video'"controls="controls" > 
-						<source ng-src="{{prove.fileString}}" /> 
-					</video> 
-					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}" ng-click="openFile(prove._id)"/> 
-				</div> 
-			</ion-item> 
-			 <h3>Сподели</h3> 
+			 <h3>Доказани</h3>
+			<ion-item class="row item">
+				<div class="col" style="background-color: #177794;"ng-repeat="prove in dare.proves" >
+					<video ng-if="prove.fileType == 'video'"controls="controls" >
+						<source ng-src="{{prove.fileString}}" />
+					</video>
+					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}" ng-click="openFile(prove._id)"/>
+				</div>
+			</ion-item>
+			 <h3>Сподели</h3>
 			<ion-item class="row item">
 				<button class="fa ion-social-facebook button button-block " ng-click="loginWithFacebook()" style="background-color: rgb(47, 123, 189);"></button>
 				<button class="fa ion-social-twitter button button-block " ng-click="loginWithtwitter()" style="background-color: rgb(0, 191, 243);"></button>
 				 <button class="fa ion-social-googleplus button button-block " ng-click="loginWithGoogle()" style="background-color: rgb(217, 3, 74);"></button>
 				 <button class="button button-block " ng-click="">Изпрати на приятел</button>
-			</ion-item> 
+			</ion-item>
 			<h3>Потребители приели предизвикателството</h3>
 			 <ion-item class="row item">
 				<div class="col">
@@ -134,8 +134,8 @@
 					<h4 class="ng-binding">Test1,test2</h4>
 					<h6 class="ng-binding"><i class="ion-ios-location-outline"></i>София, BG</h6>
 				</div>
-			</ion-item> 
-			 <h3>потребители наблщдаваши предизвикателството</h3> 
+			</ion-item>
+			 <h3>потребители наблщдаваши предизвикателството</h3>
 			 <ion-item class="row item">
 				<div class="col">
 					<img ng-src="http://dareornot.herokuapp.com/images/avatar.png" alt="" src="http://dareornot.herokuapp.com/images/avatar.png"  />
@@ -162,7 +162,7 @@
 					<h4 class="ng-binding">Test1,test2</h4>
 					<h6 class="ng-binding"><i class="ion-ios-location-outline"></i>София, BG</h6>
 				</div>
-			</ion-item> 
+			</ion-item>
 			<h3>коментари</h3>
 			 <ion-item class="">
 				 <div class="col">
@@ -182,7 +182,6 @@
 					<h7 class="ng-binding">Довечера на бар?!</h7>
 				</div>
 			</ion-item>
-		</ion-list> 
+		</ion-list>
 	</ion-content>
 </ion-view>
-
