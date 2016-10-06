@@ -38,9 +38,26 @@
 		}
 	}
 	@media only screen and (device-width: 768px) {
+		.TimeLineCard .footer  {
+			.ng-binding {
+				font-size: 1.5vh;
+				.profil-avatar {
+						    margin-top: -8%;
+						    margin-left: 0%;
+						    min-width: 6em;
+						    min-height: 6em;
+						}
+			}
+			 span > .fa {
+				margin-top: 0vh;
 
-			.but-logo {
-				right: -15vh;
 			}
 		}
+
+		.bar-assertive {
+			.but-logo {
+				right: -20vh;
+			}
+		}
+	}
 }
