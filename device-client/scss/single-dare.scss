@@ -1,164 +1,322 @@
-@import "mixins";
-@import "timeline_mixins";
+@import 'mixins';
+@import 'timeline_mixins'; // CSS single Dare	title and arrows//
 
-/* CSS single Dare	title and arrows*/
+.single {
+	@include gray_background;
+	margin: 0;
+	padding: 0;
 
-.single{@include gray_background;
-	.item{@include background-bordernone;
-		label {
-			margin-top: 1em;
-			width: 83%;
-			border-color: #8dc3cd;
-			float: right;
-			}
-		}
-	/*timeline settings */
-			.TimeLineCard {
-			div .slider-pager{display:none;}
-				.navigation{
-						.title{left: 1em;}
-						}
-				.footer{@include footer-style;
-						@include footer-style-single;
-					span{width: 20%;
-						margin-bottom: 1em;
-						h5{font-size:1em;}
-						.fa{@include fa-size;}
-					}
-					img{@include img-single;}
-				.googleMap{margin-right:5em;
-					 margin-top:5em;
-					.badge{@include info-size;}
-					}
-			/* avatar settings, NAME*/
-					.ng-binding{@include binding-single;
-							h3, i{color: #ffb400;text-transform: uppercase;}
-							.profil-avatar{@include profil-avatar-position;}
-						}
-				}
-					.notice{display: -webkit-inline-box;
-						width: 88%;
-						}
-					}
-			h3 {@include h3-single;}
-			.button-new{@include button-style-color;text-transform: uppercase;}
-			.col{@include col-single;
-				img{width: 3em;}
-				h6 i {
-					color:#ffb400;
-					font-size:1em;
-				     }
+	.list {
+		padding: 0;
+		margin: 0;
+		min-width: 100%;
+		min-height: 100%;
+		box-sizing: border-box;
+		.item {
+			@include background-bordernone;
+			margin: 0;
+			padding: 0;
 
-				h6, h7{color: #01cfe4;}
-				h2{
-					top: 0em;
-					left:1em;
-					position: relative;
-					}
-				h4, h2{color: #3c6884;}
-				h7{
-					top: 0em;
-					left: 1em;
-					position: relative;
-					}
-				}
-			.fa{@include circle-border;}
-			.button-block{@include block-single;}
-
-@media only screen and (device-width: 768px) {
-			.TimeLineCard{min-height: 20em;
-						  max-height: 30em;
-					.content {min-height: 20em;
-							  img{height: 20em;}
-							  }
-					.navigation{font-size:1.1em;
-						.arrows-right{margin-top: -20%;}
-						.arrows-left{margin-top: -20%;}
-						.title{
-							top: -8em;
-							font-size: 2em;
-							left: 1em;
-						}
-					}
-					.footer{@include footer-style-ipad;
-							margin-top: 4% !important;
-						span {width: 50%;}
-							.ng-binding{
-									font-size: 1em;
-									margin-left: 33%;
-									margin-top: 0%;
-									.profil-avatar{
-											margin-top: -8%;
-											margin-left: 0%;
-											min-width: 10em;
-											min-height: 10em;
-										}
-								}
-							img {
-								margin-top: -30%;
-								margin-left: 0%;
-								min-width: 10em;
-								min-height: 10em;
-							}
-						.info {
-								width: 25%;
-								height: 4em;
-								font-size: 0.7em;
-								margin-right: -5%;
-							}
-						}
-					.googleMap {
-								width: 50%;
-								display: inline;
-								height: 24.6vh;
-								float: right;
-								margin-top: -38%;
-								}
-					.notice{display: -webkit-inline-box;
-						width: 50%;
-						margin-left: -45%;
-						}
-				}
-		}
-
-@media screen and (min-height: $tablet-height){
-
-		.single{@include gray_background;
-		.item{@include background-bordernone;
-		label {
+			label {
 				margin-top: 1em;
 				width: 83%;
 				border-color: #8dc3cd;
 				float: right;
+			}
+		}
+	}
+	//timeline settings //
+	.TimeLineCard {
+
+		div .slider-pager {
+			display: none;
+		}
+
+		.navigation {
+			.title {
+				left: 1em;
+			}
+			.icon {
+				font-size: 7vh;
+			}
+		}
+
+		.footer {
+			@include footer-style;
+			@include footer-style-single;
+
+			span {
+				width: 20%;
+				margin-bottom: 1em;
+
+				h5 {
+					font-size: 1em;
+				}
+
+				.fa {
+					@include fa-size;
+
 				}
 			}
-	/*timeline settings */
-			.TimeLineCard {min-height: 35em;
-					   max-height: 35em;
-				.content{min-height: 35em;img{ height:35em;}}
-				.footer{@include footer-style-height;
-					span{width:16%;
-						.fa{@include fa-size;}
+
+			img {
+				@include img-single;
+				border: 1vh solid #fff;
+			}
+
+			.googleMap {
+				margin-right: 5em;
+				margin-top: 5em;
+
+				.badge {
+					@include info-size;
+				}
+			}
+			// avatar settings, NAME//
+			.ng-binding {
+				@include binding-single;
+				h1{
+					margin-left: 13%;
+					margin-top: -7vh;
+					font-size: 2em;
+					color: #fff;
+				 }
+				h3,
+				i {
+					color: #ffb400;
+					text-transform: uppercase;
+				}
+
+				.profil-avatar {
+					@include profil-avatar-position;
+				}
+			}
+		}
+
+		.notice {
+			display: -webkit-inline-box;
+			width: 88%;
+		}
+	}
+
+	h3 {
+		@include h3-single;
+	}
+
+	.button-new {
+		@include button-style-color;
+		text-transform: uppercase;
+	}
+
+	.col {
+		@include col-single;
+
+		img {
+			width: 3em;
+		}
+
+		h6 i {
+			color: #ffb400;
+			font-size: 1em;
+		}
+
+		h6,
+		h7 {
+			color: #01cfe4;
+		}
+
+		h2 {
+			top: 0;
+			left: 1em;
+			position: relative;
+		}
+
+		h2,
+		h4 {
+			color: #3c6884;
+		}
+
+		h7 {
+			top: 0;
+			left: 1em;
+			position: relative;
+		}
+	}
+
+	.fa {
+		@include circle-border;
+	}
+
+	.button-block {
+		@include block-single;
+	}
+	@media only screen and (device-width: 768px) {
+		.TimeLineCard {
+			min-height: 20em;
+			max-height: 30em;
+
+			.content {
+				min-height: 20em;
+
+				img {
+					min-height: 33vh;
+					min-width: 75vh;
+				}
+			}
+
+			.navigation {
+				font-size: 1.1em;
+
+				.arrows-right {
+					margin-top: -31%;
+					margin-right: 4%;
+					font-size: 13vh;
+				}
+
+				.arrows-left {
+					margin-top: -31%;
+					margin-right: 4%;
+					font-size: 13vh;
+				}
+				.icon {
+					font-size: 13vh;
+				}
+				.title {
+					top: -8em;
+					font-size: 2em;
+					left: 1em;
+				}
+			}
+
+			.footer {
+				@include footer-style-ipad;
+				margin-top: 4% !important;
+
+				span {
+					width: 50%;
+				}
+
+				.ng-binding {
+					font-size: 1em;
+					margin-left: 33%;
+					margin-top: 0;
+
+					.profil-avatar {
+						margin-top: -8%;
+						margin-left: 0;
+						min-width: 10em;
+						min-height: 10em;
 					}
-					img{margin-top: -34%;
+
+					h1{
+						margin-left: 15vh;
+						margin-top: -14vh;
+						font-size: 2em;
+					}
+				}
+
+				img {
+				    margin-top: -42%;
+				    margin-left: 14px;
+				    min-width: 13em;
+				    min-height: 13em;
+				}
+
+				.info {
+					width: 25%;
+					height: 4em;
+					font-size: 0.7em;
+					margin-right: -5%;
+				}
+			}
+
+			.googleMap {
+				width: 50%;
+				display: inline;
+				height: 24.6vh;
+				float: right;
+				margin-top: -38%;
+			}
+
+			.notice {
+				display: -webkit-inline-box;
+				width: 50%;
+				margin-left: -45%;
+			}
+		}
+	}
+	@media screen and (min-height: $tablet-height) {
+		.single {
+			@include gray_background;
+
+			.item {
+				@include background-bordernone;
+
+				label {
+					margin-top: 1em;
+					width: 83%;
+					border-color: #8dc3cd;
+					float: right;
+				}
+			}
+			//timeline settings //
+			.TimeLineCard {
+				min-height: 35em;
+				max-height: 35em;
+
+				.content {
+					min-height: 35em;
+
+					img {
+						height: 35em;
+					}
+				}
+
+				.footer {
+					@include footer-style-height;
+
+					span {
+						width: 16%;
+
+						.fa {
+							@include fa-size;
+						}
+					}
+
+					img {
+						margin-top: -34%;
 						margin-left: 1%;
 						min-width: 7em;
 						min-height: 7em;
-						}
-					.info{font-size: 0.5em; display:inline;}
+					}
 
-			/* avatar settings, NAME*/
-					.ng-binding{font-size: 1em;    margin-top: 2%;
-							h3, i{color: #ffb400;text-transform: uppercase;}
-							.profil-avatar{@include profil-avatar-position;}
+					.info {
+						font-size: 0.5em;
+						display: inline;
+					}
+					// avatar settings, NAME//
+					.ng-binding {
+						font-size: 1em;
+						margin-top: 2%;
+
+						h3,
+						i {
+							color: #ffb400;
+							text-transform: uppercase;
 						}
+
+						.profil-avatar {
+							@include profil-avatar-position;
+						}
+					}
 				}
-					.googleMap {
-							width: 40%;
-							height: 24.6vh;
-							margin-top: -10%;
-						}
+
+				.googleMap {
+					width: 40%;
+					height: 24.6vh;
+					margin-top: -10%;
 				}
 			}
 		}
 	}
+}

@@ -37,4 +37,10 @@
 			background-color: transparent;
 		}
 	}
+	@media only screen and (device-width: 768px) {
+
+			.but-logo {
+				right: -15vh;
+			}
+		}
 }
