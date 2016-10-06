@@ -26,28 +26,28 @@
 						<span class="ng-binding" style="width:100%; margin-left: 15%; margin-top: -20%;">
 							 <h1>  {{dare._creator.name}} </h1>
 						</span>
-						<span class="ng-binding" style="margin-top: -1%;margin-left: 20vh;font-size: 2.5vh;">
+						<span class="ng-binding" style="margin-top: -4%;margin-left: 18vh;font-size: 2.5vh;">
 							<i class="ion-ios-location-outline"></i>
 							{{dare.city}}
-						</span>
-						<span class="ng-binding">
-							<i class="icon ion-ios-timer-outline"></i>
-							<span am-time-ago="dare.startDate"></span>
 						</span>
 						<span class="ng-binding" style="width: 100%; margin-left: 10%;">
 							<h5>Приключва:</h5>
 							<span am-time-ago="dare.endDate"></span>
 						</span>
+						<span class="ng-binding start">
+							<i class="icon ion-ios-timer-outline"></i>
+							<span am-time-ago="dare.startDate"></span>
+						</span>
 						<div class="notice">
-							<span class="" style="margin-left: -1%;">
+							<span class="notice-1" style="">
 							<i class="fa app-icon-user-active"></i>
 							 {{dare.invitedUsers.length}}
 						 </span>
-							<span class="" style="margin-left: -1%;">
+							<span class="notice-1" style="">
 							<i class="fa app-icon-speech-active"></i>
 							{{dare.comments.length}}
 						</span>
-							<span class="" style="margin-left: -1%;">
+							<span class="notice-1" style="">
 							<i class="fa app-icon-love-active"></i>
 							{{dare.likes}}
 						</span>
@@ -56,12 +56,7 @@
 					<img src="../img/map.png" class="googleMap" />
 				</div>
 			</ion-item>
-			<ion-item class="item">
-				<button class="button-new" href="" ng-click="callDareModal(user._id)">Предизвикай </button>
-				<a href="" class="us fa-chat"> </a>
-			</ion-item>
-			<h3>Добави Доказателство</h3>
-			<ion-item>
+			<ion-item class="video-cover">
 				<!-- CHANGING THIS STRUCTURE WILL PREVENT FILE UPLOAD TO WORK-->
 				<div flow-init flow-name="uploader.flow" flow-files-added="FileService.processFiles($files)">
 					<div class="row">
@@ -75,6 +70,18 @@
 				</div>
 				<!-- END OF STRUCTURE -->
 			</ion-item>
+			<ion-item class="some-coment">
+				<div>
+					<p>Note: You can load multi-sources for each video for fallback purposes with multiSource.
+					You then need to fulfill the only other requirement for ngVideo – the video node:
+					ote: equirement for ngVideo – the video node:</p>
+				</div>
+			</ion-item>
+			<ion-item class="item">
+				<button class="button-new" href="" ng-click="callDareModal(user._id)">Приеми Предизвикателството </button>
+				<a href="" class="us fa-chat"> </a>
+			</ion-item>
+
 			<!-- 	 <ion-item class="item">
 					<section class="video" ng-video>
 							<img src="../img/Activities/3.jpg"style=" height: 10em; width: 100%;"> </div>
@@ -89,21 +96,21 @@
 				<a href="" class="us fa-chat">
 				</a>
 			</ion-item> -->
-			<h3>Доказани</h3>
+			<h3 style="margin-top:0.5vh;">Доказани</h3>
 			<ion-item class="row item">
-				<div class="col" style="background-color: #177794;" ng-repeat="prove in dare.proves">
-					<video ng-if="prove.fileType == 'video'" controls="controls">
+				<div class="col prove-img" style="" ng-repeat="prove in dare.proves">
+					<video ng-if="prove.fileType == 'video'" controls="controls" class="prove-img">
 						<source ng-src="{{prove.fileString}}" />
 					</video>
-					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}" ng-click="openFile(prove._id)" />
+					<img ng-if="prove.fileType != 'video'" ng-src="{{prove.fileString}}" ng-click="openFile(prove._id)" class="prove-img"/>
 				</div>
 			</ion-item>
 			<h3>Сподели</h3>
-			<ion-item class="row item">
+			<ion-item class="row item" style="width: 90%;float: right;">
 				<button class="fa ion-social-facebook button button-block " ng-click="loginWithFacebook()" style="background-color: rgb(47, 123, 189);"></button>
 				<button class="fa ion-social-twitter button button-block " ng-click="loginWithtwitter()" style="background-color: rgb(0, 191, 243);"></button>
 				<button class="fa ion-social-googleplus button button-block " ng-click="loginWithGoogle()" style="background-color: rgb(217, 3, 74);"></button>
-				<button class="button button-block " ng-click="">Изпрати на приятел</button>
+				<button class="button button-block " ng-click="" style="font-size:2vh;">Изпрати на приятел</button>
 			</ion-item>
 			<h3>Потребители приели предизвикателството</h3>
 			<ion-item class="row item">

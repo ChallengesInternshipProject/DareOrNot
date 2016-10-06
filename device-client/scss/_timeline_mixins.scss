@@ -117,10 +117,16 @@
 					}
 @mixin	button-style-color{
 				@include background-bordernone;
+				margin: 2.5vh;
+				margin-bottom: 0.5vh;
+				background: transparent;
+				border: none;
 				background-color: #021e2f;
-				width: 97%;
-				height:3em;
+				width: 90%;
+				height: 8vh;
 				color: #fff;
+				text-transform: uppercase;
+				font-size: 3vh;
 				}
 @mixin circle-border{
 				border-radius: 50%;
