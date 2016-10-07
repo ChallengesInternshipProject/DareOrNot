@@ -1,6 +1,6 @@
-	//Timeline,  //
+	/*Timeline,  */
 
-//background and body elements style//
+/*background and body elements style*/
 
 @mixin gray_background{
 			    background: #e8edf0;
@@ -13,7 +13,7 @@
 				display: block;
 				position: relative;
 		}
-	//timeline < navigation title style//
+	/*timeline < navigation title style*/
 @mixin arrows-position{
 	height: 0.5em;
     font-size: 1.5em;

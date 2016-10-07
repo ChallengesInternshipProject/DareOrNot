@@ -2,10 +2,10 @@
 @import 'varibals';
 
 
-//Activit, Notification, Settings//
+/*Activit, Notification, Settings*/
 
 
-//background and body elements style//
+/*background and body elements style*/
 
 @mixin Mine_user_background{
 			@include background-settings;
@@ -21,11 +21,11 @@
 @mixin Mine_Gray_background{
 			@include background-settings;
 			background-image:none;
-   			background:#e8edf0; //gray//
+   			background:#e8edf0; /*gray*/
    			color:#03b2d1;
    			line-height: 1%;
 			}
-//heder side- menue//
+/*heder side- menue*/
 @mixin height-heder{
 			    display: inline;
 				height: 17vh;
@@ -33,7 +33,7 @@
 				h1{position: relative;
 				    display: inline-block;
 					top: 30%;
-					color: #01cfe4; //blue//
+					color: #01cfe4; /*blue*/
 					font-size: 1.4em;
 				}
 				i{font-size:2em;
@@ -42,15 +42,15 @@
 				color: #fff;
 				}
 			}
-//list//
+/*list*/
 @mixin list-style{  @include position-style;
 					@include background-bordernone;
-					color: #01cfe4; //blue//
+					color: #01cfe4; /*blue*/
 					display: block;
 					width: 98%;
 					position: relative;
 					}
-//list Item//
+/*list Item*/
 @mixin list-item-style{
 				@include position-style;
 				min-height: 3em;
@@ -62,10 +62,10 @@
 				position: relative;
 				 }
 
-//Paragraf//
+/*Paragraf*/
 
 @mixin paragraf-style{
-	color: #01cfe4; //blue//
+	color: #01cfe4; /*blue*/
 	@include position-style;
 	width: 60%;
 	margin-bottom: 1vh;
@@ -81,7 +81,7 @@
     white-space: normal;
     color: #fff;
 	}
-//div//
+/*div*/
 @mixin div-style{
 	@include position-style;
     display: inline-flex;
@@ -89,7 +89,7 @@
 	}
 
 
- //text stylings //
+ /*text stylings */
 @mixin large-text {
 			@include position-style;
 			color: #01cfe4;
@@ -138,7 +138,7 @@
 		font-size: 1em;
 		margin: 0em;
 		}
-//img style//
+/*img style*/
 
 @mixin image-style {
 	@include position-style;
