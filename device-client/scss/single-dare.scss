@@ -1,0 +1,376 @@
+@import 'mixins';
+@import 'timeline_mixins';
+/* CSS single Dare	title and arrows*/
+.single {
+	@include gray_background;
+	margin: 0;
+	padding: 0;
+
+	.list {
+		padding: 0;
+		margin: 0;
+		min-width: 100%;
+		min-height: 100%;
+		box-sizing: border-box;
+
+		.item {
+			@include background-bordernone;
+			margin: 0;
+			padding: 0;
+
+			label {
+				margin-top: 1em;
+				width: 83%;
+				border-color: #8dc3cd;
+				float: right;
+			}
+		}
+
+		.video-cover {
+			margin-top: -2vh;
+			height: 25vh;
+			background-image: url("../img/Activities/7.jpg");
+			background-size: 100% 100%;
+			z-index: 555;
+		}
+
+		.some-coment {
+			p {
+				font-size: 2vh;
+				text-align: justify;
+				text-justify: inter-word;
+				white-space: normal;
+			}
+		}
+	}
+	/*timeline settings */
+	.TimeLineCard {
+		div .slider-pager {
+			display: none;
+		}
+
+		.navigation {
+			.title {
+				left: 1em;
+			}
+
+			.icon {
+				font-size: 7vh;
+			}
+		}
+
+		.footer {
+			@include footer-style;
+			@include footer-style-single;
+
+			span {
+				width: 20%;
+				margin-bottom: 1em;
+
+				h5 {
+					font-size: 1em;
+				}
+
+				.fa {
+					@include fa-size;
+				}
+			}
+
+			img {
+				@include img-single;
+				border: 1vh solid #fff;
+			}
+
+			.googleMap {
+				margin-right: 5em;
+				margin-top: 5em;
+
+				.badge {
+					@include info-size;
+				}
+			}
+			/*avatar settings, NAME*/
+			.ng-binding {
+				@include binding-single;
+
+				h1 {
+					margin-left: 13%;
+					margin-top: -7vh;
+					font-size: 2em;
+					color: #fff;
+				}
+
+				h3,
+				i {
+					color: #ffb400;
+					text-transform: uppercase;
+				}
+
+				.profil-avatar {
+					@include profil-avatar-position;
+				}
+			}
+
+			.start {
+				margin-bottom: 1vh;
+				margin-left: 3vh;
+				font-size: 3vh;
+			}
+		}
+
+		.notice {
+			display: -webkit-inline-box;
+			width: 88%;
+
+			.notice-1 {
+				margin-left: -1%;
+				margin-top: -2vh;
+				margin-bottom: 6vh;
+			}
+		}
+	}
+
+	h3 {
+		@include h3-single;
+	}
+
+	.button-new {
+		@include button-style-color;
+	}
+
+	.col {
+		@include col-single;
+
+		.prove-img {
+			width: 100%;
+			height: 17vh;
+			margin: 1%;
+			padding: 1%;
+			background-color: #177794;
+		}
+
+		img {
+			width: 3em;
+		}
+
+		h6 i {
+			color: #ffb400;
+			font-size: 1em;
+		}
+
+		.h7,
+		h6 {
+			color: #01cfe4;
+		}
+
+		h2 {
+			top: 0;
+			left: 1em;
+			position: relative;
+		}
+
+		h2,
+		h4 {
+			color: #3c6884;
+		}
+
+		.h7 {
+			top: 0;
+			left: 1em;
+			position: relative;
+		}
+	}
+
+	.fa {
+		@include circle-border;
+	}
+
+	.button-block {
+		@include block-single;
+	}
+	@media only screen and (device-width: 768px) {
+		.TimeLineCard {
+			min-height: 20em;
+			max-height: 30em;
+
+			.content {
+				min-height: 20em;
+
+				img {
+					min-height: 33vh;
+					min-width: 75vh;
+				}
+			}
+
+			.navigation {
+				font-size: 1.1em;
+
+				.arrows-right {
+					margin-top: -31%;
+					margin-right: 4%;
+					font-size: 13vh;
+				}
+
+				.arrows-left {
+					margin-top: -31%;
+					margin-right: 4%;
+					font-size: 13vh;
+				}
+
+				.icon {
+					font-size: 13vh;
+				}
+
+				.title {
+					top: -8em;
+					font-size: 2em;
+					left: 1em;
+				}
+			}
+
+			.footer {
+				@include footer-style-ipad;
+				margin-top: 4% !important;
+
+				span {
+					width: 50%;
+
+					.fa {
+						min-width: 7vh;
+						height: 7vh;
+						margin-top: 1vh;
+						margin-left: 3vh;
+						background-size: 75% 75%;
+					}
+				}
+
+				.ng-binding {
+					font-size: 1em;
+					margin-left: 33%;
+					margin-top: 0;
+
+					.profil-avatar {
+						margin-top: -8%;
+						margin-left: 0;
+						min-width: 10em;
+						min-height: 10em;
+					}
+
+					h1 {
+						margin-left: 15vh;
+						margin-top: -14vh;
+						font-size: 2em;
+					}
+				}
+
+				.start {
+					margin-bottom: 1vh;
+					margin-left: 5vh;
+					font-size: 4vh;
+				}
+
+				img {
+					margin-top: -42%;
+					margin-left: 14px;
+					min-width: 13em;
+					min-height: 13em;
+				}
+
+				.info {
+					width: 25%;
+					height: 4em;
+					font-size: 0.7em;
+					margin-right: -5%;
+				}
+			}
+
+			.googleMap {
+				width: 50%;
+				display: inline;
+				height: 24.6vh;
+				float: right;
+				margin-top: -38%;
+			}
+
+			.notice {
+				display: -webkit-inline-box;
+				width: 28%;
+				margin-left: -85%;
+			}
+		}
+	}
+	@media screen and (min-height: $tablet-height) {
+		.single {
+			@include gray_background;
+
+			.item {
+				@include background-bordernone;
+
+				label {
+					margin-top: 1em;
+					width: 83%;
+					border-color: #8dc3cd;
+					float: right;
+				}
+			}
+			/*timeline settings */
+			.TimeLineCard {
+				min-height: 35em;
+				max-height: 35em;
+
+				.content {
+					min-height: 35em;
+
+					img {
+						height: 35em;
+					}
+				}
+
+				.footer {
+					@include footer-style-height;
+
+					span {
+						width: 16%;
+
+						.fa {
+							@include fa-size;
+						}
+					}
+
+					img {
+						margin-top: -34%;
+						margin-left: 1%;
+						min-width: 7em;
+						min-height: 7em;
+					}
+
+					.info {
+						font-size: 0.5em;
+						display: inline;
+					}
+					/* avatar settings, NAME*/
+					.ng-binding {
+						font-size: 1em;
+						margin-top: 2%;
+
+						h3,
+						i {
+							color: #ffb400;
+							text-transform: uppercase;
+						}
+
+						.profil-avatar {
+							@include profil-avatar-position;
+						}
+					}
+				}
+
+				.googleMap {
+					width: 40%;
+					height: 24.6vh;
+					margin-top: -10%;
+				}
+			}
+		}
+	}
+}

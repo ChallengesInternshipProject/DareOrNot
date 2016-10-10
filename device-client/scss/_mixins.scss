@@ -1,11 +1,11 @@
 @charset "utf-8";
-@import "varibals";
+@import 'varibals';
 
 
-//Activit, Notification, Settings//
+/*Activit, Notification, Settings*/
 
 
-//background and body elements style//
+/*background and body elements style*/
 
 @mixin Mine_user_background{
 			@include background-settings;
@@ -61,7 +61,7 @@
 				background: transparent;
 				position: relative;
 				 }
-				 
+
 /*Paragraf*/
 
 @mixin paragraf-style{
@@ -71,8 +71,8 @@
 	margin-bottom: 1vh;
 	display: inline-flex;
 	font-size:0.7em;
-	}		
-@mixin paragraf-comentar{	
+	}
+@mixin paragraf-comentar{
 	width: 90%;
     padding-left: 1rem;
     background: transparent;
@@ -81,14 +81,14 @@
     white-space: normal;
     color: #fff;
 	}
-/*div*/	
-@mixin div-style{	
+/*div*/
+@mixin div-style{
 	@include position-style;
     display: inline-flex;
     font-size: 1em;
-	}			 
-	
-	
+	}
+
+
  /*text stylings */
 @mixin large-text {
 			@include position-style;
@@ -101,7 +101,7 @@
 @mixin blue-color{
 	color: #04a4c3;
     font-size: 1.5em;
-}	
+}
 
 
 @mixin left-minutes-style{
@@ -111,7 +111,7 @@
 	padding-right: 1vw;
 	font-size: 0.5em;
 	}
-@mixin span-position{		
+@mixin span-position{
 		float: left;
 		margin-top: -2%;
 		margin-bottom: -2%;
@@ -120,17 +120,17 @@
 		display: inline-block;
 		z-index: 10;
 		}
-@mixin span-position-width{		
+@mixin span-position-width{
 			margin-top: -1%;
 			margin-bottom: -1%;
 			margin-left: -2%;
 		}
-@mixin span-position-height{		
+@mixin span-position-height{
     margin-top: -1%;
     margin-bottom: -1%;
     margin-left: -1%;
 		}
-		
+
 @mixin 	i{
 		padding: 7px;
 		@include radius-fa;
@@ -140,15 +140,14 @@
 		}
 /*img style*/
 
-@mixin image-style {	
+@mixin image-style {
 	@include position-style;
 	display: block;
 	}
-	
+
 @mixin image-square {
 	display: inline;
 	width: 4em;
 	height: 3.5em;
 	padding: 0.3em 1em 0.3em 0;
 	}
-	

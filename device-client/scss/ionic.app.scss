@@ -81,15 +81,12 @@ $tablet-height:1080px;
 //Side-menu Settings page view SCSS
 @import "scss/side-menu-settings";
 
-//Timeline page view SCSS
+//Timeline card view SCSS
 @import "scss/TimeLineCard";
-@import "scss/div-timelineCard";
-
+//Timeline page view SCSS
+@import "scss/div-timeline";
 //single dare page view SCSS
-@import "scss/timeline";
-
-@import "scss/div-timelineCard";
-
+@import "scss/single-dare";
 
 //Chat page view SCSS
 @import "scss/tab-chat";
