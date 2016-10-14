@@ -9,35 +9,7 @@
 		@include background-bordernone;
 	}
 
-	.bar-assertive {
-		background-color: #066886;
-		height: 7vh;
 
-		.but {
-			background-color: transparent;
-			border: none;
-			width: 10vh;
-			height: 5vh;
-			margin: 1%;
-			padding: 1%;
-		}
-
-		.but-logo {
-			border: none;
-			float: right;
-			width: 17vh;
-			height: 13vh;
-			position: relative;
-			right: -5vh;
-			top: -7vh;
-			background: url("../img/dare_logo_footer.png");
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: 100% 100%;
-			display: inline-block;
-			background-color: transparent;
-		}
-	}
 	@media only screen and (device-width: 768px) {
 		.TimeLineCard .footer  {
 			.ng-binding {
@@ -55,10 +27,6 @@
 			}
 		}
 
-		.bar-assertive {
-			.but-logo {
-				right: -20vh;
-			}
-		}
+
 	}
 }

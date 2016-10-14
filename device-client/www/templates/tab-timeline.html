@@ -1,8 +1,9 @@
-<ion-view class="timeline">
+<ion-view>
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content>
+      <div class="timeline">
     <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
     </ion-refresher>
     <div ng-show="dares.length < 1">
@@ -13,8 +14,9 @@
     <div class="list card" ng-repeat="dare in dares">
       <div class="item item-image" ng-include src="'templates/div-timelineCard.html'"></div>
     </div>
+</div>
   </ion-content>
-  <ion-footer-bar align-title="left" class="bar-assertive">
+  <ion-footer-bar align-title="left" class="bar-positive">
     <button class="but app-icon-user-active"></button>
     <button class="but app-icon-speech-active"></button>
     <button class="but app-icon-love-active"></button>
