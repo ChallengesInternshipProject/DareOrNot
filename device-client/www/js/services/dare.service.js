@@ -35,13 +35,13 @@ angular.module('starter.services')
 			//Apply filters
 			for(var i in arguments){
 				for (var ii in arguments[i]) {
-					defFilter[ii] = (arguments[i][ii])
+					defFilter[ii] = (arguments[i][ii]);
 				}
 			}
 			defFilter = JSON.stringify(defFilter);
 			return $http.get(SERVER_ADDRESS + '/dares/list/',{params:{data:defFilter}}).then(function(result){
 			
-				return result.data
+				return result.data;
 			});
 		}
 		dareService.get = function(dareID) {
