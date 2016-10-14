@@ -5,9 +5,9 @@
 
 
 //background and body elements style//
-@mixin content-list-login{ 
+@mixin content-list-login{
 	margin:0;
-	padding:0;
+	padding:1%;
 	min-height: 110vw;
     background-color: #012438;
     background-image: url(../img/background.png);
@@ -18,8 +18,8 @@
     box-sizing: border-box;
  }
 @mixin content-list-view{
-   margin: 0%;
-   padding: 0%;
+   margin: 0;
+   padding: 0;
   display:block;
   text-align: center;
   font-size: 1em;
@@ -28,17 +28,17 @@
   box-sizing: border-box;
 	}
 @mixin list-view{
-	min-height: 40em;
-    padding: 0%;
-    margin: 0%;
-	position: relative;
+	width: 100%;
+    padding: 0;
+    margin: 0;
+	position: absolute;
     text-align: center;
     font-size: 1em;
     display: block;
 	background: transparent;
     box-sizing: border-box;
 	}
-@mixin logo-view{ 
+@mixin logo-view{
   padding: 2%;
   margin: 2%;
   position: relative;
@@ -57,7 +57,7 @@
   font-size: 1em;
   line-height: 1.8;
   box-sizing: border-box;
-	}	
+	}
 @mixin item-into-view{
     color: rgb(120, 103, 30);
     border-bottom: 1px solid #808080;
@@ -67,13 +67,13 @@
     border-right: 0;
     font-size: 1em;
 }
-@mixin input-view{ 
+@mixin input-view{
     padding: 8px;
     display: block;
     border: none;
     width: 100%;
     background-color: transparent;
-    text-align: center;  
+    text-align: center;
 	}
 @mixin input-label-view{
   color: rgb(120, 103, 30);
@@ -94,5 +94,4 @@
     position: relative;
     left: 6%;
     box-sizing: border-box;
-	}	
-	
+	}
