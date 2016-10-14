@@ -9854,6 +9854,7 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+/*Icons for the app*/
 .app-icon-user {
   background: url("../img/icons/user.png"); }
 
@@ -10089,6 +10090,8 @@ a.button {
   display: inline-block; }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -10311,6 +10314,9 @@ a.button {
     .list a p {
       color: #ffb400; }
 
+/*Timeline,  */
+/*background and body elements style*/
+/*timeline < navigation title style*/
 .Category {
   background: #e8edf0;
   background-size: 100% 100%;
@@ -10400,6 +10406,8 @@ a.button {
     margin-top: 2vh; }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -10619,6 +10627,8 @@ a.button {
       margin: 10% 8% 10% 16%; } }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -10651,6 +10661,9 @@ a.button {
       .search ion-list .item-input i {
         color: orange; }
 
+/*Timeline,  */
+/*background and body elements style*/
+/*timeline < navigation title style*/
 /* CSS Tab-Statistics */
 .Statistics {
   background-color: #012438; }
@@ -10718,65 +10731,62 @@ a.button {
   color: #03b2d1;
   line-height: 1%;
   color: #16b8d4;
+  /*category challenges */
   /* WebKit browsers */
   /* upload photo */
   /* Example stylistic flourishes */ }
-  .newdare h1, .newdare h3 {
+  .newdare h1,
+  .newdare h3 {
     color: #16b8d4; }
-  .newdare .continue {
-    margin-top: 30%; }
-  .newdare .row {
-    /*category challenges */ }
-    .newdare .row .col {
-      display: inline-block; }
-      .newdare .row .col .contin {
-        margin-top: 33%;
-        font-size: 12px; }
-    .newdare .row div .challeng .list {
-      margin: 1%;
-      padding: 1%;
-      width: 100%;
+  .newdare .list {
+    background: transparent; }
+  .newdare .challeng {
+    margin: 1%;
+    padding: 1%;
+    width: 100%;
+    display: inline-block;
+    font-size: 1em; }
+    .newdare .challeng .item {
       display: inline-block;
-      font-size: 1em; }
-      .newdare .row div .challeng .list .item {
-        display: inline-block;
-        width: 45%;
-        font-size: 1em;
-        padding: 0.5%;
-        border: none;
-        text-align: center;
-        background: transparent; }
-        .newdare .row div .challeng .list .item :nth-child(1) {
-          background: #3b6783;
-          color: #fff;
-          width: 100%;
-          font-size: 0.7em;
-          text-align: center;
-          margin-top: 1%;
-          padding-top: 10%;
-          padding-bottom: 10%;
-          padding-left: 1%;
-          padding-right: 1%;
-          word-break: keep-all; }
-        .newdare .row div .challeng .list .item :nth-child(2) {
-          color: #fff;
-          width: 100%; }
-    .newdare .row .list-inset {
-      width: 100%;
+      width: 45%;
+      font-size: 1em;
+      padding: 0.5%;
+      border: none;
+      text-align: center;
       background: transparent; }
-    .newdare .row label .item {
-      margin-top: 5%; }
-    .newdare .row .vh {
-      margin-top: 1vh;
-      width: 95%;
-      min-height: 3em;
-      border-color: #8dc3cd;
-      font-size: 1.5em; }
-      .newdare .row .vh .butt {
-        width: 50%;
-        margin: 1%;
-        font-size: 1.5em;
-        text-transform: uppercase; }
+      .newdare .challeng .item :nth-child(1) {
+        background: #3b6783;
+        color: #fff;
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+        margin-top: 1%;
+        padding: 10% 1%;
+        word-break: keep-all; }
+      .newdare .challeng .item :nth-child(2) {
+        color: #fff;
+        width: 100%; }
+  .newdare .row .col {
+    display: inline-block; }
+    .newdare .row .col .contin {
+      margin-top: 33%;
+      font-size: 12px; }
+  .newdare .row .list-inset {
+    width: 100%;
+    background: transparent; }
+  .newdare .row label .item {
+    margin-top: 5%; }
+  .newdare .row .vh {
+    margin-top: 1vh;
+    width: 95%;
+    min-height: 3em;
+    border-color: #8dc3cd;
+    font-size: 1.5em; }
+    .newdare .row .vh .butt {
+      width: 50%;
+      margin: 1%;
+      font-size: 1.5em;
+      text-transform: uppercase; }
   .newdare .responsive {
     display: inline; }
     .newdare .responsive .col {
@@ -10813,7 +10823,7 @@ a.button {
       font-size: 3em; }
   .newdare .fileContainer {
     background: transparent;
-    margin-left: 0%;
+    margin-left: 0;
     margin-top: 10%;
     margin-bottom: 10%;
     overflow: hidden;
@@ -10850,6 +10860,8 @@ a.button {
     margin-top: 18%; } }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -10927,6 +10939,8 @@ a.button {
         font-size: 3em; }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11040,6 +11054,8 @@ a.button {
 
 /* CSS Profil background */
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11251,6 +11267,8 @@ a.button {
       height: 10.5em; } }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11550,6 +11568,8 @@ a.button {
     font-size: 10px; }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11636,6 +11656,8 @@ a.button {
         background-color: #01cfe4; }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11643,6 +11665,9 @@ a.button {
 /*div*/
 /*text stylings */
 /*img style*/
+/*Timeline,  */
+/*background and body elements style*/
+/*timeline < navigation title style*/
 /* CSS Timeline	title and arrows*/
 .TimeLineCard {
   min-height: 10em;
@@ -11871,6 +11896,8 @@ a.button {
           min-height: 4em; } }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11878,7 +11905,10 @@ a.button {
 /*div*/
 /*text stylings */
 /*img style*/
-/* CSS Timeline	title and arrows*/
+/*Timeline,  */
+/*background and body elements style*/
+/*timeline < navigation title style*/
+/* CSS Timeline	slidder and footer*/
 .timeline {
   background: #e8edf0;
   background-size: 100% 100%;
@@ -11892,8 +11922,46 @@ a.button {
   .timeline .item {
     background: transparent;
     border: none; }
+  .timeline .bar-assertive {
+    background-color: #066886;
+    height: 7vh; }
+    .timeline .bar-assertive .but {
+      background-color: transparent;
+      border: none;
+      width: 10vh;
+      height: 5vh;
+      margin: 1%;
+      padding: 1%; }
+    .timeline .bar-assertive .but-logo {
+      border: none;
+      float: right;
+      width: 17vh;
+      height: 13vh;
+      position: relative;
+      right: -5vh;
+      top: -7vh;
+      background: url("../img/dare_logo_footer.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+      display: inline-block;
+      background-color: transparent; }
+  @media only screen and (device-width: 768px) {
+    .timeline .TimeLineCard .footer .ng-binding {
+      font-size: 1.5vh; }
+      .timeline .TimeLineCard .footer .ng-binding .profil-avatar {
+        margin-top: -8%;
+        margin-left: 0%;
+        min-width: 6em;
+        min-height: 6em; }
+    .timeline .TimeLineCard .footer span > .fa {
+      margin-top: 0vh; }
+    .timeline .bar-assertive .but-logo {
+      right: -20vh; } }
 
 /*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
@@ -11901,6 +11969,9 @@ a.button {
 /*div*/
 /*text stylings */
 /*img style*/
+/*Timeline,  */
+/*background and body elements style*/
+/*timeline < navigation title style*/
 /* CSS single Dare	title and arrows*/
 .single {
   background: #e8edf0;
@@ -11912,19 +11983,42 @@ a.button {
   width: 100%;
   display: block;
   position: relative;
+  margin: 0;
+  padding: 0;
   /*timeline settings */ }
-  .single .item {
-    background: transparent;
-    border: none; }
-    .single .item label {
-      margin-top: 1em;
-      width: 83%;
-      border-color: #8dc3cd;
-      float: right; }
+  .single .list {
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box; }
+    .single .list .item {
+      background: transparent;
+      border: none;
+      margin: 0;
+      padding: 0; }
+      .single .list .item label {
+        margin-top: 1em;
+        width: 83%;
+        border-color: #8dc3cd;
+        float: right; }
+    .single .list .video-cover {
+      margin-top: -2vh;
+      height: 25vh;
+      background-image: url("../img/Activities/7.jpg");
+      background-size: 100% 100%;
+      z-index: 555; }
+    .single .list .some-coment p {
+      font-size: 2vh;
+      text-align: justify;
+      text-justify: inter-word;
+      white-space: normal; }
   .single .TimeLineCard div .slider-pager {
     display: none; }
   .single .TimeLineCard .navigation .title {
     left: 1em; }
+  .single .TimeLineCard .navigation .icon {
+    font-size: 7vh; }
   .single .TimeLineCard .footer {
     text-align: center;
     display: inline-flex;
@@ -11936,7 +12030,7 @@ a.button {
     margin-top: -10%;
     width: 60%;
     display: block;
-    /* avatar settings, NAME*/ }
+    /*avatar settings, NAME*/ }
     .single .TimeLineCard .footer span {
       width: 20%;
       margin-bottom: 1em; }
@@ -11948,10 +12042,11 @@ a.button {
         margin-top: 1.5em;
         background-size: 75% 75%; }
     .single .TimeLineCard .footer img {
-      margin-top: -15%;
-      margin-left: -6%;
-      min-width: 5em;
-      min-height: 5em; }
+      margin-top: -21%;
+      margin-left: -3%;
+      min-width: 6em;
+      min-height: 6em;
+      border: 1vh solid #fff; }
     .single .TimeLineCard .footer .googleMap {
       margin-right: 5em;
       margin-top: 5em; }
@@ -11970,7 +12065,13 @@ a.button {
       display: block;
       margin-left: 50%;
       margin-top: 0%; }
-      .single .TimeLineCard .footer .ng-binding h3, .single .TimeLineCard .footer .ng-binding i {
+      .single .TimeLineCard .footer .ng-binding h1 {
+        margin-left: 13%;
+        margin-top: -7vh;
+        font-size: 2em;
+        color: #fff; }
+      .single .TimeLineCard .footer .ng-binding h3,
+      .single .TimeLineCard .footer .ng-binding i {
         color: #ffb400;
         text-transform: uppercase; }
       .single .TimeLineCard .footer .ng-binding .profil-avatar {
@@ -11978,9 +12079,17 @@ a.button {
         margin-left: -4%;
         min-width: 5em;
         min-height: 5em; }
+    .single .TimeLineCard .footer .start {
+      margin-bottom: 1vh;
+      margin-left: 3vh;
+      font-size: 3vh; }
   .single .TimeLineCard .notice {
     display: -webkit-inline-box;
     width: 88%; }
+    .single .TimeLineCard .notice .notice-1 {
+      margin-left: -1%;
+      margin-top: -2vh;
+      margin-bottom: 6vh; }
   .single h3 {
     position: relative;
     display: inline-block;
@@ -11992,31 +12101,44 @@ a.button {
   .single .button-new {
     background: transparent;
     border: none;
+    margin: 2.5vh;
+    margin-bottom: 0.5vh;
+    background: transparent;
+    border: none;
     background-color: #021e2f;
-    width: 97%;
-    height: 3em;
+    width: 90%;
+    height: 8vh;
     color: #fff;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 3vh; }
   .single .col {
     min-height: 6.5em;
     margin: 1%;
     padding: 1%;
     color: #fff; }
+    .single .col .prove-img {
+      width: 100%;
+      height: 17vh;
+      margin: 1%;
+      padding: 1%;
+      background-color: #177794; }
     .single .col img {
       width: 3em; }
     .single .col h6 i {
       color: #ffb400;
       font-size: 1em; }
-    .single .col h6, .single .col h7 {
+    .single .col .h7,
+    .single .col h6 {
       color: #01cfe4; }
     .single .col h2 {
-      top: 0em;
+      top: 0;
       left: 1em;
       position: relative; }
-    .single .col h4, .single .col h2 {
+    .single .col h2,
+    .single .col h4 {
       color: #3c6884; }
-    .single .col h7 {
-      top: 0em;
+    .single .col .h7 {
+      top: 0;
       left: 1em;
       position: relative; }
   .single .fa {
@@ -12038,13 +12160,20 @@ a.button {
       .single .TimeLineCard .content {
         min-height: 20em; }
         .single .TimeLineCard .content img {
-          height: 20em; }
+          min-height: 33vh;
+          min-width: 75vh; }
       .single .TimeLineCard .navigation {
         font-size: 1.1em; }
         .single .TimeLineCard .navigation .arrows-right {
-          margin-top: -20%; }
+          margin-top: -31%;
+          margin-right: 4%;
+          font-size: 13vh; }
         .single .TimeLineCard .navigation .arrows-left {
-          margin-top: -20%; }
+          margin-top: -31%;
+          margin-right: 4%;
+          font-size: 13vh; }
+        .single .TimeLineCard .navigation .icon {
+          font-size: 13vh; }
         .single .TimeLineCard .navigation .title {
           top: -8em;
           font-size: 2em;
@@ -12057,20 +12186,34 @@ a.button {
         margin-top: 4% !important; }
         .single .TimeLineCard .footer span {
           width: 50%; }
+          .single .TimeLineCard .footer span .fa {
+            min-width: 7vh;
+            height: 7vh;
+            margin-top: 1vh;
+            margin-left: 3vh;
+            background-size: 75% 75%; }
         .single .TimeLineCard .footer .ng-binding {
           font-size: 1em;
           margin-left: 33%;
-          margin-top: 0%; }
+          margin-top: 0; }
           .single .TimeLineCard .footer .ng-binding .profil-avatar {
             margin-top: -8%;
-            margin-left: 0%;
+            margin-left: 0;
             min-width: 10em;
             min-height: 10em; }
+          .single .TimeLineCard .footer .ng-binding h1 {
+            margin-left: 15vh;
+            margin-top: -14vh;
+            font-size: 2em; }
+        .single .TimeLineCard .footer .start {
+          margin-bottom: 1vh;
+          margin-left: 5vh;
+          font-size: 4vh; }
         .single .TimeLineCard .footer img {
-          margin-top: -30%;
-          margin-left: 0%;
-          min-width: 10em;
-          min-height: 10em; }
+          margin-top: -42%;
+          margin-left: 14px;
+          min-width: 13em;
+          min-height: 13em; }
         .single .TimeLineCard .footer .info {
           width: 25%;
           height: 4em;
@@ -12084,8 +12227,8 @@ a.button {
         margin-top: -38%; }
       .single .TimeLineCard .notice {
         display: -webkit-inline-box;
-        width: 50%;
-        margin-left: -45%; } }
+        width: 28%;
+        margin-left: -85%; } }
   @media screen and (min-height: 1080px) {
     .single .single {
       background: #e8edf0;
@@ -12137,7 +12280,8 @@ a.button {
           .single .single .TimeLineCard .footer .ng-binding {
             font-size: 1em;
             margin-top: 2%; }
-            .single .single .TimeLineCard .footer .ng-binding h3, .single .single .TimeLineCard .footer .ng-binding i {
+            .single .single .TimeLineCard .footer .ng-binding h3,
+            .single .single .TimeLineCard .footer .ng-binding i {
               color: #ffb400;
               text-transform: uppercase; }
             .single .single .TimeLineCard .footer .ng-binding .profil-avatar {
@@ -12151,29 +12295,8 @@ a.button {
           margin-top: -10%; } }
 
 /*some helpful varibals*/
-/*heder side- menue*/
-/*list*/
-/*list Item*/
-/*Paragraf*/
-/*div*/
-/*text stylings */
-/*img style*/
-/* CSS Timeline	title and arrows*/
-.timeline {
-  background: #e8edf0;
-  background-size: 100% 100%;
-  color: #03b2d1;
-  font-size: 1em;
-  margin: 0;
-  padding: 1%;
-  width: 100%;
-  display: block;
-  position: relative; }
-  .timeline .item {
-    background: transparent;
-    border: none; }
-
-/*some helpful varibals*/
+/*Activit, Notification, Settings*/
+/*background and body elements style*/
 /*heder side- menue*/
 /*list*/
 /*list Item*/
