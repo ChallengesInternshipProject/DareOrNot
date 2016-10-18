@@ -6,27 +6,28 @@
 	// text-align: center;
 	// display: block;
 	.profile-info {
-		width:100%;
+		width: 100%;
 		display: block;
 		height: 20vh;
 		margin-top: 2vh;
 		padding: 3vw;
 		font-size: 3vw;
+
 		.profile-avatar {
 			float: left;
 			margin-left: 1vh;
 			// display: inline-block;
-			width:25%;
+			width: 25%;
 			height: 12vh;
 			border-radius: 50%;
 			border: 3px solid white;
 		}
+
 		.profile-user-credentials {
 			// display: block;
 			margin-top: 1vw;
 			margin-left: 2.5vw;
 			// margin-right: 25vw;
-
 			float: left;
 			// color: white;
 			.profile-username {
@@ -34,6 +35,7 @@
 				color: #01cfe4;
 				display: block;
 			}
+
 			.profile-email {
 				margin-left: 3vh;
 				font-size: 2vh;
@@ -41,19 +43,23 @@
 			}
 		}
 	}
+
 	.profile-info-list {
 		line-height: 1.5;
 		display: block;
+
 		.profile-menu-item {
 			text-align: left;
 			display: block;
 			color: red;
 			font-size: 2vw;
 			padding: 3vw;
+
 			a {
 				color: #01cfe4;
 				text-decoration: none;
 			}
+
 			i {
 				padding: 2vh 2vh 2vh 6vh;
 			}
@@ -63,27 +69,32 @@
 	@media screen and (max-width: 450px) {
 		.profile-info {
 			display: inline-block;
+
 			.profile-user-credentials {
 				// float: right;
 				margin-right: 0;
 				margin-left: 20vh;
 				margin-top: -20vw;
 				font-size: 2vh;
+
 				.profile-username {
 					font-size: 4vh;
 					display: inline-block;
 				}
+
 				.profile-email {
 					display: inline-block;
 				}
 			}
 		}
+
 		.profile-info-list {
 			i {
 				// width: 40px;
 				// height: 3vh;
 				padding: 2vh 2vh 2vh 6vh;
 			}
+
 			.profile-menu-item {
 				padding-left: 6vw;
 				padding-bottom: 6vh;
@@ -92,7 +103,7 @@
 		}
 	}
 	// Tablet 1920x1080
-@media screen and (min-width: $tablet-width){
+	@media screen and (min-width: $tablet-width) {
 		.profile-info {
 			display: inline-block;
 			padding-top: -10vw;
@@ -104,13 +115,16 @@
 				margin-left: 6vw;
 				margin-top: -2vw;
 			}
+
 			.profile-user-credentials {
 				margin-top: 0;
 				margin-left: 2vw;
+
 				.profile-username {
 					display: inline-block;
 					font-size: 3vw;
 				}
+
 				.profile-email {
 					margin-left: 2vw;
 					margin-top: 3vw;
@@ -118,13 +132,16 @@
 				}
 			}
 		}
+
 		.profile-info-list {
 			margin-left: -10vw;
+
 			i {
 				// width: 40px;
 				// height: 3vh;
 				padding: 6vh 3vh 3vh 10vh;
 			}
+
 			.profile-menu-item {
 				padding-left: 15vw;
 				padding-bottom: 4vh;
@@ -133,14 +150,16 @@
 		}
 	}
 	// Tablet 1080x1920
-@media screen and (min-height: $tablet-height){
-	.profile-info-list {
-		line-height: 3;
-		.profile-menu-item {
-			a {
-				font-size: 2em;
+	@media screen and (min-height: $tablet-height) {
+		.profile-info-list {
+			line-height: 3;
+
+			.profile-menu-item {
+				a {
+					font-size: 2em;
 				}
 			}
+
 			i {
 				// width: 40px;
 				// height: 3vh;

@@ -2,19 +2,20 @@
 @import "mixins";
 @import "varibals";
 
-.search{@include search-view;
-	ion-list {@include content-list-view;
+.search {
+	@include search-view;
+
+	ion-list {
+		@include content-list-view;
+
 		.item-input {
 			background: transparent;
-			border:none;
-			color:#fff;
-			i{color:orange;}
+			border: none;
+			color: #fff;
+
+			i {
+				color: orange;
 			}
 		}
 	}
-
-				
-
- 									
- 						  
-   	
+}
