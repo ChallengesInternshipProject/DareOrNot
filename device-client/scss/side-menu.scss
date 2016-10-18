@@ -1,11 +1,22 @@
 @charset "utf-8";
 @import "mixins";
+
 .SideMenu {
 	.menu-left {
-	@include Mine_user_background;
-	.height{@include height-heder;}
-	h3, h2 {@include large-text;}
-	span:not(.badge){@include span-position;}
+		@include Mine_user_background;
+
+		.height {
+			@include height-heder;
+		}
+
+		h2,
+		h3 {
+			@include large-text;
+		}
+
+		span:not(.badge) {
+			@include span-position;
+		}
 		/*for icons*/
 		.app-icon {
 			width: 1em !important;
@@ -21,6 +32,7 @@
 			padding: 5%;
 			border: none;
 			background: transparent;
+
 			a.item {
 				margin-bottom: 5%;
 				padding: 5%;
@@ -28,6 +40,7 @@
 				border: none;
 				background: transparent;
 				color: #01cfe4;
+
 				i {
 					color: #ffb400;
 					font-size: 3em;

@@ -1,99 +1,150 @@
 @charset "utf-8";
 @import "mixins";
 /* CSS nothifications */
-.Notifications{
+.Notifications {
 	@include Mine_user_background;
-	.height{@include height-heder;}
-	h3, h2 {@include large-text;}
-	span{@include span-position;}
-			
-	/* CSS edit in item */	
-	.list{@include list-style;
-		  ion-item{
+
+	.height {
+		@include height-heder;
+	}
+
+	h2,
+	h3 {
+		@include large-text;
+	}
+
+	span {
+		@include span-position;
+	}
+	/* CSS edit in item */
+	.list {
+		@include list-style;
+
+		ion-item {
 			@include list-item-style;
 			border-left: 1px solid #fff;
+
 			.p {
 				@include left-minutes-style;
-				 }
-			i{
+			}
+
+			i {
 				color: #ffb400;
-				margin: 1%;
-				margin-top: -3%;
-				margin-right: 20%;
+				margin: -3% 20% 1% 1%;
 				padding: 1%;
 				width: 1em;
 				font-size: 1em;
-				}
-			div	{
-				@include div-style;	 
-				}
-			div p{
+			}
+
+			div {
+				@include div-style;
+			}
+
+			div p {
 				@include paragraf-style;
+
 				span {
-						float: left;
-						margin-top: -2%;
-						margin-bottom: -2%;
-						margin-left: 0em;
-						position: relative;
-						display: inline-block;
-						z-index: 10;
-					}
+					float: left;
+					margin-top: -2%;
+					margin-bottom: -2%;
+					margin-left: 0;
+					position: relative;
+					display: inline-block;
+					z-index: 10;
 				}
+			}
 			/* CSS imges */
-			.img{
+			.img {
 				@include image-style;
-				img{
+
+				img {
 					@include image-square;
 				}
 			}
-			ion-item.text{
+
+			ion-item.text {
 				width: 30vw;
 				height: 20vh;
-				}	
 			}
-		}
-	.com p{	
-		 @include paragraf-comentar;
-		}
-	@media screen and (min-width: $tablet-width){
-			h3, h2 {font-size: 2em;}
-			span{@include span-position-width;
-				}
-			.list{
-				ion-item{border-left: 2px solid #fff;
-					.p{font-size:1.5em;}
-					i{margin: -6%;
-					  font-size:2em;}
-				div p {width: 50%;font-size:1.5em;
-					span{margin-top: -1%;
-						margin-left: 2em;
-							}
-					}
-				}
-			}
-		}
-	@media screen and (min-height: $tablet-height){
-			h3, h2 {font-size: 2em;}
-			span{@include span-position-height;
-				font-size: 1em;}
-
-			.list{
-				ion-item{
-					.p{font-size:1.5em;}
-					i{margin: -2%;
-					  font-size:2.5em;}
-					div p {width: 50%;
-							span{margin-top: -1%;
-								margin-left: 2em;
-								}
-							}
-					.img{
-						img{	
-							width: 12em;
-							height: 10.5em;
-							}
-					}
-				}
-			}	
 		}
 	}
+
+	.com p {
+		@include paragraf-comentar;
+	}
+	@media screen and (min-width: $tablet-width) {
+		h2,
+		h3 {
+			font-size: 2em;
+		}
+
+		span {
+			@include span-position-width;
+		}
+
+		.list {
+			ion-item {
+				border-left: 2px solid #fff;
+
+				.p {
+					font-size: 1.5em;
+				}
+
+				i {
+					margin: -6%;
+					font-size: 2em;
+				}
+
+				div p {
+					width: 50%;
+					font-size: 1.5em;
+
+					span {
+						margin-top: -1%;
+						margin-left: 2em;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-height: $tablet-height) {
+		h2,
+		h3 {
+			font-size: 2em;
+		}
+
+		span {
+			@include span-position-height;
+			font-size: 1em;
+		}
+
+		.list {
+			ion-item {
+				.p {
+					font-size: 1.5em;
+				}
+
+				i {
+					margin: -2%;
+					font-size: 2.5em;
+				}
+
+				div p {
+					width: 50%;
+
+					span {
+						margin-top: -1%;
+						margin-left: 2em;
+					}
+				}
+
+				.img {
+					img {
+						width: 12em;
+						height: 10.5em;
+					}
+				}
+			}
+		}
+	}
+}

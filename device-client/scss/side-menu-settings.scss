@@ -1,29 +1,39 @@
 @charset "utf-8";
 @import "mixins";
-
 /* CSS tabs- Menue */
 /* here is the mine CSS 4 background, colors and so on */
 .Settings {
 	@include Mine_user_background;
-	.height{@include height-heder;}
-	h3, h2 {@include large-text;}
-	span{@include span-position;}
 
+	.height {
+		@include height-heder;
+	}
+
+	h2,
+	h3 {
+		@include large-text;
+	}
+
+	span {
+		@include span-position;
+	}
 	/* here is the mine CSS 4 back button, heder and so on the bar*/
-
 	h1 {
 		@include blue-color;
-		}
+	}
+
 	.list {
 		@include list-style;
 		width: 98%;
-		ion-item{
+
+		ion-item {
 			@include list-item-style;
 			color: #01cfe4;
+
 			.toggle.toggle-assertive input:checked + .track {
 				border-color: #01cfe4;
 				background-color: #01cfe4;
-				}
 			}
 		}
 	}
+}
