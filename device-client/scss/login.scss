@@ -6,7 +6,7 @@
 .login-view .content-list,
 .login-view .content-list-log {
 	@include content-list-login;
-
+	//min-height: 180vw;
 	/*Slider-page dots on the bottom of the page*/
 	div > div > div .slider-pager {
 		display: none;
@@ -183,7 +183,7 @@
 	}
 }
 
-@media (min-width: 680px) {
+@media screen and (min-width: 680px) {
     .login-view.modal {
         top: 0;
         right: 0;
@@ -201,16 +201,15 @@
         bottom: 7%  ;
   }
 }
-@media (min-width: 768px) {
-	.login-view .content-list-log
-	{min-height: 101vh;}
+@media screen and (min-width: 768px) {
+
 	.login-view .content-list {
-			min-height: 60vh;
+			min-height: 100vh;
 			.logo {
 	      		min-height: 17vh !important;
 	  		}
 }
-@media screen and (min-height: $tablet-height) {
+@media screen and (min-width: $tablet-width) {
 	.login-view .content-list {
 			min-height: 110vh;
 
