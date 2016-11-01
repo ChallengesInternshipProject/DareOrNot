@@ -9,13 +9,13 @@
 		width: 100%;
 		display: block;
 		height: 20vh;
-		margin-top: 2vh;
-		padding: 3vw;
+		//margin-top: 2vh;
+		//padding: 3vw;
 		font-size: 3vw;
 
 		.profile-avatar {
 			float: left;
-			margin-left: 1vh;
+			margin-left: 11vh;
 			// display: inline-block;
 			width: 25%;
 			height: 12vh;
@@ -25,10 +25,10 @@
 
 		.profile-user-credentials {
 			// display: block;
-			margin-top: 1vw;
-			margin-left: 2.5vw;
-			// margin-right: 25vw;
-			float: left;
+			//margin-top: 1vw;
+			//margin-left: 2.5vh;
+			margin-right: 25vw;
+			float: right;
 			// color: white;
 			.profile-username {
 				font-size: 4vh;
@@ -37,7 +37,7 @@
 			}
 
 			.profile-email {
-				margin-left: 3vh;
+			//	margin-left: 3vh;
 				font-size: 2vh;
 				color: #ffb400;
 			}
@@ -45,6 +45,7 @@
 	}
 
 	.profile-info-list {
+		padding: 0vh 0vh 0vh 2vh;
 		line-height: 1.5;
 		display: block;
 
@@ -56,12 +57,19 @@
 			padding: 3vw;
 
 			a {
+				padding: 2vh;
 				color: #01cfe4;
 				text-decoration: none;
 			}
 
 			i {
-				padding: 2vh 2vh 2vh 6vh;
+				display: inline-flex;
+				padding: 2vh 2vh 2vh 5vh;
+			}
+			.app-icon-activities-active, .app-icon-notification-active,
+			.app-icon-fav-active, .app-icon-chat-active,
+			.app-icon-friends-active, .app-icon-love-active{
+				background-size: 60% 100%;
 			}
 		}
 	}
@@ -92,13 +100,30 @@
 			i {
 				// width: 40px;
 				// height: 3vh;
-				padding: 2vh 2vh 2vh 6vh;
+				padding: 2vh 2vh 2vh 5vh;
 			}
 
 			.profile-menu-item {
-				padding-left: 6vw;
-				padding-bottom: 6vh;
-				font-size: 2.5vh;
+				padding-left: 9vw;
+	    		padding-bottom: 5vh;
+	    		font-size: 2.5vh;
+			}
+		}
+	}
+}
+	// Tablet 768x1204
+	@media screen and (max-width: 768px) {
+		.Profile{
+			.profile-info{
+				.profile-avatar {
+						width: 19%;
+					}
+			}
+			.profile-info-list{
+				padding: 0vh 0vh 0vh 5vh;
+				.profile-menu-item{
+					font-size: 3vw;
+				}
 			}
 		}
 	}
@@ -118,7 +143,7 @@
 
 			.profile-user-credentials {
 				margin-top: 0;
-				margin-left: 2vw;
+				margin-left: 10vh;
 
 				.profile-username {
 					display: inline-block;
@@ -167,4 +192,3 @@
 			}
 		}
 	}
-}
