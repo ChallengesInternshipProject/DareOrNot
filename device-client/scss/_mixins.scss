@@ -11,7 +11,7 @@
 			@include background-settings;
 			 background-image: url(../img/BG.png);
   			 background-color: #012438;
-
+		     font-family: "Open Sans";
 			}
 @mixin search-view{
 			@include background-settings;
@@ -24,6 +24,7 @@
    			background:#e8edf0; /*gray*/
    			color:#03b2d1;
    			line-height: 1%;
+			font-family: "Open Sans";
 			}
 /*heder side- menue*/
 @mixin height-heder{

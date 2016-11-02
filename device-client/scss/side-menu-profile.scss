@@ -2,7 +2,7 @@
 @import "mixins";
 /* CSS for Profile view */
 .Profile {
-	@include Mine_user_background;
+	@include Mine_user_background;	
 	// text-align: center;
 	// display: block;
 	.profile-info {
