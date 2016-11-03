@@ -2,7 +2,7 @@
 @import "mixins";
 /* CSS for Profile view */
 .Profile {
-	@include Mine_user_background;	
+	@include Mine_user_background;
 	// text-align: center;
 	// display: block;
 	.profile-info {
@@ -112,7 +112,7 @@
 	}
 }
 	// Tablet 768x1204
-	@media screen and (max-width: 768px) {
+	@media screen and (min-width: 768px) {
 		.Profile{
 			.profile-info{
 				.profile-avatar {

@@ -76,6 +76,20 @@
 			margin-right: 3vw;
 		}
 	}
+}
+
+
+	@media screen and (max-width: 768px) {
+		.Activity {
+			.list{
+				.item{
+					p{
+						    width: 25%;
+					}
+				}
+			}
+		}
+	}
 	@media screen and (min-width: $tablet-width) {
 		h2 {
 			margin-left: 18.5%;
@@ -186,4 +200,3 @@
 			height: 10.5em;
 		}
 	}
-}
