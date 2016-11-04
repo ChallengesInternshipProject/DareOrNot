@@ -32,16 +32,25 @@
 			width: 20%;
 			height: 10vh;
 			border-radius: 50%;
-			background-size: 100% 75%;
+			img{
+				min-width: 98%;
+    			min-height: 98%;
+				margin: -16px;
+				padding: 0;
 			}
-		.dare h3 {
-			padding: 0.5em;
-			font-size: 10px;
-			color: #37637e;
-		}
-		.dare h1 {
-			font-size: 1.2em;
-			color: #fff;
+			}
+		.dare {
+    		width: 25%;
+
+			h3 {
+				padding: 0.5vh;
+				font-size: 10px;
+				color: #37637e;
+			}
+			 h1 {
+				font-size: 3vh;
+				color: #fff;
+			}
 		}
 		canvas #line {
 			background: transparent;
@@ -60,17 +69,13 @@
 		}
 	.fa {
 		float: left;
-		 
+
 		}
-	button.button-calm{	
+	button.button-calm{
 		width: 70%;
 		font-size: 3.2em;
 		margin: 5%;
 		padding: 5%;
 		}
 
-}	
-	
-	
-	
-	
+}
