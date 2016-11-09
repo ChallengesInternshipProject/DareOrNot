@@ -11,10 +11,12 @@
 	h2,
 	h3 {
 		@include large-text;
+		@media  all and (min-width: 720px) {font-size: 2.8vh;}
 	}
 
 	span {
 		@include span-position;
+		@media  all and (min-width: 720px) {margin-left: -2%;}
 	}
 	/* CSS edit in item */
 	.list {
@@ -26,6 +28,16 @@
 
 			.p {
 				@include left-minutes-style;
+				font-size: 2vh;
+				.button-small {
+				    /* padding: 2px 4px 1px; */
+				    float: right;
+				    min-width: 3vh;
+				    min-height: 3vh;
+				    font-size: 2.2vh;
+					right: 3vh;
+				    /* line-height: 26px; */
+				}
 			}
 
 			i {
@@ -42,7 +54,7 @@
 
 			div p {
 				@include paragraf-style;
-
+				@media  all and (min-width: 720px) {width: 30%;}
 				span {
 					float: left;
 					margin-top: -2%;
