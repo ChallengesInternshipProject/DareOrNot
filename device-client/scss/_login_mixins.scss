@@ -38,10 +38,10 @@
 	box-sizing: border-box;
 }
 @mixin logo-view {
-	padding: 2%;
-	margin: 2%;
+	//padding: 2%;
+	//margin: 2%;
 	position: relative;
-	min-height: 25vh;
+	min-height: 20vh;
 	background-image: url("../img/logo.png");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -51,7 +51,7 @@
 @mixin into-login-view {
 	width: 100%;
 	padding: 2%;
-	color: rgb(120, 103, 30);
+	color: #ffb400;
 	display: block;
 	position: relative;
 	font-size: 1em;
