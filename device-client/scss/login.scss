@@ -15,7 +15,11 @@
 	.content-list {
 		@include content-list-view;
 	}
-
+	h2{
+		margin-bottom: 15%;
+		font-size: 2em;
+		color: #ffb400;
+	}
 	section.list {
 		@include list-view;
 
@@ -49,16 +53,16 @@
 
 	input {
 		@include input-view;
-		color: #00d0e3;
+		color: #ffb400;
 	}
 
 	.item-input input,
 	.item-input textarea {
-		color: #00d0e3;
+		color: #ffb400;
 	}
 
 	input .item-input input {
-		text-align: center;
+		//text-align: center;
 	}
 
 	span.input-label {
@@ -182,9 +186,11 @@
 
 		i {
 			background: #012438;
-			border-radius: 50%;
-			font-size: 2em;
-			padding: 1em;
+		    border-radius: 50%;
+		    font-size: 6.8vh;
+		    padding: 1em;
+		    position: relative;
+		    margin-left: 19vh;
 		}
 	}
 }

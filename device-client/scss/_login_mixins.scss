@@ -13,7 +13,8 @@
 	position: relative;
 	background-size: 100% 100%;
 	box-sizing: border-box;
-	@media  all and (min-width: 360px) {min-height: 107vh;}
+	@media  all and (min-width: 360px) {min-height: 100vh;}
+	@media  all and (min-width: 720px) {min-height: 107vh;}
 }
 @mixin content-list-view {
 	margin: 0;
@@ -72,8 +73,9 @@
 	border: none;
 	width: 100%;
 	background: transparent;
-	text-align: center;
+	//text-align: center;
 	font-size: 4vh;
+	@media  all and (min-width: 720px) {font-size: 2vh;}
 }
 @mixin input-label-view {
 	color:#ffb400;
@@ -91,7 +93,7 @@
 	//padding: 1%;
 	border: none;
 	margin: 3%;
-	font-size:  1.8em;
+	font-size:  1.7em;
 	position: relative;
 	//left: 6%;
 	box-sizing: border-box;
