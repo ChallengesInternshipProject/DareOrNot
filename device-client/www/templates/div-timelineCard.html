@@ -1,49 +1,49 @@
-<div class="TimeLineCard"  ng-click="goToDare(	dare._id)"> 
-	<div class="content">
-		<ion-slide-box >  
-			<ion-slide ng-repeat='picture in dare.pictures'>  
-				<img ng-src="{{picture.fileString}}" alt="" >  
-			</ion-slide> 
-		</ion-slide-box> 
-	 </div>
-	 <div class="navigation">
-		<span class="title"> 
+<div class="TimeLineCard" ng-click="goToDare(	dare._id)">
+	<div class="row content">
+		<ion-slide-box>
+			<ion-slide ng-repeat='picture in dare.pictures'>
+				<img ng-src="{{picture.fileString}}" alt="">
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+	<div class="navigation">
+		<span class="title">
 			{{dare.title}}
 		</span>
-		<!-- Slide to the left  --> 
-		<div class="arrows-right" ><i class="ion-ios-arrow-forward"></i></div> 
-		<!-- Slide to the right --> 
-		<div class="arrows-left"><i class="ion-ios-arrow-back"></i></div> 
-	 </div>
-	<div class="footer" > 
-		<span class="ng-binding"> 
-			<a class="item-avatar" href="#"> 
-				<img ng-src="img/adam.jpg" class="profil-avatar"> 
-			</a> 
-		</span> 
-		 <span class="ng-binding">  
-			<i class="ion-ios-location-outline"></i> 
+		<!-- Slide to the left  -->
+		<div class="arrows-right"><i class="ion-ios-arrow-forward"></i></div>
+		<!-- Slide to the right -->
+		<div class="arrows-left"><i class="ion-ios-arrow-back"></i></div>
+	</div>
+	<div class="row footer">
+		<span class="ng-binding">
+			<a class="item-avatar" href="#">
+				<img ng-src="img/adam.jpg" class="profil-avatar">
+			</a>
+		</span>
+		<span class="ng-binding">
+			<i class="ion-ios-location-outline"></i>
 			{{dare.city}}
-		</span> 
-		<span class="ng-binding"> 
-			<i class="icon ion-ios-timer-outline"></i> 
+		</span>
+		<span class="ng-binding">
+			<i class="icon ion-ios-timer-outline"></i>
 			{{dare.timeElapsed}}
-		</span> 
-		<span class="info" style="margin-left: -1%;"> 
-			<i class="fa app-icon-user-active"></i> 
+		</span>
+		<span class="info" style="margin-left: -1%;">
+			<i class="fa app-icon-user-active"></i>
 	 		{{dare.invitedUsers.lenght}}
-		</span> 
-		<span class="info" style="margin-left: -1%;"> 
-			<i class="fa app-icon-speech-active"></i> 
+		</span>
+		<span class="info" style="margin-left: -1%;">
+			<i class="fa app-icon-speech-active"></i>
 			{{dare.comments}}
-		</span> 
-		<span class="info" style="margin-left: -1%;"> 
-			<i class="fa app-icon-love-active"></i> 
-			{{dare.likes}} 	
-		</span> 
-		 <span class="ng-binding" style="width: 100%;">  
-			<h5>Приключва:</h5> 
+		</span>
+		<span class="info" style="margin-left: -1%;">
+			<i class="fa app-icon-love-active"></i>
+			{{dare.likes}}
+		</span>
+		<span class="ng-binding" style="width: 100%;">
+			<h5>Приключва:</h5>
 			{{dare.timeLeft}}
-		</span> 
-	</div> 
+		</span>
+	</div>
 </div>

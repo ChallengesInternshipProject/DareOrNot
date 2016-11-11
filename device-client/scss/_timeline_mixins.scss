@@ -1,216 +1,210 @@
-	/*Timeline,  */
-
+/*Timeline,  */
 /*background and body elements style*/
-
-@mixin gray_background{
-			    background: #e8edf0;
-				background-size: 100% 100%;
-				color: #03b2d1;
-				font-size: 1em;
-				margin: 0;
-				padding: 1%;
-				width: 100%;
-				min-height: 100vh;
-				display: block;
-				position: relative;
-		}
-	/*timeline < navigation title style*/
-@mixin arrows-position{
-	height: 0.5em;
-    font-size: 1.5em;
-    margin-top: -20%;
-    padding: 0;
-    position: relative;
-    color: #fff;
-	}
-@mixin arrows-position-height{
-	height: 1.5em;
-	font-size: 4.5em;
-	margin-top: -17%;
-	}
-@mixin arrows-position-width{
-	height: 1.5em;
-	font-size: 4.5em;
-	margin-top: -8%;
-	}
-@mixin dare-title-style{
-	color: #fff;
-	position: relative;
-	top: -6em;
-	left: -3em;
-	font-size: 1.5em;
-	}
-@mixin dare-title-width{
-	top: -9em;
-	left: -13em;
-	font-size: 3.5em;
-	}
-@mixin dare-title-height{
-	top: -7em;
-	left: -9em;
-	font-size: 2.5em;
-	}
-@mixin fa-size{
-				min-width: 2.5em;
-				height: 2.5em;
-				margin-top: 1.5em;
-				background-size: 75% 75%;
-				}
-@mixin fa-size-width{
-				min-width: 3.5em;
-				height: 2.5em;
-				margin-top: 1em;
-			}
-@mixin fa-size-height{
-					min-width: 3.5em;
-					height: 3.5em;
-			}
-@mixin info-size{
-				display: inline-flex;
-				width: 10%;
-				height: 5em;
-				margin-top: 0%;
-				font-size: 10px;
-				color: #04a4c3;
-				margin: 1%;
-				margin-right: 3%;
-			}
-@mixin info-size-width{
-				font-size: 2em;
-				margin: -1%;
-				padding-left: 10%;
-				}
-@mixin info-size-height{
-				font-size: 1.5em;
-				margin: 1%;
-				margin-right: 1%;
-			}
-@mixin profil-avatar-position{
-					margin-top: -10%;
-					margin-left: -4%;
-					min-width: 5em;
-					min-height: 5em;
-					}
-@mixin profil-avatar-ipad{
-					margin-top: -10%;
-					margin-left: -4%;
-					min-width: 5em;
-					min-height: 5em;
-					}
-@mixin profil-avatar-width{
-					margin-top: -2%;
-					margin-left: 1%;
-					min-width: 4em;
-					min-height: 4em;
-					}
-@mixin profil-avatar-height{
-				margin-top: -3%;
-				margin-left: 0%;
-				min-width: 4em;
-				min-height: 4em;
-			}
-@mixin google-Map-img{
-					width: 47%;
-					display: inline;
-					height: 24.6vh;
-					float: right;
-					margin-top: -57%;
-					}
-@mixin	button-style-color{
-				@include background-bordernone;
-				margin: 2.5vh;
-				margin-bottom: 0.5vh;
-				background: transparent;
-				border: none;
-				background-color: #021e2f;
-				width: 90%;
-				height: 8vh;
-				color: #fff;
-				text-transform: uppercase;
-				font-size: 3vh;
-				}
-@mixin circle-border{
-				border-radius: 50%;
-				width: 3em;
-				height: 3em;
-				color: #fff;
-				margin: 1%;
-				padding: 1%;
-				}
-@mixin footer-style{
-	text-align: center;
-    display: inline-flex;
-    position: relative;
-    top: -1em;
-    margin-top: -13%;
-    padding: 1%;
-    width: 100%;
-	}
-@mixin footer-style-single{
-		margin-top: -10%;
-		width:60%;
-		display: block;
-		}
-
-@mixin footer-style-height{
-			  margin-top: 6em;
-			  padding: 1%;
-			  margin-top: 7%;
-			  width: 50%;
-		}
-@mixin footer-style-ipad{
-	margin-top: -1% !important;
-    margin-left: 0%;
-    min-width: 6em;
-    min-height: 6em;
+@mixin gray_background {
+  background: #e8edf0;
+  background-size: 100% 100%;
+  color: #03b2d1;
+  font-size: 1em;
+  margin: 0;
+  padding: 1%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  position: relative;
 }
-@mixin img-single{
-			margin-top: -21%;
-			margin-left: -3%;
-			min-width: 6em;
-			min-height: 6em;
-			}
-@mixin h3-single{
-				position: relative;
-                display: inline-block;
-                width: 100%;
-                color: #01cfe4;
-                font-size: 1em;
-                text-align: center;
-                text-transform: uppercase;
-				}
-@mixin col-single{
-			min-height: 6.5em;
-			margin: 1%;
-			padding: 1%;
-			color: #fff;
-				}
-@mixin block-single{
-				background-color: #3c6884;
-				color: #fff;
-				margin: 1%;
-				padding: 1%;
-				}
-@mixin binding-style{
-				color: #04a4c3;
-				font-size: 10px;
-				margin-top: 1.5em;
-				margin-right: 2%;
+/*timeline < navigation title style*/
+@mixin arrows-position {
+  height: 1.5em;
+  font-size: 3.5em;
+  margin-top: -30%;
+  padding: 0;
+  position: relative;
+  color: #fff;
 }
-@mixin binding-width{
-				color: #04a4c3;
-				font-size: 10px;
-				margin-top: 1.5em;
-				margin-right: 2%;
+@mixin arrows-position-height {
+  height: 1.5em;
+  font-size: 4.5em;
+  margin-top: -17%;
 }
-@mixin binding-height{
-				font-size:2em;
-				margin-right: 6%;
+@mixin arrows-position-width {
+  height: 1.5em;
+  font-size: 4.5em;
+  margin-top: -8%;
 }
-@mixin binding-single{
-			color: #04a4c3;
-			font-size: 10px;
-			display: block;
-			margin-left: 50%;
-			margin-top: 0%;
+@mixin dare-title-style {
+  color: #fff;
+  position: relative;
+  top: -6em;
+  left: -5em;
+  font-size: 1.5em;
+}
+@mixin dare-title-width {
+  top: -9em;
+  left: -13em;
+  font-size: 3.5em;
+}
+@mixin dare-title-height {
+  top: -7em;
+  left: -9em;
+  font-size: 2.5em;
+}
+@mixin fa-size {
+  min-width: 2.5em;
+  height: 2.5em;
+  margin-top: 1.5em;
+  background-size: 75% 75%;
+}
+@mixin fa-size-width {
+  min-width: 3.5em;
+  height: 2.5em;
+  margin-top: 1em;
+}
+@mixin fa-size-height {
+  min-width: 3.5em;
+  height: 3.5em;
+}
+@mixin info-size {
+  display: inline-flex;
+  width: 10%;
+  height: 5em;
+  margin-top: 0;
+  font-size: 10px;
+  color: #04a4c3;
+  margin: 1% 3% 1% 1%;
+}
+@mixin info-size-width {
+  font-size: 2em;
+  margin: -1%;
+  padding-left: 10%;
+}
+@mixin info-size-height {
+  font-size: 1.5em;
+  margin: 1%;
+}
+@mixin profil-avatar-position {
+  margin-top: -10%;
+  margin-left: -2%;
+  min-width: 5em;
+  min-height: 5em;
+}
+@mixin profil-avatar-ipad {
+  margin-top: -10%;
+  margin-left: -4%;
+  min-width: 5em;
+  min-height: 5em;
+}
+@mixin profil-avatar-width {
+  margin-top: -2%;
+  margin-left: 1%;
+  min-width: 4em;
+  min-height: 4em;
+}
+@mixin profil-avatar-height {
+  margin-top: -3%;
+  margin-left: 0;
+  min-width: 4em;
+  min-height: 4em;
+}
+@mixin google-Map-img {
+  width: 47%;
+  display: inline;
+  height: 24.6vh;
+  float: right;
+  margin-top: -57%;
+}
+@mixin button-style-color {
+   @include background-bordernone;
+  margin: 2.5vh 2.5vh 0.5vh;
+  background: transparent;
+  border: none;
+  background-color: #021e2f;
+  width: 90%;
+  height: 8vh;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3vh;
+}
+@mixin circle-border {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  color: #fff;
+  margin: 1%;
+  padding: 1%;
+}
+@mixin footer-style {
+  text-align: center;
+  display: inline-flex;
+  position: relative;
+  top: -1.5em;
+  margin-top: -10%;
+  padding: 0;
+  width: 100%;
+}
+@mixin footer-style-single {
+  margin-top: -10%;
+  width: 60%;
+  display: block;
+}
+@mixin footer-style-height {
+  margin-top: 6em;
+  padding: 1%;
+  margin-top: 7%;
+  width: 50%;
+}
+@mixin footer-style-ipad {
+  margin-top: -1% !important;
+  margin-left: 0 !important;
+  min-width: 6em;
+  min-height: 6em;
+}
+@mixin img-single {
+  margin-top: -21%;
+  margin-left: -3%;
+  min-width: 6em;
+  min-height: 6em;
+}
+@mixin h3-single {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: #01cfe4;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@mixin col-single {
+  min-height: 6.5em;
+  margin: 1%;
+  padding: 1%;
+  color: #fff;
+}
+@mixin block-single {
+  background-color: #3c6884;
+  color: #fff;
+  margin: 1%;
+  padding: 1%;
+}
+@mixin binding-style {
+  color: #04a4c3;
+  font-size: 10px;
+  margin-top: 1.5em;
+  margin-right: 2%;
+}
+@mixin binding-width {
+  color: #04a4c3;
+  font-size: 10px;
+  margin-top: 1.5em;
+  margin-right: 2%;
+}
+@mixin binding-height {
+  font-size: 2em;
+  margin-right: 6%;
+}
+@mixin binding-single {
+  color: #04a4c3;
+  font-size: 10px;
+  display: block;
+  margin-left: 50%;
+  margin-top: 0;
 }

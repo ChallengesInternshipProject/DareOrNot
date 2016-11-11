@@ -3,10 +3,12 @@
 @import "timeline_mixins";
 /* CSS Timeline	title and arrows*/
 .TimeLineCard {
+	font-family: "Open Sans";
 	min-height: 10em;
 	max-height: 13.5em;
 
 	.navigation {
+
 		.arrows-right {
 			@include arrows-position;
 			float: right;
@@ -19,6 +21,7 @@
 
 		.title {
 			@include dare-title-style;
+			font-family: "Open Sans";
 		}
 	}
 
@@ -36,12 +39,16 @@
 
 	.footer {
 		@include footer-style;
-
+		font-family: "Open Sans";
 		span {
 			width: 16%;
 
 			.fa {
 				@include fa-size;
+				@media  all and (min-width: 720px) {
+				min-width: 3.5em;
+				height: 3.5em;
+				}
 			}
 		}
 
@@ -76,9 +83,16 @@
 		.content {
 			min-height: 15em;
 
-			img {
-				height: 15em;
-			}
+			.slider-slides{
+					width: 100%;
+					.slider-slide{
+							width: 100%;
+							img{
+								height: 15em;
+								width: 100%;
+							}
+					}
+				}
 		}
 
 		.navigation {
