@@ -43,10 +43,13 @@
 			:nth-child(2) {
 				color: #fff;
 				width: 100%;
+				//background-color: #17283a;
 			}
 		}
 	}
-
+.item-radio input:checked + .radio-content .item-content {
+	background-color: #17283a;
+}
 	.row {
 		.col {
 			display: inline-block;
